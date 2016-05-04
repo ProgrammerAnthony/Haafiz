@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item name="aliwx_max_chatting_word_length" type="integer">1024</item>
+    <item name="aliwx_once_read_msg_size" type="integer">10</item>
+    <item name="aliwx_max_chat_inputtext_lines" type="integer">5</item>
+    <item name="aliwx_max_gif_in_wifi_size" type="integer">512000</item>
+    <item name="aliwx_max_gif_not_wifi_size" type="integer">143360</item>
+    <item name="aliwx_visible" type="integer">0</item>
+
+</resources>

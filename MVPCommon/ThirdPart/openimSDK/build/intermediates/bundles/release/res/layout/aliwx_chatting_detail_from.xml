@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/left_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/aliwx_bg_source"
+        android:layout_below="@+id/content_layout"
+        android:layout_toRightOf="@+id/left_head"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="7dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/aliwx_third_text_color"
+        android:textSize="10sp"
+        android:visibility="gone" />
+	<TextView
+        android:id="@+id/right_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/aliwx_bg_source"
+        android:layout_alignLeft="@+id/content_layout"
+        android:layout_below="@+id/content_layout"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textColor="@color/aliwx_third_text_color"
+        android:textSize="10sp"
+        android:visibility="gone" />
+
+</merge>

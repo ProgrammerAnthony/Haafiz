@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <com.alibaba.mobileim.kit.chat.widget.BounceScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/enlarged_text_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadeScrollbars="true"
+        android:scrollbars="none"
+        android:scrollbarDefaultDelayBeforeFade="300"
+        android:scrollbarStyle="insideInset"
+        android:fillViewport="true"
+        >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/aliwx_white"
+            android:paddingLeft="@dimen/aliwx_enlarged_text_view_padding"
+            android:paddingTop="@dimen/aliwx_enlarged_text_view_padding"
+            android:paddingBottom="@dimen/aliwx_enlarged_text_view_padding"
+            android:paddingRight="@dimen/aliwx_enlarged_text_view_padding_right"
+            >
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                >
+                <com.alibaba.mobileim.fundamental.widget.PatchedTextView
+                    android:id="@+id/enlarged_text"
+                    style="@style/aliwx_chatting_detail_text_left_style"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:typeface="monospace"
+                    android:textStyle="normal"
+                    android:singleLine="false"
+                    android:textColor="@color/aliwx_text_color_black"
+                    android:textColorHighlight="@android:color/transparent"
+                    android:textSize="@dimen/aliwx_enlarge_text_size" />
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </com.alibaba.mobileim.kit.chat.widget.BounceScrollView>

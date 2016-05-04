@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- <string name="get_profile_url">api/wxuser/nameCard.json?</string> -->
+    <string name="aliwx_ttid_check_url">http://m.taobao.com/syscheck.htm?</string>
+    
+    <string name="aliwx_update_client_info_url">api/wxuser/updateClientInfo.json?</string>
+</resources>

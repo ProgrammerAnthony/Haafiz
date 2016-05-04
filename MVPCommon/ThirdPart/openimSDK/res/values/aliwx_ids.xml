@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item name="PullToRefreshListViewID" type="id"/>
+    <item name="PullToRefreshExpandableListViewID" type="id"/>
+    <item name="chat_with_seller" type="id"/>
+    <item name="goldtree_viewholderkey" type="id"/>
+    <item name="goldtree_viewdatakey" type="id"/>
+    <item name="switcherLayout" type="id"/>
+    <item name="left_content_layout" type="id"/>
+    <item name="selected_view" type="id"/>
+	<item name="pubplat_list_position" type="id"/>
+	<item name="pubplat_item_position" type="id"/>
+	<item name="template_item_action" type="id"/>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>@string/drawer_home</item>
+        <item>@string/drawer_explore</item>
+        <item>@string/drawer_follow</item>
+        <item>@string/drawer_collect</item>
+        <item>@string/drawer_draft</item>
+        <item>@string/drawer_question</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_drawer_home_pressed</item>
+        <item>@drawable/ic_drawer_explore_pressed</item>
+        <item>@drawable/ic_drawer_follow_pressed</item>
+        <item>@drawable/ic_drawer_collect_pressed</item>
+        <item>@drawable/ic_drawer_draft_pressed</item>
+        <item>@drawable/ic_drawer_question_pressed</item>
+    </array>
+
+    <array name="nav_drawer_tint">
+        <item>@color/drawer_home_coclor</item>
+        <item>@color/drawer_explore_coclor</item>
+        <item>@color/drawer_follow_coclor</item>
+        <item>@color/drawer_collect_coclor</item>
+        <item>@color/drawer_draft_coclor</item>
+        <item>@color/drawer_question_coclor</item>
+    </array>
+
+
+
+</resources>

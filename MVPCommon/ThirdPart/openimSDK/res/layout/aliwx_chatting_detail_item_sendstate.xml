@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/send_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/content_layout"
+        android:layout_alignTop="@+id/content_layout"
+        android:layout_toLeftOf="@+id/content_layout"
+        android:gravity="center_vertical"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/aliwx_msg_unsent" />
+
+    <RelativeLayout
+        android:id="@+id/send_state_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/content_layout"
+        android:layout_alignTop="@+id/content_layout"
+        android:layout_marginRight="3dip"
+        android:layout_toLeftOf="@+id/content_layout"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/aliwx_my_progress" />
+    </RelativeLayout>
+
+</merge>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/default_title"
+    style="@style/aliwx_common_title_style">
+
+    <TextView
+        android:id="@+id/chat_back"
+        style="@style/aliwx_common_title_left_btn_shadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/aliwx_common_back_btn_bg"
+        android:text="@string/aliwx_back"
+        android:textColor="@color/aliwx_common_text_color"
+        android:textSize="@dimen/aliwx_common_text_size"/>
+
+    <ImageView
+        android:id="@+id/aliwx_title_button"
+        android:layout_width="@dimen/aliwx_title_bar_height"
+        android:layout_height="@dimen/aliwx_title_bar_height"
+        android:layout_alignParentRight="true"
+        android:scaleType="center"
+        android:src="@drawable/aliwx_topbar_icon_message_bg"
+        android:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/aliwx_title_unread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:src="@drawable/aliwx_topbar_icon_new"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/aliwx_at_content"
+        android:layout_width="@dimen/aliwx_title_bar_height"
+        android:layout_height="@dimen/aliwx_title_bar_height"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@id/aliwx_title_button"
+        android:visibility="gone">
+        <!--这里包一层的原因是在Android 5.1上alignTop无效,所以改为alignParentTop-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/aliwx_at_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/aliwx_tribe_at_icon_black"
+                android:visibility="visible"/>
+
+            <ImageView
+                android:id="@+id/aliwx_at_msg_unread"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@id/aliwx_at_image"
+                android:src="@drawable/aliwx_topbar_at_icon_new"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/chat_title"
+        style="@style/aliwx_common_title_text_shadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:maxWidth="200dp"
+        android:paddingLeft="0dip"
+        android:paddingRight="0dip"
+        android:textSize="@dimen/aliwx_common_text_size"/>
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/aliwx_list_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:textSize="@dimen/aliwx_font_third_grade"
+        android:textColor="@color/aliwx_common_text_color3"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:gravity="center"/>
+
+    <ListView
+        android:id="@+id/aliwx_list_dialog_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="@android:color/transparent"/>
+
+    <TextView
+        android:id="@+id/aliwx_list_dialog_cancel_btn"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:text="@string/aliwx_cancel"
+        android:textSize="@dimen/aliwx_common_text_size"
+        android:textColor="@color/aliwx_common_text_color_blue"/>
+
+</LinearLayout>

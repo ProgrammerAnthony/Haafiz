@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+<!--swipeback-->
     <style name="SwipeBackLayout">
         <item name="edge_size">50dip</item>
         <item name="shadow_left">@drawable/shadow_left</item>
@@ -8,4 +8,67 @@
         <item name="shadow_bottom">@drawable/shadow_bottom</item>
     </style>
 
+<!--toolBar-->
+    <style name="Toolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:background">?attr/colorPrimary</item>
+    </style>
+
+    <style name="ToolbarPopUp" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:background">@color/theme_window_background</item>
+    </style>
+<!--text size-->
+    <style name="TextXSmall">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="TextSmall">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextMedium">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextLarge">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextXLarge">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextXXLarge">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!--activity animaiton-->
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/right_in</item><!--一个activity创建进入的效果-->
+        <!--   <item name="android:activityOpenExitAnimation">@anim/left_out</item> 一个activity还没有finish()下退出效果, 比如有俩个activity A,B 首先启动A 然后再启动B 那么A还没有finish() 这A的退出效果-->
+        <!--<item name="android:activityCloseEnterAnimation">@anim/left_in</item>  表示上一个activity返回进入效果 比如有俩个activity A,B B退出后A进入的效果-->
+        <item name="android:activityCloseExitAnimation">@anim/right_out</item><!--一个activity销毁退出的效果-->
+    </style>
+    <!-- MainActivity theme. -->
+    <style name="MainActivityTheme" parent="AppBaseTheme">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+    <!--must use Theme.AppCompat or similar theme in AppCompatActivity and its subclass-->
+    <!--using windowIsTranslucent true to make window translucent when swipe back-->
+    <!--using windowAnimationStyle to define animation of activity -->
+    <style name="Theme.SwipeBackTranslucent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+    </style>
+    <!--Circle ImageView-->
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
 </resources>

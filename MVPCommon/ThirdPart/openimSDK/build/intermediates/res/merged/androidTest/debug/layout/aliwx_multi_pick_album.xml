@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dddddd"
+    android:orientation="vertical" >
+
+    <!--include
+        android:id="@+id/title"
+        layout="@layout/aliwx_common_simple_title" /-->
+    <ListView
+        android:paddingTop="10dip"
+        android:id="@+id/album_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/aliwx_common_line_color"
+        android:dividerHeight="1px"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:listSelector="#00000000"
+        android:background="@color/aliwx_contacts_tab_color"
+        android:smoothScrollbar="true" />
+
+</LinearLayout>

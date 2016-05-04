@@ -1,0 +1,168 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/aliwx_common_alpha_black" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/aliwx_common_dialog_white_bg" >
+
+        <LinearLayout
+            android:id="@+id/question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/check_code_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/aliwx_msg_unsent" />
+
+            <TextView
+                android:id="@+id/check_code_fail"
+                style="@style/aliwx_check_code_question_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/aliwx_check_code_fail" />
+
+            <TextView
+                android:id="@+id/check_code_click"
+                style="@style/aliwx_check_code_question_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aliwx_check_code_click" />
+
+            <TextView
+                android:id="@+id/check_code_tag1"
+                style="@style/aliwx_check_code_question_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp" />
+
+            <TextView
+                android:id="@+id/check_code_and"
+                style="@style/aliwx_check_code_question_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aliwx_check_code_and" />
+
+            <TextView
+                android:id="@+id/check_code_tag2"
+                style="@style/aliwx_check_code_question_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp" />
+
+            <TextView
+                android:id="@+id/check_code_complete"
+                style="@style/aliwx_check_code_question_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aliwx_check_code_complete" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/check_image"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_below="@id/question"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp" />
+        
+        <LinearLayout
+            android:id="@+id/buttonPanel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/check_image"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/aliwx_common_line_color" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="7dip"
+                android:paddingLeft="0dip"
+                android:paddingRight="10dip"
+                android:paddingTop="7dip" >
+
+
+                <Button
+                    android:id="@+id/change_button"
+                    android:layout_width="0dip"
+                    android:layout_height="35dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/aliwx_common_blue_btn_bg"
+                    android:text="@string/aliwx_check_code_change"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/cancel_button"
+                    android:layout_width="0dip"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/aliwx_common_grey_btn_bg"
+                    android:text="@string/aliwx_check_code_cancel"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+        
+		<!-- 
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line"
+            android:orientation="horizontal"
+            android:paddingBottom="7dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="7dp" >
+            
+ 			<Button
+                android:id="@+id/change_button"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/common_blue_btn_bg"
+                android:text="@string/check_code_change" />
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:background="@drawable/common_grey_btn_bg"
+                android:text="@string/check_code_cancel" />
+
+           
+        </LinearLayout> -->
+    </RelativeLayout>
+
+</RelativeLayout>

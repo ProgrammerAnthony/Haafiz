@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/aliwx_list_dialog_item"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_marginTop="3dp"
+        android:textSize="@dimen/aliwx_common_text_size"
+        android:textColor="@color/aliwx_common_text_color_blue"/>
+
+    <CheckBox
+        android:id="@+id/aliwx_list_dialog_item_check"
+        android:layout_width="@dimen/aliwx_common_checkbox_size"
+        android:layout_height="@dimen/aliwx_common_checkbox_size"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:button="@drawable/aliwx_common_check_bg"
+        android:clickable="false"
+        android:visibility="gone"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center"/>
+
+</RelativeLayout>

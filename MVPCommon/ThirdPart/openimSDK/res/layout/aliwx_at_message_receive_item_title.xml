@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:paddingLeft="15dp"
+    android:paddingTop="20dp">
+
+    <TextView
+        android:id="@+id/aliwx_send_at_message_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/aliwx_font_third_grade"
+        android:textColor="@color/aliwx_common_text_color3"
+        android:focusable="false"/>
+
+</RelativeLayout>

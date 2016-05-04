@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/aliwx_audio_minwidth"
+    android:layout_height="@dimen/aliwx_audio_height" >
+
+    <TextView
+        android:id="@+id/audio_left_time"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="3dip"
+        android:gravity="center_vertical"
+        android:textColor="@color/aliwx_black"
+        android:textSize="@dimen/aliwx_font_second_grade" />
+
+    <ProgressBar
+        android:id="@+id/download_audio_progress"
+        android:layout_width="24dip"
+        android:layout_height="24dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dip"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/aliwx_my_progress"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/download_audio_fail"
+        android:layout_width="32dip"
+        android:layout_height="32dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dip"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/left_audio_notplaying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="2dip"
+        android:scaleType="fitStart"
+        android:src="@drawable/aliwx_chatfrom_play_03" />
+
+    <com.alibaba.mobileim.kit.chat.widget.FixedViewFlipper
+        android:id="@+id/left_audio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="2dip"
+        android:flipInterval="500" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitStart" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitStart"
+            android:src="@drawable/aliwx_chatfrom_play_01" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitStart"
+            android:src="@drawable/aliwx_chatfrom_play_02" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitStart"
+            android:src="@drawable/aliwx_chatfrom_play_03" />
+    </com.alibaba.mobileim.kit.chat.widget.FixedViewFlipper>
+
+</RelativeLayout>

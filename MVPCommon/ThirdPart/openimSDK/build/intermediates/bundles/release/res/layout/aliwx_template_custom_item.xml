@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/aliwx_large_padding"
+    android:paddingLeft="@dimen/aliwx_large_padding"
+    android:paddingRight="@dimen/aliwx_large_padding" >
+	<com.alibaba.mobileim.fundamental.widget.WXNetworkImageView
+        android:id="@+id/left_head"
+        android:layout_width="@dimen/aliwx_common_head_size"
+        android:layout_height="@dimen/aliwx_common_head_size"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="4dip" />
+	
+	<com.alibaba.mobileim.fundamental.widget.WXNetworkImageView
+        android:id="@+id/right_head"
+        android:layout_width="@dimen/aliwx_common_head_size"
+        android:layout_height="@dimen/aliwx_common_head_size"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="4dip" />
+
+     <RelativeLayout
+        android:id="@+id/left_content_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/left_head"
+        android:gravity="center">
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/right_content_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/right_head"
+        android:gravity="center">
+    </RelativeLayout>
+
+</RelativeLayout>

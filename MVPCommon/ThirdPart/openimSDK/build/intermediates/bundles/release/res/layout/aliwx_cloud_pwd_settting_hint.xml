@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/aliwx_common_bg_color" >
+    
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        style="@style/aliwx_common_title_style">
+
+        <TextView
+            android:id="@+id/left_button"
+            style="@style/aliwx_common_title_left_btn_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aliwx_back" />
+
+        <TextView
+            android:id="@+id/title_self_title"
+            style="@style/aliwx_self_title_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="middle"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingLeft="90dp"
+            android:paddingRight="90dp"
+            android:singleLine="true"
+            android:text="@string/aliwx_forget_cloud_password" />
+    </RelativeLayout>
+    
+    <TextView
+        android:id="@+id/binded_phone_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/aliwx_common_two_unit_margin"
+        android:layout_marginRight="@dimen/aliwx_common_two_unit_margin"
+        android:layout_marginTop="@dimen/aliwx_base_edit_text_top_margin"
+        android:textColor="@color/aliwx_second_grade_color"
+        android:textSize="@dimen/aliwx_font_top_grade"
+        android:text="@string/aliwx_cloud_password_hint" />
+    
+
+</RelativeLayout>

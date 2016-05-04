@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          style="@style/aliwx_chatting_detail_text_left_style"
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:ellipsize="middle"
+          android:gravity="center_vertical"
+          android:singleLine="true"
+          android:textColor="#8A8A8A"
+          android:textColorHighlight="@android:color/transparent"
+          android:textSize="12sp">
+
+</TextView>

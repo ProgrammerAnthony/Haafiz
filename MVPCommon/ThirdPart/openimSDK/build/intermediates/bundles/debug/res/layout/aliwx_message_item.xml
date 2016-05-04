@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/message_item"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/aliwx_message_item_height"
+    android:background="@drawable/aliwx_friend_item_bg" >
+
+    <ImageView
+        android:id="@+id/head"
+        android:layout_width="@dimen/aliwx_common_head_size"
+        android:layout_height="@dimen/aliwx_common_head_size"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/aliwx_column_up_unit_margin"
+        android:layout_gravity="center_vertical" />
+
+    <TextView
+        android:id="@+id/unread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/aliwx_unread_hint"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aliwx_unread_text_size" />
+
+    <TextView
+        android:id="@+id/time"
+        style="@style/aliwx_column_msg_time_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/head"
+        android:layout_marginRight="@dimen/aliwx_common_safe_margin"
+        android:textColor="@color/aliwx_third_grade_color"
+        android:textSize="@dimen/aliwx_font_third_grade" />
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/aliwx_column_msg_title_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="@dimen/aliwx_common_unit_margin"
+        android:layout_marginLeft="@dimen/aliwx_common_unit_margin"
+        android:layout_toLeftOf="@id/time"
+        android:layout_toRightOf="@id/head"
+        android:ellipsize="middle"
+        android:includeFontPadding="false"
+        android:textColor="@color/aliwx_common_text_color"
+        android:textSize="@dimen/aliwx_font_second_grade"
+        android:text="名称"/>
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/head"
+        android:layout_marginBottom="@dimen/aliwx_common_unit_margin"
+        android:layout_marginRight="@dimen/aliwx_message_content_margin_right"
+        android:layout_marginLeft="@dimen/aliwx_common_unit_margin">
+
+        <TextView
+            android:id="@+id/at_msg_notify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aliwx_at_msg_notify"
+            android:paddingRight="10dip"
+            android:textColor="@color/aliwx_text_color_at_notify"
+            android:textSize="@dimen/aliwx_font_third_grade"
+            android:layout_gravity="bottom"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/content"
+            style="@style/aliwx_column_msg_style_1_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textColor="@color/aliwx_common_alpha_black"
+            android:textSize="@dimen/aliwx_font_third_grade"
+            android:text="最新内容"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/sweep_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/aliwx_common_safe_margin"
+        android:duplicateParentState="true"
+        android:src="@drawable/aliwx_arrow"
+        android:visibility="gone"/>
+
+</RelativeLayout>

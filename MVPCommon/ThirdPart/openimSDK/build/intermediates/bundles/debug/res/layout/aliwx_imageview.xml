@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.alibaba.mobileimexternal.ui.fundamental.widget.CircleImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/head"
+    android:layout_width="@dimen/aliwx_common_head_size"
+    android:layout_height="@dimen/aliwx_common_head_size" >
+
+</com.alibaba.mobileimexternal.ui.fundamental.widget.CircleImageView>

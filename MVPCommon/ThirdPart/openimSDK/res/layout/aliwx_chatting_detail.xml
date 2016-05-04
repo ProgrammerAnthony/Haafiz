@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/whole_back"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:background="@color/aliwx_common_bg_white_color"
+                android:clipToPadding="true"
+                android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ViewStub
+            android:id="@+id/default_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/aliwx_title_bar_height"
+            android:layout="@layout/aliwx_default_chatting_title"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chat_main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <ViewStub
+            android:id="@+id/reply_gridview_stub"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inflatedId="@+id/reply_gridview_expand"
+            android:layout="@layout/aliwx_chatting_expand_view_pager_layout"/>
+
+        <ViewStub
+            android:id="@+id/fastReplyListStub"
+            android:layout_width="fill_parent"
+            android:layout_height="244dip"
+            android:inflatedId="@+id/fastReplyList"
+            android:layout="@layout/aliwx_chatting_detail_phrase_list"/>
+
+        <ViewStub
+            android:id="@+id/smile_layout_stub"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inflatedId="@+id/smile_layout"
+            android:layout="@layout/aliwx_smiley_layout"
+            android:visibility="gone"/>
+
+        <ViewStub
+            android:id="@+id/phraseListStub"
+            android:layout_width="fill_parent"
+            android:layout_height="244dip"
+            android:inflatedId="@+id/phraseList"
+            android:layout="@layout/aliwx_chatting_detail_phrase_list"
+            android:visibility="gone"/>
+
+        <ViewStub
+            android:id="@+id/asr_layout_stub"
+            android:layout_width="fill_parent"
+            android:layout_height="244dip"
+            android:inflatedId="@+id/asrLayout"/>
+
+        <ViewStub
+            android:id="@+id/radioGroupStub"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inflatedId="@+id/radioGroup"
+            android:layout="@layout/aliwx_chatting_detail_smily_radio"
+            android:visibility="gone"
+            android:weightSum="2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/reply_bar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/chat_main_layout"
+        android:gravity="center_vertical"
+        android:minHeight="50dp"
+        android:paddingBottom="2dp"
+        android:paddingLeft="@dimen/aliwx_common_unit_margin"
+        android:paddingTop="3dp">
+
+        <CheckBox
+            android:id="@+id/reply_bar_expand"
+            style="@style/aliwx_chatting_detail_expand_style"/>
+
+        <CheckBox
+            android:id="@+id/face_button"
+            style="@style/aliwx_chatting_detail_phrase_style"/>
+
+        <LinearLayout
+            android:id="@+id/reply_bar_record_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <com.alibaba.mobileim.ui.common.clipboard.ClipboardEditText
+                android:id="@+id/chat_inputtext"
+                style="@style/aliwx_chatting_detail_input_text_style"
+                android:hint=""/>
+
+            <com.alibaba.mobileim.fundamental.widget.RecordButton
+                android:id="@+id/chat_record"
+                style="@style/aliwx_chatting_detail_record_button_style"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/chat_send"
+            style="@style/aliwx_chatting_detail_chat_send_style"
+            android:visibility="gone"/>
+
+        <CheckBox
+            android:id="@+id/reply_bar_record"
+            style="@style/aliwx_chatting_detail_record_style"/>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/reply_bar_layout"
+        android:background="@color/aliwx_title_bar_shadow_color"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/reply_bar_layout"
+        android:background="@color/aliwx_divider_color"/>
+
+    <ViewStub
+        android:id="@+id/enter_chatting_room_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout="@layout/aliwx_enter_chatting_room_layout"/>
+
+    <LinearLayout
+        android:id="@+id/custom_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_layout"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible"/>
+
+    <!--<ViewStub-->
+        <!--android:id="@+id/chat_list_stub"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:layout_above="@id/reply_bar_layout"-->
+        <!--android:layout_below="@id/custom_view"-->
+        <!--android:layout="@layout/aliwx_chatting_detail_list"/>-->
+
+    <com.alibaba.mobileim.fundamental.widget.refreshlist.PullToRefreshListView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/chat_list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_above="@id/reply_bar_layout"
+        android:layout_below="@id/custom_view"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:listSelector="#00000000"
+        android:transcriptMode="disabled" />
+
+    <TextView
+        android:id="@+id/goto_new_msgs_top_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/custom_view"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/aliwx_unread_msg_notify_bg"
+        android:drawableLeft="@drawable/aliwx_unread_msg_up_arrow_icon"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:singleLine="true"
+        android:textColor="#FFFFFFFF"
+        android:textSize="13sp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/goto_chat_list_bottom_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/reply_bar_layout"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:drawablePadding="4dp"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:textColor="#FFFFFFFF"
+        android:textSize="13sp"
+        android:visibility="invisible"/>
+
+    <ViewStub
+        android:id="@+id/record_dialog_stub"
+        android:layout_width="148dip"
+        android:layout_height="148dip"
+        android:layout_centerInParent="true"
+        android:layout="@layout/aliwx_record_dialog"/>
+
+    <include
+        android:id="@+id/title_bar_shadow_view"
+        layout="@layout/aliwx_title_bar_shadow"/>
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/cover"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:background="@color/aliwx_halftransparent"-->
+        <!--android:visibility="gone"/>-->
+
+
+    <ViewStub
+        android:id="@+id/ls_silenced_hint_stub"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+
+    <ViewStub
+        android:id="@+id/popup_window_whole_cover_stub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inflatedId="@+id/popup_window_whole_cover"
+        android:layout="@layout/aliwx_fast_send_photo_popup_window_cover"/>
+
+    <ViewStub
+        android:id="@+id/popup_photo_window_stub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/reply_bar_layout"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="7dp"
+        android:inflatedId="@+id/popup_photo_window"
+        android:layout="@layout/aliwx_fast_send_photo_popup_window"
+        android:visibility="gone">
+    </ViewStub>
+
+</RelativeLayout>

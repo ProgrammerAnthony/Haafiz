@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/aliwx_chatting_detail_item_style" >
+
+    <include layout="@layout/aliwx_chatting_detail_item_time" />
+    <include layout="@layout/aliwx_chatting_detail_left_right_head" />
+    <include layout="@layout/aliwx_chatting_detail_item_leftname" />
+	
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/left_name"
+        android:padding="15dp"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <com.alibaba.mobileim.fundamental.widget.PatchedTextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web|phone"
+            android:gravity="center_vertical"
+            android:textColor="#FF333333"
+            android:textSize="15sp"
+            android:textColorHighlight="@android:color/transparent" />
+    </LinearLayout>
+   <include layout="@layout/aliwx_chatting_detail_from" />
+    <include layout="@layout/aliwx_chatting_detail_item_sendstate" />
+</RelativeLayout>

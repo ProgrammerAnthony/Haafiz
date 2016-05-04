@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="aliwx_app_name">旺信</string>
+    <string name="aliwx_net_null">哎呀，怎么没网络了，请联网后试试！</string>
+    <string name="aliwx_checkcode_success">验证成功。</string>
+    <string name="aliwx_checkcode_fail">验证码获取失败，请换一张。</string>
+    <string name="aliwx_reply_bar_camera">拍照</string>
+    <string name="aliwx_reply_bar_album">选择照片</string>
+    <string name="aliwx_net_null_setting">无网络连接，请点击设置</string>
+    <string name="aliwx_insert_sdcard">请插入sd卡</string>
+    <string name="aliwx_send">发送</string>
+    <string name="aliwx_confirm">确定</string>
+    <string name="aliwx_cancel">取消</string>
+    <string name="aliwx_loading">加载中</string>
+    <string name="aliwx_back">返回</string>
+    <string name="aliwx_title_back">返回</string>
+    <string name="aliwx_speak_toast">请长按讲话</string>
+    <string name="aliwx_record_time">%d\"</string>
+    <string name="aliwx_file_read_err">文件读取失败</string>
+    <string name="aliwx_move_cancel_toast">滑到这里取消</string>
+    <string name="aliwx_record_too_short">时间太短</string>
+    <string name="aliwx_cannot_launch_album">启动不了相册程序</string>
+    <string name="aliwx_null_image">没有获取到图片</string>
+    <string name="aliwx_del_message">删除消息</string>
+    <string name="aliwx_re_send">重新发送</string>
+    <string name="aliwx_copy">复制</string>
+    <string name="aliwx_server_unconnected">未连上服务器，请稍等..</string>
+    <string name="aliwx_smily_ww">阿里旺旺表情</string>
+    <string name="aliwx_smily_tao">淘公仔表情</string>
+    <string name="aliwx_receiver_again">重新接收消息</string>
+    <string name="aliwx_reload_again">重新加载</string>
+    <string name="aliwx_blacklist_send_msg_toast">无法向黑名单中的联系人发送消息</string>
+    <string name="aliwx_no_support_photo">Sorry，不支持发送该张图片哦！</string>
+    <string name="aliwx_msg_empty">矮油~发送内容不能为空呢！</string>
+    <string name="aliwx_msg_not_support">您的软件版本较老，不支持对方发送的消息，请升级后查看该消息。</string>
+    <string name="aliwx_default_time">0\"</string>
+    <string name="aliwx_releast_send">松开发送</string>
+    <string name="aliwx_start_camera_error">相机罢工了，再启动试试吧！</string>
+    <string name="aliwx_release_stop_record">松开取消发送</string>
+    <string name="aliwx_pull_to_refresh_pull_label">下拉刷新&#8230;</string>
+    <string name="aliwx_pull_to_refresh_release_label">松开加载&#8230;</string>
+    <string name="aliwx_pull_to_refresh_contact_pull_label">同步最近联系人&#8230;</string>
+    <string name="aliwx_pull_to_refresh_contact_release_label">松开同步最近联系人&#8230;</string>
+    <string name="aliwx_pull_to_refresh_refreshing_label">正在加载&#8230;</string>
+    <string name="aliwx_pull_to_refresh_from_bottom_pull_label">向上滑动加载更多&#8230;</string>
+    <string name="aliwx_pull_to_refresh_from_bottom_release_label">@string/aliwx_pull_to_refresh_release_label</string>
+    <string name="aliwx_pull_to_refresh_from_bottom_refreshing_label">@string/aliwx_pull_to_refresh_refreshing_label</string>
+    <string name="aliwx_clear_chatting_msg">清空聊天消息</string>
+    <string name="aliwx_chatting_msg_cleared">消息已清空</string>
+    <string name="aliwx_re_send_msg">重新发送消息</string>
+    <string name="aliwx_sender_inputing">对方正在输入&#8230;</string>
+    <string name="aliwx_sender_speaking">对方正在说话&#8230;</string>
+    <string name="aliwx_sender_selecting_picture">对方正在发图片&#8230;</string>
+    <string name="aliwx_image_saved">图片已经保存</string>
+    <string name="aliwx_image_save_fail">图片保存失败</string>
+    <string name="aliwx_picture_mark">[图片]</string>
+    <string name="aliwx_refresh_success">刷新成功</string>
+    <string name="aliwx_refresh_fail">刷新失败</string>
+    <string name="aliwx_last_update_time">上次刷新时间</string>
+    <string name="aliwx_re_sync_msg">重新同步这条消息</string>
+    <string name="aliwx_no_enough_sdcard_size">手机存储空间不足，请清理后再使用此功能。</string>
+    <string name="aliwx_conversation_del">删除会话</string>
+    <string name="aliwx_conversation_top">置顶会话</string>
+    <string name="aliwx_conversation_top_fail_tip">有消息的会话才能置顶</string>
+    <string name="aliwx_conversation_cancel_top">取消置顶</string>
+    <string name="aliwx_download_image_failed">下载图片失败</string>
+    <string name="aliwx_multi_image_brower">%1$d/%2$d</string>
+    <string name="aliwx_ww_unread_noti2">%1$s发来%2$d条消息。</string>
+    <string name="aliwx_ww_unread_noti3">%1$d个朋友发来%2$d条消息。</string>
+    <string name="aliwx_unread_noti">你有%1$d条未读消息。</string>
+    <string name="aliwx_aliwangwang">（阿里旺旺）</string>
+    <string name="aliwx_conversation_title">最近联系人</string>
+    <string name="aliwx_setting_hint">提示</string>
+    <string name="aliwx_cloud_chat_pwd_hint">请输入消息记录漫游密码，自动漫游聊天记录</string>
+    <string name="aliwx_do_not_prompt_any_more">不再提示</string>
+    <string name="aliwx_cloud_msg_mention">您可以进入设置 - 隐私设置，开启自动漫游消息记录</string>
+    <string name="aliwx_password_invalid">密码错误，请重新填写</string>
+    <string name="aliwx_cloud_password_hint">如果您忘记了消息记录漫游密码，请登录电脑旺旺，进入系统设置 - 安全设置 - 密码设置中修改。</string>
+    <string name="aliwx_forget_cloud_password">忘记密码</string>
+    <string name="aliwx_public_account_update_tip">该信息是新版本功能，建议您升级至最新版本。</string>
+
+    <!-- SSO相关的文案 begin -->
+    <string name="aliwx_check_code_click">点击</string>
+    <string name="aliwx_check_code_and">与</string>
+    <string name="aliwx_check_code_complete">完成验证吧！</string>
+    <string name="aliwx_check_code_fail">点击错误喽！</string>
+    <string name="aliwx_check_code_cancel">取消</string>
+    <string name="aliwx_check_code_change">换一张</string>
+    <string name="aliwx_updating_messsage">收取中&#8230;</string>
+    <string name="aliwx_preview">预览</string>
+    <string name="aliwx_finish">完成</string>
+    <string name="aliwx_multi_delete_image_title">图片%1$d/%2$d</string>
+    <string name="aliwx_sync_success">同步成功</string>
+    <string name="aliwx_sync_failed">同步失败</string>
+    <string name="aliwx_more">更多</string>
+    <string name="aliwx_save">保存</string>
+    <string name="aliwx_save_image">保存图片</string>
+    <string name="aliwx_image_ls_indicator">%1$d/%2$d</string>
+    <string name="aliwx_forward">转发</string>
+    <string name="aliwx_more_function">更多功能</string>
+
+    <!-- 商品详情交易焦点 -->
+    <string name="aliwx_now_price">现价：</string>
+    <string name="aliwx_origin_price">原价：</string>
+    <string name="aliwx_freight">运费：</string>
+    <string name="aliwx_buy">立即购买</string>
+    <string name="aliwx_send_url">发送宝贝链接</string>
+    <string name="aliwx_goods_offline">该商品已下架</string>
+    <string name="aliwx_rmb_character">¥ %1$s</string>
+
+
+    <!--@消息相关-->
+    <string name="aliwx_at_msg_unread_count">%1$s人未读</string>
+    <string name="aliwx_at_msg_notify">[有人@我]</string>
+    <string name="aliwx_at_message_receive">\@我的</string>
+    <string name="aliwx_at_message_send">我@的</string>
+    <string name="aliwx_at_message_mark_all_read">全部标为已读</string>
+    <string name="aliwx_at_message_title">全部@消息</string>
+    <string name="aliwx_at_message_detail_title">消息详情</string>
+    <string name="aliwx_at_message_read_unread">[%1$s人未读 - %2$s人已读]</string>
+    <string name="aliwx_at_message_all_read">[全部已读]</string>
+    <string name="aliwx_at_message_unread">[未读]</string>
+    <string name="aliwx_at_message_read">[已读]</string>
+    <string name="aliwx_at_message_all_unread">[全部未读]</string>
+    <string name="aliwx_at_message_at_again">再次@TA们</string>
+    <string name="aliwx_at_message_read_time">阅读时间</string>
+    <string name="aliwx_send_at_message_unread">未读</string>
+    <string name="aliwx_send_at_message_read">已读</string>
+    <string name="aliwx_send_at_all_message_read">全部已读</string>
+    <string name="aliwx_send_at_all_message_unread">全部未读</string>
+    <string name="aliwx_send_at_message_see_detail">查看详情</string>
+    
+    <string name="aliwx_send_at_msg_detail_content">消息内容:</string>
+    <string name="aliwx_send_at_msg_detail_at_again">重新@TA们</string>
+    <string name="aliwx_send_at_msg_detail_unread">未读(%1$s):</string>
+    <string name="aliwx_send_at_msg_detail_read">已读(%1$s):</string>
+
+    <string name="aliwx_mark_all_at_msg_read_success">标记成功</string>
+    <string name="aliwx_mark_all_at_msg_read_failed">标记失败</string>
+
+    <string name="aliwx_at_message_receive_title_unread">未读(%1$s):</string>
+    <string name="aliwx_at_message_receive_title_read">已读(%1$s):</string>
+
+    <string name="aliwx_pull_up_to_load_more_at_msg_pull">上拉加载更多@消息</string>
+    <string name="aliwx_pull_up_to_load_more_at_msg_loading">正在加载&#8230;</string>
+    <string name="aliwx_pull_up_to_load_more_at_msg_release">松开开始加载</string>
+
+    <string name="aliwx_tribe_normal_notification_tip">[群消息]</string>
+    <string name="aliwx_tribe_at_notification_tip">在群聊中@了你</string>
+
+    <string name="aliwx_no_more_at_msg_context">已经没有新消息了</string>
+
+    <string name="aliwx_search">搜索</string>
+    <string name="aliwx_friend_search">搜</string>
+    <string name="aliwx_pull_to_refresh_tribe_members_pull_label">同步群成员</string>
+    <string name="aliwx_pull_to_refresh_tribe_members_refreshing_label">正在加载&#8230;</string>
+    <string name="aliwx_pull_to_refresh_tribe_members_release_label">松开同步群成员</string>
+
+    <string name="aliwx_ungroup">未分组</string>
+    <string name="aliwx_search_text_hint">搜索我的好友</string>
+    <string name="aliwx_pull_to_refresh_friend_pull_label">向下滑动刷新&#8230;</string>
+    <string name="aliwx_conversation_list_empty">暂时没有消息</string>
+    <string name="aliwx_no_ww_friend">没有阿里旺旺好友</string>
+
+
+    <string name="aliwx_goto_chat_list_bottom">回到底部</string>
+    <string name="aliwx_goto_chat_list_bottom_with_unread_msg">%1$s条新消息</string>
+    <string name="aliwx_goto_chat_list_bottom_with_unread_msg_m">99+条新消息</string>
+    <string name="aliwx_first_new_msg_notify">以下是新消息</string>
+    <string name="aliwx_start">确定%1$s</string>
+
+    <string name="aliwx_no_microphone_permission_alert_title">[录音权限]可能被禁止</string>
+    <string name="aliwx_no_microphone_permission_alert_message">您好，应用的[录音权限]可能被禁止，请重新开启本应用的[录音权限]以发送[语音消息]~</string>
+
+    <string name="aliwx_send_original">原图</string>
+    <string name="aliwx_download_original">下载原图</string>
+    <string name="aliwx_download_original_with_size">下载原图(%1$s)</string>
+    <string name="aliwx_download_original_success">下载完成</string>
+    <string name="aliwx_download_original_fail">下载失败</string>
+
+    <string name="aliwx_search_friend_hint">搜索账号</string>
+    <string name="aliwx_search_friend_not_found">该用户不存在</string>
+    <string name="aliwx_search_friend_not_found_message">无法找到该用户，请检查输入的帐号是否正确</string>
+    <string name="aliwx_search_friend_processing">正在为您查找</string>
+    <string name="aliwx_add_friend_processing">正在申请添加好友</string>
+    <string name="aliwx_send_msg">发送消息</string>
+    <string name="aliwx_add_friend">加为好友</string>
+    <string name="aliwx_remark_name">昵 称</string>
+    <string name="aliwx_profile_account">账 号 </string>
+
+</resources>

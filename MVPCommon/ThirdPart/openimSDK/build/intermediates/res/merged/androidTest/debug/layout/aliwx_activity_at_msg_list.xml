@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.alibaba.mobileim.ui.atmessage.AtMsgListActivity">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_layout">
+        <RelativeLayout
+            android:id="@+id/default_title"
+            style="@style/aliwx_common_title_style" >
+
+            <TextView
+                android:id="@+id/chat_back"
+                style="@style/aliwx_common_title_left_btn_shadow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aliwx_title_back" />
+
+            <TextView
+                android:id="@+id/chat_title"
+                style="@style/aliwx_common_title_text_shadow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:maxWidth="200dp"
+                android:paddingLeft="0dip"
+                android:paddingRight="0dip"
+                android:textSize="@dimen/aliwx_common_text_size" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.alibaba.mobileim.fundamental.widget.slidingtab.SlidingTabLayout
+        android:id="@+id/sliding_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/aliwx_bg_color_white">
+    </com.alibaba.mobileim.fundamental.widget.slidingtab.SlidingTabLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/aliwx_divider_color"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/at_msg_list_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+</LinearLayout>

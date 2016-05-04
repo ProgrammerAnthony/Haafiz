@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/aliwx_common_bg_color" >
+
+    <include
+        android:id="@+id/title_self_state"
+        layout="@layout/aliwx_title_self_state" />
+
+    <com.alibaba.mobileim.fundamental.widget.refreshlist.PullToRefreshListView
+        android:id="@+id/message_list"
+        style="@style/aliwx_dividedListStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title_self_state"
+        android:cacheColorHint="#00000000"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:listSelector="#00000000" />
+
+    <LinearLayout
+        android:id="@+id/aliwx_search_contacts_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/aliwx_halftransparent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include
+            layout="@layout/aliwx_search_text"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp" />
+
+        <ListView
+            android:id="@+id/aliwx_search_contacts_listview"
+            style="@style/aliwx_dividedListStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:fadingEdge="none" />
+    </LinearLayout>
+    <include
+        android:id="@+id/title_bar_shadow_view"
+        layout="@layout/aliwx_title_bar_shadow" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="20dip"
+        android:layout_height="20dip"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/aliwx_my_progress"
+        android:visibility="gone" />
+
+</RelativeLayout>

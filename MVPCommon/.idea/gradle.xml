@@ -8,6 +8,12 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ThirdPart/openimSDK" />
+            <option value="$PROJECT_DIR$/ThirdPart/pagerslidingtabstrip" />
+            <option value="$PROJECT_DIR$/ThirdPart/pulltorefreshhandmark" />
+            <option value="$PROJECT_DIR$/ThirdPart/slidingmenu" />
+            <option value="$PROJECT_DIR$/ThirdPart/ultraptrwithloadmore" />
+            <option value="$PROJECT_DIR$/ThirdPart/viewpagerindicator" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/base" />
           </set>
@@ -15,6 +21,12 @@
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ThirdPart/openimSDK" />
+            <option value="$PROJECT_DIR$/ThirdPart/pagerslidingtabstrip" />
+            <option value="$PROJECT_DIR$/ThirdPart/pulltorefreshhandmark" />
+            <option value="$PROJECT_DIR$/ThirdPart/slidingmenu" />
+            <option value="$PROJECT_DIR$/ThirdPart/ultraptrwithloadmore" />
+            <option value="$PROJECT_DIR$/ThirdPart/viewpagerindicator" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/base" />
           </set>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/aliwx_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/aliwx_friend_alpha_height"
+        android:background="@color/aliwx_common_bg_color"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/aliwx_column_up_unit_margin"
+        android:textColor="@color/aliwx_third_text_color"
+        android:textSize="@dimen/aliwx_second_text_size" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/aliwx_message_item_height"
+        android:background="@drawable/aliwx_friend_item_bg" >
+
+        <CheckBox
+            android:id="@+id/aliwx_select_box"
+            android:layout_width="@dimen/aliwx_common_checkbox_size"
+            android:layout_height="@dimen/aliwx_common_checkbox_size"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/aliwx_common_check_bg"
+            android:clickable="false"
+            android:layout_marginLeft="@dimen/aliwx_column_up_unit_margin"
+            android:focusable="false"
+            android:visibility="gone"
+            android:focusableInTouchMode="false"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/aliwx_head"
+            style="@style/aliwx_common_head_style"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/aliwx_select_box"
+            />
+
+
+
+        <TextView
+            android:id="@+id/aliwx_select_name"
+            style="@style/aliwx_common_first_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/aliwx_head"
+            android:layout_alignTop="@id/aliwx_head"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/aliwx_column_up_unit_margin"
+            android:layout_toRightOf="@id/aliwx_head"
+            android:ellipsize="middle" />
+    </RelativeLayout>
+
+</LinearLayout>

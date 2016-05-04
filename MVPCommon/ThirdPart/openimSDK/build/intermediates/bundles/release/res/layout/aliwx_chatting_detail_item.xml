@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                android:paddingLeft="@dimen/aliwx_large_padding"
+                android:paddingRight="@dimen/aliwx_large_padding">
+
+    <TextView
+        android:id="@+id/first_new_msg_notify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/aliwx_first_new_msg_notify"
+        android:textColor="@color/aliwx_color_gray_02"
+        android:textSize="@dimen/aliwx_font_third_grade"
+        android:visibility="gone"/>
+
+    <include layout="@layout/aliwx_chatting_detail_item_time"/>
+    <!-- left -->
+
+    <com.alibaba.mobileim.fundamental.widget.WXNetworkImageView
+        android:id="@+id/left_head"
+        android:layout_width="@dimen/aliwx_common_head_size"
+        android:layout_height="@dimen/aliwx_common_head_size"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/show_time"
+        android:visibility="gone"/>
+
+    <!--<ViewStub-->
+        <!--android:id="@+id/left_name"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/show_time"-->
+        <!--android:layout_marginLeft="@dimen/aliwx_common_unit_margin"-->
+        <!--android:layout_marginRight="36dp"-->
+        <!--android:layout_toRightOf="@id/left_head"-->
+        <!--android:layout="@layout/aliwx_chatting_detail_left_name"/>-->
+    <TextView
+        android:id="@+id/left_name"
+        style="@style/aliwx_chatting_detail_text_left_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/show_time"
+        android:layout_marginLeft="@dimen/aliwx_common_unit_margin"
+        android:layout_marginRight="36dp"
+        android:layout_toRightOf="@id/left_head"
+        android:ellipsize="middle"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textColor="#8A8A8A"
+        android:textColorHighlight="@android:color/transparent"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/left_content_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/left_name"
+        android:layout_marginRight="36dp"
+        android:layout_toRightOf="@id/left_head"
+        android:background="@drawable/aliwx_comment_l_bg"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <com.alibaba.mobileim.fundamental.widget.PatchedTextView
+            android:id="@+id/left_text"
+            style="@style/aliwx_chatting_detail_text_left_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web|phone"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:singleLine="false"
+            android:textColor="@color/aliwx_text_color_black"
+            android:textColorHighlight="@android:color/transparent"
+            android:textSize="@dimen/aliwx_common_text_size"/>
+
+        <ViewStub
+            android:id="@+id/left_gif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inflatedId="@+id/left_gif_stub"
+            android:layout_gravity="center"
+            android:layout="@layout/aliwx_chatting_detail_gif"
+            android:src="@drawable/aliwx_default_photo"/>
+
+        <!--<include-->
+            <!--android:id="@+id/left_audio_layout"-->
+            <!--layout="@layout/aliwx_audio_flipper_from"/>-->
+        <ViewStub
+            android:id="@+id/left_audio_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout="@layout/aliwx_audio_flipper_from"/>
+
+        <ViewStub
+            android:id="@+id/download_image_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout="@layout/aliwx_chatting_detail_download_image_progress"/>
+
+        <!--<ViewStub-->
+            <!--android:id="@+id/left_show_gif_progress"-->
+            <!--android:layout_width="20dip"-->
+            <!--android:layout_height="20dip"-->
+            <!--android:layout="@layout/aliwx_chatting_detail_show_gif_progress"/>-->
+
+        <ViewStub
+            android:id="@+id/left_custom_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout="@layout/aliwx_chatting_detail_custom_msg"/>
+    </RelativeLayout>
+
+    <!--<ViewStub-->
+        <!--android:id="@+id/left_from"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignLeft="@id/left_content_layout"-->
+        <!--android:layout_below="@id/left_content_layout"-->
+        <!--android:layout="@layout/aliwx_chatting_detail_left_from"/>-->
+
+    <!-- 系统提示 -->
+
+    <LinearLayout
+        android:id="@+id/sysmsg"
+        style="@style/aliwx_chatting_detail_sysmsg_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/show_time"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/aliwx_sysmsgbg"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/sysmsg_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/aliwx_chatting_detail_sysmsg_color"
+            android:textSize="@dimen/aliwx_font_third_grade"/>
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/center_custom_msg"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:orientation="vertical"-->
+        <!--android:visibility="gone"/>-->
+
+    <ViewStub
+        android:id="@+id/center_custom_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout="@layout/aliwx_chatting_detail_custom_msg"/>
+
+    <!-- 语音未播放标识 -->
+    <ViewStub
+        android:id="@+id/audio_unread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/left_content_layout"
+        android:layout_alignTop="@id/left_content_layout"
+        android:layout_marginLeft="-16dip"
+        android:layout_toRightOf="@id/left_content_layout"
+        android:layout="@layout/aliwx_chatting_detail_audio_unread"/>
+
+    <!-- 消息接收失败状态 -->
+
+    <ViewStub
+        android:id="@+id/receive_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="3dip"
+        android:layout_alignBottom="@id/left_content_layout"
+        android:layout_alignTop="@id/left_content_layout"
+        android:layout_toRightOf="@id/left_content_layout"
+        android:gravity="center_vertical"
+        android:layout="@layout/aliwx_chatting_detail_receive_state"/>
+
+    <!-- right -->
+    <RelativeLayout
+        android:id="@+id/right_content_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/show_time"
+        android:layout_marginLeft="36dp"
+        android:layout_toLeftOf="@+id/right_head"
+        android:background="@drawable/aliwx_comment_r_bg"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ViewStub
+            android:id="@+id/right_gif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inflatedId="@+id/right_gif_stub"
+            android:layout_gravity="center"
+            android:layout="@layout/aliwx_chatting_detail_gif"
+            android:src="@drawable/aliwx_default_photo_right"/>
+
+        <ViewStub
+            android:id="@+id/right_image_progress"
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:layout_centerInParent="true"
+            android:layout="@layout/aliwx_chatting_detail_download_image_progress"/>
+
+        <com.alibaba.mobileim.fundamental.widget.PatchedTextView
+            android:id="@+id/right_text"
+            style="@style/aliwx_chatting_detail_text_right_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web|phone"
+            android:gravity="center_vertical"
+            android:textColor="@color/aliwx_white"
+            android:textColorHighlight="@android:color/transparent"
+            android:textColorLink="@android:color/white"
+            android:textSize="@dimen/aliwx_common_text_size"/>
+
+        <!--<com.alibaba.mobileim.fundamental.widget.GifView-->
+        <!--android:id="@+id/right_gif"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--android:gravity="center" />-->
+
+        <!--<include-->
+            <!--android:id="@+id/right_audio_layout"-->
+            <!--layout="@layout/aliwx_audio_flipper_to"/>-->
+
+        <ViewStub
+            android:id="@+id/right_audio_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout="@layout/aliwx_audio_flipper_to"/>
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/right_custom_msg"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:orientation="vertical"-->
+            <!--android:visibility="gone"/>-->
+        <ViewStub
+            android:id="@+id/right_custom_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout="@layout/aliwx_chatting_detail_custom_msg"/>
+
+    </RelativeLayout>
+
+    <!--<TextView-->
+    <!--android:id="@+id/right_from"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignRight="@id/right_content_layout"-->
+    <!--android:layout_below="@id/right_content_layout"-->
+    <!--android:paddingRight="22dp"-->
+    <!--android:textColor="@color/aliwx_share_form_color"-->
+    <!--android:textSize="12sp"-->
+    <!--android:visibility="gone" />-->
+
+    <com.alibaba.mobileim.fundamental.widget.WXNetworkImageView
+        android:id="@+id/right_head"
+        android:layout_width="@dimen/aliwx_common_head_size"
+        android:layout_height="@dimen/aliwx_common_head_size"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/show_time"
+        android:visibility="gone"/>
+
+    <!-- 发送状态 -->
+    <ViewStub
+        android:id="@+id/send_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="-26dp"
+        android:layout_centerVertical="true"
+        android:layout_alignBottom="@id/right_content_layout"
+        android:layout_alignTop="@id/right_content_layout"
+        android:layout_toLeftOf="@id/right_content_layout"
+        android:layout="@layout/aliwx_chatting_detail_send_state"/>
+
+    <!-- 发送状态进度 -->
+    <ViewStub
+        android:id="@+id/send_state_progress"
+        android:layout_width="15dip"
+        android:layout_height="15dip"
+        android:layout_alignBottom="@id/right_content_layout"
+        android:layout_alignTop="@id/right_content_layout"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="-33dip"
+        android:layout_toLeftOf="@id/right_content_layout"
+        android:gravity="center_vertical"
+        android:layout_centerInParent="true"
+        android:layout="@layout/aliwx_chatting_detail_show_gif_progress"/>
+
+    <!---@消息未读数展示，以及单聊消息的对方已读状态-->
+    <ViewStub
+        android:id="@+id/msg_unread_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/right_content_layout"
+        android:layout_alignTop="@id/right_content_layout"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="-35dip"
+        android:layout_toLeftOf="@id/right_content_layout"
+        android:gravity="center"
+        android:layout="@layout/aliwx_chatting_detail_msg_unread_count"/>
+
+</RelativeLayout>

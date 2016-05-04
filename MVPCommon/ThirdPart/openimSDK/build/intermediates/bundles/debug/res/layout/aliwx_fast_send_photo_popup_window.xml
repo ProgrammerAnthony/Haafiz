@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_photo_window"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/reply_bar_layout"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="7dp"
+    android:orientation="vertical"
+    android:background="@drawable/aliwx_bg_photo_window"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/popup_photo_text"
+        android:layout_width="@dimen/aliwx_popup_photo_size"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/aliwx_color_gray_01"
+        android:maxEms="5"
+        android:textSize="12sp"
+        android:text="您可能要使用的图片:"
+        />
+
+    <ImageView
+        android:id="@+id/popup_photo_pic"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="5dp"
+        android:layout_width="@dimen/aliwx_popup_photo_size"
+        android:layout_height="@dimen/aliwx_popup_photo_size"
+        />
+
+</LinearLayout>

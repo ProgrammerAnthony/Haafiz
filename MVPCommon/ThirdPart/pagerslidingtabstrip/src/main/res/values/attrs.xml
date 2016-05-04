@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicator" format="color|reference" />
+        <attr name="pstsDivider" format="color|reference" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="color|reference" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsItemCountInScreen" format="integer" />
+        <attr name="pstsTextAllCaps" format="boolean" />
+        <attr name="pstsTabCountOnScreen" format="boolean" />
+    </declare-styleable>
+
+</resources>

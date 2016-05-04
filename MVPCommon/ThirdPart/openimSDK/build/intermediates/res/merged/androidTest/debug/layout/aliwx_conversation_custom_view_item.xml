@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/aliwx_message_item_height"
+    android:background="@drawable/aliwx_friend_item_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/conversation_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/aliwx_font_second_grade"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/conversation_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/aliwx_font_third_grade"
+            android:textColor="@color/aliwx_common_text_color2"
+            android:gravity="center" />
+    </LinearLayout>
+
+
+</RelativeLayout>

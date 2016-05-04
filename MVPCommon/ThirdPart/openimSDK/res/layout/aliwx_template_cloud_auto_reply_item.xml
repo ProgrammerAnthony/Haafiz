@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/aliwx_chatting_detail_item_style" >
+
+    <include layout="@layout/aliwx_chatting_detail_item_time" />
+
+    <include layout="@layout/aliwx_chatting_detail_left_right_head" />
+
+    <include layout="@layout/aliwx_chatting_detail_item_leftname" />
+
+    <TextView
+        android:id="@+id/unknow_type_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/show_time"
+        android:layout_toRightOf="@id/left_head"
+        android:background="@drawable/aliwx_comment_l"
+        android:maxWidth="@dimen/aliwx_max_text_width"
+        android:text="@string/aliwx_public_account_update_tip"
+        android:textColor="@android:color/black"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/content_layout"
+        android:layout_below="@id/left_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+	</LinearLayout>
+    <include layout="@layout/aliwx_chatting_detail_from" />
+
+    <include layout="@layout/aliwx_chatting_detail_item_sendstate" />
+
+</RelativeLayout>

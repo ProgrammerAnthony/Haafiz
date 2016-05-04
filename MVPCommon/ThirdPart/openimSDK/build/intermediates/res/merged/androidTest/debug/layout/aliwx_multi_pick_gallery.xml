@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/aliwx_contacts_tab_color"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/title"
+        style="@style/aliwx_common_title_style"
+        android:background="@color/aliwx_color_blue_dark">
+
+        <TextView
+            android:id="@+id/title_back"
+            style="@style/aliwx_common_title_left_btn_shadow_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:textColor="@color/aliwx_color_white"
+            android:text="" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="@dimen/aliwx_button_parent_right_margin">
+
+            <TextView
+                android:id="@+id/selected_count"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/aliwx_common_blue_oval_bg"
+                android:textSize="@dimen/aliwx_font_second_grade"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:focusable="false"
+                android:textColor="@color/aliwx_color_white"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_toRightOf="@+id/selected_count"
+                android:layout_marginLeft="6dp"
+                android:layout_centerVertical="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:focusable="false"
+                android:singleLine="true"
+                android:text="@string/aliwx_send"
+                android:textColor="@color/aliwx_color_blue"
+                android:textSize="@dimen/aliwx_font_first_grade"/>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/switcherLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/aliwx_color_blue_dark" >
+
+        <TextView
+            android:id="@+id/pic_dir"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:paddingLeft="20dip"
+            android:paddingRight="2dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:ellipsize="middle"
+            android:maxLength="12"
+            android:text="图片目录"
+            android:drawablePadding="4dip"
+            android:drawableRight="@drawable/aliwx_at6"
+            android:textColor="#dddddd"
+            android:textSize="@dimen/aliwx_common_text_size" />
+
+        <RelativeLayout
+            android:id="@+id/left_button"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/pic_dir"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/aliwx_send_original_check_left_margin"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/send_original_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="1dp"
+                android:src="@drawable/aliwx_send_original_btn_off"
+                android:gravity="center" />
+            <TextView
+                android:id="@+id/send_original"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/send_original_check"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/aliwx_send_original_check_right_margin"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="原图"
+                android:textColor="@color/aliwx_color_gray_02"
+                android:textSize="@dimen/aliwx_font_first_grade" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/preview"
+            android:layout_width="65dip"
+            android:layout_height="50dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="9dip"
+            android:singleLine="true"
+            android:gravity="center"
+            android:text="@string/aliwx_preview"
+            android:textColor="@color/aliwx_color_white"
+            android:textSize="@dimen/aliwx_font_first_grade"/>
+
+        <!--RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/aliwx_column_up_unit_margin" >
+
+            <Button
+                android:id="@+id/finish"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="9dp"
+                android:background="@drawable/aliwx_common_blue_btn_bg"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/aliwx_finish"
+                android:textColor="@drawable/aliwx_btn_text_color"
+                android:textSize="@dimen/aliwx_common_text_size" />
+
+            <TextView
+                android:id="@+id/selected_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/aliwx_news_background"
+                android:gravity="center"
+                android:visibility="gone"
+                android:includeFontPadding="false"
+                android:text="12"
+                android:textSize="11sp" />
+        </RelativeLayout-->
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title"
+        android:layout_above="@id/switcherLayout"
+        android:background="@color/aliwx_black" >
+
+        <GridView
+            android:id="@+id/gridGallery"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:cacheColorHint="#00000000"
+            android:fastScrollEnabled="false"
+            android:horizontalSpacing="2dip"
+            android:listSelector="#00000000"
+            android:numColumns="3"
+            android:padding="0dp"
+            android:verticalSpacing="2dip" >
+        </GridView>
+
+        <ImageView
+            android:id="@+id/imgNoMedia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/aliwx_app_name" />
+    </FrameLayout>
+
+</RelativeLayout>

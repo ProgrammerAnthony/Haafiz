@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:drawable/screen_background_dark"
+    android:padding="3dip" >
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="81dip"
+        android:layout_height="32dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/aliwx_image_viewer_bg"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:text="@string/aliwx_back"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="81dip"
+        android:layout_height="32dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/aliwx_image_viewer_bg"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:text="@string/aliwx_confirm"
+        android:textColor="@android:color/white" />
+
+    <LinearLayout
+        android:id="@+id/imageLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/back"
+        android:layout_centerInParent="true"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:scaleType="centerInside" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/movieLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/back"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <com.alibaba.mobileim.fundamental.widget.GifView
+            android:id="@+id/movieView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:gravity="center" />
+        <!--
+              <com.alibaba.mobileim.view.MovieView
+            android:id="@+id/movieView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+        -->
+    </LinearLayout>
+
+    <ZoomControls
+        android:id="@+id/zoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="2.0dip"
+        android:orientation="horizontal" />
+
+</RelativeLayout>

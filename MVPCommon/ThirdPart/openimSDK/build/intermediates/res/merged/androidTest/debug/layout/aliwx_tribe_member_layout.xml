@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/aliwx_white" >
+
+    <include
+        android:id="@+id/aliwx_title"
+        layout="@layout/aliwx_common_simple_title" />
+    
+    <ImageView
+        android:id="@+id/aliwx_empty_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dip"
+        android:visibility="gone"
+        android:src="@drawable/aliwx_pub_bg_emple" />
+    
+    <TextView
+        android:id="@+id/aliwx_empty_text"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/aliwx_empty_image"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+    <com.alibaba.mobileim.fundamental.widget.refreshlist.PullToRefreshDummyHeadListView
+        android:id="@+id/aliwx_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@color/aliwx_column_bg_color_pressed"
+        android:layout_below="@id/aliwx_title"
+        android:layout_above="@+id/aliwx_switcherLayout"
+        android:cacheColorHint="#00000000"
+        android:fadingEdge="none"
+        android:groupIndicator="@null"
+        android:scrollbarStyle="outsideOverlay" >
+    </com.alibaba.mobileim.fundamental.widget.refreshlist.PullToRefreshDummyHeadListView>
+
+    <com.alibaba.mobileim.fundamental.widget.LetterListView
+        android:id="@+id/aliwx_friends_letter"
+        android:layout_width="26dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/aliwx_title"
+        android:layout_above="@+id/aliwx_switcherLayout"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="30dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/aliwx_friends_overlay"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="83dp"
+        android:background="@drawable/aliwx_refresh_toast_bg"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:padding="5dip"
+        android:textColor="#ffffff"
+        android:textSize="32sp"
+        android:visibility="gone"
+         />
+
+    <RelativeLayout
+        android:id="@+id/aliwx_dummy_list_top"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:background="@drawable/aliwx_friend_item_bg"
+        android:visibility="gone"
+        >
+
+        <CheckBox
+            android:id="@+id/aliwx_select_box"
+            android:layout_width="@dimen/aliwx_common_checkbox_size"
+            android:layout_height="@dimen/aliwx_common_checkbox_size"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/aliwx_common_check_bg"
+            android:clickable="false"
+            android:visibility="gone"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/aliwx_head"
+            style="@style/aliwx_common_head_style"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/aliwx_select_box"
+            android:visibility="gone"
+            />
+
+
+
+        <TextView
+            android:id="@+id/aliwx_select_name"
+            style="@style/aliwx_common_first_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/aliwx_head"
+            android:layout_alignTop="@id/aliwx_head"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/aliwx_column_up_unit_margin"
+            android:layout_toRightOf="@id/aliwx_head"
+            android:layout_centerHorizontal="true"
+            android:text="\@all(所有人)"
+            android:ellipsize="middle" />
+    </RelativeLayout>
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/aliwx_contacts_switch_tab"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:layout_below="@id/aliwx_title"-->
+        <!--android:visibility="gone" />-->
+    
+
+    
+    <LinearLayout
+        android:id="@+id/aliwx_search_contacts_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/aliwx_halftransparent"
+        android:layout_above="@+id/aliwx_switcherLayout"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            layout="@layout/aliwx_search_text" />
+
+        <ListView
+            android:id="@+id/aliwx_search_contacts_listview"
+            style="@style/aliwx_dividedListStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:fadingEdge="none" />
+    </LinearLayout>
+
+    <include layout="@layout/aliwx_title_bar_shadow" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/aliwx_divider_color"
+        android:layout_above="@+id/aliwx_switcherLayout"/>
+
+    <RelativeLayout
+        android:id="@+id/aliwx_switcherLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/aliwx_color_white"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/at_sure_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/at_member_count"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/aliwx_common_blue_oval_bg"
+                android:textSize="@dimen/aliwx_font_second_grade"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:focusable="false"
+                android:textColor="@color/aliwx_color_white"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/at_ok_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_toRightOf="@+id/at_member_count"
+                android:layout_marginLeft="6dp"
+                android:layout_centerVertical="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:textSize="@dimen/aliwx_font_first_grade"
+                android:focusable="false"
+                android:text="确定"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/at_all_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:text="\@all(所有人)"
+            android:textSize="@dimen/aliwx_common_text_size"
+            android:textColor="@color/aliwx_color_gray_01"
+            android:visibility="gone"/>
+
+        <HorizontalScrollView
+            android:id="@+id/aliwx_scrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/at_sure_layout"
+            android:fadingEdge="none"
+            android:fadingEdgeLength="0dip"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/aliwx_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:fadingEdge="none"
+                android:gravity="left|center_vertical"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+</RelativeLayout>

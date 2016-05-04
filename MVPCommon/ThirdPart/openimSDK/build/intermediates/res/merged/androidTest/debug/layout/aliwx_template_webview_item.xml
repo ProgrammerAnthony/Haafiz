@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/aliwx_chatting_detail_item_style" >
+
+    <include layout="@layout/aliwx_chatting_detail_item_time" />
+    <include layout="@layout/aliwx_chatting_detail_left_right_head" />
+    <include layout="@layout/aliwx_chatting_detail_item_leftname" />
+    
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/left_name"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:clickable="true"
+        android:minHeight="80dip"
+        android:visibility="visible" >
+        <RelativeLayout
+            android:id="@+id/plugin_msg_loading"
+            android:layout_width="fill_parent"
+            android:layout_height="80dip"
+            android:visibility="gone" >
+
+            <ProgressBar
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/aliwx_my_progress" />
+        </RelativeLayout>
+
+        <com.alibaba.mobileim.extra.xblink.webview.XBHybridWebView
+                android:id="@+id/webview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+        </com.alibaba.mobileim.extra.xblink.webview.XBHybridWebView>
+    </LinearLayout>
+    
+	<include layout="@layout/aliwx_chatting_detail_from" />
+    <include layout="@layout/aliwx_chatting_detail_item_sendstate" />
+</RelativeLayout>

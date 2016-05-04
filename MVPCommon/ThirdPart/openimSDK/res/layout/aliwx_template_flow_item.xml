@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/flow_share_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+          android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@android:color/black"
+        android:textColorHighlight="@android:color/transparent"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/flow_share_first_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flow_share_title"
+      >
+
+      <com.alibaba.mobileim.fundamental.widget.WXNetworkImageView
+            android:id="@+id/flow_share_img"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/aliwx_singletp_vertical_img_padding_height"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/flow_share_description"
+            style="@style/aliwx_chatting_detail_text_left_style"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#40000000"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:maxLines="2"
+            android:maxWidth="@dimen/aliwx_max_sharetext_width"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="@android:color/transparent"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/flow_vertical_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flow_share_first_layout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="0dp"
+        android:maxLines="3"
+        android:textColor="@color/aliwx_common_text_color2"
+        android:textSize="12sp" />
+    
+    <LinearLayout
+        android:id="@+id/flow_btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/flow_vertical_text"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <LinearLayout
+            android:id="@+id/flow_leftSpacer"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:orientation="horizontal"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/flow_button1"
+            android:layout_width="0dip"
+            android:layout_height="35dp"
+            android:layout_gravity="left"
+            android:layout_weight="0.5"
+            android:background="@drawable/aliwx_common_blue_btn_bg"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/flow_button2"
+            android:layout_width="0dip"
+            android:layout_height="35dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/aliwx_common_grey_btn_bg"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/flow_button3"
+            android:layout_width="0dip"
+            android:layout_height="35dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/aliwx_common_grey_btn_bg"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/flow_button4"
+            android:layout_width="0dip"
+            android:layout_height="35dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/aliwx_common_grey_btn_bg"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/flow_rightSpacer"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:orientation="horizontal"
+            android:visibility="gone" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/child_item_root"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flow_btn_layout"
+        android:orientation="vertical"
+        android:paddingTop="6.6dip" >
+    </LinearLayout>
+
+</RelativeLayout>

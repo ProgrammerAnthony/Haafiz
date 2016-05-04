@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/smile_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp" >
+
+        <com.alibaba.mobileim.fundamental.widget.ViewScroller
+            android:id="@+id/smily_scroller"
+            android:layout_width="fill_parent"
+            android:layout_height="172dip"
+            android:paddingBottom="7dip"
+            android:visibility="gone" >
+        </com.alibaba.mobileim.fundamental.widget.ViewScroller>
+
+        <com.alibaba.mobileim.fundamental.widget.ViewScroller
+            android:id="@+id/gif_smily_scroller"
+            android:layout_width="fill_parent"
+            android:layout_height="172dip"
+            android:visibility="gone" >
+        </com.alibaba.mobileim.fundamental.widget.ViewScroller>
+    </RelativeLayout>
+
+    <com.alibaba.mobileim.fundamental.widget.PageControlView
+        android:id="@+id/scrollerControl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dip"
+        android:gravity="center_horizontal" />
+
+</LinearLayout>

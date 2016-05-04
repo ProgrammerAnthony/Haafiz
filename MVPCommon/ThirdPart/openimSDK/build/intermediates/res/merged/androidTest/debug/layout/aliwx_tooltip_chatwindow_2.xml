@@ -1,0 +1,66 @@
+<com.alibaba.mobileim.appmonitor.tiptool.ExRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <com.alibaba.mobileim.appmonitor.tiptool.HorImageListView
+        android:id="@+id/horListview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/horListview"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="7dp"
+        android:paddingLeft="7dp" >
+
+        <include
+            android:id="@+id/msgAreaLayout"
+            layout="@layout/aliwx_tooltip_chatwindow_rec_funbar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/operationLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content"
+        android:layout_marginTop="20dip"
+        android:layout_marginLeft="7dip"
+        android:layout_marginRight="7dip"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/close_tooltip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="退出诊断" />
+
+        <Button
+            android:id="@+id/more_log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+              android:layout_weight="1"
+            android:text="查看日志" />
+
+        <Button
+            android:id="@+id/log_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+              android:layout_weight="1"
+            android:text="上传日志" />
+        
+         <Button
+            android:id="@+id/back_ball"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="还原小球" />
+    </LinearLayout>
+
+</com.alibaba.mobileim.appmonitor.tiptool.ExRelativeLayout>

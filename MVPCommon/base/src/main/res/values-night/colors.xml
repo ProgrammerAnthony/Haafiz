@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#263238</color>
+    <color name="colorPrimaryDark">#263238</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="theme_primary_accent">#8BC34A</color>
+    <color name="theme_primary_dark">#1976D2</color>
+    <color name="theme_primary_light">#2196F3</color>
+    <color name="theme_window_background">#FFF5F5F5</color>
+    <color name="theme_divider">#B6B6B6</color>
+
+
+    <color name="theme_bg_white">#212b30</color>
+    <color name="theme_bg_line_gray">#333</color>
+    <color name="theme_text_black">#fff</color>
+    <color name="theme_text_white">#212b30</color>
+
+
+
+
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+
+    <color name="colorBlue">#69b3e0</color>
+    <color name="colorBlueDark">#1379d6</color>
+    <color name="textBlueDark">#1379d6</color>
+    <color name="textWhite">#ffffff</color>
+    <color name="textBlack">#333333</color>
+    <color name="textGray">#999999</color>
+    <color name="text_gray_b">#bbbbbb</color>
+    <color name="text_gray_c">#cccccc</color>
+    <color name="text_gray_e">#eeeeee</color>
+
+
+    <color name="drawer_home_coclor">#ff0e579a</color>
+    <color name="drawer_explore_coclor">#ff2ec5f5</color>
+    <color name="drawer_follow_coclor">#ff3bbfba</color>
+    <color name="drawer_collect_coclor">#ffec7530</color>
+    <color name="drawer_draft_coclor">#ff6fc624</color>
+    <color name="drawer_question_coclor">#fffecb2f</color>
+
+    <color name="list_item_title">#fff</color>
+    <color name="list_background">#212b30</color>
+    <color name="list_background_pressed">#eee</color>
+    <color name="list_divider">#00000000</color>
+
+
+</resources>

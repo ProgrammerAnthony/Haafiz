@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/aliwx_chatting_detail_item_style" >
+
+    <include
+        android:id="@+id/show_time_line"
+        layout="@layout/aliwx_chatting_detail_item_time" />
+
+    <include layout="@layout/aliwx_chatting_detail_left_right_head" />
+    
+    <include layout="@layout/aliwx_chatting_detail_item_leftname" />
+
+    <RelativeLayout
+        android:id="@+id/content_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/left_name"
+        android:background="@drawable/aliwx_comment_l_nested" >
+
+        <include
+            android:id="@+id/right_audio_layout"
+            android:layout_width="@dimen/aliwx_audio_minwidth"
+            android:layout_height="wrap_content"
+            layout="@layout/aliwx_audio_flipper_to" />
+
+        <include
+            android:id="@+id/left_audio_layout"
+            android:layout_width="@dimen/aliwx_audio_minwidth"
+            android:layout_height="wrap_content"
+            layout="@layout/aliwx_audio_flipper_from" />
+
+        <RelativeLayout
+            android:id="@+id/center_audio_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/audio_center_time"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dip"
+                android:gravity="center_vertical"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/aliwx_font_second_grade" />
+
+            <ProgressBar
+                android:id="@+id/center_audio_progress"
+                android:layout_width="24dip"
+                android:layout_height="24dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/aliwx_my_progress"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/center_audio_fail"
+                android:layout_width="32dip"
+                android:layout_height="32dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/center_audio_notplaying"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="2dip"
+                android:src="@drawable/aliwx_chatfrom_play_r03" />
+
+            <ViewFlipper
+                android:id="@+id/center_audio"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dip"
+                android:flipInterval="500"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/aliwx_chatfrom_play_r01" />
+
+                <ImageView
+                     android:layout_gravity="left|center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/aliwx_chatfrom_play_r02" />
+
+                <ImageView
+                      android:layout_gravity="left|center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/aliwx_chatfrom_play_r03" />
+            </ViewFlipper>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/aliwx_chatting_detail_from" />
+
+    <include layout="@layout/aliwx_chatting_detail_item_sendstate" />
+
+</RelativeLayout>

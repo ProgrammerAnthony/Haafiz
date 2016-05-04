@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/aliwx_audio_minwidth"
+    android:layout_height="@dimen/aliwx_audio_height" >
+
+    <TextView
+        android:id="@+id/audio_right_time"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="3dip"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aliwx_font_second_grade" />
+
+    <ProgressBar
+        android:id="@+id/download_right_audio_progress"
+        android:layout_width="24dip"
+        android:layout_height="24dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dip"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/aliwx_my_progress"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/download_right_audio_fail"
+        android:layout_width="32dip"
+        android:layout_height="32dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dip"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/right_audio_notplaying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="2dip"
+        android:layout_toRightOf="@id/audio_right_time"
+        android:scaleType="fitEnd"
+        android:src="@drawable/aliwx_chatto_voice_playing_f3" />
+
+    <com.alibaba.mobileim.kit.chat.widget.FixedViewFlipper
+        android:id="@+id/right_audio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="2dip"
+        android:flipInterval="500"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitEnd"
+            android:src="@drawable/aliwx_chatto_voice_playing_f1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitEnd"
+            android:src="@drawable/aliwx_chatto_voice_playing_f2" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitEnd"
+            android:src="@drawable/aliwx_chatto_voice_playing_f3" />
+    </com.alibaba.mobileim.kit.chat.widget.FixedViewFlipper>
+
+</RelativeLayout>

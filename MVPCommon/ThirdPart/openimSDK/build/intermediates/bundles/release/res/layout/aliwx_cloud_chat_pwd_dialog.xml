@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip" >
+
+    <EditText
+        android:id="@+id/password_text"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dip"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/aliwx_input_text_bg"
+        android:focusable="true"
+        android:paddingRight="100dp"
+        android:hint=""
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:textSize="@dimen/aliwx_common_text_size" />
+
+    <ImageView
+        android:id="@+id/password_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dip"
+        android:src="@drawable/aliwx_cloud_msg_forget_password" />
+
+</RelativeLayout>

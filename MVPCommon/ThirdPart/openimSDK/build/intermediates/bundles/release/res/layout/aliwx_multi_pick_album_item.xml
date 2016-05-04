@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="80dip"
+    android:background="@color/aliwx_contacts_tab_color"
+    android:paddingBottom="4dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingTop="4dip">
+
+    <ImageView
+        android:id="@+id/album_pic"
+        android:layout_width="80dip"
+        android:layout_height="80dip"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/album_iv"
+        android:layout_width="20dip"
+        android:layout_height="20dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/aliwx_as6" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/album_pic">
+
+        <TextView
+            android:id="@+id/album_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="middle"
+            android:maxWidth="150dp"
+            android:textSize="16sp"
+            android:text="123"
+            android:textColor="#ff333333" />
+
+        <TextView
+            android:id="@+id/album_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/album_name"
+            android:layout_below="@+id/album_name"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:text="asdfa"
+            android:textColor="#999999" />
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/bottom_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="#cccccc"
+        android:visibility="gone" />
+
+</RelativeLayout>

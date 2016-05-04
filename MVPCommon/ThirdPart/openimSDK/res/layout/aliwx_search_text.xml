@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/aliwx_search_head_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="47dip"
+        android:background="@color/aliwx_common_bg_color"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:padding="@dimen/aliwx_common_unit_margin" >
+
+        <ImageButton
+            android:id="@+id/aliwx_search_btn"
+            android:layout_width="@dimen/aliwx_search_btn_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/aliwx_common_unit_margin"
+            android:background="@drawable/aliwx_common_white_btn_bg"
+            android:src="@drawable/aliwx_btn_add"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/aliwx_cancel_search"
+            style="@style/aliwx_common_white_btn_text_style"
+            android:layout_width="@dimen/aliwx_search_btn_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/aliwx_common_unit_margin"
+            android:layout_toLeftOf="@id/aliwx_search_btn"
+            android:background="@drawable/aliwx_common_white_btn_bg"
+            android:gravity="center"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/aliwx_white"
+            android:text="@string/aliwx_cancel"/>
+
+        <view
+            android:id="@+id/aliwx_search_key"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/aliwx_search_text_view_height"
+            android:layout_toLeftOf="@id/aliwx_cancel_search"
+            class="com.alibaba.mobileim.fundamental.widget.WxEditText"
+            android:background="@drawable/aliwx_search_text_bg"
+            android:drawableLeft="@drawable/aliwx_search_icon"
+            android:drawablePadding="@dimen/aliwx_common_unit_margin"
+            android:drawableRight="@drawable/aliwx_search_icon_delete_bg"
+            android:ellipsize="end"
+            android:freezesText="true"
+            android:hint="@string/aliwx_search"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="textNoSuggestions"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:singleLine="true"
+            android:textColor="@color/aliwx_black"
+            android:textSize="@dimen/aliwx_font_second_grade" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/aliwx_noresult_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/aliwx_friend_item_bg"
+        android:padding="@dimen/aliwx_common_half_safe_margin"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/aliwx_noresult_tip"
+            style="@style/aliwx_common_first_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/aliwx_common_half_safe_margin" />
+
+        <ImageView
+            android:id="@+id/aliwx_noresult_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:scaleType="centerInside"
+            android:src="@drawable/aliwx_arrow" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    >
+
+    <TextView
+        android:id="@+id/share_title"
+        android:gravity="center_vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@android:color/black"
+        android:textColorHighlight="@android:color/transparent"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <!--
+      <View
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/share_title"
+        android:layout_marginTop="10dp"
+        android:background="#999999" />
+    -->
+
+    <RelativeLayout
+        android:id="@+id/vertical_share_first_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/share_title"
+         >
+
+        <com.alibaba.mobileim.fundamental.widget.WXNetworkImageView
+            android:id="@+id/share_img"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/aliwx_singletp_vertical_img_padding_height"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/share_img_description"
+            style="@style/aliwx_chatting_detail_text_left_style"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="#40000000"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:maxLines="2"
+            android:maxWidth="@dimen/aliwx_max_sharetext_width"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="@android:color/transparent"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/share_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vertical_share_first_layout"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="0dp"
+        android:maxLines="3"
+        android:textColor="@color/aliwx_common_text_color2"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/share_text"
+        android:orientation="horizontal"
+        android:paddingLeft="0dip"
+        android:paddingRight="10dip"
+        >
+
+        <LinearLayout
+            android:id="@+id/leftSpacer"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:orientation="horizontal"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dip"
+            android:layout_height="35dp"
+            android:layout_gravity="left"
+            android:layout_weight="0.5"
+            android:background="@drawable/aliwx_common_blue_btn_bg"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dip"
+            android:layout_height="35dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/aliwx_common_grey_btn_bg"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="0dip"
+            android:layout_height="35dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/aliwx_common_grey_btn_bg"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="0dip"
+            android:layout_height="35dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/aliwx_common_grey_btn_bg"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/rightSpacer"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:orientation="horizontal"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

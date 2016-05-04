@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_bar_shadow_view"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/aliwx_title_shadow_height"
+    android:layout_marginTop="@dimen/aliwx_title_bar_height"
+    android:background="@color/aliwx_title_bar_shadow_color" >
+
+</View>

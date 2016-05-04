@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true" android:state_focused="true" android:state_pressed="false" android:color="@color/aliwx_black" />
+    <item android:state_enabled="true" android:state_pressed="true" android:color="@color/aliwx_black" />
+    <item android:color="@color/aliwx_right_sliding_text_color" />
+</selector>

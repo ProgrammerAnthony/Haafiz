@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/aliwx_black">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/multi_image_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/aliwx_black"/>
+
+    <ImageView
+        android:id="@+id/image_detail_default_view"
+        android:layout_width="106dip"
+        android:layout_height="80dip"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/aliwx_app_name"
+        android:src="@drawable/aliwx_default_photo"/>
+
+    <RelativeLayout
+        android:id="@+id/multi_image_textview_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/aliwx_title_bar_height"
+        android:background="@color/aliwx_color_blue_dark"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/multi_image_textview"
+            style="@style/aliwx_common_title_text_shadow_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:includeFontPadding="false"/>
+
+
+        <TextView
+            android:id="@+id/title_back"
+            style="@style/aliwx_common_title_left_btn_shadow_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""/>
+
+
+        <ImageView
+            android:id="@+id/aliwx_title_button"
+            android:layout_width="@dimen/aliwx_title_bar_height"
+            android:layout_height="@dimen/aliwx_title_bar_height"
+            android:layout_alignParentRight="true"
+            android:scaleType="center"
+            android:visibility="gone"
+            android:src="@drawable/aliwx_topbar_icon_download_bg"/>
+
+        <TextView
+            android:id="@+id/aliwx_title_button_tv"
+            style="@style/aliwx_common_title_right_btn_shadow_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:includeFontPadding="false"
+            android:text="@string/aliwx_more"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/multi_image_shadow_view_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/title"
+        android:background="@color/aliwx_multi_image_line"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/select_multi_image_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/aliwx_title_bar_height"
+        android:background="@color/aliwx_color_blue_dark"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/aliwx_select_multi_image_textview"
+            style="@style/aliwx_common_title_text_shadow_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:includeFontPadding="false"/>
+
+        <TextView
+            android:id="@+id/preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:includeFontPadding="false"
+            android:text="@string/aliwx_preview"
+            android:textColor="@color/aliwx_color_white"
+            android:textSize="@dimen/aliwx_common_text_size"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/select_title_back"
+            style="@style/aliwx_common_title_left_btn_shadow_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:text=""/>
+
+
+        <ImageView
+            android:id="@+id/image_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:src="@drawable/aliwx_picture_unselect_titlebar"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/selectLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/aliwx_color_blue_dark"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/left_button"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/aliwx_send_original_check_left_margin"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/send_original_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="1dp"
+                android:gravity="center"
+                android:src="@drawable/aliwx_send_original_btn_off"/>
+
+            <TextView
+                android:id="@+id/send_original"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/aliwx_send_original_check_right_margin"
+                android:layout_toRightOf="@+id/send_original_check"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="原图"
+                android:textColor="@color/aliwx_color_gray_02"
+                android:textSize="@dimen/aliwx_font_first_grade"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/aliwx_column_up_unit_margin">
+
+            <TextView
+                android:id="@+id/select_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_toRightOf="@+id/selected_count"
+                android:layout_marginLeft="6dp"
+                android:layout_centerVertical="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:focusable="false"
+                android:singleLine="true"
+                android:text="@string/aliwx_send"
+                android:textColor="@color/aliwx_color_blue"
+                android:textSize="@dimen/aliwx_font_first_grade"/>
+
+            <TextView
+                android:id="@+id/selected_count"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/aliwx_common_blue_oval_bg"
+                android:textSize="@dimen/aliwx_font_second_grade"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:focusable="false"
+                android:textColor="@color/aliwx_color_white"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/delete_multi_image_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/aliwx_title_bar_height"
+        android:background="#b2f4f4f4"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/delete_multi_image_textview"
+            style="@style/aliwx_common_title_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:includeFontPadding="false"/>
+
+        <TextView
+            android:id="@+id/delete_title_back"
+            style="@style/aliwx_common_title_left_btn_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"/>
+
+        <Button
+            android:id="@+id/delete_image_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/aliwx_top_delete_bg"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/multi_image_ls_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/aliwx_title_bar_height"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/multi_image_ls_textview"
+            style="@style/aliwx_common_title_text_shadow_white"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:includeFontPadding="false"
+            android:textColor="#7fffffff"
+            />
+
+
+        <TextView
+            android:id="@+id/aliwx_title_ls_button"
+            style="@style/aliwx_common_title_right_btn_shadow_white"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:includeFontPadding="false"
+            android:text="@string/aliwx_save_image"
+            android:textColor="#7fffffff"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

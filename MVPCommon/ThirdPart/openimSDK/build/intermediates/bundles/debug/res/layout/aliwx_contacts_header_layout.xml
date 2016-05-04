@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#f2f2f2"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/aliwx_search_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="27dip"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/aliwx_btn_search_bar">
+
+        <TextView
+            android:id="@+id/aliwx_search_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="搜索"
+            android:textSize="@dimen/aliwx_common_text_size"
+            android:drawableLeft="@drawable/aliwx_search_icon"
+            android:textColor="@color/aliwx_color_gray_02"
+            android:drawablePadding="5dp"/>
+        <!--
+        <TextView
+            android:id="@+id/aliwx_friends_search_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:hint="@string/aliwx_search"
+            android:textColor="@color/aliwx_third_text_color"
+            android:textSize="@dimen/aliwx_common_text_size"
+            />
+            -->
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/aliwx_list_top"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:background="@drawable/aliwx_friend_item_bg"
+        android:visibility="gone"
+        >
+
+        <CheckBox
+            android:id="@+id/aliwx_select_box"
+            android:layout_width="@dimen/aliwx_common_checkbox_size"
+            android:layout_height="@dimen/aliwx_common_checkbox_size"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/aliwx_common_check_bg"
+            android:clickable="false"
+            android:visibility="gone"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/aliwx_head"
+            style="@style/aliwx_common_head_style"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/aliwx_select_box"
+            android:visibility="gone"
+            />
+
+
+
+        <TextView
+            android:id="@+id/aliwx_select_name"
+            style="@style/aliwx_common_first_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/aliwx_head"
+            android:layout_alignTop="@id/aliwx_head"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/aliwx_column_up_unit_margin"
+            android:layout_toRightOf="@id/aliwx_head"
+            android:layout_centerHorizontal="true"
+            android:text="\@ALL(所有成员)"
+            android:ellipsize="middle" />
+    </RelativeLayout>
+
+
+</LinearLayout>

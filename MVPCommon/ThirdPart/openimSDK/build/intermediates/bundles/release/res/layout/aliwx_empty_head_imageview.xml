@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/head"
+    android:layout_width="@dimen/aliwx_common_head_size"
+    android:layout_height="@dimen/aliwx_common_head_size"
+    android:scaleType="fitXY"
+    android:src="@drawable/aliwx_empty_head" >
+
+</ImageView>

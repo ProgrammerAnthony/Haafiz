@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/record_dialog"
+    android:layout_width="148dip"
+    android:layout_height="148dip"
+    android:background="@drawable/aliwx_record_dialog_bg1"
+    android:visibility="gone" >
+
+    <TextView
+        android:id="@+id/record_release"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dip"
+        android:gravity="center_horizontal"
+        android:shadowColor="#bf000000"
+        android:shadowDx="0"
+        android:shadowDy="-1"
+        android:shadowRadius="1"
+        android:text="@string/aliwx_release_stop_record"
+        android:textColor="@color/aliwx_record_color"
+        android:textSize="@dimen/aliwx_font_third_grade" />
+
+    <ImageView
+        android:id="@+id/toast_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/aliwx_record_delete" />
+
+    <ImageView
+        android:id="@+id/hold_to_speak_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/aliwx_hold_to_speak_icon_voice" />
+
+    <TextView
+        android:id="@+id/toast_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="113dip"
+        android:gravity="center_horizontal"
+        android:paddingLeft="8dip"
+        android:text="@string/aliwx_default_time"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aliwx_font_top_grade" />
+
+    <TextView
+        android:id="@+id/toast_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="113dip"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:text="@string/aliwx_move_cancel_toast"
+        android:textColor="@color/aliwx_record_bottom_text_color"
+        android:textSize="@dimen/aliwx_font_third_grade" />
+
+    <TextView
+        android:id="@+id/too_short_toast_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/aliwx_record_too_short"
+        android:textColor="@color/aliwx_record_color"
+        android:textSize="@dimen/aliwx_common_text_size"
+        android:visibility="gone" />
+
+</RelativeLayout>

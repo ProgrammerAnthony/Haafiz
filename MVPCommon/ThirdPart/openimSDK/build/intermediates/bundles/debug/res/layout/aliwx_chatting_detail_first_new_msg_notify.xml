@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/aliwx_first_new_msg_notify"
+          android:textColor="@color/aliwx_color_gray_02"
+          android:textSize="@dimen/aliwx_font_third_grade"
+          android:visibility="gone">
+
+</TextView>

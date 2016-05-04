@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_enabled="false" android:color="@color/aliwx_common_text_color"/>
+    <item android:color="@color/aliwx_common_button_disable_text_color"/>
+
+</selector>

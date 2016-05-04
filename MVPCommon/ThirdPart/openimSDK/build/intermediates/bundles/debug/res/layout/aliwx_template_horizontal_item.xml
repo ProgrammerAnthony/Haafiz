@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:padding="10dp" >
+
+  <com.alibaba.mobileim.fundamental.widget.WXNetworkImageView
+        android:id="@+id/share_left_img"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:layout_marginRight="10dp"
+         />
+
+    <LinearLayout        
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:minHeight="55dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <com.alibaba.mobileim.fundamental.widget.PatchedTextView
+            android:id="@+id/title_text"
+            style="@style/aliwx_chatting_detail_text_left_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <com.alibaba.mobileim.fundamental.widget.PatchedTextView
+            android:id="@+id/description_text"
+            style="@style/aliwx_chatting_detail_text_left_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="2dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:visibility="gone"
+            android:textColor="#666666"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <com.alibaba.mobileim.fundamental.widget.WXNetworkImageView
+        android:id="@+id/share_right_img"
+        android:layout_width="55dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="55dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+       />
+
+</LinearLayout>

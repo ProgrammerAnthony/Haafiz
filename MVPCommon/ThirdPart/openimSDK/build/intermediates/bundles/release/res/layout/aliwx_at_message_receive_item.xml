@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/aliwx_receive_at_msg_item_layout"
+    android:background="@drawable/aliwx_friend_item_bg">
+
+    <RelativeLayout
+        android:id="@+id/aliwx_receive_at_msg_head_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/aliwx_receive_at_msg_head"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+
+        <ImageView
+            android:id="@+id/aliwx_receive_at_msg_unread_notify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/aliwx_receive_at_msg_head"
+            android:layout_alignTop="@id/aliwx_receive_at_msg_head"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/aliwx_topbar_at_icon_new" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/aliwx_receive_at_msg_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/aliwx_receive_at_msg_head_layout"
+        android:layout_marginBottom="14dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="14dp">
+
+        <TextView
+            android:id="@+id/aliwx_receive_at_msg_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/aliwx_receive_at_msg_name"
+            android:textColor="@color/aliwx_common_text_color4"
+            android:textSize="@dimen/aliwx_font_fourth_grade" />
+
+        <TextView
+            android:id="@+id/aliwx_receive_at_msg_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@id/aliwx_receive_at_msg_time"
+            android:textColor="@color/aliwx_common_text_color"
+            android:textSize="@dimen/aliwx_common_text_size" />
+
+        <TextView
+            android:id="@+id/aliwx_receive_at_msg_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/aliwx_receive_at_msg_name"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@id/aliwx_receive_at_msg_time"
+            android:singleLine="true"
+            android:textColor="@color/aliwx_common_text_color3"
+            android:textSize="@dimen/aliwx_font_third_grade" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/aliwx_receive_at_msg_item_divider"
+        android:layout_below="@id/aliwx_receive_at_msg_content_layout"
+        android:layout_alignLeft="@id/aliwx_receive_at_msg_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/aliwx_divider_color" />
+</RelativeLayout>

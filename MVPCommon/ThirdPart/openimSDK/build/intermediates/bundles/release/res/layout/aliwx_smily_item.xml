@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dip"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:paddingTop="@dimen/aliwx_common_unit_margin" >
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/aliwx_smily_item_size"
+        android:layout_height="@dimen/aliwx_smily_item_size" >
+    </ImageView>
+
+</LinearLayout>

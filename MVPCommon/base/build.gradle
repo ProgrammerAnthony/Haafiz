@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 22
+    compileSdkVersion 23
     buildToolsVersion "23.0.3"
 
     defaultConfig {
@@ -62,5 +62,10 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.1.0'
     //design library
     //    compile 'com.android.support:design:22.1.0'
-
+    compile project(':openimSDK')
+    compile project(':pagerslidingtabstrip')
+    compile project(':pulltorefreshhandmark')
+    compile project(':slidingmenu')
+    compile project(':ultraptrwithloadmore')
+    compile project(':viewpagerindicator')
 }

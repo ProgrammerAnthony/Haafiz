@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="drop_down_list_header_padding_top">12dp</dimen>
+    <dimen name="drop_down_list_header_padding_bottom">15dp</dimen>
+    <dimen name="drop_down_list_header_release_min_distance">20dp</dimen>
+    <dimen name="drop_down_list_header_progress_bar_height">36dp</dimen>
+    <dimen name="drop_down_list_footer_progress_bar_height">36dp</dimen>
+    <dimen name="drop_down_list_footer_button_margin_left">8dp</dimen>
+    <dimen name="drop_down_list_footer_button_height">48dp</dimen>
+
+    <dimen name="shadow_left_menu_width">10dp</dimen>
+    <dimen name="shadow_right_menu_width">10dp</dimen>
+    <dimen name="abs_left_menu_width">250dp</dimen>
+    <dimen name="abs_right_menu_width">100dp</dimen>
+
+
+    <!--来自友盟 IM -->
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="more_item_height">44dip</dimen>
+
+    <dimen name="audio_height">35dip</dimen>
+    <dimen name="audio_minwidth">50dip</dimen>
+    <dimen name="title_height">48dip</dimen>
+    <dimen name="column_height">47dip</dimen>
+    <dimen name="smily_column_width">20dip</dimen>
+    <dimen name="smily_fastreply_width">19dip</dimen>
+    <dimen name="search_icon_size">18.6dip</dimen>
+    <dimen name="popwindow_tips_height">45dip</dimen>
+    <dimen name="popwindow_tips_xoff">30dip</dimen>
+    <dimen name="expand_button_size">28dip</dimen>
+    <dimen name="net_alert_height">56dip</dimen>
+    <dimen name="send_button_w">50dip</dimen>
+    <dimen name="search_button_w">84dip</dimen>
+    <dimen name="max_text_width">204dip</dimen>
+    <dimen name="editview_h">28dip</dimen>
+    <dimen name="imageview_button_height">32dip</dimen>
+    <dimen name="friend_X">10dip</dimen>
+    <dimen name="friend_Y">12dip</dimen>
+    <dimen name="one_primary_text_size">16sp</dimen>
+    <dimen name="geo_width">140dip</dimen>
+    <dimen name="ls_pic_width">45dip</dimen>
+    <dimen name="order_pic_width">64dip</dimen>
+    <dimen name="order_detail_pic_width">73dip</dimen>
+    <dimen name="setting_layout_padding">15dip</dimen>
+    <dimen name="chatting_detail_bubble_width">200dip</dimen>
+    <dimen name="plugin_text_padding">5dip</dimen>
+
+    <!-- 新的eico特性 -->
+    <dimen name="net_alert_icon_size">20dip</dimen>
+    <dimen name="title_bar_height">45dip</dimen>
+
+    <dimen name="text_padding">1dip</dimen>
+    <dimen name="large_padding">12dip</dimen>
+    <dimen name="title_head_width">34.6dip</dimen>
+    <dimen name="title_state_width">24dip</dimen>
+    <dimen name="head_block_height">240dip</dimen>
+    <dimen name="bottom_tab_height">52dip</dimen>
+    <dimen name="pop_up_win_width">183dip</dimen>
+    <dimen name="message_item_height">55dip</dimen>
+    <dimen name="pop_up_win_width_ls">117dip</dimen>
+    <dimen name="common_big_margin">20dip</dimen>
+    <dimen name="common_safe_margin">12dip</dimen>
+    <dimen name="common_two_safe_margin">24dip</dimen>
+    <dimen name="common_unit_margin">8dip</dimen>
+    <dimen name="common_android_safe_margin">9.3dip</dimen>
+    <dimen name="common_quart_safe_margin">3dip</dimen>
+    <dimen name="common_half_safe_margin">6dip</dimen>
+    <dimen name="common_two_unit_margin">16dip</dimen>
+    <dimen name="column_up_unit_margin">10dip</dimen>
+    <dimen name="column_top_margin">14dip</dimen>
+    <dimen name="common_title_right_btn_width">58dip</dimen>
+    <dimen name="long_title_right_btn_width">80dip</dimen>
+    <dimen name="search_view_height">49.3dip</dimen>
+    <dimen name="search_btn_width">48dip</dimen>
+    <dimen name="friend_item_height">50dip</dimen>
+    <dimen name="friend_alpha_height">25dp</dimen>
+    <dimen name="friend_select_btn_width">100dip</dimen>
+    <dimen name="common_grey_btn_width">75dip</dimen>
+    <dimen name="basic_btn_width">35dip</dimen>
+    <dimen name="friend_recommond_margin_top">9dip</dimen>
+    <dimen name="friend_find_view_height">43dip</dimen>
+    <dimen name="friend_find_icon_size">26.6dip</dimen>
+    <dimen name="name_set_padding">13.3dip</dimen>
+    <dimen name="name_set_text_height">44dip</dimen>
+    <dimen name="setting_item_height">44dip</dimen>
+    <dimen name="title_middle_margin">60dip</dimen>
+    <dimen name="title_shadow_height">1px</dimen>
+    <dimen name="common_checkbox_size">25dip</dimen>
+    <dimen name="ww_group_bg_height">43dip</dimen>
+    <dimen name="ww_grou_indicator_size">12dip</dimen>
+    <dimen name="search_text_bg_height">36dip</dimen>
+    <dimen name="pull_down_toast_size">113dip</dimen>
+    <dimen name="plugin_icon_size">29.3dip</dimen>
+    <dimen name="hint_text_view_height">40dip</dimen>
+    <dimen name="setting_item_margin_top">10.6dip</dimen>
+    <dimen name="account_arrow_size">25dip</dimen>
+    <dimen name="delete_icon_size">64dip</dimen>
+    <dimen name="account_edittext_top_height">44.6dip</dimen>
+    <dimen name="account_edittext_bottom_height">44.6dip</dimen>
+    <dimen name="base_edit_text_top_margin">30.6dip</dimen>
+    <dimen name="title_btn_fifth_width">92dip</dimen>
+    <dimen name="smily_item_size">32dip</dimen>
+    <dimen name="gif_item_size">60dip</dimen>
+    <dimen name="friends_title_padding">6.3dip</dimen>
+    <dimen name="tribe_chatting_menu_bulletin_height">225dip</dimen>
+    <dimen name="tribe_bulletin_default_width">72dip</dimen>
+    <dimen name="tribe_bulletin_default_height">44dip</dimen>
+    <dimen name="voip_hangup_padding">30dip</dimen>
+    <dimen name="detail_profile_padding_top">12dip</dimen>
+    <dimen name="detail_profile_padding_bottom">14dip</dimen>
+    <dimen name="barscan_preview_decode_size">240dip</dimen>
+    <dimen name="font_second_grade">14sp</dimen>
+    <dimen name="font_third_grade">12sp</dimen>
+    <dimen name="font_top_grade">20sp</dimen>
+    <dimen name="login_detect_progress_width">24dip</dimen>
+    <dimen name="friend_letter_size">11dip</dimen>
+    <dimen name="public_platform_layout_width">296dip</dimen>
+    <dimen name="guide_margin_top">30dip</dimen>
+    <dimen name="guide_margin_left">21dip</dimen>
+    <dimen name="friend_info_btn_width">148dip</dimen>
+    <dimen name="max_sharetext_width">194.6dip</dimen>
+    <dimen name="max_sharetext_width_new">310dip</dimen>
+    <dimen name="singletp_vertical_padding_top">4dip</dimen>
+    <dimen name="singletp_vertical_padding_left">4dip</dimen>
+    <dimen name="singletp_vertical_padding_right">4dip</dimen>
+    <dimen name="singletp_vertical_padding_bottom">4dip</dimen>
+    <dimen name="weitao_msg_padding">10dip</dimen>
+    <dimen name="singletp_vertical_img_padding_height">113.3dip</dimen>
+    <dimen name="singletp_vertical_img_padding_height_new">184dip</dimen>
+    <dimen name="line_seperator">2dip</dimen>
+    <dimen name="right_sliding_left_padding">25dip</dimen>
+    <dimen name="right_sliding_right_padding">24dip</dimen>
+    <dimen name="right_sliding_text_padding">8dip</dimen>
+    <dimen name="clothing_size_padding_left">13dip</dimen>
+    <dimen name="clothing_size_padding_right">15dip</dimen>
+    <dimen name="clothing_size_unit_width">32dip</dimen>
+    <dimen name="clothing_size_edit_width">45dip</dimen>
+    <dimen name="clothing_size_edit_shoe_width">87dip</dimen>
+    <dimen name="clothing_size_edit_height">21dip</dimen>
+    <dimen name="clothing_size_edit_font">13sp</dimen>
+    <dimen name="asr_recording_min_size">98dip</dimen>
+    <dimen name="asr_recording_inner_size">86dip</dimen>
+    <dimen name="asr_recording_stroken_width">2dip</dimen>
+    <dimen name="asr_recording_max_size">153dip</dimen>
+    <dimen name="chat_head_choice_padding_margin">4.2dip</dimen>
+    <dimen name="chat_head_choice_padding_bottom">11dip</dimen>
+    <dimen name="chat_head_padding_margin">2.2dip</dimen>
+    <dimen name="chat_head_padding_bottom">8dip</dimen>
+    <dimen name="reply_bar_bottom_height">244dip</dimen>
+
+    <!-- 14年字体大小 -->
+    <dimen name="common_text_size">15sp</dimen>
+    <dimen name="second_text_size">12sp</dimen>
+    <dimen name="third_text_size">12sp</dimen>
+    <dimen name="common_btn_height">35dip</dimen>
+    <dimen name="common_btn_width">50dip</dimen>
+    <dimen name="common_head_size">35dip</dimen>
+    <dimen name="common_big_head_size">55dip</dimen>
+    <dimen name="title_bar_popup_height">46dip</dimen>
+    <dimen name="common_multi_padding">25dip</dimen>
+    <dimen name="unread_text_size">10sp</dimen>
+    <dimen name="search_text_view_height">30dip</dimen>
+    <dimen name="message_content_margin_right">65dip</dimen>
+    <dimen name="item_size">165dip</dimen>
+
+    <dimen name="wq_big_text_size">16sp</dimen>
+    <dimen name="wq_middle_text_size">15sp</dimen>
+    <dimen name="wq_small_text_size">14sp</dimen>
+    <dimen name="setting_margin">13dp</dimen>
+    <dimen name="one_dp">1dp</dimen>
+
+    <!-- 轻服务 -->
+    <dimen name="ls_common_title_height">50dp</dimen>
+    <dimen name="ls_act_detail_pop_up_height">100dip</dimen>
+    <dimen name="ls_super_text_size">18sp</dimen>
+    <dimen name="ls_title_text_size">17sp</dimen>
+    <dimen name="ls_first_grade_text_size">16sp</dimen>
+    <dimen name="ls_second_grade_text_size">15sp</dimen>
+    <dimen name="ls_thrid_grade_text_size">14sp</dimen>
+    <dimen name="ls_fourth_grade_text_size">12sp</dimen>
+    <dimen name="ls_sixth_grade_text_size">11sp</dimen>
+    <dimen name="ls_fifth_grade_text_size">10dp</dimen>
+    <dimen name="ls_act_edit_pop_up_height">245dp</dimen>
+    <dimen name="ls_act_edit_pop_up_height_location">245dp</dimen>
+    <dimen name="ls_act_edit_pop_up_height_approve">220dp</dimen>
+    <dimen name="ls_title_bar_height">40dip</dimen>
+    <dimen name="ls_act_margin_left">18dip</dimen>
+    <dimen name="ls_act_detail_net_null_height">190dp</dimen>
+    <dimen name="ls_main_margrin">16dp</dimen>
+    <dimen name="ls_main_act_subitem_height">90dp</dimen>
+    <dimen name="ls_main_act_subitem_height_new">77dp</dimen>
+    <dimen name="ls_main_act_subitem_height_without_recommend">1dp</dimen>
+    <dimen name="ls_listview_head_height">35dip</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="ls_sliding_width">250dp</dimen>
+    <dimen name="ls_self_info_pop_up_height_three_choice">270dp</dimen>
+    <dimen name="ls_self_info_pop_up_height_profession_choice">270dp</dimen>
+    <dimen name="ls_filter_city_item_height">50dp</dimen>
+    <dimen name="ls_detail_title_height">40dp</dimen>
+    <dimen name="ls_detail_qa_popup_height">300dp</dimen>
+    <dimen name="ls_detail_tag_margin">3dp</dimen>
+    <dimen name="ls_detail_tag_image_margin">8dp</dimen>
+    <dimen name="ls_detail_tag_text_margin">5dp</dimen>
+    <dimen name="ls_detail_feedback_empty_height">500dp</dimen>
+    <dimen name="ls_detail_tag_size">12dp</dimen>
+    <dimen name="ls_chat_group_width_minus">85dp</dimen>
+    <dimen name="ls_BANNER_HEIGHT_IN_DP">150dp</dimen>
+
+    <!--来自友盟 IM -->
+
+    <dimen name="title_bar_icon_size">40dip</dimen>
+    <dimen name="title_bar_text_size">18sp</dimen>
+</resources>

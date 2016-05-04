@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <com.alibaba.mobileim.appmonitor.tiptool.ExLinearLayout
+        android:id="@+id/parent"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:orientation="vertical" >
+
+        <com.alibaba.mobileim.appmonitor.tiptool.ExListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/aliwx_tooltip_listview_divider"
+            android:dividerHeight="5dp"
+            android:fadingEdge="none"
+            android:fadingEdgeLength="0px"
+            android:listSelector="#00000000"
+            android:scrollbarStyle="insideInset"
+            android:transcriptMode="alwaysScroll" >
+        </com.alibaba.mobileim.appmonitor.tiptool.ExListView>
+    </com.alibaba.mobileim.appmonitor.tiptool.ExLinearLayout>
+
+</LinearLayout>
