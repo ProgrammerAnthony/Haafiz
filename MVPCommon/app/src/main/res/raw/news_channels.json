@@ -1,0 +1,20 @@
+{
+  "type": "",
+  "channels": [
+    {
+      "title": "nba",
+      "type": "2002",
+      "url": "raw://nba_data"
+    },
+    {
+      "title": "cba",
+      "type": "2002",
+      "url": "raw://nba_data"
+    },
+    {
+      "title": "足球",
+      "type": "2002",
+      "url": "raw://nba_data"
+    }
+  ]
+}

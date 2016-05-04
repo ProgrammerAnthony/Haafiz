@@ -1,7 +1,5 @@
 package edu.com.mvplibrary.model;
 
-
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -9,9 +7,8 @@ import edu.com.mvplibrary.model.config.Constants;
 import edu.com.mvplibrary.util.JSONObjectHelper;
 
 /**
- * Created by Anthony on 2016/2/24.
- * Class Note:  base types of data
- *
+ * Created by Anthony on 2016/5/4.
+ * Class Note:
  */
 public class Channel {
     private String type;
@@ -75,28 +72,28 @@ public class Channel {
 
     @Override
     public boolean equals(Object o) {
-        if(o == this){
+        if (o == this) {
             return true;
         }
 
-        if(o == null || o.getClass() != ((Object)this).getClass()){
+        if (o == null || o.getClass() != ((Object) this).getClass()) {
             return false;
         }
 
-        Channel c = (Channel)o;
-        if(!c.getImg().equals(getImg())){
+        Channel c = (Channel) o;
+        if (!c.getImg().equals(getImg())) {
             return false;
         }
 
-        if(!c.getUrl().equals(getUrl())){
+        if (!c.getUrl().equals(getUrl())) {
             return false;
         }
 
-        if(!c.getType().equals(getType())){
+        if (!c.getType().equals(getType())) {
             return false;
         }
 
-        if(!c.getTitle().equals(getTitle())){
+        if (!c.getTitle().equals(getTitle())) {
             return false;
         }
 

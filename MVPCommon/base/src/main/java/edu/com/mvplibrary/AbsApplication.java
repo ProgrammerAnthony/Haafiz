@@ -7,6 +7,11 @@ import android.util.Log;
 
 import java.io.File;
 
+import edu.com.mvplibrary.model.ViewDisplayer;
+import edu.com.mvplibrary.util.LocalFileUncaughtExceptionHandler;
+import edu.com.mvplibrary.util.LogUtil;
+import edu.com.mvplibrary.util.ToastUtils;
+
 
 /**
  * Create By Anthony on 2016/1/15
@@ -26,19 +31,12 @@ public abstract class AbsApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
-
         sInstance = this;
-
-//        Thread.setDefaultUncaughtExceptionHandler(new LocalFileUncaughtExceptionHandler(this,
-//                Thread.getDefaultUncaughtExceptionHandler()));
-//
-//
-//        LogUtil.init();
-//        ViewDisplayer.initialize(this);
-//
-//        ToastUtils.initialize(this);
-
+        ViewDisplayer.initialize(this);
+        ToastUtils.initialize(this);
+        LogUtil.init();
+        Thread.setDefaultUncaughtExceptionHandler(new LocalFileUncaughtExceptionHandler(this,
+                Thread.getDefaultUncaughtExceptionHandler()));
     }
 
 

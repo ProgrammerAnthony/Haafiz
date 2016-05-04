@@ -9,10 +9,10 @@ public class Constants {
     public static final String HTTPS_PREFIX = "https://";
 
     /** Activity和Fragment类型文件 */
-    public static final String BASE_TYPE_FRAGMENT_MAP_PATH = "file://android_raw/type_fragment_map_base";
-    public static final String EXT_TYPE_FRAGMENT_MAP_PATH = "file://android_raw/type_fragment_map";
-    public static final String BASE_TYPE_ACTIVITY_MAP_PATH = "raw://type_activity_map_base";
-    public static final String EXT_TYPE_ACTIVITY_MAP_PATH = "raw://type_activity_map";
+    public static final String BASE_TYPE_FRAGMENT_MAP_PATH = "raw://type_fragment_map";
+
+    public static final String BASE_TYPE_ACTIVITY_MAP_PATH = "raw://type_activity_map";
+
     /** END */
 
     /** Broadcast constants */

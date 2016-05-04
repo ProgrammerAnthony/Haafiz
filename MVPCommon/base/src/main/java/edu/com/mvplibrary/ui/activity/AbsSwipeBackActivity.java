@@ -16,6 +16,10 @@ import com.umeng.analytics.MobclickAgent;
 
 import butterknife.ButterKnife;
 
+import edu.com.mvplibrary.ui.widget.loading.VaryViewHelperController;
+import edu.com.mvplibrary.ui.widget.netstatus.NetChangeObserver;
+import edu.com.mvplibrary.ui.widget.netstatus.NetStateReceiver;
+import edu.com.mvplibrary.ui.widget.netstatus.NetUtils;
 import edu.com.mvplibrary.util.BaseAppManager;
 import edu.com.mvplibrary.util.NightModeHelper;
 import edu.com.mvplibrary.ui.widget.swipeback.SwipeBackActivityBase;
@@ -42,6 +46,17 @@ public abstract class AbsSwipeBackActivity extends AppCompatActivity implements 
     private NightModeHelper mNightModeHelper;//day night mode change
     private Toolbar mTooBar;
     private SwipeBackActivityHelper mHelper;
+
+    /**
+     * 联网状态
+     */
+    protected NetChangeObserver mNetChangeObserver = null;
+
+    /**
+     * loading view controller
+     */
+    private VaryViewHelperController mVaryViewHelperController = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -76,29 +91,35 @@ public abstract class AbsSwipeBackActivity extends AppCompatActivity implements 
             throw new IllegalArgumentException("You must return a right contentView layout resource Id");
         }
 
-
         initToolBar();
+
+        mNetChangeObserver = new NetChangeObserver() {
+            @Override
+            public void onNetConnected(NetUtils.NetType type) {
+                super.onNetConnected(type);
+                onNetworkConnected(type);
+            }
+
+            @Override
+            public void onNetDisConnect() {
+                super.onNetDisConnect();
+                onNetworkDisConnected();
+            }
+        };
+
+        NetStateReceiver.registerObserver(mNetChangeObserver);
+
+        if (null != getLoadingTargetView()) {
+            mVaryViewHelperController = new VaryViewHelperController(getLoadingTargetView());
+        }
 
         //using swipe back
         mHelper = new SwipeBackActivityHelper(this);
         mHelper.onActivityCreate();
     }
 
-    /**
-     * get bundle extras
-     *
-     * @param extras
-     */
-    protected void getBundleExtras(Bundle extras) {
-//        mWebTitle = extras.getString(BUNDLE_KEY_TITLE);
-    }
 
-    /**
-     * bind layout resource file
-     *
-     * @return id of layout resource
-     */
-    protected abstract int getContentViewLayoutID();
+
 
 
     @Override
@@ -120,6 +141,7 @@ public abstract class AbsSwipeBackActivity extends AppCompatActivity implements 
         super.onDestroy();
         BaseAppManager.getInstance().removeActivity(this);
         ButterKnife.unbind(this);
+        NetStateReceiver.removeRegisterObserver(mNetChangeObserver);
     }
 
     /**
@@ -214,4 +236,34 @@ public abstract class AbsSwipeBackActivity extends AppCompatActivity implements 
     }
 
 //    protected abstract void createPresenter();
+    /**
+     * network connected
+     */
+    protected abstract void onNetworkConnected(NetUtils.NetType type);
+
+    /**
+     * network disconnected
+     */
+    protected abstract void onNetworkDisConnected();
+
+    /**
+     *get loading view
+     */
+    protected abstract View getLoadingTargetView();
+
+    /**
+     * get bundle extras
+     *
+     * @param extras
+     */
+    protected void getBundleExtras(Bundle extras) {
+//        mWebTitle = extras.getString(BUNDLE_KEY_TITLE);
+    }
+
+    /**
+     * bind layout resource file
+     *
+     * @return id of layout resource
+     */
+    protected abstract int getContentViewLayoutID();
 }

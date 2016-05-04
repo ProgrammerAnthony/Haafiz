@@ -4,11 +4,14 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import butterknife.ButterKnife;
+import edu.com.mvplibrary.ui.BaseView;
+import edu.com.mvplibrary.ui.widget.loading.VaryViewHelperController;
 
 //import butterknife.ButterKnife;
 
@@ -20,7 +23,7 @@ import butterknife.ButterKnife;
  * some base operation.
  * 2 do operation in initViewAndEvents(){@link #initViewsAndEvents(View rootView)}
  */
-public abstract class AbsBaseFragment extends Fragment {
+public abstract class AbsBaseFragment extends Fragment implements BaseView {
     /**
      * url passed into fragment
      */
@@ -34,6 +37,14 @@ public abstract class AbsBaseFragment extends Fragment {
      * view of fragment
      */
     protected View mRootView;
+    /**
+     * Screen information
+     */
+    protected int mScreenWidth = 0;
+    protected int mScreenHeight = 0;
+    protected float mScreenDensity = 0.0f;
+
+    private VaryViewHelperController mVaryViewHelperController = null;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -48,12 +59,39 @@ public abstract class AbsBaseFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mRootView = inflater.inflate(getContentViewID(), container, false);
-        ButterKnife.bind(this, mRootView);//绑定framgent 与ButterKnife
-        initViewsAndEvents(mRootView);
+//        ButterKnife.bind(this, mRootView);//绑定framgent 与ButterKnife
+//        initViewsAndEvents(mRootView);
         return mRootView;
 
     }
 
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        ButterKnife.bind(this, view);
+
+        if (null != getLoadingTargetView()) {
+            mVaryViewHelperController = new VaryViewHelperController(getLoadingTargetView());
+        }
+
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        getActivity().getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+
+        mScreenDensity = displayMetrics.density;
+        mScreenHeight = displayMetrics.heightPixels;
+        mScreenWidth = displayMetrics.widthPixels;
+
+        initViewsAndEvents(view);
+    }
+
+    protected abstract View getLoadingTargetView();
+
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        ButterKnife.unbind(this);
+    }
 
     @Override
     public void onPause() {
@@ -70,19 +108,10 @@ public abstract class AbsBaseFragment extends Fragment {
         super.onDestroy();
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        ButterKnife.unbind(this);
-    }
 
     public String getFragmentUrl() {
         return mUrl;
     }
-
-//    public void setFragmentUrl(String url) {
-//        this.mUrl = url;
-//    }
 
 
     /**
@@ -97,4 +126,121 @@ public abstract class AbsBaseFragment extends Fragment {
      * override this method to return content view id of the fragment
      */
     protected abstract int getContentViewID();
+
+    /**
+     * toggle show loading
+     *
+     * @param toggle
+     */
+    protected void toggleShowLoading(boolean toggle, String msg) {
+        if (null == mVaryViewHelperController) {
+            throw new IllegalArgumentException("You must return a right target view for loading");
+        }
+        if (toggle) {
+            mVaryViewHelperController.showLoading(msg);
+        } else {
+            mVaryViewHelperController.restore();
+        }
+    }
+
+    /**
+     * toggle show empty
+     *
+     * @param toggle
+     */
+    protected void toggleShowEmpty(boolean toggle, String msg, View.OnClickListener onClickListener) {
+        if (null == mVaryViewHelperController) {
+            throw new IllegalArgumentException("You must return a right target view for loading");
+        }
+
+        if (toggle) {
+            mVaryViewHelperController.showEmpty(msg, onClickListener);
+        } else {
+            mVaryViewHelperController.restore();
+        }
+    }
+
+    /**
+     * toggle show empty
+     *
+     * @param toggle
+     */
+    protected void toggleShowEmpty(boolean toggle, String msg, View.OnClickListener onClickListener, int img) {
+        if (null == mVaryViewHelperController) {
+            throw new IllegalArgumentException("You must return a right target view for loading");
+        }
+
+        if (toggle) {
+            mVaryViewHelperController.showEmpty(msg, onClickListener, img);
+        } else {
+            mVaryViewHelperController.restore();
+        }
+    }
+
+    /**
+     * toggle show error
+     *
+     * @param toggle
+     */
+    protected void toggleShowError(boolean toggle, String msg, View.OnClickListener onClickListener) {
+        if (null == mVaryViewHelperController) {
+            throw new IllegalArgumentException("You must return a right target view for loading");
+        }
+
+        if (toggle) {
+            mVaryViewHelperController.showError(msg, onClickListener);
+        } else {
+            mVaryViewHelperController.restore();
+        }
+    }
+
+    /**
+     * toggle show network error
+     *
+     * @param toggle
+     */
+    protected void toggleNetworkError(boolean toggle, View.OnClickListener onClickListener) {
+        if (null == mVaryViewHelperController) {
+            throw new IllegalArgumentException("You must return a right target view for loading");
+        }
+
+        if (toggle) {
+            mVaryViewHelperController.showNetworkError(onClickListener);
+        } else {
+            mVaryViewHelperController.restore();
+        }
+    }
+
+
+    @Override
+    public void showLoading(String msg) {
+        toggleShowLoading(true, msg);
+    }
+
+    @Override
+    public void hideLoading() {
+        toggleShowLoading(false, "");
+    }
+
+    @Override
+    public void showError(String msg, View.OnClickListener onClickListener) {
+        toggleShowError(true, msg, onClickListener);
+    }
+
+    @Override
+    public void showEmpty(String msg, View.OnClickListener onClickListener) {
+        toggleShowEmpty(true, msg, onClickListener);
+    }
+
+    @Override
+    public void showEmpty(String msg, View.OnClickListener onClickListener, int imageId) {
+        toggleShowEmpty(true, msg, onClickListener, imageId);
+    }
+
+    @Override
+    public void showNetError(View.OnClickListener onClickListener) {
+        toggleNetworkError(true, onClickListener);
+    }
+
+
 }

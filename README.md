@@ -16,6 +16,18 @@ BaseActivity 和BaseFragment 初始化大多数操作。
 
 开发中常用的工具类
 
-**4** Main Activity use MVP design
+**4** MVP design 
 
-主页面添加MVP
+利用MVP实现
+
+**5** network status observer
+
+网络状态监听
+
+**6**interface of loading view,empty view ,error view for all views.
+
+为所有界面添加了加载界面，错误界面以及空界面的接口
+
+**7**ImageLoader encapsulation using Glide
+
+使用glide封装的ImageLoader，作为图片加载工具

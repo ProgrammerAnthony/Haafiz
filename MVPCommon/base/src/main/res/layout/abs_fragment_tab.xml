@@ -39,6 +39,6 @@
                 android:layout_weight="35"/>
     </LinearLayout>
 
-    <include layout="@layout/layout_reload"
-             android:visibility="invisible" />
+<!--    <include layout="@layout/layout_reload"
+             android:visibility="invisible" />-->
 </RelativeLayout>

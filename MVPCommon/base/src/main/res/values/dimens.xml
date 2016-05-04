@@ -214,4 +214,9 @@
 
     <dimen name="title_bar_icon_size">40dip</dimen>
     <dimen name="title_bar_text_size">18sp</dimen>
+    <dimen name="common_load_more_progress_size">30dp</dimen>
+    <dimen name="common_load_more_padding">20dp</dimen>
+    <dimen name="common_loading_progress_size">35dp</dimen>
+    <dimen name="common_loading_text_margin">10dp</dimen>
+    <dimen name="common_loading_text_lines_spacing">5dp</dimen>
 </resources>
