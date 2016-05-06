@@ -16,9 +16,9 @@ BaseActivity 和BaseFragment 初始化大多数操作。
 
 开发中常用的工具类
 
-**4** MVP design 
+**4** MVP design from google example
 
-利用MVP实现
+和google官网类似的MVP设计
 
 **5** network status observer
 
