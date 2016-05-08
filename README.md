@@ -2,6 +2,8 @@
 **a common Architecture for Android Applications developing based on MVP，integrates many Open Source Projects ,to make your developing quicker and easier.**
 
 **一个集成了众多开源项目的Android MVP快速开发框架。**
+项目效果:
+![](http://upload-images.jianshu.io/upload_images/1833901-550d576f150c31bf.gif?imageMogr2/auto-orient/strip)
 
 blog update with all of the process
 
