@@ -452,12 +452,12 @@
         "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\aliwx_s076.png"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\aliwx_s074.png",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\aliwx_s074.png"
-    },
-    {
         "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\aliwx_hold_to_speak_icon_voice.png",
         "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\aliwx_hold_to_speak_icon_voice.png"
+    },
+    {
+        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\aliwx_s074.png",
+        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\aliwx_s074.png"
     },
     {
         "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\aliwx_comment_r_orange_press.9.png",
@@ -488,16 +488,16 @@
         "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\aliwx_head_bg_0.jpg"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\aliwx_trade_focus_bg.9.png",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\aliwx_trade_focus_bg.9.png"
+        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\aliwx_emptystate_fail_image.png",
+        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\aliwx_emptystate_fail_image.png"
     },
     {
         "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\aliwx_s009.png",
         "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\aliwx_s009.png"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\aliwx_emptystate_fail_image.png",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\aliwx_emptystate_fail_image.png"
+        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\aliwx_trade_focus_bg.9.png",
+        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\aliwx_trade_focus_bg.9.png"
     },
     {
         "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\aliwx_s047.png",

@@ -12,21 +12,23 @@ import edu.com.mvplibrary.R;
  * Created by Anthony on 2016/5/3.
  * Class Note:
  * drawer list item data.
- *
  */
-public class DrawerItemsData {
+public class DrawerData {
     private Context mContext;
     public ArrayList<DrawerItem> mDrawerItems;
     private String[] mMenuTitles;
     private TypedArray mMenuIconsTypeArray;
     private TypedArray mMenuIconTintTypeArray;
     private DrawerMainContract.onGetDrawerListListener mListener;
+    public String headIconUrl;
 
-
-    public DrawerItemsData(Context context, DrawerMainContract.onGetDrawerListListener listener) {
+    public DrawerData(Context context, DrawerMainContract.onGetDrawerListListener listener) {
         this.mContext = context;
-        this.mListener =listener;
-        mDrawerItems=new ArrayList<>();
+        this.mListener = listener;
+        //drawer items
+        mDrawerItems = new ArrayList<>();
+        //head icon url
+        headIconUrl = "http://upload.jianshu.io/users/upload_avatars/1833901/33ca734d5a2d.png?imageMogr/thumbnail/90x90/quality/100";
     }
 
     public void initItemsData() {
@@ -43,9 +45,9 @@ public class DrawerItemsData {
         }
         mMenuIconsTypeArray.recycle();
 
-        if(mDrawerItems.size()==mMenuTitles.length){
+        if (mDrawerItems.size() == mMenuTitles.length) {
             mListener.onSuccess();
-        }else{
+        } else {
             mListener.onError();
         }
     }
@@ -60,46 +62,47 @@ public class DrawerItemsData {
         // boolean to set visiblity of the counter
         private boolean isCounterVisible = false;
 
-        public DrawerItem(){}
+        public DrawerItem() {
+        }
 
-        public DrawerItem(String title, int icon, int tint){
+        public DrawerItem(String title, int icon, int tint) {
             this.title = title;
             this.icon = icon;
             this.tint = tint;
         }
 
-        public DrawerItem(String title, int icon, boolean isCounterVisible, String count){
+        public DrawerItem(String title, int icon, boolean isCounterVisible, String count) {
             this.title = title;
             this.icon = icon;
             this.isCounterVisible = isCounterVisible;
             this.count = count;
         }
 
-        public String getTitle(){
+        public String getTitle() {
             return this.title;
         }
 
-        public int getIcon(){
+        public int getIcon() {
             return this.icon;
         }
 
-        public String getCount(){
+        public String getCount() {
             return this.count;
         }
 
-        public boolean getCounterVisibility(){
+        public boolean getCounterVisibility() {
             return this.isCounterVisible;
         }
 
-        public void setTitle(String title){
+        public void setTitle(String title) {
             this.title = title;
         }
 
-        public void setIcon(int icon){
+        public void setIcon(int icon) {
             this.icon = icon;
         }
 
-        public void setCount(String count){
+        public void setCount(String count) {
             this.count = count;
         }
 
@@ -111,7 +114,7 @@ public class DrawerItemsData {
             this.tint = tint;
         }
 
-        public void setCounterVisibility(boolean isCounterVisible){
+        public void setCounterVisibility(boolean isCounterVisible) {
             this.isCounterVisible = isCounterVisible;
         }
     }

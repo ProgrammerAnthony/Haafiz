@@ -7,6 +7,7 @@ import android.content.Context;
  * Class Note:use this class to load image,single instance
  */
 public class ImageLoaderUtil {
+
     public static final int PIC_LARGE = 0;
     public static final int PIC_MEDIUM = 1;
     public static final int PIC_SMALL = 2;
@@ -21,6 +22,7 @@ public class ImageLoaderUtil {
         mProvider =new GlideImageLoaderProvider();
     }
 
+//single instance
     public static ImageLoaderUtil getInstance(){
         if(mInstance ==null){
             synchronized (ImageLoaderUtil.class){
@@ -33,7 +35,9 @@ public class ImageLoaderUtil {
         return mInstance;
     }
 
+
     public void loadImage(Context context,ImageLoader img){
         mProvider.loadImage(context,img);
     }
+
 }

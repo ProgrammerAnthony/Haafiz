@@ -44,12 +44,12 @@
         "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_cloud_msg_forget_password_press.png"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_tribe_at_icon.png",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_tribe_at_icon.png"
-    },
-    {
         "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_default_photo.9.png",
         "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_default_photo.9.png"
+    },
+    {
+        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_tribe_at_icon.png",
+        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_tribe_at_icon.png"
     },
     {
         "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_refresh_toast_suc.png",

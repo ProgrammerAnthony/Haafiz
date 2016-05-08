@@ -18,12 +18,15 @@ import edu.com.mvplibrary.util.SettingUtils;
 
 /**
  * Created by Anthony on 2016/3/3.
- * Class Note:provide way to load image
+ * Class Note:
+ * provide way to load image
  */
 public class GlideImageLoaderProvider extends BaseImageLoaderProvider {
     @Override
     public void loadImage(Context ctx, ImageLoader img) {
+
         boolean flag= SettingUtils.getOnlyWifiLoadImg(ctx);
+        //如果不是在wifi下加载图片，直接加载
         if(!flag){
             loadNormal(ctx,img);
             return;
@@ -32,12 +35,15 @@ public class GlideImageLoaderProvider extends BaseImageLoaderProvider {
         int strategy =img.getStrategy();
         if(strategy == ImageLoaderUtil.LOAD_STRATEGY_ONLY_WIFI){
             int netType = AppUtils.getNetWorkType(AbsApplication.app());
+            //如果是在wifi下才加载图片，并且当前网络是wifi,直接加载
             if(netType == AppUtils.NETWORKTYPE_WIFI) {
                 loadNormal(ctx, img);
             } else {
+                //如果是在wifi下才加载图片，并且当前网络不是wifi，加载缓存
                 loadCache(ctx, img);
             }
         }else{
+            //如果不是在wifi下才加载图片
             loadNormal(ctx,img);
         }
 
@@ -50,6 +56,7 @@ public class GlideImageLoaderProvider extends BaseImageLoaderProvider {
     private void loadNormal(Context ctx, ImageLoader img) {
         Glide.with(ctx).load(img.getUrl()).placeholder(img.getPlaceHolder()).into(img.getImgView());
     }
+
 
     /**
      *load cache image with Glide

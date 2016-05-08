@@ -20,9 +20,9 @@ import edu.com.mvplibrary.R;
 public class NavDrawerListAdapter extends BaseAdapter {
 
     private Context context;
-    private List<DrawerItemsData.DrawerItem> drawerItems;
+    private List<DrawerData.DrawerItem> drawerItems;
 
-    public NavDrawerListAdapter(Context context, List<DrawerItemsData.DrawerItem> drawerItems) {
+    public NavDrawerListAdapter(Context context, List<DrawerData.DrawerItem> drawerItems) {
         this.context = context;
         this.drawerItems = drawerItems;
     }

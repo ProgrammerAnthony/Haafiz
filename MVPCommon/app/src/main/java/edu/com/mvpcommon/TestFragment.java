@@ -29,13 +29,15 @@ public class TestFragment extends AbsBaseFragment implements View.OnClickListene
     protected void initViewsAndEvents(View rootView) {
         super.initViewsAndEvents(rootView);
 //        toggleShowEmpty(true,"this is empty",this);
-//        toggleShowLoading(true,"loading");
+        toggleShowLoading(true,"loading");
 //        showEmpty();
-//        showLoading("加载中...");
+
     }
 
     @Override
     public void onClick(View v) {
 
     }
+
+
 }

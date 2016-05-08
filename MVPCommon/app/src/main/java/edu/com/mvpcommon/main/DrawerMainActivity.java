@@ -17,6 +17,8 @@ import edu.com.mvplibrary.R;
 
 import edu.com.mvplibrary.ui.activity.AbsBaseActivity;
 import edu.com.mvplibrary.ui.widget.CircleImageView;
+import edu.com.mvplibrary.ui.widget.imageloader.ImageLoader;
+import edu.com.mvplibrary.ui.widget.imageloader.ImageLoaderUtil;
 import edu.com.mvplibrary.ui.widget.netstatus.NetUtils;
 import edu.com.mvplibrary.util.BaseUtil;
 import edu.com.mvplibrary.util.ToastUtils;
@@ -28,10 +30,10 @@ import edu.com.mvplibrary.util.ToastUtils;
  * acts as a top-level container for window content that allows for
  * interactive "drawer" views to be pulled out from the edge of the window.
  * 2 View in MVP
- * see {@link DrawerMainContract}-------------------------------------------Manager role of MVP
- * {@link DrawerMainPresenter}------Presenter
- * &{@link DrawerMainActivity}-------------View
- * &{@link DrawerItemsData}------------------------------------------------Model
+ * see {@link DrawerMainContract}------Manager role of MVP
+ * {@link DrawerMainPresenter}---------Presenter
+ * &{@link DrawerMainActivity}---------View
+ * &{@link DrawerData}------------Model
  */
 public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainContract.View, View.OnClickListener {
     private Toolbar actionBarToolbar;
@@ -39,13 +41,18 @@ public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainCon
     private ListView mDrawerMenu;
     private CircleImageView mUserImg;
     private NavDrawerListAdapter mAdapter;
-    private DrawerMainPresenter mPresenter;
+   private DrawerMainPresenter mPresenter;
 
     @Override
     protected int getContentViewID() {
         return R.layout.activity_drawer;
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mPresenter.start();
+    }
 
     @Override
     protected void initViewsAndEvents() {
@@ -62,10 +69,15 @@ public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainCon
         mUserImg = (CircleImageView) findViewById(R.id.user_img);
         mUserImg.setOnClickListener(this);
         mDrawerMenu = (ListView) findViewById(R.id.left_menu);
-        //create and initialize presenter
-        mPresenter = new DrawerMainPresenter(this, mContext);
-        mPresenter.getDrawerList();
-//        selectItem(0);
+
+
+//        mPresenter = new DrawerMainPresenter(this, mContext);
+        //create and initialize presenter,
+       mPresenter= new DrawerMainPresenter(this,mContext);
+
+        //use presenter to load data
+        mPresenter.getDrawerData();
+        //default select first fragment
         mPresenter.getSelectFragment(0);
     }
 
@@ -139,7 +151,7 @@ public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainCon
     }
 
     @Override
-    public void onDrawerListGet(final ArrayList<DrawerItemsData.DrawerItem> mDrawerItems) {
+    public void onDrawerListGet(final ArrayList<DrawerData.DrawerItem> mDrawerItems) {
         mAdapter = new NavDrawerListAdapter(this,
                 mDrawerItems);
         mDrawerMenu.setAdapter(mAdapter);
@@ -147,7 +159,7 @@ public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainCon
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if (!BaseUtil.isEmpty(mDrawerItems, i)) {
-                    DrawerItemsData.DrawerItem drawerItem = mDrawerItems.get(i);
+                    DrawerData.DrawerItem drawerItem = mDrawerItems.get(i);
                     if (drawerItem != null) {
                         mPresenter.getSelectFragment(i);
                     }
@@ -157,27 +169,19 @@ public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainCon
     }
 
     @Override
-    public void setDrawerIcon(int resId) {
-        mUserImg.setImageResource(resId);
+    public void setDrawerIcon(String url) {
+        ImageLoader imageLoader =new ImageLoader.Builder().url(url).imgView(mUserImg).build();
+        ImageLoaderUtil.getInstance().loadImage(this,imageLoader);
     }
 
     @Override
     public void onSelectFragmentGet(Fragment fragment) {
+        closeDrawer();
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
                 .replace(R.id.content, fragment).commit();
-        closeDrawer();
+
     }
-
-
-    private void selectItem(int position) {
-//        Fragment fragment = mPresenter.getSelectFragment(position);
-//        FragmentManager fragmentManager = getSupportFragmentManager();
-//        fragmentManager.beginTransaction()
-//                .replace(R.id.content, fragment).commit();
-//        closeDrawer();
-    }
-
 
     @Override
     protected void onNetworkConnected(NetUtils.NetType type) {
@@ -186,11 +190,47 @@ public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainCon
 
     @Override
     protected void onNetworkDisConnected() {
-        ToastUtils.getInstance().showToast("no network now");
+        ToastUtils.getInstance().showToast("no network disconnected");
     }
 
     @Override
     protected View getLoadingTargetView() {
         return null;
+    }
+
+
+//    @Override
+//    public void setPresenter(DrawerMainContract.Presenter presenter) {
+//        mPresenter= (DrawerMainPresenter) presenter;
+//    }
+
+    @Override
+    public void showLoading(String msg) {
+        toggleShowLoading(true, msg);
+    }
+
+    @Override
+    public void hideLoading() {
+        toggleShowLoading(false, "");
+    }
+
+    @Override
+    public void showError(String msg, View.OnClickListener onClickListener) {
+
+    }
+
+    @Override
+    public void showEmpty(String msg, View.OnClickListener onClickListener) {
+        toggleShowEmpty(true, msg, onClickListener);
+    }
+
+    @Override
+    public void showEmpty(String msg, View.OnClickListener onClickListener, int imageId) {
+        toggleShowEmpty(true, msg, onClickListener, imageId);
+    }
+
+    @Override
+    public void showNetError(View.OnClickListener onClickListener) {
+        ToastUtils.getInstance().showToast("oops ,no network now!");
     }
 }

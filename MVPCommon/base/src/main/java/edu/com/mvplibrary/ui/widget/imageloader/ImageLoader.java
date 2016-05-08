@@ -11,11 +11,11 @@ import edu.com.mvplibrary.R;
  * encapsulation of ImageView,Build Pattern used
  */
 public class ImageLoader {
-    private int type;
-    private String url;
-    private int placeHolder;
-    private ImageView imgView;
-    private int strategy;
+    private int type;  //类型 (大图，中图，小图)
+    private String url; //需要解析的url
+    private int placeHolder; //当没有成功加载的时候显示的图片
+    private ImageView imgView; //ImageView的实例
+    private int strategy;//加载策略，是否在wifi下才加载
 
     private ImageLoader(Builder builder) {
         this.type = builder.type;

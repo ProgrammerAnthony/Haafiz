@@ -4,7 +4,10 @@ import android.support.v4.app.Fragment;
 
 import java.util.ArrayList;
 
+
+import edu.com.mvplibrary.presenter.BasePresenter;
 import edu.com.mvplibrary.ui.BaseView;
+
 
 /**
  * Created by Anthony on 2016/5/3.
@@ -14,23 +17,23 @@ import edu.com.mvplibrary.ui.BaseView;
  * 3 {@link DrawerMainContract}-------------------------------------------Manager role of MVP
  * {@link DrawerMainPresenter}------Presenter
  * &{@link DrawerMainActivity}-------------View
- * &{@link DrawerItemsData}------------------------------------------------Model
+ * &{@link DrawerData}---------------------------------Model
  */
 public interface DrawerMainContract {
 
-    interface Presenter {
+    interface Presenter extends BasePresenter{
 
-        void getDrawerList();
+        void getDrawerData();
 
         void onDrawerIconClicked();
 
         void getSelectFragment(int position);
     }
 
-    interface View {
-        void onDrawerListGet(ArrayList<DrawerItemsData.DrawerItem> list);
+    interface View extends BaseView{
+        void onDrawerListGet(ArrayList<DrawerData.DrawerItem> list);
 
-        void setDrawerIcon(int resId);
+        void setDrawerIcon(String url);
 
         void onSelectFragmentGet(Fragment fragment);
 

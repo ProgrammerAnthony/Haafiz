@@ -23,6 +23,7 @@ import edu.com.mvplibrary.ui.widget.netstatus.NetStateReceiver;
 import edu.com.mvplibrary.ui.widget.netstatus.NetUtils;
 import edu.com.mvplibrary.util.BaseAppManager;
 import edu.com.mvplibrary.util.NightModeHelper;
+import edu.com.mvplibrary.util.ToastUtils;
 
 /**
  * Created by Anthony on 2016/4/24.
@@ -31,7 +32,7 @@ import edu.com.mvplibrary.util.NightModeHelper;
  * some base operation.
  * 2 do operation in initViewAndEvents(){@link #initViewsAndEvents()}
  */
-public abstract class AbsBaseActivity extends AppCompatActivity implements BaseView {
+public abstract class AbsBaseActivity extends AppCompatActivity{
     protected static String TAG_LOG = null;// Log tag
     /**
      * Screen information
@@ -325,35 +326,39 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
 //    public void showLoading() {
 //        toggleShowLoading(true, "loading");
 //    }
-    @Override
-    public void showLoading(String msg) {
-        toggleShowLoading(true, msg);
-    }
 
-    @Override
-    public void hideLoading() {
-        toggleShowLoading(false, "");
-    }
+//    @Override
+//    public void showLoading(String msg) {
+//        toggleShowLoading(true, msg);
+//    }
 
-    @Override
-    public void showError(String msg, View.OnClickListener onClickListener) {
-
-    }
-
-    @Override
-    public void showEmpty(String msg, View.OnClickListener onClickListener) {
-        toggleShowEmpty(true, msg, onClickListener);
-    }
-
-    @Override
-    public void showEmpty(String msg, View.OnClickListener onClickListener, int imageId) {
-        toggleShowEmpty(true, msg, onClickListener, imageId);
-    }
-
-    @Override
-    public void showNetError(View.OnClickListener onClickListener) {
-
-    }
-
-
+//    @Override
+//    public void hideLoading() {
+//        toggleShowLoading(false, "");
+//    }
+//
+//    @Override
+//    public void showError(String msg, View.OnClickListener onClickListener) {
+//
+//    }
+//
+//    @Override
+//    public void showEmpty(String msg, View.OnClickListener onClickListener) {
+//        toggleShowEmpty(true, msg, onClickListener);
+//    }
+//
+//    @Override
+//    public void showEmpty(String msg, View.OnClickListener onClickListener, int imageId) {
+//        toggleShowEmpty(true, msg, onClickListener, imageId);
+//    }
+//
+//    @Override
+//    public void showNetError(View.OnClickListener onClickListener) {
+//        ToastUtils.getInstance().showToast("network error");
+//    }
+//
+//    @Override
+//    public void setPresenter(P presenter) {
+//
+//    }
 }

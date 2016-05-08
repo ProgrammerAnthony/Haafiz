@@ -1,4 +1,4 @@
-package edu.com.mvpcommon.news.newsChannel;
+package edu.com.mvpcommon.news.newsList;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;

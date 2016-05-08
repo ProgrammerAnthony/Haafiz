@@ -23,7 +23,7 @@ import edu.com.mvplibrary.ui.widget.loading.VaryViewHelperController;
  * some base operation.
  * 2 do operation in initViewAndEvents(){@link #initViewsAndEvents(View rootView)}
  */
-public abstract class AbsBaseFragment extends Fragment implements BaseView {
+public abstract class AbsBaseFragment extends Fragment  {
     /**
      * url passed into fragment
      */
@@ -33,10 +33,7 @@ public abstract class AbsBaseFragment extends Fragment implements BaseView {
      * activity context of fragment
      */
     protected Context mContext;
-    /**
-     * view of fragment
-     */
-    protected View mRootView;
+
     /**
      * Screen information
      */
@@ -58,9 +55,7 @@ public abstract class AbsBaseFragment extends Fragment implements BaseView {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        mRootView = inflater.inflate(getContentViewID(), container, false);
-//        ButterKnife.bind(this, mRootView);//绑定framgent 与ButterKnife
-//        initViewsAndEvents(mRootView);
+        View mRootView = inflater.inflate(getContentViewID(), container, false);
         return mRootView;
 
     }
@@ -84,6 +79,9 @@ public abstract class AbsBaseFragment extends Fragment implements BaseView {
         initViewsAndEvents(view);
     }
 
+    /**
+     *add loading view to default view parent
+     */
     protected abstract View getLoadingTargetView();
 
 
@@ -209,37 +207,6 @@ public abstract class AbsBaseFragment extends Fragment implements BaseView {
         } else {
             mVaryViewHelperController.restore();
         }
-    }
-
-
-    @Override
-    public void showLoading(String msg) {
-        toggleShowLoading(true, msg);
-    }
-
-    @Override
-    public void hideLoading() {
-        toggleShowLoading(false, "");
-    }
-
-    @Override
-    public void showError(String msg, View.OnClickListener onClickListener) {
-        toggleShowError(true, msg, onClickListener);
-    }
-
-    @Override
-    public void showEmpty(String msg, View.OnClickListener onClickListener) {
-        toggleShowEmpty(true, msg, onClickListener);
-    }
-
-    @Override
-    public void showEmpty(String msg, View.OnClickListener onClickListener, int imageId) {
-        toggleShowEmpty(true, msg, onClickListener, imageId);
-    }
-
-    @Override
-    public void showNetError(View.OnClickListener onClickListener) {
-        toggleNetworkError(true, onClickListener);
     }
 
 

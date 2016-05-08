@@ -7,6 +7,9 @@ import android.view.View;
  * Class Note:
  */
 public interface BaseView {
+
+//    void setPresenter(P presenter);
+
     void showLoading(String msg);
 
     void hideLoading();
@@ -15,7 +18,7 @@ public interface BaseView {
 
     void showEmpty(String msg, View.OnClickListener onClickListener);
 
-    void showEmpty(String msg, View.OnClickListener onClickListener,int imageId);
+    void showEmpty(String msg, View.OnClickListener onClickListener, int imageId);
 
     void showNetError(View.OnClickListener onClickListener);
 

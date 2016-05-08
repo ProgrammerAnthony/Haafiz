@@ -28,10 +28,6 @@ dependencies {
     //adapter
     compile 'com.joanzapata.android:base-adapter-helper:1.1.11'
     //squareup
-    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
-    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
-    compile 'com.squareup.okhttp3:logging-interceptor:3.1.2'
     //beautiful log utils
     compile 'com.orhanobut:logger:1.11'
     //system bar tint change util
@@ -51,13 +47,11 @@ dependencies {
     //    compile 'com.jakewharton:butterknife:8.0.1'
     compile 'com.jakewharton:butterknife:7.0.1'
     //beautiful log utils
-    compile 'com.orhanobut:logger:1.11'
     //system bar tint change util
-    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
     //beautiful loading view
     compile 'com.wang.avi:library:1.0.1'
     //okhttp
-    compile 'com.squareup.okhttp:okhttp:2.0.0'
+    //    compile 'com.squareup.okhttp3:okhttp:3.2.0'
     //appcompat
     compile 'com.android.support:appcompat-v7:22.1.0'
     //design library
@@ -68,4 +62,6 @@ dependencies {
     compile project(':slidingmenu')
     compile project(':ultraptrwithloadmore')
     compile project(':viewpagerindicator')
+    compile files('libs/okhttp-2.7.0.jar')
+    compile files('libs/okhttputils-2_3_4.jar')
 }

@@ -17,6 +17,11 @@ public class Channel {
     private String img;
     private String extra;
 
+
+    public Channel(){
+
+    }
+
     public Channel(String objStr) throws JSONException {
         this(new JSONObject(objStr));
     }
