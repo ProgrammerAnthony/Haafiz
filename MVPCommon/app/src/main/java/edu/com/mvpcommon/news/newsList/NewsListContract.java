@@ -21,7 +21,7 @@ import edu.com.mvplibrary.ui.BaseView;
 public interface NewsListContract {
 
     interface Presenter extends BasePresenter{
-        void getData();
+        void getData(String url);
 
     }
 

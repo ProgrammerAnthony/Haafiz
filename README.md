@@ -42,10 +42,18 @@ BaseActivity 和BaseFragment 初始化大多数操作。
 
 网络状态监听
 
-6interface of loading view,empty view ,error view for all views.
+6 interface of loading view,empty view ,error view for all views.
 
 为所有界面添加了加载界面，错误界面以及空界面的接口
 
-7ImageLoader encapsulation using Glide
+7 ImageLoader encapsulation using Glide
 
 使用glide封装的ImageLoader，作为图片加载工具
+
+8 HttpUtil to load network using OkHttp
+
+利用OkHttp封装的HttpUtil访问网络
+
+9 Instant Messaging(IM) support with OpenImSDK from Alibaba
+
+利用阿里巴巴的OpenImSDK作为即时通讯组件

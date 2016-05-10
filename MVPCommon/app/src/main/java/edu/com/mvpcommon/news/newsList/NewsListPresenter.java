@@ -29,35 +29,10 @@ public class NewsListPresenter implements NewsListContract.Presenter, NewsListCo
     }
 
     @Override
-    public void getData() {
+    public void getData(String url) {
         // TODO: 2016/5/6  传递给model层处理数据
-
         try {
-//            mData.initListData("url");
-            mData.parseUrl("url here");
-//            mData.initListData("{\n" +
-//                    "  \"type\": \"\",\n" +
-//                    "  \"channels\": [\n" +
-//                    "    {\n" +
-//                    "      \"title\": \"nba\",\n" +
-//                    "      \"type\": \"2002\",\n" +
-//                    "      \"url\": \"raw://nba_data\"\n" +
-//                    "    },\n" +
-//                    "    {\n" +
-//                    "      \"title\": \"cba\",\n" +
-//                    "      \"type\": \"2002\",\n" +
-//                    "      \"url\": \"raw://nba_data\"\n" +
-//                    "    },\n" +
-//                    "    {\n" +
-//                    "      \"title\": \"足球\",\n" +
-//                    "      \"type\": \"2002\",\n" +
-//                    "      \"url\": \"raw://nba_data\"\n" +
-//                    "    }\n" +
-//                    "  ]\n" +
-//                    "}");
-
-//            mView.onDataReceived(mData.getChannels());
-//            mView.onDataReceived(channels);
+            mData.parseUrl(url);
         } catch (Exception e) {
             this.onError();
             e.printStackTrace();

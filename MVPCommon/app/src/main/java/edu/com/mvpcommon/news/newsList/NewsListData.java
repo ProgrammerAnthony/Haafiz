@@ -10,6 +10,9 @@ import java.util.ArrayList;
 
 import edu.com.mvplibrary.model.Channel;
 import edu.com.mvplibrary.model.config.Constants;
+import edu.com.mvplibrary.model.http.HttpUtil;
+import edu.com.mvplibrary.model.http.callback.StringHttpCallback;
+import edu.com.mvplibrary.model.http.request.HttpRequest;
 import edu.com.mvplibrary.util.JSONObjectHelper;
 
 /**
@@ -37,44 +40,43 @@ public class NewsListData {
      * @param url
      * @throws JSONException
      */
-    public void parseUrl(String url) throws JSONException{
+    public void parseUrl(String url) {
 
-        for(int i=0;i<=2;i++){
-            Channel channel=new Channel();
-            channel.setType("2002");
-            channel.setTitle("nba"+i);
-            mChannels.add(channel);
-        }
-        if (mChannels != null) {
-            mListener.onSuccess();
-        } else {
-            mListener.onError();
-        }
-//        this.initListData("{\n" +
-//                "  \"type\": \"2001\",\n" +
-//                "  \"channels\": [\n" +
-//                "    {\n" +
-//                "      \"title\": \"nba\",\n" +
-//                "      \"type\": \"2002\",\n" +
-//                "      \"url\": \"raw://nba_list\"\n" +
-//                "    },\n" +
-//                "    {\n" +
-//                "      \"title\": \"cba\",\n" +
-//                "      \"type\": \"2002\",\n" +
-//                "      \"url\": \"raw://nba_list\"\n" +
-//                "    },\n" +
-//                "    {\n" +
-//                "      \"title\": \"足球\",\n" +
-//                "      \"type\": \"2002\",\n" +
-//                "      \"url\": \"raw://nba_list\"\n" +
-//                "    }\n" +
-//                "  ]\n" +
-//                "}");
+        HttpRequest.Builder builder = new HttpRequest.Builder();
+        HttpRequest request = builder.url(url).build();
+        HttpUtil.getInstance().loadString(request, new StringHttpCallback() {
+            @Override
+            public void onResponse(String response) {
+                initListData(response);
+            }
+
+            @Override
+            public void onError(String error) {
+               mListener.onError();
+            }
+        });
+
+//        for(int i=0;i<=2;i++){
+//            Channel channel=new Channel();
+//            channel.setType("2002");
+//            channel.setTitle("nba"+i);
+//            mChannels.add(channel);
+//        }
+//        if (mChannels != null) {
+//            mListener.onSuccess();
+//        } else {
+//            mListener.onError();
+//        }
+
 
     }
 
-    public void initListData(String objStr) throws JSONException {
-        this.initListData(new JSONObject(objStr));
+    public void initListData(String objStr)  {
+        try {
+            this.initListData(new JSONObject(objStr));
+        } catch (JSONException e) {
+            mListener.onError();
+        }
     }
 
     public void initListData(JSONObject obj) throws JSONException {

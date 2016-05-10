@@ -8,8 +8,10 @@ import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import butterknife.ButterKnife;
+import edu.com.mvplibrary.R;
 import edu.com.mvplibrary.ui.BaseView;
 import edu.com.mvplibrary.ui.widget.loading.VaryViewHelperController;
 
@@ -23,7 +25,7 @@ import edu.com.mvplibrary.ui.widget.loading.VaryViewHelperController;
  * some base operation.
  * 2 do operation in initViewAndEvents(){@link #initViewsAndEvents(View rootView)}
  */
-public abstract class AbsBaseFragment extends Fragment  {
+public abstract class AbsBaseFragment extends Fragment {
     /**
      * url passed into fragment
      */
@@ -43,6 +45,8 @@ public abstract class AbsBaseFragment extends Fragment  {
 
     private VaryViewHelperController mVaryViewHelperController = null;
 
+    private View mTopBar; //common top bar
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +60,15 @@ public abstract class AbsBaseFragment extends Fragment  {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View mRootView = inflater.inflate(getContentViewID(), container, false);
+        if (getTopBarViewID() != 0) {
+            LinearLayout ll = (LinearLayout) mRootView.findViewById(R.id.fragment_tab_content);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, 0, 3);
+            mTopBar = LayoutInflater.from(getActivity()).inflate(getTopBarViewID(), null);
+            if (ll != null && mTopBar != null) {
+                ll.addView(mTopBar, 0, params);
+            }
+        }
+
         return mRootView;
 
     }
@@ -77,10 +90,11 @@ public abstract class AbsBaseFragment extends Fragment  {
         mScreenWidth = displayMetrics.widthPixels;
 
         initViewsAndEvents(view);
+
     }
 
     /**
-     *add loading view to default view parent
+     * add loading view to default view parent
      */
     protected abstract View getLoadingTargetView();
 
@@ -123,7 +137,11 @@ public abstract class AbsBaseFragment extends Fragment  {
     /**
      * override this method to return content view id of the fragment
      */
-    protected abstract int getContentViewID();
+    protected int getContentViewID() {
+        return R.layout.abs_fragment_tab;
+    }
+
+    ;
 
     /**
      * toggle show loading
@@ -209,5 +227,7 @@ public abstract class AbsBaseFragment extends Fragment  {
         }
     }
 
-
+    protected int getTopBarViewID() {
+        return R.layout.title_bar_common;
+    }
 }

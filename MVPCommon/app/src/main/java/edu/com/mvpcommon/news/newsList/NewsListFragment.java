@@ -29,7 +29,8 @@ public class NewsListFragment extends AbsBaseFragment implements View.OnClickLis
     protected void initViewsAndEvents(View rootView) {
         super.initViewsAndEvents(rootView);
 //        toggleShowEmpty(true,"this is empty",this);
-        toggleShowLoading(true,"test loading");
+        toggleShowLoading(false,"");
+//        toggleShowLoading(true,"loading");
 //        showEmpty();
 
     }

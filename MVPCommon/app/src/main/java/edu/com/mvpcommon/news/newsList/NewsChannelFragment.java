@@ -6,13 +6,17 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.astuetz.PagerSlidingTabStrip;
 
 import java.util.ArrayList;
 
 import butterknife.Bind;
+import butterknife.OnClick;
+import edu.com.mvpcommon.main.DrawerMainActivity;
 import edu.com.mvplibrary.R;
 import edu.com.mvplibrary.model.Channel;
 import edu.com.mvplibrary.model.News;
@@ -35,11 +39,26 @@ public class NewsChannelFragment extends AbsBaseFragment implements NewsListCont
 
     @Bind(R.id.fragment_tab_content)
     LinearLayout mFragmentContent;
+    @Bind(R.id.view_pager)
+    ViewPager mViewPager;
+    @Bind(R.id.tab_strip)
+    PagerSlidingTabStrip mTabStrip;
+    @Bind(R.id.title_txt_center)
+    TextView mTitle;
+    @Bind(R.id.title_image_left)
+    ImageView mIcon;
+    @Bind(R.id.title_txt_right)
+    TextView mTitleRight;
 
-    protected static String TAG = "com.trs.fragment.TRSAbsTabFragment";
+    @OnClick(R.id.title_image_left)
+    public void openDrawer(){
+        if (mContext instanceof DrawerMainActivity) {
+            DrawerMainActivity.openDrawer();
+        }
+    }
+
+    protected static String TAG = "NewsChannelFragment";
     private static int INIT_INDEX = 0;
-    private PagerSlidingTabStrip mTabStrip;
-    private ViewPager mViewPager;
 
     private View mTopBar;
 
@@ -47,28 +66,20 @@ public class NewsChannelFragment extends AbsBaseFragment implements NewsListCont
     private NewsListPresenter mPresenter;
     private TabViewPagerAdapter mViewPagerAdapter;
 
-    @Override
-    protected int getContentViewID() {
-        return R.layout.abs_fragment_tab;
-    }
-
 
     @Override
     protected void initViewsAndEvents(View rootView) {
         super.initViewsAndEvents(rootView);
 
-        if (getTopBarViewID() != 0) {
-            LinearLayout ll = (LinearLayout) rootView.findViewById(R.id.fragment_tab_content);
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, 0, 3);
-            mTopBar = LayoutInflater.from(getActivity()).inflate(getTopBarViewID(), null);
-            ll.addView(mTopBar, 0, params);
-        }
+        mTitle.setText("新闻资讯");
+        mTitleRight.setVisibility(View.GONE);
+        mIcon.setImageResource(R.drawable.icon_head);
 
-        mTabStrip = (PagerSlidingTabStrip) rootView.findViewById(R.id.tab_strip);
+
         mTabStrip.setTextColor(Color.rgb(170, 170, 170),
                 getResources().getColor(R.color.colorBlueDark));
         mTabStrip.setTextSize(AppUtils.sp2px(getActivity(), 14));
-        mViewPager = (ViewPager) rootView.findViewById(R.id.view_pager);
+
 
         mViewPagerAdapter = new TabViewPagerAdapter(getActivity(),
                 getChildFragmentManager(),
@@ -90,13 +101,10 @@ public class NewsChannelFragment extends AbsBaseFragment implements NewsListCont
     protected void loadData() {
         if (mPresenter == null)
             mPresenter = new NewsListPresenter(this, mContext);
-        mPresenter.getData();
+        mPresenter.getData("raw://news_channels");
 
     }
 
-    protected int getTopBarViewID() {
-        return R.layout.title_bar_common;
-    }
 
     @Override
     public void onDataReceived(ArrayList<Channel> channels) {
