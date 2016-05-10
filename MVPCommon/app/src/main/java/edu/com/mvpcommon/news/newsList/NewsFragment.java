@@ -3,9 +3,7 @@ package edu.com.mvpcommon.news.newsList;
 import android.graphics.Color;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -30,12 +28,12 @@ import edu.com.mvplibrary.util.AppUtils;
  * {@link ViewPager} to create tab fragment
  * TabViewPagerAdapter to return a FragmentStatePagerAdapter{@link FragmentStatePagerAdapter}
  * 2 View in MVP
- * {@link NewsListContract}----------Manager role of MVP
- * {@link NewsListPresenter}---------Presenter
- * &{@link NewsChannelFragment}---------View
- * &{@link  NewsListData}------------Model
+ * {@link NewsContract}----------Manager role of MVP
+ * {@link NewsPresenter}---------Presenter
+ * &{@link NewsFragment}---------View
+ * &{@link  NewsData}------------Model
  */
-public class NewsChannelFragment extends AbsBaseFragment implements NewsListContract.View {
+public class NewsFragment extends AbsBaseFragment implements NewsContract.View {
 
     @Bind(R.id.fragment_tab_content)
     LinearLayout mFragmentContent;
@@ -57,13 +55,13 @@ public class NewsChannelFragment extends AbsBaseFragment implements NewsListCont
         }
     }
 
-    protected static String TAG = "NewsChannelFragment";
+    protected static String TAG = "NewsFragment";
     private static int INIT_INDEX = 0;
 
     private View mTopBar;
 
 
-    private NewsListPresenter mPresenter;
+    private NewsPresenter mPresenter;
     private TabViewPagerAdapter mViewPagerAdapter;
 
 
@@ -100,7 +98,7 @@ public class NewsChannelFragment extends AbsBaseFragment implements NewsListCont
 
     protected void loadData() {
         if (mPresenter == null)
-            mPresenter = new NewsListPresenter(this, mContext);
+            mPresenter = new NewsPresenter(this, mContext);
         mPresenter.getData("raw://news_channels");
 
     }
@@ -129,8 +127,8 @@ public class NewsChannelFragment extends AbsBaseFragment implements NewsListCont
     }
 
 //    @Override
-//    public void setPresenter(NewsListContract.Presenter presenter) {
-//        mPresenter = (NewsListPresenter) presenter;
+//    public void setPresenter(NewsContract.Presenter presenter) {
+//        mPresenter = (NewsPresenter) presenter;
 //    }
 
     @Override

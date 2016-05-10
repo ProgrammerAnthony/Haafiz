@@ -134,6 +134,7 @@ public abstract class AbsBaseActivity extends AppCompatActivity{
         super.onDestroy();
         BaseAppManager.getInstance().removeActivity(this);
         ButterKnife.unbind(this);
+        NetStateReceiver.removeRegisterObserver(mNetChangeObserver);
     }
 
     /**
@@ -311,54 +312,4 @@ public abstract class AbsBaseActivity extends AppCompatActivity{
             mVaryViewHelperController.restore();
         }
     }
-
-    //    @Override
-//    public void showEmpty() {
-//        toggleShowEmpty(true, "no data now", this);
-//    }
-//
-//    @Override
-//    public void showErrorView() {
-//        toggleShowError(true, "load failure, try again later", this);
-//    }
-//
-//    @Override
-//    public void showLoading() {
-//        toggleShowLoading(true, "loading");
-//    }
-
-//    @Override
-//    public void showLoading(String msg) {
-//        toggleShowLoading(true, msg);
-//    }
-
-//    @Override
-//    public void hideLoading() {
-//        toggleShowLoading(false, "");
-//    }
-//
-//    @Override
-//    public void showError(String msg, View.OnClickListener onClickListener) {
-//
-//    }
-//
-//    @Override
-//    public void showEmpty(String msg, View.OnClickListener onClickListener) {
-//        toggleShowEmpty(true, msg, onClickListener);
-//    }
-//
-//    @Override
-//    public void showEmpty(String msg, View.OnClickListener onClickListener, int imageId) {
-//        toggleShowEmpty(true, msg, onClickListener, imageId);
-//    }
-//
-//    @Override
-//    public void showNetError(View.OnClickListener onClickListener) {
-//        ToastUtils.getInstance().showToast("network error");
-//    }
-//
-//    @Override
-//    public void setPresenter(P presenter) {
-//
-//    }
 }

@@ -3,7 +3,7 @@ package edu.com.mvpcommon.main;
 import android.content.Context;
 import android.view.View;
 
-import edu.com.mvpcommon.news.newsList.NewsChannelFragment;
+import edu.com.mvpcommon.news.newsList.NewsFragment;
 import edu.com.mvpcommon.TestFragment;
 import edu.com.mvplibrary.util.ToastUtils;
 
@@ -47,7 +47,7 @@ public class DrawerMainPresenter implements DrawerMainContract.Presenter, Drawer
     @Override
     public void getSelectFragment(int position) {
         if (position == 3)
-            mView.onSelectFragmentGet(new NewsChannelFragment());
+            mView.onSelectFragmentGet(new NewsFragment());
         else mView.onSelectFragmentGet(new TestFragment());
     }
 

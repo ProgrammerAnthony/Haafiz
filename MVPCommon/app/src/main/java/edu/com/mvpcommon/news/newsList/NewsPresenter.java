@@ -3,29 +3,25 @@ package edu.com.mvpcommon.news.newsList;
 import android.content.Context;
 import android.view.View;
 
-import java.util.ArrayList;
-
-import edu.com.mvplibrary.model.Channel;
-
 /**
  * Created by Anthony on 2016/5/3.
  * Class Note: Presenter in MVP
- * see {@link NewsListContract}-----------Manager role of MVP
- * &{@link NewsListPresenter}------------Presenter
- * &{@link NewsChannelFragment}-------------View
- * &{@link NewsListData}-----------------Model
+ * see {@link NewsContract}-----------Manager role of MVP
+ * &{@link NewsPresenter}------------Presenter
+ * &{@link NewsFragment}-------------View
+ * &{@link NewsData}-----------------Model
  */
-public class NewsListPresenter implements NewsListContract.Presenter, NewsListContract.onGetChannelListListener {
-    private NewsListContract.View mView;
+public class NewsPresenter implements NewsContract.Presenter, NewsContract.onGetChannelListListener {
+    private NewsContract.View mView;
     private Context mContext;
-    private NewsListData mData;
+    private NewsData mData;
 
-    public NewsListPresenter(NewsListContract.View mView, Context mContext) {
+    public NewsPresenter(NewsContract.View mView, Context mContext) {
         this.mContext = mContext;
         this.mView = mView;
 //        mView.setPresenter(this);//!!! bind presenter for View
 
-        mData = new NewsListData(mContext, this);//!!!bind data listener to Model
+        mData = new NewsData(mContext, this);//!!!bind data listener to Model
     }
 
     @Override

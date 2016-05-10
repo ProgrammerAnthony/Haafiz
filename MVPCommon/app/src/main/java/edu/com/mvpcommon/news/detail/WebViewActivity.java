@@ -1,12 +1,10 @@
-package edu.com.mvpcommon.news.newsList;
+package edu.com.mvpcommon.news.detail;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.http.SslError;
-import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.support.v7.app.ActionBar;
+import android.text.TextUtils;
 import android.view.View;
-import android.view.ViewGroup;
 import android.webkit.JsResult;
 import android.webkit.SslErrorHandler;
 import android.webkit.WebChromeClient;
@@ -16,31 +14,93 @@ import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
 
 import java.io.File;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 import edu.com.mvpcommon.R;
-import edu.com.mvpcommon.news.detail.WebViewActivity;
-import edu.com.mvplibrary.ui.fragment.AbsBaseFragment;
+import edu.com.mvplibrary.ui.activity.AbsSwipeBackActivity;
+import edu.com.mvplibrary.ui.widget.CircleImageView;
+import edu.com.mvplibrary.ui.widget.netstatus.NetUtils;
 import edu.com.mvplibrary.util.ToastUtils;
 
 /**
- * Created by Anthony on 2016/4/25.
+ * Created by Anthony on 2016/4/26.
  * Class Note:
- * webview fragment with js
  */
-public class WebViewFragment extends AbsBaseFragment {
-
+public class WebViewActivity extends AbsSwipeBackActivity {
+    public static String WEB_VIEW_URL = "WebViewUrl";
+    public static String WEB_VIEW_TITLE = "WebViewTitle";
     public static int TEXT_SIZE_SMALL = 100;
     public static int TEXT_SIZE_MEDIUM = 125;
     public static int TEXT_SIZE_BIG = 150;
-    public static final String mTitle="WEB_VIEW_TITLE";
+    //    private WebView mWebView;
+    private TextView txt_title;
+    private ProgressBar progress;
+    private TextView title_txt_center;
+    private TextView title_txt_right;
+    private CircleImageView title_image_left;
     @Bind(R.id.web_view)
     WebView mWebView;
 
+    @Override
+    protected void initViewsAndEvents() {
+        super.initViewsAndEvents();
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.hide();
+        }
+//        mWebView = (WebView) findViewById(R.id.web_view);
+
+        mWebView.setVisibility(View.INVISIBLE);
+        toggleShowLoading(true, "loading");
+
+        setWebViewOption();
+        title_image_left = (CircleImageView) findViewById(R.id.title_image_left);
+        title_image_left.setImageResource(R.mipmap.ico_back);
+        title_image_left.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mWebView.canGoBack()) {
+                    mWebView.goBack();
+                } else {
+                    scrollToFinishActivity();
+                }
+
+            }
+        });
+        title_txt_right = (TextView) findViewById(R.id.title_txt_right);
+        title_txt_right.setVisibility(View.GONE);
+        title_txt_center = (TextView) findViewById(R.id.title_txt_center);
+
+        String url = getIntent().getStringExtra(WEB_VIEW_URL);
+        String title = getIntent().getStringExtra(WEB_VIEW_TITLE);
+        if (TextUtils.isEmpty(title)) {
+            title_txt_center.setText("新闻资讯");
+        } else {
+            title_txt_center.setText(title + "新闻");
+        }
+
+        if (url != null) {
+            mWebView.loadUrl(url);
+        } else {
+//            mWebView.loadUrl("http://m.hupu.com/soccer/news/2024852.html");
+        }
+    }
+
+    @Override
+    protected void onNetworkConnected(NetUtils.NetType type) {
+
+    }
+
+    @Override
+    protected void onNetworkDisConnected() {
+
+    }
 
     @Override
     protected View getLoadingTargetView() {
@@ -49,27 +109,7 @@ public class WebViewFragment extends AbsBaseFragment {
 
     @Override
     protected int getContentViewID() {
-        return R.layout.fragment_web_view;
-    }
-    /**
-     * no top bar view for  this fragment
-     */
-    @Override
-    protected int getTopBarViewID() {
-        return 0;
-    }
-
-    @Override
-    protected void initViewsAndEvents(View rootView) {
-        super.initViewsAndEvents(rootView);
-
-        mWebView.setVisibility(View.INVISIBLE);
-        toggleShowLoading(true, "loading");
-
-        setWebViewOption();
-        if(getFragmentUrl()!=null){
-            mWebView.loadUrl(getFragmentUrl());
-        }
+        return R.layout.activity_web_view;
     }
 
     private void setWebViewOption() {
@@ -115,11 +155,9 @@ public class WebViewFragment extends AbsBaseFragment {
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             //重写此方法表明点击webview里面新的链接是由当前webview处理（false），还是自定义处理（true）
 //            view.loadUrl(url);
-            Intent intent=new Intent(mContext, WebViewActivity.class);
-            intent.putExtra(WebViewActivity.WEB_VIEW_URL,url);
-//            intent.putExtra(WebViewActivity.WEB_VIEW_TITLE,mTitle);
-            startActivity(intent);
-            return true;
+//            Intent intent=new Intent(mContext, WebViewActivity.class);
+//            startActivity(intent);
+            return false;
         }
 
         @Override
@@ -137,11 +175,12 @@ public class WebViewFragment extends AbsBaseFragment {
         public void onPageFinished(WebView view, String url) {
 
             super.onPageFinished(view, url);
-//            injectJS();
+
             toggleShowLoading(false, "");
-            if(mWebView.getVisibility()==View.INVISIBLE){
+            if (mWebView.getVisibility() == View.INVISIBLE) {
                 mWebView.setVisibility(View.VISIBLE);
             }
+
         }
 
         @Override
@@ -172,34 +211,16 @@ public class WebViewFragment extends AbsBaseFragment {
         @Override
         public void onReceivedTitle(WebView view, String title) {
             super.onReceivedTitle(view, title);
+//            title_txt_center.setText(title);
         }
 
         @Override
         public void onProgressChanged(WebView view, int newProgress) {
-            if(newProgress>25){
-                injectJS();
-            }
-
-//            if (newProgress < 100) {
-//                progress.setVisibility(View.VISIBLE);
-//                progress.setProgress(newProgress);
-//            } else {
-//                progress.setProgress(newProgress);
-//                progress.setVisibility(View.GONE);
+//            if (newProgress > 95 && mWebView.getVisibility() == View.INVISIBLE) {
+//                mWebView.setVisibility(View.VISIBLE);
 //            }
-
             super.onProgressChanged(view, newProgress);
         }
     }
 
-
-
-    private void injectJS(){
-        mWebView.loadUrl("javascript:(function() " +
-                "{ " +
-                "document.getElementsByClassName('m-top-bar')[0].style.display='none'; " +
-                "document.getElementsByClassName('m-footer')[0].style.display='none';" +
-                "document.getElementsByClassName('m-page')[0].style.display='none';" +
-                "})()");
-    }
 }

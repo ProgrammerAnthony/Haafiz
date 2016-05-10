@@ -35,6 +35,12 @@ public class TestFragment extends AbsBaseFragment implements View.OnClickListene
     }
 
     @Override
+    public void onPause() {
+        super.onPause();
+        toggleShowLoading(false,"");
+    }
+
+    @Override
     public void onClick(View v) {
 
     }

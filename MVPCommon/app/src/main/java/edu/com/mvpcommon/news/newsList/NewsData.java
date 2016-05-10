@@ -21,14 +21,14 @@ import edu.com.mvplibrary.util.JSONObjectHelper;
  * news channel data
  * "raw://news_channels   raw://nba_list"
  */
-public class NewsListData {
+public class NewsData {
 
 
     private ArrayList<Channel> mChannels;
     private Context mContext;
-    private NewsListContract.onGetChannelListListener mListener;
+    private NewsContract.onGetChannelListListener mListener;
 
-    public NewsListData(Context mContext, NewsListContract.onGetChannelListListener mListener) {
+    public NewsData(Context mContext, NewsContract.onGetChannelListListener mListener) {
         this.mContext = mContext;
         this.mListener = mListener;
 

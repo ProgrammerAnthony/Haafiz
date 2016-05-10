@@ -12,13 +12,13 @@ import edu.com.mvplibrary.ui.BaseView;
  * Class Note:
  * 1 define your Views & Presenters in Contract Classes;
  * 2 define listener used for View & Model indirectly interaction;
- * 3 {@link NewsListContract}-------------------------------------------Manager role of MVP
- * {@link NewsListPresenter}---------Presenter
- * &{@link NewsChannelFragment}---------------------------View
- * &{@link  NewsListData}--------------------Model
+ * 3 {@link NewsContract}-------------------------------------------Manager role of MVP
+ * {@link NewsPresenter}---------Presenter
+ * &{@link NewsFragment}---------------------------View
+ * &{@link  NewsData}--------------------Model
  *
  */
-public interface NewsListContract {
+public interface NewsContract {
 
     interface Presenter extends BasePresenter{
         void getData(String url);
