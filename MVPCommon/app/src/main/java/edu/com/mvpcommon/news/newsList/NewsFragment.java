@@ -67,7 +67,7 @@ public class NewsFragment extends AbsBaseFragment implements NewsContract.View {
 
     @Override
     protected void initViewsAndEvents(View rootView) {
-        super.initViewsAndEvents(rootView);
+//        super.initViewsAndEvents(rootView);
 
         mTitle.setText("新闻资讯");
         mTitleRight.setVisibility(View.GONE);

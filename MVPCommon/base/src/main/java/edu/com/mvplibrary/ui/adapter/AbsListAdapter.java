@@ -11,7 +11,8 @@ import java.util.List;
 
 /**
  * Created by Anthony on 2016/2/24.
- * Class Note: Only Support One Layout in the List
+ * Class Note:
+ * Only Support One Layout in the List
  * If you want to get a Multi Type Layout adapter,use{@link AbsMultiListAdapter}
  */
 public abstract class AbsListAdapter<E> extends BaseAdapter {

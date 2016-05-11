@@ -129,9 +129,7 @@ public abstract class AbsBaseFragment extends Fragment {
     /**
      * override this method to do operation in the fragment
      */
-    protected void initViewsAndEvents(View rootView) {
-
-    }
+    protected abstract void initViewsAndEvents(View rootView);
 
 
     /**

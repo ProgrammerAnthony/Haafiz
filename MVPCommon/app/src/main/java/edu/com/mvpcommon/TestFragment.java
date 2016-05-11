@@ -12,6 +12,7 @@ import edu.com.mvplibrary.ui.fragment.AbsBaseFragment;
  * Class Note:
  */
 public class TestFragment extends AbsBaseFragment implements View.OnClickListener {
+
     @Bind(R.id.test_layout1)
     RelativeLayout test_layout1;
 
@@ -27,7 +28,7 @@ public class TestFragment extends AbsBaseFragment implements View.OnClickListene
 
     @Override
     protected void initViewsAndEvents(View rootView) {
-        super.initViewsAndEvents(rootView);
+//        super.initViewsAndEvents(rootView);
 //        toggleShowEmpty(true,"this is empty",this);
         toggleShowLoading(true,"loading");
 //        showEmpty();

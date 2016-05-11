@@ -19,7 +19,6 @@ import edu.com.mvplibrary.ui.activity.AbsBaseActivity;
 import edu.com.mvplibrary.ui.widget.CircleImageView;
 import edu.com.mvplibrary.ui.widget.imageloader.ImageLoader;
 import edu.com.mvplibrary.ui.widget.imageloader.ImageLoaderUtil;
-import edu.com.mvplibrary.ui.widget.netstatus.NetUtils;
 import edu.com.mvplibrary.util.BaseUtil;
 import edu.com.mvplibrary.util.ToastUtils;
 
@@ -78,7 +77,7 @@ public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainCon
         //use presenter to load data
         mPresenter.getDrawerData();
         //default select first fragment
-        mPresenter.getSelectFragment(0);
+        mPresenter.getSelectView(1);
     }
 
 
@@ -146,7 +145,8 @@ public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainCon
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.user_img) {
-            mPresenter.onDrawerIconClicked();
+//            mPresenter.onDrawerIconClicked();
+            mPresenter.getSelectView(0);
         }
     }
 
@@ -161,7 +161,7 @@ public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainCon
                 if (!BaseUtil.isEmpty(mDrawerItems, i)) {
                     DrawerData.DrawerItem drawerItem = mDrawerItems.get(i);
                     if (drawerItem != null) {
-                        mPresenter.getSelectFragment(i);
+                        mPresenter.getSelectView(i+1);
                     }
                 }
             }
@@ -183,15 +183,6 @@ public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainCon
 
     }
 
-    @Override
-    protected void onNetworkConnected(NetUtils.NetType type) {
-        ToastUtils.getInstance().showToast("this type is"+type);
-    }
-
-    @Override
-    protected void onNetworkDisConnected() {
-        ToastUtils.getInstance().showToast("no network disconnected");
-    }
 
     @Override
     protected View getLoadingTargetView() {

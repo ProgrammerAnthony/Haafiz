@@ -238,12 +238,16 @@ public abstract class AbsSwipeBackActivity extends AppCompatActivity implements 
     /**
      * network connected
      */
-    protected abstract void onNetworkConnected(NetUtils.NetType type);
+    protected  void onNetworkConnected(NetUtils.NetType type){
+
+    }
 
     /**
      * network disconnected
      */
-    protected abstract void onNetworkDisConnected();
+    protected  void onNetworkDisConnected(){
+
+    }
 
     /**
      *get loading view

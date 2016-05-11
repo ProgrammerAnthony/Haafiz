@@ -37,7 +37,7 @@ public class WebViewFragment extends AbsBaseFragment {
     public static int TEXT_SIZE_SMALL = 100;
     public static int TEXT_SIZE_MEDIUM = 125;
     public static int TEXT_SIZE_BIG = 150;
-    public static final String mTitle="WEB_VIEW_TITLE";
+    public static final String mTitle = "WEB_VIEW_TITLE";
     @Bind(R.id.web_view)
     WebView mWebView;
 
@@ -51,6 +51,7 @@ public class WebViewFragment extends AbsBaseFragment {
     protected int getContentViewID() {
         return R.layout.fragment_web_view;
     }
+
     /**
      * no top bar view for  this fragment
      */
@@ -61,26 +62,27 @@ public class WebViewFragment extends AbsBaseFragment {
 
     @Override
     protected void initViewsAndEvents(View rootView) {
-        super.initViewsAndEvents(rootView);
-
+//        super.initViewsAndEvents(rootView);
+//        web_view_parent= rootView.findViewById(R.id.web_view_parent);
+//        mWebView = (WebView) rootView.findViewById(R.id.web_view);
         mWebView.setVisibility(View.INVISIBLE);
         toggleShowLoading(true, "loading");
 
-        setWebViewOption();
-        if(getFragmentUrl()!=null){
+        setWebViewOption(mWebView);
+        if (getFragmentUrl() != null) {
             mWebView.loadUrl(getFragmentUrl());
         }
     }
 
-    private void setWebViewOption() {
+    private void setWebViewOption(WebView webview) {
         //设置编码
-        mWebView.getSettings().setDefaultTextEncodingName("UTF-8");
+        webview.getSettings().setDefaultTextEncodingName("UTF-8");
 
         //设置缓存
-        mWebView.getSettings().setAppCacheEnabled(true);
+        webview.getSettings().setAppCacheEnabled(true);
         File cacheFile = mContext.getCacheDir();
         if (cacheFile != null) {
-            mWebView.getSettings().setAppCachePath(cacheFile.getAbsolutePath());
+            webview.getSettings().setAppCachePath(cacheFile.getAbsolutePath());
         }
         /**
          * 设置缓存加载模式
@@ -89,25 +91,25 @@ public class WebViewFragment extends AbsBaseFragment {
          * LOAD_CACHE_ELSE_NETWORK：缓存可用就加载即使已过期，否则从网络加载
          * LOAD_CACHE_ONLY：不使用网络，只加载缓存即使缓存不可用也不去网络加载
          */
-        mWebView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
+        webview.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
 
         //设置是否支持运行JavaScript，仅在需要时打开
-        mWebView.getSettings().setJavaScriptEnabled(true);
+        webview.getSettings().setJavaScriptEnabled(true);
 
         //设置WebView视图大小与HTML中viewport Tag的关系
-        mWebView.getSettings().setUseWideViewPort(true);
-        mWebView.getSettings().setLoadWithOverviewMode(true);
+        webview.getSettings().setUseWideViewPort(true);
+        webview.getSettings().setLoadWithOverviewMode(true);
 
         //设置字体大小
-        mWebView.getSettings().setTextZoom(TEXT_SIZE_SMALL);
+        webview.getSettings().setTextZoom(TEXT_SIZE_SMALL);
 
         //设置支持缩放
-        mWebView.getSettings().setBuiltInZoomControls(true);
-        mWebView.getSettings().setSupportZoom(true);
+        webview.getSettings().setBuiltInZoomControls(true);
+        webview.getSettings().setSupportZoom(true);
 
         //设置WebViewClient
-        mWebView.setWebViewClient(new MyWebViewClient());
-        mWebView.setWebChromeClient(new MyWebChromeClient());
+        webview.setWebViewClient(new MyWebViewClient());
+        webview.setWebChromeClient(new MyWebChromeClient());
     }
 
     private class MyWebViewClient extends WebViewClient {
@@ -115,8 +117,8 @@ public class WebViewFragment extends AbsBaseFragment {
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             //重写此方法表明点击webview里面新的链接是由当前webview处理（false），还是自定义处理（true）
 //            view.loadUrl(url);
-            Intent intent=new Intent(mContext, WebViewActivity.class);
-            intent.putExtra(WebViewActivity.WEB_VIEW_URL,url);
+            Intent intent = new Intent(mContext, WebViewActivity.class);
+            intent.putExtra(WebViewActivity.WEB_VIEW_URL, url);
 //            intent.putExtra(WebViewActivity.WEB_VIEW_TITLE,mTitle);
             startActivity(intent);
             return true;
@@ -139,8 +141,8 @@ public class WebViewFragment extends AbsBaseFragment {
             super.onPageFinished(view, url);
 //            injectJS();
             toggleShowLoading(false, "");
-            if(mWebView.getVisibility()==View.INVISIBLE){
-                mWebView.setVisibility(View.VISIBLE);
+            if (view.getVisibility() == View.INVISIBLE) {
+                view.setVisibility(View.VISIBLE);
             }
         }
 
@@ -176,8 +178,8 @@ public class WebViewFragment extends AbsBaseFragment {
 
         @Override
         public void onProgressChanged(WebView view, int newProgress) {
-            if(newProgress>25){
-                injectJS();
+            if (newProgress > 25) {
+                injectJS(view);
             }
 
 //            if (newProgress < 100) {
@@ -193,9 +195,8 @@ public class WebViewFragment extends AbsBaseFragment {
     }
 
 
-
-    private void injectJS(){
-        mWebView.loadUrl("javascript:(function() " +
+    private void injectJS(WebView webview) {
+        webview.loadUrl("javascript:(function() " +
                 "{ " +
                 "document.getElementsByClassName('m-top-bar')[0].style.display='none'; " +
                 "document.getElementsByClassName('m-footer')[0].style.display='none';" +

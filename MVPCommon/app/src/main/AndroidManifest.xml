@@ -16,15 +16,32 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.SwipeBackTranslucent">
-        <activity android:name=".main.DrawerMainActivity"
-            android:screenOrientation="portrait" >
+        <activity
+            android:name=".main.DrawerMainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".news.detail.WebViewActivity"
+        <activity
+            android:name=".news.detail.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".setting.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.edit.PersonalEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".nearby.detail.NearByDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".friends.add.FriendsAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashActivity"
             android:screenOrientation="portrait" />
     </application>
 

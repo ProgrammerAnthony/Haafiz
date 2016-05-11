@@ -12,7 +12,8 @@ import java.util.List;
 
 /**
  * Created by Anthony on 2016/2/24.
- * Class Note:  Support Multi Type Layout adapter
+ * Class Note:
+ * Support Multi Type Layout adapter
  *
  */
 public abstract class AbsMultiListAdapter<E> extends AbsListAdapter<E> {

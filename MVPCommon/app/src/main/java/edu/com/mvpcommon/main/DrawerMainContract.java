@@ -27,7 +27,7 @@ public interface DrawerMainContract {
 
         void onDrawerIconClicked();
 
-        void getSelectFragment(int position);
+        void getSelectView(int position);
     }
 
     interface View extends BaseView{

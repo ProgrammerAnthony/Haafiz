@@ -1,0 +1,29 @@
+﻿{
+  "type": "1001",
+  "channels": [
+    {
+      "title": "个人中心",
+      "type": "2002",
+      "img": "drawable://selector_btn_tab_news",
+      "url": "raw://news_menu"
+    },
+    {
+      "title": "好友",
+      "type": "3002",
+      "img": "drawable://selector_btn_tab_photo",
+      "url": "raw://friends_data"
+    },
+    {
+      "title": "附近",
+      "type": "4001",
+      "img": "drawable://selector_btn_tab_trip",
+      "url": "raw://news_menu"
+    },
+    {
+      "title": "资讯",
+      "type": "5001",
+      "img": "drawable://selector_btn_tab_book",
+      "url": "raw://news_menu"
+    }
+  ]
+}

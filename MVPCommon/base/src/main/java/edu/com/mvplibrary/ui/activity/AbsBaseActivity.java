@@ -200,12 +200,16 @@ public abstract class AbsBaseActivity extends AppCompatActivity{
     /**
      * network connected
      */
-    protected abstract void onNetworkConnected(NetUtils.NetType type);
+    protected  void onNetworkConnected(NetUtils.NetType type){
+        ToastUtils.getInstance().showToast("type is"+type);
+    }
 
     /**
      * network disconnected
      */
-    protected abstract void onNetworkDisConnected();
+    protected  void onNetworkDisConnected(){
+        ToastUtils.getInstance().showToast("network error");
+    }
 
     /**
      * get loading view

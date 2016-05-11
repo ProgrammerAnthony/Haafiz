@@ -1,10 +1,14 @@
 package edu.com.mvpcommon.main;
 
 import android.content.Context;
+import android.support.v4.app.Fragment;
 import android.view.View;
 
 import edu.com.mvpcommon.news.newsList.NewsFragment;
 import edu.com.mvpcommon.TestFragment;
+import edu.com.mvpcommon.personal.info.PersonalInfoFragment;
+import edu.com.mvplibrary.model.Channel;
+import edu.com.mvplibrary.model.ViewDisplayer;
 import edu.com.mvplibrary.util.ToastUtils;
 
 /**
@@ -45,10 +49,34 @@ public class DrawerMainPresenter implements DrawerMainContract.Presenter, Drawer
     }
 
     @Override
-    public void getSelectFragment(int position) {
-        if (position == 3)
-            mView.onSelectFragmentGet(new NewsFragment());
-        else mView.onSelectFragmentGet(new TestFragment());
+    public void getSelectView(int position) {
+        Channel mChannel = new Channel();
+        switch (position) {
+            case 0:
+                mChannel.setType("2001");//PersonalInfoFragment
+                break;
+            case 1:
+                mChannel.setType("2002");//ChattingListFragment
+                break;
+            case 2:
+                mChannel.setType("2003");//FriendsListFragment
+                break;
+            case 3:
+                mChannel.setType("2004");//NearByListFragment
+                break;
+            case 4:
+                mChannel.setType("2005");//NewsFragment
+                break;
+            case 5:
+                mChannel.setType("1005");//SettingActivity
+                break;
+        }
+        Fragment fragment =ViewDisplayer.initialView(mContext,mChannel);
+        if (fragment!=null){
+            mView.onSelectFragmentGet(fragment);
+        }
+
+
     }
 
 

@@ -6,7 +6,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 
-
 import java.util.ArrayList;
 
 
@@ -30,8 +29,12 @@ public class TabViewPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position) {
         //show child fragment
-        Channel channel = mChannels.get(position);
-        return ViewDisplayer.createFragment(mContext, channel);
+        Fragment fragment = ViewDisplayer.initialView(mContext, mChannels.get(position));
+        if (fragment == null) {
+            throw new IllegalArgumentException("cannnot get fragment");
+        }
+        return fragment;
+//        return ViewDisplayer.createFragment(mContext, channel);
     }
 
     @Override
@@ -48,15 +51,15 @@ public class TabViewPagerAdapter extends FragmentStatePagerAdapter {
         return mChannels;
     }
 
-    public void add(Channel item){
+    public void add(Channel item) {
         mChannels.add(item);
     }
 
-    public void addAll(ArrayList<Channel> dataList){
+    public void addAll(ArrayList<Channel> dataList) {
         mChannels.addAll(dataList);
     }
 
-    public void clear(){
+    public void clear() {
         mChannels.clear();
     }
 }

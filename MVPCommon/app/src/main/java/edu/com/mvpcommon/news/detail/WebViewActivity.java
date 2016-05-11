@@ -93,16 +93,6 @@ public class WebViewActivity extends AbsSwipeBackActivity {
     }
 
     @Override
-    protected void onNetworkConnected(NetUtils.NetType type) {
-
-    }
-
-    @Override
-    protected void onNetworkDisConnected() {
-
-    }
-
-    @Override
     protected View getLoadingTargetView() {
         return mWebView;
     }

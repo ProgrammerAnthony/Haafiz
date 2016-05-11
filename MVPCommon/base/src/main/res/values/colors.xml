@@ -272,12 +272,12 @@
     <color name="text_gray_e">#eeeeee</color>
 
 
-    <color name="drawer_home_coclor">#ff0e579a</color>
-    <color name="drawer_explore_coclor">#ff2ec5f5</color>
-    <color name="drawer_follow_coclor">#ff3bbfba</color>
-    <color name="drawer_collect_coclor">#ffec7530</color>
-    <color name="drawer_draft_coclor">#ff6fc624</color>
-    <color name="drawer_question_coclor">#fffecb2f</color>
+    <color name="drawer_item1_color">#ff0e579a</color>
+    <color name="drawer_item2_color">#ff2ec5f5</color>
+    <color name="drawer_item3_color">#ff3bbfba</color>
+    <color name="drawer_item4_color">#ffec7530</color>
+    <color name="drawer_item5_color">#ff6fc624</color>
+    <color name="drawer_item6_color">#fffecb2f</color>
 
     <color name="list_item_title">#333333</color>
     <color name="list_background">#fff</color>
