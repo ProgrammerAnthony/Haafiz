@@ -21,6 +21,7 @@ import edu.com.mvplibrary.ui.widget.loading.VaryViewHelperController;
 import edu.com.mvplibrary.ui.widget.netstatus.NetChangeObserver;
 import edu.com.mvplibrary.ui.widget.netstatus.NetStateReceiver;
 import edu.com.mvplibrary.ui.widget.netstatus.NetUtils;
+import edu.com.mvplibrary.util.AppUtils;
 import edu.com.mvplibrary.util.BaseAppManager;
 import edu.com.mvplibrary.util.NightModeHelper;
 import edu.com.mvplibrary.util.ToastUtils;
@@ -28,11 +29,11 @@ import edu.com.mvplibrary.util.ToastUtils;
 /**
  * Created by Anthony on 2016/4/24.
  * Class Note:
- * 1 Activity is a View in MVP, extended from AppCompatActivity to do
+ * 1 extended from AppCompatActivity to do
  * some base operation.
  * 2 do operation in initViewAndEvents(){@link #initViewsAndEvents()}
  */
-public abstract class AbsBaseActivity extends AppCompatActivity{
+public abstract class AbsBaseActivity extends AppCompatActivity {
     protected static String TAG_LOG = null;// Log tag
     /**
      * Screen information
@@ -44,9 +45,8 @@ public abstract class AbsBaseActivity extends AppCompatActivity{
     protected Context mContext = null;//context
 
     private NightModeHelper mNightModeHelper;//day night mode change
-    private Toolbar mTooBar;
     /**
-     * 联网状态
+     * network status
      */
     protected NetChangeObserver mNetChangeObserver = null;
 
@@ -59,19 +59,12 @@ public abstract class AbsBaseActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        initViewsAndEvents();
-    }
-
-
-    /**
-     * initialize views and events here
-     */
-    protected void initViewsAndEvents() {
         mContext = this;
         Bundle extras = getIntent().getExtras();
         if (null != extras) {
             getBundleExtras(extras);
         }
+        setTranslucentStatus(isApplyStatusBarTranslucency());
         TAG_LOG = this.getClass().getSimpleName();
         BaseAppManager.getInstance().addActivity(this);
 
@@ -86,11 +79,13 @@ public abstract class AbsBaseActivity extends AppCompatActivity{
         if (getContentViewID() != 0) {
             setContentView(getContentViewID());
             ButterKnife.bind(this);
+            if (null != getLoadingTargetView()) {
+                mVaryViewHelperController = new VaryViewHelperController(getLoadingTargetView());
+            }
         } else {
             throw new IllegalArgumentException("You must return a right contentView layout resource Id");
         }
 
-        initToolBar();
 
         mNetChangeObserver = new NetChangeObserver() {
             @Override
@@ -108,10 +103,7 @@ public abstract class AbsBaseActivity extends AppCompatActivity{
 
         NetStateReceiver.registerObserver(mNetChangeObserver);
 
-        if (null != getLoadingTargetView()) {
-            mVaryViewHelperController = new VaryViewHelperController(getLoadingTargetView());
-        }
-
+        initViewsAndEvents();
     }
 
 
@@ -119,7 +111,6 @@ public abstract class AbsBaseActivity extends AppCompatActivity{
     protected void onPause() {
         super.onPause();
         MobclickAgent.onPause(this);
-
     }
 
     @Override
@@ -128,15 +119,133 @@ public abstract class AbsBaseActivity extends AppCompatActivity{
         MobclickAgent.onResume(this);
     }
 
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        BaseAppManager.getInstance().removeActivity(this);
         ButterKnife.unbind(this);
         NetStateReceiver.removeRegisterObserver(mNetChangeObserver);
     }
 
+    @Override
+    public void finish() {
+        super.finish();
+        BaseAppManager.getInstance().removeActivity(this);
+    }
+
+    /**
+     * network connected
+     */
+    protected void onNetworkConnected(NetUtils.NetType type) {
+        // TODO: 2016/5/11 net work connect ,do something
+    }
+
+    /**
+     * network disconnected
+     */
+    protected void onNetworkDisConnected() {
+        // TODO: 2016/5/11 net work disconnect ,do something
+    }
+
+    /**
+     * get loading view
+     */
+    protected abstract View getLoadingTargetView();
+
+    /**
+     * get bundle extras
+     */
+    protected void getBundleExtras(Bundle extras) {
+//        mWebTitle = extras.getString(BUNDLE_KEY_TITLE);
+    }
+
+    /**
+     * initialize views and events here
+     */
+    protected abstract void initViewsAndEvents();
+
+    /**
+     * bind layout resource file
+     */
+    protected abstract int getContentViewID();
+    /**
+     * is applyStatusBarTranslucency
+     */
+    protected abstract boolean isApplyStatusBarTranslucency();
+
+    /**
+     * toggle show loading
+     */
+    protected void toggleShowLoading(boolean toggle, String msg) {
+        if (null == mVaryViewHelperController) {
+            throw new IllegalArgumentException("You must return a right target view for loading");
+        }
+
+        if (toggle) {
+            mVaryViewHelperController.showLoading(msg);
+        } else {
+            mVaryViewHelperController.restore();
+        }
+    }
+
+    /**
+     * toggle show empty
+     */
+    protected void toggleShowEmpty(boolean toggle, String msg, View.OnClickListener onClickListener) {
+        if (null == mVaryViewHelperController) {
+            throw new IllegalArgumentException("You must return a right target view for loading");
+        }
+
+        if (toggle) {
+            mVaryViewHelperController.showEmpty(msg, onClickListener);
+        } else {
+            mVaryViewHelperController.restore();
+        }
+    }
+
+    /**
+     * toggle show empty
+     */
+    protected void toggleShowEmpty(boolean toggle, String msg, View.OnClickListener onClickListener, int img) {
+        if (null == mVaryViewHelperController) {
+            throw new IllegalArgumentException("You must return a right target view for loading");
+        }
+
+        if (toggle) {
+            mVaryViewHelperController.showEmpty(msg, onClickListener, img);
+        } else {
+            mVaryViewHelperController.restore();
+        }
+    }
+
+    /**
+     * toggle show error
+     */
+    protected void toggleShowError(boolean toggle, String msg, View.OnClickListener onClickListener) {
+        if (null == mVaryViewHelperController) {
+            throw new IllegalArgumentException("You must return a right target view for loading");
+        }
+
+        if (toggle) {
+            mVaryViewHelperController.showError(msg, onClickListener);
+        } else {
+            mVaryViewHelperController.restore();
+        }
+    }
+
+    /**
+     * toggle show network error
+     */
+    protected void toggleNetworkError(boolean toggle, View.OnClickListener onClickListener) {
+        if (null == mVaryViewHelperController) {
+            throw new IllegalArgumentException("You must return a right target view for loading");
+        }
+
+        if (toggle) {
+            mVaryViewHelperController.showNetworkError(onClickListener);
+        } else {
+            mVaryViewHelperController.restore();
+        }
+    }
     /**
      * use SystemBarTintManager to change status bar
      *
@@ -181,139 +290,13 @@ public abstract class AbsBaseActivity extends AppCompatActivity{
     protected void changeDayNightMode() {
         mNightModeHelper.toggle();
     }
-
-    protected void initToolBar() {
-//        if (mTooBar == null) {
-//            mTooBar = (Toolbar) findViewById(R.id.toolbar);
-//            if (mTooBar != null) {
-//                setSupportActionBar(mTooBar);
-//            }
-//        }
-//        final ActionBar ab = getSupportActionBar();
-//        if (ab == null)
-//            return;
-//        ab.setHomeAsUpIndicator(R.drawable.ic_menu);
-//        ab.setDisplayHomeAsUpEnabled(true);
-
-    }
-
     /**
-     * network connected
+     * show toast
      */
-    protected  void onNetworkConnected(NetUtils.NetType type){
-        ToastUtils.getInstance().showToast("type is"+type);
-    }
-
-    /**
-     * network disconnected
-     */
-    protected  void onNetworkDisConnected(){
-        ToastUtils.getInstance().showToast("network error");
-    }
-
-    /**
-     * get loading view
-     */
-    protected abstract View getLoadingTargetView();
-
-    /**
-     * get bundle extras
-     *
-     * @param extras
-     */
-    protected void getBundleExtras(Bundle extras) {
-//        mWebTitle = extras.getString(BUNDLE_KEY_TITLE);
-    }
-
-    /**
-     * bind layout resource file
-     *
-     * @return id of layout resource
-     */
-    protected abstract int getContentViewID();
-
-    /**
-     * toggle show loading
-     *
-     * @param toggle
-     */
-    protected void toggleShowLoading(boolean toggle, String msg) {
-        if (null == mVaryViewHelperController) {
-            throw new IllegalArgumentException("You must return a right target view for loading");
-        }
-
-        if (toggle) {
-            mVaryViewHelperController.showLoading(msg);
-        } else {
-            mVaryViewHelperController.restore();
-        }
-    }
-
-    /**
-     * toggle show empty
-     *
-     * @param toggle
-     */
-    protected void toggleShowEmpty(boolean toggle, String msg, View.OnClickListener onClickListener) {
-        if (null == mVaryViewHelperController) {
-            throw new IllegalArgumentException("You must return a right target view for loading");
-        }
-
-        if (toggle) {
-            mVaryViewHelperController.showEmpty(msg, onClickListener);
-        } else {
-            mVaryViewHelperController.restore();
-        }
-    }
-
-    /**
-     * toggle show empty
-     *
-     * @param toggle
-     */
-    protected void toggleShowEmpty(boolean toggle, String msg, View.OnClickListener onClickListener, int img) {
-        if (null == mVaryViewHelperController) {
-            throw new IllegalArgumentException("You must return a right target view for loading");
-        }
-
-        if (toggle) {
-            mVaryViewHelperController.showEmpty(msg, onClickListener, img);
-        } else {
-            mVaryViewHelperController.restore();
-        }
-    }
-
-    /**
-     * toggle show error
-     *
-     * @param toggle
-     */
-    protected void toggleShowError(boolean toggle, String msg, View.OnClickListener onClickListener) {
-        if (null == mVaryViewHelperController) {
-            throw new IllegalArgumentException("You must return a right target view for loading");
-        }
-
-        if (toggle) {
-            mVaryViewHelperController.showError(msg, onClickListener);
-        } else {
-            mVaryViewHelperController.restore();
-        }
-    }
-
-    /**
-     * toggle show network error
-     *
-     * @param toggle
-     */
-    protected void toggleNetworkError(boolean toggle, View.OnClickListener onClickListener) {
-        if (null == mVaryViewHelperController) {
-            throw new IllegalArgumentException("You must return a right target view for loading");
-        }
-
-        if (toggle) {
-            mVaryViewHelperController.showNetworkError(onClickListener);
-        } else {
-            mVaryViewHelperController.restore();
+    protected void showToast(String msg) {
+        //防止遮盖虚拟按键
+        if (null != msg && !AppUtils.isEmpty(msg)) {
+//            Snackbar.make(getLoadingTargetView(), msg, Snackbar.LENGTH_SHORT).show();
         }
     }
 }

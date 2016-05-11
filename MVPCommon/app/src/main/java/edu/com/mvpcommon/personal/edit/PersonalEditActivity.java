@@ -18,7 +18,17 @@ public class PersonalEditActivity extends AbsSwipeBackActivity {
     }
 
     @Override
+    protected void initViewsAndEvents() {
+
+    }
+
+    @Override
     protected int getContentViewID() {
         return R.layout.activity_personal_edit;
+    }
+
+    @Override
+    protected boolean isApplyStatusBarTranslucency() {
+        return false;
     }
 }

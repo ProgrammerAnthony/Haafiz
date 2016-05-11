@@ -1,294 +1,294 @@
 [
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_tooltip_button_middle_checked.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_tooltip_button_middle_checked.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_topbar_icon_message_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_topbar_icon_message_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_time_text_view_border.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_time_text_view_border.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_reply_bar_face_view_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_reply_bar_face_view_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_record_btn_orange_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_record_btn_orange_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_reply_bar_expand.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_reply_bar_expand.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_tooltip_button_first.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_tooltip_button_first.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_reply_bar_record_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_reply_bar_record_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_download_original_button.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_download_original_button.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_weitao_msg_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_weitao_msg_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_pic_more_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_pic_more_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_loading_progress.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_loading_progress.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_topbar_icon_download_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_topbar_icon_download_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_wq_common_green_btn_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_wq_common_green_btn_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_record_dialog_bg1.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_record_dialog_bg1.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_tooltip_button_first_checked.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_tooltip_button_first_checked.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_smily_delete_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_smily_delete_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_record_btn_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_record_btn_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_friend_item_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_friend_item_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_search_icon_delete_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_search_icon_delete_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_common_check_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_common_check_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_common_grey_btn_textcolor.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_common_grey_btn_textcolor.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_wq_common_green_btn_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_wq_common_green_btn_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_tooltip_button.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_tooltip_button.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_reply_bar_expand_checked.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_reply_bar_expand_checked.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_column_first_grade_color.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_column_first_grade_color.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_sysmsgbg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_sysmsgbg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_tooltip_button_first.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_tooltip_button_first.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_top_delete_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_top_delete_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_record_dialog_bg2.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_record_dialog_bg2.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_tooltip_button.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_tooltip_button.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_comment_r_orange_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_comment_r_orange_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_send_tab_icon.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_send_tab_icon.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_reply_bar_camera.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_reply_bar_camera.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_tooltip_button_last.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_tooltip_button_last.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_reply_bar_expand_unchecked.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_reply_bar_expand_unchecked.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_comment_l_green_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_comment_l_green_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_btn_text_color.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_btn_text_color.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_btn_text_color.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_btn_text_color.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_send_tab_icon.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_send_tab_icon.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_column_second_grade_color.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_column_second_grade_color.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_friend_item_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_friend_item_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_cloud_msg_forget_password.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_cloud_msg_forget_password.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_reply_bar_record_view_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_reply_bar_record_view_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_common_grey_btn_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_common_grey_btn_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_image_viewer_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_image_viewer_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_unread_msg_notify_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_unread_msg_notify_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_reply_bar_album.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_reply_bar_album.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_tooltip_button_middle_with_right.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_tooltip_button_middle_with_right.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_wq_common_grey_btn_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_wq_common_grey_btn_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_common_green_btn_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_common_green_btn_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_common_blue_oval_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_common_blue_oval_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_reply_bar_record_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_reply_bar_record_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_bg_photo_window.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_bg_photo_window.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_tooltip_button_last_checked.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_tooltip_button_last_checked.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_record_btn_orange_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_record_btn_orange_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_smily_text_color.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_smily_text_color.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_center_audio_backgroud_from.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_center_audio_backgroud_from.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_column_third_grade_color.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_column_third_grade_color.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_comment_r_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_comment_r_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_contacts_search_btn_text_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_contacts_search_btn_text_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_time_text_view_border.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_time_text_view_border.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_reply_bar_face_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_reply_bar_face_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_receive_tab_icon.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_receive_tab_icon.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_reply_bar_keyboard_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_reply_bar_keyboard_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_tooltip_button_middle.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_tooltip_button_middle.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_comment_r_orange_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_comment_r_orange_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_divider.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_divider.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_commont_title_btn_text.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_commont_title_btn_text.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_topbar_icon_download_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_topbar_icon_download_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_record_dialog_bg2.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_record_dialog_bg2.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_tooltip_button_last.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_tooltip_button_last.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_common_back_btn_bg_white.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_common_back_btn_bg_white.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_tooltip_button_middle_checked.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_tooltip_button_middle_checked.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_reply_bar_camera.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_reply_bar_camera.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_cloud_msg_forget_password.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_cloud_msg_forget_password.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_reply_bar_record_view_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_reply_bar_record_view_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_pic_more_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_pic_more_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_bg_photo_window.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_bg_photo_window.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_tooltip_button_middle_with_right.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_tooltip_button_middle_with_right.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_center_audio_backgroud_from.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_center_audio_backgroud_from.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_tooltip_button_last_checked.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_tooltip_button_last_checked.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_record_btn_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_record_btn_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_comment_r_green_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_comment_r_green_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_alert_dialog_item_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_alert_dialog_item_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_tooltip_listview_divider.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_tooltip_listview_divider.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_common_white_btn_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_common_white_btn_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_sysmsgbg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_sysmsgbg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_tooltip_button_middle.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_tooltip_button_middle.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_my_progress.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_my_progress.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_contacts_search_btn_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_contacts_search_btn_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_comment_l_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_comment_l_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_common_grey_btn_textcolor.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_common_grey_btn_textcolor.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_commont_title_btn_text.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_commont_title_btn_text.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_reply_bar_expand.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_reply_bar_expand.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_contacts_search_btn_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_contacts_search_btn_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_smily_tab_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_smily_tab_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_common_back_btn_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_common_back_btn_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_divider.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_divider.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_common_green_btn_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_common_green_btn_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_common_back_btn_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_common_back_btn_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_unread_msg_notify_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_unread_msg_notify_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_comment_l_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_comment_l_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_smily_text_color.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_smily_text_color.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_common_dialog_white_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_common_dialog_white_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_reply_bar_face_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_reply_bar_face_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_tooltip_button_first_checked.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_tooltip_button_first_checked.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_alert_dialog_item_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_alert_dialog_item_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_comment_l_orange_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_comment_l_orange_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_smily_tab_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_smily_tab_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_image_viewer_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_image_viewer_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_top_delete_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_top_delete_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_reply_bar_album.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_reply_bar_album.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_comment_l_green_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_comment_l_green_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_tooltip_listview_divider.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_tooltip_listview_divider.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_column_second_grade_color.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_column_second_grade_color.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_receive_tab_icon.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_receive_tab_icon.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_record_btn_green_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_record_btn_green_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_reply_bar_face_view_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_reply_bar_face_view_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_reply_bar_keyboard_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_reply_bar_keyboard_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_search_icon_delete_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_search_icon_delete_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_common_back_btn_bg_white.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_common_back_btn_bg_white.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_column_first_grade_color.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_column_first_grade_color.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_common_check_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_common_check_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_weitao_msg_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_weitao_msg_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_reply_bar_expand_checked.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_reply_bar_expand_checked.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_record_btn_green_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_record_btn_green_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_common_grey_btn_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_common_grey_btn_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_common_blue_btn_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_common_blue_btn_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_common_blue_btn_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_common_blue_btn_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_common_blue_oval_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_common_blue_oval_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_common_white_btn_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_common_white_btn_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_topbar_icon_message_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_topbar_icon_message_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_contacts_search_btn_text_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_contacts_search_btn_text_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_loading_progress.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_loading_progress.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_common_dialog_white_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_common_dialog_white_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_comment_r_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_comment_r_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_record_dialog_bg1.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_record_dialog_bg1.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_reply_bar_expand_unchecked.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_reply_bar_expand_unchecked.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_column_third_grade_color.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_column_third_grade_color.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_my_progress.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_my_progress.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_smily_delete_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_smily_delete_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_comment_r_green_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_comment_r_green_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_comment_l_orange_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_comment_l_orange_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_wq_common_grey_btn_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_wq_common_grey_btn_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\aliwx_download_original_button.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable\\aliwx_download_original_button.xml"
     }
 ]

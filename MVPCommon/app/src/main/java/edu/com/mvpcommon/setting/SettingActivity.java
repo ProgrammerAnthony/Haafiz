@@ -19,7 +19,17 @@ public class SettingActivity extends AbsSwipeBackActivity{
     }
 
     @Override
+    protected void initViewsAndEvents() {
+
+    }
+
+    @Override
     protected int getContentViewID() {
         return R.layout.activity_setting;
+    }
+
+    @Override
+    protected boolean isApplyStatusBarTranslucency() {
+        return false;
     }
 }

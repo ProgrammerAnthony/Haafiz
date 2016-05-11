@@ -7,7 +7,7 @@ import android.util.Log;
 
 import java.io.File;
 
-import edu.com.mvplibrary.model.ViewDisplayer;
+import edu.com.mvplibrary.ui.widget.ViewDisplay;
 import edu.com.mvplibrary.util.LocalFileUncaughtExceptionHandler;
 import edu.com.mvplibrary.util.LogUtil;
 import edu.com.mvplibrary.util.ToastUtils;
@@ -32,7 +32,7 @@ public abstract class AbsApplication extends Application {
     public void onCreate() {
         super.onCreate();
         sInstance = this;
-        ViewDisplayer.initialize(this);
+        ViewDisplay.initialize(this);
         ToastUtils.initialize(this);
         LogUtil.init();
         Thread.setDefaultUncaughtExceptionHandler(new LocalFileUncaughtExceptionHandler(this,

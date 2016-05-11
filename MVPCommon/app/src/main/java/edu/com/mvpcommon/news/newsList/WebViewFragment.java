@@ -25,6 +25,7 @@ import butterknife.OnClick;
 import edu.com.mvpcommon.R;
 import edu.com.mvpcommon.news.detail.WebViewActivity;
 import edu.com.mvplibrary.ui.fragment.AbsBaseFragment;
+import edu.com.mvplibrary.ui.fragment.AbsTitleFragment;
 import edu.com.mvplibrary.util.ToastUtils;
 
 /**
@@ -32,7 +33,7 @@ import edu.com.mvplibrary.util.ToastUtils;
  * Class Note:
  * webview fragment with js
  */
-public class WebViewFragment extends AbsBaseFragment {
+public class WebViewFragment extends AbsTitleFragment {
 
     public static int TEXT_SIZE_SMALL = 100;
     public static int TEXT_SIZE_MEDIUM = 125;
@@ -48,7 +49,7 @@ public class WebViewFragment extends AbsBaseFragment {
     }
 
     @Override
-    protected int getContentViewID() {
+    protected int getCenterViewID() {
         return R.layout.fragment_web_view;
     }
 
@@ -62,9 +63,6 @@ public class WebViewFragment extends AbsBaseFragment {
 
     @Override
     protected void initViewsAndEvents(View rootView) {
-//        super.initViewsAndEvents(rootView);
-//        web_view_parent= rootView.findViewById(R.id.web_view_parent);
-//        mWebView = (WebView) rootView.findViewById(R.id.web_view);
         mWebView.setVisibility(View.INVISIBLE);
         toggleShowLoading(true, "loading");
 

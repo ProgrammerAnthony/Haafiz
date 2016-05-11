@@ -18,7 +18,17 @@ public class RegisterActivity extends AbsSwipeBackActivity {
     }
 
     @Override
+    protected void initViewsAndEvents() {
+
+    }
+
+    @Override
     protected int getContentViewID() {
         return R.layout.activity_register;
+    }
+
+    @Override
+    protected boolean isApplyStatusBarTranslucency() {
+        return false;
     }
 }

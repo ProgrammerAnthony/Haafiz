@@ -1,6 +1,5 @@
 package edu.com.mvpcommon.friends.list;
 
-import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -8,44 +7,49 @@ import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.OnClick;
 import edu.com.mvpcommon.R;
-import edu.com.mvpcommon.friends.add.FriendsAddActivity;
-import edu.com.mvpcommon.nearby.detail.NearByDetailActivity;
+import edu.com.mvpcommon.main.DrawerMainActivity;
 import edu.com.mvplibrary.ui.fragment.AbsBaseFragment;
+import edu.com.mvplibrary.ui.fragment.AbsTitleFragment;
 
 /**
  * Created by Anthony on 2016/5/10.
  * Class Note:
  */
-public class FriendsListFragment extends AbsBaseFragment {
-
+public class FriendsListFragment extends AbsTitleFragment {
     @Bind(R.id.title_txt_center)
     TextView mTitle;
     @Bind(R.id.title_image_left)
     ImageView mIcon;
     @Bind(R.id.title_txt_right)
     TextView mTitleRight;
-    @OnClick(R.id.title_txt_right)
-    public void filterUser(){
-//        ToastUtils.getInstance().showToast("not support now");
-        Intent intent =new Intent(mContext, FriendsAddActivity.class);
-        startActivity(intent);
+
+    @OnClick(R.id.title_image_left)
+    public void openDrawer(){
+        if (mContext instanceof DrawerMainActivity) {
+            DrawerMainActivity.openDrawer();
+        }
+    }
+    @Override
+    protected int getCenterViewID() {
+        return 0;
     }
 
     @Override
-    protected View getLoadingTargetView() {
-        return null;
+    protected int getTopBarViewID() {
+        return R.layout.title_bar_common;
     }
 
     @Override
     protected void initViewsAndEvents(View rootView) {
         mTitle.setText("好友列表");
-        mTitleRight.setText("添加");
+        mTitleRight.setVisibility(View.GONE);
         mIcon.setImageResource(R.drawable.icon_head);
-
+        toggleShowLoading(true,"loading");
     }
 
     @Override
-    protected int getContentViewID() {
-        return super.getContentViewID();
+    public void onPause() {
+        super.onPause();
+        toggleShowLoading(false,"");
     }
 }

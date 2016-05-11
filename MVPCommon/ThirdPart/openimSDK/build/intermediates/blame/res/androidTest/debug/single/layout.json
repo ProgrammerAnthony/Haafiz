@@ -1,434 +1,434 @@
 [
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_show_gif_progress.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_show_gif_progress.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_default_chatting_title.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_default_chatting_title.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_left_right_head.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_left_right_head.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_reply_bar_select.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_reply_bar_select.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_activity_at_msg_list.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_activity_at_msg_list.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_select_dialog_multichoice.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_select_dialog_multichoice.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_smiley_layout.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_smiley_layout.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_message_layout.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_message_layout.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_first_new_msg_notify.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_first_new_msg_notify.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_imageview.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_imageview.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_pull_down_refresh_toast.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_pull_down_refresh_toast.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_smily_radio.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_smily_radio.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_sliding_tab_receive.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_sliding_tab_receive.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_template_flex_grid_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_template_flex_grid_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_audio_flipper_from.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_audio_flipper_from.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_template_flow_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_template_flow_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_smily.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_smily.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_template_audio_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_template_audio_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_cloud_pwd_settting_hint.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_cloud_pwd_settting_hint.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_at_message_send_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_at_message_send_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_title_self_state.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_title_self_state.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_smiley_indicator_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_smiley_indicator_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_message_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_message_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_audio_unread.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_audio_unread.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_tooltip_chatwindow_rec_funbar.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_tooltip_chatwindow_rec_funbar.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_template_vertical_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_template_vertical_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_audio_unread.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_audio_unread.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_message.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_message.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_template_flex_grid_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_template_flex_grid_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_template_text_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_template_text_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_item_sendstate.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_item_sendstate.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_fast_send_photo_popup_window.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_fast_send_photo_popup_window.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_grid.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_grid.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_pull_down_refresh_toast.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_pull_down_refresh_toast.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_template_cloud_auto_reply_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_template_cloud_auto_reply_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_cloud_pwd_settting_hint.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_cloud_pwd_settting_hint.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_custom_msg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_custom_msg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_list_dialog_layout.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_list_dialog_layout.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_multi_pick_gallery_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_multi_pick_gallery_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_imageviewer.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_imageviewer.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_conversation_custom_view_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_conversation_custom_view_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_tooltip_chatwindow_2.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_tooltip_chatwindow_2.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_multi_pick_gallery_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_multi_pick_gallery_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_smily_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_smily_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_common_popup_bg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_common_popup_bg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_contacts_header_layout.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_contacts_header_layout.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_tooltip_chatwindow_rec_text.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_tooltip_chatwindow_rec_text.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_select_dialog_singlechoice.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_select_dialog_singlechoice.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_empty_head_imageview.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_empty_head_imageview.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_enlarge_enhanced_text.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_enlarge_enhanced_text.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_sliding_tab_send.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_sliding_tab_send.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_fast_send_photo_popup_window_cover.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_fast_send_photo_popup_window_cover.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_message_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_message_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_tooltip_popwindows.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_tooltip_popwindows.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_tribe_member_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_tribe_member_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_sliding_tab_send.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_sliding_tab_send.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_at_message_receive_item_title.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_at_message_receive_item_title.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_pull_to_refresh_header.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_pull_to_refresh_header.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_msg_unread_count.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_msg_unread_count.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_receive_state.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_receive_state.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_enlarge_enhanced_text_activity.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_enlarge_enhanced_text_activity.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_cloud_chat_pwd_dialog.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_cloud_chat_pwd_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_send_state.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_send_state.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_expand_view_pager_layout.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_expand_view_pager_layout.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_fragment_contacts.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_fragment_contacts.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_multi_pick_album.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_multi_pick_album.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_item_focus_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_item_focus_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_left_from.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_left_from.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_template_horizontal_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_template_horizontal_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_gif_smily_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_gif_smily_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_template_audio_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_template_audio_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_list_dialog_layout.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_list_dialog_layout.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_audio_flipper_to.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_audio_flipper_to.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_title_bar_shadow.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_title_bar_shadow.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_smiley_detail_layout.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_smiley_detail_layout.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_list_dialog_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_list_dialog_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_send_at_msg_detail_contact_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_send_at_msg_detail_contact_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_tooltip_chatwindow.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_tooltip_chatwindow.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_check_code.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_check_code.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_at_message_send_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_at_message_send_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_receive_state.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_receive_state.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_cloud_chat_pwd_dialog.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_cloud_chat_pwd_dialog.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_first_new_msg_notify.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_first_new_msg_notify.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_item_leftname.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_item_leftname.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_tooltip_popwindows.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_tooltip_popwindows.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_default_chatting_title.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_default_chatting_title.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_select_dialog.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_select_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_select_dialog.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_select_dialog.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_pull_to_refresh_header_1.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_pull_to_refresh_header_1.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_template_flow_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_template_flow_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_image_view.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_image_view.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_fragment_at_msg_list.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_fragment_at_msg_list.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_template_custom_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_template_custom_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_reply_bar_select.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_reply_bar_select.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_template_cloud_auto_reply_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_template_cloud_auto_reply_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_smiley_indicator_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_smiley_indicator_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_pull_to_refresh_header.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_pull_to_refresh_header.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_gif_smily_show_layout.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_gif_smily_show_layout.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_smily_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_smily_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_pull_to_refresh_header_1.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_pull_to_refresh_header_1.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_fragment_send_at_message_detail.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_fragment_send_at_message_detail.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_enter_chatting_room_layout.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_enter_chatting_room_layout.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_template_horizontal_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_template_horizontal_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_fragment_send_at_message_detail.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_fragment_send_at_message_detail.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_show_gif_progress.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_show_gif_progress.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_send_at_msg_detail_contact_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_send_at_msg_detail_contact_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_enter_chatting_room_layout.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_enter_chatting_room_layout.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_tribe_member_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_tribe_member_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_select_dialog_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_select_dialog_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_member_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_member_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_record_dialog.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_record_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_at_message_receive_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_at_message_receive_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_item_sendstate.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_item_sendstate.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_template_vertical_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_template_vertical_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_tooltip_chatwindow_rec_funbar.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_tooltip_chatwindow_rec_funbar.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_at_message_receive_item_title.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_at_message_receive_item_title.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_contacts_header_layout.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_contacts_header_layout.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_left_name.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_left_name.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_multi_pick_gallery.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_multi_pick_gallery.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_image_view.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_image_view.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_title_self_state.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_title_self_state.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_search_text.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_search_text.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_send_state.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_send_state.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_message.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_message.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_custom_item_without_head.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_custom_item_without_head.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_multi_image_player.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_multi_image_player.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_contacts_layout.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_contacts_layout.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_template_webview_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_template_webview_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_enlarge_enhanced_text_activity.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_enlarge_enhanced_text_activity.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_list.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_list.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_tooltip_chatwindow_rec_text.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_tooltip_chatwindow_rec_text.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_imageviewer.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_imageviewer.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_template_image_text_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_template_image_text_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_enlarge_enhanced_text.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_enlarge_enhanced_text.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_from.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_from.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_activity_at_msg_list.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_activity_at_msg_list.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_left_from.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_left_from.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_search_text.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_search_text.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_gif.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_gif.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_member_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_member_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_empty_head_imageview.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_empty_head_imageview.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_fragment_contacts.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_fragment_contacts.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_conversation_custom_view_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_conversation_custom_view_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_audio_flipper_from.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_audio_flipper_from.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_multi_pick_gallery.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_multi_pick_gallery.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_item_leftname.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_item_leftname.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_smily_radio.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_smily_radio.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_grid.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_grid.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_expand_view_pager_layout.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_expand_view_pager_layout.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_tooltip_chatwindow_2.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_tooltip_chatwindow_2.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_smily_delete_button.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_smily_delete_button.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_smily.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_smily.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_alert_dialog.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_alert_dialog.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_fast_send_photo_popup_window_cover.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_fast_send_photo_popup_window_cover.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_download_image_progress.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_download_image_progress.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_item_focus_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_item_focus_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_select_dialog_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_select_dialog_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_download_image_progress.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_download_image_progress.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_template_custom_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_template_custom_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_smiley_layout.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_smiley_layout.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_tooltip_head.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_tooltip_head.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_title_bar_shadow.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_title_bar_shadow.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_image_detail_fragment.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_image_detail_fragment.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_from.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_from.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_check_code.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_check_code.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_fragment_at_msg_list.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_fragment_at_msg_list.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_template_text_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_template_text_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_custom_msg.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_custom_msg.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_select_dialog_multichoice.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_select_dialog_multichoice.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_common_simple_title.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_common_simple_title.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_activity_send_at_msg_detail.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_activity_send_at_msg_detail.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_phrase_list.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_phrase_list.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_gif_smily_show_layout.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_gif_smily_show_layout.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_multi_pick_album.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_multi_pick_album.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_tooltip_chatwindow.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_tooltip_chatwindow.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_smiley_detail_layout.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_smiley_detail_layout.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_gif.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_gif.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_multi_pick_album_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_multi_pick_album_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_tooltip_head.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_tooltip_head.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_template_webview_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_template_webview_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_message_layout.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_message_layout.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_sliding_tab_receive.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_sliding_tab_receive.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_contacts_layout.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_contacts_layout.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_left_name.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_left_name.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_item_time.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_item_time.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_image_detail_fragment.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_image_detail_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_gif_smily_item.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_gif_smily_item.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_list_dialog_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_list_dialog_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_imageview.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_imageview.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_template_image_text_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_template_image_text_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_common_popup_bg.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_common_popup_bg.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_select_dialog_singlechoice.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_select_dialog_singlechoice.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_common_simple_title.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_common_simple_title.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_alert_dialog.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_alert_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_list.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_list.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_item_time.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_item_time.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_record_dialog.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_record_dialog.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_multi_image_player.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_multi_image_player.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_tribe_member_layout.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_tribe_member_layout.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_tribe_member_layout.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_tribe_member_layout.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_fast_send_photo_popup_window.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_fast_send_photo_popup_window.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_at_message_receive_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_at_message_receive_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_audio_flipper_to.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_audio_flipper_to.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_multi_pick_album_item.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_multi_pick_album_item.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_msg_unread_count.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_msg_unread_count.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_phrase_list.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_phrase_list.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_activity_send_at_msg_detail.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_activity_send_at_msg_detail.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_chatting_detail_left_right_head.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_chatting_detail_left_right_head.xml"
     },
     {
-        "merged": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_custom_item_without_head.xml",
-        "source": "C:\\Users\\hejian\\AndroidStudioProjects\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_custom_item_without_head.xml"
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\aliwx_smily_delete_button.xml",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\aliwx_smily_delete_button.xml"
     }
 ]

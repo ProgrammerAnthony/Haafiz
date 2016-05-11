@@ -4,11 +4,8 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.view.View;
 
-import edu.com.mvpcommon.news.newsList.NewsFragment;
-import edu.com.mvpcommon.TestFragment;
-import edu.com.mvpcommon.personal.info.PersonalInfoFragment;
 import edu.com.mvplibrary.model.Channel;
-import edu.com.mvplibrary.model.ViewDisplayer;
+import edu.com.mvplibrary.ui.widget.ViewDisplay;
 import edu.com.mvplibrary.util.ToastUtils;
 
 /**
@@ -71,7 +68,7 @@ public class DrawerMainPresenter implements DrawerMainContract.Presenter, Drawer
                 mChannel.setType("1005");//SettingActivity
                 break;
         }
-        Fragment fragment =ViewDisplayer.initialView(mContext,mChannel);
+        Fragment fragment = ViewDisplay.initialView(mContext,mChannel);
         if (fragment!=null){
             mView.onSelectFragmentGet(fragment);
         }

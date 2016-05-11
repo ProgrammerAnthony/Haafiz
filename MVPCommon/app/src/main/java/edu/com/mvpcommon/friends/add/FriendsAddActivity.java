@@ -18,7 +18,17 @@ public class FriendsAddActivity  extends AbsSwipeBackActivity {
     }
 
     @Override
+    protected void initViewsAndEvents() {
+
+    }
+
+    @Override
     protected int getContentViewID() {
         return R.layout.activity_friends_add;
+    }
+
+    @Override
+    protected boolean isApplyStatusBarTranslucency() {
+        return false;
     }
 }

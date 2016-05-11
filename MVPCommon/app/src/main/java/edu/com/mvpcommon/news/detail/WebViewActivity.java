@@ -49,7 +49,7 @@ public class WebViewActivity extends AbsSwipeBackActivity {
 
     @Override
     protected void initViewsAndEvents() {
-        super.initViewsAndEvents();
+//        super.initViewsAndEvents();
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.hide();
@@ -100,6 +100,11 @@ public class WebViewActivity extends AbsSwipeBackActivity {
     @Override
     protected int getContentViewID() {
         return R.layout.activity_web_view;
+    }
+
+    @Override
+    protected boolean isApplyStatusBarTranslucency() {
+        return false;
     }
 
     private void setWebViewOption() {

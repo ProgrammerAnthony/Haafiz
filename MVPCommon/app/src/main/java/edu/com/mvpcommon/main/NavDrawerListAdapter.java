@@ -13,8 +13,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import edu.com.mvplibrary.R;
-
+import edu.com.mvpcommon.R;
 
 
 public class NavDrawerListAdapter extends BaseAdapter {

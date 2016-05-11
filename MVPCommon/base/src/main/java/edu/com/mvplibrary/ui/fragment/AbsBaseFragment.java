@@ -14,6 +14,7 @@ import butterknife.ButterKnife;
 import edu.com.mvplibrary.R;
 import edu.com.mvplibrary.ui.BaseView;
 import edu.com.mvplibrary.ui.widget.loading.VaryViewHelperController;
+import edu.com.mvplibrary.util.AppUtils;
 
 //import butterknife.ButterKnife;
 
@@ -21,11 +22,15 @@ import edu.com.mvplibrary.ui.widget.loading.VaryViewHelperController;
  * Created by Anthony on 2016/2/25.
  * Class Note:
  * Base Fragment for all the Fragment defined in the project
- * 1 fragment is a View in MVP, extended from {@link AbsBaseFragment} to do
+ * 1 extended from {@link AbsBaseFragment} to do
  * some base operation.
  * 2 do operation in initViewAndEvents(){@link #initViewsAndEvents(View rootView)}
  */
 public abstract class AbsBaseFragment extends Fragment {
+    /**
+     * Log tag
+     */
+    protected static String TAG_LOG = null;
     /**
      * url passed into fragment
      */
@@ -45,11 +50,12 @@ public abstract class AbsBaseFragment extends Fragment {
 
     private VaryViewHelperController mVaryViewHelperController = null;
 
-    private View mTopBar; //common top bar
+//    private View mTopBar; //common top bar
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        TAG_LOG = this.getClass().getSimpleName();
         mContext = getActivity();
         if (getArguments() != null) {
             mUrl = getArguments().getString(EXTRA_URL);
@@ -59,18 +65,11 @@ public abstract class AbsBaseFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View mRootView = inflater.inflate(getContentViewID(), container, false);
-        if (getTopBarViewID() != 0) {
-            LinearLayout ll = (LinearLayout) mRootView.findViewById(R.id.fragment_tab_content);
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, 0, 3);
-            mTopBar = LayoutInflater.from(getActivity()).inflate(getTopBarViewID(), null);
-            if (ll != null && mTopBar != null) {
-                ll.addView(mTopBar, 0, params);
-            }
+        if (getContentViewID() != 0) {
+            return inflater.inflate(getContentViewID(), null);
+        } else {
+            return super.onCreateView(inflater, container, savedInstanceState);
         }
-
-        return mRootView;
-
     }
 
     @Override
@@ -105,20 +104,6 @@ public abstract class AbsBaseFragment extends Fragment {
         ButterKnife.unbind(this);
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-    }
 
 
     public String getFragmentUrl() {
@@ -126,25 +111,22 @@ public abstract class AbsBaseFragment extends Fragment {
     }
 
 
-    /**
-     * override this method to do operation in the fragment
-     */
-    protected abstract void initViewsAndEvents(View rootView);
+
+//
 
 
     /**
-     * override this method to return content view id of the fragment
+     * show toast
      */
-    protected int getContentViewID() {
-        return R.layout.abs_fragment_tab;
+    protected void showToast(String msg) {
+        if (null != msg && !AppUtils.isEmpty(msg)) {
+//            Snackbar.make(((Activity) mContext).getWindow().getDecorView(), msg, Snackbar.LENGTH_SHORT).show();
+        }
     }
 
-    ;
 
     /**
      * toggle show loading
-     *
-     * @param toggle
      */
     protected void toggleShowLoading(boolean toggle, String msg) {
         if (null == mVaryViewHelperController) {
@@ -159,8 +141,6 @@ public abstract class AbsBaseFragment extends Fragment {
 
     /**
      * toggle show empty
-     *
-     * @param toggle
      */
     protected void toggleShowEmpty(boolean toggle, String msg, View.OnClickListener onClickListener) {
         if (null == mVaryViewHelperController) {
@@ -176,8 +156,6 @@ public abstract class AbsBaseFragment extends Fragment {
 
     /**
      * toggle show empty
-     *
-     * @param toggle
      */
     protected void toggleShowEmpty(boolean toggle, String msg, View.OnClickListener onClickListener, int img) {
         if (null == mVaryViewHelperController) {
@@ -193,8 +171,6 @@ public abstract class AbsBaseFragment extends Fragment {
 
     /**
      * toggle show error
-     *
-     * @param toggle
      */
     protected void toggleShowError(boolean toggle, String msg, View.OnClickListener onClickListener) {
         if (null == mVaryViewHelperController) {
@@ -210,8 +186,6 @@ public abstract class AbsBaseFragment extends Fragment {
 
     /**
      * toggle show network error
-     *
-     * @param toggle
      */
     protected void toggleNetworkError(boolean toggle, View.OnClickListener onClickListener) {
         if (null == mVaryViewHelperController) {
@@ -225,7 +199,18 @@ public abstract class AbsBaseFragment extends Fragment {
         }
     }
 
-    protected int getTopBarViewID() {
-        return R.layout.title_bar_common;
-    }
+//    protected int getTopBarViewID() {
+//        return R.layout.title_bar_common;
+//    }
+    /**
+     * override this method to do operation in the fragment
+     */
+    protected abstract void initViewsAndEvents(View rootView);
+
+
+    /**
+     * override this method to return content view id of the fragment
+     */
+    protected abstract int getContentViewID() ;
+
 }

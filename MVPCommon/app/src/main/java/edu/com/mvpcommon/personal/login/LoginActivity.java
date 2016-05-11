@@ -18,7 +18,17 @@ public class LoginActivity extends AbsSwipeBackActivity {
     }
 
     @Override
+    protected void initViewsAndEvents() {
+
+    }
+
+    @Override
     protected int getContentViewID() {
         return R.layout.activity_login;
+    }
+
+    @Override
+    protected boolean isApplyStatusBarTranslucency() {
+        return false;
     }
 }

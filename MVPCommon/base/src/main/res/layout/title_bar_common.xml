@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="@dimen/title_bar_height"
+    android:layout_height="fill_parent"
     android:background="@color/colorPrimary"
     android:gravity="center_vertical">
 
@@ -9,6 +9,7 @@
         android:id="@+id/title_image_left"
         android:layout_width="@dimen/title_bar_icon_size"
         android:layout_height="@dimen/title_bar_icon_size"
+        android:layout_centerVertical="true"
         android:src="@drawable/ic_default_avatar" />
 
     <TextView

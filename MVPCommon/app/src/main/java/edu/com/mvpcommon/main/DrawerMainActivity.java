@@ -13,8 +13,8 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import edu.com.mvplibrary.R;
 
+import edu.com.mvpcommon.R;
 import edu.com.mvplibrary.ui.activity.AbsBaseActivity;
 import edu.com.mvplibrary.ui.widget.CircleImageView;
 import edu.com.mvplibrary.ui.widget.imageloader.ImageLoader;
@@ -48,6 +48,11 @@ public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainCon
     }
 
     @Override
+    protected boolean isApplyStatusBarTranslucency() {
+        return false;
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
         mPresenter.start();
@@ -55,7 +60,7 @@ public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainCon
 
     @Override
     protected void initViewsAndEvents() {
-        super.initViewsAndEvents();//一定要调用super，进行父类中的一些初始化操作
+//        super.initViewsAndEvents();//一定要调用super，进行父类中的一些初始化操作
         initDrawerLayout();
         setupToolBar();
 
@@ -89,9 +94,9 @@ public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainCon
             // current activity does not have a drawer.
             return;
         }
-        if (getDrawerLayoutId() != 0) {
+        if (getLeftDrawerID() != 0) {
             FrameLayout leftLayout = (FrameLayout) findViewById(R.id.left_drawer_layout);
-            View nav_drawer_layout = getLayoutInflater().inflate(getDrawerLayoutId(), null);
+            View nav_drawer_layout = getLayoutInflater().inflate(getLeftDrawerID(), null);
             leftLayout.addView(nav_drawer_layout);
         }
 
@@ -138,7 +143,7 @@ public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainCon
     }
 
 
-    protected int getDrawerLayoutId() {
+    protected int getLeftDrawerID() {
         return R.layout.nav_drawer_layout;
     }
 

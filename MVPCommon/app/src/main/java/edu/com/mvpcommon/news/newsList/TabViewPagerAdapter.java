@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 
 import edu.com.mvplibrary.model.Channel;
-import edu.com.mvplibrary.model.ViewDisplayer;
+import edu.com.mvplibrary.ui.widget.ViewDisplay;
 
 /**
  * Created by Anthony on 2016/2/24.
@@ -29,12 +29,12 @@ public class TabViewPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position) {
         //show child fragment
-        Fragment fragment = ViewDisplayer.initialView(mContext, mChannels.get(position));
+        Fragment fragment = ViewDisplay.initialView(mContext, mChannels.get(position));
         if (fragment == null) {
             throw new IllegalArgumentException("cannnot get fragment");
         }
         return fragment;
-//        return ViewDisplayer.createFragment(mContext, channel);
+//        return ViewDisplay.createFragment(mContext, channel);
     }
 
     @Override

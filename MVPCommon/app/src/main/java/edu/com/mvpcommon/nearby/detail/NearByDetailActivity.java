@@ -18,7 +18,17 @@ public class NearByDetailActivity  extends AbsSwipeBackActivity {
     }
 
     @Override
+    protected void initViewsAndEvents() {
+
+    }
+
+    @Override
     protected int getContentViewID() {
         return R.layout.activity_nearby_detail;
+    }
+
+    @Override
+    protected boolean isApplyStatusBarTranslucency() {
+        return false;
     }
 }

@@ -14,11 +14,12 @@ import java.util.ArrayList;
 
 import butterknife.Bind;
 import butterknife.OnClick;
+import edu.com.mvpcommon.R;
 import edu.com.mvpcommon.main.DrawerMainActivity;
-import edu.com.mvplibrary.R;
+
 import edu.com.mvplibrary.model.Channel;
 import edu.com.mvplibrary.model.News;
-import edu.com.mvplibrary.ui.fragment.AbsBaseFragment;
+import edu.com.mvplibrary.ui.fragment.AbsTitleFragment;
 import edu.com.mvplibrary.util.AppUtils;
 
 /**
@@ -33,10 +34,10 @@ import edu.com.mvplibrary.util.AppUtils;
  * &{@link NewsFragment}---------View
  * &{@link  NewsData}------------Model
  */
-public class NewsFragment extends AbsBaseFragment implements NewsContract.View {
+public class NewsFragment extends AbsTitleFragment implements NewsContract.View {
 
-    @Bind(R.id.fragment_tab_content)
-    LinearLayout mFragmentContent;
+//    @Bind(R.id.fragment_tab_content)
+//    LinearLayout mFragmentContent;
     @Bind(R.id.view_pager)
     ViewPager mViewPager;
     @Bind(R.id.tab_strip)
@@ -67,12 +68,9 @@ public class NewsFragment extends AbsBaseFragment implements NewsContract.View {
 
     @Override
     protected void initViewsAndEvents(View rootView) {
-//        super.initViewsAndEvents(rootView);
-
         mTitle.setText("新闻资讯");
         mTitleRight.setVisibility(View.GONE);
         mIcon.setImageResource(R.drawable.icon_head);
-
 
         mTabStrip.setTextColor(Color.rgb(170, 170, 170),
                 getResources().getColor(R.color.colorBlueDark));
@@ -89,6 +87,18 @@ public class NewsFragment extends AbsBaseFragment implements NewsContract.View {
         loadData();
 
     }
+
+    @Override
+    protected int getCenterViewID() {
+        return R.layout.fragment_tab;
+    }
+
+    @Override
+    protected int getTopBarViewID() {
+        return R.layout.title_bar_common;
+    }
+
+
 
     @Override
     public void onResume() {
@@ -121,15 +131,6 @@ public class NewsFragment extends AbsBaseFragment implements NewsContract.View {
 
     }
 
-    @Override
-    protected View getLoadingTargetView() {
-        return mFragmentContent;
-    }
-
-//    @Override
-//    public void setPresenter(NewsContract.Presenter presenter) {
-//        mPresenter = (NewsPresenter) presenter;
-//    }
 
     @Override
     public void showLoading(String msg) {
@@ -160,4 +161,5 @@ public class NewsFragment extends AbsBaseFragment implements NewsContract.View {
     public void showNetError(View.OnClickListener onClickListener) {
         toggleNetworkError(true, onClickListener);
     }
+
 }
