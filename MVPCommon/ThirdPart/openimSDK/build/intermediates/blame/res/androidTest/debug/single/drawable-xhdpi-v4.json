@@ -820,12 +820,12 @@
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\aliwx_comment_r_press.9.png"
     },
     {
-        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\aliwx_cover_avatar.png",
-        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\aliwx_cover_avatar.png"
-    },
-    {
         "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\aliwx_record_delete.png",
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\aliwx_record_delete.png"
+    },
+    {
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\aliwx_cover_avatar.png",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\aliwx_cover_avatar.png"
     },
     {
         "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\aliwx_picture_unselect_titlebar.png",

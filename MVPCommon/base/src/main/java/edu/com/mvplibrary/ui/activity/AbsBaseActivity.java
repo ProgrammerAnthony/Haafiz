@@ -11,12 +11,12 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.readystatesoftware.systembartint.SystemBarTintManager;
 import com.umeng.analytics.MobclickAgent;
 
 import butterknife.ButterKnife;
 
 import edu.com.mvplibrary.ui.BaseView;
+import edu.com.mvplibrary.ui.widget.SystemBarTintManager;
 import edu.com.mvplibrary.ui.widget.loading.VaryViewHelperController;
 import edu.com.mvplibrary.ui.widget.netstatus.NetChangeObserver;
 import edu.com.mvplibrary.ui.widget.netstatus.NetStateReceiver;

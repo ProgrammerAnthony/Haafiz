@@ -50,7 +50,7 @@ public class DrawerMainPresenter implements DrawerMainContract.Presenter, Drawer
         Channel mChannel = new Channel();
         switch (position) {
             case 0:
-                mChannel.setType("2001");//PersonalInfoFragment
+                mChannel.setType("1003");//LoginActivity
                 break;
             case 1:
                 mChannel.setType("2002");//ChattingListFragment

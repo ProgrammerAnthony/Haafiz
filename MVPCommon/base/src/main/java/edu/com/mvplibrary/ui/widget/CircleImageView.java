@@ -38,7 +38,9 @@ import android.widget.ImageView;
 
 import edu.com.mvplibrary.R;
 
-
+/**
+ *{@see https://github.com/hdodenhof/CircleImageView}
+ */
 public class CircleImageView extends ImageView {
 
     private static final ScaleType SCALE_TYPE = ScaleType.CENTER_CROP;

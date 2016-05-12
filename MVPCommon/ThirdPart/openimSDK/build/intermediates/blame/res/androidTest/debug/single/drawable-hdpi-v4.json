@@ -124,16 +124,16 @@
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_comment_l_nested.9.png"
     },
     {
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_refresh_toast_bg.9.png",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_refresh_toast_bg.9.png"
+    },
+    {
         "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_room_head_default.png",
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_room_head_default.png"
     },
     {
         "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_refresh_toast_failed.png",
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_refresh_toast_failed.png"
-    },
-    {
-        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_refresh_toast_bg.9.png",
-        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_refresh_toast_bg.9.png"
     },
     {
         "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_send_original_btn_on.png",

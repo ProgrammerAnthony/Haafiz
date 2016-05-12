@@ -43,6 +43,9 @@
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".personal.login.LoginActivity"
+            android:screenOrientation="portrait"/>
+
     </application>
 
 </manifest>

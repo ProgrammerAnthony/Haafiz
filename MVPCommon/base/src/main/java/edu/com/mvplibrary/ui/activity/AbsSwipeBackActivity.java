@@ -1,28 +1,7 @@
 package edu.com.mvplibrary.ui.activity;
 
-import android.content.Context;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.util.DisplayMetrics;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-
-import com.readystatesoftware.systembartint.SystemBarTintManager;
-import com.umeng.analytics.MobclickAgent;
-
-import butterknife.ButterKnife;
-
-import edu.com.mvplibrary.ui.widget.loading.VaryViewHelperController;
-import edu.com.mvplibrary.ui.widget.netstatus.NetChangeObserver;
-import edu.com.mvplibrary.ui.widget.netstatus.NetStateReceiver;
-import edu.com.mvplibrary.ui.widget.netstatus.NetUtils;
-import edu.com.mvplibrary.util.AppUtils;
-import edu.com.mvplibrary.util.BaseAppManager;
-import edu.com.mvplibrary.util.NightModeHelper;
 import edu.com.mvplibrary.ui.widget.swipeback.SwipeBackActivityBase;
 import edu.com.mvplibrary.ui.widget.swipeback.SwipeBackActivityHelper;
 import edu.com.mvplibrary.ui.widget.swipeback.SwipeBackLayout;

@@ -1,14 +1,17 @@
 package edu.com.mvpcommon.chat.list;
 
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.view.ViewGroup;
 
-import butterknife.Bind;
-import butterknife.OnClick;
+import com.alibaba.mobileim.YWIMKit;
+
 import edu.com.mvpcommon.R;
-import edu.com.mvpcommon.main.DrawerMainActivity;
-import edu.com.mvplibrary.ui.fragment.AbsBaseFragment;
+import edu.com.mvpcommon.umeng.helper.LoginSampleHelper;
 import edu.com.mvplibrary.ui.fragment.AbsTitleFragment;
 
 /**
@@ -16,40 +19,49 @@ import edu.com.mvplibrary.ui.fragment.AbsTitleFragment;
  * Class Note:
  */
 public class ChattingListFragment extends AbsTitleFragment{
-    @Bind(R.id.title_txt_center)
-    TextView mTitle;
-    @Bind(R.id.title_image_left)
-    ImageView mIcon;
-    @Bind(R.id.title_txt_right)
-    TextView mTitleRight;
-
-    @OnClick(R.id.title_image_left)
-    public void openDrawer(){
-        if (mContext instanceof DrawerMainActivity) {
-            DrawerMainActivity.openDrawer();
-        }
-    }
+    private YWIMKit mIMKit;
+    private Fragment fragment;
     @Override
     protected int getCenterViewID() {
-        return 0;
+        return R.layout.fragment_frame;
     }
 
     @Override
     protected int getTopBarViewID() {
-        return R.layout.title_bar_common;
+        return 0;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        LoginSampleHelper loginHelper = LoginSampleHelper.getInstance();
+        mIMKit = loginHelper.getIMKit();
+        if (mIMKit == null) {
+            LoginSampleHelper.getInstance().initIMKit("testpro74", "23015524");
+            mIMKit = LoginSampleHelper.getInstance().getIMKit();
+        }
+        fragment =mIMKit.getConversationFragment();
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = super.onCreateView(inflater, container, savedInstanceState);
+        FragmentManager fragmentManager = getChildFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.fragment_frame_id, fragment).commit();
+        return view;
     }
 
     @Override
     protected void initViewsAndEvents(View rootView) {
-        mTitle.setText("聊天列表");
-        mTitleRight.setVisibility(View.GONE);
-        mIcon.setImageResource(R.drawable.icon_head);
-        toggleShowLoading(true,"loading");
+
+//        notifyAll();
+
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        toggleShowLoading(false,"");
+//        toggleShowLoading(false,"");
     }
 }

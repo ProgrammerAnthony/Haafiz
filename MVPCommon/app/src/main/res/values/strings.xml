@@ -1,3 +1,45 @@
 <resources>
     <string name="app_name">MVPCommon</string>
+
+    <!--openIM-->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="quit_confirm">退出后您将收不到新消息通知，是否确认退出？</string>
+    <string name="guest_login">账号不存在，是否以游客方式登录？</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="setting_sound">声音提醒</string>
+    <string name="setting_vibration">振动提醒</string>
+    <string name="setting_nodisturb_dsc">消息免打扰</string>
+    <string name="title_activity_test_activity1">TestActivity1</string>
+    <string name="title_activity_test_activity2">TestActivity2</string>
+    <string name="title_activity_tribe_members">TribeMembersActivity</string>
+    <string name="title_activity_tribe_info">TribeInfoActivity</string>
+    <string name="title_activity_seacher_tribe">SeacherTribeActivity</string>
+    <string name="title_activity_edit_tribe_info">EditTribeInfoActivity</string>
+    <string name="title_activity_invite_tribe_member">InviteTribeMemberActivity</string>
+    <string name="search_friend_hint">账号</string>
+    <string name="search">搜索</string>
+    <string name="net_null">哎呀，怎么没网络了，请联网后试试！</string>
+    <string name="search_friend_not_found">该用户不存在</string>
+    <string name="search_friend_not_found_message">无法找到该用户，请检查输入的帐号是否正确</string>
+    <string name="search_friend_processing">正在为您查找</string>
+    <string name="send_msg">发送消息</string>
+    <string name="add_friend">添加好友</string>
+    <string name="remark_name">昵 称: </string>
+    <string name="profile_account">账 号: </string>
+    <string name="title_activity_system_message">SystemMessageActivity</string>
+    <string-array name="pref_config_tcms_storage_titles">
+        <item>In Settings(public)</item>
+        <item>In externalStorage(public)</item>
+        <item>In preference(private)</item>
+    </string-array>
+    <string-array name="pref_config_tcms_storage_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string name="pref_header_general">测试设置</string>
+    <string name="title_activity_contact_setting">ContactSettingActivity</string>
+    <string name="title_activity_tribe_msg_rec_type_set">TribeMsgRecTypeSetActivity</string>
+
 </resources>

@@ -18,7 +18,7 @@ blog update with all of the process
 
 **目前效果图：**
 
-![](http://upload-images.jianshu.io/upload_images/1833901-d045e9e0455ef2c8.gif?imageMogr2/auto-orient/strip)
+![](http://upload-images.jianshu.io/upload_images/1833901-54cbfa2b27652e3f.gif?imageMogr2/auto-orient/strip)
 
 **目前功能**
 
@@ -54,6 +54,10 @@ BaseActivity 和BaseFragment 初始化大多数操作。
 
 利用OkHttp封装的HttpUtil访问网络
 
-9 Instant Messaging(IM) support with OpenImSDK from Alibaba
+9 Instant Messaging(IM) support with OpenImSDK from Alibaba(using Conversation list &Contacts list from OpenIM)
 
-利用阿里巴巴的OpenImSDK作为即时通讯组件
+利用阿里巴巴的OpenImSDK作为即时通讯组件(聊天列表界面和联系人列表界面来自OpenIM)
+
+9 News Info from (m.hupu.com)，Inject JavaScript to modify
+
+新闻资讯内容来自于虎扑手机网页版，通过注入JavaScript的方式做了网页的修改。
