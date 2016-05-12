@@ -16,6 +16,8 @@ blog update with all of the process
 
 4 [网络图片加载的封装](http://www.jianshu.com/p/e26130a93289)
 
+5 [谈谈WebView的使用](http://www.jianshu.com/p/e3965d3636e7)
+
 **目前效果图：**
 
 ![](http://upload-images.jianshu.io/upload_images/1833901-54cbfa2b27652e3f.gif?imageMogr2/auto-orient/strip)
