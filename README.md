@@ -63,3 +63,7 @@ BaseActivity 和BaseFragment 初始化大多数操作。
 9 News Info from (m.hupu.com)，Inject JavaScript to modify
 
 新闻资讯内容来自于虎扑手机网页版，通过注入JavaScript的方式做了网页的修改。
+
+10 Setting pages using PreferenceFragment to support Android 3.0 or higher
+
+设置页面使用PreferencFragment（支持安卓3.0及以上）

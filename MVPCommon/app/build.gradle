@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId "edu.com.mvpcommon"
         minSdkVersion 16
-        targetSdkVersion 22
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
     }
@@ -21,6 +21,6 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
+
     compile project(':base')
 }

@@ -65,7 +65,7 @@ public class DrawerMainPresenter implements DrawerMainContract.Presenter, Drawer
                 mChannel.setType("2005");//NewsFragment
                 break;
             case 5:
-                mChannel.setType("1005");//SettingActivity
+                mChannel.setType("1005");//SettingsActivity
                 break;
         }
         Fragment fragment = ViewDisplay.initialView(mContext,mChannel);

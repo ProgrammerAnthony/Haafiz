@@ -22,9 +22,9 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     //v4
-    compile 'com.android.support:support-v4:23.1.0'
+    compile 'com.android.support:support-v4:23.4.0'
     //recyclerView
-    compile 'com.android.support:recyclerview-v7:23.1.0'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
     //adapter
     compile 'com.joanzapata.android:base-adapter-helper:1.1.11'
     //squareup
@@ -52,9 +52,11 @@ dependencies {
     //okhttp
     //    compile 'com.squareup.okhttp3:okhttp:3.2.0'
     //appcompat
-    compile 'com.android.support:appcompat-v7:23.1.0'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.github.medyo:android-about-page:1.0.8'
     //design library
-    //    compile 'com.android.support:design:22.1.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.github.chrisbanes.photoview:library:1.2.4'
     compile project(':openimSDK')
     compile project(':pagerslidingtabstrip')
     compile project(':pulltorefreshhandmark')

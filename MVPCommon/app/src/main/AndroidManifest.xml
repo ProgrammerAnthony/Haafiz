@@ -29,7 +29,7 @@
             android:name=".news.detail.WebViewActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".setting.SettingActivity"
+            android:name=".setting.SettingsActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".personal.edit.PersonalEditActivity"

@@ -78,14 +78,14 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
 
         if (getContentViewID() != 0) {
             setContentView(getContentViewID());
-            ButterKnife.bind(this);
-            if (null != getLoadingTargetView()) {
-                mVaryViewHelperController = new VaryViewHelperController(getLoadingTargetView());
-            }
         } else {
-            throw new IllegalArgumentException("You must return a right contentView layout resource Id");
+            //support not to set content view
+//            throw new IllegalArgumentException("You must return a right contentView layout resource Id");
         }
-
+        ButterKnife.bind(this);
+        if (null != getLoadingTargetView()) {
+            mVaryViewHelperController = new VaryViewHelperController(getLoadingTargetView());
+        }
 
         mNetChangeObserver = new NetChangeObserver() {
             @Override

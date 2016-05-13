@@ -70,7 +70,6 @@ public class WebViewActivity extends AbsSwipeBackActivity {
                 } else {
                     scrollToFinishActivity();
                 }
-
             }
         });
         title_txt_right = (TextView) findViewById(R.id.title_txt_right);
