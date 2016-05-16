@@ -1,7 +1,27 @@
 [
     {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\aliwx_menu_out.xml",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\anim\\aliwx_menu_out.xml"
+    },
+    {
         "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\aliwx_slide_right_out.xml",
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\anim\\aliwx_slide_right_out.xml"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\aliwx_new_msg_notify_slide_right_out.xml",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\anim\\aliwx_new_msg_notify_slide_right_out.xml"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\aliwx_slide_right_out.xml",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\anim\\aliwx_slide_right_out.xml"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\aliwx_slide_left_in.xml",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\anim\\aliwx_slide_left_in.xml"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\aliwx_alpha_fade_out.xml",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\anim\\aliwx_alpha_fade_out.xml"
     },
     {
         "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\aliwx_slide_right_in.xml",
@@ -32,11 +52,31 @@
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\anim\\aliwx_alpha_fade_out.xml"
     },
     {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\aliwx_menu_in.xml",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\anim\\aliwx_menu_in.xml"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\aliwx_alpha_fade_in.xml",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\anim\\aliwx_alpha_fade_in.xml"
+    },
+    {
         "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\aliwx_new_msg_notify_slide_right_in.xml",
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\anim\\aliwx_new_msg_notify_slide_right_in.xml"
     },
     {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\aliwx_slide_left_out.xml",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\anim\\aliwx_slide_left_out.xml"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\aliwx_new_msg_notify_slide_right_in.xml",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\anim\\aliwx_new_msg_notify_slide_right_in.xml"
+    },
+    {
         "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\aliwx_alpha_fade_in.xml",
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\anim\\aliwx_alpha_fade_in.xml"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\aliwx_slide_right_in.xml",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\anim\\aliwx_slide_right_in.xml"
     }
 ]

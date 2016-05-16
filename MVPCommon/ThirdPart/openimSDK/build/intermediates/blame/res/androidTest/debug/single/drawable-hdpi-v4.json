@@ -1,19 +1,43 @@
 [
     {
-        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_btn_add.png",
-        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_btn_add.png"
-    },
-    {
         "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_title_loading_normal.png",
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_title_loading_normal.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_topbar_at_icon_new.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_topbar_at_icon_new.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_icon_rec_tab_unselect.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_icon_rec_tab_unselect.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_cloud_msg_forget_password_press.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_cloud_msg_forget_password_press.png"
     },
     {
         "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_input_status_image.png",
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_input_status_image.png"
     },
     {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_default_photo_right.9.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_default_photo_right.9.png"
+    },
+    {
         "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_tribe_at_icon_black.png",
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_tribe_at_icon_black.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_icon_rec_tab_select.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_icon_rec_tab_select.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_icon_send_tab_unselect.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_icon_send_tab_unselect.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_head_default.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_head_default.png"
     },
     {
         "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_transparent_button_bg_n.9.png",
@@ -24,20 +48,28 @@
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_bg_photo_window_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_notification_bg.png",
-        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_notification_bg.png"
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_ic_pulltorefresh_arrow.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_ic_pulltorefresh_arrow.png"
     },
     {
-        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_ic_pulltorefresh_arrow.png",
-        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_ic_pulltorefresh_arrow.png"
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_cloud_msg_forget_password_normal.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_cloud_msg_forget_password_normal.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_send_original_btn_on.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_send_original_btn_on.png"
     },
     {
         "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_image_download_fail_view.png",
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_image_download_fail_view.png"
     },
     {
-        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_topbar_at_icon_new.png",
-        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_topbar_at_icon_new.png"
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_btn_add.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_btn_add.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_bg_photo_window_normal.9.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_bg_photo_window_normal.9.png"
     },
     {
         "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_icon_rec_tab_select.png",
@@ -48,12 +80,12 @@
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_imageviewer_btn_bg_n.png"
     },
     {
-        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_imageviewer_btn_bg_d.png",
-        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_imageviewer_btn_bg_d.png"
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_icon_send_tab_select.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_icon_send_tab_select.png"
     },
     {
-        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_send_original_btn_off.png",
-        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_send_original_btn_off.png"
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_default_photo.9.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_default_photo.9.png"
     },
     {
         "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_head_default.png",
@@ -64,40 +96,36 @@
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_common_back_btn_normal.png"
     },
     {
-        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_bg_source.9.png",
-        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_bg_source.9.png"
-    },
-    {
-        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_icon_send_tab_unselect.png",
-        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_icon_send_tab_unselect.png"
-    },
-    {
-        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_icon_send_tab_select.png",
-        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_icon_send_tab_select.png"
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_refresh_toast_suc.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_refresh_toast_suc.png"
     },
     {
         "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_chat_tribe_profile.png",
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_chat_tribe_profile.png"
     },
     {
-        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_tribe_at_icon.png",
-        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_tribe_at_icon.png"
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_imageviewer_btn_bg_d.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_imageviewer_btn_bg_d.png"
     },
     {
-        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_cloud_msg_forget_password_normal.png",
-        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_cloud_msg_forget_password_normal.png"
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_title_loading_normal.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_title_loading_normal.png"
     },
     {
         "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_cloud_msg_forget_password_press.png",
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_cloud_msg_forget_password_press.png"
     },
     {
-        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_img_loading.png",
-        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_img_loading.png"
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_refresh_toast_bg.9.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_refresh_toast_bg.9.png"
     },
     {
-        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_comment_r_nested.9.png",
-        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_comment_r_nested.9.png"
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_room_head_default.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_room_head_default.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_chat_tribe_profile.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_chat_tribe_profile.png"
     },
     {
         "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_refresh_toast_suc.png",
@@ -120,6 +148,14 @@
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_default_photo_right.9.png"
     },
     {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_tribe_at_icon_black.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_tribe_at_icon_black.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_bg_source.9.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_bg_source.9.png"
+    },
+    {
         "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_comment_l_nested.9.png",
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_comment_l_nested.9.png"
     },
@@ -136,11 +172,119 @@
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_refresh_toast_failed.png"
     },
     {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_send_original_btn_off.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_send_original_btn_off.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_tribe_at_icon.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_tribe_at_icon.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_comment_l_nested.9.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_comment_l_nested.9.png"
+    },
+    {
         "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_send_original_btn_on.png",
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_send_original_btn_on.png"
     },
     {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_img_loading.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_img_loading.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_tribe_head_default.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_tribe_head_default.png"
+    },
+    {
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_btn_add.png",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_btn_add.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_input_status_image.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_input_status_image.png"
+    },
+    {
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_notification_bg.png",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_notification_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_ic_pulltorefresh_arrow.png",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_ic_pulltorefresh_arrow.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_comment_r_nested.9.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_comment_r_nested.9.png"
+    },
+    {
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_topbar_at_icon_new.png",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_topbar_at_icon_new.png"
+    },
+    {
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_imageviewer_btn_bg_d.png",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_imageviewer_btn_bg_d.png"
+    },
+    {
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_send_original_btn_off.png",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_send_original_btn_off.png"
+    },
+    {
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_bg_source.9.png",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_bg_source.9.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_image_download_fail_view.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_image_download_fail_view.png"
+    },
+    {
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_icon_send_tab_select.png",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_icon_send_tab_select.png"
+    },
+    {
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_icon_send_tab_unselect.png",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_icon_send_tab_unselect.png"
+    },
+    {
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_tribe_at_icon.png",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_tribe_at_icon.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_refresh_toast_failed.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_refresh_toast_failed.png"
+    },
+    {
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_cloud_msg_forget_password_normal.png",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_cloud_msg_forget_password_normal.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_bg_photo_window_pressed.9.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_bg_photo_window_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_img_loading.png",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_img_loading.png"
+    },
+    {
+        "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_comment_r_nested.9.png",
+        "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_comment_r_nested.9.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_imageviewer_btn_bg_n.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_imageviewer_btn_bg_n.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_notification_bg.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_notification_bg.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_common_back_btn_normal.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_common_back_btn_normal.png"
+    },
+    {
         "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_default_photo.9.png",
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_default_photo.9.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_transparent_button_bg_n.9.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_transparent_button_bg_n.9.png"
     }
 ]

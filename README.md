@@ -1,28 +1,22 @@
 # MVPCommon
-**a common Architecture for Android Applications developing based on MVP，integrates many Open Source Projects ,to make your developing quicker and easier.**
+**a common Architecture and project build with blogs releasing based on MVP，integrates many Open Source Projects ,to make your developing quicker and easier.**
 
-**一个集成了众多开源项目的Android MVP快速开发框架。**
+**一个集成了众多开源项目的Android MVP框架以及应用搭建，全程博客更新。**
 
 
-blog update with all of the process
 
-**全程博客更新：**
 
-1 [开篇介绍和工程目录结构](http://www.jianshu.com/p/d0fee882a0fe)
+## Blog
 
-2 [Android架构合集](http://www.jianshu.com/p/1f21e1d375aa)
+[【从零开始搭建android框架系列】](http://www.jianshu.com/notebooks/3767449/latest)
 
-3 [google官方架构MVP解析与实战](http://www.jianshu.com/p/569ab68da482)
-
-4 [网络图片加载的封装](http://www.jianshu.com/p/e26130a93289)
-
-5 [谈谈WebView的使用](http://www.jianshu.com/p/e3965d3636e7)
-
-**目前效果图：**
+## Display Gif
 
 ![](http://upload-images.jianshu.io/upload_images/1833901-54cbfa2b27652e3f.gif?imageMogr2/auto-orient/strip)
 
-**目前功能**
+
+
+## Functionality
 
 1 BaseActivity & BaseFragment for mostly common operation.
 
@@ -67,3 +61,28 @@ BaseActivity 和BaseFragment 初始化大多数操作。
 10 Setting pages using PreferenceFragment to support Android 3.0 or higher
 
 设置页面使用PreferencFragment（支持安卓3.0及以上）
+Open Source used
+-------
+to edit
+
+
+Download
+--------
+not support now
+
+License
+-------
+
+    Copyright 2016 CameloeAnthony
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.

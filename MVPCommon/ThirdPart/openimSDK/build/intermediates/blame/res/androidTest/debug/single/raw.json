@@ -4,6 +4,18 @@
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\raw\\aliwx_sent.mp3"
     },
     {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\aliwx_play_completed.mp3",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\raw\\aliwx_play_completed.mp3"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\aliwx_sent.mp3",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\raw\\aliwx_sent.mp3"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\aliwx_itemmatch.xml",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\raw\\aliwx_itemmatch.xml"
+    },
+    {
         "merged": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\aliwx_itemmatch.xml",
         "source": "C:\\Users\\hejian\\Desktop\\MVPCommon\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\raw\\aliwx_itemmatch.xml"
     },

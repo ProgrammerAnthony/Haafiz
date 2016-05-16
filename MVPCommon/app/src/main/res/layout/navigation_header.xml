@@ -20,7 +20,7 @@
         />
 
     <TextView
-        android:id="@+id/tv_name"
+        android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -30,7 +30,7 @@
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/tv_autograph"
+        android:id="@+id/user_autograph"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
