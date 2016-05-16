@@ -61,6 +61,10 @@ BaseActivity 和BaseFragment 初始化大多数操作。
 10 Setting pages using PreferenceFragment to support Android 3.0 or higher
 
 设置页面使用PreferencFragment（支持安卓3.0及以上）
+
+11 LoginActivity to login in OpenIMSDK with one key
+
+新增LoginActivity，一键登录
 Open Source used
 -------
 to edit

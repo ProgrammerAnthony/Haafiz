@@ -1,122 +1,135 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/main_layout"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/login_background">
-    <ImageView
-        android:id="@+id/back_btn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/ic_back"
-        />
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="100dip"
-        android:layout_centerHorizontal="true"
-        android:paddingTop="34.6dip"
-        android:src="@drawable/basketball_icon"
-        android:scaleType="centerInside"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
+    <include
+        layout="@layout/title_bar_common"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
     <RelativeLayout
-        android:id="@+id/main"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@+id/logo"
-        android:paddingLeft="24dip"
-        android:paddingRight="24dip">
+        android:id="@+id/main_layout"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:layout_width="match_parent"
+        android:background="@drawable/login_background">
 
-        <EditText
-            android:id="@+id/account"
-            android:layout_width="fill_parent"
-            android:layout_height="44.6dip"
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="100dip"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="31dip"
-            android:background="@drawable/demo_account_text_bg"
-            android:drawableLeft="@drawable/demo_login_user"
-            android:drawablePadding="18dip"
-            android:gravity="center_vertical"
-            android:hint="请输入用户名"
-            android:inputType="textEmailSubject"
-            android:paddingLeft="12dip"
-            android:paddingRight="12dip"
-            android:singleLine="true"
-            android:textColor="#ff333333"
-            android:textColorHint="#7F7F7F"
-            android:textSize="15sp" />
+            android:paddingTop="34.6dip"
+            android:src="@drawable/basketball_icon"
+            android:scaleType="centerInside"/>
 
-        <EditText
-            android:id="@+id/password"
+        <RelativeLayout
+            android:id="@+id/main"
             android:layout_width="fill_parent"
-            android:layout_height="44.6dip"
-            android:layout_below="@+id/account"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/demo_select_account_bottom_normal"
-            android:drawableLeft="@drawable/demo_login_password"
-            android:drawablePadding="18dip"
-            android:gravity="center_vertical"
-            android:hint="请输入密码"
-            android:inputType="textPassword"
-            android:paddingLeft="12dip"
-            android:paddingRight="12dip"
-            android:singleLine="true"
-            android:textColor="#ff333333"
-            android:textColorHint="#7F7F7F"
-            android:textSize="15sp" />
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/logo"
+            android:paddingLeft="24dip"
+            android:paddingRight="24dip">
 
-        <EditText
-            android:id="@+id/appkey"
-            android:layout_width="fill_parent"
-            android:layout_height="44.6dip"
-            android:layout_below="@+id/password"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/demo_select_account_bottom_normal"
-            android:drawableLeft="@drawable/demo_login_password"
-            android:drawablePadding="18dip"
-            android:gravity="center_vertical"
-            android:hint="请输入APPKEY"
-            android:paddingLeft="12dip"
-            android:paddingRight="12dip"
-            android:singleLine="true"
-            android:textColor="#ff333333"
-            android:textColorHint="#7F7F7F"
-            android:textSize="15sp"
-            />
+            <EditText
+                android:id="@+id/account"
+                android:layout_width="fill_parent"
+                android:layout_height="44.6dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="31dip"
+                android:background="@drawable/demo_account_text_bg"
+                android:drawableLeft="@drawable/demo_login_user"
+                android:drawablePadding="18dip"
+                android:gravity="center_vertical"
+                android:hint="请输入用户名"
+                android:inputType="textEmailSubject"
+                android:paddingLeft="12dip"
+                android:paddingRight="12dip"
+                android:singleLine="true"
+                android:textColor="#ff333333"
+                android:textColorHint="#7F7F7F"
+                android:textSize="15sp" />
 
-        <Button
-            android:id="@+id/login"
-            android:layout_width="fill_parent"
-            android:layout_height="35dip"
-            android:layout_below="@+id/appkey"
-            android:layout_marginTop="18dip"
-            android:gravity="center"
-            android:text="登录"
-            android:textColor="#ffffff"
-            android:textSize="15sp" />
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="fill_parent"
+                android:layout_height="44.6dip"
+                android:layout_below="@+id/account"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/demo_select_account_bottom_normal"
+                android:drawableLeft="@drawable/demo_login_password"
+                android:drawablePadding="18dip"
+                android:gravity="center_vertical"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:paddingLeft="12dip"
+                android:paddingRight="12dip"
+                android:singleLine="true"
+                android:textColor="#ff333333"
+                android:textColorHint="#7F7F7F"
+                android:textSize="15sp" />
 
-        <TextView
-            android:gravity="center"
-            android:layout_margin="5dp"
-            android:id="@+id/copy_right"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#e2e2e2"
-            android:textSize="12sp"
-            android:text="Copyright ©2015 Taobao.com"
-            android:layout_alignParentBottom="true" />
+            <EditText
+                android:id="@+id/appkey"
+                android:layout_width="fill_parent"
+                android:layout_height="44.6dip"
+                android:layout_below="@+id/password"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/demo_select_account_bottom_normal"
+                android:drawableLeft="@drawable/demo_login_password"
+                android:drawablePadding="18dip"
+                android:gravity="center_vertical"
+                android:hint="请输入APPKEY"
+                android:paddingLeft="12dip"
+                android:paddingRight="12dip"
+                android:singleLine="true"
+                android:textColor="#ff333333"
+                android:textColorHint="#7F7F7F"
+                android:textSize="15sp"
+                />
 
-        <ProgressBar
-            android:id="@+id/login_progress"
-            android:layout_width="25dip"
-            android:layout_height="25dip"
-            android:layout_above="@+id/copy_right"
-            android:layout_centerInParent="true"
-            android:layout_marginBottom="10dp"
-            android:indeterminate="true"
-            android:indeterminateDrawable="@drawable/demo_login_progress"
-            android:visibility="gone" />
+            <Button
+                android:id="@+id/login"
+                android:layout_width="fill_parent"
+                android:layout_height="35dip"
+                android:layout_below="@+id/appkey"
+                android:layout_marginTop="18dip"
+                android:gravity="center"
+                android:text="登录"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:id="@+id/copy_right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#e2e2e2"
+                android:textSize="12sp"
+                android:text="Copyright ©2016 CameloeAnthony"
+                android:layout_alignParentBottom="true" />
+
+            <ProgressBar
+                android:id="@+id/login_progress"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_above="@+id/copy_right"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dp"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/demo_login_progress"
+                android:visibility="gone" />
+
+        </RelativeLayout>
 
     </RelativeLayout>
 
-</RelativeLayout>
+</LinearLayout>
+
+
+
+
+
+

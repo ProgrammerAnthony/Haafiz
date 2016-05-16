@@ -2,7 +2,6 @@ package edu.com.mvpcommon.personal.login;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.Notification;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -23,6 +22,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alibaba.mobileim.YWChannel;
@@ -34,6 +35,7 @@ import com.alibaba.mobileim.conversation.IYWConversationService;
 import com.alibaba.mobileim.conversation.YWConversation;
 import com.alibaba.mobileim.conversation.YWMessage;
 import com.alibaba.mobileim.conversation.YWMessageChannel;
+import com.alibaba.mobileim.fundamental.widget.WxAlertDialog;
 import com.alibaba.mobileim.fundamental.widget.YWAlertDialog;
 import com.alibaba.mobileim.login.YWLoginCode;
 import com.alibaba.mobileim.login.YWLoginState;
@@ -47,42 +49,63 @@ import com.alibaba.tcms.env.YWEnvType;
 
 import java.util.Random;
 
+import butterknife.Bind;
 import edu.com.mvpcommon.MyApplication;
-
 import edu.com.mvpcommon.R;
 import edu.com.mvpcommon.umeng.helper.LoginSampleHelper;
 import edu.com.mvpcommon.umeng.helper.NotificationInitSampleHelper;
 import edu.com.mvpcommon.umeng.helper.UserProfileSampleHelper;
 import edu.com.mvplibrary.ui.activity.AbsSwipeBackActivity;
+import edu.com.mvplibrary.ui.widget.CircleImageView;
+import edu.com.mvplibrary.util.LogUtil;
+import edu.com.mvplibrary.util.ToastUtils;
 
 /**
  * Created by Anthony on 2016/3/16.
  * Class Note:
  * login activity if current user did not login
  */
-public class LoginActivity extends AbsSwipeBackActivity {
+public class LoginActivity extends AbsSwipeBackActivity implements LoginContract.View {
+  //common title
+    @Bind(R.id.title_image_left)
+    CircleImageView titleImageLeft;
+    @Bind(R.id.title_txt_center)
+    TextView titleTxtCenter;
+    @Bind(R.id.title_txt_right)
+    TextView titleTxtRight;
+//center layout
+    @Bind(R.id.account)
+    EditText mAccountET;
+    @Bind(R.id.password)
+    EditText mPasswordET;
+    @Bind(R.id.appkey)
+    EditText mAppkeyET;
+    @Bind(R.id.login)
+    Button mLoginBtn;
+    @Bind(R.id.login_progress)
+    ProgressBar mLoginPrs;
+
 
     private static final int GUEST = 1;
     private static final String USER_ID = "userId";
     private static final String PASSWORD = "password";
     private static final String TAG = LoginActivity.class.getSimpleName();
+
     private LoginSampleHelper loginHelper;
-    private EditText userIdView;
-    private EditText passwordView;
-    private EditText appKeyView;
-    private ProgressBar progressBar;
-    private Button loginButton;
+
     private Handler handler = new Handler(Looper.getMainLooper());
-    private ImageView lg;
+
     public static String APPKEY;
-    private ImageView backBtn;
+
     public static final String AUTO_LOGIN_STATE_ACTION = "com.openim.autoLoginStateActionn";
+
 
     private BroadcastReceiver mAutoLoginStateReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             final int state = intent.getIntExtra("state", -1);
             YWLog.i(TAG, "mAutoLoginStateReceiver, loginState = " + state);
+            LogUtil.i(TAG, "mAutoLoginStateReceiver, loginState = " + state);
             if (state == -1) {
                 return;
             }
@@ -90,70 +113,74 @@ public class LoginActivity extends AbsSwipeBackActivity {
         }
     };
 
+    @Override
+    protected int getContentViewID() {
+        return R.layout.activity_login;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_login);
-        loginHelper = LoginSampleHelper.getInstance();
-        userIdView = (EditText) findViewById(R.id.account);
-        passwordView = (EditText) findViewById(R.id.password);
-        appKeyView = (EditText) findViewById(R.id.appkey);
-        appKeyView.setVisibility(View.VISIBLE);
-        progressBar = (ProgressBar) findViewById(R.id.login_progress);
 
-        backBtn = (ImageView) findViewById(R.id.back_btn);
-        backBtn.setOnClickListener(new View.OnClickListener() {
+        loginHelper = LoginSampleHelper.getInstance();
+        titleTxtCenter.setText("设置");
+        titleTxtRight.setVisibility(View.GONE);
+        titleImageLeft.setImageResource(R.mipmap.ico_back);
+
+        mAppkeyET.setVisibility(View.VISIBLE);
+
+
+        titleImageLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                scrollToFinishActivity();
             }
         });
 
         //读取登录成功后保存的用户名和密码
         String localId = IMPrefsTools.getStringPrefs(LoginActivity.this, USER_ID, "");
         if (!TextUtils.isEmpty(localId)) {
-            userIdView.setText(localId);
+            mAccountET.setText(localId);
             String localPassword = IMPrefsTools.getStringPrefs(LoginActivity.this, PASSWORD, "");
             if (!TextUtils.isEmpty(localPassword)) {
-                passwordView.setText(localPassword);
+                mPasswordET.setText(localPassword);
             }
         }
 
         if (LoginSampleHelper.sEnvType == YWEnvType.ONLINE) {
-            if (TextUtils.isEmpty(userIdView.getText())) {
-                userIdView.setText(getRandAccount());
+            if (TextUtils.isEmpty(mAccountET.getText())) {
+                mAccountET.setText(getRandAccount());
             }
-            if (TextUtils.isEmpty(passwordView.getText())) {
-                passwordView.setText("taobao1234");
+            if (TextUtils.isEmpty(mPasswordET.getText())) {
+                mPasswordET.setText("taobao1234");
             }
-            if (TextUtils.isEmpty(appKeyView.getText())) {
-                appKeyView.setText(LoginSampleHelper.APP_KEY);
+            if (TextUtils.isEmpty(mAppkeyET.getText())) {
+                mAppkeyET.setText(LoginSampleHelper.APP_KEY);
             }
         } else if (LoginSampleHelper.sEnvType == YWEnvType.TEST) {
-            if (TextUtils.isEmpty(userIdView.getText())) {
-                userIdView.setText("openimtest20");
+            if (TextUtils.isEmpty(mAccountET.getText())) {
+                mAccountET.setText("openimtest20");
             }
-            if (TextUtils.isEmpty(passwordView.getText())) {
-                passwordView.setText("taobao1234");
+            if (TextUtils.isEmpty(mPasswordET.getText())) {
+                mPasswordET.setText("taobao1234");
             }
-            if (TextUtils.isEmpty(appKeyView.getText())) {
-                appKeyView.setText(LoginSampleHelper.APP_KEY_TEST);
+            if (TextUtils.isEmpty(mAppkeyET.getText())) {
+                mAppkeyET.setText(LoginSampleHelper.APP_KEY_TEST);
             }
         } else if (LoginSampleHelper.sEnvType == YWEnvType.PRE) {
-            if (TextUtils.isEmpty(userIdView.getText())) {
-                userIdView.setText("testpro74");
+            if (TextUtils.isEmpty(mAccountET.getText())) {
+                mAccountET.setText("testpro74");
             }
-            if (TextUtils.isEmpty(passwordView.getText())) {
-                passwordView.setText("taobao1234");
+            if (TextUtils.isEmpty(mPasswordET.getText())) {
+                mPasswordET.setText("taobao1234");
             }
-            if (TextUtils.isEmpty(appKeyView.getText())) {
-                appKeyView.setText(LoginSampleHelper.APP_KEY);
+            if (TextUtils.isEmpty(mAppkeyET.getText())) {
+                mAppkeyET.setText(LoginSampleHelper.APP_KEY);
             }
         }
 
 
-        init(userIdView.getText().toString(), appKeyView.getText().toString());
+        init(mAccountET.getText().toString(), mAppkeyET.getText().toString());
 
         myRegisterReceiver();
 
@@ -161,14 +188,14 @@ public class LoginActivity extends AbsSwipeBackActivity {
         //自定义消息处理初始化(如果不需要自定义消息，则可以省去)
 //				CustomMessageSampleHelper.initHandler();
 
-        loginButton = (Button) findViewById(R.id.login);
+//        mLoginBtn = (Button) findViewById(R.id.login);
 
-        Bitmap logo = BitmapFactory.decodeResource(getResources(),
-                R.drawable.basketball_icon);
+//        Bitmap logo = BitmapFactory.decodeResource(getResources(),
+//                R.drawable.basketball_icon);
 
-        lg = (ImageView) findViewById(R.id.logo);
-        lg.setImageBitmap(logo);
-        userIdView.addTextChangedListener(new TextWatcher() {
+//        lg = (ImageView) findViewById(R.id.logo);
+//        lg.setImageBitmap(logo);
+        mAccountET.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -177,7 +204,7 @@ public class LoginActivity extends AbsSwipeBackActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (TextUtils.isEmpty(s)) {
-                    passwordView.setText("");
+                    mPasswordET.setText("");
                 }
 
             }
@@ -188,7 +215,7 @@ public class LoginActivity extends AbsSwipeBackActivity {
             }
         });
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //判断当前网络状态，若当前无网络则提示用户无网络
@@ -196,31 +223,29 @@ public class LoginActivity extends AbsSwipeBackActivity {
                     Toast.makeText(LoginActivity.this, "网络已断开，请稍后再试哦~", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                loginButton.setClickable(false);
-                final Editable userId = userIdView.getText();
-                final Editable password = passwordView.getText();
-                final Editable appKey = appKeyView.getText();
-//                if (userId == null || userId.toString().length() == 0) {
-//                    Toast.makeText(LoginActivity.this, "用户名不能为空", Toast.LENGTH_SHORT).show();
-//                    loginButton.setClickable(true);
-//                    return;
-//                }
-//                if (password == null || password.toString().length() == 0) {
-//                    Toast.makeText(LoginActivity.this, "密码不能为空", Toast.LENGTH_SHORT).show();
-//                    loginButton.setClickable(true);
-//                    return;
-//                }
+                mLoginBtn.setClickable(false);
+                final Editable userId = mAccountET.getText();
+                final Editable password = mPasswordET.getText();
+                final Editable appKey = mAppkeyET.getText();
+                if (userId == null || userId.toString().length() == 0) {
+                    Toast.makeText(LoginActivity.this, "用户名不能为空", Toast.LENGTH_SHORT).show();
+                    mLoginBtn.setClickable(true);
+                    return;
+                }
+                if (password == null || password.toString().length() == 0) {
+                    Toast.makeText(LoginActivity.this, "密码不能为空", Toast.LENGTH_SHORT).show();
+                    mLoginBtn.setClickable(true);
+                    return;
+                }
 
                 InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(userIdView.getWindowToken(), 0);
-                imm.hideSoftInputFromWindow(passwordView.getWindowToken(), 0);
+                imm.hideSoftInputFromWindow(mAccountET.getWindowToken(), 0);
+                imm.hideSoftInputFromWindow(mPasswordET.getWindowToken(), 0);
                 if (TextUtils.isEmpty(appKey)) {
                     LoginSampleHelper.APP_KEY = YWConstants.YWSDKAppKey;
                 }
-                init(userId.toString(), appKeyView.getText().toString());
-                progressBar.setVisibility(View.VISIBLE);
-
-                progressBar.setVisibility(View.VISIBLE);
+                init(userId.toString(), mAppkeyET.getText().toString());
+                mLoginPrs.setVisibility(View.VISIBLE);
                 APPKEY = appKey.toString();
                 loginHelper.login_Sample(userId.toString(), password.toString(), appKey.toString(), new IWxCallback() {
 
@@ -228,11 +253,11 @@ public class LoginActivity extends AbsSwipeBackActivity {
                     public void onSuccess(Object... arg0) {
                         saveIdPasswordToLocal(userId.toString(), password.toString());
 
-                        loginButton.setClickable(true);
-                        progressBar.setVisibility(View.GONE);
-                        Toast.makeText(LoginActivity.this, "登录成功",
-                                Toast.LENGTH_SHORT).show();
+                        mLoginBtn.setClickable(true);
+                        mLoginPrs.setVisibility(View.GONE);
+                        ToastUtils.getInstance().showToast("登录成功");
                         YWLog.i(TAG, "login success!");
+                        LogUtil.i(TAG, "login success!");
                         //TODO modify code here 3 lines
 //                        Intent intent = new Intent(LoginActivity.this, FragmentTabs.class);
 //                        intent.putExtra(FragmentTabs.LOGIN_SUCCESS, "loginSuccess");
@@ -251,11 +276,11 @@ public class LoginActivity extends AbsSwipeBackActivity {
 
                     @Override
                     public void onError(int errorCode, String errorMessage) {
-                        progressBar.setVisibility(View.GONE);
+                        mLoginPrs.setVisibility(View.GONE);
                         if (errorCode == YWLoginCode.LOGON_FAIL_INVALIDUSER) { //若用户不存在，则提示使用游客方式登陆
                             showDialog(GUEST);
                         } else {
-                            loginButton.setClickable(true);
+                            mLoginBtn.setClickable(true);
                             YWLog.w(TAG, "登录失败，错误码：" + errorCode + "  错误信息：" + errorMessage);
 //                            Notification.showToastMsg(LoginActivity.this, errorMessage);
                         }
@@ -275,7 +300,6 @@ public class LoginActivity extends AbsSwipeBackActivity {
             }
         });
     }
-
 
 
     private void init(String userId, String appKey) {
@@ -321,7 +345,7 @@ public class LoginActivity extends AbsSwipeBackActivity {
                                     public void onClick(DialogInterface dialog,
                                                         int id) {
                                         dialog.dismiss();
-                                        loginButton.setClickable(true);
+                                        mLoginBtn.setClickable(true);
                                     }
                                 });
                 AlertDialog dialog = builder.create();
@@ -336,7 +360,7 @@ public class LoginActivity extends AbsSwipeBackActivity {
     public void guest_login() {
 
         loginHelper.loginOut_Sample();
-        progressBar.setVisibility(View.VISIBLE);
+        mLoginPrs.setVisibility(View.VISIBLE);
         //TODO 使用visitor1-visitor1000的形式。
         final String guestId = new StringBuilder("visitor").append((new Random().nextInt(1000) + 1)).toString();
 //      String userid = new StringBuffer(("uid")).append((new Random().nextInt(10) + 1)).toString();
@@ -347,8 +371,8 @@ public class LoginActivity extends AbsSwipeBackActivity {
             @Override
             public void onSuccess(Object... arg0) {
                 saveIdPasswordToLocal(guestId, "taobao1234");
-                loginButton.setClickable(true);
-                progressBar.setVisibility(View.GONE);
+                mLoginBtn.setClickable(true);
+                mLoginPrs.setVisibility(View.GONE);
                 Toast.makeText(LoginActivity.this, "登录成功",
                         Toast.LENGTH_SHORT).show();
 //                mockConversationForDemo();
@@ -364,14 +388,14 @@ public class LoginActivity extends AbsSwipeBackActivity {
 
             @Override
             public void onError(int errorCode, String errorMessage) {
-                progressBar.setVisibility(View.GONE);
+                mLoginPrs.setVisibility(View.GONE);
                 if (errorCode == YWLoginCode.LOGON_FAIL_INVALIDUSER || errorCode == YWLoginCode.LOGON_FAIL_INVALIDPWD
                         || errorCode == YWLoginCode.LOGON_FAIL_EMPTY_ACCOUNT || errorCode == YWLoginCode.LOGON_FAIL_EMPTY_PWD
-                        || errorCode == YWLoginCode.LOGON_FAIL_INVALIDSERVER || TextUtils.isEmpty(userIdView.getText().toString())
-                        || TextUtils.isEmpty(passwordView.getText().toString())) {
+                        || errorCode == YWLoginCode.LOGON_FAIL_INVALIDSERVER || TextUtils.isEmpty(mAccountET.getText().toString())
+                        || TextUtils.isEmpty(mPasswordET.getText().toString())) {
                     showDialog(GUEST);
                 } else {
-                    loginButton.setClickable(true);
+                    mLoginBtn.setClickable(true);
                     YWLog.w(TAG, "登录失败 错误码：" + errorCode + "  错误信息：" + errorMessage);
                     Toast.makeText(LoginActivity.this, errorMessage, Toast.LENGTH_SHORT).show();
                 }
@@ -432,10 +456,6 @@ public class LoginActivity extends AbsSwipeBackActivity {
 
     }
 
-    @Override
-    protected int getContentViewID() {
-        return R.layout.activity_login;
-    }
 
     @Override
     protected boolean isApplyStatusBarTranslucency() {
@@ -454,13 +474,13 @@ public class LoginActivity extends AbsSwipeBackActivity {
 
     private void handleAutoLoginState(int loginState) {
         if (loginState == YWLoginState.logining.getValue()) {
-            if (progressBar.getVisibility() != View.VISIBLE) {
-                progressBar.setVisibility(View.VISIBLE);
+            if (mLoginPrs.getVisibility() != View.VISIBLE) {
+                mLoginPrs.setVisibility(View.VISIBLE);
             }
-            loginButton.setClickable(false);
+            mLoginBtn.setClickable(false);
         } else if (loginState == YWLoginState.success.getValue()) {
-            loginButton.setClickable(true);
-            progressBar.setVisibility(View.GONE);
+            mLoginBtn.setClickable(true);
+            mLoginPrs.setVisibility(View.GONE);
             //TODO modify code here 2 lines
 //            Intent intent = new Intent(LoginActivity.this, FragmentTabs.class);
 //            LoginActivity.this.startActivity(intent);
@@ -469,26 +489,27 @@ public class LoginActivity extends AbsSwipeBackActivity {
 //            Intent intent = new Intent(LoginActivity.this, UserProfileActivity.class);
 //            LoginActivity.this.startActivity(intent);
 
-            LoginActivity.this.finish();
+//            LoginActivity.this.finish();
         } else {
             YWIMKit ywimKit = LoginSampleHelper.getInstance().getIMKit();
             if (ywimKit != null) {
                 if (ywimKit.getIMCore().getLoginState() == YWLoginState.success) {
-                    loginButton.setClickable(true);
-                    progressBar.setVisibility(View.GONE);
+                    mLoginBtn.setClickable(true);
+                    mLoginPrs.setVisibility(View.GONE);
                     //TODO modify code here 2 lines
 //                    Intent intent = new Intent(LoginActivity.this, FragmentTabs.class);
 //                    LoginActivity.this.startActivity(intent);
 
 //                    Intent intent = new Intent(LoginActivity.this, UserProfileActivity.class);
 //                    LoginActivity.this.startActivity(intent);
-                    LoginActivity.this.finish();
+
+//                    LoginActivity.this.finish();
                     return;
                 }
             }
             //当作失败处理
-            progressBar.setVisibility(View.GONE);
-            loginButton.setClickable(true);
+            mLoginPrs.setVisibility(View.GONE);
+            mLoginBtn.setClickable(true);
         }
     }
 
@@ -553,5 +574,40 @@ public class LoginActivity extends AbsSwipeBackActivity {
                             }).create();
         }
         dialog.show();
+    }
+
+    @Override
+    public void onLoginStateGet() {
+
+    }
+
+    @Override
+    public void showLoading(String msg) {
+
+    }
+
+    @Override
+    public void hideLoading() {
+
+    }
+
+    @Override
+    public void showError(String msg, View.OnClickListener onClickListener) {
+
+    }
+
+    @Override
+    public void showEmpty(String msg, View.OnClickListener onClickListener) {
+
+    }
+
+    @Override
+    public void showEmpty(String msg, View.OnClickListener onClickListener, int imageId) {
+
+    }
+
+    @Override
+    public void showNetError(View.OnClickListener onClickListener) {
+
     }
 }

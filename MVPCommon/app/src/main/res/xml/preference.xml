@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory
-        android:title="存储"
-        android:key="pref_key_storage_settings">
-        <CheckBoxPreference
-            android:key="pref_key_auto_delete"
-            android:summary="当聊天列表达到一定数量后进行清空操作"
-            android:title="删除聊天列表"
-            android:defaultValue="false"/>
-        <Preference
-            android:key="pref_key_sms_delete_limit"
-            android:dependency="pref_key_auto_delete"
-            android:summary="达到50条"
-            android:title="列表限制" />
 
-    </PreferenceCategory>
+        <CheckBoxPreference
+            android:key="pref_key_wifi_loading_img"
+            android:summary="只有当应用处于wifi下才会加载图片"
+            android:title="wifi下加载图片"
+            android:defaultValue="false"/>
+
+
 </PreferenceScreen>

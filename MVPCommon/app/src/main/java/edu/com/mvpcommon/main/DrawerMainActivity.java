@@ -38,7 +38,7 @@ import edu.com.mvplibrary.util.ToastUtils;
  * &{@link DrawerMainActivity}---------View
  * &{@link DrawerData}------------Model
  */
-public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainContract.View, View.OnClickListener {
+public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainContract.View{
     @Bind(R.id.user_img)
     CircleImageView mUserImg;//user icon
     @Bind(R.id.user_name)
@@ -53,6 +53,7 @@ public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainCon
     FrameLayout mHomeView;//当前的整个view
     @Bind(R.id.left_menu)
     ListView mDrawerMenu;
+
     private DrawerMainPresenter mPresenter;//主页面的Presenter
     private static DrawerLayout mDrawerLayout;//整个抽屉布局
 
@@ -207,16 +208,16 @@ public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainCon
         mPresenter.start();
     }
 
-    @Override
-    public void onClick(View v) {
-        if (v.getId() == R.id.user_img) {
-            mPresenter.getSelectView(0);
-        }
-    }
-
-
-//    @OnClick(R.id.user_img)
-//    public void onClick() {
-//        mPresenter.getSelectView(0);
+//    @Override
+//    public void onClick(View v) {
+//        if (v.getId() == R.id.user_img) {
+//            mPresenter.getSelectView(0);
+//        }
 //    }
+
+
+    @OnClick(R.id.user_img)
+    public void onClick() {
+        mPresenter.getSelectView(0);
+    }
 }
