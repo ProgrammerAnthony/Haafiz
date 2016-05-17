@@ -2,23 +2,22 @@ package edu.com.mvpcommon;
 
 import android.view.View;
 
+import edu.com.mvplibrary.model.Channel;
+import edu.com.mvplibrary.ui.activity.AbsSplashActivity;
 import edu.com.mvplibrary.ui.activity.AbsSwipeBackActivity;
+import edu.com.mvplibrary.ui.widget.ViewDisplay;
 
 /**
  * Created by Anthony on 2016/5/10.
  * Class Note:
  */
-public class SplashActivity extends AbsSwipeBackActivity{
+public class SplashActivity extends AbsSplashActivity{
 
 
     @Override
-    protected View getLoadingTargetView() {
-        return null;
-    }
-
-    @Override
-    protected void initViewsAndEvents() {
-
+    protected String getFirstUrl() {
+        //// TODO: 2016/5/17  url
+        return "file://xxx";
     }
 
     @Override
@@ -27,9 +26,9 @@ public class SplashActivity extends AbsSwipeBackActivity{
     }
 
     @Override
-    protected boolean isApplyStatusBarTranslucency() {
-        return false;
+    protected void showMain() {
+        Channel channel = new Channel();
+        channel.setType("1002");
+        ViewDisplay.initialView(mContext, channel);
     }
-
-
 }

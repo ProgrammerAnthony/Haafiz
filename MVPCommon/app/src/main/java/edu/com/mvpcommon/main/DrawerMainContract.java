@@ -35,7 +35,7 @@ public interface DrawerMainContract {
 
         void setDrawerIcon(String url);
 
-        void onSelectFragmentGet(Fragment fragment);
+        void onSelectFragmentGet(Fragment fragment,int position);
 
 
     }

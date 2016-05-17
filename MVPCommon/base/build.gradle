@@ -57,6 +57,10 @@ dependencies {
     //design library
     compile 'com.android.support:design:23.4.0'
     compile 'com.github.chrisbanes.photoview:library:1.2.4'
+    //RxAndroid
+//    compile 'io.reactivex:rxandroid:1.2.0'
+    //RxJava
+//    compile 'io.reactivex:rxjava:1.1.5'
     compile project(':openimSDK')
     compile project(':pagerslidingtabstrip')
     compile project(':pulltorefreshhandmark')

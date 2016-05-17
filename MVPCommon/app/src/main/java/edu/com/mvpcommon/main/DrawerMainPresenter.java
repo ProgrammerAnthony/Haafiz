@@ -21,7 +21,6 @@ public class DrawerMainPresenter implements DrawerMainContract.Presenter, Drawer
     private DrawerMainContract.View mView;
     private Context mContext;
     private DrawerData mData;
-    private int currentPos;
 
 
     public DrawerMainPresenter(DrawerMainContract.View mView, Context mContext) {
@@ -46,12 +45,10 @@ public class DrawerMainPresenter implements DrawerMainContract.Presenter, Drawer
         mData.initItemsData();
     }
 
+
     @Override
     public void getSelectView(int position) {
-        if (currentPos == position) {
-            DrawerMainActivity.closeDrawer();
-            return;
-        }
+
         Channel mChannel = new Channel();
         switch (position) {
             case 0:
@@ -73,10 +70,10 @@ public class DrawerMainPresenter implements DrawerMainContract.Presenter, Drawer
                 mChannel.setType("1005");//SettingsActivity
                 break;
         }
-        currentPos = position;
+
         Fragment fragment = ViewDisplay.initialView(mContext, mChannel);
         if (fragment != null) {
-            mView.onSelectFragmentGet(fragment);
+            mView.onSelectFragmentGet(fragment, position);
         }
 
 

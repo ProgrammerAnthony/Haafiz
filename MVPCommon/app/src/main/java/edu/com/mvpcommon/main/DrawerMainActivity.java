@@ -1,6 +1,5 @@
 package edu.com.mvpcommon.main;
 
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
@@ -16,7 +15,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import edu.com.mvpcommon.R;
 import edu.com.mvplibrary.ui.activity.AbsBaseActivity;
@@ -38,7 +36,7 @@ import edu.com.mvplibrary.util.ToastUtils;
  * &{@link DrawerMainActivity}---------View
  * &{@link DrawerData}------------Model
  */
-public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainContract.View{
+public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainContract.View {
     @Bind(R.id.user_img)
     CircleImageView mUserImg;//user icon
     @Bind(R.id.user_name)
@@ -56,7 +54,7 @@ public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainCon
 
     private DrawerMainPresenter mPresenter;//主页面的Presenter
     private static DrawerLayout mDrawerLayout;//整个抽屉布局
-
+    private int curFragmentPos = -1;//当前的fragment位置(放置fragment的多次创建)
 
     @Override
     protected int getContentViewID() {
@@ -84,6 +82,7 @@ public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainCon
         mPresenter.getDrawerData();
         //default select first fragment
         mPresenter.getSelectView(1);//chattingListFragment
+        curFragmentPos = -1;
     }
 
     protected void setToolBar() {
@@ -136,6 +135,7 @@ public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainCon
                         DrawerData.DrawerItem drawerItem = mDrawerItems.get(i);
                         if (drawerItem != null) {
                             mPresenter.getSelectView(i + 1);
+                            curFragmentPos = i + 1;
                         }
                     }
                 }
@@ -152,11 +152,16 @@ public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainCon
     }
 
     @Override
-    public void onSelectFragmentGet(Fragment fragment) {
-        closeDrawer();
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.center_layout, fragment).commit();
+    public void onSelectFragmentGet(Fragment fragment, int position) {
+        if (curFragmentPos == position) {
+            closeDrawer();
+        } else {
+            closeDrawer();
+            curFragmentPos = position;
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction()
+                    .replace(R.id.center_layout, fragment).commit();
+        }
 
     }
 
