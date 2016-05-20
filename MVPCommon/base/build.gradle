@@ -1,14 +1,15 @@
 apply plugin: 'com.android.library'
+def cfg = rootProject.ext.configuration
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    compileSdkVersion cfg.compileSdkVersion
+    buildToolsVersion cfg.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion cfg.minSdkVersion
+        targetSdkVersion cfg.targetSdkVersion
+        versionCode cfg.versionCode
+        versionName cfg.versionName
     }
     buildTypes {
         release {
@@ -27,6 +28,8 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:23.4.0'
     //adapter
     compile 'com.joanzapata.android:base-adapter-helper:1.1.11'
+    //alert dialog
+//    compile 'cn.pedant.sweetalert:library:1.3'
     //squareup
     //beautiful log utils
     compile 'com.orhanobut:logger:1.11'
@@ -57,6 +60,7 @@ dependencies {
     //design library
     compile 'com.android.support:design:23.4.0'
     compile 'com.github.chrisbanes.photoview:library:1.2.4'
+
     //RxAndroid
 //    compile 'io.reactivex:rxandroid:1.2.0'
     //RxJava

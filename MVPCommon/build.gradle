@@ -12,9 +12,26 @@ buildscript {
     }
 }
 
+ext {
+    configuration = [
+            applicationId       : "edu.com.mvpcommon",
+            buildToolsVersion   : "23.0.3",
+            compileSdkVersion   : 23,
+            minSdkVersion       : 16,
+            targetSdkVersion    : 23,
+            versionCode         : 20160520,
+            versionName         : "1.0",
+
+    ]
+
+}
 allprojects {
     repositories {
         jcenter()
+        maven { url "https://raw.githubusercontent.com/umeng/mvn-repo-umeng/master/repository" }
+        maven { url "http://dl.bintray.com/tbruyelle/tbruyelle" }
+        maven { url "https://jitpack.io" }
+
     }
 }
 

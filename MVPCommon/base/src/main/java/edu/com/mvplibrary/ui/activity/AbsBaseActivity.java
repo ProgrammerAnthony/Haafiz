@@ -55,6 +55,8 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
      */
     private VaryViewHelperController mVaryViewHelperController = null;
 
+//    private SweetAlertDialog mProgressdialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
