@@ -1,4 +1,4 @@
-include ':app', ':base', ':viewpagerindicator', ':slidingmenu', ':pagerslidingtabstrip', ':pulltorefreshhandmark', ':ultraptrwithloadmore', ':openimSDK'
+include ':app', ':base', ':viewpagerindicator', ':slidingmenu', ':pagerslidingtabstrip', ':pulltorefreshhandmark', ':ultraptrwithloadmore', ':openimSDK','sweetDialog'
 
 project(':viewpagerindicator').projectDir = new File('ThirdPart/viewpagerindicator')
 project(':slidingmenu').projectDir = new File('ThirdPart/slidingmenu')
@@ -6,3 +6,4 @@ project(':pagerslidingtabstrip').projectDir = new File('ThirdPart/pagerslidingta
 project(':pulltorefreshhandmark').projectDir = new File('ThirdPart/pulltorefreshhandmark')
 project(':ultraptrwithloadmore').projectDir = new File('ThirdPart/ultraptrwithloadmore')
 project(':openimSDK').projectDir = new File('ThirdPart/openimSDK')
+project(':sweetDialog').projectDir =new File('ThirdPart/sweetDialog')

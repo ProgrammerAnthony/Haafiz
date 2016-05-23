@@ -2,8 +2,8 @@ apply plugin: 'com.android.library'
 def cfg = rootProject.ext.configuration
 
 android {
-    compileSdkVersion cfg.compileSdkVersion
-    buildToolsVersion cfg.buildToolsVersion
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
 
     defaultConfig {
         minSdkVersion cfg.minSdkVersion
@@ -22,20 +22,22 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
+    //appcompat
+    compile 'com.android.support:appcompat-v7:23.4.0'
     //v4
     compile 'com.android.support:support-v4:23.4.0'
     //recyclerView
     compile 'com.android.support:recyclerview-v7:23.4.0'
+    //design library
+    compile 'com.android.support:design:23.4.0'
     //adapter
     compile 'com.joanzapata.android:base-adapter-helper:1.1.11'
-    //alert dialog
-//    compile 'cn.pedant.sweetalert:library:1.3'
-    //squareup
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v1.7.0'
     //beautiful log utils
     compile 'com.orhanobut:logger:1.11'
-    //system bar tint change util
-    //NiftyDialog
+    //nine old android
     compile 'com.nineoldandroids:library:2.4.0'
+    //NiftyDialog
     compile 'com.github.sd6352051.niftydialogeffects:niftydialogeffects:1.0.0@aar'
     //Material Design Progress Bar
     compile 'com.pnikosis:materialish-progress:1.7'
@@ -45,32 +47,70 @@ dependencies {
     compile 'com.baoyz.swipemenulistview:library:1.3.0'
     //umeng alalysis
     compile 'com.umeng.analytics:analytics:latest.integration'
-    //butterKnife annotation
-    //    compile 'com.jakewharton:butterknife:8.0.1'
+    //butterKnife annotation(todo new is 8.0.1,but not support Zelezny)
     compile 'com.jakewharton:butterknife:7.0.1'
-    //beautiful log utils
-    //system bar tint change util
     //beautiful loading view
     compile 'com.wang.avi:library:1.0.1'
-    //okhttp
-    //    compile 'com.squareup.okhttp3:okhttp:3.2.0'
-    //appcompat
-    compile 'com.android.support:appcompat-v7:23.4.0'
+    //about page util
     compile 'com.github.medyo:android-about-page:1.0.8'
-    //design library
-    compile 'com.android.support:design:23.4.0'
+    //photoview
     compile 'com.github.chrisbanes.photoview:library:1.2.4'
-
     //RxAndroid
-//    compile 'io.reactivex:rxandroid:1.2.0'
+    compile 'io.reactivex:rxandroid:1.2.0'
     //RxJava
-//    compile 'io.reactivex:rxjava:1.1.5'
+    compile 'io.reactivex:rxjava:1.1.5'
+    //RxPermission
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.7.0@aar'
+    //likeButton
+    compile 'com.github.jd-alexander:LikeButton:0.2.0'
+    //material login view
+    compile 'com.github.shem8:material-login:1.4.0'
+    //shimmer
+    compile 'com.facebook.shimmer:shimmer:0.1.0@aar'
+    //okhttp
+
+    //compile 'com.squareup.okhttp3:okhttp:3.2.0'
+
+    //Library for picking pictures from gallery or camera
+    compile 'com.github.jkwiecien:EasyImage:1.2.3'
+    //img crop library
+    compile 'com.yalantis:ucrop:1.5.0'
+    //blurry library
+    compile 'jp.wasabeef:blurry:2.0.2'
+    //recyclerview animation
+    compile 'jp.wasabeef:recyclerview-animators:2.2.3'
+    //Material progress circle around any FloatingActionButton.
+    compile 'com.github.jorgecastilloprz:fabprogresscircle:1.01@aar'
+    //leakcanary
+
+    //    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+
+    //    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+
+    //    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+
+    // or 1.4-beta1
+
+    //dagger2
+
+    //    apt 'com.google.dagger:dagger-compiler:2.0.2'
+
+    //指定注解处理器
+
+    //    compile 'com.google.dagger:dagger:2.0.2'
+
+    //dagger公用api
+
+    //    provided 'org.glassfish:javax.annotation:10.0-b28'
+
+    //添加android缺失的部分javax注解
     compile project(':openimSDK')
     compile project(':pagerslidingtabstrip')
     compile project(':pulltorefreshhandmark')
     compile project(':slidingmenu')
     compile project(':ultraptrwithloadmore')
     compile project(':viewpagerindicator')
+    compile project(':sweetDialog')
     compile files('libs/okhttp-2.7.0.jar')
     compile files('libs/okhttputils-2_3_4.jar')
 }

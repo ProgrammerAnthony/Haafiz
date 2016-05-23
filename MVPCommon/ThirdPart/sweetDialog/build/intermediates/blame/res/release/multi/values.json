@@ -1,0 +1,581 @@
+[
+    {
+        "outputFile": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\release\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 51,
+                    "endOffset": 102
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 336,
+                        "endColumn": 51,
+                        "endOffset": 383
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 107,
+                    "endColumn": 59,
+                    "endOffset": 162
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 389,
+                        "endColumn": 59,
+                        "endOffset": 444
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 167,
+                    "endColumn": 51,
+                    "endOffset": 214
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 169,
+                        "endColumn": 51,
+                        "endOffset": 216
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 219,
+                    "endColumn": 52,
+                    "endOffset": 267
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 562,
+                        "endColumn": 52,
+                        "endOffset": 610
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 272,
+                    "endColumn": 53,
+                    "endOffset": 321
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 53,
+                        "endOffset": 106
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 326,
+                    "endColumn": 51,
+                    "endOffset": 373
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 222,
+                        "endColumn": 51,
+                        "endOffset": 269
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 378,
+                    "endColumn": 59,
+                    "endOffset": 433
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 275,
+                        "endColumn": 59,
+                        "endOffset": 330
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 438,
+                    "endColumn": 57,
+                    "endOffset": 491
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 838,
+                        "endColumn": 57,
+                        "endOffset": 891
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 496,
+                    "endColumn": 57,
+                    "endOffset": 549
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 897,
+                        "endColumn": 57,
+                        "endOffset": 950
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 554,
+                    "endColumn": 57,
+                    "endOffset": 607
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 956,
+                        "endColumn": 57,
+                        "endOffset": 1009
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 612,
+                    "endColumn": 57,
+                    "endOffset": 665
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1015,
+                        "endColumn": 57,
+                        "endOffset": 1068
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 670,
+                    "endColumn": 57,
+                    "endOffset": 723
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1074,
+                        "endColumn": 57,
+                        "endOffset": 1127
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 728,
+                    "endColumn": 50,
+                    "endOffset": 774
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 450,
+                        "endColumn": 50,
+                        "endOffset": 496
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 779,
+                    "endColumn": 58,
+                    "endOffset": 833
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 502,
+                        "endColumn": 58,
+                        "endOffset": 556
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 838,
+                    "endColumn": 54,
+                    "endOffset": 888
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 616,
+                        "endColumn": 54,
+                        "endOffset": 666
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 893,
+                    "endColumn": 55,
+                    "endOffset": 944
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 112,
+                        "endColumn": 55,
+                        "endOffset": 163
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 949,
+                    "endColumn": 44,
+                    "endOffset": 989
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 792,
+                        "endColumn": 44,
+                        "endOffset": 832
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 994,
+                    "endColumn": 62,
+                    "endOffset": 1052
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 672,
+                        "endColumn": 62,
+                        "endOffset": 730
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1057,
+                    "endColumn": 54,
+                    "endOffset": 1107
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 736,
+                        "endColumn": 54,
+                        "endOffset": 786
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2031,
+                    "endColumn": 43,
+                    "endOffset": 2070
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\dimen.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 43,
+                        "endOffset": 96
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2075,
+                    "endColumn": 49,
+                    "endOffset": 2120
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\dimen.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 102,
+                        "endColumn": 49,
+                        "endOffset": 147
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2125,
+                    "endColumn": 53,
+                    "endOffset": 2174
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\dimen.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 153,
+                        "endColumn": 53,
+                        "endOffset": 202
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 2179,
+                    "endColumn": 46,
+                    "endOffset": 2221
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 273,
+                        "endColumn": 46,
+                        "endOffset": 315
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 2226,
+                    "endColumn": 53,
+                    "endOffset": 2275
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 53,
+                        "endOffset": 106
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 2280,
+                    "endColumn": 68,
+                    "endOffset": 2344
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\exploded-aar\\com.pnikosis\\materialish-progress\\1.7\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 819,
+                        "endColumn": 68,
+                        "endOffset": 883
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 2349,
+                    "endColumn": 48,
+                    "endOffset": 2393
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 223,
+                        "endColumn": 48,
+                        "endOffset": 267
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 2398,
+                    "endColumn": 67,
+                    "endOffset": 2461
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 112,
+                        "endColumn": 67,
+                        "endOffset": 175
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 2466,
+                    "endColumn": 40,
+                    "endOffset": 2502
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 181,
+                        "endColumn": 40,
+                        "endOffset": 217
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 2507,
+                    "endLine": 41,
+                    "endColumn": 12,
+                    "endOffset": 3074
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endLine": 11,
+                        "endColumn": 12,
+                        "endOffset": 633
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 3079,
+                    "endLine": 50,
+                    "endColumn": 12,
+                    "endOffset": 3581
+                },
+                "from": {
+                    "file": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 641,
+                        "endLine": 21,
+                        "endColumn": 12,
+                        "endOffset": 1151
+                    }
+                }
+            }
+        ]
+    }
+]
