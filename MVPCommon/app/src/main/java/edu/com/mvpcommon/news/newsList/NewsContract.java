@@ -2,8 +2,8 @@ package edu.com.mvpcommon.news.newsList;
 
 import java.util.ArrayList;
 
-import edu.com.mvplibrary.model.Channel;
-import edu.com.mvplibrary.model.News;
+import edu.com.mvplibrary.model.bean.Channel;
+import edu.com.mvplibrary.model.bean.News;
 import edu.com.mvplibrary.presenter.BasePresenter;
 import edu.com.mvplibrary.ui.BaseView;
 

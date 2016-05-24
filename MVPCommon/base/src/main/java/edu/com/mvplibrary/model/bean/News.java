@@ -1,4 +1,4 @@
-package edu.com.mvplibrary.model;
+package edu.com.mvplibrary.model.bean;
 
 /**
  * Created by Anthony on 2016/3/4.

@@ -1,10 +1,7 @@
 package edu.com.mvpcommon;
 
-import android.view.View;
-
-import edu.com.mvplibrary.model.Channel;
+import edu.com.mvplibrary.model.bean.Channel;
 import edu.com.mvplibrary.ui.activity.AbsSplashActivity;
-import edu.com.mvplibrary.ui.activity.AbsSwipeBackActivity;
 import edu.com.mvplibrary.ui.widget.ViewDisplay;
 
 /**

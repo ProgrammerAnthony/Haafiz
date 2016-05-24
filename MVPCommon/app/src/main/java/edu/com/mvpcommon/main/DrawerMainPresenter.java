@@ -4,7 +4,7 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.view.View;
 
-import edu.com.mvplibrary.model.Channel;
+import edu.com.mvplibrary.model.bean.Channel;
 import edu.com.mvplibrary.ui.widget.ViewDisplay;
 import edu.com.mvplibrary.util.ToastUtils;
 

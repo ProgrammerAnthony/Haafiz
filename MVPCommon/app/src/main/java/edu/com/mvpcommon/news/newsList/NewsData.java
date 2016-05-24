@@ -8,7 +8,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import edu.com.mvplibrary.model.Channel;
+import edu.com.mvplibrary.model.bean.Channel;
 import edu.com.mvplibrary.model.config.Constants;
 import edu.com.mvplibrary.model.http.HttpUtil;
 import edu.com.mvplibrary.model.http.callback.StringHttpCallback;

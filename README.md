@@ -65,14 +65,88 @@ BaseActivity 和BaseFragment 初始化大多数操作。
 11 LoginActivity to login in OpenIMSDK with one key
 
 新增LoginActivity，一键登录
-Open Source used
+Development environment & Libraries
 -------
-to edit
+>toEdit !!!!  in progress!!!!
+##### 1 MVP
+MVP design from google example
 
+和google官网类似的MVP设计
+##### 2 Materil Design
+##### 3 Dagger2
+##### 4 Realm
+project's build.gradle 
+
+	dependencies {
+        classpath "io.realm:realm-gradle-plugin:0.91.0"
+    }
+application levele build.gradle
+
+	apply plugin: 'realm-android'
+##### 5 RxJava,RxAndroid
+    //RxAndroid
+    compile 'io.reactivex:rxandroid:1.2.0'
+    //RxJava
+    compile 'io.reactivex:rxjava:1.1.5'
+    //RxPermission
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.7.0@aar'
+##### 6 easemob(环信)
+##### 7 LeanCloud
+##### 8 BaseRecyclerViewAdapterHelper
+	compile com.github.CymChad:BaseRecyclerViewAdapterHelper:v1.7.0
+##### 9 Logger
+	compile 'com.orhanobut:logger:1.11'
+##### 10 materialish-progress
+	compile 'com.pnikosis:materialish-progress:1.7'
+##### 11 Glide
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+##### 12 swipemenulistview
+    compile 'com.baoyz.swipemenulistview:library:1.3.0'
+##### 13 umeng alalysis
+    compile 'com.umeng.analytics:analytics:latest.integration'
+##### 14 ButterKnife(todo new is 8.0.1,but not support Zelezny,so using 7.0.1)
+    compile 'com.jakewharton:butterknife:7.0.1'
+##### 15 beautiful loading view
+    compile 'com.wang.avi:library:1.0.1'
+##### 16 about page util
+    compile 'com.github.medyo:android-about-page:1.0.8'
+##### 17 photoview
+    compile 'com.github.chrisbanes.photoview:library:1.2.4'
+##### 18 likeButton
+    compile 'com.github.jd-alexander:LikeButton:0.2.0'
+##### 19 Materil-login view
+    compile 'com.github.shem8:material-login:1.4.0'
+##### 20 shimmer
+    compile 'com.facebook.shimmer:shimmer:0.1.0@aar'
+##### 21 okHttp
+	compile 'com.squareup.okhttp3:okhttp:3.2.0'
+##### 22 EasyImage
+    //Library for picking pictures from gallery or camera
+    compile 'com.github.jkwiecien:EasyImage:1.2.3'
+##### 23 ucrop
+    //img crop library
+    compile 'com.yalantis:ucrop:1.5.0'
+##### 24 blurry
+    compile 'jp.wasabeef:blurry:2.0.2'
+##### 25 recyclerview animation
+    compile 'jp.wasabeef:recyclerview-animators:2.2.3'
+##### 26 fabprogresscircle
+    //Material progress circle around any FloatingActionButton.
+    compile 'com.github.jorgecastilloprz:fabprogresscircle:1.01@aar'
+##### 27 others
+    compile project(':openimSDK')
+    compile project(':pagerslidingtabstrip')
+    compile project(':pulltorefreshhandmark')
+    compile project(':slidingmenu')
+    compile project(':ultraptrwithloadmore')
+    compile project(':viewpagerindicator')
+    compile project(':sweetDialog')
+    compile files('libs/okhttp-2.7.0.jar')
+    compile files('libs/okhttputils-2_3_4.jar')
 
 Download
 --------
-![](data:image/png;base64,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)
+![](http://upload-images.jianshu.io/upload_images/1833901-f02604a7325a2b19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 扫描二维码下载
 或用手机浏览器输入这个网址: http://fir.im/j6nb

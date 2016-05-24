@@ -5,7 +5,6 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.astuetz.PagerSlidingTabStrip;
@@ -17,8 +16,8 @@ import butterknife.OnClick;
 import edu.com.mvpcommon.R;
 import edu.com.mvpcommon.main.DrawerMainActivity;
 
-import edu.com.mvplibrary.model.Channel;
-import edu.com.mvplibrary.model.News;
+import edu.com.mvplibrary.model.bean.Channel;
+import edu.com.mvplibrary.model.bean.News;
 import edu.com.mvplibrary.ui.fragment.AbsTitleFragment;
 import edu.com.mvplibrary.util.AppUtils;
 

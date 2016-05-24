@@ -11,7 +11,7 @@ import android.util.Log;
 import java.util.HashMap;
 
 import edu.com.mvplibrary.AbsApplication;
-import edu.com.mvplibrary.model.Channel;
+import edu.com.mvplibrary.model.bean.Channel;
 import edu.com.mvplibrary.model.config.Constants;
 import edu.com.mvplibrary.ui.fragment.AbsBaseFragment;
 import edu.com.mvplibrary.util.FileUtil2;

@@ -1,17 +1,11 @@
 package edu.com.mvplibrary.ui.activity;
 
 import android.os.AsyncTask;
-import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 
-import org.json.JSONException;
-
-import edu.com.mvplibrary.model.Channel;
 import edu.com.mvplibrary.model.http.HttpUtil;
 import edu.com.mvplibrary.model.http.callback.StringHttpCallback;
 import edu.com.mvplibrary.model.http.request.HttpRequest;
-import edu.com.mvplibrary.ui.widget.ViewDisplay;
 import edu.com.mvplibrary.util.ToastUtils;
 
 /**

@@ -1,4 +1,4 @@
-package edu.com.mvplibrary.model;
+package edu.com.mvplibrary.model.bean;
 
 
 
