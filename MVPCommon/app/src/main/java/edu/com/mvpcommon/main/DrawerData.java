@@ -19,10 +19,10 @@ public class DrawerData {
     private String[] mMenuTitles;
     private TypedArray mMenuIconsTypeArray;
     private TypedArray mMenuIconTintTypeArray;
-    private DrawerMainContract.onGetDrawerListListener mListener;
+    private MainContract.onGetDrawerListListener mListener;
     public String headIconUrl;
 
-    public DrawerData(Context context, DrawerMainContract.onGetDrawerListListener listener) {
+    public DrawerData(Context context, MainContract.onGetDrawerListListener listener) {
         this.mContext = context;
         this.mListener = listener;
         //drawer items

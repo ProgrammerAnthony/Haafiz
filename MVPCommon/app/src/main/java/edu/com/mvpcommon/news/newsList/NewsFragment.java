@@ -13,11 +13,12 @@ import java.util.ArrayList;
 
 import butterknife.Bind;
 import butterknife.OnClick;
+import cn.pedant.SweetAlert.SweetAlertDialog;
 import edu.com.mvpcommon.R;
-import edu.com.mvpcommon.main.DrawerMainActivity;
+import edu.com.mvpcommon.main.MainActivity;
 
 import edu.com.mvplibrary.model.bean.Channel;
-import edu.com.mvplibrary.model.bean.News;
+
 import edu.com.mvplibrary.ui.fragment.AbsTitleFragment;
 import edu.com.mvplibrary.util.AppUtils;
 
@@ -50,8 +51,8 @@ public class NewsFragment extends AbsTitleFragment implements NewsContract.View 
 
     @OnClick(R.id.title_image_left)
     public void openDrawer(){
-        if (mContext instanceof DrawerMainActivity) {
-            DrawerMainActivity.openDrawer();
+        if (mContext instanceof MainActivity) {
+            MainActivity.openDrawer();
         }
     }
 
@@ -99,15 +100,10 @@ public class NewsFragment extends AbsTitleFragment implements NewsContract.View 
 
 
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        mPresenter.start();
-    }
-
     protected void loadData() {
         if (mPresenter == null)
-            mPresenter = new NewsPresenter(this, mContext);
+            mPresenter = new NewsPresenter( mContext);
+        mPresenter.attachView(this);
         mPresenter.getData("raw://news_channels");
 
     }
@@ -120,45 +116,41 @@ public class NewsFragment extends AbsTitleFragment implements NewsContract.View 
         mTabStrip.notifyDataSetChanged();
     }
 
-    @Override
-    public void loadMore(ArrayList<News> news) {
 
+    @Override
+    public void showMessage(String msg) {
+        showMessageDialog(msg);
     }
 
     @Override
-    public void refresh(ArrayList<News> news) {
-
-    }
-
-
-    @Override
-    public void showLoading(String msg) {
-        toggleShowLoading(true, msg);
+    public void close() {
+//        finish();
     }
 
     @Override
-    public void hideLoading() {
-        toggleShowLoading(false, "");
+    public void showProgress(String message) {
+        showProgressDialog(message);
     }
 
     @Override
-    public void showError(String msg, View.OnClickListener onClickListener) {
-        toggleShowError(true, msg, onClickListener);
+    public void showProgress(String message, int progress) {
+        showProgressDialog(message, progress);
     }
 
     @Override
-    public void showEmpty(String msg, View.OnClickListener onClickListener) {
-        toggleShowEmpty(true, msg, onClickListener);
+    public void hideProgress() {
+        hideProgressDialog();
     }
 
     @Override
-    public void showEmpty(String msg, View.OnClickListener onClickListener, int imageId) {
-        toggleShowEmpty(true, msg, onClickListener, imageId);
+    public void showErrorMessage(String msg, String content) {
+        showErrorDialog(msg, content, new SweetAlertDialog.OnSweetClickListener() {
+            @Override
+            public void onClick(SweetAlertDialog sweetAlertDialog) {
+                sweetAlertDialog.dismissWithAnimation();
+            }
+        });
     }
 
-    @Override
-    public void showNetError(View.OnClickListener onClickListener) {
-        toggleNetworkError(true, onClickListener);
-    }
 
 }

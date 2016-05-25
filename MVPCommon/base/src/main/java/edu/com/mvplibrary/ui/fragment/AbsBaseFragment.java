@@ -11,10 +11,12 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import butterknife.ButterKnife;
+import cn.pedant.SweetAlert.SweetAlertDialog;
 import edu.com.mvplibrary.R;
 import edu.com.mvplibrary.ui.BaseView;
 import edu.com.mvplibrary.ui.widget.loading.VaryViewHelperController;
 import edu.com.mvplibrary.util.AppUtils;
+import edu.com.mvplibrary.util.ToastUtils;
 
 //import butterknife.ButterKnife;
 
@@ -41,16 +43,9 @@ public abstract class AbsBaseFragment extends Fragment {
      */
     protected Context mContext;
 
-    /**
-     * Screen information
-     */
-    protected int mScreenWidth = 0;
-    protected int mScreenHeight = 0;
-    protected float mScreenDensity = 0.0f;
-
-    private VaryViewHelperController mVaryViewHelperController = null;
-
-//    private View mTopBar; //common top bar
+    public SweetAlertDialog mProgressDialog;
+    public SweetAlertDialog mWarningDialog;
+    public SweetAlertDialog mErrorDialog;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -76,26 +71,9 @@ public abstract class AbsBaseFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
-
-        if (null != getLoadingTargetView()) {
-            mVaryViewHelperController = new VaryViewHelperController(getLoadingTargetView());
-        }
-
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-        getActivity().getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-
-        mScreenDensity = displayMetrics.density;
-        mScreenHeight = displayMetrics.heightPixels;
-        mScreenWidth = displayMetrics.widthPixels;
-
         initViewsAndEvents(view);
 
     }
-
-    /**
-     * add loading view to default view parent
-     */
-    protected abstract View getLoadingTargetView();
 
 
     @Override
@@ -105,29 +83,105 @@ public abstract class AbsBaseFragment extends Fragment {
     }
 
 
-
     public String getFragmentUrl() {
         return mUrl;
     }
 
 
-
-//
+    /**
+     * override this method to do operation in the fragment
+     */
+    protected abstract void initViewsAndEvents(View rootView);
 
 
     /**
-     * show toast
+     * override this method to return content view id of the fragment
      */
+    protected abstract int getContentViewID();
+
+    /**
+     * show Message in screen
+     */
+    protected void showMessageDialog(String msg) {
+        if (null != msg && !AppUtils.isEmpty(msg)) {
+//            Snackbar.make(this, msg, Snackbar.LENGTH_SHORT).show();
+            ToastUtils.getInstance().showToast(msg);
+        }
+    }
+
+    public void showWarningDialog(String title, String content, SweetAlertDialog.OnSweetClickListener listener) {
+        mWarningDialog = new SweetAlertDialog(mContext, SweetAlertDialog.WARNING_TYPE)
+                .setTitleText(title)
+                .setContentText(content)
+                .setConfirmText("确定")
+                .setCancelText("取消")
+                .setConfirmClickListener(listener);
+
+        mWarningDialog.show();
+    }
+
+    public void showErrorDialog(String title, String content, SweetAlertDialog.OnSweetClickListener listener) {
+        mErrorDialog = new SweetAlertDialog(mContext, SweetAlertDialog.ERROR_TYPE)
+                .setConfirmText("确定")
+                .setTitleText(title)
+                .setContentText(content)
+                .setConfirmClickListener(listener);
+        mErrorDialog.show();
+    }
+
+    public void showProgressDialog(String message) {
+        mProgressDialog = new SweetAlertDialog(mContext, SweetAlertDialog.PROGRESS_TYPE);
+        mProgressDialog.getProgressHelper().setBarColor(getResources().getColor(R.color.colorPrimary));
+        mProgressDialog.setTitleText(message);
+        mProgressDialog.setCancelable(false);
+        mProgressDialog.show();
+
+    }
+
+
+    public void showProgressDialog(String message, int progress) {
+        mProgressDialog = new SweetAlertDialog(mContext, SweetAlertDialog.PROGRESS_TYPE);
+        mProgressDialog.getProgressHelper().setBarColor(getResources().getColor(R.color.colorPrimary));
+        mProgressDialog.setTitleText(message);
+        mProgressDialog.setCancelable(false);
+        mProgressDialog.getProgressHelper().setProgress(progress);
+        mProgressDialog.show();
+    }
+
+    public void hideProgressDialog() {
+        if (mProgressDialog != null) {
+            mProgressDialog.dismiss();
+        }
+    }
+}
+
+
+/**
+ * show toast
+ * <p/>
+ * toggle show loading
+ * <p/>
+ * toggle show empty
+ * <p/>
+ * toggle show empty
+ * <p/>
+ * toggle show error
+ * <p/>
+ * toggle show network error
+ */
+/*
     protected void showToast(String msg) {
         if (null != msg && !AppUtils.isEmpty(msg)) {
 //            Snackbar.make(((Activity) mContext).getWindow().getDecorView(), msg, Snackbar.LENGTH_SHORT).show();
         }
     }
+*/
 
 
-    /**
-     * toggle show loading
-     */
+/**
+ * toggle show loading
+ */
+/*
     protected void toggleShowLoading(boolean toggle, String msg) {
         if (null == mVaryViewHelperController) {
             throw new IllegalArgumentException("You must return a right target view for loading");
@@ -138,11 +192,12 @@ public abstract class AbsBaseFragment extends Fragment {
             mVaryViewHelperController.restore();
         }
     }
+*/
 
-    /**
-     * toggle show empty
-     */
-    protected void toggleShowEmpty(boolean toggle, String msg, View.OnClickListener onClickListener) {
+/**
+ * toggle show empty
+ */
+/*    protected void toggleShowEmpty(boolean toggle, String msg, View.OnClickListener onClickListener) {
         if (null == mVaryViewHelperController) {
             throw new IllegalArgumentException("You must return a right target view for loading");
         }
@@ -152,12 +207,12 @@ public abstract class AbsBaseFragment extends Fragment {
         } else {
             mVaryViewHelperController.restore();
         }
-    }
+    }*/
 
-    /**
-     * toggle show empty
-     */
-    protected void toggleShowEmpty(boolean toggle, String msg, View.OnClickListener onClickListener, int img) {
+/**
+ * toggle show empty
+ */
+/*    protected void toggleShowEmpty(boolean toggle, String msg, View.OnClickListener onClickListener, int img) {
         if (null == mVaryViewHelperController) {
             throw new IllegalArgumentException("You must return a right target view for loading");
         }
@@ -167,12 +222,12 @@ public abstract class AbsBaseFragment extends Fragment {
         } else {
             mVaryViewHelperController.restore();
         }
-    }
+    }*/
 
-    /**
-     * toggle show error
-     */
-    protected void toggleShowError(boolean toggle, String msg, View.OnClickListener onClickListener) {
+/**
+ * toggle show error
+ */
+/*    protected void toggleShowError(boolean toggle, String msg, View.OnClickListener onClickListener) {
         if (null == mVaryViewHelperController) {
             throw new IllegalArgumentException("You must return a right target view for loading");
         }
@@ -182,11 +237,12 @@ public abstract class AbsBaseFragment extends Fragment {
         } else {
             mVaryViewHelperController.restore();
         }
-    }
+    }*/
 
-    /**
-     * toggle show network error
-     */
+/**
+ * toggle show network error
+ */
+/*
     protected void toggleNetworkError(boolean toggle, View.OnClickListener onClickListener) {
         if (null == mVaryViewHelperController) {
             throw new IllegalArgumentException("You must return a right target view for loading");
@@ -197,20 +253,4 @@ public abstract class AbsBaseFragment extends Fragment {
         } else {
             mVaryViewHelperController.restore();
         }
-    }
-
-//    protected int getTopBarViewID() {
-//        return R.layout.title_bar_common;
-//    }
-    /**
-     * override this method to do operation in the fragment
-     */
-    protected abstract void initViewsAndEvents(View rootView);
-
-
-    /**
-     * override this method to return content view id of the fragment
-     */
-    protected abstract int getContentViewID() ;
-
-}
+    }*/

@@ -34,7 +34,9 @@ public abstract class AbsTitleFragment extends AbsBaseFragment {
                     topLayout.addView(mTopBar, 0);
                 }
             } else {
-               topLayout.setVisibility(View.GONE); //no title to show
+                if (topLayout != null ) {
+                    topLayout.setVisibility(View.GONE); //no title to show
+                }
             }
 
             if (getCenterViewID() != 0) {
@@ -59,10 +61,6 @@ public abstract class AbsTitleFragment extends AbsBaseFragment {
         return R.layout.abs_fragment_title;
     }
 
-    @Override
-    protected View getLoadingTargetView() {
-        return centerLayout;
-    }
 
 
 

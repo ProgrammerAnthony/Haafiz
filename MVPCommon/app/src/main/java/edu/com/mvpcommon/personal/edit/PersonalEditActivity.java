@@ -12,10 +12,6 @@ import edu.com.mvplibrary.ui.activity.AbsSwipeBackActivity;
 public class PersonalEditActivity extends AbsSwipeBackActivity {
 
 
-    @Override
-    protected View getLoadingTargetView() {
-        return null;
-    }
 
     @Override
     protected void initViewsAndEvents() {
@@ -28,7 +24,7 @@ public class PersonalEditActivity extends AbsSwipeBackActivity {
     }
 
     @Override
-    protected boolean isApplyStatusBarTranslucency() {
-        return false;
+    protected void initDagger() {
+
     }
 }

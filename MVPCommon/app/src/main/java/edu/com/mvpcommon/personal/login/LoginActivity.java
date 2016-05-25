@@ -61,6 +61,7 @@ import edu.com.mvplibrary.util.LogUtil;
 import edu.com.mvplibrary.util.ToastUtils;
 
 /**
+ * @deprecated use {@link NewLoginActivity} instead
  * Created by Anthony on 2016/3/16.
  * Class Note:
  * login activity if current user did not login
@@ -119,13 +120,18 @@ public class LoginActivity extends AbsSwipeBackActivity implements LoginContract
     }
 
     @Override
+    protected void initDagger() {
+
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         loginHelper = LoginSampleHelper.getInstance();
         titleTxtCenter.setText("设置");
         titleTxtRight.setVisibility(View.GONE);
-        titleImageLeft.setImageResource(R.mipmap.ico_back);
+        titleImageLeft.setImageResource(R.drawable.ico_back);
 
         mAppkeyET.setVisibility(View.VISIBLE);
 
@@ -446,10 +452,6 @@ public class LoginActivity extends AbsSwipeBackActivity implements LoginContract
         myUnregisterReceiver();
     }
 
-    @Override
-    protected View getLoadingTargetView() {
-        return null;
-    }
 
     @Override
     protected void initViewsAndEvents() {
@@ -457,10 +459,6 @@ public class LoginActivity extends AbsSwipeBackActivity implements LoginContract
     }
 
 
-    @Override
-    protected boolean isApplyStatusBarTranslucency() {
-        return false;
-    }
 
     private void myRegisterReceiver() {
         IntentFilter filter = new IntentFilter();
@@ -576,38 +574,67 @@ public class LoginActivity extends AbsSwipeBackActivity implements LoginContract
         dialog.show();
     }
 
+
+
+
     @Override
-    public void onLoginStateGet() {
+    public void showMessage(String msg) {
 
     }
 
     @Override
-    public void showLoading(String msg) {
+    public void close() {
 
     }
 
     @Override
-    public void hideLoading() {
+    public void showProgress(String message) {
 
     }
 
     @Override
-    public void showError(String msg, View.OnClickListener onClickListener) {
+    public void showProgress(String message, int progress) {
 
     }
 
     @Override
-    public void showEmpty(String msg, View.OnClickListener onClickListener) {
+    public void hideProgress() {
 
     }
 
     @Override
-    public void showEmpty(String msg, View.OnClickListener onClickListener, int imageId) {
+    public void showErrorMessage(String msg, String content) {
+
+    }
+
+
+    @Override
+    public void toMainActivity() {
 
     }
 
     @Override
-    public void showNetError(View.OnClickListener onClickListener) {
+    public boolean isLoginViewShowing() {
+        return false;
+    }
+
+    @Override
+    public void showLoginView() {
+
+    }
+
+    @Override
+    public void dismissLoginView() {
+
+    }
+
+    @Override
+    public void hideLoginButton() {
+
+    }
+
+    @Override
+    public void showLoginButton() {
 
     }
 }

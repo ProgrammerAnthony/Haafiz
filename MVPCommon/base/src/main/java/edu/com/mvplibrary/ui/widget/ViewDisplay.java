@@ -29,7 +29,7 @@ public class ViewDisplay {
     private static HashMap<String, String> mTypeActivityNameMap = new HashMap<>();
     private static HashMap<String, String> mTypeFragmentNameMap = new HashMap<>();
 
-    public static void initialize(Context context) {
+    public static void init(Context context) {
         mTypeActivityNameMap.putAll(FileUtil2.simpleProperty2HashMap(context, Constants.BASE_TYPE_ACTIVITY_MAP_PATH));
 
         mTypeFragmentNameMap.putAll(FileUtil2.simpleProperty2HashMap(context, Constants.BASE_TYPE_FRAGMENT_MAP_PATH));

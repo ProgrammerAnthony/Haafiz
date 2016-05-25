@@ -2,31 +2,31 @@ package edu.com.mvpcommon.main;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
-import android.view.View;
 
 import edu.com.mvplibrary.model.bean.Channel;
+import edu.com.mvplibrary.ui.BaseView;
 import edu.com.mvplibrary.ui.widget.ViewDisplay;
 import edu.com.mvplibrary.util.ToastUtils;
 
 /**
  * Created by Anthony on 2016/5/3.
  * Class Note: Presenter in MVP
- * see {@link DrawerMainContract}--------Manager role of MVP
- * &{@link DrawerMainPresenter}------Presenter
- * &{@link DrawerMainActivity}-------------View
+ * see {@link MainContract}--------Manager role of MVP
+ * &{@link MainPresenter}------Presenter
+ * &{@link MainActivity}-------------View
  * &{@link DrawerData}-----------Model
  */
-public class DrawerMainPresenter implements DrawerMainContract.Presenter, DrawerMainContract.onGetDrawerListListener {
+public class MainPresenter implements MainContract.Presenter, MainContract.onGetDrawerListListener {
 
-    private DrawerMainContract.View mView;
+    private MainContract.View mView;
     private Context mContext;
     private DrawerData mData;
 
 
-    public DrawerMainPresenter(DrawerMainContract.View mView, Context mContext) {
+    public MainPresenter(Context mContext) {
         this.mContext = mContext;
 
-        this.mView = mView;
+//        this.mView = mView;
 //        mView.setPresenter(this);//bind presenter for View
 
         mData = new DrawerData(mContext, this);//bind data listener for Model
@@ -90,16 +90,23 @@ public class DrawerMainPresenter implements DrawerMainContract.Presenter, Drawer
     @Override
     public void onError() {
         // show error view
-        mView.showNetError(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+//        mView.showNetError(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//            }
+//        });
+        mView.showMessage("error");
+    }
 
-            }
-        });
+
+    @Override
+    public void attachView(BaseView view) {
+        mView = (MainContract.View) view;
     }
 
     @Override
-    public void start() {
+    public void detachView() {
 
     }
 }

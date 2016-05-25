@@ -19,7 +19,7 @@ import java.lang.reflect.Field;
 import butterknife.Bind;
 import butterknife.OnClick;
 import edu.com.mvpcommon.R;
-import edu.com.mvpcommon.main.DrawerMainActivity;
+import edu.com.mvpcommon.main.MainActivity;
 import edu.com.mvpcommon.nearby.radarScan.CustomViewPager;
 import edu.com.mvpcommon.nearby.radarScan.FixedSpeedScroller;
 import edu.com.mvpcommon.nearby.radarScan.Info;
@@ -58,8 +58,8 @@ public class NearByListFragment extends AbsTitleFragment  implements ViewPager.O
 
     @OnClick(R.id.title_image_left)
     public void openDrawer() {
-        if (mContext instanceof DrawerMainActivity) {
-            DrawerMainActivity.openDrawer();
+        if (mContext instanceof MainActivity) {
+            MainActivity.openDrawer();
         }
     }
 

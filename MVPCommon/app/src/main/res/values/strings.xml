@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MVPCommon</string>
+    <string name="app_name">约个球</string>
 
     <!--openIM-->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -42,4 +42,26 @@
     <string name="title_activity_contact_setting">ContactSettingActivity</string>
     <string name="title_activity_tribe_msg_rec_type_set">TribeMsgRecTypeSetActivity</string>
 
+
+    <string name="action_about">关于</string>
+    <string name="loginOrRegister">登陆/注册</string>
+    <string name="go">确定</string>
+    <string name="userName">用户名</string>
+    <string name="next">下一步</string>
+    <string name="pwd">密码</string>
+    <string name="repeatPwd">重复密码</string>
+    <string name="register">注册</string>
+    <string name="login">登陆</string>
+    <string name="souvenir">恋恋日记</string>
+    <string name="baby_slogan">Baby\n只为更好的懂你</string>
+    <string name="editInfo">编辑个人信息</string>
+    <string name="nick">昵称</string>
+    <string name="city">居住地</string>
+    <string name="sex">性别</string>
+    <string name="tips">另一半的用户名（不是昵称哦）</string>
+    <string name="commit">提交</string>
+    <string name="idea">这一刻的想法...</string>
+    <string name="fetchPic">获取相片</string>
+    <string name="upload">上传</string>
+    <string name="news">通知</string>
 </resources>

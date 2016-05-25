@@ -1,17 +1,43 @@
 package edu.com.mvplibrary.model.bean;
 
+import io.realm.RealmObject;
+
 /**
- * Created by Anthony on 2016/3/4.
- * Class Note:entity for news
+ * Created by Anthony on 2016/5/24.
+ * Class Note:
  */
-public class News {
+public class News extends RealmObject {
+    private String avatarUrl;
     private String title;
-    private String summary;
-    private String image;
-    private String date;
+    private String installationId;
+    private String content;
+    private String time;
 
+    public int getAction() {
+        return action;
+    }
 
-    private String url;
+    public void setAction(int action) {
+        this.action = action;
+    }
+
+    private int action;
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getAvatarUrl() {
+        return avatarUrl;
+    }
+
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
+    }
 
     public String getTitle() {
         return title;
@@ -21,35 +47,19 @@ public class News {
         this.title = title;
     }
 
-    public String getSummary() {
-        return summary;
+    public String getTime() {
+        return time;
     }
 
-    public void setSummary(String summary) {
-        this.summary = summary;
+    public void setTime(String time) {
+        this.time = time;
     }
 
-    public String getImage() {
-        return image;
+    public String getInstallationId() {
+        return installationId;
     }
 
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
+    public void setInstallationId(String installationId) {
+        this.installationId = installationId;
     }
 }

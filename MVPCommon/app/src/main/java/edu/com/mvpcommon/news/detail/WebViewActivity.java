@@ -57,11 +57,11 @@ public class WebViewActivity extends AbsSwipeBackActivity {
 //        mWebView = (WebView) findViewById(R.id.web_view);
 
         mWebView.setVisibility(View.INVISIBLE);
-        toggleShowLoading(true, "loading");
-
+//    todo    toggleShowLoading(true, "loading");
+        showProgressDialog("loading");
         setWebViewOption();
         title_image_left = (CircleImageView) findViewById(R.id.title_image_left);
-        title_image_left.setImageResource(R.mipmap.ico_back);
+        title_image_left.setImageResource(R.drawable.ico_back);
         title_image_left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,10 +91,6 @@ public class WebViewActivity extends AbsSwipeBackActivity {
         }
     }
 
-    @Override
-    protected View getLoadingTargetView() {
-        return mWebView;
-    }
 
     @Override
     protected int getContentViewID() {
@@ -102,9 +98,10 @@ public class WebViewActivity extends AbsSwipeBackActivity {
     }
 
     @Override
-    protected boolean isApplyStatusBarTranslucency() {
-        return false;
+    protected void initDagger() {
+
     }
+
 
     private void setWebViewOption() {
         //设置编码
@@ -170,7 +167,8 @@ public class WebViewActivity extends AbsSwipeBackActivity {
 
             super.onPageFinished(view, url);
 
-            toggleShowLoading(false, "");
+//     todo       toggleShowLoading(false, "");
+            hideProgressDialog();
             if (mWebView.getVisibility() == View.INVISIBLE) {
                 mWebView.setVisibility(View.VISIBLE);
             }

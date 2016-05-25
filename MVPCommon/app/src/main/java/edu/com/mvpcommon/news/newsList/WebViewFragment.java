@@ -43,10 +43,10 @@ public class WebViewFragment extends AbsTitleFragment {
     WebView mWebView;
 
 
-    @Override
-    protected View getLoadingTargetView() {
-        return mWebView;
-    }
+//    @Override
+//    protected View getLoadingTargetView() {
+//        return mWebView;
+//    }
 
     @Override
     protected int getCenterViewID() {
@@ -64,8 +64,8 @@ public class WebViewFragment extends AbsTitleFragment {
     @Override
     protected void initViewsAndEvents(View rootView) {
         mWebView.setVisibility(View.INVISIBLE);
-        toggleShowLoading(true, "loading");
-
+//        toggleShowLoading(true, "loading");
+        showProgressDialog("loading");
         setWebViewOption(mWebView);
         if (getFragmentUrl() != null) {
             mWebView.loadUrl(getFragmentUrl());
@@ -112,12 +112,12 @@ public class WebViewFragment extends AbsTitleFragment {
 
     private class MyWebViewClient extends WebViewClient {
         /**
-         *当前webview将要加载新的url的时候调用。
-         *
+         * 当前webview将要加载新的url的时候调用。
+         * <p/>
          * 如果没有提供WebViewClient，将由Activity Manager选择合适的方式处理url
          * 如果提供了WebViewClient，返回true代表应用处理url，返回false当前webview处理url
-         *
-         *重写此方法表明点击webview里面新的链接是由当前webview处理（false），还是自定义处理（true）
+         * <p/>
+         * 重写此方法表明点击webview里面新的链接是由当前webview处理（false），还是自定义处理（true）
          */
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -144,9 +144,11 @@ public class WebViewFragment extends AbsTitleFragment {
 
             super.onPageFinished(view, url);
 //            injectJS();
-            toggleShowLoading(false, "");
+//            toggleShowLoading(false, "");
+
             if (view.getVisibility() == View.INVISIBLE) {
                 view.setVisibility(View.VISIBLE);
+                hideProgressDialog();
             }
         }
 

@@ -3,6 +3,8 @@ package edu.com.mvpcommon.news.newsList;
 import android.content.Context;
 import android.view.View;
 
+import edu.com.mvplibrary.ui.BaseView;
+
 /**
  * Created by Anthony on 2016/5/3.
  * Class Note: Presenter in MVP
@@ -16,9 +18,9 @@ public class NewsPresenter implements NewsContract.Presenter, NewsContract.onGet
     private Context mContext;
     private NewsData mData;
 
-    public NewsPresenter(NewsContract.View mView, Context mContext) {
+    public NewsPresenter(Context mContext) {
         this.mContext = mContext;
-        this.mView = mView;
+//        this.mView = mView;
 //        mView.setPresenter(this);//!!! bind presenter for View
 
         mData = new NewsData(mContext, this);//!!!bind data listener to Model
@@ -39,25 +41,29 @@ public class NewsPresenter implements NewsContract.Presenter, NewsContract.onGet
 
     @Override
     public void onSuccess() {
-        mView.hideLoading();
+//        mView.hideLoading();
+        mView.hideProgress();
         mView.onDataReceived(mData.getChannels());
 
     }
 
     @Override
     public void onError() {
-        mView.showEmpty("data error", new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            }
-        });
+//        mView.showEmpty("data error", new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//            }
+//        });
+        mView.showMessage("error");
     }
 
-    /**
-     * todo empty operation now
-     */
     @Override
-    public void start() {
+    public void attachView(BaseView view) {
+        mView = (NewsContract.View) view;
+    }
+
+    @Override
+    public void detachView() {
 
     }
 }

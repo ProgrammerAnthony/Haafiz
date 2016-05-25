@@ -17,11 +17,24 @@ public class ToastUtils {
         mContext=context;
     }
     public static ToastUtils getInstance(){
+        if(mInstance==null){
+            throw new IllegalArgumentException("Initialize ToastUtils First");
+        }
         return mInstance;
     }
-    public static void initialize(Context context){
-        mInstance=new ToastUtils(context);
+
+    public static void init(Context context){
+        if (mInstance == null) {
+            synchronized (ToastUtils.class) {
+                if (mInstance == null) {
+                    mInstance = new ToastUtils(context);
+                }
+            }
+        }
+
     }
+
+
     public  void showToast(String text) {
         if(mToast == null) {
             mToast = Toast.makeText(mContext, text, Toast.LENGTH_LONG);

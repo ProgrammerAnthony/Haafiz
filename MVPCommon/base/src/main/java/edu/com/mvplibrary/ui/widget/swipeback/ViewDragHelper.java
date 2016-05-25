@@ -405,7 +405,7 @@ public class ViewDragHelper {
      * allow VDH to use internal compatibility implementations for different
      * platform versions.
      *
-     * @param context   Context to initialize config-dependent params from
+     * @param context   Context to init config-dependent params from
      * @param forParent Parent view to monitor
      */
     private ViewDragHelper(Context context, ViewGroup forParent, Callback cb) {

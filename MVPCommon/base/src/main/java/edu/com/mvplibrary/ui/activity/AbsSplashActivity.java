@@ -11,15 +11,12 @@ import edu.com.mvplibrary.util.ToastUtils;
 /**
  * Created by Anthony on 2016/5/11.
  * Class Note:
+ * todo update needed
  */
 public abstract class AbsSplashActivity extends AbsBaseActivity {
     private static final short SPLASH_SHOW_SECONDS = 1;
     private long mShowMainTime;
 
-    @Override
-    protected View getLoadingTargetView() {
-        return null;
-    }
 
     @Override
     protected void initViewsAndEvents() {
@@ -86,8 +83,5 @@ public abstract class AbsSplashActivity extends AbsBaseActivity {
 
     protected abstract String getFirstUrl();
 
-    @Override
-    protected boolean isApplyStatusBarTranslucency() {
-        return false;
-    }
+
 }

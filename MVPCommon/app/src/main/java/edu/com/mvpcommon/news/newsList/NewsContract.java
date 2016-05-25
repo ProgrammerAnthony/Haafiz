@@ -3,7 +3,7 @@ package edu.com.mvpcommon.news.newsList;
 import java.util.ArrayList;
 
 import edu.com.mvplibrary.model.bean.Channel;
-import edu.com.mvplibrary.model.bean.News;
+
 import edu.com.mvplibrary.presenter.BasePresenter;
 import edu.com.mvplibrary.ui.BaseView;
 
@@ -27,10 +27,6 @@ public interface NewsContract {
 
     interface View  extends BaseView{
         void onDataReceived(ArrayList<Channel> channels);
-
-        void loadMore(ArrayList<News> news);
-
-        void refresh(ArrayList<News> news);
     }
 
     interface onGetChannelListListener{

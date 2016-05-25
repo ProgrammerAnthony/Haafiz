@@ -14,14 +14,14 @@ import edu.com.mvplibrary.ui.BaseView;
  * Class Note:
  * 1 define your Views & Presenters in Contract Classes;
  * 2 define listener used for View & Model indirectly interaction;
- * 3 {@link DrawerMainContract}-------------------------------------------Manager role of MVP
- * {@link DrawerMainPresenter}------Presenter
- * &{@link DrawerMainActivity}-------------View
+ * 3 {@link MainContract}-------------------------------------------Manager role of MVP
+ * {@link MainPresenter}------Presenter
+ * &{@link MainActivity}-------------View
  * &{@link DrawerData}---------------------------------Model
  */
-public interface DrawerMainContract {
+public interface MainContract {
 
-    interface Presenter extends BasePresenter{
+    interface Presenter extends BasePresenter {
 
         void getDrawerData();
 

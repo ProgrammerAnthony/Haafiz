@@ -12,10 +12,7 @@ import edu.com.mvplibrary.ui.activity.AbsSwipeBackActivity;
 public class FriendsAddActivity  extends AbsSwipeBackActivity {
 
 
-    @Override
-    protected View getLoadingTargetView() {
-        return null;
-    }
+
 
     @Override
     protected void initViewsAndEvents() {
@@ -28,7 +25,7 @@ public class FriendsAddActivity  extends AbsSwipeBackActivity {
     }
 
     @Override
-    protected boolean isApplyStatusBarTranslucency() {
-        return false;
+    protected void initDagger() {
+
     }
 }

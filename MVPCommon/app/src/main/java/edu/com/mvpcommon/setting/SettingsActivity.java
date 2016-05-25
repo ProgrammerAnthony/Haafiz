@@ -10,8 +10,12 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import edu.com.mvpcommon.R;
+import edu.com.mvplibrary.model.bean.Event;
+import edu.com.mvplibrary.model.rx.RxBus;
 import edu.com.mvplibrary.ui.activity.AbsSwipeBackActivity;
 import edu.com.mvplibrary.ui.widget.CircleImageView;
+import edu.com.mvplibrary.util.ToastUtils;
+import rx.functions.Action1;
 
 
 /**
@@ -31,20 +35,34 @@ public class SettingsActivity extends AbsSwipeBackActivity {
 //    @Bind(R.id.setting_content)
 //    RelativeLayout mSettingContent;
 
-    @Override
-    protected View getLoadingTargetView() {
-        return settingContent;
-    }
 
     @Override
     protected void initViewsAndEvents() {
         // Display the fragment as the main content.
         titleTxtCenter.setText("设置");
         titleTxtRight.setVisibility(View.GONE);
-        titleImageLeft.setImageResource(R.mipmap.ico_back);
+        titleImageLeft.setImageResource(R.drawable.ico_back);
+        RxBus.getDefault().
+                toObservable(Event.class).
+                subscribe(new Action1<Event>() {
+                              @Override
+                              public void call(Event event) {
+                                  String id = event.getId();
+                                  String name = event.getName();
+                                  ToastUtils.getInstance().showToast(id + " is " + name);
+                              }
+                          },
+                        new Action1<Throwable>() {
+                            @Override
+                            public void call(Throwable throwable) {
+                                ToastUtils.getInstance().showToast("error");
+                            }
+                        });
+
         getFragmentManager().beginTransaction()
                 .replace(R.id.setting_content, new SettingsFragment())
                 .commit();
+
     }
 
     @Override
@@ -53,9 +71,10 @@ public class SettingsActivity extends AbsSwipeBackActivity {
     }
 
     @Override
-    protected boolean isApplyStatusBarTranslucency() {
-        return false;
+    protected void initDagger() {
+
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +86,5 @@ public class SettingsActivity extends AbsSwipeBackActivity {
     @OnClick(R.id.title_image_left)
     public void onClick() {
         scrollToFinishActivity();
-
     }
 }

@@ -7,17 +7,11 @@ import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.alibaba.mobileim.YWIMKit;
 
-import butterknife.Bind;
-import butterknife.OnClick;
 import edu.com.mvpcommon.R;
-import edu.com.mvpcommon.main.DrawerMainActivity;
 import edu.com.mvpcommon.umeng.helper.LoginSampleHelper;
-import edu.com.mvplibrary.ui.fragment.AbsBaseFragment;
 import edu.com.mvplibrary.ui.fragment.AbsTitleFragment;
 
 /**

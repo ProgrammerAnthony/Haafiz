@@ -14,66 +14,14 @@
 
 ![](http://upload-images.jianshu.io/upload_images/1833901-54cbfa2b27652e3f.gif?imageMogr2/auto-orient/strip)
 
-
-
-## Functionality
-
-1 BaseActivity & BaseFragment for mostly common operation.
-
-BaseActivity 和BaseFragment 初始化大多数操作。
-
-2 swipe back with gesture in activity.
-
-支持activity滑动返回。
-
-3 many utils classes for developing
-
-开发中常用的工具类
-
-4 MVP design from google example
-
-和google官网类似的MVP设计
-
-5 network status observer
-
-网络状态监听
-
-6 interface of loading view,empty view ,error view for all views.
-
-为所有界面添加了加载界面，错误界面以及空界面的接口
-
-7 ImageLoader encapsulation using Glide
-
-使用glide封装的ImageLoader，作为图片加载工具
-
-8 HttpUtil to load network using OkHttp
-
-利用OkHttp封装的HttpUtil访问网络
-
-9 Instant Messaging(IM) support with OpenImSDK from Alibaba(using Conversation list &Contacts list from OpenIM)
-
-利用阿里巴巴的OpenImSDK作为即时通讯组件(聊天列表界面和联系人列表界面来自OpenIM)
-
-9 News Info from (m.hupu.com)，Inject JavaScript to modify
-
-新闻资讯内容来自于虎扑手机网页版，通过注入JavaScript的方式做了网页的修改。
-
-10 Setting pages using PreferenceFragment to support Android 3.0 or higher
-
-设置页面使用PreferencFragment（支持安卓3.0及以上）
-
-11 LoginActivity to login in OpenIMSDK with one key
-
-新增LoginActivity，一键登录
-Development environment & Libraries
+Functionality & Libraries
 -------
 >toEdit !!!!  in progress!!!!
 ##### 1 MVP
-MVP design from google example
-
 和google官网类似的MVP设计
 ##### 2 Materil Design
 ##### 3 Dagger2
+Dagger2注入（等待引入）
 ##### 4 Realm
 project's build.gradle 
 
@@ -83,6 +31,8 @@ project's build.gradle
 application levele build.gradle
 
 	apply plugin: 'realm-android'
+Realm实现本地数据存储。
+
 ##### 5 RxJava,RxAndroid
     //RxAndroid
     compile 'io.reactivex:rxandroid:1.2.0'
@@ -90,26 +40,33 @@ application levele build.gradle
     compile 'io.reactivex:rxjava:1.1.5'
     //RxPermission
     compile 'com.tbruyelle.rxpermissions:rxpermissions:0.7.0@aar'
+使用RxJava实现EventBus(RxBus)
 ##### 6 easemob(环信)
+使用环信作为即时通讯（目前还是阿里的OpenIM，todo）
 ##### 7 LeanCloud
+使用LeanCloud作为后端存储。
 ##### 8 BaseRecyclerViewAdapterHelper
 	compile com.github.CymChad:BaseRecyclerViewAdapterHelper:v1.7.0
 ##### 9 Logger
 	compile 'com.orhanobut:logger:1.11'
+使用Logger进行日志打印，比较直观。封装到工具类LogUtils中进行初始化。
 ##### 10 materialish-progress
 	compile 'com.pnikosis:materialish-progress:1.7'
 ##### 11 Glide
     compile 'com.github.bumptech.glide:glide:3.7.0'
+使用glide封装的ImageLoader，作为图片加载工具。
 ##### 12 swipemenulistview
     compile 'com.baoyz.swipemenulistview:library:1.3.0'
 ##### 13 umeng alalysis
     compile 'com.umeng.analytics:analytics:latest.integration'
-##### 14 ButterKnife(todo new is 8.0.1,but not support Zelezny,so using 7.0.1)
+##### 14 ButterKnife
     compile 'com.jakewharton:butterknife:7.0.1'
+使用ButterKnife
 ##### 15 beautiful loading view
     compile 'com.wang.avi:library:1.0.1'
 ##### 16 about page util
     compile 'com.github.medyo:android-about-page:1.0.8'
+
 ##### 17 photoview
     compile 'com.github.chrisbanes.photoview:library:1.2.4'
 ##### 18 likeButton
@@ -118,8 +75,10 @@ application levele build.gradle
     compile 'com.github.shem8:material-login:1.4.0'
 ##### 20 shimmer
     compile 'com.facebook.shimmer:shimmer:0.1.0@aar'
+登陆注册界面下方文字闪动效果。
 ##### 21 okHttp
 	compile 'com.squareup.okhttp3:okhttp:3.2.0'
+利用OkHttp封装的HttpUtil进行访问网络。
 ##### 22 EasyImage
     //Library for picking pictures from gallery or camera
     compile 'com.github.jkwiecien:EasyImage:1.2.3'
@@ -137,12 +96,17 @@ application levele build.gradle
     compile project(':openimSDK')
     compile project(':pagerslidingtabstrip')
     compile project(':pulltorefreshhandmark')
-    compile project(':slidingmenu')
     compile project(':ultraptrwithloadmore')
     compile project(':viewpagerindicator')
     compile project(':sweetDialog')
     compile files('libs/okhttp-2.7.0.jar')
     compile files('libs/okhttputils-2_3_4.jar')
+
+利用阿里巴巴的OpenImSDK作为即时通讯组件(聊天列表界面和联系人列表界面来自OpenIM)。
+
+sweetDialog 提供统一化的加载dialog效果。
+
+##### 28 其他
 
 Download
 --------

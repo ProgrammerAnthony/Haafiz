@@ -16,27 +16,28 @@ import java.util.ArrayList;
 
 import butterknife.Bind;
 import butterknife.OnClick;
+import cn.pedant.SweetAlert.SweetAlertDialog;
 import edu.com.mvpcommon.R;
 import edu.com.mvplibrary.ui.activity.AbsBaseActivity;
 import edu.com.mvplibrary.ui.widget.CircleImageView;
 import edu.com.mvplibrary.ui.widget.imageloader.ImageLoader;
 import edu.com.mvplibrary.ui.widget.imageloader.ImageLoaderUtil;
 import edu.com.mvplibrary.util.BaseUtil;
-import edu.com.mvplibrary.util.ToastUtils;
 
 /**
+ *@deprecated use {@link NewDrawerMainActivity} instead
  * Created by Anthony on 2016/5/3.
  * Class Note:
  * 1 use{@link DrawerLayout} to
  * acts as a top-level container for window content that allows for
  * interactive "drawer" views to be pulled out from the edge of the window.
  * 2 View in MVP
- * see {@link DrawerMainContract}------Manager role of MVP
- * {@link DrawerMainPresenter}---------Presenter
- * &{@link DrawerMainActivity}---------View
+ * see {@link MainContract}------Manager role of MVP
+ * {@link MainPresenter}---------Presenter
+ * &{@link MainActivity}---------View
  * &{@link DrawerData}------------Model
  */
-public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainContract.View {
+public class MainActivity extends AbsBaseActivity implements MainContract.View {
     @Bind(R.id.user_img)
     CircleImageView mUserImg;//user icon
     @Bind(R.id.user_name)
@@ -52,13 +53,18 @@ public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainCon
     @Bind(R.id.left_menu)
     ListView mDrawerMenu;
 
-    private DrawerMainPresenter mPresenter;//主页面的Presenter
+    private MainPresenter mPresenter;//主页面的Presenter
     private static DrawerLayout mDrawerLayout;//整个抽屉布局
     private int curFragmentPos = -1;//当前的fragment位置(放置fragment的多次创建)
 
     @Override
     protected int getContentViewID() {
         return R.layout.activity_drawer;
+    }
+
+    @Override
+    protected void initDagger() {
+
     }
 
 
@@ -75,13 +81,14 @@ public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainCon
             actionBar.hide();
         }
 
-        //create and initialize presenter,
-        mPresenter = new DrawerMainPresenter(this, mContext);
-
+        //create and init presenter,
+        mPresenter = new MainPresenter(mContext);
+        mPresenter.attachView(this);
         //use presenter to load data
         mPresenter.getDrawerData();
         //default select first fragment
         mPresenter.getSelectView(1);//chattingListFragment
+
         curFragmentPos = -1;
     }
 
@@ -165,60 +172,40 @@ public class DrawerMainActivity extends AbsBaseActivity implements DrawerMainCon
 
     }
 
-
     @Override
-    protected View getLoadingTargetView() {
-        return null;
+    public void showMessage(String msg) {
+        showMessageDialog(msg);
     }
 
     @Override
-    public void showLoading(String msg) {
-        toggleShowLoading(true, msg);
+    public void close() {
+        finish();
     }
 
     @Override
-    public void hideLoading() {
-        toggleShowLoading(false, "");
+    public void showProgress(String message) {
+        showProgressDialog(message);
     }
 
     @Override
-    public void showError(String msg, View.OnClickListener onClickListener) {
-
+    public void showProgress(String message, int progress) {
+        showProgressDialog(message, progress);
     }
 
     @Override
-    public void showEmpty(String msg, View.OnClickListener onClickListener) {
-        toggleShowEmpty(true, msg, onClickListener);
+    public void hideProgress() {
+        hideProgressDialog();
     }
 
     @Override
-    public void showEmpty(String msg, View.OnClickListener onClickListener, int imageId) {
-        toggleShowEmpty(true, msg, onClickListener, imageId);
+    public void showErrorMessage(String msg, String content) {
+        showErrorDialog(msg, content, new SweetAlertDialog.OnSweetClickListener() {
+            @Override
+            public void onClick(SweetAlertDialog sweetAlertDialog) {
+                sweetAlertDialog.dismissWithAnimation();
+            }
+        });
     }
-
-    @Override
-    public void showNetError(View.OnClickListener onClickListener) {
-        ToastUtils.getInstance().showToast("oops ,no network now!");
-    }
-
-
-    @Override
-    protected boolean isApplyStatusBarTranslucency() {
-        return false;
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        mPresenter.start();
-    }
-
-//    @Override
-//    public void onClick(View v) {
-//        if (v.getId() == R.id.user_img) {
-//            mPresenter.getSelectView(0);
-//        }
-//    }
 
 
     @OnClick(R.id.user_img)

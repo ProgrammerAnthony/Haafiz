@@ -8,18 +8,15 @@ import android.view.View;
  */
 public interface BaseView {
 
-//    void setPresenter(P presenter);
+    void showMessage(String msg);
 
-    void showLoading(String msg);
+    void close();
 
-    void hideLoading();
+    void showProgress(String msg);
 
-    void showError(String msg, View.OnClickListener onClickListener);
+    void showProgress(String msg, int progress);
 
-    void showEmpty(String msg, View.OnClickListener onClickListener);
+    void hideProgress();
 
-    void showEmpty(String msg, View.OnClickListener onClickListener, int imageId);
-
-    void showNetError(View.OnClickListener onClickListener);
-
+    void showErrorMessage(String msg,String content);
 }

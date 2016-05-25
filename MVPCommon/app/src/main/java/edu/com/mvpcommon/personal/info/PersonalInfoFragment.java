@@ -1,6 +1,5 @@
 package edu.com.mvpcommon.personal.info;
 
-import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -8,9 +7,7 @@ import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.OnClick;
 import edu.com.mvpcommon.R;
-import edu.com.mvpcommon.main.DrawerMainActivity;
-import edu.com.mvpcommon.personal.edit.PersonalEditActivity;
-import edu.com.mvplibrary.ui.fragment.AbsBaseFragment;
+import edu.com.mvpcommon.main.MainActivity;
 import edu.com.mvplibrary.ui.fragment.AbsTitleFragment;
 
 /**
@@ -27,8 +24,8 @@ public class PersonalInfoFragment extends AbsTitleFragment {
 
     @OnClick(R.id.title_image_left)
     public void openDrawer(){
-        if (mContext instanceof DrawerMainActivity) {
-            DrawerMainActivity.openDrawer();
+        if (mContext instanceof MainActivity) {
+            MainActivity.openDrawer();
         }
     }
     @Override
@@ -46,12 +43,12 @@ public class PersonalInfoFragment extends AbsTitleFragment {
         mTitle.setText("个人中心");
         mTitleRight.setVisibility(View.GONE);
         mIcon.setImageResource(R.drawable.icon_head);
-        toggleShowLoading(true,"loading");
+//        toggleShowLoading(true,"loading");
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        toggleShowLoading(false,"");
+//        toggleShowLoading(false,"");
     }
 }

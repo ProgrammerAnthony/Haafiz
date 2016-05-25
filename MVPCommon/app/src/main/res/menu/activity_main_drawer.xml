@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_moment"
+            android:icon="@drawable/ic_date_range_black_24dp"
+            android:title="Moment" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="相册" />
+        <!--<item-->
+        <!--android:id="@+id/nav_slideshow"-->
+        <!--android:icon="@drawable/ic_menu_slideshow"-->
+        <!--android:title="Slideshow" />-->
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_menu_send"
+            android:title="反馈" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_input_black_24dp"
+            android:title="退出" />
+    </group>
+
+    <item android:title="社交">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_send"
+                    android:icon="@drawable/ic_chat_black_24dp"
+                    android:title="聊天" />
+                <item
+                    android:id="@+id/nav_share"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="分享" />
+
+            </group>
+
+        </menu>
+    </item>
+
+</menu>

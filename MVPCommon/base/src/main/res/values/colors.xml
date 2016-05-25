@@ -290,4 +290,59 @@
     <color name="bg_color_pink">#FF90A2</color>
     <color name="bg_color_blue">#43D5FF</color>
     <color name="bg_color_blue_light">#84B5CA</color>
+    <color name="PrimaryTextColor">#212121</color>
+    <color name="SecondaryColor">#727272</color>
+    <color name="DividerColor">#B6B6B6</color>
+
+    <!--来自Baby-->
+    <!-- Theme & Accent -->
+    <color name="theme500">#00BCD4</color>
+    <color name="theme600">#00ACC1</color>
+    <color name="accent100">#FFFF8D</color>
+
+    <!-- Greyscales -->
+    <color name="grey50">#FAFAFA</color>
+    <color name="grey200">#EEEEEE</color>
+    <color name="grey500">#9E9E9E</color>
+    <color name="grey600">#757575</color>
+    <color name="white_alpha_40">#B3FFFFFF</color>
+    <color name="white_alpha_95">#F2FFFFFF</color>
+    <color name="black_alpha_12">#1F000000</color>
+    <color name="black_alpha_30">#4D000000</color>
+    <color name="black_alpha_87">#DD000000</color>
+
+    <!-- Others -->
+    <color name="indigo500">#3F51B5</color>
+    <color name="indigo600">#3949AB</color>
+    <color name="indigo500_alpha_54">#8A3F51B5</color>
+
+    <color name="teal500">#009688</color>
+    <color name="teal600">#00897B</color>
+    <color name="teal500_alpha_54">#8A009688</color>
+
+    <color name="pink500">#E91E63</color>
+    <color name="pink600">#D81B60</color>
+    <color name="pink500_alpha_54">#8AE91E63</color>
+
+    <color name="amber500">#FFC107</color>
+    <color name="amber600">#FFB300</color>
+    <color name="amber500_alpha_54">#8AFFC107</color>
+
+    <color name="orange500">#FF9800</color>
+    <color name="orange600">#FB8C00</color>
+    <color name="orange500_alpha_54">#8AFF9800</color>
+
+    <color name="purple500">#9C27B0</color>
+    <color name="purple600">#8E24AA</color>
+    <color name="purple500_alpha_54">#8A9C27B0</color>
+
+    <color name="lightgreen500">#8BC34A</color>
+    <color name="lightgreen600">#7CB342</color>
+    <color name="lightgreen500_alpha_54">#8A8BC34A</color>
+
+    <color name="red500">#F44336</color>
+    <color name="red600">#E53935</color>
+    <color name="red500_alpha_54">#8AF44336</color>
+
+    <color name="nav_color">#4dF44336</color>
 </resources>

@@ -10,6 +10,7 @@ import java.io.File;
 import edu.com.mvplibrary.ui.widget.ViewDisplay;
 import edu.com.mvplibrary.util.LocalFileUncaughtExceptionHandler;
 import edu.com.mvplibrary.util.LogUtil;
+import edu.com.mvplibrary.util.PreferenceManager;
 import edu.com.mvplibrary.util.ToastUtils;
 
 
@@ -32,9 +33,11 @@ public abstract class AbsApplication extends Application {
     public void onCreate() {
         super.onCreate();
         sInstance = this;
-        ViewDisplay.initialize(this);
-        ToastUtils.initialize(this);
+        ViewDisplay.init(this);
+        ToastUtils.init(this);
+        PreferenceManager.init(this);
         LogUtil.init();
+
         Thread.setDefaultUncaughtExceptionHandler(new LocalFileUncaughtExceptionHandler(this,
                 Thread.getDefaultUncaughtExceptionHandler()));
     }

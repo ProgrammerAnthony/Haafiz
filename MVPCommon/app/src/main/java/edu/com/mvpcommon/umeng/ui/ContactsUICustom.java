@@ -10,11 +10,8 @@ import android.widget.TextView;
 import com.alibaba.mobileim.aop.Pointcut;
 import com.alibaba.mobileim.aop.custom.IMContactsUI;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 import edu.com.mvpcommon.R;
-import edu.com.mvpcommon.main.DrawerMainActivity;
+import edu.com.mvpcommon.main.MainActivity;
 import edu.com.mvpcommon.umeng.helper.CustomSampleHelper;
 import edu.com.mvplibrary.ui.widget.CircleImageView;
 import edu.com.mvplibrary.util.ToastUtils;
@@ -23,7 +20,7 @@ import edu.com.mvplibrary.util.ToastUtils;
 /**
  * Created by Anthony on 2016/4/12.
  * Class Note:
- * custom ui in the Contacts pages, initialize in{@link CustomSampleHelper#initCustom()}
+ * custom ui in the Contacts pages, init in{@link CustomSampleHelper#initCustom()}
  * 自定义的联系人界面ui修改，请在{@link CustomSampleHelper#initCustom()} 中进行初始化
  */
 public class ContactsUICustom extends IMContactsUI {
@@ -43,8 +40,8 @@ public class ContactsUICustom extends IMContactsUI {
         titleImageLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (context instanceof DrawerMainActivity) {
-                    DrawerMainActivity.openDrawer();
+                if (context instanceof MainActivity) {
+                    MainActivity.openDrawer();
                 }
             }
         });

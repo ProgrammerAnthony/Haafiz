@@ -5,12 +5,10 @@ import android.view.View;
 /**
  * Created by Anthony on 2016/5/11.
  * Class Note:
+ * todo to define here
  */
-public class BaseWebViewActivity extends AbsSwipeBackActivity{
-    @Override
-    protected View getLoadingTargetView() {
-        return null;
-    }
+public class BaseWebViewActivity extends AbsSwipeBackActivity {
+
 
     @Override
     protected void initViewsAndEvents() {
@@ -23,7 +21,8 @@ public class BaseWebViewActivity extends AbsSwipeBackActivity{
     }
 
     @Override
-    protected boolean isApplyStatusBarTranslucency() {
-        return false;
+    protected void initDagger() {
+
     }
+
 }
