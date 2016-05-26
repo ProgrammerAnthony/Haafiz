@@ -21,7 +21,7 @@ public class RxBus {
         bus = new SerializedSubject<>(PublishSubject.create());
     }
     // 单例RxBus
-    public static RxBus getDefault() {
+    public static RxBus getInstance() {
         RxBus rxBus = defaultInstance;
         if (defaultInstance == null) {
             synchronized (RxBus.class) {
@@ -34,6 +34,7 @@ public class RxBus {
         }
         return rxBus;
     }
+
     // 提供了一个新的事件
     @SuppressWarnings("unchecked")
     public void post (Object o) {

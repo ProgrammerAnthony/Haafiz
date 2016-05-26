@@ -4,6 +4,10 @@ buildscript {
     repositories {
         jcenter()
         mavenCentral()
+        //这里是 LeanCloud 的包仓库
+        maven {
+            url "http://mvn.leancloud.cn/nexus/content/repositories/releases"
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.0.0'
@@ -33,7 +37,7 @@ allprojects {
         maven { url "https://raw.githubusercontent.com/umeng/mvn-repo-umeng/master/repository" }
         maven { url "http://dl.bintray.com/tbruyelle/tbruyelle" }
         maven { url "https://jitpack.io" }
-
+        maven { url "http://mvn.leancloud.cn/nexus/content/repositories/releases" }//这里是 LeanCloud 的包仓库
     }
 }
 

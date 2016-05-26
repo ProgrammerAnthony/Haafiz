@@ -1,6 +1,7 @@
 package edu.com.mvpcommon;
 
 import android.content.Context;
+import android.widget.Gallery;
 
 import com.alibaba.mobileim.YWAPI;
 import com.alibaba.wxlib.util.SysUtil;
@@ -21,8 +22,17 @@ public class MyApplication extends AbsApplication {
     public void onCreate() {
         super.onCreate();
         initYWSDK();
+        initLeanCloud();
     }
 
+    private void initLeanCloud() {
+//        AVUser.alwaysUseSubUserClass(User.class);
+//        AVObject.registerSubclass(Gallery.class);
+//        AVObject.registerSubclass(Souvenir.class);
+//        AVOSCloud.initialize(this, "GpLTBKYub2ekB1GG2UUDdpmu-gzGzoHsz", "IjkswTLu60dF1rnnAHNoLM98");
+//        AVAnalytics.enableCrashReport(this, true);
+
+    }
 
 
     private void initYWSDK() {

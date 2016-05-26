@@ -29,10 +29,10 @@ public class SettingsFragment extends PreferenceFragment {
             CheckBoxPreference boxPreference= (CheckBoxPreference) findPreference("pref_key_wifi_loading_img");
             if(boxPreference.isChecked()){
                 ToastUtils.getInstance().showToast("isChecked");
-                RxBus.getDefault().post(new Event("001","wifi"));
+                RxBus.getInstance().post(new Event("001","wifi"));
             }else{
                 ToastUtils.getInstance().showToast("unCheked");
-                RxBus.getDefault().post(new Event("002","not wifi"));
+                RxBus.getInstance().post(new Event("002","not wifi"));
             }
 
         }

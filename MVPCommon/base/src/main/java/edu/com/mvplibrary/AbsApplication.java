@@ -5,6 +5,8 @@ import android.os.Environment;
 import android.util.Log;
 
 
+import com.avos.avoscloud.AVOSCloud;
+
 import java.io.File;
 
 import edu.com.mvplibrary.ui.widget.ViewDisplay;
@@ -38,8 +40,17 @@ public abstract class AbsApplication extends Application {
         PreferenceManager.init(this);
         LogUtil.init();
 
+        initLeanCloud();
+
         Thread.setDefaultUncaughtExceptionHandler(new LocalFileUncaughtExceptionHandler(this,
                 Thread.getDefaultUncaughtExceptionHandler()));
+    }
+
+    private void initLeanCloud() {
+
+        // 初始化参数依次为 this, AppId, AppKey
+        AVOSCloud.initialize(this,"k9XVHXc7UHdiv6UOielOPyYc-gzGzoHsz","5WHJ0HesNrOnveAYcoM5sLL2");
+
     }
 
 

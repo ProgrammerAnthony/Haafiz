@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">约个球</string>
-
+    <!--主界面nvigationView 的menu内容-->
+    <string name="nav_chat_string">聊天</string>
+    <string name="nav_friends_string">好友</string>
+    <string name="nav_find_string">发现</string>
+    <string name="nav_news_string">资讯</string>
+    <string name="nav_setting_string">设置</string>
     <!--openIM-->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="quit_confirm">退出后您将收不到新消息通知，是否确认退出？</string>
@@ -64,4 +69,6 @@
     <string name="fetchPic">获取相片</string>
     <string name="upload">上传</string>
     <string name="news">通知</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

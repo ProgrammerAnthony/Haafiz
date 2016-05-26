@@ -44,7 +44,29 @@ Realm实现本地数据存储。
 ##### 6 easemob(环信)
 使用环信作为即时通讯（目前还是阿里的OpenIM，todo）
 ##### 7 LeanCloud
-使用LeanCloud作为后端存储。
+使用LeanCloud作为后端存储。关于LeanCloud集成和使用，请更多参考[LeanCloud官网](https://leancloud.cn/)
+
+	// LeanCloud 基础包
+    compile ('cn.leancloud.android:avoscloud-sdk:v3.+')
+
+    // 推送与实时聊天需要的包
+    compile ('cn.leancloud.android:avoscloud-push:v3.+@aar'){transitive = true}
+
+    // LeanCloud 统计包
+    compile ('cn.leancloud.android:avoscloud-statistics:v3.+')
+
+    // LeanCloud 用户反馈包
+    compile ('cn.leancloud.android:avoscloud-feedback:v3.+@aar')
+
+    // avoscloud-sns：LeanCloud 第三方登录包
+    compile ('cn.leancloud.android:avoscloud-sns:v3.+@aar')
+    compile ('cn.leancloud.android:qq-sdk:1.6.1-leancloud')
+    // 目前新浪微博官方只提供 jar 包的集成方式
+    // 请手动下载新浪微博 SDK 的 jar 包，将其放在 libs 目录下进行集成
+
+    // LeanCloud 应用内搜索包
+    compile ('cn.leancloud.android:avoscloud-search:v3.+@aar')
+
 ##### 8 BaseRecyclerViewAdapterHelper
 	compile com.github.CymChad:BaseRecyclerViewAdapterHelper:v1.7.0
 ##### 9 Logger

@@ -52,7 +52,7 @@ public class MainPresenter implements MainContract.Presenter, MainContract.onGet
         Channel mChannel = new Channel();
         switch (position) {
             case 0:
-                mChannel.setType("1003");//LoginActivity
+                mChannel.setType("1006");//LoginActivity
                 break;
             case 1:
                 mChannel.setType("2002");//ChattingListFragment

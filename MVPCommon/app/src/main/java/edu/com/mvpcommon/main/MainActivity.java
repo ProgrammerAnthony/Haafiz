@@ -25,7 +25,7 @@ import edu.com.mvplibrary.ui.widget.imageloader.ImageLoaderUtil;
 import edu.com.mvplibrary.util.BaseUtil;
 
 /**
- *@deprecated use {@link NewDrawerMainActivity} instead
+ *use {@link NewDrawerMainActivity} instead
  * Created by Anthony on 2016/5/3.
  * Class Note:
  * 1 use{@link DrawerLayout} to
