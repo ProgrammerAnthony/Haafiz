@@ -13,7 +13,7 @@ public class PreferenceManager {
     private static final String FIRST_TIME = "firsttime";
     private static final String ISLOGIN = "islogin";
     private static final boolean FIRST_TIME_DEFAULT = true;
-
+    private static volatile PreferenceManager mInstance = null;
 
     private static SharedPreferences mSharedPreferences;
 
@@ -36,7 +36,7 @@ public class PreferenceManager {
             }
         }
     }
-    private static volatile PreferenceManager mInstance = null;
+
 
 
 

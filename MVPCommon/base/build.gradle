@@ -87,33 +87,30 @@ dependencies {
     compile 'com.github.jorgecastilloprz:fabprogresscircle:1.01@aar'
     //leakcanary
 
-    //    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
-
-    //    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
-
-    //    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+//    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+//    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+//    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
 
     // or 1.4-beta1
 
     //dagger2
 
-    //    apt 'com.google.dagger:dagger-compiler:2.0.2'
+//        apt 'com.google.dagger:dagger-compiler:2.0.2'
 
     //指定注解处理器
 
-    //    compile 'com.google.dagger:dagger:2.0.2'
+//        compile 'com.google.dagger:dagger:2.0.2'
 
     //dagger公用api
 
-    //    provided 'org.glassfish:javax.annotation:10.0-b28'
+//        provided 'org.glassfish:javax.annotation:10.0-b28'
+
+//multiDex
+    compile 'com.android.support:multidex:1.0.1'
 
     //添加android缺失的部分javax注解
     compile project(':openimSDK')
     compile project(':pagerslidingtabstrip')
-    compile project(':pulltorefreshhandmark')
-    compile project(':slidingmenu')
-    compile project(':ultraptrwithloadmore')
-    compile project(':viewpagerindicator')
     compile project(':sweetDialog')
     compile files('libs/okhttp-2.7.0.jar')
     compile files('libs/okhttputils-2_3_4.jar')

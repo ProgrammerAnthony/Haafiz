@@ -11,11 +11,10 @@ import rx.Observable;
 /**
  * Created by Anthony on 2016/5/23.
  * Class Note:
- *
  */
 public class RxRealm {
     private Context mContext;
-    private Realm mRealm;
+    private Realm mInstance;
     RealmConfiguration mRealmConfiguration;
     private static volatile RxRealm rxRealm;
 
@@ -24,9 +23,9 @@ public class RxRealm {
      */
     public void init(Context mContext) {
         if (rxRealm == null) {
-            synchronized (RxRealm.class){
-                if(rxRealm ==null){
-                    rxRealm=new RxRealm(mContext);
+            synchronized (RxRealm.class) {
+                if (rxRealm == null) {
+                    rxRealm = new RxRealm(mContext);
                 }
             }
         }
@@ -38,47 +37,50 @@ public class RxRealm {
                 .name("RxRealm")
                 .schemaVersion(7)
                 .build();
-        mRealm = Realm.getInstance(mRealmConfiguration);
+        mInstance = Realm.getInstance(mRealmConfiguration);
     }
 
-    public Realm getInstance(){
-        return mRealm;
+    public Realm getInstance() {
+        if (mInstance == null) {
+            throw new IllegalArgumentException("Initialize RxRealm First");
+        }
+        return mInstance;
     }
     //    public Observable<RealmResults<Souvenir>> getSouvenirALl() {
-//        return mRealm.where(Souvenir.class).findAllAsync().asObservable();
+//        return mInstance.where(Souvenir.class).findAllAsync().asObservable();
 //    }
 //
 //    public void saveSouvenList(List<Souvenir> list) {
-//        mRealm.beginTransaction();
-//        mRealm.copyToRealmOrUpdate(list);
-//        mRealm.commitTransaction();
+//        mInstance.beginTransaction();
+//        mInstance.copyToRealmOrUpdate(list);
+//        mInstance.commitTransaction();
 //    }
 
 
 //    public void saveUser(User user) {
-//        mRealm.beginTransaction();
-//        mRealm.copyToRealmOrUpdate(user);
-//        mRealm.commitTransaction();
+//        mInstance.beginTransaction();
+//        mInstance.copyToRealmOrUpdate(user);
+//        mInstance.commitTransaction();
 //    }
 
 //    public void saveSouvenir(Souvenir souvenir) {
-//        mRealm.beginTransaction();
-//        mRealm.copyToRealmOrUpdate(souvenir);
-//        mRealm.commitTransaction();
+//        mInstance.beginTransaction();
+//        mInstance.copyToRealmOrUpdate(souvenir);
+//        mInstance.commitTransaction();
 //
 //    }
 
 //    public Observable<User> getUser(String id) {
-//        return mRealm.where(User.class).equalTo("ID", id).findFirst().asObservable();
+//        return mInstance.where(User.class).equalTo("ID", id).findFirst().asObservable();
 //
 //    }
 
 //    public RealmResults<Gallery> getAllGallery() {
-//        return mRealm.where(Gallery.class).findAll();
+//        return mInstance.where(Gallery.class).findAll();
 //    }
 //
 //    public void saveGalleryList(final List<Gallery> list) {
-//        mRealm.executeTransactionAsync(new Realm.Transaction() {
+//        mInstance.executeTransactionAsync(new Realm.Transaction() {
 //            @Override
 //            public void execute(Realm realm) {
 //                realm.copyToRealmOrUpdate(list);
@@ -88,24 +90,24 @@ public class RxRealm {
 //    }
 //
 //    public void saveGallery(Gallery gallery) {
-//        mRealm.beginTransaction();
-//        mRealm.copyToRealmOrUpdate(gallery);
-//        mRealm.commitTransaction();
+//        mInstance.beginTransaction();
+//        mInstance.copyToRealmOrUpdate(gallery);
+//        mInstance.commitTransaction();
 //
 //    }
 
     public void saveNews(News news) {
-        mRealm.beginTransaction();
-        mRealm.copyToRealmOrUpdate(news);
-        mRealm.commitTransaction();
+        mInstance.beginTransaction();
+        mInstance.copyToRealmOrUpdate(news);
+        mInstance.commitTransaction();
 
     }
 
     public Observable<RealmResults<News>> getAllNews() {
-        return mRealm.where(News.class).findAllSorted("time").asObservable();
+        return mInstance.where(News.class).findAllSorted("time").asObservable();
     }
 
     public void Close() {
-        mRealm.close();
+        mInstance.close();
     }
 }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="jp.wasabeef.glide.transformations"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="167"
+    android:versionName="2.0.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="23" />
+
+</manifest>

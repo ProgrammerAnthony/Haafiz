@@ -32,9 +32,7 @@ import edu.com.mvplibrary.util.ToastUtils;
 /**
  * Created by Anthony on 2016/4/24.
  * Class Note:
- * 1 extended from AppCompatActivity to do
- * some base operation.
- * 2 do operation in initViewAndEvents(){@link #initViewsAndEvents()}
+ * 所有的activity继承于这个类
  */
 public abstract class AbsBaseActivity extends AppCompatActivity {
     protected static String TAG_LOG = null;// Log tag

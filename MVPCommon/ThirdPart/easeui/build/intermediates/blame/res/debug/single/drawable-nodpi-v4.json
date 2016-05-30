@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\em_empty_photo.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\easeui\\src\\main\\res\\drawable-nodpi\\em_empty_photo.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\em_empty_photo.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\easeui\\src\\main\\res\\drawable-nodpi\\em_empty_photo.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\ic_speaker_placeholder.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\easeui\\src\\main\\res\\drawable-nodpi\\ic_speaker_placeholder.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\ic_speaker_placeholder.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\easeui\\src\\main\\res\\drawable-nodpi\\ic_speaker_placeholder.png"
+    }
+]

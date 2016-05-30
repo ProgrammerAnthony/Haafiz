@@ -10,7 +10,7 @@ import edu.com.mvplibrary.ui.BaseView;
 /**
  * Created by Anthony on 2016/5/4.
  * Class Note:
- * check whether the View attached in the MVP
+ * MVP中所有Presenter的接口，完成view的绑定和解除
  *
  */
 public interface BasePresenter {

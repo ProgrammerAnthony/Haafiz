@@ -20,13 +20,13 @@ buildscript {
 
 ext {
     configuration = [
-            applicationId       : "edu.com.mvpcommon",
-            buildToolsVersion   : "23.0.3",
-            compileSdkVersion   : 23,
-            minSdkVersion       : 16,
-            targetSdkVersion    : 23,
-            versionCode         : 20160520,
-            versionName         : "1.0",
+            applicationId    : "edu.com.mvpcommon",
+            buildToolsVersion: "23.0.3",
+            compileSdkVersion: 23,
+            minSdkVersion    : 16,
+            targetSdkVersion : 23,
+            versionCode      : 20160520,
+            versionName      : "1.0",
 
     ]
 
@@ -37,7 +37,12 @@ allprojects {
         maven { url "https://raw.githubusercontent.com/umeng/mvn-repo-umeng/master/repository" }
         maven { url "http://dl.bintray.com/tbruyelle/tbruyelle" }
         maven { url "https://jitpack.io" }
-        maven { url "http://mvn.leancloud.cn/nexus/content/repositories/releases" }//这里是 LeanCloud 的包仓库
+        //这里是 LeanCloud 的包仓库
+        maven { url "http://mvn.leancloud.cn/nexus/content/repositories/releases" }
+        //dagger2
+//        maven {
+//            url 'https://oss.sonatype.org/content/repositories/snapshots/'
+//        }
     }
 }
 

@@ -1,12 +1,28 @@
 package edu.com.mvpcommon.main;
 
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.avos.avoscloud.AVFile;
+import com.avos.avoscloud.AVUser;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.net.URI;
+import java.net.URISyntaxException;
+
+import edu.com.mvplibrary.model.rx.RxLeanCloud;
 import edu.com.mvplibrary.ui.BaseView;
+import rx.Observable;
+import rx.Observer;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.functions.Func1;
 
 /**
  * Created by Anthony on 2016/5/26.
@@ -15,17 +31,30 @@ import edu.com.mvplibrary.ui.BaseView;
 public class NewMainPresenter implements NewMainContract.Presenter {
     private NewMainContract.View mView;
     private Context mContext;
+    private RxLeanCloud mRxLeanCloud;
 
-
-    public NewMainPresenter(Context mContext) {
+    public NewMainPresenter(Context mContext,RxLeanCloud mRxLeanCloud) {
         this.mContext = mContext;
+        this.mRxLeanCloud =mRxLeanCloud;
     }
 
     // TODO: 2016/5/26  fragment 替换操作
-
     @Override
     public void replaceFragment(Fragment to, String tag, boolean isExpanded) {
+/*        FragmentManager fragmentManager = mActivity.getFragmentManager();
+        android.app.Fragment currentfragment = fragmentManager.findFragmentByTag(currentFragmentTag);
 
+        if (currentfragment == null || !TextUtils.equals(tag, currentFragmentTag)) {
+            currentFragmentTag = tag;
+            fragmentManager.beginTransaction().replace(R.id.fragment_container, to, currentFragmentTag).commit();
+
+
+        }
+        if (isExpanded) {
+            mMainView.showScrollView();
+        } else {
+            mMainView.hideScrollView();
+        }*/
     }
 
 
@@ -33,13 +62,21 @@ public class NewMainPresenter implements NewMainContract.Presenter {
     @Override
     public void fabOnclick() {
 
+/*        if (isHavedLover()) {
+
+            mMainView.toAddSouvenirActivity();
+        } else {
+            mMainView.toProfileActivity();
+            mMainView.showToast("请先设置另一半才能发日记哦");
+        }*/
+
     }
 
     /**
-     * 初始化
+     * todo 初始化头像，昵称和背景
      * @param avatar 头像
      * @param nick 昵称
-     * @param background 头像背景
+     * @param background CollapsingLayout的背景
      */
     @Override
     public void initData(ImageView avatar, TextView nick, ImageView background) {
@@ -69,6 +106,7 @@ public class NewMainPresenter implements NewMainContract.Presenter {
         mContext.startActivity(Intent.createChooser(intent, "把约个球分享给朋友吧"));
     }
 
+    // TODO: 2016/5/27  登出处理
     @Override
     public void Logout() {
 //        EMClient.getInstance().logout(false, new EMCallBack() {
@@ -90,6 +128,43 @@ public class NewMainPresenter implements NewMainContract.Presenter {
 //
 //            }
 //        });
+    }
+
+    @Override
+    public void UploadPicture(Uri uri) {
+/*        mMainView.showProgress("上传中...");
+        try {
+            AVFile file = AVFile.withFile(mPreferenceManager.getCurrentUserId(), new File(new URI(uri.toString())));
+            mRxLeanCloud.UploadPicture(file)
+                    .flatMap(new Func1<String, Observable<AVUser>>() {
+                        @Override
+                        public Observable<AVUser> call(String s) {
+                            User user = User.getCurrentUser(User.class);
+                            user.setBackground(s);
+                            return mRxLeanCloud.SaveUserByLeanCloud(user);
+                        }
+                    }).observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(new Observer<AVUser>() {
+                        @Override
+                        public void onCompleted() {
+                            mMainView.hideProgress();
+                        }
+
+                        @Override
+                        public void onError(Throwable e) {
+                            mMainView.hideProgress();
+                            com.orhanobut.logger.Logger.e(e.getMessage());
+                        }
+
+                        @Override
+                        public void onNext(AVUser user) {
+                            mMainView.showToast("保存成功");
+
+                        }
+                    });
+        } catch (FileNotFoundException | URISyntaxException e) {
+            e.printStackTrace();
+        }*/
     }
 
     @Override

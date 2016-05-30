@@ -23,6 +23,7 @@ import edu.com.mvplibrary.util.ToastUtils;
 /**
  * Created by Anthony on 2016/2/25.
  * Class Note:
+ *
  * Base Fragment for all the Fragment defined in the project
  * 1 extended from {@link AbsBaseFragment} to do
  * some base operation.
@@ -155,102 +156,3 @@ public abstract class AbsBaseFragment extends Fragment {
     }
 }
 
-
-/**
- * show toast
- * <p/>
- * toggle show loading
- * <p/>
- * toggle show empty
- * <p/>
- * toggle show empty
- * <p/>
- * toggle show error
- * <p/>
- * toggle show network error
- */
-/*
-    protected void showToast(String msg) {
-        if (null != msg && !AppUtils.isEmpty(msg)) {
-//            Snackbar.make(((Activity) mContext).getWindow().getDecorView(), msg, Snackbar.LENGTH_SHORT).show();
-        }
-    }
-*/
-
-
-/**
- * toggle show loading
- */
-/*
-    protected void toggleShowLoading(boolean toggle, String msg) {
-        if (null == mVaryViewHelperController) {
-            throw new IllegalArgumentException("You must return a right target view for loading");
-        }
-        if (toggle) {
-            mVaryViewHelperController.showLoading(msg);
-        } else {
-            mVaryViewHelperController.restore();
-        }
-    }
-*/
-
-/**
- * toggle show empty
- */
-/*    protected void toggleShowEmpty(boolean toggle, String msg, View.OnClickListener onClickListener) {
-        if (null == mVaryViewHelperController) {
-            throw new IllegalArgumentException("You must return a right target view for loading");
-        }
-
-        if (toggle) {
-            mVaryViewHelperController.showEmpty(msg, onClickListener);
-        } else {
-            mVaryViewHelperController.restore();
-        }
-    }*/
-
-/**
- * toggle show empty
- */
-/*    protected void toggleShowEmpty(boolean toggle, String msg, View.OnClickListener onClickListener, int img) {
-        if (null == mVaryViewHelperController) {
-            throw new IllegalArgumentException("You must return a right target view for loading");
-        }
-
-        if (toggle) {
-            mVaryViewHelperController.showEmpty(msg, onClickListener, img);
-        } else {
-            mVaryViewHelperController.restore();
-        }
-    }*/
-
-/**
- * toggle show error
- */
-/*    protected void toggleShowError(boolean toggle, String msg, View.OnClickListener onClickListener) {
-        if (null == mVaryViewHelperController) {
-            throw new IllegalArgumentException("You must return a right target view for loading");
-        }
-
-        if (toggle) {
-            mVaryViewHelperController.showError(msg, onClickListener);
-        } else {
-            mVaryViewHelperController.restore();
-        }
-    }*/
-
-/**
- * toggle show network error
- */
-/*
-    protected void toggleNetworkError(boolean toggle, View.OnClickListener onClickListener) {
-        if (null == mVaryViewHelperController) {
-            throw new IllegalArgumentException("You must return a right target view for loading");
-        }
-
-        if (toggle) {
-            mVaryViewHelperController.showNetworkError(onClickListener);
-        } else {
-            mVaryViewHelperController.restore();
-        }
-    }*/

@@ -5,6 +5,7 @@ import android.view.View;
 /**
  * Created by Anthony on 2016/5/3.
  * Class Note:
+ * MVP中所有 View的接口
  */
 public interface BaseView {
 

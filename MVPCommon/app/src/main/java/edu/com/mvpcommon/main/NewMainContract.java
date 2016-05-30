@@ -33,11 +33,11 @@ public interface NewMainContract {
 
         void processHeadIconClicked(boolean isLogin);//点击头像，跳转到
 
-// todo 在设置模块中进行处理
         void Share();//分享操作
 
         void Logout();//登出
 
+        void UploadPicture(Uri uri);
     }
 
     interface View extends BaseView{

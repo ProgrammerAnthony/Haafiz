@@ -18,6 +18,9 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.avos.avoscloud.PushService;
+//import com.hyphenate.easeui.EaseConstant;
+
 import butterknife.Bind;
 import butterknife.OnClick;
 import cn.pedant.SweetAlert.SweetAlertDialog;
@@ -26,7 +29,9 @@ import edu.com.mvpcommon.personal.info.PersonalInfoActivity;
 import edu.com.mvpcommon.personal.login.NewLoginActivity;
 import edu.com.mvpcommon.setting.about.AboutActivity;
 import edu.com.mvplibrary.model.bean.Channel;
+import edu.com.mvplibrary.model.rx.RxLeanCloud;
 import edu.com.mvplibrary.ui.activity.AbsBaseActivity;
+import edu.com.mvplibrary.ui.widget.ViewDisplay;
 import edu.com.mvplibrary.util.PreferenceManager;
 
 /**
@@ -70,19 +75,19 @@ public class NewDrawerMainActivity extends AbsBaseActivity implements NewMainCon
     private boolean isLogin;
 
     private boolean isConflictDialogShow = false;
+    private RxLeanCloud mRxLeanCloud;
     @Override
     protected void initViewsAndEvents() {
-        // TODO: 2016/5/26  消息推送
-//        PushService.setDefaultPushCallback(this, MainActivity.class); 消息推送
-        // TODO: 2016/5/26 账号在异地登陆处理
+        // 消息推送
+        PushService.setDefaultPushCallback(this, MainActivity.class);
+        // 账号在异地登陆处理
 //        if (getIntent().getBooleanExtra(EaseConstant.ACCOUNT_CONFLICT, false) && !isConflictDialogShow) {
 //            ConflictAngRestart();
 //        }
-
         //  获取登陆状态
         isLogin = PreferenceManager.getInstance().isLogined();
         //初始化Presenter
-        mMainPresenter = new NewMainPresenter(mContext);
+        mMainPresenter = new NewMainPresenter(mContext,mRxLeanCloud);
         mMainPresenter.attachView(this);
 
         setSupportActionBar(toolbar);
@@ -241,6 +246,7 @@ public class NewDrawerMainActivity extends AbsBaseActivity implements NewMainCon
             default:
                 break;
         }
+
         return  true;
 /*        if (id == R.id.nav_moment) {
             if (souvenirFragment == null) {

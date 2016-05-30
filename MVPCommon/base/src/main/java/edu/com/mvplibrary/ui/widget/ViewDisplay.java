@@ -19,10 +19,10 @@ import edu.com.mvplibrary.util.FileUtil2;
 /**
  * Create By Anthony on 2016/1/15
  * Class Note:
- * 1 Displayer for Activity & Fragment,
- * set "type" to get corresponding activity
- * 2 create fragment using channel
- * 3 define activity & fragment in "raw" folder under "res" folder
+ *
+ * 1 根据不同的Map对应关系，解析出对应的View（Fragment或者Activity）
+ * 2 使用“Channle”保存对应数据
+ * 3 在res/raw文件夹下保存map（xxx.properties） 文件
  */
 public class ViewDisplay {
     public static final String TAG = "ViewDisplay";
@@ -37,6 +37,12 @@ public class ViewDisplay {
     }
 
 
+    /**
+     * 根据对应的Channle 返回对应的fragment或者跳转activity
+     * @param mContext   context对象
+     * @param mChannel   channle对象
+     * @return           返回的fragmment，如果channel对应activity将返回空
+     */
     public static Fragment initialView(Context mContext, Channel mChannel) {
         if (mContext == null) {
             mContext = AbsApplication.app();
@@ -89,6 +95,11 @@ public class ViewDisplay {
         return null;
     }
 
+    /**
+     *  为fragment添加参数，参数也通过Channle对象传递过来
+     * @param fragment
+     * @param c
+     */
     private static void addArguments(Fragment fragment, Channel c) {
         if (fragment == null) {
             return;

@@ -22,17 +22,15 @@ public class MyApplication extends AbsApplication {
     public void onCreate() {
         super.onCreate();
         initYWSDK();
-        initLeanCloud();
-    }
 
-    private void initLeanCloud() {
-//        AVUser.alwaysUseSubUserClass(User.class);
-//        AVObject.registerSubclass(Gallery.class);
-//        AVObject.registerSubclass(Souvenir.class);
-//        AVOSCloud.initialize(this, "GpLTBKYub2ekB1GG2UUDdpmu-gzGzoHsz", "IjkswTLu60dF1rnnAHNoLM98");
-//        AVAnalytics.enableCrashReport(this, true);
+        initEaseUI();
 
     }
+
+    private void initEaseUI() {
+//        EaseUIHelper.getInstance(this).init();
+    }
+
 
 
     private void initYWSDK() {

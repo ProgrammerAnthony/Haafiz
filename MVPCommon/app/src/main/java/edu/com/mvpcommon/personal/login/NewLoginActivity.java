@@ -115,10 +115,6 @@ public class NewLoginActivity extends AbsSwipeBackActivity implements LoginContr
 
     @Override
     public void dismissLoginView() {
-//        if(isBlured){
-//            Blurry.with(NewLoginActivity.this).radius(25).sampling(2).async().capture(splashBg).into(splashBg);
-//            isBlured = false;
-//        }
         ObjectAnimator animator = ObjectAnimator.ofFloat(login, "alpha", 1f, 0.1f);
         animator.addListener(new AnimatorListenerAdapter() {
             @Override

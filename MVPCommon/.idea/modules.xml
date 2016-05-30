@@ -7,11 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/base/base.iml" filepath="$PROJECT_DIR$/base/base.iml" />
       <module fileurl="file://$PROJECT_DIR$/ThirdPart/openimSDK/openimSDK.iml" filepath="$PROJECT_DIR$/ThirdPart/openimSDK/openimSDK.iml" />
       <module fileurl="file://$PROJECT_DIR$/ThirdPart/pagerslidingtabstrip/pagerslidingtabstrip.iml" filepath="$PROJECT_DIR$/ThirdPart/pagerslidingtabstrip/pagerslidingtabstrip.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ThirdPart/pulltorefreshhandmark/pulltorefreshhandmark.iml" filepath="$PROJECT_DIR$/ThirdPart/pulltorefreshhandmark/pulltorefreshhandmark.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ThirdPart/slidingmenu/slidingmenu.iml" filepath="$PROJECT_DIR$/ThirdPart/slidingmenu/slidingmenu.iml" />
       <module fileurl="file://$PROJECT_DIR$/ThirdPart/sweetDialog/sweetDialog.iml" filepath="$PROJECT_DIR$/ThirdPart/sweetDialog/sweetDialog.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ThirdPart/ultraptrwithloadmore/ultraptrwithloadmore.iml" filepath="$PROJECT_DIR$/ThirdPart/ultraptrwithloadmore/ultraptrwithloadmore.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ThirdPart/viewpagerindicator/viewpagerindicator.iml" filepath="$PROJECT_DIR$/ThirdPart/viewpagerindicator/viewpagerindicator.iml" />
     </modules>
   </component>
 </project>

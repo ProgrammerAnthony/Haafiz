@@ -24,9 +24,10 @@ public abstract class AbsSplashActivity extends AbsBaseActivity {
         initData();
     }
 
+    /**
+     *
+     */
     protected void initData() {
-
-
         HttpRequest.Builder builder = new HttpRequest.Builder();
         HttpRequest request = builder.url(getFirstUrl()).build();
         HttpUtil.getInstance().loadString(request, new StringHttpCallback() {
@@ -46,6 +47,9 @@ public abstract class AbsSplashActivity extends AbsBaseActivity {
         });
     }
 
+    /**
+     * todo RxJava  实现界面跳转
+     */
     private void showView() {
         AsyncTask<String, String, String> showMainTask = new AsyncTask<String, String, String>() {
             @Override
