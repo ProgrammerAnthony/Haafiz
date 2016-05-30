@@ -508,6 +508,9 @@ public class RxLeanCloud {
                     }
 
                     @Override
+
+
+
                     public void onError(int i, String s) {
                         subscriber.onError(new Throwable(s));
                     }

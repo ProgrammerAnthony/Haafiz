@@ -8,12 +8,12 @@
         "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\drawable\\warning_circle.xml"
     },
     {
-        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\drawable\\blue_button_background.xml",
-        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\drawable\\blue_button_background.xml"
-    },
-    {
         "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\drawable\\gray_button_background.xml",
         "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\drawable\\gray_button_background.xml"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\drawable\\blue_button_background.xml",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\drawable\\blue_button_background.xml"
     },
     {
         "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\drawable\\red_button_background.xml",

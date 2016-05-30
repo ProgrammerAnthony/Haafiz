@@ -132,12 +132,12 @@
         "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_comment_l_nested.9.png"
     },
     {
-        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_transparent_button_bg_n.9.png",
-        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_transparent_button_bg_n.9.png"
-    },
-    {
         "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_img_loading.png",
         "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_img_loading.png"
+    },
+    {
+        "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_transparent_button_bg_n.9.png",
+        "source": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\aliwx_transparent_button_bg_n.9.png"
     },
     {
         "merged": "E:\\work\\workspace2\\open source\\MVPCommon\\MVPCommon\\ThirdPart\\openimSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\aliwx_tribe_head_default.png",
