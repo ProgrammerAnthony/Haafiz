@@ -1,0 +1,5 @@
+include ':datingBall', ':base', ':pagerslidingtabstrip', ':openimSDK', ':sweetDialog'
+
+project(':pagerslidingtabstrip').projectDir = new File('ThirdPart/pagerslidingtabstrip')
+project(':openimSDK').projectDir = new File('ThirdPart/openimSDK')
+project(':sweetDialog').projectDir =new File('ThirdPart/sweetDialog')
