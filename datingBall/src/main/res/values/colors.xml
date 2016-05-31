@@ -36,7 +36,6 @@
 
 
 
-
     <!--来自友盟Im-->
     <!--标题栏背景色-->
     <color name="normal_title_bg">#00b4ff</color>
@@ -259,7 +258,6 @@
     <color name="theme_text_black">#333</color>
     <color name="theme_text_white">#fff</color>
 
-    <color name="black2">#ffeeeeee</color>
 
 
     <color name="colorBlue">#69b3e0</color>

@@ -26,12 +26,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true"
-                app:contentScrim="?attr/colorPrimary"
+                app:contentScrim="@color/colorPrimary"
                 app:expandedTitleMarginEnd="64dp"
                 app:expandedTitleMarginStart="48dp"
                 app:layout_collapseParallaxMultiplier="0.7"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
-                app:title="Moment">
+
+                app:title="@string/drawer_chatting">
 
                 <RelativeLayout
                     android:id="@+id/rl_background"
@@ -47,18 +48,6 @@
                         android:fitsSystemWindows="true"
                         android:scaleType="centerCrop"
                         android:src="@drawable/login_background" />
-
-                    <!--<View-->
-                        <!--android:id="@+id/fade_cover"-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_alignBottom="@id/iv_album"-->
-                        <!--android:layout_alignEnd="@id/iv_album"-->
-                        <!--android:layout_alignLeft="@id/iv_album"-->
-                        <!--android:layout_alignRight="@id/iv_album"-->
-                        <!--android:layout_alignStart="@id/iv_album"-->
-                        <!--android:layout_alignTop="@id/iv_album"-->
-                        <!--android:background="@color/amber500_alpha_54" />-->
 
                 </RelativeLayout>
 

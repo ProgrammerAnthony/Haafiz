@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.com.mvpCommon">
+    package="edu.com.app">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -25,7 +25,7 @@
 
 
     <application
-        android:name="edu.com.mvpCommon.MyApplication"
+        android:name="edu.com.app.MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/basketball_icon"
         android:label="@string/app_name"
@@ -34,7 +34,7 @@
 
 
         <activity
-            android:name=".splash.SplashActivity"
+            android:name="edu.com.app.splash.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,32 +42,32 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".main.MainActivity"
+            android:name="edu.com.app.main.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="edu.com.mvpCommon.news.detail.WebViewActivity"
+            android:name="edu.com.app.news.detail.WebViewActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="edu.com.mvpCommon.setting.SettingsActivity"
+            android:name="edu.com.app.setting.SettingsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="edu.com.mvpCommon.personal.edit.PersonalEditActivity"
+            android:name="edu.com.app.personal.edit.PersonalEditActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="edu.com.mvpCommon.nearby.detail.NearByDetailActivity"
+            android:name=".find.nearby.detail.NearByDetailActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="edu.com.mvpCommon.friends.add.FriendsAddActivity"
+            android:name="edu.com.app.friends.add.FriendsAddActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="edu.com.mvpCommon.personal.login.LoginActivity"
+            android:name="edu.com.app.personal.login.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="edu.com.mvpCommon.personal.login.NewLoginActivity"
+            android:name="edu.com.app.personal.login.NewLoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="edu.com.mvpCommon.personal.info.PersonalInfoActivity"
+            android:name="edu.com.app.personal.info.PersonalInfoActivity"
             android:screenOrientation="portrait" />
 
 

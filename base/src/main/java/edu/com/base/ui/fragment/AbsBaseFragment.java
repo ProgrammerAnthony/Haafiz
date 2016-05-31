@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import butterknife.ButterKnife;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
+import edu.com.base.ui.BaseView;
 import edu.com.base.util.AppUtils;
 import edu.com.base.util.ToastUtils;
 import edu.com.mvplibrary.R;
@@ -26,7 +27,7 @@ import edu.com.mvplibrary.R;
  * some base operation.
  * 2 do operation in initViewAndEvents(){@link #initViewsAndEvents(View rootView)}
  */
-public abstract class AbsBaseFragment extends Fragment {
+public abstract class AbsBaseFragment extends Fragment implements BaseView{
     /**
      * Log tag
      */
@@ -151,5 +152,42 @@ public abstract class AbsBaseFragment extends Fragment {
             mProgressDialog.dismiss();
         }
     }
+
+    @Override
+    public void showMessage(String msg) {
+        showMessageDialog(msg);
+    }
+
+    @Override
+    public void close() {
+//        finish();
+    }
+
+    @Override
+    public void showProgress(String message) {
+        showProgressDialog(message);
+    }
+
+    @Override
+    public void showProgress(String message, int progress) {
+        showProgressDialog(message, progress);
+    }
+
+    @Override
+    public void hideProgress() {
+        hideProgressDialog();
+    }
+
+    @Override
+    public void showErrorMessage(String msg, String content) {
+        showErrorDialog(msg, content, new SweetAlertDialog.OnSweetClickListener() {
+            @Override
+            public void onClick(SweetAlertDialog sweetAlertDialog) {
+                sweetAlertDialog.dismissWithAnimation();
+            }
+        });
+    }
+
+
 }
 
