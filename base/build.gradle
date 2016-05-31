@@ -1,0 +1,142 @@
+apply plugin: 'com.android.library'
+apply plugin: 'realm-android'
+apply plugin: 'com.neenbedankt.android-apt'
+def cfg = rootProject.ext.configuration
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
+
+    defaultConfig {
+        minSdkVersion cfg.minSdkVersion
+        targetSdkVersion cfg.targetSdkVersion
+        versionCode cfg.versionCode
+        versionName cfg.versionName
+
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    //appcompat
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    //v4
+    compile 'com.android.support:support-v4:23.4.0'
+    //recyclerView
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    //design library
+    compile 'com.android.support:design:23.4.0'
+    //adapter
+    compile 'com.joanzapata.android:base-adapter-helper:1.1.11'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v1.7.0'
+    //beautiful log utils
+    compile 'com.orhanobut:logger:1.11'
+    //nine old android
+    compile 'com.nineoldandroids:library:2.4.0'
+    //NiftyDialog
+    compile 'com.github.sd6352051.niftydialogeffects:niftydialogeffects:1.0.0@aar'
+    //Material Design Progress Bar
+    compile 'com.pnikosis:materialish-progress:1.7'
+    // Glide to load image
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //swipe menu listview
+    compile 'com.baoyz.swipemenulistview:library:1.3.0'
+    //umeng alalysis
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    //butterKnife annotation
+    compile 'com.jakewharton:butterknife:7.0.1'
+//    compile 'com.jakewharton:butterknife:8.0.1'
+//    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    //beautiful loading view
+    compile 'com.wang.avi:library:1.0.1'
+    //about page util
+    compile 'com.github.medyo:android-about-page:1.0.8'
+    //photoview
+    compile 'com.github.chrisbanes.photoview:library:1.2.4'
+    //RxAndroid
+    compile 'io.reactivex:rxandroid:1.2.0'
+    //RxJava
+    compile 'io.reactivex:rxjava:1.1.5'
+    //RxPermission
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.7.0@aar'
+    //likeButton
+    compile 'com.github.jd-alexander:LikeButton:0.2.0'
+    //material login view
+    compile 'com.github.shem8:material-login:1.4.0'
+    //shimmer
+    compile 'com.facebook.shimmer:shimmer:0.1.0@aar'
+    //okhttp
+
+    //compile 'com.squareup.okhttp3:okhttp:3.2.0'
+
+    //Library for picking pictures from gallery or camera
+    compile 'com.github.jkwiecien:EasyImage:1.2.3'
+    //img crop library
+    compile 'com.yalantis:ucrop:1.5.0'
+    //blurry library
+    compile 'jp.wasabeef:blurry:2.0.2'
+    //recyclerview animation
+    compile 'jp.wasabeef:recyclerview-animators:2.2.3'
+    //Material progress circle around any FloatingActionButton.
+    compile 'com.github.jorgecastilloprz:fabprogresscircle:1.01@aar'
+    //leakcanary
+
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+
+    // or 1.4-beta1
+
+    //dagger2
+
+    apt 'com.google.dagger:dagger-compiler:2.0.2'
+
+    //指定注解处理器
+
+    compile 'com.google.dagger:dagger:2.0.2'
+
+    //dagger公用api
+
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+
+//multiDex
+    compile 'com.android.support:multidex:1.0.1'
+
+    //添加android缺失的部分javax注解
+    compile project(':openimSDK')
+    compile project(':pagerslidingtabstrip')
+    compile project(':sweetDialog')
+    compile files('libs/okhttp-2.7.0.jar')
+    compile files('libs/okhttputils-2_3_4.jar')
+
+//--------------LeanCloud------------------------
+    // LeanCloud 基础包
+    compile('cn.leancloud.android:avoscloud-sdk:v3.+')
+
+    // 推送与实时聊天需要的包
+    compile('cn.leancloud.android:avoscloud-push:v3.+@aar') { transitive = true }
+
+    // LeanCloud 统计包
+    compile('cn.leancloud.android:avoscloud-statistics:v3.+')
+
+    // LeanCloud 用户反馈包
+    compile('cn.leancloud.android:avoscloud-feedback:v3.+@aar')
+
+    // avoscloud-sns：LeanCloud 第三方登录包
+    compile('cn.leancloud.android:avoscloud-sns:v3.+@aar')
+    compile('cn.leancloud.android:qq-sdk:1.6.1-leancloud')
+    // 目前新浪微博官方只提供 jar 包的集成方式
+    // 请手动下载新浪微博 SDK 的 jar 包，将其放在 libs 目录下进行集成
+
+    // LeanCloud 应用内搜索包
+    compile('cn.leancloud.android:avoscloud-search:v3.+@aar')
+
+}
