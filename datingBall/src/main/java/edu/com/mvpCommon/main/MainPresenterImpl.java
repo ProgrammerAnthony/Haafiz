@@ -1,53 +1,63 @@
 package edu.com.mvpCommon.main;
 
+import android.app.Activity;
+
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v4.app.Fragment;
+
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.text.TextUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import edu.com.base.model.rx.RxLeanCloud;
 import edu.com.base.ui.BaseView;
+import edu.com.base.util.ToastUtils;
+import edu.com.mvpCommon.R;
 
 /**
  * Created by Anthony on 2016/5/26.
  * Class Note:
  */
-public class NewMainPresenter implements NewMainContract.Presenter {
-    private NewMainContract.View mView;
+public class MainPresenterImpl implements MainContract.Presenter {
+    private MainContract.View mView;
     private Context mContext;
     private RxLeanCloud mRxLeanCloud;
+    private Activity mActivity;
+    String currentFragmentTag;
 
-    public NewMainPresenter(Context mContext,RxLeanCloud mRxLeanCloud) {
+
+    public MainPresenterImpl(Context mContext, Activity mActivity, RxLeanCloud mRxLeanCloud) {
         this.mContext = mContext;
-        this.mRxLeanCloud =mRxLeanCloud;
+        this.mActivity = mActivity;
+        this.mRxLeanCloud = mRxLeanCloud;
     }
 
-    // TODO: 2016/5/26  fragment 替换操作
     @Override
     public void replaceFragment(Fragment to, String tag, boolean isExpanded) {
-/*        FragmentManager fragmentManager = mActivity.getFragmentManager();
-        android.app.Fragment currentfragment = fragmentManager.findFragmentByTag(currentFragmentTag);
+        FragmentManager fragmentManager = ((FragmentActivity)mActivity).getSupportFragmentManager();
+
+        Fragment currentfragment = fragmentManager.findFragmentByTag(currentFragmentTag);
 
         if (currentfragment == null || !TextUtils.equals(tag, currentFragmentTag)) {
             currentFragmentTag = tag;
             fragmentManager.beginTransaction().replace(R.id.fragment_container, to, currentFragmentTag).commit();
-
-
         }
         if (isExpanded) {
-            mMainView.showScrollView();
+            mView.showScrollView();
         } else {
-            mMainView.hideScrollView();
-        }*/
+            mView.hideScrollView();
+        }
     }
 
 
     // TODO: 2016/5/26
     @Override
     public void fabOnclick() {
-
+        ToastUtils.getInstance().showToast("fab on clicked");
 /*        if (isHavedLover()) {
 
             mMainView.toAddSouvenirActivity();
@@ -60,17 +70,31 @@ public class NewMainPresenter implements NewMainContract.Presenter {
 
     /**
      * todo 初始化头像，昵称和背景
-     * @param avatar 头像
-     * @param nick 昵称
+     *
+     * @param avatar     头像
+     * @param nick       昵称
      * @param background CollapsingLayout的背景
      */
     @Override
     public void initData(ImageView avatar, TextView nick, ImageView background) {
-
+//        User user = User.getCurrentUser(User.class);
+//
+//        String avatarurl = user.getString(UserDao.AVATARURL);
+//        if (avatarurl != null) {
+//            Glide.with(mContext).load(user.getString(UserDao.AVATARURL)).bitmapTransform(new CropCircleTransformation(mContext)).diskCacheStrategy(DiskCacheStrategy.ALL).into(avatar);
+//        }
+//        if (user.getBackground() != null) {
+//            Glide.with(mContext).load(user.getBackground()).crossFade().diskCacheStrategy(DiskCacheStrategy.ALL).fitCenter().into(iv_album);
+//        }
+//        if (user.getBackground() == null && user.getLoverBackGround() != null) {
+//            Glide.with(mContext).load(user.getLoverBackGround()).crossFade().diskCacheStrategy(DiskCacheStrategy.ALL).fitCenter().into(iv_album);
+//        }
+//        nick.setText(user.getString(UserDao.NICK));
     }
 
     /**
      * 根据是否登陆进行跳转
+     *
      * @param isLogin true 表示已经登录，跳转到PersonalInfoActivity
      *                false 表示未登陆，跳转到LoginActivity
      */
@@ -155,7 +179,7 @@ public class NewMainPresenter implements NewMainContract.Presenter {
 
     @Override
     public void attachView(BaseView view) {
-        mView = (NewMainContract.View) view;
+        mView = (MainContract.View) view;
     }
 
     @Override

@@ -41,6 +41,11 @@ public class PersonalInfoActivity extends AbsSwipeBackActivity {
 
     }
 
+    @Override
+    protected void initToolBar() {
+
+    }
+
 
     @OnClick(R.id.title_image_left)
     public void onClick() {

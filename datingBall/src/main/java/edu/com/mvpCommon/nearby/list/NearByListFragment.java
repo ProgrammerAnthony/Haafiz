@@ -59,7 +59,7 @@ public class NearByListFragment extends AbsTitleFragment  implements ViewPager.O
     @OnClick(R.id.title_image_left)
     public void openDrawer() {
         if (mContext instanceof MainActivity) {
-            MainActivity.openDrawer();
+//            MainActivity.openDrawer();
         }
     }
 

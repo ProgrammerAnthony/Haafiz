@@ -49,7 +49,7 @@ public abstract class AbsApplication extends Application {
         ViewDisplay.init(this);
         ToastUtils.init(this);
         PreferenceManager.init(this);
-        LogUtil.init();
+//        LogUtil.init();
 //        LeakCanary.install(this);  //使用LeakCanary
 
         initLeanCloud();

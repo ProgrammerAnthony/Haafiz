@@ -26,4 +26,9 @@ public class NearByDetailActivity  extends AbsSwipeBackActivity {
 
     }
 
+    @Override
+    protected void initToolBar() {
+
+    }
+
 }

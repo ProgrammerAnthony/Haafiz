@@ -23,4 +23,9 @@ public class BaseWebViewActivity extends AbsSwipeBackActivity {
 
     }
 
+    @Override
+    protected void initToolBar() {
+
+    }
+
 }

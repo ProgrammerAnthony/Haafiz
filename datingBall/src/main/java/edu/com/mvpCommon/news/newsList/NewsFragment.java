@@ -15,12 +15,12 @@ import butterknife.Bind;
 import butterknife.OnClick;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import edu.com.mvpCommon.R;
-import edu.com.mvpCommon.main.MainActivity;
 
 import edu.com.base.model.bean.Channel;
 
 import edu.com.base.ui.fragment.AbsTitleFragment;
 import edu.com.base.util.AppUtils;
+import edu.com.mvpCommon.main.MainActivity;
 
 /**
  * Created by Anthony on 2016/5/3.
@@ -52,7 +52,7 @@ public class NewsFragment extends AbsTitleFragment implements NewsContract.View 
     @OnClick(R.id.title_image_left)
     public void openDrawer(){
         if (mContext instanceof MainActivity) {
-            MainActivity.openDrawer();
+//            MainActivity.openDrawer();
         }
     }
 

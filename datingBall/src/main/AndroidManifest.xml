@@ -31,8 +31,10 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.SwipeBackTranslucent">
+
+
         <activity
-            android:name="edu.com.mvpCommon.SplashActivity"
+            android:name=".splash.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,10 +42,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="edu.com.mvpCommon.main.MainActivity"
+            android:name=".main.MainActivity"
             android:screenOrientation="portrait" />
-
-
         <activity
             android:name="edu.com.mvpCommon.news.detail.WebViewActivity"
             android:screenOrientation="portrait" />
@@ -72,37 +72,35 @@
 
 
         <!-- 实时通信模块、推送（若使用该功能，需添加以下声明）START -->
-        <service android:name="com.avos.avoscloud.PushService"/>
+        <service android:name="com.avos.avoscloud.PushService" />
         <receiver android:name="com.avos.avoscloud.AVBroadcastReceiver">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
-                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
             </intent-filter>
         </receiver>
         <!-- 实时通信模块、推送 END -->
 
         <!-- 反馈组件（若使用该功能，需添加以下声明）START -->
-        <activity
-            android:name="com.avos.avoscloud.feedback.ThreadActivity" >
-        </activity>
+        <activity android:name="com.avos.avoscloud.feedback.ThreadActivity"></activity>
         <!-- 反馈组件 END -->
 
-        <!-- 设置环信应用的AppKey -->
-        <meta-data android:name="EASEMOB_APPKEY"  android:value="Your AppKey" />
-        <!-- 声明SDK所需的service SDK核心功能-->
-        <service android:name="com.hyphenate.chat.EMChatService" android:exported="true"/>
-        <!-- 声明SDK所需的receiver -->
-        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
-                <data android:scheme="package"/>
-            </intent-filter>
-            <!-- 可选filter -->
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
-                <action android:name="android.intent.action.USER_PRESENT" />
-            </intent-filter>
-        </receiver>
+        <!--        &lt;!&ndash; 设置环信应用的AppKey &ndash;&gt;
+                <meta-data android:name="EASEMOB_APPKEY"  android:value="Your AppKey" />
+                &lt;!&ndash; 声明SDK所需的service SDK核心功能&ndash;&gt;
+                <service android:name="com.hyphenate.chat.EMChatService" android:exported="true"/>
+                &lt;!&ndash; 声明SDK所需的receiver &ndash;&gt;
+                <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+                    <intent-filter>
+                        <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                        <data android:scheme="package"/>
+                    </intent-filter>
+                    &lt;!&ndash; 可选filter &ndash;&gt;
+                    <intent-filter>
+                        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                        <action android:name="android.intent.action.USER_PRESENT" />
+                    </intent-filter>
+                </receiver>-->
 
     </application>
 

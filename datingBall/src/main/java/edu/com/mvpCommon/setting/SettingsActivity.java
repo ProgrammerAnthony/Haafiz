@@ -75,6 +75,11 @@ public class SettingsActivity extends AbsSwipeBackActivity {
 
     }
 
+    @Override
+    protected void initToolBar() {
+
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

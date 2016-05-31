@@ -7,8 +7,8 @@ import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.OnClick;
 import edu.com.mvpCommon.R;
-import edu.com.mvpCommon.main.MainActivity;
 import edu.com.base.ui.fragment.AbsTitleFragment;
+import edu.com.mvpCommon.main.MainActivity;
 
 /**
  * Created by Anthony on 2016/5/10.
@@ -25,7 +25,7 @@ public class PersonalInfoFragment extends AbsTitleFragment {
     @OnClick(R.id.title_image_left)
     public void openDrawer(){
         if (mContext instanceof MainActivity) {
-            MainActivity.openDrawer();
+//            MainActivity.openDrawer();
         }
     }
     @Override

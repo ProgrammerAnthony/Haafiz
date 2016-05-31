@@ -18,9 +18,9 @@ import butterknife.Bind;
 import butterknife.OnClick;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import edu.com.mvpCommon.R;
-import edu.com.mvpCommon.main.MainActivity;
 import edu.com.base.ui.activity.AbsSwipeBackActivity;
 import edu.com.base.util.LogUtil;
+import edu.com.mvpCommon.main.MainActivity;
 import jp.wasabeef.blurry.Blurry;
 import shem.com.materiallogin.MaterialLoginView;
 import shem.com.materiallogin.MaterialLoginViewListener;
@@ -77,6 +77,11 @@ public class NewLoginActivity extends AbsSwipeBackActivity implements LoginContr
 
     @Override
     protected void initDagger() {
+
+    }
+
+    @Override
+    protected void initToolBar() {
 
     }
 
@@ -150,40 +155,6 @@ public class NewLoginActivity extends AbsSwipeBackActivity implements LoginContr
         }
     }
 
-    @Override
-    public void showMessage(String msg) {
-        showMessageDialog(msg);
-    }
-
-    @Override
-    public void close() {
-        finish();
-    }
-
-    @Override
-    public void showProgress(String message) {
-        showProgressDialog(message);
-    }
-
-    @Override
-    public void showProgress(String message, int progress) {
-        showProgressDialog(message, progress);
-    }
-
-    @Override
-    public void hideProgress() {
-        hideProgressDialog();
-    }
-
-    @Override
-    public void showErrorMessage(String msg, String content) {
-        showErrorDialog(msg, content, new SweetAlertDialog.OnSweetClickListener() {
-            @Override
-            public void onClick(SweetAlertDialog sweetAlertDialog) {
-                sweetAlertDialog.dismissWithAnimation();
-            }
-        });
-    }
 
 
 }

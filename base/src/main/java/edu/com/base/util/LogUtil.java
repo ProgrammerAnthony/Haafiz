@@ -22,6 +22,7 @@ public class LogUtil {
     private LogUtil() {
     }
 
+
     public static Settings init() {
         return Logger.init();
     }

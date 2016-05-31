@@ -10,17 +10,21 @@ import butterknife.ButterKnife;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
+import edu.com.base.ui.BaseView;
 import edu.com.base.util.AppUtils;
 import edu.com.base.util.BaseAppManager;
+import edu.com.base.util.LogUtil;
+import edu.com.base.util.StatusBarUtil;
 import edu.com.base.util.ToastUtils;
 import edu.com.mvplibrary.R;
 
 /**
  * Created by Anthony on 2016/4/24.
  * Class Note:
- * 所有的activity继承于这个类
+ * 1 所有的activity继承于这个类，
+ * 2 实现BaseView中的方法（处理进度条，显示对话框）
  */
-public abstract class AbsBaseActivity extends AppCompatActivity {
+public abstract class AbsBaseActivity extends AppCompatActivity implements BaseView{
     protected static String TAG_LOG = null;// Log tag
 
     protected Context mContext = null;//context
@@ -33,19 +37,25 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+
         mContext = this;
 
         TAG_LOG = this.getClass().getSimpleName();
-        BaseAppManager.getInstance().addActivity(this);
+        LogUtil.init(TAG_LOG);
 
+        BaseAppManager.getInstance().addActivity(this);
+//        StatusBarUtil.setColor(this, getResources().getColor(R.color.colorPrimary));
 
         if (getContentViewID() != 0)
             setContentView(getContentViewID());
 
         ButterKnife.bind(this);
         initDagger();
+        initToolBar();
         initViewsAndEvents();
     }
+
+
 
 
     @Override
@@ -86,7 +96,10 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
      * todo add Dagger init
      */
     protected abstract void initDagger();
-
+    /**
+     * todo init tool bar
+     */
+    protected abstract void initToolBar();
     /**
      * show Message in screen
      */
@@ -141,260 +154,39 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
             mProgressDialog.dismiss();
         }
     }
+    @Override
+    public void showMessage(String msg) {
+        showMessageDialog(msg);
+    }
+
+    @Override
+    public void close() {
+        finish();
+    }
+
+    @Override
+    public void showProgress(String message) {
+        showProgressDialog(message);
+    }
+
+    @Override
+    public void showProgress(String message, int progress) {
+        showProgressDialog(message, progress);
+    }
+
+    @Override
+    public void hideProgress() {
+        hideProgressDialog();
+    }
+
+    @Override
+    public void showErrorMessage(String msg, String content) {
+        showErrorDialog(msg, content, new SweetAlertDialog.OnSweetClickListener() {
+            @Override
+            public void onClick(SweetAlertDialog sweetAlertDialog) {
+                sweetAlertDialog.dismissWithAnimation();
+            }
+        });
+    }
 }
 
-/**
- * loading view controller
- * <p>
- * is applyStatusBarTranslucency
- * <p>
- * get loading view
- * <p>
- * toggle show loading
- * <p>
- * toggle show empty
- * <p>
- * toggle show empty
- * <p>
- * toggle show error
- * <p>
- * toggle show network error
- * <p>
- * use SystemBarTintManager to change status bar
- *
- * @param tintDrawable
- * <p>
- * set status bar translucency
- * call this before use {@link SystemBarTintManager}
- * @param on
- * <p>
- * is applyStatusBarTranslucency
- * <p>
- * get loading view
- * <p>
- * toggle show loading
- * <p>
- * toggle show empty
- * <p>
- * toggle show empty
- * <p>
- * toggle show error
- * <p>
- * toggle show network error
- * <p>
- * use SystemBarTintManager to change status bar
- * @param tintDrawable
- * <p>
- * set status bar translucency
- * call this before use {@link SystemBarTintManager}
- * @param on
- * <p>
- * change to day/night mode if needed
- * <p>
- * network connected
- * <p>
- * network disconnected
- * <p>
- * get bundle extras
- * <p>
- * network status
- * <p>
- * is applyStatusBarTranslucency
- * <p>
- * get loading view
- * <p>
- * toggle show loading
- * <p>
- * toggle show empty
- * <p>
- * toggle show empty
- * <p>
- * toggle show error
- * <p>
- * toggle show network error
- * <p>
- * use SystemBarTintManager to change status bar
- * @param tintDrawable
- * <p>
- * set status bar translucency
- * call this before use {@link SystemBarTintManager}
- * @param on
- * <p>
- * change to day/night mode if needed
- * <p>
- * network connected
- * <p>
- * network disconnected
- * <p>
- * get bundle extras
- * <p>
- * network status
- */
-//    private VaryViewHelperController mVaryViewHelperController = null;
-/**
- * is applyStatusBarTranslucency
- */
-//    protected abstract boolean isApplyStatusBarTranslucency();
-/**
- * get loading view
- */
-//    protected abstract View getLoadingTargetView();
-//    private NightModeHelper mNightModeHelper;//day night mode change
-/**
- * toggle show loading
- */
-//    protected void toggleShowLoading(boolean toggle, String msg) {
-//        if (null == mVaryViewHelperController) {
-//            throw new IllegalArgumentException("You must return a right target view for loading");
-//        }
-//
-//        if (toggle) {
-//            mVaryViewHelperController.showLoading(msg);
-//        } else {
-//            mVaryViewHelperController.restore();
-//        }
-//    }
-
-/**
- * toggle show empty
- */
-//    protected void toggleShowEmpty(boolean toggle, String msg, View.OnClickListener onClickListener) {
-//        if (null == mVaryViewHelperController) {
-//            throw new IllegalArgumentException("You must return a right target view for loading");
-//        }
-//
-//        if (toggle) {
-//            mVaryViewHelperController.showEmpty(msg, onClickListener);
-//        } else {
-//            mVaryViewHelperController.restore();
-//        }
-//    }
-
-/**
- * toggle show empty
- */
-//    protected void toggleShowEmpty(boolean toggle, String msg, View.OnClickListener onClickListener, int img) {
-//        if (null == mVaryViewHelperController) {
-//            throw new IllegalArgumentException("You must return a right target view for loading");
-//        }
-//
-//        if (toggle) {
-//            mVaryViewHelperController.showEmpty(msg, onClickListener, img);
-//        } else {
-//            mVaryViewHelperController.restore();
-//        }
-//    }
-
-/**
- * toggle show error
- */
-//    protected void toggleShowError(boolean toggle, String msg, View.OnClickListener onClickListener) {
-//        if (null == mVaryViewHelperController) {
-//            throw new IllegalArgumentException("You must return a right target view for loading");
-//        }
-//
-//        if (toggle) {
-//            mVaryViewHelperController.showError(msg, onClickListener);
-//        } else {
-//            mVaryViewHelperController.restore();
-//        }
-//    }
-
-/**
- * toggle show network error
- */
-//    protected void toggleNetworkError(boolean toggle, View.OnClickListener onClickListener) {
-//        if (null == mVaryViewHelperController) {
-//            throw new IllegalArgumentException("You must return a right target view for loading");
-//        }
-//
-//        if (toggle) {
-//            mVaryViewHelperController.showNetworkError(onClickListener);
-//        } else {
-//            mVaryViewHelperController.restore();
-//        }
-//    }
-
-/**
- * use SystemBarTintManager to change status bar
- *
- * @param tintDrawable
- */
-//    protected void setSystemBarTintDrawable(Drawable tintDrawable) {
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-//            SystemBarTintManager mTintManager = new SystemBarTintManager(this);
-//            if (tintDrawable != null) {
-//                mTintManager.setStatusBarTintEnabled(true);
-//                mTintManager.setTintDrawable(tintDrawable);
-//            } else {
-//                mTintManager.setStatusBarTintEnabled(false);
-//                mTintManager.setTintDrawable(null);
-//            }
-//        }
-//    }
-
-/**
- * set status bar translucency
- * call this before use {@link SystemBarTintManager}
- *
- * @param on
- */
-//    protected void setTranslucentStatus(boolean on) {
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-//            Window win = getWindow();
-//            WindowManager.LayoutParams winParams = win.getAttributes();
-//            final int bits = WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS;
-//            if (on) {
-//                winParams.flags |= bits;
-//            } else {
-//                winParams.flags &= ~bits;
-//            }
-//            win.setAttributes(winParams);
-//        }
-//    }
-//
-//mNetChangeObserver = new NetChangeObserver() {
-//@Override
-//public void onNetConnected(NetUtils.NetType type) {
-//        super.onNetConnected(type);
-//        onNetworkConnected(type);
-//        }
-//
-//@Override
-//public void onNetDisConnect() {
-//        super.onNetDisConnect();
-//        onNetworkDisConnected();
-//        }
-//        };
-//
-//        NetStateReceiver.registerObserver(mNetChangeObserver);
-/**
- * change to day/night mode if needed
- */
-//    protected void changeDayNightMode() {
-//        mNightModeHelper.toggle();
-//    }
-/**
- * network connected
- */
-//    protected void onNetworkConnected(NetUtils.NetType type) {
-//        // TODO: 2016/5/11 net work connect ,do something
-//    }
-
-/**
- * network disconnected
- */
-//    protected void onNetworkDisConnected() {
-//        // TODO: 2016/5/11 net work disconnect ,do something
-//    }
-/**
- * get bundle extras
- */
-//    protected void getBundleExtras(Bundle extras) {
-////        mWebTitle = extras.getString(BUNDLE_KEY_TITLE);
-//    }
-/**
- * network status
- */
-//    protected NetChangeObserver mNetChangeObserver = null;
-//        mNightModeHelper = new NightModeHelper(this);

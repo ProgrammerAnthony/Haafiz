@@ -25,4 +25,9 @@ public class PersonalEditActivity extends AbsSwipeBackActivity {
     protected void initDagger() {
 
     }
+
+    @Override
+    protected void initToolBar() {
+
+    }
 }

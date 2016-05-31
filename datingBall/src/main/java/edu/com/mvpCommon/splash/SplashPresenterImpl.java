@@ -1,54 +1,59 @@
-package edu.com.base.ui.activity;
+package edu.com.mvpCommon.splash;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.AsyncTask;
 
 import edu.com.base.model.http.HttpUtil;
 import edu.com.base.model.http.callback.StringHttpCallback;
 import edu.com.base.model.http.request.HttpRequest;
+import edu.com.base.model.rx.RxLeanCloud;
+import edu.com.base.ui.BaseView;
 import edu.com.base.util.ToastUtils;
+import edu.com.mvpCommon.main.MainContract;
 
 /**
- * Created by Anthony on 2016/5/11.
+ * Created by Anthony on 2016/5/31.
  * Class Note:
- * todo update needed  using rxJava instead of AsyncTask
  */
-public abstract class AbsSplashActivity extends AbsBaseActivity {
+public class SplashPresenterImpl implements SplashContract.Presenter {
+    private SplashContract.View mView;
+    private Context mContext;
+    private String firstUrl;
     private static final short SPLASH_SHOW_SECONDS = 1;
     private long mShowMainTime;
 
 
-    @Override
-    protected void initViewsAndEvents() {
+    public SplashPresenterImpl(Context mContext) {
+        this.mContext = mContext;
         mShowMainTime = System.currentTimeMillis() + SPLASH_SHOW_SECONDS * 2000;
-        initData();
     }
 
-    /**
-     *
-     */
-    protected void initData() {
+
+    @Override
+    public void initData() {
+        // TODO: 2016/5/31  url to get data
+        firstUrl = "file://xxx";
         HttpRequest.Builder builder = new HttpRequest.Builder();
-        HttpRequest request = builder.url(getFirstUrl()).build();
+        HttpRequest request = builder.url(firstUrl).build();
         HttpUtil.getInstance().loadString(request, new StringHttpCallback() {
             @Override
             public void onResponse(String response) {
-                //// TODO: 2016/5/17  get url response
+                // TODO: 2016/5/31  url get
                 showView();
-                ToastUtils.getInstance().showToast("获取一级页面成功");
+                ToastUtils.getInstance().showToast("获取数据成功");
             }
 
             @Override
             public void onError(String error) {
-                // TODO: 2016/5/17  error get url response
+                // TODO: 2016/5/31 get url failed
                 showView();
-                ToastUtils.getInstance().showToast("获取一级页面失败");
+                ToastUtils.getInstance().showToast("获取数据失败");
             }
         });
     }
 
-    /**
-     * todo RxJava  实现界面跳转
-     */
+    // TODO: 2016/5/31  using rxJava to process
     private void showView() {
         AsyncTask<String, String, String> showMainTask = new AsyncTask<String, String, String>() {
             @Override
@@ -69,22 +74,23 @@ public abstract class AbsSplashActivity extends AbsBaseActivity {
 
             @Override
             protected void onPostExecute(String o) {
-                showMain();
-                finish();
+                mView.toMainActivity();
+                mView.close();
             }
         };
 
         showMainTask.execute();
     }
 
-    protected void showMain() {
-//        Channel channel =new Channel();
-//        channel.setType("1002");
-//        ViewDisplay.initialView(mContext, channel);
-
+    @Override
+    public void attachView(BaseView view) {
+        mView = (SplashContract.View) view;
     }
 
-    protected abstract String getFirstUrl();
+    @Override
+    public void detachView() {
+
+    }
 
 
 }

@@ -100,6 +100,11 @@ public class WebViewActivity extends AbsSwipeBackActivity {
 
     }
 
+    @Override
+    protected void initToolBar() {
+
+    }
+
 
     private void setWebViewOption() {
         //设置编码

@@ -120,6 +120,11 @@ public class LoginActivity extends AbsSwipeBackActivity implements LoginContract
     }
 
     @Override
+    protected void initToolBar() {
+
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -568,41 +573,6 @@ public class LoginActivity extends AbsSwipeBackActivity implements LoginContract
         }
         dialog.show();
     }
-
-
-
-
-    @Override
-    public void showMessage(String msg) {
-
-    }
-
-    @Override
-    public void close() {
-
-    }
-
-    @Override
-    public void showProgress(String message) {
-
-    }
-
-    @Override
-    public void showProgress(String message, int progress) {
-
-    }
-
-    @Override
-    public void hideProgress() {
-
-    }
-
-    @Override
-    public void showErrorMessage(String msg, String content) {
-
-    }
-
-
     @Override
     public void toMainActivity() {
 

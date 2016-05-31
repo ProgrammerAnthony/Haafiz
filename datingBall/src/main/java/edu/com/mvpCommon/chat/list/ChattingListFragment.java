@@ -62,6 +62,5 @@ public class ChattingListFragment extends AbsTitleFragment{
     @Override
     public void onPause() {
         super.onPause();
-//        toggleShowLoading(false,"");
     }
 }

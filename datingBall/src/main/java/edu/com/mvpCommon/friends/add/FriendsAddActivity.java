@@ -26,4 +26,9 @@ public class FriendsAddActivity  extends AbsSwipeBackActivity {
     protected void initDagger() {
 
     }
+
+    @Override
+    protected void initToolBar() {
+
+    }
 }

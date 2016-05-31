@@ -39,7 +39,7 @@ public class ConversationUICustom extends IMConversationListUI {
             @Override
             public void onClick(View v) {
                 if(context instanceof MainActivity){
-                    MainActivity.openDrawer();
+//                    MainActivity.openDrawer();
                 }
             }
         });
