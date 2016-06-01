@@ -26,6 +26,7 @@ import java.io.File;
 import butterknife.Bind;
 import butterknife.OnClick;
 import cn.pedant.SweetAlert.SweetAlertDialog;
+import dagger.Component;
 import edu.com.base.ui.widget.ChoosePicDialog;
 import edu.com.base.ui.widget.StatusBarUtil;
 import edu.com.base.ui.widget.ViewDisplay;

@@ -1,4 +1,4 @@
-package edu.com.app.news.newsList;
+package edu.com.app.data;
 
 import android.content.Context;
 
@@ -8,6 +8,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import edu.com.app.news.newsList.NewsContract;
 import edu.com.base.model.bean.Channel;
 import edu.com.base.model.config.Constants;
 import edu.com.base.model.http.HttpUtil;

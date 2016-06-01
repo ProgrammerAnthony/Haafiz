@@ -2,6 +2,7 @@ package edu.com.app.news.newsList;
 
 import java.util.ArrayList;
 
+import edu.com.app.data.NewsData;
 import edu.com.base.model.bean.Channel;
 
 import edu.com.base.presenter.BasePresenter;

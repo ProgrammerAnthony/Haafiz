@@ -2,6 +2,7 @@ package edu.com.app.news.newsList;
 
 import android.content.Context;
 
+import edu.com.app.data.NewsData;
 import edu.com.base.ui.BaseView;
 
 /**

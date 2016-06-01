@@ -16,6 +16,11 @@ import edu.com.base.util.ToastUtils;
 /**
  * Created by Anthony on 2016/5/31.
  * Class Note:
+ * findFragment contains four parts:
+ * 1 friend circle  todo
+ * 2 nearby people  todo
+ * 3 scan QR code
+ * 4 shake phone to find someone shake at the sametime
  */
 public class FindFragment extends AbsBaseFragment {
     @Bind(R.id.txt_friendCircle)
@@ -45,18 +50,20 @@ public class FindFragment extends AbsBaseFragment {
     @OnClick({R.id.txt_scan, R.id.txt_shake,R.id.txt_friendCircle, R.id.txt_nearby})
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.txt_scan:
-                ToastUtils.getInstance().showToast("scan");
-                break;
-            case R.id.txt_shake:
-                ToastUtils.getInstance().showToast("shake");
-                break;
             case R.id.txt_friendCircle:
                 ToastUtils.getInstance().showToast("friend circle");
                 break;
             case R.id.txt_nearby:
                 ToastUtils.getInstance().showToast("nearby");
                 break;
+            case R.id.txt_scan:
+                ToastUtils.getInstance().showToast("scan");
+                break;
+            case R.id.txt_shake:
+                ToastUtils.getInstance().showToast("shake");
+                break;
+
+
         }
     }
 }

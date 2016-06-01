@@ -4,45 +4,65 @@ buildscript {
     repositories {
         jcenter()
         mavenCentral()
-        //这里是 LeanCloud 的包仓库
+        //LeanCloud
         maven {
             url "http://mvn.leancloud.cn/nexus/content/repositories/releases"
         }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.0.0'
+        //realm support
         classpath 'io.realm:realm-gradle-plugin:0.91.0'
+        // Better IDE support for annotations (so Android Studio interacts better with Dagger)
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
 
+// Define versions in a single place
 ext {
-    configuration = [
-            applicationId    : "edu.com.mvpcommon",
-            buildToolsVersion: "23.0.3",
-            compileSdkVersion: 23,
-            minSdkVersion    : 16,
-            targetSdkVersion : 23,
-            versionCode      : 20160520,
-            versionName      : "1.0",
+    // Sdk and tools
+    minSdkVersion = 16
+    targetSdkVersion = 23
+    compileSdkVersion = 23
+    buildToolsVersion = '23.0.3'
+    versionCode = 1
+    versionName = '1.0'
+    applicationId = 'edu.com.app'
 
-    ]
-
+    // App dependencies
+    supportLibraryVersion = '23.4.0'
+    junitVersion='4.12'
+    loggerVersion = '1.11'
+    materialishProgressVersion = '1.7'
+    glideVersion = '3.7.0'
+    butterKnifeVersion = '7.0.1'
+    aviVersion = '1.0.1'
+    photoviewVersion = '1.2.4'
+    rxandroidVersion = '1.2.0'
+    rxjavaVersion = '1.1.5'
+    rxpermissionsVersion = '0.7.0@aar'
+    materialLoginVersion = '1.4.0'
+    shimmerVersion = '0.1.0@aar'
+    easyImageVersion='1.2.3'
+    ucropVersion ='1.5.0'
+    blurryVersion ='2.0.2'
+    leakcanaryVersion ='1.4-beta2'
+    daggerCompilerVersion ='2.0.2'
+    daggerVersion = '2.0.2'
+    multidexVersion ='1.0.1'
+    javaxAnnotationVersion='10.0-b28'
 }
+
 allprojects {
     repositories {
         jcenter()
         maven { url "https://raw.githubusercontent.com/umeng/mvn-repo-umeng/master/repository" }
         maven { url "http://dl.bintray.com/tbruyelle/tbruyelle" }
         maven { url "https://jitpack.io" }
-        //这里是 LeanCloud 的包仓库
+        //leanCloud
         maven { url "http://mvn.leancloud.cn/nexus/content/repositories/releases" }
-        //dagger2
-//        maven {
-//            url 'https://oss.sonatype.org/content/repositories/snapshots/'
-//        }
     }
 }
 

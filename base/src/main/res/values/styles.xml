@@ -49,7 +49,7 @@
         <item name="android:activityCloseExitAnimation">@anim/right_out</item><!--一个activity销毁退出的效果-->
     </style>
     <!-- MainActivity theme. -->
-    <style name="MainActivityTheme" parent="AppBaseTheme">
+    <style name="MainActivityTheme" parent="Theme.AppCompat">
 
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
         <item name="android:windowNoTitle">true</item>

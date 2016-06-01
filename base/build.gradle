@@ -1,17 +1,17 @@
 apply plugin: 'com.android.library'
 apply plugin: 'realm-android'
 apply plugin: 'com.neenbedankt.android-apt'
-def cfg = rootProject.ext.configuration
+
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion '23.0.3'
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion cfg.minSdkVersion
-        targetSdkVersion cfg.targetSdkVersion
-        versionCode cfg.versionCode
-        versionName cfg.versionName
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
 
         multiDexEnabled true
     }
@@ -23,92 +23,76 @@ android {
     }
 }
 
+/*
+ Dependency versions are defined in the top level build.gradle file. This helps keeping track of
+ all versions in a single place. This improves readability and helps managing project complexity.
+ */
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
+    testCompile "junit:junit:$rootProject.junitVersion"
+
     //appcompat
-    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
     //v4
-    compile 'com.android.support:support-v4:23.4.0'
+    compile "com.android.support:support-v4:$rootProject.supportLibraryVersion"
     //recyclerView
-    compile 'com.android.support:recyclerview-v7:23.4.0'
+    compile "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
     //design library
-    compile 'com.android.support:design:23.4.0'
-    //adapter
-    compile 'com.joanzapata.android:base-adapter-helper:1.1.11'
-    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v1.7.0'
+    compile "com.android.support:design:$rootProject.supportLibraryVersion"
+
     //beautiful log utils
-    compile 'com.orhanobut:logger:1.11'
-    //nine old android
-    compile 'com.nineoldandroids:library:2.4.0'
-    //NiftyDialog
-    compile 'com.github.sd6352051.niftydialogeffects:niftydialogeffects:1.0.0@aar'
+    compile "com.orhanobut:logger:$rootProject.loggerVersion"
+
     //Material Design Progress Bar
-    compile 'com.pnikosis:materialish-progress:1.7'
+    compile "com.pnikosis:materialish-progress:$rootProject.materialishProgressVersion"
     // Glide to load image
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-    //swipe menu listview
-    compile 'com.baoyz.swipemenulistview:library:1.3.0'
-    //umeng alalysis
-    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+
     //butterKnife annotation
-    compile 'com.jakewharton:butterknife:7.0.1'
-//    compile 'com.jakewharton:butterknife:8.0.1'
-//    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    compile "com.jakewharton:butterknife:$rootProject.butterKnifeVersion"
+
     //beautiful loading view
-    compile 'com.wang.avi:library:1.0.1'
-    //about page util
-    compile 'com.github.medyo:android-about-page:1.0.8'
+    compile "com.wang.avi:library:$rootProject.aviVersion"
+
     //photoview
-    compile 'com.github.chrisbanes.photoview:library:1.2.4'
+    compile "com.github.chrisbanes.photoview:library:$rootProject.photoviewVersion"
     //RxAndroid
-    compile 'io.reactivex:rxandroid:1.2.0'
+    compile "io.reactivex:rxandroid:$rootProject.rxandroidVersion"
     //RxJava
-    compile 'io.reactivex:rxjava:1.1.5'
+    compile "io.reactivex:rxjava:$rootProject.rxjavaVersion"
+
     //RxPermission
-    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.7.0@aar'
-    //likeButton
-    compile 'com.github.jd-alexander:LikeButton:0.2.0'
+    compile "com.tbruyelle.rxpermissions:rxpermissions:$rootProject.rxpermissionsVersion"
+
     //material login view
-    compile 'com.github.shem8:material-login:1.4.0'
+    compile "com.github.shem8:material-login:$rootProject.materialLoginVersion"
     //shimmer
-    compile 'com.facebook.shimmer:shimmer:0.1.0@aar'
+    compile "com.facebook.shimmer:shimmer:$rootProject.shimmerVersion"
     //okhttp
 
     //compile 'com.squareup.okhttp3:okhttp:3.2.0'
 
     //Library for picking pictures from gallery or camera
-    compile 'com.github.jkwiecien:EasyImage:1.2.3'
+    compile "com.github.jkwiecien:EasyImage:$rootProject.easyImageVersion"
     //img crop library
-    compile 'com.yalantis:ucrop:1.5.0'
+    compile "com.yalantis:ucrop:$rootProject.ucropVersion"
     //blurry library
-    compile 'jp.wasabeef:blurry:2.0.2'
-    //recyclerview animation
-    compile 'jp.wasabeef:recyclerview-animators:2.2.3'
-    //Material progress circle around any FloatingActionButton.
-    compile 'com.github.jorgecastilloprz:fabprogresscircle:1.01@aar'
+    compile "jp.wasabeef:blurry:$rootProject.blurryVersion"
     //leakcanary
 
-    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
-    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
-    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
-
+    debugCompile "com.squareup.leakcanary:leakcanary-android:$rootProject.leakcanaryVersion"
+    releaseCompile "com.squareup.leakcanary:leakcanary-android-no-op:$rootProject.leakcanaryVersion"
+    testCompile "com.squareup.leakcanary:leakcanary-android-no-op:$rootProject.leakcanaryVersion"
     // or 1.4-beta1
-
     //dagger2
-
-    apt 'com.google.dagger:dagger-compiler:2.0.2'
-
+    apt "com.google.dagger:dagger-compiler:$rootProject.daggerCompilerVersion"
     //指定注解处理器
-
-    compile 'com.google.dagger:dagger:2.0.2'
-
+    compile "com.google.dagger:dagger:$rootProject.daggerVersion"
     //dagger公用api
-
-    provided 'org.glassfish:javax.annotation:10.0-b28'
+    provided "org.glassfish:javax.annotation:$rootProject.javaxAnnotationVersion"
 
 //multiDex
-    compile 'com.android.support:multidex:1.0.1'
+    compile "com.android.support:multidex:$rootProject.multidexVersion"
 
     //添加android缺失的部分javax注解
     compile project(':openimSDK')

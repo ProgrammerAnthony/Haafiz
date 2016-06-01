@@ -1,27 +1,26 @@
 package edu.com.app.news.newsList;
 
+import android.content.Context;
 import android.graphics.Color;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.astuetz.PagerSlidingTabStrip;
 
 import java.util.ArrayList;
 
 import butterknife.Bind;
-import butterknife.OnClick;
-import cn.pedant.SweetAlert.SweetAlertDialog;
 import edu.com.app.R;
 
+import edu.com.app.data.NewsData;
 import edu.com.base.model.bean.Channel;
 
 import edu.com.base.ui.fragment.AbsBaseFragment;
-import edu.com.base.ui.fragment.AbsTitleFragment;
+import edu.com.base.ui.widget.ViewDisplay;
 import edu.com.base.util.AppUtils;
-import edu.com.app.main.MainActivity;
 
 /**
  * Created by Anthony on 2016/5/3.
@@ -94,6 +93,56 @@ public class NewsFragment extends AbsBaseFragment implements NewsContract.View {
         mTabStrip.notifyDataSetChanged();
     }
 
+    /**
+     * Created by Anthony on 2016/2/24.
+     * Class Note: adapter extends FragmentStatePagerAdapter for Tab+ViewPager
+     */
+    public class TabViewPagerAdapter extends FragmentStatePagerAdapter {
+        private Context mContext;
+        private ArrayList<Channel> mChannels;
 
+        public TabViewPagerAdapter(Context ctx, FragmentManager fm, ArrayList<Channel> channels) {
+            super(fm);
+            mContext = ctx;
+            mChannels = channels;
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            //show child fragment
+            Fragment fragment = ViewDisplay.initialView(mContext, mChannels.get(position));
+            if (fragment == null) {
+                throw new IllegalArgumentException("cannnot get fragment");
+            }
+            return fragment;
+//        return ViewDisplay.createFragment(mContext, channel);
+        }
+
+        @Override
+        public int getCount() {
+            return mChannels.size();
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return mChannels.get(position).getTitle();
+        }
+
+        public ArrayList<Channel> getChannels() {
+            return mChannels;
+        }
+
+        public void add(Channel item) {
+            mChannels.add(item);
+        }
+
+        public void addAll(ArrayList<Channel> dataList) {
+            mChannels.addAll(dataList);
+        }
+
+        public void clear() {
+            mChannels.clear();
+        }
+    }
 
 }
