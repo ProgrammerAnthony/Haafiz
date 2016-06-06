@@ -45,7 +45,8 @@ public class ViewDisplay {
      */
     public static Fragment initialView(Context mContext, Channel mChannel) {
         if (mContext == null) {
-            mContext = AbsApplication.app();
+//            mContext = AbsApplication.app();
+            throw new IllegalArgumentException("set context for ViewDisplay");
         }
         if (mChannel == null) {
             throw new IllegalArgumentException("initial Channel when create View(activity/fragment)");

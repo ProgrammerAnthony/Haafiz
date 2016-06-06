@@ -2,6 +2,8 @@ package edu.com.base.model.http.provider;
 
 
 
+import android.content.Context;
+
 import java.io.IOException;
 
 import edu.com.base.AbsApplication;
@@ -25,10 +27,10 @@ public abstract class BaseHttpProvider {
 
     public abstract void downloadFile(HttpRequest request, FileDownloadHttpCallback callback);
 
-    protected void loadLocalString(String path, final StringHttpCallback callback) {
+    protected void loadLocalString(Context context, String path, final StringHttpCallback callback) {
 
         try {
-            String result = FileUtil.getString(AbsApplication.app(), path);
+            String result = FileUtil.getString(context, path);
             callback.onResponse(result);
         } catch (IOException e) {
 //            e.printStackTrace();

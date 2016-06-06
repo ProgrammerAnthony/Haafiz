@@ -40,6 +40,13 @@ public class RxLeanCloud {
     private static volatile RxLeanCloud mInstance;
     private Context mContext;
 
+//    @Singleton
+//    @Inject
+//    public RxLeanCloud(@ContextLife("Application") Context context) {
+//        mContext = context;
+//    }
+
+
 
     public RxLeanCloud getInstance() {
         if (mInstance == null) {
@@ -48,6 +55,12 @@ public class RxLeanCloud {
         return mInstance;
     }
 
+    /**
+     *
+     *
+     * @param mContext
+     * @return
+     */
     public RxLeanCloud init(Context mContext) {
         if (mInstance == null) {
             synchronized (RxLeanCloud.class) {

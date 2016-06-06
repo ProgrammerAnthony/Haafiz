@@ -18,7 +18,20 @@ public class RxRealm {
     RealmConfiguration mRealmConfiguration;
     private static volatile RxRealm rxRealm;
 
+//    @Inject
+//    @Singleton
+//    public RxRealm(@ContextLife("Application") Context context) {
+//        mContext = context;
+//        mRealmConfiguration = new RealmConfiguration.Builder(mContext)
+//                .name("rxBabyRealm")
+//                .schemaVersion(7)
+//                .build();
+//        mInstance = Realm.getInstance(mRealmConfiguration);
+//    }
+
     /**
+     * deprecated
+     *
      * initialize first
      */
     public void init(Context mContext) {

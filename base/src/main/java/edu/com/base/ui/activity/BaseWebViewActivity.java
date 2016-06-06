@@ -18,14 +18,14 @@ public class BaseWebViewActivity extends AbsSwipeBackActivity {
         return 0;
     }
 
-    @Override
-    protected void initDagger() {
-
-    }
 
     @Override
     protected void initToolBar() {
 
     }
 
+    @Override
+    protected void injectDagger() {
+//        mActivityComponent.inject(this);
+    }
 }

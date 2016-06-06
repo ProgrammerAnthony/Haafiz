@@ -2,6 +2,11 @@ package edu.com.app.splash;
 
 import android.content.Intent;
 
+import javax.inject.Inject;
+
+import edu.com.app.MyApplication;
+import edu.com.app.main.DaggerMainActivityComponent;
+import edu.com.app.main.MainActivityModule;
 import edu.com.base.ui.activity.AbsBaseActivity;
 import edu.com.app.R;
 import edu.com.app.main.MainActivity;
@@ -11,19 +16,20 @@ import edu.com.app.main.MainActivity;
  * Class Note:
  */
 public class SplashActivity extends AbsBaseActivity implements SplashContract.View {
-    private SplashContract.Presenter mPresenter;
+    @Inject
+    SplashPresenterImpl mPresenter;
 
 
     @Override
     public void toMainActivity() {
-        Intent intent =new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
 
     @Override
     protected void initViewsAndEvents() {
-        mPresenter =new SplashPresenterImpl(mContext);
+//        mPresenter =new SplashPresenterImpl(mContext);
         mPresenter.attachView(this);
         mPresenter.initData();
     }
@@ -34,8 +40,10 @@ public class SplashActivity extends AbsBaseActivity implements SplashContract.Vi
     }
 
     @Override
-    protected void initDagger() {
-
+    protected void injectDagger() {
+        DaggerSplashActivityComponent.builder()
+                .splashActivityModule(new SplashActivityModule(this, mPresenter))
+                .applicationComponent(((MyApplication) getApplication()).getAppComponent()).build().inject(this);
     }
 
     @Override

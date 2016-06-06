@@ -1,4 +1,4 @@
-package edu.com.app.friends.list;
+package edu.com.app.chat;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -21,9 +21,10 @@ import edu.com.base.util.ToastUtils;
 
 /**
  * Created by Anthony on 2016/5/10.
- * Class Note:好友列表界面 集成中
+ * Class Note:聊天列表界面 集成中
  */
-public class FriendsListFragment extends AbsBaseFragment{
+public class ChattingListFragment extends AbsBaseFragment{
+
 
 
     @Override
@@ -33,9 +34,8 @@ public class FriendsListFragment extends AbsBaseFragment{
 
     @Override
     protected int getContentViewID() {
-        return R.layout.fragment_friends;
+        return R.layout.fragment_chatting_list;
     }
-
 
 
 

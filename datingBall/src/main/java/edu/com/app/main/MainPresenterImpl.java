@@ -13,6 +13,9 @@ import android.text.TextUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import javax.inject.Inject;
+
+import edu.com.app.di.scope.ContextLife;
 import edu.com.base.model.rx.RxLeanCloud;
 import edu.com.base.ui.BaseView;
 import edu.com.base.util.ToastUtils;
@@ -27,22 +30,24 @@ public class MainPresenterImpl implements MainContract.Presenter {
     private Context mContext;
     private RxLeanCloud mRxLeanCloud;
     private Activity mActivity;
+
     String currentFragmentTag;
 
 
-    public MainPresenterImpl(Context mContext, Activity mActivity, RxLeanCloud mRxLeanCloud) {
-        this.mContext = mContext;
-        this.mActivity = mActivity;
-        this.mRxLeanCloud = mRxLeanCloud;
+    @Inject
+    public MainPresenterImpl(@ContextLife("Activity") Context context, Activity activity, RxLeanCloud rxLeanCloud) {
+        this.mContext = context;
+        this.mActivity = activity;
+        this.mRxLeanCloud = rxLeanCloud;
     }
 
     @Override
     public void replaceFragment(Fragment to, String tag, boolean isExpanded) {
-        FragmentManager fragmentManager = ((FragmentActivity)mActivity).getSupportFragmentManager();
+        FragmentManager fragmentManager = ((FragmentActivity) mActivity).getSupportFragmentManager();
 
-        Fragment currentfragment = fragmentManager.findFragmentByTag(currentFragmentTag);
+        Fragment currentFragment = fragmentManager.findFragmentByTag(currentFragmentTag);
 
-        if (currentfragment == null || !TextUtils.equals(tag, currentFragmentTag)) {
+        if (currentFragment == null || !TextUtils.equals(tag, currentFragmentTag)) {
             currentFragmentTag = tag;
             fragmentManager.beginTransaction().replace(R.id.fragment_container, to, currentFragmentTag).commit();
         }

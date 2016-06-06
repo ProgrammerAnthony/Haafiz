@@ -9,7 +9,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 
-import javax.inject.Inject;
+
 
 import edu.com.mvplibrary.R;
 import pl.aprilapps.easyphotopicker.EasyImage;
@@ -26,7 +26,7 @@ public class ChoosePicDialog implements View.OnClickListener {
     private Dialog mDialog;
     Activity mContext;
 
-    @Inject
+//    @Inject
     public ChoosePicDialog(Activity context) {
         mContext = context;
         mDialog = new Dialog(mContext, R.style.transparentFrameWindowStyle);

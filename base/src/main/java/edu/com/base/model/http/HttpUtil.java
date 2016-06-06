@@ -1,5 +1,7 @@
 package edu.com.base.model.http;
 
+import android.content.Context;
+
 import edu.com.base.model.http.callback.FileDownloadHttpCallback;
 import edu.com.base.model.http.callback.FileUploadHttpCallback;
 import edu.com.base.model.http.callback.StringHttpCallback;
@@ -17,15 +19,15 @@ public class HttpUtil {
     public static final int GET = 0;
     public static final int POST = 1;
 
-    private HttpUtil() {
-        mProvider = new OkHttpProvider();
+    private HttpUtil(Context context) {
+        mProvider = new OkHttpProvider(context);
     }
 
-    public static HttpUtil getInstance() {
+    public static HttpUtil getInstance(Context context) {
         if (mInstance == null) {
             synchronized (HttpUtil.class) {
                 if (mInstance == null) {
-                    mInstance = new HttpUtil();
+                    mInstance = new HttpUtil(context);
                 }
             }
         }

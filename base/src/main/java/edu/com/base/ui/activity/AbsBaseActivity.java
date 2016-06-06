@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 
-
 import butterknife.ButterKnife;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
@@ -14,7 +13,6 @@ import edu.com.base.ui.BaseView;
 import edu.com.base.util.AppUtils;
 import edu.com.base.util.BaseAppManager;
 import edu.com.base.util.LogUtil;
-import edu.com.base.util.StatusBarUtil;
 import edu.com.base.util.ToastUtils;
 import edu.com.mvplibrary.R;
 
@@ -24,7 +22,7 @@ import edu.com.mvplibrary.R;
  * 1 所有的activity继承于这个类，
  * 2 实现BaseView中的方法（处理进度条，显示对话框）
  */
-public abstract class AbsBaseActivity extends AppCompatActivity implements BaseView{
+public abstract class AbsBaseActivity extends AppCompatActivity implements BaseView {
     protected static String TAG_LOG = null;// Log tag
 
     protected Context mContext = null;//context
@@ -32,6 +30,8 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
     public SweetAlertDialog mProgressDialog;
     public SweetAlertDialog mWarningDialog;
     public SweetAlertDialog mErrorDialog;
+
+//    public ActivityComponet mActivityComponent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,12 +50,15 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
             setContentView(getContentViewID());
 
         ButterKnife.bind(this);
-        initDagger();
+
+//        mActivityComponent = DaggerActivityComponet.builder()
+//                .activityModule(new ActivityModule(this))
+//                .applicationComponent(((AbsApplication) getApplication()).getAppComponent()).build();
+
+        injectDagger();
         initToolBar();
         initViewsAndEvents();
     }
-
-
 
 
     @Override
@@ -91,15 +94,16 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
      * bind layout resource file
      */
     protected abstract int getContentViewID();
-
     /**
-     * todo add Dagger init
+     * dagger inject in subclass(must)
      */
-    protected abstract void initDagger();
+    protected abstract void injectDagger();
+
     /**
      * todo init tool bar
      */
     protected abstract void initToolBar();
+
     /**
      * show Message in screen
      */
@@ -154,6 +158,7 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
             mProgressDialog.dismiss();
         }
     }
+
     @Override
     public void showMessage(String msg) {
         showMessageDialog(msg);

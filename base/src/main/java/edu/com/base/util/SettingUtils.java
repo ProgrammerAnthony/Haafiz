@@ -86,10 +86,10 @@ public class SettingUtils {
     /**
      * 清理缓存
      */
-    public static void countDirSizeTask(final CountDirSizeListener listener) {
+    public static void countDirSizeTask(final Context context,final CountDirSizeListener listener) {
         new Thread() {
             public void run() {
-                final long result = getDirSize(AbsApplication.app().getCacheDir());
+                final long result = getDirSize(context.getCacheDir());
                 Handler handler = new Handler(Looper.getMainLooper());
                 handler.post(new Runnable() {
                     @Override
@@ -101,10 +101,10 @@ public class SettingUtils {
         }.start();
     }
 
-    public static void clearAppCache(final ClearCacheListener listener) {
+    public static void clearAppCache(final Context context,final ClearCacheListener listener) {
         new Thread() {
             public void run() {
-                clearCache(AbsApplication.app().getCacheDir());
+                clearCache(context.getCacheDir());
                 Handler handler = new Handler(Looper.getMainLooper());
                 handler.post(new Runnable() {
                     @Override

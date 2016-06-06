@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'realm-android'
-apply plugin: 'com.neenbedankt.android-apt'
+
 
 
 android {
@@ -85,11 +85,11 @@ dependencies {
     testCompile "com.squareup.leakcanary:leakcanary-android-no-op:$rootProject.leakcanaryVersion"
     // or 1.4-beta1
     //dagger2
-    apt "com.google.dagger:dagger-compiler:$rootProject.daggerCompilerVersion"
+//    apt "com.google.dagger:dagger-compiler:$rootProject.daggerCompilerVersion"
     //指定注解处理器
-    compile "com.google.dagger:dagger:$rootProject.daggerVersion"
+//    compile "com.google.dagger:dagger:$rootProject.daggerVersion"
     //dagger公用api
-    provided "org.glassfish:javax.annotation:$rootProject.javaxAnnotationVersion"
+//    provided "org.glassfish:javax.annotation:$rootProject.javaxAnnotationVersion"
 
 //multiDex
     compile "com.android.support:multidex:$rootProject.multidexVersion"

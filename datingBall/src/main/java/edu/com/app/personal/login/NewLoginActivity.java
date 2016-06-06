@@ -74,9 +74,10 @@ public class NewLoginActivity extends AbsSwipeBackActivity implements LoginContr
         return R.layout.activity_new_login;
     }
 
-    @Override
-    protected void initDagger() {
 
+    @Override
+    protected void injectDagger() {
+//        mActivityComponent.inject(this);
     }
 
     @Override

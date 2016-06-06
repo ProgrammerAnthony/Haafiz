@@ -25,7 +25,7 @@
 
 
     <application
-        android:name="edu.com.app.MyApplication"
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/basketball_icon"
         android:label="@string/app_name"
@@ -60,9 +60,6 @@
             android:name="edu.com.app.friends.add.FriendsAddActivity"
             android:screenOrientation="portrait" />
 
-        <activity
-            android:name="edu.com.app.personal.login.LoginActivity"
-            android:screenOrientation="portrait" />
         <activity
             android:name="edu.com.app.personal.login.NewLoginActivity"
             android:screenOrientation="portrait" />

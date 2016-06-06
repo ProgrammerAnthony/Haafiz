@@ -21,13 +21,14 @@ public class PersonalEditActivity extends AbsSwipeBackActivity {
         return R.layout.activity_personal_edit;
     }
 
-    @Override
-    protected void initDagger() {
 
-    }
 
     @Override
     protected void initToolBar() {
 
+    }
+    @Override
+    protected void injectDagger() {
+//        mActivityComponent.inject(this);
     }
 }

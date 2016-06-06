@@ -45,7 +45,7 @@ public class NewsData {
 
         HttpRequest.Builder builder = new HttpRequest.Builder();
         HttpRequest request = builder.url(url).build();
-        HttpUtil.getInstance().loadString(request, new StringHttpCallback() {
+        HttpUtil.getInstance(mContext).loadString(request, new StringHttpCallback() {
             @Override
             public void onResponse(String response) {
                 initListData(response);

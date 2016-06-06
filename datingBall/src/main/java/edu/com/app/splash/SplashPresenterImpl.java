@@ -3,6 +3,9 @@ package edu.com.app.splash;
 import android.content.Context;
 import android.os.AsyncTask;
 
+import javax.inject.Inject;
+
+import edu.com.app.di.scope.ContextLife;
 import edu.com.base.model.http.HttpUtil;
 import edu.com.base.model.http.callback.StringHttpCallback;
 import edu.com.base.model.http.request.HttpRequest;
@@ -20,20 +23,20 @@ public class SplashPresenterImpl implements SplashContract.Presenter {
     private static final short SPLASH_SHOW_SECONDS = 1;
     private long mShowMainTime;
 
-
-    public SplashPresenterImpl(Context mContext) {
-        this.mContext = mContext;
-        mShowMainTime = System.currentTimeMillis() + SPLASH_SHOW_SECONDS * 2000;
+    @Inject
+    public SplashPresenterImpl(@ContextLife("Activity") Context context) {
+        this.mContext = context;
     }
 
 
     @Override
     public void initData() {
+        mShowMainTime = System.currentTimeMillis() + SPLASH_SHOW_SECONDS * 2000;
         // TODO: 2016/5/31  url to get data
         firstUrl = "file://xxx";
         HttpRequest.Builder builder = new HttpRequest.Builder();
         HttpRequest request = builder.url(firstUrl).build();
-        HttpUtil.getInstance().loadString(request, new StringHttpCallback() {
+        HttpUtil.getInstance(mContext).loadString(request, new StringHttpCallback() {
             @Override
             public void onResponse(String response) {
                 // TODO: 2016/5/31  url get

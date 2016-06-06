@@ -37,8 +37,8 @@ public class PersonalInfoActivity extends AbsSwipeBackActivity {
     }
 
     @Override
-    protected void initDagger() {
-
+    protected void injectDagger() {
+//        mActivityComponent.inject(this);
     }
 
     @Override

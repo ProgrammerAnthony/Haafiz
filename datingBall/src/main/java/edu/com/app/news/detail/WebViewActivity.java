@@ -96,8 +96,8 @@ public class WebViewActivity extends AbsSwipeBackActivity {
     }
 
     @Override
-    protected void initDagger() {
-
+    protected void injectDagger() {
+//        mActivityComponent.inject(this);
     }
 
     @Override

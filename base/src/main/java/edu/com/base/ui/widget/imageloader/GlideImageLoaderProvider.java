@@ -34,7 +34,7 @@ public class GlideImageLoaderProvider extends BaseImageLoaderProvider {
 
         int strategy =img.getStrategy();
         if(strategy == ImageLoaderUtil.LOAD_STRATEGY_ONLY_WIFI){
-            int netType = AppUtils.getNetWorkType(AbsApplication.app());
+            int netType = AppUtils.getNetWorkType(ctx);
             //如果是在wifi下才加载图片，并且当前网络是wifi,直接加载
             if(netType == AppUtils.NETWORKTYPE_WIFI) {
                 loadNormal(ctx, img);

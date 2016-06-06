@@ -12,9 +12,11 @@ import com.avos.avoscloud.AVOSCloud;
 
 import java.io.File;
 
+
+
+
 import edu.com.base.ui.widget.ViewDisplay;
 import edu.com.base.util.LocalFileUncaughtExceptionHandler;
-import edu.com.base.util.LogUtil;
 import edu.com.base.util.PreferenceManager;
 import edu.com.base.util.ToastUtils;
 
@@ -24,28 +26,28 @@ import edu.com.base.util.ToastUtils;
  * 当前类注释：Application的父类，本项目中的Application将继承本类。
  * 当前功能：单例模式，异常捕获，由子类实现的获取url
  */
-public abstract class AbsApplication extends Application {
-    private static AbsApplication sInstance;
+public  class AbsApplication extends Application {
+//    private ApplicationComponent mAppComponent;
+//    private static AbsApplication sInstance;
 
     //    private Menu mFirstLevelMenu;  //一级菜单，全局保存
 
     //支持MultiDex，解决65536问题
-    @Override
-    protected void attachBaseContext(Context base) {
-        super.attachBaseContext(base);
-        MultiDex.install(this);
-    }
 
-    public static AbsApplication app() {
 
-        return sInstance;
-    }
+//    public static AbsApplication app() {
+//
+//        return sInstance;
+//    }
 
 
     @Override
     public void onCreate() {
         super.onCreate();
-        sInstance = this;
+//        sInstance = this;
+
+//        initComponent();
+
         ViewDisplay.init(this);
         ToastUtils.init(this);
         PreferenceManager.init(this);
@@ -54,12 +56,20 @@ public abstract class AbsApplication extends Application {
 
         initLeanCloud();
 
-        initEaseUI();
+//        initEaseUI();
         //异常捕获
         Thread.setDefaultUncaughtExceptionHandler(new LocalFileUncaughtExceptionHandler(this,
                 Thread.getDefaultUncaughtExceptionHandler()));
     }
 
+    private void initComponent() {
+//        mAppComponent = DaggerApplicationComponent.builder().
+//                applicationModule(new ApplicationModule(this)).build();
+    }
+
+//    public ApplicationComponent getAppComponent(){
+//        return mAppComponent;
+//    }
 
     //初始化LeanCloud
     private void initLeanCloud() {
@@ -72,22 +82,22 @@ public abstract class AbsApplication extends Application {
 //        EaseUIHelper.getInstance(this).init();
     }
 
-    @Override
-    public File getCacheDir() {
-        Log.i("getCacheDir", "cache sdcard state: " + Environment.getExternalStorageState());
-        if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-            File cacheDir = getExternalCacheDir();
-            if (cacheDir != null && (cacheDir.exists() || cacheDir.mkdirs())) {
-                Log.i("getCacheDir", "cache dir: " + cacheDir.getAbsolutePath());
-                return cacheDir;
-            }
-        }
-
-        File cacheDir = super.getCacheDir();
-        Log.i("getCacheDir", "cache dir: " + cacheDir.getAbsolutePath());
-
-        return cacheDir;
-    }
+//    @Override
+//    public File getCacheDir() {
+//        Log.i("getCacheDir", "cache sdcard state: " + Environment.getExternalStorageState());
+//        if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+//            File cacheDir = getExternalCacheDir();
+//            if (cacheDir != null && (cacheDir.exists() || cacheDir.mkdirs())) {
+//                Log.i("getCacheDir", "cache dir: " + cacheDir.getAbsolutePath());
+//                return cacheDir;
+//            }
+//        }
+//
+//        File cacheDir = super.getCacheDir();
+//        Log.i("getCacheDir", "cache dir: " + cacheDir.getAbsolutePath());
+//
+//        return cacheDir;
+//    }
 
 
 //    public Menu getFirstLevelMenu() {

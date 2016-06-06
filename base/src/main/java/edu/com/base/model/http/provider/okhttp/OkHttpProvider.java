@@ -1,5 +1,6 @@
 package edu.com.base.model.http.provider.okhttp;
 
+import android.content.Context;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
@@ -50,11 +51,12 @@ public class OkHttpProvider extends BaseHttpProvider {
     private OkHttpClient mOkHttpClient;
     private Handler mDelivery;
     private HashMap<String, OkHttpClient> mDownloadMap;
-
-    public OkHttpProvider() {
+    private Context context;
+    public OkHttpProvider(Context context) {
+        this.context=context;
         mOkHttpClient = new OkHttpClient();
         mDelivery = new Handler(Looper.getMainLooper());
-        File cacheDir = AbsApplication.app().getCacheDir();
+        File cacheDir = context.getCacheDir();
         int cacheSize = 20 * 1024 * 1024;
         mOkHttpClient.setCache(new Cache(cacheDir.getAbsoluteFile(), cacheSize));
 
@@ -84,7 +86,7 @@ public class OkHttpProvider extends BaseHttpProvider {
 //        }
         //if not start with http,load local String
         if (!url.startsWith(Constants.HTTP_PREFIX) && !url.startsWith(Constants.HTTPS_PREFIX)) {
-            loadLocalString(url, callback);
+            loadLocalString(context,url, callback);
             return;
         }
 

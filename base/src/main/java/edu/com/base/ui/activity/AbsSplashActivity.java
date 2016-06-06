@@ -29,7 +29,7 @@ public abstract class AbsSplashActivity extends AbsBaseActivity {
     protected void initData() {
         HttpRequest.Builder builder = new HttpRequest.Builder();
         HttpRequest request = builder.url(getFirstUrl()).build();
-        HttpUtil.getInstance().loadString(request, new StringHttpCallback() {
+        HttpUtil.getInstance(getApplicationContext()).loadString(request, new StringHttpCallback() {
             @Override
             public void onResponse(String response) {
                 //// TODO: 2016/5/17  get url response

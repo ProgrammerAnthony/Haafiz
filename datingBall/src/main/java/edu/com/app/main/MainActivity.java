@@ -1,6 +1,7 @@
 package edu.com.app.main;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
@@ -23,15 +24,18 @@ import com.avos.avoscloud.PushService;
 
 import java.io.File;
 
+import javax.inject.Inject;
+
 import butterknife.Bind;
 import butterknife.OnClick;
 import cn.pedant.SweetAlert.SweetAlertDialog;
-import dagger.Component;
+import edu.com.app.MyApplication;
+import edu.com.app.di.module.ApplicationModule;
 import edu.com.base.ui.widget.ChoosePicDialog;
 import edu.com.base.ui.widget.StatusBarUtil;
 import edu.com.base.ui.widget.ViewDisplay;
 import edu.com.app.R;
-import edu.com.app.chat.list.ChattingListFragment;
+import edu.com.app.chat.ChattingListFragment;
 import edu.com.app.personal.info.PersonalInfoActivity;
 import edu.com.app.personal.login.NewLoginActivity;
 import edu.com.app.setting.about.AboutActivity;
@@ -74,10 +78,13 @@ public class MainActivity extends AbsBaseActivity implements MainContract.View, 
     @Bind(R.id.drawer_layout)
     DrawerLayout drawerLayout;
 
+    @Inject
+    MainPresenterImpl mMainPresenter;
+
     ImageView iv_avatar;
     TextView tv_nick;
 
-    private MainContract.Presenter mMainPresenter;
+//    private MainContract.Presenter mMainPresenter;
     //    private RxBus mRxBus;
     private boolean isLogin;
 
@@ -85,13 +92,18 @@ public class MainActivity extends AbsBaseActivity implements MainContract.View, 
     private RxLeanCloud mRxLeanCloud;
     private ChoosePicDialog mPicDialog;//底部选择对话框（图库，照相，取消）
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
 
     @Override
     protected void initViewsAndEvents() {
         StatusBarUtil.setColor(this, getResources().getColor(R.color.colorPrimary));
         mPicDialog = new ChoosePicDialog(this);
         // 消息推送
-        PushService.setDefaultPushCallback(this, MainActivity.class);
+//        PushService.setDefaultPushCallback(this, MainActivity.class);
         // 账号在异地登陆处理
 //        if (getIntent().getBooleanExtra(EaseConstant.ACCOUNT_CONFLICT, false) && !isConflictDialogShow) {
 //            ConflictAngRestart();
@@ -99,7 +111,7 @@ public class MainActivity extends AbsBaseActivity implements MainContract.View, 
         //  获取登陆状态
         isLogin = PreferenceManager.getInstance().isLogined();
         //初始化Presenter
-        mMainPresenter = new MainPresenterImpl(mContext, MainActivity.this, mRxLeanCloud);
+//        mMainPresenter = new MainPresenterImpl(mContext, MainActivity.this, mRxLeanCloud);
         mMainPresenter.attachView(this);
 
         setSupportActionBar(toolbar);
@@ -137,9 +149,19 @@ public class MainActivity extends AbsBaseActivity implements MainContract.View, 
         return R.layout.activity_main;
     }
 
-    @Override
-    protected void initDagger() {
 
+    @Override
+    protected void injectDagger() {
+//        super.injectDagger();
+//        mActivityComponent.inject(this);
+
+//        DaggerTaskDetailComponent.builder()
+//                .taskDetailPresenterModule(new TaskDetailPresenterModule(taskDetailFragment, taskId))
+//                .tasksRepositoryComponent(((ToDoApplication) getApplication())
+//                        .getTasksRepositoryComponent()).build()
+//                .inject(this);
+        DaggerMainActivityComponent.builder().mainActivityModule(new MainActivityModule(this,mMainPresenter))
+                .applicationComponent(((MyApplication)getApplication()).getAppComponent()).build().inject(this);
     }
 
     @Override

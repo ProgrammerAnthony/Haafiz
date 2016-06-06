@@ -62,8 +62,6 @@ public class FindFragment extends AbsBaseFragment {
             case R.id.txt_shake:
                 ToastUtils.getInstance().showToast("shake");
                 break;
-
-
         }
     }
 }
