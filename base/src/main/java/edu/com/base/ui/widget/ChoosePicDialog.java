@@ -17,6 +17,7 @@ import pl.aprilapps.easyphotopicker.EasyImage;
 /**
  * Create By Anthony on 2016/1/15
  * Class Note:
+ * show bottom dialog to choose pics
  * 1 显示底部对话框，用户选择（图库，照相，取消）
  */
 public class ChoosePicDialog implements View.OnClickListener {
@@ -26,7 +27,6 @@ public class ChoosePicDialog implements View.OnClickListener {
     private Dialog mDialog;
     Activity mContext;
 
-//    @Inject
     public ChoosePicDialog(Activity context) {
         mContext = context;
         mDialog = new Dialog(mContext, R.style.transparentFrameWindowStyle);

@@ -50,7 +50,7 @@ public class RxLeanCloud {
 
     public RxLeanCloud getInstance() {
         if (mInstance == null) {
-            throw new IllegalArgumentException("Initialize PreferenceManager First");
+            throw new IllegalArgumentException("Initialize PreferencesHelper First");
         }
         return mInstance;
     }

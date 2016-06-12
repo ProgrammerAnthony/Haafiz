@@ -29,7 +29,7 @@ import java.util.regex.Pattern;
 
 /**
  * Created by Anthony on 2016/1/25.
- * Class Note:Utils class  for common operation of app
+ * Class Note:SwipeBackUtils class  for common operation of app
  */
 public class AppUtils {
 

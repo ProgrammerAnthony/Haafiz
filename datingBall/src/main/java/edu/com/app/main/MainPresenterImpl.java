@@ -15,11 +15,13 @@ import android.widget.TextView;
 
 import javax.inject.Inject;
 
-import edu.com.app.di.scope.ContextLife;
+import edu.com.app.data.DataManager;
+import edu.com.app.injection.scope.ContextLife;
 import edu.com.base.model.rx.RxLeanCloud;
 import edu.com.base.ui.BaseView;
 import edu.com.base.util.ToastUtils;
 import edu.com.app.R;
+import rx.Subscription;
 
 /**
  * Created by Anthony on 2016/5/26.
@@ -33,12 +35,15 @@ public class MainPresenterImpl implements MainContract.Presenter {
 
     String currentFragmentTag;
 
+    private Subscription mSubscription;
+    private DataManager mDataManager;
 
     @Inject
-    public MainPresenterImpl(@ContextLife("Activity") Context context, Activity activity, RxLeanCloud rxLeanCloud) {
+    public MainPresenterImpl(@ContextLife("Activity") Context context, Activity activity, RxLeanCloud rxLeanCloud,DataManager dataManager) {
         this.mContext = context;
         this.mActivity = activity;
         this.mRxLeanCloud = rxLeanCloud;
+        this.mDataManager = dataManager;
     }
 
     @Override
@@ -183,12 +188,13 @@ public class MainPresenterImpl implements MainContract.Presenter {
     }
 
     @Override
-    public void attachView(BaseView view) {
-        mView = (MainContract.View) view;
+    public void attachView(MainContract.View view) {
+        mView = view;
     }
 
     @Override
     public void detachView() {
-
+        mView = null;
+        if (mSubscription != null) mSubscription.unsubscribe();
     }
 }

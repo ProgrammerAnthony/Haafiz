@@ -1,7 +1,7 @@
 package edu.com.base.util;
 
 /**
- * Object Utils
+ * Object SwipeBackUtils
  * 
  * @author <a href="http://www.trinea.cn" target="_blank">Trinea</a> 2011-10-24
  */

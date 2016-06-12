@@ -5,9 +5,8 @@ import android.content.Context;
 
 import dagger.Module;
 import dagger.Provides;
-import edu.com.app.di.scope.ActivityScoped;
-import edu.com.app.di.scope.ContextLife;
-import edu.com.app.main.MainContract;
+import edu.com.app.injection.scope.ActivityScoped;
+import edu.com.app.injection.scope.ContextLife;
 
 /**
  * Created by Anthony on 2016/6/6.

@@ -5,7 +5,7 @@ import android.os.AsyncTask;
 
 import javax.inject.Inject;
 
-import edu.com.app.di.scope.ContextLife;
+import edu.com.app.injection.scope.ContextLife;
 import edu.com.base.model.http.HttpUtil;
 import edu.com.base.model.http.callback.StringHttpCallback;
 import edu.com.base.model.http.request.HttpRequest;
@@ -82,9 +82,14 @@ public class SplashPresenterImpl implements SplashContract.Presenter {
         showMainTask.execute();
     }
 
+//    @Override
+//    public void attachView(BaseView view) {
+//        mView = (SplashContract.View) view;
+//    }
+
     @Override
-    public void attachView(BaseView view) {
-        mView = (SplashContract.View) view;
+    public void attachView(SplashContract.View view) {
+        mView=view;
     }
 
     @Override

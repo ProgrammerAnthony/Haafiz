@@ -5,7 +5,7 @@ import android.support.v4.app.Fragment;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import edu.com.base.presenter.BasePresenter;
+import edu.com.base.ui.BasePresenter;
 import edu.com.base.ui.BaseView;
 
 
@@ -21,7 +21,7 @@ import edu.com.base.ui.BaseView;
  */
 public interface MainContract {
 
-    interface Presenter extends BasePresenter {
+    interface Presenter extends BasePresenter<View> {
 
         void replaceFragment(Fragment to, String tag, boolean isExpanded);//替换fragment
 

@@ -1,4 +1,4 @@
-package edu.com.base.model.config;
+package edu.com.base.model;
 
 /**
  * Created by Anthony on 2016/4/28.

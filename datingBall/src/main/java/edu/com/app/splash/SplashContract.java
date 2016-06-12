@@ -1,6 +1,6 @@
 package edu.com.app.splash;
 
-import edu.com.base.presenter.BasePresenter;
+import edu.com.base.ui.BasePresenter;
 import edu.com.base.ui.BaseView;
 
 /**
@@ -8,7 +8,7 @@ import edu.com.base.ui.BaseView;
  * Class Note:
  */
 public interface SplashContract {
-    interface Presenter extends BasePresenter {
+    interface Presenter extends BasePresenter<View> {
         void initData();//初始化数据
     }
 

@@ -1,30 +1,25 @@
 package edu.com.app.friends.list;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-
-import com.alibaba.mobileim.YWIMKit;
 
 import butterknife.Bind;
-import butterknife.OnClick;
+import butterknife.ButterKnife;
 import edu.com.app.R;
-
 import edu.com.base.ui.fragment.AbsBaseFragment;
-import edu.com.base.ui.fragment.AbsTitleFragment;
-import edu.com.base.util.ToastUtils;
 
 /**
  * Created by Anthony on 2016/5/10.
  * Class Note:好友列表界面 集成中
  */
-public class FriendsListFragment extends AbsBaseFragment{
+public class FriendsListFragment extends AbsBaseFragment {
 
+
+    @Bind(R.id.recycler_view)
+    RecyclerView recyclerView;
 
     @Override
     protected void initViewsAndEvents(View rootView) {
@@ -35,10 +30,6 @@ public class FriendsListFragment extends AbsBaseFragment{
     protected int getContentViewID() {
         return R.layout.fragment_friends;
     }
-
-
-
-
 
 
 

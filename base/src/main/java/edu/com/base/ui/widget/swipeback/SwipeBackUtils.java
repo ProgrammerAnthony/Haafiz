@@ -8,8 +8,8 @@ import android.os.Build;
 import java.lang.reflect.Method;
 
 
-public class Utils {
-    private Utils() {
+public class SwipeBackUtils {
+    private SwipeBackUtils() {
     }
 
     /**

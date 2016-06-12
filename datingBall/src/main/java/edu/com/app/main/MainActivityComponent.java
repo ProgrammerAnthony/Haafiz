@@ -3,9 +3,9 @@ package edu.com.app.main;
 import android.content.Context;
 
 import dagger.Component;
-import edu.com.app.di.component.ApplicationComponent;
-import edu.com.app.di.scope.ActivityScoped;
-import edu.com.app.di.scope.ContextLife;
+import edu.com.app.injection.component.ApplicationComponent;
+import edu.com.app.injection.scope.ActivityScoped;
+import edu.com.app.injection.scope.ContextLife;
 
 
 @ActivityScoped

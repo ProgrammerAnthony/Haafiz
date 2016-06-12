@@ -1,5 +1,5 @@
 
-package edu.com.base.util;
+package edu.com.base.ui.widget;
 
 import android.app.Activity;
 

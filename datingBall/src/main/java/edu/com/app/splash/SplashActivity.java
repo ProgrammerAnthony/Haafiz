@@ -5,7 +5,7 @@ import android.content.Intent;
 import javax.inject.Inject;
 
 import edu.com.app.MyApplication;
-import edu.com.app.main.DaggerMainActivityComponent;
+
 import edu.com.app.main.MainActivityModule;
 import edu.com.base.ui.activity.AbsBaseActivity;
 import edu.com.app.R;

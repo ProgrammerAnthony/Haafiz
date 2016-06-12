@@ -19,7 +19,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.avos.avoscloud.PushService;
 //import com.hyphenate.easeui.EaseConstant;
 
 import java.io.File;
@@ -30,7 +29,7 @@ import butterknife.Bind;
 import butterknife.OnClick;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import edu.com.app.MyApplication;
-import edu.com.app.di.module.ApplicationModule;
+import edu.com.base.model.rx.RxBus;
 import edu.com.base.ui.widget.ChoosePicDialog;
 import edu.com.base.ui.widget.StatusBarUtil;
 import edu.com.base.ui.widget.ViewDisplay;
@@ -40,9 +39,9 @@ import edu.com.app.personal.info.PersonalInfoActivity;
 import edu.com.app.personal.login.NewLoginActivity;
 import edu.com.app.setting.about.AboutActivity;
 import edu.com.base.model.bean.Channel;
-import edu.com.base.model.rx.RxLeanCloud;
 import edu.com.base.ui.activity.AbsBaseActivity;
-import edu.com.base.util.PreferenceManager;
+import edu.com.base.ui.widget.DialogFactory;
+import edu.com.base.model.local.PreferencesHelper;
 import pl.aprilapps.easyphotopicker.EasyImage;
 
 /**
@@ -80,17 +79,22 @@ public class MainActivity extends AbsBaseActivity implements MainContract.View, 
 
     @Inject
     MainPresenterImpl mMainPresenter;
+    @Inject
+    RxBus mRxBus;
+    @Inject
+    ChoosePicDialog mPicDialog;
 
     ImageView iv_avatar;
     TextView tv_nick;
 
-//    private MainContract.Presenter mMainPresenter;
+    private static final String EXTRA_TRIGGER_SYNC_FLAG = "edu.com.app.main.MainActivity.EXTRA_TRIGGER_SYNC_FLAG";
+    //    private MainContract.Presenter mMainPresenter;
     //    private RxBus mRxBus;
     private boolean isLogin;
 
     private boolean isConflictDialogShow = false;
-    private RxLeanCloud mRxLeanCloud;
-    private ChoosePicDialog mPicDialog;//底部选择对话框（图库，照相，取消）
+    //    private RxLeanCloud mRxLeanCloud;
+//    private ChoosePicDialog mPicDialog;//底部选择对话框（图库，照相，取消）
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,17 +103,23 @@ public class MainActivity extends AbsBaseActivity implements MainContract.View, 
     }
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mMainPresenter.detachView();
+    }
+
+    @Override
     protected void initViewsAndEvents() {
         StatusBarUtil.setColor(this, getResources().getColor(R.color.colorPrimary));
-        mPicDialog = new ChoosePicDialog(this);
-        // 消息推送
+//        mPicDialog = new ChoosePicDialog(this);
+        // todo 消息推送
 //        PushService.setDefaultPushCallback(this, MainActivity.class);
-        // 账号在异地登陆处理
+        // todo 账号在异地登陆处理
 //        if (getIntent().getBooleanExtra(EaseConstant.ACCOUNT_CONFLICT, false) && !isConflictDialogShow) {
 //            ConflictAngRestart();
 //        }
-        //  获取登陆状态
-        isLogin = PreferenceManager.getInstance().isLogined();
+        //todo  获取登陆状态
+        isLogin = PreferencesHelper.getInstance().isLogined();
         //初始化Presenter
 //        mMainPresenter = new MainPresenterImpl(mContext, MainActivity.this, mRxLeanCloud);
         mMainPresenter.attachView(this);
@@ -142,6 +152,10 @@ public class MainActivity extends AbsBaseActivity implements MainContract.View, 
         mMainPresenter.replaceFragment(new ChattingListFragment(), "聊天", false);
         collapsingToolbarLayout.setTitle("聊天");
 
+        //todo  同步数据
+//        if (getIntent().getBooleanExtra(EXTRA_TRIGGER_SYNC_FLAG, true)) {
+//            startService(SyncService.getStartIntent(this));
+//        }
     }
 
     @Override
@@ -152,16 +166,9 @@ public class MainActivity extends AbsBaseActivity implements MainContract.View, 
 
     @Override
     protected void injectDagger() {
-//        super.injectDagger();
-//        mActivityComponent.inject(this);
 
-//        DaggerTaskDetailComponent.builder()
-//                .taskDetailPresenterModule(new TaskDetailPresenterModule(taskDetailFragment, taskId))
-//                .tasksRepositoryComponent(((ToDoApplication) getApplication())
-//                        .getTasksRepositoryComponent()).build()
-//                .inject(this);
-        DaggerMainActivityComponent.builder().mainActivityModule(new MainActivityModule(this,mMainPresenter))
-                .applicationComponent(((MyApplication)getApplication()).getAppComponent()).build().inject(this);
+        DaggerMainActivityComponent.builder().mainActivityModule(new MainActivityModule(this, mMainPresenter, new ChoosePicDialog(this)))
+                .applicationComponent(((MyApplication) getApplication()).getAppComponent()).build().inject(this);
     }
 
     @Override
@@ -202,7 +209,7 @@ public class MainActivity extends AbsBaseActivity implements MainContract.View, 
         String st = "Logoff notification";
         if (!MainActivity.this.isFinishing()) {
             // clear up global variables
-            showErrorDialog(st, "The same account was loggedin in other device", new SweetAlertDialog.OnSweetClickListener() {
+            DialogFactory.showErrorDialog(mContext, st, "The same account was loggedin in other device", new SweetAlertDialog.OnSweetClickListener() {
                 @Override
                 public void onClick(SweetAlertDialog sweetAlertDialog) {
                     mMainPresenter.Logout();

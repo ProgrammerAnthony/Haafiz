@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 import edu.com.app.news.newsList.NewsContract;
 import edu.com.base.model.bean.Channel;
-import edu.com.base.model.config.Constants;
+import edu.com.base.model.Constants;
 import edu.com.base.model.http.HttpUtil;
 import edu.com.base.model.http.callback.StringHttpCallback;
 import edu.com.base.model.http.request.HttpRequest;

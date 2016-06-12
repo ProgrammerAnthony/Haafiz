@@ -3,7 +3,6 @@ package edu.com.app.news.newsList;
 import android.content.Context;
 
 import edu.com.app.data.NewsData;
-import edu.com.base.ui.BaseView;
 
 /**
  * Created by Anthony on 2016/5/3.
@@ -57,9 +56,14 @@ public class NewsPresenter implements NewsContract.Presenter, NewsContract.onGet
         mView.showMessage("error");
     }
 
+//    @Override
+//    public void attachView(BaseView view) {
+//        mView = (NewsContract.View) view;
+//    }
+
     @Override
-    public void attachView(BaseView view) {
-        mView = (NewsContract.View) view;
+    public void attachView(NewsContract.View view) {
+        mView=view;
     }
 
     @Override

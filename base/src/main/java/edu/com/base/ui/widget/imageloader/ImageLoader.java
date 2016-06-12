@@ -15,14 +15,14 @@ public class ImageLoader {
     private String url; //需要解析的url
     private int placeHolder; //当没有成功加载的时候显示的图片
     private ImageView imgView; //ImageView的实例
-    private int strategy;//加载策略，是否在wifi下才加载
+    private int wifiStrategy;//加载策略，是否在wifi下才加载
 
     private ImageLoader(Builder builder) {
         this.type = builder.type;
         this.url = builder.url;
         this.placeHolder = builder.placeHolder;
         this.imgView = builder.imgView;
-        this.strategy = builder.strategy;
+        this.wifiStrategy = builder.wifiStrategy;
     }
     public int getType() {
         return type;
@@ -40,8 +40,8 @@ public class ImageLoader {
         return imgView;
     }
 
-    public int getStrategy() {
-        return strategy;
+    public int getWifiStrategy() {
+        return wifiStrategy;
     }
 
     public static class Builder {
@@ -49,14 +49,14 @@ public class ImageLoader {
         private String url;
         private int placeHolder;
         private ImageView imgView;
-        private int strategy;
+        private int wifiStrategy;
 
         public Builder() {
             this.type = ImageLoaderUtil.PIC_SMALL;
             this.url = "";
             this.placeHolder = R.drawable.default_pic_big;
             this.imgView = null;
-            this.strategy = ImageLoaderUtil.LOAD_STRATEGY_NORMAL;
+            this.wifiStrategy = ImageLoaderUtil.LOAD_STRATEGY_NORMAL;
         }
 
         public Builder type(int type) {
@@ -80,7 +80,7 @@ public class ImageLoader {
         }
 
         public Builder strategy(int strategy) {
-            this.strategy = strategy;
+            this.wifiStrategy = strategy;
             return this;
         }
 

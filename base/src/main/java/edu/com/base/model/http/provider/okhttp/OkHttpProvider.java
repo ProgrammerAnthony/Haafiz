@@ -30,8 +30,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-import edu.com.base.AbsApplication;
-import edu.com.base.model.config.Constants;
+import edu.com.base.model.Constants;
 import edu.com.base.model.http.HttpUtil;
 import edu.com.base.model.http.callback.BaseHttpCallback;
 import edu.com.base.model.http.callback.FileDownloadHttpCallback;

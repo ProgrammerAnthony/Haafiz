@@ -5,8 +5,9 @@ import android.content.Context;
 
 import dagger.Module;
 import dagger.Provides;
-import edu.com.app.di.scope.ActivityScoped;
-import edu.com.app.di.scope.ContextLife;
+import edu.com.app.injection.scope.ActivityScoped;
+import edu.com.app.injection.scope.ContextLife;
+import edu.com.base.ui.widget.ChoosePicDialog;
 
 
 @Module
@@ -14,10 +15,12 @@ public class MainActivityModule {
 
     private Activity mActivity;
     private MainContract.Presenter mPresenter;
+    private ChoosePicDialog mPicDialog;
 
-    public MainActivityModule(Activity activity,MainContract.Presenter presenter) {
+    public MainActivityModule(Activity activity,MainContract.Presenter presenter,ChoosePicDialog picDialog) {
         mActivity = activity;
         mPresenter = presenter;
+        mPicDialog = picDialog;
     }
 
     @Provides
@@ -35,8 +38,15 @@ public class MainActivityModule {
 
 
     @Provides
+    @ActivityScoped
     public MainContract.Presenter provideMainContractPresenter(){
         return mPresenter;
+    }
+
+    @Provides
+    @ActivityScoped
+    public ChoosePicDialog provideChoosePicDialog(){
+        return mPicDialog;
     }
 
 }

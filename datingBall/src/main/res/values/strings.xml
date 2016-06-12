@@ -77,4 +77,12 @@
     <string name="txt_nearby">附近的人</string>
     <string name="txt_scan">扫一扫</string>
     <string name="txt_shake">摇一摇</string>
+
+
+    <string name="dialog_action_ok">OK</string>
+    <string name="dialog_action_cancel">Cancel</string>
+    <string name="dialog_error_title">Sorry</string>
+
+    <string name="empty_ribots">There aren\'t any ribots</string>
+    <string name="error_loading_ribots">There was a problem loading the ribots</string>
 </resources>

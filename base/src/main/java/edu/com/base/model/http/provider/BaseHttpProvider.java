@@ -6,7 +6,6 @@ import android.content.Context;
 
 import java.io.IOException;
 
-import edu.com.base.AbsApplication;
 import edu.com.base.model.http.request.HttpRequest;
 import edu.com.base.model.http.callback.FileDownloadHttpCallback;
 import edu.com.base.model.http.callback.FileUploadHttpCallback;

@@ -34,7 +34,7 @@ public class SwipeBackActivityHelper {
 
             @Override
             public void onEdgeTouch(int edgeFlag) {
-                Utils.convertActivityToTranslucent(mActivity);
+                SwipeBackUtils.convertActivityToTranslucent(mActivity);
             }
 
             @Override

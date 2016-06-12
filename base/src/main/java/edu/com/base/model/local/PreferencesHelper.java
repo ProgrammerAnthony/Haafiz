@@ -1,4 +1,4 @@
-package edu.com.base.util;
+package edu.com.base.model.local;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -7,31 +7,31 @@ import android.content.SharedPreferences;
  * Class Note:
  * SharedPreference Manager
  */
-public class PreferenceManager {
+public class PreferencesHelper {
     private static final String SETTING = "setting";
     private static final String ID = "ID";
     private static final String FIRST_TIME = "firsttime";
     private static final String ISLOGIN = "islogin";
     private static final boolean FIRST_TIME_DEFAULT = true;
-    private static volatile PreferenceManager mInstance = null;
+    private static volatile PreferencesHelper mInstance = null;
 
     private static SharedPreferences mSharedPreferences;
 
-    public static PreferenceManager getInstance(){
+    public static PreferencesHelper getInstance(){
         if(mInstance==null){
-            throw new IllegalArgumentException("Initialize PreferenceManager First");
+            throw new IllegalArgumentException("Initialize PreferencesHelper First");
         }
         return mInstance;
     }
 
-    public PreferenceManager(Context context) {
+    public PreferencesHelper(Context context) {
         mSharedPreferences = context.getSharedPreferences(SETTING, Context.MODE_PRIVATE);
     }
     public static void init(Context context){
         if (mInstance == null) {
-            synchronized (PreferenceManager.class) {
+            synchronized (PreferencesHelper.class) {
                 if (mInstance == null) {
-                    mInstance = new PreferenceManager(context);
+                    mInstance = new PreferencesHelper(context);
                 }
             }
         }

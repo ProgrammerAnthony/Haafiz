@@ -10,9 +10,8 @@ import android.util.Log;
 
 import java.util.HashMap;
 
-import edu.com.base.AbsApplication;
 import edu.com.base.model.bean.Channel;
-import edu.com.base.model.config.Constants;
+import edu.com.base.model.Constants;
 import edu.com.base.ui.fragment.AbsBaseFragment;
 import edu.com.base.util.FileUtil2;
 

@@ -24,6 +24,7 @@ import butterknife.Bind;
 import edu.com.app.R;
 import edu.com.base.ui.activity.AbsSwipeBackActivity;
 import edu.com.base.ui.widget.CircleImageView;
+import edu.com.base.ui.widget.DialogFactory;
 import edu.com.base.util.ToastUtils;
 
 /**
@@ -42,6 +43,7 @@ public class WebViewActivity extends AbsSwipeBackActivity {
     private TextView title_txt_center;
     private TextView title_txt_right;
     private CircleImageView title_image_left;
+
     @Bind(R.id.web_view)
     WebView mWebView;
 
@@ -56,7 +58,7 @@ public class WebViewActivity extends AbsSwipeBackActivity {
 
         mWebView.setVisibility(View.INVISIBLE);
 //    todo    toggleShowLoading(true, "loading");
-        showProgressDialog("loading");
+        DialogFactory.showProgressDialog(mContext,"loading");
         setWebViewOption();
         title_image_left = (CircleImageView) findViewById(R.id.title_image_left);
         title_image_left.setImageResource(R.drawable.ico_back);
@@ -171,7 +173,7 @@ public class WebViewActivity extends AbsSwipeBackActivity {
             super.onPageFinished(view, url);
 
 //     todo       toggleShowLoading(false, "");
-            hideProgressDialog();
+            DialogFactory.hideProgressDialog();
             if (mWebView.getVisibility() == View.INVISIBLE) {
                 mWebView.setVisibility(View.VISIBLE);
             }

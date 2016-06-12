@@ -3,7 +3,7 @@ package edu.com.base.model.bean;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import edu.com.base.model.config.Constants;
+import edu.com.base.model.Constants;
 import edu.com.base.util.JSONObjectHelper;
 
 /**

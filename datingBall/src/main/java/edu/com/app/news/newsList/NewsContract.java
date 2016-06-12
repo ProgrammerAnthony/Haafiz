@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import edu.com.app.data.NewsData;
 import edu.com.base.model.bean.Channel;
 
-import edu.com.base.presenter.BasePresenter;
+import edu.com.base.ui.BasePresenter;
 import edu.com.base.ui.BaseView;
 
 /**
@@ -21,7 +21,7 @@ import edu.com.base.ui.BaseView;
  */
 public interface NewsContract {
 
-    interface Presenter extends BasePresenter{
+    interface Presenter extends BasePresenter<View>{
         void getData(String url);
 
     }

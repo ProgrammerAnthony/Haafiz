@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import com.facebook.shimmer.ShimmerFrameLayout;
 
-import edu.com.base.presenter.BasePresenter;
+import edu.com.base.ui.BasePresenter;
 import edu.com.base.ui.BaseView;
 
 /**
@@ -14,7 +14,7 @@ import edu.com.base.ui.BaseView;
  * Class Note:
  */
 public interface LoginContract {
-    interface Presenter extends BasePresenter {
+    interface Presenter extends BasePresenter<View> {
         void onActivityStart();
 
         void onActivityPause();

@@ -38,9 +38,11 @@ import android.widget.ImageView;
 
 import edu.com.mvplibrary.R;
 
-
 /**
- *{@see https://github.com/hdodenhof/CircleImageView}
+ * Create By Anthony on 2016/1/15
+ * Class Note:
+ * Circle ImageView
+ * {@see https://github.com/hdodenhof/CircleImageView}
  */
 public class CircleImageView extends ImageView {
 

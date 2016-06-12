@@ -4,7 +4,8 @@ import android.content.Context;
 
 /**
  * Created by Anthony on 2016/3/3.
- * Class Note:use this class to load image,single instance
+ * Class Note:
+ * use this class to load image,single instance
  */
 public class ImageLoaderUtil {
 
@@ -16,10 +17,10 @@ public class ImageLoaderUtil {
     public static final int LOAD_STRATEGY_ONLY_WIFI = 1;
 
     private static ImageLoaderUtil mInstance;
-    private BaseImageLoaderProvider mProvider;
+    private BaseImageLoaderStrategy mStrategy;
 
     private ImageLoaderUtil(){
-        mProvider =new GlideImageLoaderProvider();
+        mStrategy =new GlideImageLoaderStrategy();
     }
 
 //single instance
@@ -37,7 +38,10 @@ public class ImageLoaderUtil {
 
 
     public void loadImage(Context context,ImageLoader img){
-        mProvider.loadImage(context,img);
+        mStrategy.loadImage(context,img);
     }
 
+    public void setLoadImgStrategy(BaseImageLoaderStrategy strategy){
+        mStrategy =strategy;
+    }
 }

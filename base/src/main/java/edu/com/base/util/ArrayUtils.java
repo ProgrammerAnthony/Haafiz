@@ -5,7 +5,7 @@ import android.util.Pair;
 import java.util.Arrays;
 
 /**
- * Array Utils
+ * Array SwipeBackUtils
  * <ul>
  * <li>{@link #isEmpty(Object[])} is null or its length is 0</li>
  * <li>{@link #getLast(Object[], Object, Object, boolean)} get last element of the target element, before the first one

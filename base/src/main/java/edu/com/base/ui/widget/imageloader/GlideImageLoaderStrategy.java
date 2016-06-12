@@ -12,16 +12,15 @@ import com.bumptech.glide.load.model.stream.StreamModelLoader;
 import java.io.IOException;
 import java.io.InputStream;
 
-import edu.com.base.AbsApplication;
 import edu.com.base.util.AppUtils;
 import edu.com.base.util.SettingUtils;
 
 /**
  * Created by Anthony on 2016/3/3.
  * Class Note:
- * provide way to load image
+ * using glide to load image
  */
-public class GlideImageLoaderProvider extends BaseImageLoaderProvider {
+public class GlideImageLoaderStrategy implements BaseImageLoaderStrategy {
     @Override
     public void loadImage(Context ctx, ImageLoader img) {
 
@@ -32,7 +31,7 @@ public class GlideImageLoaderProvider extends BaseImageLoaderProvider {
             return;
         }
 
-        int strategy =img.getStrategy();
+        int strategy =img.getWifiStrategy();
         if(strategy == ImageLoaderUtil.LOAD_STRATEGY_ONLY_WIFI){
             int netType = AppUtils.getNetWorkType(ctx);
             //如果是在wifi下才加载图片，并且当前网络是wifi,直接加载

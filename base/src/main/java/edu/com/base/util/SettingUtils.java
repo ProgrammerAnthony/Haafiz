@@ -12,7 +12,6 @@ import android.text.TextUtils;
 import java.io.File;
 import java.lang.reflect.Field;
 
-import edu.com.base.AbsApplication;
 import edu.com.mvplibrary.R;
 
 

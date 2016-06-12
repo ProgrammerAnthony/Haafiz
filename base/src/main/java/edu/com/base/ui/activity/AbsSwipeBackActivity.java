@@ -5,7 +5,7 @@ import android.view.View;
 import edu.com.base.ui.widget.swipeback.SwipeBackActivityBase;
 import edu.com.base.ui.widget.swipeback.SwipeBackActivityHelper;
 import edu.com.base.ui.widget.swipeback.SwipeBackLayout;
-import edu.com.base.ui.widget.swipeback.Utils;
+import edu.com.base.ui.widget.swipeback.SwipeBackUtils;
 
 /**
  * Created by Anthony on 2016/4/28.
@@ -51,7 +51,7 @@ public abstract class AbsSwipeBackActivity extends AbsBaseActivity implements Sw
 
     @Override
     public void scrollToFinishActivity() {
-        Utils.convertActivityToTranslucent(this);
+        SwipeBackUtils.convertActivityToTranslucent(this);
         getSwipeBackLayout().scrollToFinishActivity();
     }
 

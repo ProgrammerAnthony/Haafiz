@@ -12,6 +12,8 @@ import edu.com.base.model.http.request.HttpRequest;
 /**
  * Created by Anthony on 2016/5/6.
  * Class Note:
+ * todo use retrofit please
+ * @deprecated
  */
 public class HttpUtil {
     private static HttpUtil mInstance;

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * List Utils
+ * List SwipeBackUtils
  * 
  * @author <a href="http://www.trinea.cn" target="_blank">Trinea</a> 2011-7-22
  */

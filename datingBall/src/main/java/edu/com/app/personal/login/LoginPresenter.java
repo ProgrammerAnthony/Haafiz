@@ -18,8 +18,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import edu.com.base.model.rx.RxLeanCloud;
-import edu.com.base.ui.BaseView;
-import edu.com.base.util.PreferenceManager;
+import edu.com.base.model.local.PreferencesHelper;
 import rx.functions.Action1;
 
 /**
@@ -222,7 +221,7 @@ public class LoginPresenter implements LoginContract.Presenter, Handler.Callback
 
     @Override
     public void doingSplash() {
-        if (PreferenceManager.getInstance().isFirstTime()) {
+        if (PreferencesHelper.getInstance().isFirstTime()) {
             RxPermissions.getInstance(mContext)
                     .request(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA)
                     .subscribe(new Action1<Boolean>() {
@@ -232,7 +231,7 @@ public class LoginPresenter implements LoginContract.Presenter, Handler.Callback
                                 mLoginView.showMessage("你拒绝了相关的权限");
                                 mLoginView.close();
                             } else {
-                                PreferenceManager.getInstance().saveFirsttime(false);
+                                PreferencesHelper.getInstance().saveFirsttime(false);
                             }
                         }
                     });
@@ -259,7 +258,7 @@ public class LoginPresenter implements LoginContract.Presenter, Handler.Callback
                 return false;
             }
             //todo login process
-//            if (PreferenceManager.getInstance().isLogined() && AVUser.getCurrentUser() != null) {
+//            if (PreferencesHelper.getInstance().isLogined() && AVUser.getCurrentUser() != null) {
 //                mLoginView.toMainActivity();
 //            }
         }
@@ -267,9 +266,14 @@ public class LoginPresenter implements LoginContract.Presenter, Handler.Callback
         return false;
     }
 
+//    @Override
+//    public void attachView(BaseView view) {
+//        mLoginView = (LoginContract.View) view;
+//    }
+
     @Override
-    public void attachView(BaseView view) {
-        mLoginView = (LoginContract.View) view;
+    public void attachView(LoginContract.View view) {
+        mLoginView =view;
     }
 
     @Override

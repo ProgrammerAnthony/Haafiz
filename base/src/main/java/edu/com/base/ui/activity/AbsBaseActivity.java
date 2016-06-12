@@ -10,11 +10,9 @@ import butterknife.ButterKnife;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
 import edu.com.base.ui.BaseView;
-import edu.com.base.util.AppUtils;
-import edu.com.base.util.BaseAppManager;
+import edu.com.base.ui.widget.BaseAppManager;
+import edu.com.base.ui.widget.DialogFactory;
 import edu.com.base.util.LogUtil;
-import edu.com.base.util.ToastUtils;
-import edu.com.mvplibrary.R;
 
 /**
  * Created by Anthony on 2016/4/24.
@@ -26,12 +24,6 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
     protected static String TAG_LOG = null;// Log tag
 
     protected Context mContext = null;//context
-
-    public SweetAlertDialog mProgressDialog;
-    public SweetAlertDialog mWarningDialog;
-    public SweetAlertDialog mErrorDialog;
-
-//    public ActivityComponet mActivityComponent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,10 +42,6 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
             setContentView(getContentViewID());
 
         ButterKnife.bind(this);
-
-//        mActivityComponent = DaggerActivityComponet.builder()
-//                .activityModule(new ActivityModule(this))
-//                .applicationComponent(((AbsApplication) getApplication()).getAppComponent()).build();
 
         injectDagger();
         initToolBar();
@@ -94,8 +82,9 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
      * bind layout resource file
      */
     protected abstract int getContentViewID();
+
     /**
-     * dagger inject in subclass(must)
+     * Dagger2 use in your application module(not used in 'base' module)
      */
     protected abstract void injectDagger();
 
@@ -107,61 +96,13 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
     /**
      * show Message in screen
      */
-    protected void showMessageDialog(String msg) {
-        if (null != msg && !AppUtils.isEmpty(msg)) {
-//            Snackbar.make(this, msg, Snackbar.LENGTH_SHORT).show();
-            ToastUtils.getInstance().showToast(msg);
-        }
-    }
 
-    public void showWarningDialog(String title, String content, SweetAlertDialog.OnSweetClickListener listener) {
-        mWarningDialog = new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
-                .setTitleText(title)
-                .setContentText(content)
-                .setConfirmText("确定")
-                .setCancelText("取消")
-                .setConfirmClickListener(listener);
-
-        mWarningDialog.show();
-    }
-
-    public void showErrorDialog(String title, String content, SweetAlertDialog.OnSweetClickListener listener) {
-        mErrorDialog = new SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
-                .setConfirmText("确定")
-                .setTitleText(title)
-                .setContentText(content)
-                .setConfirmClickListener(listener);
-        mErrorDialog.show();
-    }
-
-    public void showProgressDialog(String message) {
-        mProgressDialog = new SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE);
-        mProgressDialog.getProgressHelper().setBarColor(getResources().getColor(R.color.colorPrimary));
-        mProgressDialog.setTitleText(message);
-        mProgressDialog.setCancelable(true);
-        mProgressDialog.show();
-
-    }
-
-
-    public void showProgressDialog(String message, int progress) {
-        mProgressDialog = new SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE);
-        mProgressDialog.getProgressHelper().setBarColor(getResources().getColor(R.color.colorPrimary));
-        mProgressDialog.setTitleText(message);
-        mProgressDialog.setCancelable(true);
-        mProgressDialog.getProgressHelper().setProgress(progress);
-        mProgressDialog.show();
-    }
-
-    public void hideProgressDialog() {
-        if (mProgressDialog != null) {
-            mProgressDialog.dismiss();
-        }
-    }
-
+    /**
+     * implements methods in BaseView
+     */
     @Override
     public void showMessage(String msg) {
-        showMessageDialog(msg);
+        DialogFactory.showMessageDialog(mContext,msg);
     }
 
     @Override
@@ -171,22 +112,22 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
 
     @Override
     public void showProgress(String message) {
-        showProgressDialog(message);
+        DialogFactory.showProgressDialog(mContext,message);
     }
 
     @Override
     public void showProgress(String message, int progress) {
-        showProgressDialog(message, progress);
+        DialogFactory.showProgressDialog(mContext,message, progress);
     }
 
     @Override
     public void hideProgress() {
-        hideProgressDialog();
+        DialogFactory.hideProgressDialog();
     }
 
     @Override
     public void showErrorMessage(String msg, String content) {
-        showErrorDialog(msg, content, new SweetAlertDialog.OnSweetClickListener() {
+        DialogFactory.showErrorDialog(mContext,msg, content, new SweetAlertDialog.OnSweetClickListener() {
             @Override
             public void onClick(SweetAlertDialog sweetAlertDialog) {
                 sweetAlertDialog.dismissWithAnimation();
