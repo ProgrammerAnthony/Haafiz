@@ -344,4 +344,5 @@
     <color name="red500_alpha_54">#8AF44336</color>
 
     <color name="nav_color">#4dF44336</color>
+    <color name="black2">#757575</color>
 </resources>

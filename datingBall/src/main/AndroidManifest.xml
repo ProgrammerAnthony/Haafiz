@@ -34,37 +34,45 @@
 
 
         <activity
-            android:name="edu.com.app.splash.SplashActivity"
+            android:name=".ui.splash.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service android:name=".data.SyncService"/>
+        <receiver
+            android:name=".data.SyncService$SyncOnConnectionAvailable"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
         <activity
-            android:name="edu.com.app.main.MainActivity"
+            android:name=".ui.main.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="edu.com.app.news.detail.WebViewActivity"
+            android:name=".ui.news.detail.WebViewActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="edu.com.app.setting.SettingsActivity"
+            android:name=".ui.setting.SettingsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="edu.com.app.personal.edit.PersonalEditActivity"
+            android:name=".ui.personal.edit.PersonalEditActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".find.nearby.detail.NearByDetailActivity"
+            android:name=".ui.find.nearby.detail.NearByDetailActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="edu.com.app.friends.add.FriendsAddActivity"
+            android:name=".ui.friends.add.FriendsAddActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="edu.com.app.personal.login.NewLoginActivity"
+            android:name=".ui.personal.login.NewLoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="edu.com.app.personal.info.PersonalInfoActivity"
+            android:name=".ui.personal.info.PersonalInfoActivity"
             android:screenOrientation="portrait" />
 
 

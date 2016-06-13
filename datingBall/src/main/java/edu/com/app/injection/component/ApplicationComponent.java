@@ -1,5 +1,6 @@
 package edu.com.app.injection.component;
 
+import android.app.Application;
 import android.content.Context;
 
 import com.squareup.otto.Bus;
@@ -7,43 +8,50 @@ import com.squareup.otto.Bus;
 import javax.inject.Singleton;
 
 import dagger.Component;
+import edu.com.app.MyApplication;
 import edu.com.app.data.DataManager;
+import edu.com.app.data.EventPosterHelper;
 import edu.com.app.data.SyncService;
-import edu.com.base.model.local.DatabaseHelper;
-import edu.com.base.model.local.PreferencesHelper;
-import edu.com.base.model.remote.RibotsService;
+import edu.com.app.data.local.DatabaseHelper;
+import edu.com.app.data.local.PreferencesHelper;
+import edu.com.app.data.remote.FriendsService;
 import edu.com.app.injection.module.ApplicationModule;
-import edu.com.app.injection.scope.ContextLife;
-import edu.com.base.model.rx.RxBus;
-import edu.com.base.model.rx.RxLeanCloud;
-import edu.com.base.model.rx.RxRealm;
+import edu.com.app.injection.scope.ApplicationContext;
+import edu.com.app.data.rx.RxBus;
+import edu.com.app.data.rx.RxLeanCloud;
+import edu.com.app.data.rx.RxRealm;
 
-
+/**
+ * Created by Anthony on 2016/6/13.
+ * Class Note:
+ */
 @Singleton
 @Component(modules = ApplicationModule.class)
 public interface ApplicationComponent {
 
-
-
-    @ContextLife("Application")
-    Context getContext();
-
-    RxRealm getRealm();
-
-    RxLeanCloud getRxLeanCLoud();
-
-    RxBus getRxBus();
-
+    void inject(MyApplication application);
     void inject(SyncService syncService);
 
-    RibotsService getRibotsService();
+    @ApplicationContext
+    Context context();
 
-    PreferencesHelper getPreferencesHelper();
+    Application application();
 
-    DatabaseHelper getDatabaseHelper();
+    RxRealm realm();
 
-    DataManager getDataManager();
+    RxLeanCloud rxLeanCLoud();
 
-    Bus getEventBus();
+    RxBus rxBus();
 
+    FriendsService ribotService();
+
+    PreferencesHelper preferencesHelper();
+
+    DatabaseHelper databaseHelper();
+
+    DataManager dataManager();
+
+    Bus eventBus();
+
+    EventPosterHelper eventPosterHelper();
 }

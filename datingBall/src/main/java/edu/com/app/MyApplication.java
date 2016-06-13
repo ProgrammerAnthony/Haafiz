@@ -5,21 +5,30 @@ import android.content.Context;
 import android.support.multidex.MultiDex;
 
 import com.avos.avoscloud.AVOSCloud;
+import com.squareup.otto.Bus;
 
+import javax.inject.Inject;
+
+import edu.com.app.data.DataManager;
 import edu.com.app.injection.component.ApplicationComponent;
 
 
 import edu.com.app.injection.component.DaggerApplicationComponent;
 import edu.com.app.injection.module.ApplicationModule;
-import edu.com.base.ui.widget.ViewDisplay;
-import edu.com.base.model.local.PreferencesHelper;
-import edu.com.base.util.ToastUtils;
+import edu.com.app.ui.widget.ViewDisplay;
+import edu.com.app.data.local.PreferencesHelper;
+import edu.com.app.util.ToastUtils;
+import timber.log.Timber;
 
 /**
  * Created by Anthony on 2016/6/3.
  * Class Note:
  */
 public class MyApplication extends Application {
+    @Inject
+    Bus mEventBus;
+    @Inject
+    DataManager mDataManager;
 
     private ApplicationComponent mAppComponent;
 
@@ -32,11 +41,10 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        ViewDisplay.init(this);
-        ToastUtils.init(this);
-        PreferencesHelper.init(this);
-        initLeanCloud();
 
+        getAppComponent().inject(this);
+        mEventBus.register(this);
+        initLeanCloud();
 //       初始化环信EaseUI
 //        initEaseUI();
 
@@ -44,10 +52,11 @@ public class MyApplication extends Application {
 //        Thread.setDefaultUncaughtExceptionHandler(new LocalFileUncaughtExceptionHandler(this,
 //                Thread.getDefaultUncaughtExceptionHandler()));
 
-//        if (BuildConfig.DEBUG) {
-//            Timber.plant(new Timber.DebugTree());
+        if (BuildConfig.DEBUG) {
+            Timber.plant(new Timber.DebugTree());
 //            Fabric.with(this, new Crashlytics());
-//        }
+        }
+//        Timber.plant(new CrashlyticsTree());
 
     }
 

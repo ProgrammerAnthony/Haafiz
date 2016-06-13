@@ -7,18 +7,18 @@
     android:paddingLeft="5dp"
     android:paddingRight="5dp">
 
-    <edu.com.app.find.nearby.radarScan.RadarViewGroup
+    <edu.com.app.ui.find.nearby.radarScan.RadarViewGroup
         android:id="@+id/radar"
         android:layout_width="280dp"
         android:layout_height="280dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp">
 
-        <edu.com.app.find.nearby.radarScan.RadarView
+        <edu.com.app.ui.find.nearby.radarScan.RadarView
             android:id="@id/id_scan_circle"
             android:layout_width="280dp"
             android:layout_height="280dp"/>
-    </edu.com.app.find.nearby.radarScan.RadarViewGroup>
+    </edu.com.app.ui.find.nearby.radarScan.RadarViewGroup>
 
     <RelativeLayout
         android:id="@+id/ry_container"
@@ -28,7 +28,7 @@
         android:layout_marginBottom="25dp"
         android:clipChildren="false">
 
-        <edu.com.app.find.nearby.radarScan.CustomViewPager
+        <edu.com.app.ui.find.nearby.radarScan.CustomViewPager
             android:id="@+id/customViewPager"
             android:layout_width="130dp"
             android:layout_height="160dp"

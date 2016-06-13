@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <edu.com.base.ui.widget.CircleImageView
+    <edu.com.app.ui.widget.CircleImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/user_img"
         android:layout_width="70dp"

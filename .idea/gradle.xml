@@ -8,20 +8,16 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/ThirdPart/openimSDK" />
             <option value="$PROJECT_DIR$/ThirdPart/pagerslidingtabstrip" />
             <option value="$PROJECT_DIR$/ThirdPart/sweetDialog" />
-            <option value="$PROJECT_DIR$/base" />
             <option value="$PROJECT_DIR$/datingBall" />
           </set>
         </option>
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/ThirdPart/openimSDK" />
             <option value="$PROJECT_DIR$/ThirdPart/pagerslidingtabstrip" />
             <option value="$PROJECT_DIR$/ThirdPart/sweetDialog" />
-            <option value="$PROJECT_DIR$/base" />
             <option value="$PROJECT_DIR$/datingBall" />
           </set>
         </option>

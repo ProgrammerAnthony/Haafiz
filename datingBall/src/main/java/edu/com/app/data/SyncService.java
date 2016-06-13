@@ -12,19 +12,22 @@ import android.os.IBinder;
 import javax.inject.Inject;
 
 import edu.com.app.MyApplication;
-import edu.com.base.model.bean.Ribot;
-import edu.com.base.util.AndroidComponentUtil;
-import edu.com.base.util.NetworkUtil;
+import edu.com.app.data.bean.Friends;
+import edu.com.app.util.AndroidComponentUtil;
+import edu.com.app.util.NetworkUtil;
 import rx.Observer;
 import rx.Subscription;
 import rx.schedulers.Schedulers;
 import timber.log.Timber;
 
-
+/**
+ *
+ */
 public class SyncService extends Service {
 
     @Inject
     DataManager mDataManager;
+
     private Subscription mSubscription;
 
     public static Intent getStartIntent(Context context) {
@@ -54,9 +57,10 @@ public class SyncService extends Service {
 
         if (mSubscription != null && !mSubscription.isUnsubscribed())
             mSubscription.unsubscribe();
-        mSubscription = mDataManager.syncRibots()
+
+        mSubscription = mDataManager.syncFriends()
                 .subscribeOn(Schedulers.io())
-                .subscribe(new Observer<Ribot>() {
+                .subscribe(new Observer<Friends>() {
                     @Override
                     public void onCompleted() {
                         Timber.i("Synced successfully!");
@@ -71,7 +75,7 @@ public class SyncService extends Service {
                     }
 
                     @Override
-                    public void onNext(Ribot ribot) {
+                    public void onNext(Friends friends) {
                     }
                 });
 

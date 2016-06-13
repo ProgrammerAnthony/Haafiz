@@ -5,29 +5,33 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import edu.com.base.model.local.DatabaseHelper;
-import edu.com.base.model.bean.Ribot;
-import edu.com.base.model.local.PreferencesHelper;
-import edu.com.base.model.remote.RibotsService;
-import edu.com.base.ui.widget.EventPosterHelper;
+import edu.com.app.data.bean.Friends;
+import edu.com.app.data.local.DatabaseHelper;
+import edu.com.app.data.local.PreferencesHelper;
+import edu.com.app.data.remote.FriendsService;
 import rx.Observable;
 import rx.functions.Action0;
 import rx.functions.Func1;
 
-
+/**
+ * Created by Anthony on 2016/6/12.
+ * Class Note:
+ * Data entrance!!!
+ */
 @Singleton
 public class DataManager {
 
-    private final RibotsService mRibotsService;
+    @Inject
+    FriendsService friendsService;
+
     private final DatabaseHelper mDatabaseHelper;
     private final PreferencesHelper mPreferencesHelper;
     private final EventPosterHelper mEventPoster;
 
     @Inject
-    public DataManager(RibotsService ribotsService,PreferencesHelper preferencesHelper,
+    public DataManager(PreferencesHelper preferencesHelper,
                        DatabaseHelper databaseHelper, EventPosterHelper eventPosterHelper) {
-        mRibotsService = ribotsService;
-        mPreferencesHelper =preferencesHelper;
+        mPreferencesHelper = preferencesHelper;
         mDatabaseHelper = databaseHelper;
         mEventPoster = eventPosterHelper;
     }
@@ -36,18 +40,19 @@ public class DataManager {
         return mPreferencesHelper;
     }
 
-    public Observable<Ribot> syncRibots() {
-        return mRibotsService.getRibots()
-                .concatMap(new Func1<List<Ribot>, Observable<Ribot>>() {
+    public Observable<Friends> syncFriends() {
+        return friendsService.getFriends()
+                .concatMap(new Func1<List<Friends>, Observable<Friends>>() {
                     @Override
-                    public Observable<Ribot> call(List<Ribot> ribots) {
-                        return mDatabaseHelper.setRibots(ribots);
+                    public Observable<Friends> call(List<Friends> friends) {
+                        return mDatabaseHelper.setFriends(friends);
                     }
                 });
     }
 
-    public Observable<List<Ribot>> getRibots() {
-        return mDatabaseHelper.getRibots().distinct();
+    public Observable<List<Friends>> getFriends() {
+//        if()
+        return mDatabaseHelper.getFriends().distinct();
     }
 
 
