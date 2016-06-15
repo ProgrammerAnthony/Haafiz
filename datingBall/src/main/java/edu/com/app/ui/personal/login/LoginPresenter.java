@@ -21,6 +21,7 @@ import javax.inject.Inject;
 
 import edu.com.app.data.rx.RxLeanCloud;
 import edu.com.app.data.local.PreferencesHelper;
+import edu.com.app.injection.scope.ActivityContext;
 import rx.functions.Action1;
 
 /**
@@ -28,17 +29,20 @@ import rx.functions.Action1;
  * Class Note:
  */
 public class LoginPresenter implements LoginContract.Presenter, Handler.Callback {
-    LoginContract.View mLoginView;
+    private LoginContract.View mLoginView;
     private Context mContext;
 
     private RxLeanCloud mRxleanCloud;
     private Handler mHandler;
     private static final int MESSAGE_WHAT = 1;
     AnimatorSet mAnimatorSet;
+
     @Inject
     PreferencesHelper mPreferenceHelper;
-    public LoginPresenter(Context mContext) {
-        this.mContext = mContext;
+
+    @Inject
+    public LoginPresenter(@ActivityContext Context context) {
+        mContext = context;
     }
 
     @Override
@@ -224,7 +228,8 @@ public class LoginPresenter implements LoginContract.Presenter, Handler.Callback
 
     @Override
     public void doingSplash() {
-        if (mPreferenceHelper.isFirstTime()) {
+        // TODO: 2016/6/15  permission confirm
+/*        if (mPreferenceHelper.isFirstTime()) {
             RxPermissions.getInstance(mContext)
                     .request(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA)
                     .subscribe(new Action1<Boolean>() {
@@ -242,6 +247,7 @@ public class LoginPresenter implements LoginContract.Presenter, Handler.Callback
         if (mHandler != null) {
             mHandler.sendEmptyMessageDelayed(MESSAGE_WHAT, 3000);
         }
+*/
     }
 
     @Override
@@ -276,12 +282,12 @@ public class LoginPresenter implements LoginContract.Presenter, Handler.Callback
 
     @Override
     public void attachView(LoginContract.View view) {
-        mLoginView =view;
+        mLoginView = view;
     }
 
     @Override
     public void detachView() {
-
+        mLoginView = null;
     }
 
 }

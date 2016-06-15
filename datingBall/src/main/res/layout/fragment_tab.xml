@@ -7,7 +7,7 @@
                   android:layout_width="match_parent"
                   android:layout_height="match_parent" >
 
-        <FrameLayout
+        <RelativeLayout
                 android:id="@+id/tab_container"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
@@ -30,7 +30,14 @@
                     app:pstsTextAllCaps="false"
                     app:pstsTabCountOnScreen="true"/>
 
-        </FrameLayout>
+            <ImageButton
+                android:id="@+id/channel_btn"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:layout_alignRight="@id/tab_strip"
+                android:src="@drawable/ic_back"/>
+        </RelativeLayout>
 
         <android.support.v4.view.ViewPager
                 android:id="@+id/view_pager"

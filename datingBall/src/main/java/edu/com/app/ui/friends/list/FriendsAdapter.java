@@ -1,4 +1,4 @@
-package edu.com.app.ui.friends;
+package edu.com.app.ui.friends.list;
 
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;

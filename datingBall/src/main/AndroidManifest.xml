@@ -61,9 +61,7 @@
         <activity
             android:name=".ui.personal.edit.PersonalEditActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.find.nearby.detail.NearByDetailActivity"
-            android:screenOrientation="portrait" />
+
         <activity
             android:name=".ui.friends.add.FriendsAddActivity"
             android:screenOrientation="portrait" />
@@ -74,7 +72,9 @@
         <activity
             android:name=".ui.personal.info.PersonalInfoActivity"
             android:screenOrientation="portrait" />
-
+        <activity
+            android:name=".ui.news.channel.ChannelChooseActivity"
+            android:screenOrientation="portrait" />
 
         <!-- 实时通信模块、推送（若使用该功能，需添加以下声明）START -->
         <service android:name="com.avos.avoscloud.PushService" />

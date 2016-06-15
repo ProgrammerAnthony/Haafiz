@@ -13,7 +13,6 @@ import butterknife.Bind;
 import edu.com.app.R;
 import edu.com.app.data.SyncService;
 import edu.com.app.data.bean.Friends;
-import edu.com.app.ui.friends.FriendsAdapter;
 import edu.com.app.ui.base.AbsBaseFragment;
 import edu.com.app.ui.main.MainActivity;
 

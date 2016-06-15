@@ -81,10 +81,13 @@ public class MainActivity extends AbsBaseActivity implements MainContract.View, 
 
     @Inject
     RxBus mRxBus;
+
     @Inject
     ChoosePicDialog mPicDialog;
+
     @Inject
     PreferencesHelper mPref;
+
     @Inject
     ViewDisplay viewDisplay;
 

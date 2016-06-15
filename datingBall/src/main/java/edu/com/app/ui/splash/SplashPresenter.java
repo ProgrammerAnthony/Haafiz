@@ -15,6 +15,7 @@ import edu.com.app.util.ToastUtils;
 /**
  * Created by Anthony on 2016/5/31.
  * Class Note:
+ * presenter for splash view
  */
 public class SplashPresenter implements SplashContract.Presenter {
     private SplashContract.View mView;
@@ -22,6 +23,7 @@ public class SplashPresenter implements SplashContract.Presenter {
     private String firstUrl;
     private static final short SPLASH_SHOW_SECONDS = 1;
     private long mShowMainTime;
+
     @Inject ToastUtils toastUtils;
 
     @Inject

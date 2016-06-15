@@ -9,6 +9,7 @@ import butterknife.Bind;
 import butterknife.OnClick;
 import edu.com.app.R;
 import edu.com.app.ui.base.AbsBaseFragment;
+import edu.com.app.ui.main.MainActivity;
 import edu.com.app.util.ToastUtils;
 
 /**
@@ -35,7 +36,7 @@ public class FindFragment extends AbsBaseFragment {
 
     @Override
     protected void initDagger() {
-
+        ((MainActivity) getActivity()).activityComponent().inject(this);
     }
 
     @Override

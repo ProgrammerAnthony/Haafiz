@@ -2,7 +2,10 @@ package edu.com.app.ui.news.newsList;
 
 import android.content.Context;
 
+import javax.inject.Inject;
+
 import edu.com.app.data.bean.NewsData;
+import edu.com.app.injection.scope.ActivityContext;
 
 /**
  * Created by Anthony on 2016/5/3.
@@ -17,11 +20,13 @@ public class NewsPresenter implements NewsContract.Presenter, NewsContract.onGet
     private Context mContext;
     private NewsData mData;
 
-    public NewsPresenter(Context mContext) {
+    @Inject
+    public NewsPresenter(@ActivityContext Context mContext) {
         this.mContext = mContext;
 //        this.mView = mView;
 //        mView.setPresenter(this);//!!! bind presenter for View
 
+// TODO: 2016/6/14  modify data
         mData = new NewsData(mContext, this);//!!!bind data listener to Model
     }
 
@@ -40,7 +45,6 @@ public class NewsPresenter implements NewsContract.Presenter, NewsContract.onGet
 
     @Override
     public void onSuccess() {
-//        mView.hideLoading();
         mView.hideProgress();
         mView.onDataReceived(mData.getChannels());
 
@@ -48,26 +52,17 @@ public class NewsPresenter implements NewsContract.Presenter, NewsContract.onGet
 
     @Override
     public void onError() {
-//        mView.showEmpty("data error", new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//            }
-//        });
         mView.showMessage("error");
     }
 
-//    @Override
-//    public void attachView(BaseView view) {
-//        mView = (NewsContract.View) view;
-//    }
 
     @Override
     public void attachView(NewsContract.View view) {
-        mView=view;
+        mView = view;
     }
 
     @Override
     public void detachView() {
-
+        mView = null;
     }
 }

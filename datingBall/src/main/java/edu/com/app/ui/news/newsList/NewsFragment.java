@@ -1,12 +1,18 @@
 package edu.com.app.ui.news.newsList;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.astuetz.PagerSlidingTabStrip;
 
@@ -15,13 +21,16 @@ import java.util.ArrayList;
 import javax.inject.Inject;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import edu.com.app.R;
-
-import edu.com.app.data.bean.NewsData;
 import edu.com.app.data.bean.Channel;
-
+import edu.com.app.data.bean.NewsData;
+import edu.com.app.injection.scope.ActivityContext;
 import edu.com.app.ui.base.AbsBaseFragment;
 import edu.com.app.ui.main.MainActivity;
+import edu.com.app.ui.news.channel.ChannelChooseActivity;
+import edu.com.app.ui.news.detail.WebViewActivity;
 import edu.com.app.ui.widget.ViewDisplay;
 import edu.com.app.util.AppUtils;
 
@@ -39,7 +48,7 @@ import edu.com.app.util.AppUtils;
  */
 public class NewsFragment extends AbsBaseFragment implements NewsContract.View {
 
-//    @Bind(R.id.fragment_tab_content)
+    //    @Bind(R.id.fragment_tab_content)
 //    LinearLayout mFragmentContent;
     @Bind(R.id.view_pager)
     ViewPager mViewPager;
@@ -49,14 +58,21 @@ public class NewsFragment extends AbsBaseFragment implements NewsContract.View {
 
     @Inject
     ViewDisplay viewDisplay;
+//    @Inject
+//    Activity mActivity;
 
     protected static String TAG = "NewsFragment";
     private static int INIT_INDEX = 0;
+    @Bind(R.id.channel_btn)
+    ImageButton channelBtn;
+
+    @Inject
+    NewsPresenter mPresenter;
 
     private View mTopBar;
 
 
-    private NewsPresenter mPresenter;
+    //    private NewsPresenter mPresenter;
     private TabViewPagerAdapter mViewPagerAdapter;
 
 
@@ -77,9 +93,10 @@ public class NewsFragment extends AbsBaseFragment implements NewsContract.View {
         mViewPagerAdapter = new TabViewPagerAdapter(getActivity(),
                 getChildFragmentManager(),
                 new ArrayList<Channel>());
+
         mViewPager.setAdapter(mViewPagerAdapter);
         mTabStrip.setViewPager(mViewPager);
-
+//        channelBtn.setOnClickListener(this);
 
         loadData();
 
@@ -91,8 +108,8 @@ public class NewsFragment extends AbsBaseFragment implements NewsContract.View {
     }
 
     protected void loadData() {
-        if (mPresenter == null)
-            mPresenter = new NewsPresenter( mContext);
+/*        if (mPresenter == null)
+            mPresenter = new NewsPresenter(mContext);*/
         mPresenter.attachView(this);
         mPresenter.getData("raw://news_channels");
 
@@ -104,6 +121,18 @@ public class NewsFragment extends AbsBaseFragment implements NewsContract.View {
         mViewPagerAdapter.notifyDataSetChanged();
         mTabStrip.notifyDataSetChanged();
     }
+
+
+    @OnClick(R.id.channel_btn)
+    public void onClick() {
+        Intent intent = new Intent(mContext, ChannelChooseActivity.class);
+        startActivity(intent);
+    }
+
+//    @Override
+//    public void toChannelSelectActivity() {
+//
+//    }
 
     /**
      * Created by Anthony on 2016/2/24.

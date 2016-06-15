@@ -14,6 +14,8 @@ import android.widget.TextView;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.orhanobut.logger.Logger;
 
+import javax.inject.Inject;
+
 import butterknife.Bind;
 import butterknife.OnClick;
 import edu.com.app.R;
@@ -30,7 +32,7 @@ import shem.com.materiallogin.MaterialLoginViewListener;
  */
 public class NewLoginActivity extends AbsSwipeBackActivity implements LoginContract.View {
 
-    LoginPresenter mLoginPresenter;
+//    LoginPresenter mLoginPresenter;
     @Bind(R.id.splash_bg)
     ImageView splashBg;
     @Bind(R.id.tv_slogan)
@@ -46,10 +48,12 @@ public class NewLoginActivity extends AbsSwipeBackActivity implements LoginContr
 
     boolean isBlured = false;
 
+    @Inject
+    LoginPresenter mLoginPresenter;
 
     @Override
     protected void initViewsAndEvents() {
-        mLoginPresenter = new LoginPresenter(mContext);
+//        mLoginPresenter = new LoginPresenter(mContext);
         mLoginPresenter.attachView(this);
         mLoginPresenter.beginAnimation(splashBg, tvSlogan, shimmerLayout);
         mLoginPresenter.doingSplash();
@@ -78,6 +82,8 @@ public class NewLoginActivity extends AbsSwipeBackActivity implements LoginContr
     @Override
     protected void injectDagger() {
 //        mActivityComponent.inject(this);
+        activityComponent().inject(this);
+
     }
 
     @Override

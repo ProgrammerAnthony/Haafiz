@@ -11,6 +11,7 @@ import javax.inject.Inject;
 import edu.com.app.R;
 import edu.com.app.data.bean.Event;
 import edu.com.app.data.rx.RxBus;
+import edu.com.app.ui.main.MainActivity;
 import edu.com.app.util.ToastUtils;
 
 /**
@@ -18,8 +19,7 @@ import edu.com.app.util.ToastUtils;
  * Class Note:
  */
 public class SettingsFragment extends PreferenceFragment {
-    @Inject
-    ToastUtils toastUtils;
+
     @Inject
     RxBus rxBus;
 
@@ -27,6 +27,11 @@ public class SettingsFragment extends PreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.preference);
+        initDagger();
+    }
+
+    private void initDagger() {
+        ((SettingsActivity) getActivity()).activityComponent().inject(this);
     }
 
     @Override
@@ -35,10 +40,8 @@ public class SettingsFragment extends PreferenceFragment {
 
             CheckBoxPreference boxPreference= (CheckBoxPreference) findPreference("pref_key_wifi_loading_img");
             if(boxPreference.isChecked()){
-                toastUtils.showToast("isChecked");
                 rxBus.post(new Event("001","wifi"));
             }else{
-                toastUtils.showToast("unCheked");
                 rxBus.post(new Event("002","not wifi"));
             }
 

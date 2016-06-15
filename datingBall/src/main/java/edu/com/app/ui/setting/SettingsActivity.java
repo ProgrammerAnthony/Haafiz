@@ -38,8 +38,10 @@ public class SettingsActivity extends AbsSwipeBackActivity {
 //    RelativeLayout mSettingContent;
     @Inject
     ToastUtils toastUtils;
+
     @Inject
     RxBus rxBus;
+
     @Override
     protected void initViewsAndEvents() {
         // Display the fragment as the main content.
@@ -76,7 +78,7 @@ public class SettingsActivity extends AbsSwipeBackActivity {
 
     @Override
     protected void injectDagger() {
-//        mActivityComponent.inject(this);
+        activityComponent().inject(this);
     }
 
     @Override
@@ -84,13 +86,6 @@ public class SettingsActivity extends AbsSwipeBackActivity {
 
     }
 
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
 
     @OnClick(R.id.title_image_left)
     public void onClick() {

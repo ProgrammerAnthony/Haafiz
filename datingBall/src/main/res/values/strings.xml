@@ -100,4 +100,10 @@
     <string name="cpb_default_rotation_speed">1</string>
     <string name="cpb_default_sweep_speed">1</string>
 
+
+    <string name="drag_tip">长按编辑,拖拽排序</string>
+    <string name="my_channel">我的频道</string>
+    <string name="other_channel">其他频道</string>
+    <string name="edit">编辑</string>
+    <string name="finish">完成</string>
 </resources>

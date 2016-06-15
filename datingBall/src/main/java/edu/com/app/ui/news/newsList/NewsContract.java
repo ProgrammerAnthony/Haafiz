@@ -17,21 +17,23 @@ import edu.com.app.ui.base.BaseView;
  * {@link NewsPresenter}---------Presenter
  * &{@link NewsFragment}---------------------------View
  * &{@link  NewsData}--------------------Model
- *
  */
 public interface NewsContract {
 
-    interface Presenter extends BasePresenter<View>{
+    interface Presenter extends BasePresenter<View> {
         void getData(String url);
 
     }
 
-    interface View  extends BaseView{
+    interface View extends BaseView {
         void onDataReceived(ArrayList<Channel> channels);
+
+//        void toChannelSelectActivity();
     }
 
-    interface onGetChannelListListener{
+    interface onGetChannelListListener {
         void onSuccess();
+
         void onError();
     }
 }

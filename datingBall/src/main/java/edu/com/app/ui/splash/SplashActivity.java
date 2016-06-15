@@ -11,8 +11,10 @@ import edu.com.app.ui.main.MainActivity;
 /**
  * Created by Anthony on 2016/5/31.
  * Class Note:
+ * implements of splash view
  */
 public class SplashActivity extends AbsBaseActivity implements SplashContract.View {
+
     @Inject
     SplashPresenter mPresenter;
 
@@ -39,10 +41,6 @@ public class SplashActivity extends AbsBaseActivity implements SplashContract.Vi
     @Override
     protected void injectDagger() {
         activityComponent().inject(this);
-    /*    DaggerSplashActivityComponent.builder()
-                .splashActivityModule(new SplashActivityModule(this, mPresenter))
-                .applicationComponent(((MyApplication) getApplication()).getAppComponent()).build().inject(this);
-                */
     }
 
     @Override

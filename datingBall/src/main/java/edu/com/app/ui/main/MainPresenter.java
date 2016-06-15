@@ -107,10 +107,12 @@ public class MainPresenter implements MainContract.Presenter {
      */
     @Override
     public void processHeadIconClicked(boolean isLogin) {
-        if (isLogin)
+        // TODO: 2016/6/15  根据是否登陆进行跳转
+/*        if (isLogin)
             mView.toPersonalActivity();
         else
-            mView.toLoginActivity();
+            mView.toLoginActivity();*/
+        mView.toPersonalActivity();
     }
 
     @Override
