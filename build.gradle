@@ -63,6 +63,8 @@ allprojects {
         maven { url "https://jitpack.io" }
         //leanCloud
         maven { url "http://mvn.leancloud.cn/nexus/content/repositories/releases" }
+        //UltimateRecyclerView
+        maven { url "http://dl.bintray.com/jjhesk/maven" }
     }
 }
 

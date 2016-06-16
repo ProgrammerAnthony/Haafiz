@@ -129,6 +129,10 @@ dependencies {
     //dagger公用api
     provided "org.glassfish:javax.annotation:$rootProject.javaxAnnotationVersion"
 
+    //BaseRecyclerViewAdapterHelper
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v1.7.9'
+    //UltimateRecyclerView
+    compile 'com.hkm.ui:ultimaterecyclerview:0.5.8'
 
     //添加android缺失的部分javax注解
 

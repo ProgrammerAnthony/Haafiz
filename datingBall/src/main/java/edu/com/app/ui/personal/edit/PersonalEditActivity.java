@@ -29,6 +29,6 @@ public class PersonalEditActivity extends AbsSwipeBackActivity {
     }
     @Override
     protected void injectDagger() {
-//        mActivityComponent.inject(this);
+        activityComponent().inject(this);
     }
 }
