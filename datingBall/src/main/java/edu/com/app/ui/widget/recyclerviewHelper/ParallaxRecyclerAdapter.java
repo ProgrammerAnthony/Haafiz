@@ -3,14 +3,21 @@ package edu.com.app.ui.widget.recyclerviewHelper;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.TranslateAnimation;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import edu.com.app.R;
+
 /**
  * Create By Anthony on 2016/1/15
  * Class Note:
@@ -256,3 +263,54 @@ public abstract class ParallaxRecyclerAdapter<T> extends RecyclerView.Adapter<Re
         return this.mScrollMultiplier;
     }
 }
+
+/**
+ * Sample here
+ */
+/*
+    private void createAdapter(RecyclerView recyclerView) {
+        final List<String> content = new ArrayList<>();
+        for (int i = 0; i < 50; i++) {
+            content.add("item " + i);
+        }
+
+        final ParallaxRecyclerAdapter<String> adapter = new ParallaxRecyclerAdapter<String>(content) {
+            @Override
+            public void onBindViewHolderImpl(RecyclerView.ViewHolder viewHolder, ParallaxRecyclerAdapter<String> adapter, int i) {
+                ((ViewHolder) viewHolder).textView.setText(adapter.getData().get(i));
+            }
+
+            @Override
+            public RecyclerView.ViewHolder onCreateViewHolderImpl(ViewGroup viewGroup, final ParallaxRecyclerAdapter<String> adapter, int i) {
+                return new ViewHolder(getLayoutInflater().inflate(R.layout.row_recyclerview, viewGroup, false));
+            }
+
+            @Override
+            public int getItemCountImpl(ParallaxRecyclerAdapter<String> adapter) {
+                return content.size();
+            }
+        };
+
+        adapter.setOnClickEvent(new ParallaxRecyclerAdapter.OnClickEvent() {
+            @Override
+            public void onClick(View v, int position) {
+                Toast.makeText(PersonalInfoActivity.this, "You clicked '" + position + "'", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //alpha effect in TopBar
+        adapter.setOnParallaxScroll(new ParallaxRecyclerAdapter.OnParallaxScroll() {
+            @Override
+            public void onParallaxScroll(float percentage, float offset, View parallax) {
+                Drawable c = personalTopBar.getBackground();
+                c.setAlpha(Math.round(percentage * 255));
+                personalTopBar.setBackground(c);
+            }
+        });
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        View header = getLayoutInflater().inflate(R.layout.header, recyclerView, false);
+        adapter.setParallaxHeader(header, recyclerView);
+        adapter.setData(content);
+        recyclerView.setAdapter(adapter);
+    }*/
