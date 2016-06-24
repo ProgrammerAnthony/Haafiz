@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import edu.com.app.data.bean.NewsData;
 import edu.com.app.data.bean.Channel;
 
-import edu.com.app.ui.base.BasePresenter;
-import edu.com.app.ui.base.BaseView;
+import edu.com.app.base.BasePresenter;
+import edu.com.app.base.BaseView;
 
 /**
  * Created by Anthony on 2016/5/3.

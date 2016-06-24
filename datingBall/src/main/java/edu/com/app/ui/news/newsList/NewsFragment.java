@@ -1,17 +1,13 @@
 package edu.com.app.ui.news.newsList;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 import com.astuetz.PagerSlidingTabStrip;
@@ -21,17 +17,14 @@ import java.util.ArrayList;
 import javax.inject.Inject;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import edu.com.app.R;
 import edu.com.app.data.bean.Channel;
 import edu.com.app.data.bean.NewsData;
-import edu.com.app.injection.scope.ActivityContext;
-import edu.com.app.ui.base.AbsBaseFragment;
+import edu.com.app.base.AbsBaseFragment;
 import edu.com.app.ui.main.MainActivity;
 import edu.com.app.ui.news.channel.ChannelChooseActivity;
-import edu.com.app.ui.news.detail.WebViewActivity;
-import edu.com.app.ui.widget.ViewDisplay;
+import edu.com.app.base.widget.ViewDisplay;
 import edu.com.app.util.AppUtils;
 
 /**

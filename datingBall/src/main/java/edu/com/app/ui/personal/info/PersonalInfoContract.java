@@ -1,12 +1,7 @@
 package edu.com.app.ui.personal.info;
 
-import android.net.Uri;
-import android.support.v4.app.Fragment;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import edu.com.app.ui.base.BasePresenter;
-import edu.com.app.ui.base.BaseView;
+import edu.com.app.base.BasePresenter;
+import edu.com.app.base.BaseView;
 
 /**
  * Created by Anthony on 2016/6/16.

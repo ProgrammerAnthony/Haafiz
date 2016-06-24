@@ -48,13 +48,6 @@
         <!--<item name="android:activityCloseEnterAnimation">@anim/left_in</item>  表示上一个activity返回进入效果 比如有俩个activity A,B B退出后A进入的效果-->
         <item name="android:activityCloseExitAnimation">@anim/right_out</item><!--一个activity销毁退出的效果-->
     </style>
-    <!-- MainActivity theme. -->
-    <style name="MainActivityTheme" parent="Theme.AppCompat">
-
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowIsTranslucent">false</item>
-    </style>
 
     <!--must use Theme.AppCompat or similar theme in AppCompatActivity and its subclass-->
     <!--using windowIsTranslucent true to make window translucent when swipe back-->
@@ -64,6 +57,18 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
     </style>
+
+
+    <!-- MainActivity theme. -->
+    <style name="MainActivityTheme" parent="Theme.AppCompat">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+
+
     <!--Circle ImageView-->
     <declare-styleable name="CircleImageView">
         <attr name="civ_border_width" format="dimension" />

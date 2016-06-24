@@ -13,16 +13,16 @@ import butterknife.Bind;
 import edu.com.app.R;
 import edu.com.app.data.SyncService;
 import edu.com.app.data.bean.Friends;
-import edu.com.app.ui.base.AbsBaseFragment;
+import edu.com.app.base.AbsBaseFragment;
 import edu.com.app.ui.main.MainActivity;
 
 /**
  * Created by Anthony on 2016/5/10.
- * Class Note:好友列表界面 集成中
+ * Class Note:好友列表界面,利用android-bi
  */
 public class FriendsListFragment extends AbsBaseFragment implements FriendsListContract.View{
     private static final String EXTRA_TRIGGER_SYNC_FLAG =
-            "edu.com.app.ui.friends.list.FriendsListFragment.EXTRA_TRIGGER_SYNC_FLAG";
+            "edu.com.app.module.friends.list.FriendsListFragment.EXTRA_TRIGGER_SYNC_FLAG";
     @Inject
     FriendsListPresenter mPresenter;
 

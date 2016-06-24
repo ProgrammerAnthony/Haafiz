@@ -1,7 +1,5 @@
 package edu.com.app.ui.news.channel;
 
-import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
@@ -9,20 +7,17 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.nio.channels.Channel;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import edu.com.app.R;
 import edu.com.app.data.bean.ChannelEntity;
-import edu.com.app.ui.base.AbsBaseActivity;
-import edu.com.app.ui.base.AbsSwipeBackActivity;
-import edu.com.app.ui.widget.CircleImageView;
+import edu.com.app.base.AbsSwipeBackActivity;
+import edu.com.app.base.widget.CircleImageView;
 import edu.com.app.util.ToastUtils;
 
 /**

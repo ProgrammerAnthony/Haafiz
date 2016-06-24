@@ -5,8 +5,8 @@ import android.support.v4.app.Fragment;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import edu.com.app.ui.base.BasePresenter;
-import edu.com.app.ui.base.BaseView;
+import edu.com.app.base.BasePresenter;
+import edu.com.app.base.BaseView;
 
 
 /**

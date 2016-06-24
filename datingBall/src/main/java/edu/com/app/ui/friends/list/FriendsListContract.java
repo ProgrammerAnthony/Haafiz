@@ -3,8 +3,8 @@ package edu.com.app.ui.friends.list;
 import java.util.List;
 
 import edu.com.app.data.bean.Friends;
-import edu.com.app.ui.base.BasePresenter;
-import edu.com.app.ui.base.BaseView;
+import edu.com.app.base.BasePresenter;
+import edu.com.app.base.BaseView;
 
 /**
  * Created by Anthony on 2016/6/13.

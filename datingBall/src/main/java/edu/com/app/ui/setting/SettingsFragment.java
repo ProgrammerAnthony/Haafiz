@@ -11,8 +11,6 @@ import javax.inject.Inject;
 import edu.com.app.R;
 import edu.com.app.data.bean.Event;
 import edu.com.app.data.rx.RxBus;
-import edu.com.app.ui.main.MainActivity;
-import edu.com.app.util.ToastUtils;
 
 /**
  * Created by Anthony on 2016/5/13.

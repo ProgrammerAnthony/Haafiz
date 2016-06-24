@@ -15,14 +15,12 @@ import edu.com.app.injection.component.ApplicationComponent;
 
 import edu.com.app.injection.component.DaggerApplicationComponent;
 import edu.com.app.injection.module.ApplicationModule;
-import edu.com.app.ui.widget.ViewDisplay;
-import edu.com.app.data.local.PreferencesHelper;
-import edu.com.app.util.ToastUtils;
 import timber.log.Timber;
 
 /**
  * Created by Anthony on 2016/6/3.
- * Class Note:
+ * Class Note:Base Application for Application
+ * use in AndroidManifest.xml
  */
 public class MyApplication extends Application {
     @Inject

@@ -25,7 +25,7 @@ import edu.com.app.ui.find.nearby.radarScan.FixedSpeedScroller;
 import edu.com.app.ui.find.nearby.radarScan.Info;
 import edu.com.app.ui.find.nearby.radarScan.RadarViewGroup;
 import edu.com.app.ui.find.nearby.radarScan.ZoomOutPageTransformer;
-import edu.com.app.ui.base.AbsTitleFragment;
+import edu.com.app.base.AbsTitleFragment;
 import edu.com.app.util.LogUtil;
 
 /**

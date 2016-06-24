@@ -5,7 +5,7 @@
     android:background="@color/colorPrimary"
     android:gravity="center_vertical">
 
-    <edu.com.app.ui.widget.CircleImageView
+    <edu.com.app.base.widget.CircleImageView
         android:id="@+id/title_image_left"
         android:layout_width="@dimen/title_bar_icon_size"
         android:layout_height="@dimen/title_bar_icon_size"

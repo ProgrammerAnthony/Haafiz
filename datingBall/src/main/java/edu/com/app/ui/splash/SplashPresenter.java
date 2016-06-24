@@ -6,7 +6,6 @@ import android.os.AsyncTask;
 import javax.inject.Inject;
 
 import edu.com.app.injection.scope.ActivityContext;
-import edu.com.app.injection.scope.ApplicationContext;
 import edu.com.app.data.http.HttpUtil;
 import edu.com.app.data.http.callback.StringHttpCallback;
 import edu.com.app.data.http.request.HttpRequest;

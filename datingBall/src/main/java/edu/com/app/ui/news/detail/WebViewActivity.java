@@ -24,9 +24,9 @@ import javax.inject.Inject;
 
 import butterknife.Bind;
 import edu.com.app.R;
-import edu.com.app.ui.base.AbsSwipeBackActivity;
-import edu.com.app.ui.widget.CircleImageView;
-import edu.com.app.ui.widget.DialogFactory;
+import edu.com.app.base.AbsSwipeBackActivity;
+import edu.com.app.base.widget.CircleImageView;
+import edu.com.app.base.widget.DialogFactory;
 import edu.com.app.util.ToastUtils;
 
 /**

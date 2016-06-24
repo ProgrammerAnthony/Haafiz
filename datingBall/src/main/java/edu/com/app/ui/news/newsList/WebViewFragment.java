@@ -21,8 +21,7 @@ import javax.inject.Inject;
 import butterknife.Bind;
 import edu.com.app.R;
 import edu.com.app.ui.news.detail.WebViewActivity;
-import edu.com.app.ui.base.AbsTitleFragment;
-import edu.com.app.ui.widget.DialogFactory;
+import edu.com.app.base.AbsTitleFragment;
 import edu.com.app.util.ToastUtils;
 
 /**

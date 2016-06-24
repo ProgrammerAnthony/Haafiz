@@ -4,7 +4,7 @@ import android.view.View;
 
 import edu.com.app.R;
 
-import edu.com.app.ui.base.AbsBaseFragment;
+import edu.com.app.base.AbsBaseFragment;
 
 /**
  * Created by Anthony on 2016/5/10.

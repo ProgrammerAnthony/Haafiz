@@ -17,9 +17,7 @@ import javax.inject.Inject;
 
 import edu.com.app.data.DataManager;
 import edu.com.app.injection.scope.ActivityContext;
-import edu.com.app.injection.scope.ApplicationContext;
 import edu.com.app.data.rx.RxLeanCloud;
-import edu.com.app.util.ToastUtils;
 import edu.com.app.R;
 import rx.Subscription;
 

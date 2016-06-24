@@ -1,7 +1,7 @@
 package edu.com.app.ui.friends.add;
 
 import edu.com.app.R;
-import edu.com.app.ui.base.AbsSwipeBackActivity;
+import edu.com.app.base.AbsSwipeBackActivity;
 
 /**
  * Created by Anthony on 2016/5/10.

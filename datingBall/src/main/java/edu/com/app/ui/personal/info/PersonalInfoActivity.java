@@ -1,7 +1,6 @@
 package edu.com.app.ui.personal.info;
 
 import android.graphics.drawable.Drawable;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -16,12 +15,12 @@ import java.util.List;
 import javax.inject.Inject;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import edu.com.app.R;
-import edu.com.app.ui.base.AbsSwipeBackActivity;
-import edu.com.app.ui.widget.CircleImageView;
-import edu.com.app.ui.widget.recyclerviewHelper.ParallaxRecyclerAdapter;
+import edu.com.app.base.AbsSwipeBackActivity;
+import edu.com.app.base.widget.CircleImageView;
+import edu.com.app.base.widget.ViewDisplay;
+import edu.com.app.base.widget.recyclerviewHelper.ParallaxRecyclerAdapter;
 import edu.com.app.util.ToastUtils;
 
 /**
@@ -49,6 +48,8 @@ public class PersonalInfoActivity extends AbsSwipeBackActivity implements Person
 //    @Bind(R.id.toolbar)
 //    Toolbar toolbar;
 
+    @Inject
+    ViewDisplay viewDisplay;
     @Inject
     ToastUtils toastUtils;
 
@@ -137,6 +138,7 @@ public class PersonalInfoActivity extends AbsSwipeBackActivity implements Person
                 break;
             case R.id.title_txt_right:
                 toastUtils.showToast("修改个人数据");
+                viewDisplay.showActivity(mContext,"1008");
                 break;
             case R.id.delete_account_txt:
                 toastUtils.showToast("注销当前账号");

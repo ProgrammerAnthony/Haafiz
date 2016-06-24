@@ -4,7 +4,7 @@ import android.content.Intent;
 
 import javax.inject.Inject;
 
-import edu.com.app.ui.base.AbsBaseActivity;
+import edu.com.app.base.AbsBaseActivity;
 import edu.com.app.R;
 import edu.com.app.ui.main.MainActivity;
 

@@ -10,7 +10,6 @@ import java.util.ArrayList;
 
 import edu.com.app.data.Constants;
 import edu.com.app.ui.news.newsList.NewsContract;
-import edu.com.app.data.bean.Channel;
 import edu.com.app.data.http.HttpUtil;
 import edu.com.app.data.http.callback.StringHttpCallback;
 import edu.com.app.data.http.request.HttpRequest;

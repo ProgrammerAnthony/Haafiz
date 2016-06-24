@@ -19,7 +19,7 @@ import javax.inject.Inject;
 import butterknife.Bind;
 import butterknife.OnClick;
 import edu.com.app.R;
-import edu.com.app.ui.base.AbsSwipeBackActivity;
+import edu.com.app.base.AbsSwipeBackActivity;
 import edu.com.app.util.LogUtil;
 import edu.com.app.ui.main.MainActivity;
 import jp.wasabeef.blurry.Blurry;

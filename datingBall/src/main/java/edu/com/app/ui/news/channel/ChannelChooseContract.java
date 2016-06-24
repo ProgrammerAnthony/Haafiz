@@ -1,16 +1,11 @@
 package edu.com.app.ui.news.channel;
 
-import android.net.Uri;
-import android.support.v4.app.Fragment;
-import android.widget.ImageView;
-import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import edu.com.app.data.bean.ChannelEntity;
-import edu.com.app.ui.base.BasePresenter;
-import edu.com.app.ui.base.BaseView;
+import edu.com.app.base.BasePresenter;
+import edu.com.app.base.BaseView;
 
 /**
  * Created by Anthony on 2016/6/14.

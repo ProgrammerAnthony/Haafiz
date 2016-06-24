@@ -1,7 +1,5 @@
 package edu.com.app.injection.component;
 
-import javax.inject.Singleton;
-
 import dagger.Component;
 import edu.com.app.injection.module.ActivityModule;
 import edu.com.app.injection.scope.PerActivity;

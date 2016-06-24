@@ -3,6 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="@dimen/title_bar_height"
     android:id="@+id/delete_account_txt"
+    android:clickable="true"
     android:background="@color/red"
     android:gravity="center_vertical">
 

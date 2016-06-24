@@ -29,17 +29,17 @@ import butterknife.Bind;
 import butterknife.OnClick;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import edu.com.app.data.rx.RxBus;
-import edu.com.app.ui.widget.ChoosePicDialog;
-import edu.com.app.ui.widget.StatusBarUtil;
-import edu.com.app.ui.widget.ViewDisplay;
+import edu.com.app.base.widget.ChoosePicDialog;
+import edu.com.app.base.widget.StatusBarUtil;
+import edu.com.app.base.widget.ViewDisplay;
 import edu.com.app.R;
 import edu.com.app.ui.chat.ChattingListFragment;
 import edu.com.app.ui.personal.info.PersonalInfoActivity;
 import edu.com.app.ui.personal.login.NewLoginActivity;
 import edu.com.app.ui.setting.about.AboutActivity;
 import edu.com.app.data.bean.Channel;
-import edu.com.app.ui.base.AbsBaseActivity;
-import edu.com.app.ui.widget.DialogFactory;
+import edu.com.app.base.AbsBaseActivity;
+import edu.com.app.base.widget.DialogFactory;
 import edu.com.app.data.local.PreferencesHelper;
 import pl.aprilapps.easyphotopicker.EasyImage;
 
@@ -94,7 +94,7 @@ public class MainActivity extends AbsBaseActivity implements MainContract.View, 
     ImageView iv_avatar;
     TextView tv_nick;
 
-    private static final String EXTRA_TRIGGER_SYNC_FLAG = "edu.com.app.ui.main.MainActivity.EXTRA_TRIGGER_SYNC_FLAG";
+    private static final String EXTRA_TRIGGER_SYNC_FLAG = "edu.com.app.module.main.MainActivity.EXTRA_TRIGGER_SYNC_FLAG";
     //    private MainContract.Presenter mMainPresenter;
     //    private RxBus mRxBus;
     private boolean isLogin;

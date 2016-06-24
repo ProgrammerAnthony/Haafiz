@@ -1,6 +1,5 @@
 package edu.com.app.ui.personal.login;
 
-import android.Manifest;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Context;
@@ -12,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.facebook.shimmer.ShimmerFrameLayout;
-import com.tbruyelle.rxpermissions.RxPermissions;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -22,7 +20,6 @@ import javax.inject.Inject;
 import edu.com.app.data.rx.RxLeanCloud;
 import edu.com.app.data.local.PreferencesHelper;
 import edu.com.app.injection.scope.ActivityContext;
-import rx.functions.Action1;
 
 /**
  * Created by Anthony on 2016/5/24.

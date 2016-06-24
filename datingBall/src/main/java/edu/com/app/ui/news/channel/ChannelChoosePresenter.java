@@ -3,7 +3,6 @@ package edu.com.app.ui.news.channel;
 import android.content.Context;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.inject.Inject;
 
