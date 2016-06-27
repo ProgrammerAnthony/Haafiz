@@ -53,6 +53,9 @@
             android:name=".ui.main.MainActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".ui.find.friendCircle.FriendCircleActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".ui.news.detail.WebViewActivity"
             android:screenOrientation="portrait" />
         <activity
@@ -75,7 +78,9 @@
         <activity
             android:name=".ui.news.channel.ChannelChooseActivity"
             android:screenOrientation="portrait" />
-
+        <activity
+            android:name=".ui.find.nearby.NearByActivity"
+            android:screenOrientation="portrait" />
         <!-- 实时通信模块、推送（若使用该功能，需添加以下声明）START -->
         <service android:name="com.avos.avoscloud.PushService" />
         <receiver android:name="com.avos.avoscloud.AVBroadcastReceiver">

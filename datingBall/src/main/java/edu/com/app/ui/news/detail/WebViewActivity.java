@@ -2,7 +2,6 @@ package edu.com.app.ui.news.detail;
 
 import android.graphics.Bitmap;
 import android.net.http.SslError;
-import android.support.v7.app.ActionBar;
 import android.text.TextUtils;
 import android.view.View;
 import android.webkit.JsResult;
@@ -26,7 +25,7 @@ import butterknife.Bind;
 import edu.com.app.R;
 import edu.com.app.base.AbsSwipeBackActivity;
 import edu.com.app.base.widget.CircleImageView;
-import edu.com.app.base.widget.DialogFactory;
+import edu.com.app.base.widget.dialog.DialogManager;
 import edu.com.app.util.ToastUtils;
 
 /**
@@ -55,15 +54,17 @@ public class WebViewActivity extends AbsSwipeBackActivity {
     @Override
     protected void initViewsAndEvents() {
 //        super.initViewsAndEvents();
-        ActionBar actionBar = getSupportActionBar();
+
+/*        ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.hide();
-        }
+        }*/
+
 //        mWebView = (WebView) findViewById(R.id.web_view);
 
         mWebView.setVisibility(View.INVISIBLE);
 //    todo    toggleShowLoading(true, "loading");
-        DialogFactory.showProgressDialog(mContext,"loading");
+        DialogManager.showProgressDialog(mContext,"loading");
         setWebViewOption();
         title_image_left = (CircleImageView) findViewById(R.id.title_image_left);
         title_image_left.setImageResource(R.drawable.ico_back);
@@ -178,7 +179,7 @@ public class WebViewActivity extends AbsSwipeBackActivity {
             super.onPageFinished(view, url);
 
 //     todo       toggleShowLoading(false, "");
-            DialogFactory.hideProgressDialog();
+            DialogManager.hideProgressDialog();
             if (mWebView.getVisibility() == View.INVISIBLE) {
                 mWebView.setVisibility(View.VISIBLE);
             }

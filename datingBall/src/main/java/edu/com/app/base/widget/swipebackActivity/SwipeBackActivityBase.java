@@ -1,4 +1,4 @@
-package edu.com.app.base.widget.swipeback;
+package edu.com.app.base.widget.swipebackActivity;
 
 import edu.com.app.base.AbsSwipeBackActivity;
 

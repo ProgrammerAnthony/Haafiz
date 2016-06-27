@@ -1,4 +1,4 @@
-package edu.com.app.base.widget.swipeback;
+package edu.com.app.base.widget.swipebackActivity;
 
 import android.app.Activity;
 import android.app.ActivityOptions;

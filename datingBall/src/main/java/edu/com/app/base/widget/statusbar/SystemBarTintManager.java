@@ -1,4 +1,4 @@
-package edu.com.app.base.widget;
+package edu.com.app.base.widget.statusbar;
 
 
 /*

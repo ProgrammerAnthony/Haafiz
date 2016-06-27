@@ -28,9 +28,10 @@ import javax.inject.Inject;
 import butterknife.Bind;
 import butterknife.OnClick;
 import cn.pedant.SweetAlert.SweetAlertDialog;
+import edu.com.app.base.widget.dialog.DialogManager;
 import edu.com.app.data.rx.RxBus;
-import edu.com.app.base.widget.ChoosePicDialog;
-import edu.com.app.base.widget.StatusBarUtil;
+import edu.com.app.base.widget.dialog.ChoosePicDialog;
+import edu.com.app.base.widget.statusbar.StatusBarUtil;
 import edu.com.app.base.widget.ViewDisplay;
 import edu.com.app.R;
 import edu.com.app.ui.chat.ChattingListFragment;
@@ -39,7 +40,6 @@ import edu.com.app.ui.personal.login.NewLoginActivity;
 import edu.com.app.ui.setting.about.AboutActivity;
 import edu.com.app.data.bean.Channel;
 import edu.com.app.base.AbsBaseActivity;
-import edu.com.app.base.widget.DialogFactory;
 import edu.com.app.data.local.PreferencesHelper;
 import pl.aprilapps.easyphotopicker.EasyImage;
 
@@ -217,7 +217,7 @@ public class MainActivity extends AbsBaseActivity implements MainContract.View, 
         String st = "Logoff notification";
         if (!MainActivity.this.isFinishing()) {
             // clear up global variables
-            DialogFactory.showErrorDialog(mContext, st, "The same account was loggedin in other device", new SweetAlertDialog.OnSweetClickListener() {
+            DialogManager.showErrorDialog(mContext, st, "The same account was loggedin in other device", new SweetAlertDialog.OnSweetClickListener() {
                 @Override
                 public void onClick(SweetAlertDialog sweetAlertDialog) {
                     mMainPresenter.Logout();

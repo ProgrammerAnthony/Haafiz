@@ -100,6 +100,10 @@
         <item name="android:windowExitAnimation">@anim/photo_dialog_out_anim</item>
     </style>
 
+    <style name="main_menu_animstyle_center">
+        <item name="android:windowEnterAnimation">@anim/photo_dialog_in_anim</item>
+        <item name="android:windowExitAnimation">@anim/photo_dialog_out_anim</item>
+    </style>
     <!-- 图片样式 -->
     <style name="img_Style">
         <item name="android:layout_width">wrap_content</item>

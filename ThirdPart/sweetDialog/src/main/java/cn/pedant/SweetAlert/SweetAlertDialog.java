@@ -24,6 +24,7 @@ import java.util.List;
 /**
  * 由于作者的库没有及时更新，这里做出本地修改。
  * 更新使用最新的'com.pnikosis:materialish-progress:1.7'
+ *
  * {@see https://github.com/pedant/sweet-alert-dialog/issues/88}
  */
 public class SweetAlertDialog extends Dialog implements View.OnClickListener {

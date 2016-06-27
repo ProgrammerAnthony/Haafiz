@@ -67,7 +67,7 @@ public class WebViewFragment extends AbsTitleFragment {
     protected void initViewsAndEvents(View rootView) {
         mWebView.setVisibility(View.INVISIBLE);
 //        toggleShowLoading(true, "loading");
-//        DialogFactory.showProgressDialog(mContext,"loading");
+//        DialogManager.showProgressDialog(mContext,"loading");
         setWebViewOption(mWebView);
         if (getFragmentUrl() != null) {
             mWebView.loadUrl(getFragmentUrl());
@@ -147,7 +147,7 @@ public class WebViewFragment extends AbsTitleFragment {
             super.onPageFinished(view, url);
 //            injectJS();
 
-//            DialogFactory.hideProgressDialog();
+//            DialogManager.hideProgressDialog();
             if (view.getVisibility() == View.INVISIBLE) {
                 view.setVisibility(View.VISIBLE);
 

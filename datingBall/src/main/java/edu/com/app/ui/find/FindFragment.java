@@ -9,6 +9,7 @@ import butterknife.Bind;
 import butterknife.OnClick;
 import edu.com.app.R;
 import edu.com.app.base.AbsBaseFragment;
+import edu.com.app.base.widget.ViewDisplay;
 import edu.com.app.ui.main.MainActivity;
 import edu.com.app.util.ToastUtils;
 
@@ -33,6 +34,8 @@ public class FindFragment extends AbsBaseFragment {
 
     @Inject
     ToastUtils toastUtils;
+    @Inject
+    ViewDisplay viewDisplay;
 
     @Override
     protected void initDagger() {
@@ -54,10 +57,10 @@ public class FindFragment extends AbsBaseFragment {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.txt_friendCircle:
-                toastUtils.showToast("friend circle");
+                viewDisplay.showActivity(mContext,"FriendCircleActivity");
                 break;
             case R.id.txt_nearby:
-                toastUtils.showToast("nearby");
+                viewDisplay.showActivity(mContext,"NearByActivity");
                 break;
             case R.id.txt_scan:
                 toastUtils.showToast("scan");

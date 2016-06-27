@@ -1,6 +1,8 @@
 package edu.com.app.ui.personal.info;
 
 import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -15,50 +17,48 @@ import java.util.List;
 import javax.inject.Inject;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 import edu.com.app.R;
 import edu.com.app.base.AbsSwipeBackActivity;
-import edu.com.app.base.widget.CircleImageView;
 import edu.com.app.base.widget.ViewDisplay;
+import edu.com.app.base.widget.autoscrollViewPager.AutoScrollViewPager;
+import edu.com.app.base.widget.autoscrollViewPager.ImagePagerAdapter;
 import edu.com.app.base.widget.recyclerviewHelper.ParallaxRecyclerAdapter;
+import edu.com.app.base.widget.statusbar.StatusBarUtil;
+import edu.com.app.util.ListUtils;
 import edu.com.app.util.ToastUtils;
 
 /**
  * Created by Anthony on 2016/5/26.
  * Class Note:
- *利用RecyclerView 处理个人中心，利用{@link ParallaxRecyclerAdapter}实现视差效果。
- *todo 处理（头像和个人签名）
- *todo 处理编辑编辑界面
+ * 利用RecyclerView 处理个人中心，利用{@link ParallaxRecyclerAdapter}实现视差效果。
+ * todo 处理（头像和个人签名）
+ * todo 处理编辑编辑界面
  */
-public class PersonalInfoActivity extends AbsSwipeBackActivity implements PersonalInfoContract.View{
+public class PersonalInfoActivity extends AbsSwipeBackActivity implements PersonalInfoContract.View {
 
     @Bind(R.id.recycler_view)
     RecyclerView recyclerView;
-    @Bind(R.id.title_image_left)
-    CircleImageView titleImageLeft;
-    @Bind(R.id.title_txt_center)
-    TextView titleTxtCenter;
-    @Bind(R.id.title_txt_right)
-    TextView titleTxtRight;
+
+
     @Bind(R.id.personal_top_bar)
     RelativeLayout personalTopBar;
 
     @Bind(R.id.delete_account_txt)
     RelativeLayout deleteAccountTxt;
-//    @Bind(R.id.toolbar)
-//    Toolbar toolbar;
 
     @Inject
     ViewDisplay viewDisplay;
     @Inject
     ToastUtils toastUtils;
+    private AutoScrollViewPager autoScrollViewpager;
+    private List<Integer> imageIdList;
 
     @Override
     protected void initViewsAndEvents() {
-        titleImageLeft.setImageResource(R.drawable.ico_back);
-        titleTxtCenter.setVisibility(View.GONE);
-        titleTxtRight.setText("编辑");
-
+        StatusBarUtil.setTranslucent(this);
+        StatusBarUtil.setColor(this,R.color.colorPrimary);
         createAdapter(recyclerView);
     }
 
@@ -79,6 +79,7 @@ public class PersonalInfoActivity extends AbsSwipeBackActivity implements Person
 
     /**
      * create adapter for recyclerView using {@link ParallaxRecyclerAdapter}
+     *
      * @param recyclerView
      */
     private void createAdapter(RecyclerView recyclerView) {
@@ -126,26 +127,52 @@ public class PersonalInfoActivity extends AbsSwipeBackActivity implements Person
         adapter.setParallaxHeader(header, recyclerView);
         adapter.setData(content);
         recyclerView.setAdapter(adapter);
+
+        autoScrollViewpager = (AutoScrollViewPager) header.findViewById(R.id.auto_scroll_viewpager);
+//using autoScrollViewpager
+        imageIdList = new ArrayList<>();
+        imageIdList.add(R.drawable.banner1);
+        imageIdList.add(R.drawable.banner2);
+        imageIdList.add(R.drawable.banner3);
+        imageIdList.add(R.drawable.banner4);
+        autoScrollViewpager.setAdapter(new ImagePagerAdapter(mContext, imageIdList).setInfiniteLoop(true));
+        autoScrollViewpager.setOnPageChangeListener(new MyOnPageChangeListener());
+
+        autoScrollViewpager.setInterval(3500);
+        autoScrollViewpager.startAutoScroll();
+        autoScrollViewpager.setCurrentItem(Integer.MAX_VALUE / 2 - Integer.MAX_VALUE / 2 % ListUtils.getSize(imageIdList));
+
+        // the more properties whose you can set
+        // // set whether stop auto scroll when touching, default is true
+        // viewPager.setStopScrollWhenTouch(false);
+        // // set whether automatic cycle when auto scroll reaching the last or first item
+        // // default is true
+        // viewPager.setCycle(false);
+        // /** set auto scroll direction, default is AutoScrollViewPager#RIGHT **/
+        // viewPager.setDirection(AutoScrollViewPager.LEFT);
+        // // set how to process when sliding at the last or first item
+        // // default is AutoScrollViewPager#SLIDE_BORDER_NONE
+        // viewPager.setBorderProcessWhenSlide(AutoScrollViewPager.SLIDE_BORDER_CYCLE);
+        // viewPager.setScrollDurationFactor(3);
+        // viewPager.setBorderAnimation(false);
+
+
     }
 
-
-
-    @OnClick({R.id.title_image_left, R.id.title_txt_right, R.id.delete_account_txt})
+    @OnClick({R.id.title_image_left, R.id.title_image_right})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.title_image_left:
                 scrollToFinishActivity();
+                Drawable c = personalTopBar.getBackground();
+                c.setAlpha(Math.round(255));
+                personalTopBar.setBackground(c);
                 break;
-            case R.id.title_txt_right:
+            case R.id.title_image_right:
                 toastUtils.showToast("修改个人数据");
-                viewDisplay.showActivity(mContext,"1008");
-                break;
-            case R.id.delete_account_txt:
-                toastUtils.showToast("注销当前账号");
                 break;
         }
     }
-
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView textView;
@@ -156,7 +183,40 @@ public class PersonalInfoActivity extends AbsSwipeBackActivity implements Person
         }
     }
 
-/*******implements method in MVP View**************/
+    public class MyOnPageChangeListener implements ViewPager.OnPageChangeListener {
+
+        @Override
+        public void onPageSelected(int position) {
+/*            indexText.setText(new StringBuilder().append((position) % ListUtils.getSize(imageIdList) + 1).append("/")
+                    .append(ListUtils.getSize(imageIdList)));*/
+        }
+
+        @Override
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int arg0) {
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // stop auto scroll when onPause
+        autoScrollViewpager.stopAutoScroll();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // start auto scroll when onResume
+        autoScrollViewpager.startAutoScroll();
+    }
+
+    /*******
+     * implements method in MVP View
+     **************/
     @Override
     public void updateInfo() {
 

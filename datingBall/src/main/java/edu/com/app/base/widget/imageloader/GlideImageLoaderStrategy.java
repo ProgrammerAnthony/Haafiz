@@ -19,7 +19,7 @@ import edu.com.app.util.SettingUtils;
 /**
  * Created by Anthony on 2016/3/3.
  * Class Note:
- * using glide to load image
+ * using {@link Glide} to load image
  */
 public class GlideImageLoaderStrategy implements BaseImageLoaderStrategy {
     @Override

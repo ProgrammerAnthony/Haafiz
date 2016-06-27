@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package edu.com.app.base.widget.swipeback;
+package edu.com.app.base.widget.swipebackActivity;
 
 import android.content.Context;
 import android.support.v4.view.MotionEventCompat;

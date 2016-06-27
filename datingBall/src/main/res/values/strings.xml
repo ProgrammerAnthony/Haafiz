@@ -106,4 +106,14 @@
     <string name="other_channel">其他频道</string>
     <string name="edit">编辑</string>
     <string name="finish">完成</string>
+
+    <string name="swipe_left">left</string>
+    <string name="swipe_right">right</string>
+    <string name="view_swiped_left">%1$s swiped to left!</string>
+    <string name="view_swiped_right">%1$s swiped to right!</string>
+    <string name="reset">Reset stack</string>
+    <string name="stack_reset">Stack reset!</string>
+    <string name="stack_empty">Card stack empty!</string>
+    <string name="dummy_text">Test</string>
+    <string name="dummy_add">AddTest</string>
 </resources>

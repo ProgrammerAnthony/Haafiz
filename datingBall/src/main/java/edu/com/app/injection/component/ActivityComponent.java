@@ -4,6 +4,8 @@ import dagger.Component;
 import edu.com.app.injection.module.ActivityModule;
 import edu.com.app.injection.scope.PerActivity;
 import edu.com.app.ui.find.FindFragment;
+import edu.com.app.ui.find.friendCircle.FriendCircleActivity;
+import edu.com.app.ui.find.nearby.NearByActivity;
 import edu.com.app.ui.friends.add.FriendsAddActivity;
 import edu.com.app.ui.friends.list.FriendsListFragment;
 import edu.com.app.ui.main.MainActivity;
@@ -40,6 +42,9 @@ public interface ActivityComponent {
 
     void inject(ChannelChooseActivity channelChooseActivity);
 
+    void inject(FriendCircleActivity friendCircleActivity);
+
+    void inject(NearByActivity nearByActivity);
 
     void inject(NewsFragment newsFragment);
 

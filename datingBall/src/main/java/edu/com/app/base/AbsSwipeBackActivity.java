@@ -2,9 +2,9 @@ package edu.com.app.base;
 
 import android.os.Bundle;
 import android.view.View;
-import edu.com.app.base.widget.swipeback.SwipeBackActivityBase;
-import edu.com.app.base.widget.swipeback.SwipeBackActivityHelper;
-import edu.com.app.base.widget.swipeback.SwipeBackLayout;
+import edu.com.app.base.widget.swipebackActivity.SwipeBackActivityBase;
+import edu.com.app.base.widget.swipebackActivity.SwipeBackActivityHelper;
+import edu.com.app.base.widget.swipebackActivity.SwipeBackLayout;
 
 /**
  * Created by Anthony on 2016/4/28.

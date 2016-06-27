@@ -1,4 +1,4 @@
-package edu.com.app.base.widget;
+package edu.com.app.base.widget.dialog;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -12,6 +12,7 @@ import android.widget.Button;
 import javax.inject.Inject;
 
 import edu.com.app.R;
+import edu.com.app.injection.scope.ActivityContext;
 import pl.aprilapps.easyphotopicker.EasyImage;
 
 /**
@@ -29,7 +30,7 @@ public class ChoosePicDialog implements View.OnClickListener {
     Activity mContext;
 
     @Inject
-    public ChoosePicDialog(Activity context) {
+    public ChoosePicDialog( Activity context) {
         mContext = context;
         mDialog = new Dialog(mContext, R.style.transparentFrameWindowStyle);
         initDialog();
@@ -49,7 +50,8 @@ public class ChoosePicDialog implements View.OnClickListener {
         WindowManager.LayoutParams wl = window.getAttributes();
         wl.x = 0;
         wl.y = mContext.getWindowManager().getDefaultDisplay().getHeight();
-        // 以下这两句是为了保证按钮可以水平满屏
+
+        // 为了保证按钮可以水平满屏
         wl.width = ViewGroup.LayoutParams.MATCH_PARENT;
         wl.height = ViewGroup.LayoutParams.WRAP_CONTENT;
 

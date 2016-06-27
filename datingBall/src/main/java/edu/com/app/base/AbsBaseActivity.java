@@ -12,12 +12,12 @@ import butterknife.ButterKnife;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
 import edu.com.app.MyApplication;
+import edu.com.app.base.widget.dialog.DialogManager;
 import edu.com.app.injection.component.ActivityComponent;
 import edu.com.app.injection.component.DaggerActivityComponent;
 import edu.com.app.injection.module.ActivityModule;
 import edu.com.app.util.LogUtil;
 import edu.com.app.base.widget.BaseAppManager;
-import edu.com.app.base.widget.DialogFactory;
 import edu.com.app.util.ToastUtils;
 
 
@@ -133,22 +133,22 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
 
     @Override
     public void showProgress(String message) {
-        DialogFactory.showProgressDialog(mContext,message);
+        DialogManager.showProgressDialog(mContext,message);
     }
 
     @Override
     public void showProgress(String message, int progress) {
-        DialogFactory.showProgressDialog(mContext,message, progress);
+        DialogManager.showProgressDialog(mContext,message, progress);
     }
 
     @Override
     public void hideProgress() {
-        DialogFactory.hideProgressDialog();
+        DialogManager.hideProgressDialog();
     }
 
     @Override
     public void showErrorMessage(String msg, String content) {
-        DialogFactory.showErrorDialog(mContext,msg, content, new SweetAlertDialog.OnSweetClickListener() {
+        DialogManager.showErrorDialog(mContext,msg, content, new SweetAlertDialog.OnSweetClickListener() {
             @Override
             public void onClick(SweetAlertDialog sweetAlertDialog) {
                 sweetAlertDialog.dismissWithAnimation();

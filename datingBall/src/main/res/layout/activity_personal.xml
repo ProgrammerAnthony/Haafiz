@@ -14,11 +14,12 @@
 
     <include
         android:id="@+id/personal_top_bar"
-        layout="@layout/title_bar_common2" />
+        layout="@layout/title_bar_personal_info" />
 
     <include
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_alignParentBottom="true"
         layout="@layout/bottom_delete_account_layout" />
+
 </RelativeLayout>

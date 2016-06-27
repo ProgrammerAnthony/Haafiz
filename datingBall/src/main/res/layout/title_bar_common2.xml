@@ -21,7 +21,7 @@
         android:gravity="center"
         android:includeFontPadding="false"
         android:singleLine="true"
-        android:text="聊天列表"
+        android:text="center text"
         android:textColor="@color/textWhite"
         android:textSize="@dimen/title_bar_text_size" />
 

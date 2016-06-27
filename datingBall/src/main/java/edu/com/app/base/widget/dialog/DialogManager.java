@@ -1,4 +1,4 @@
-package edu.com.app.base.widget;
+package edu.com.app.base.widget.dialog;
 
 import android.content.Context;
 
@@ -9,9 +9,13 @@ import edu.com.app.R;
 /**
  * Create By Anthony on 2016/1/15
  * Class Note:
- * dialog factory class to show dialog
+ * static dialog factory class to show dialog，use method like Dialog.xxx(),
+ * SweetAlertDialog in Third-Part used
+ * 利用静态工厂类构建dialog，直接使用Dialog.xxx()的方法进行访问创建dialog
+ * 使用了Third-Part中的SweetAlertDialog
  */
-public class DialogFactory {
+public class DialogManager {
+
     private static SweetAlertDialog mDialog;
 
     public static void showWarningDialog(Context context, String title, String content, SweetAlertDialog.OnSweetClickListener listener) {
@@ -48,7 +52,6 @@ public class DialogFactory {
         mDialog.setTitleText(message);
         mDialog.setCancelable(true);
         mDialog.show();
-
     }
 
 
@@ -69,5 +72,6 @@ public class DialogFactory {
             mDialog.dismiss();
         }
     }
+
 
 }
