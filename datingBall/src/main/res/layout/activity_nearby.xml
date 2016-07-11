@@ -9,8 +9,8 @@
         android:id="@+id/title_top_bar_nearby"
         layout="@layout/title_bar_nearby" />
 
-    <edu.com.app.base.widget.swipeStack.SwipeStack
-        android:id="@+id/swipeStack"
+    <com.anthony.ultimateswipetool.cards.SwipeCards
+        android:id="@+id/swipe_cards"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/title_top_bar_nearby"

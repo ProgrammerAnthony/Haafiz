@@ -7,69 +7,49 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 
-
 import java.util.HashMap;
 
 import javax.inject.Inject;
 
-import edu.com.app.data.bean.Channel;
-import edu.com.app.data.Constants;
-import edu.com.app.injection.scope.ApplicationContext;
 import edu.com.app.base.AbsBaseFragment;
+import edu.com.app.data.Constants;
+import edu.com.app.data.bean.Channel;
+import edu.com.app.injection.scope.ApplicationContext;
 import edu.com.app.util.FileUtil2;
 
 
 /**
  * Create By Anthony on 2016/1/15
  * Class Note:
+ * use this class to directly create activity & create fragment
+ *
+ * 1 get view(fragment/activity) using the name we set in the map
+ * 2 map （xxx.properties） file restore in  res/raw Folder
+ *
+ * 使用当前类直接创建activity或者fragment
  *
  * 1 根据不同的Map对应关系，解析出对应的View（Fragment或者Activity）
- * 2 使用“Channle”保存对应数据
- * 3 在res/raw文件夹下保存map（xxx.properties） 文件
+ *
+ * 2 在res/raw文件夹下保存map（xxx.properties） 文件
  */
 public class ViewDisplay {
-    public  final String TAG = "ViewDisplay";
-    private  HashMap<String, String> mTypeActivityNameMap = new HashMap<>();
-    private  HashMap<String, String> mTypeFragmentNameMap = new HashMap<>();
+    public final String TAG = "ViewDisplay";
+    private HashMap<String, String> mTypeActivityNameMap = new HashMap<>();
+    private HashMap<String, String> mTypeFragmentNameMap = new HashMap<>();
 
-/*    public static void init(@ApplicationContext Context context) {
+
+    @Inject
+    public ViewDisplay(@ApplicationContext Context context) {
         mTypeActivityNameMap.putAll(FileUtil2.simpleProperty2HashMap(context, Constants.BASE_TYPE_ACTIVITY_MAP_PATH));
-
         mTypeFragmentNameMap.putAll(FileUtil2.simpleProperty2HashMap(context, Constants.BASE_TYPE_FRAGMENT_MAP_PATH));
-
-    }*/
-@Inject
-public ViewDisplay(@ApplicationContext Context context) {
-    mTypeActivityNameMap.putAll(FileUtil2.simpleProperty2HashMap(context, Constants.BASE_TYPE_ACTIVITY_MAP_PATH));
-
-    mTypeFragmentNameMap.putAll(FileUtil2.simpleProperty2HashMap(context, Constants.BASE_TYPE_FRAGMENT_MAP_PATH));
-
-}
-    /**
-     * 根据对应的Channle 返回对应的fragment或者跳转activity
-     * @param mContext   context对象
-     * @param mChannel   channle对象
-     * @return           返回的fragmment，如果channel对应activity将返回空
-     */
-    public  Fragment initialView(Context mContext, Channel mChannel) {
-        if (mContext == null) {
-//            mContext = AbsApplication.app();
-            throw new IllegalArgumentException("set context for ViewDisplay");
-        }
-        if (mChannel == null) {
-            throw new IllegalArgumentException("initial Channel when create View(activity/fragment)");
-        }
-        String typeCode = mChannel.getType();
-        if (typeCode.startsWith("1")) {   //show activity
-            showActivity(mContext, typeCode);
-            return null;
-        } else if (typeCode.startsWith("2")) {  //create fragment
-            return createFragment(mContext, mChannel);
-        }
-        return null;
     }
 
-    public  void showActivity(Context context, String type) {
+    /**
+     * show activity
+     * @param context
+     * @param type  type/name of the activity
+     */
+    public void showActivity(Context context, String type) {
         String activityName = mTypeActivityNameMap.get(type);
         if (activityName != null) {
             Intent intent = new Intent();
@@ -81,7 +61,32 @@ public ViewDisplay(@ApplicationContext Context context) {
         }
     }
 
-    public  Fragment createFragment(Context context, Channel channel) {
+    /**
+     *  create fragment
+     * @param context
+     * @param type  type/name of the fragment
+     * @param arguments fragment arguments
+     * @return fragment created
+     */
+    public Fragment createFragment(Context context, String type, Bundle arguments) {
+        String fragmentName = mTypeFragmentNameMap.get(type);
+        Fragment fragment = null;
+        if (fragmentName != null && fragmentName.length() > 0) {
+            fragment = Fragment.instantiate(context, fragmentName);
+            if (arguments != null) {
+                fragment.setArguments(arguments);
+            }
+        }
+        return fragment;
+    }
+
+    /**
+     * create fragment with channel
+     * @param context
+     * @param channel channel data
+     * @return fragment created
+     */
+    public Fragment createFragment(Context context, Channel channel) {
 
         String typeCode = channel.getType();
         String name = mTypeFragmentNameMap.get(typeCode);
@@ -105,11 +110,11 @@ public ViewDisplay(@ApplicationContext Context context) {
     }
 
     /**
-     *  为fragment添加参数，参数也通过Channle对象传递过来
+     *  add arguments for fragment,used in method {@link #createFragment(Context, Channel)}
      * @param fragment
      * @param c
      */
-    private  void addArguments(Fragment fragment, Channel c) {
+    private void addArguments(Fragment fragment, Channel c) {
         if (fragment == null) {
             return;
         }
@@ -122,11 +127,21 @@ public ViewDisplay(@ApplicationContext Context context) {
 
     }
 
-    public  String getActivityName(String type) {
+    /**
+     * get activity full name
+     * @param type type/name of the activity
+     * @return full name of the activity
+     */
+    public String getActivityName(String type) {
         return mTypeActivityNameMap.get(type);
     }
 
-    public  String getFragmentName(String type) {
+    /**
+     * get fragment full name
+     * @param type  type/name of the fragment
+     * @return  full name of the fragment
+     */
+    public String getFragmentName(String type) {
         return mTypeFragmentNameMap.get(type);
     }
 }

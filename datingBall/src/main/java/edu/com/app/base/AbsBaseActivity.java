@@ -48,7 +48,7 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
         LogUtil.init(TAG_LOG);
 
         BaseAppManager.getInstance().addActivity(this);
-//        StatusBarUtil.setColor(this, getResources().getColor(R.color.colorPrimary));
+
 
         if (getContentViewID() != 0)
             setContentView(getContentViewID());

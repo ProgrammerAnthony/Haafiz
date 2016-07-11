@@ -6,9 +6,6 @@ import android.os.AsyncTask;
 import javax.inject.Inject;
 
 import edu.com.app.injection.scope.ActivityContext;
-import edu.com.app.data.http.HttpUtil;
-import edu.com.app.data.http.callback.StringHttpCallback;
-import edu.com.app.data.http.request.HttpRequest;
 import edu.com.app.util.ToastUtils;
 
 /**
@@ -23,11 +20,12 @@ public class SplashPresenter implements SplashContract.Presenter {
     private static final short SPLASH_SHOW_SECONDS = 1;
     private long mShowMainTime;
 
-    @Inject ToastUtils toastUtils;
+    @Inject
+    ToastUtils toastUtils;
 
     @Inject
     public SplashPresenter(@ActivityContext Context context) {
-       mContext = context;
+        mContext = context;
     }
 
 
@@ -36,9 +34,10 @@ public class SplashPresenter implements SplashContract.Presenter {
         mShowMainTime = System.currentTimeMillis() + SPLASH_SHOW_SECONDS * 2000;
         // TODO: 2016/5/31  url to get data
         firstUrl = "file://xxx";
-        HttpRequest.Builder builder = new HttpRequest.Builder();
+        showView();
+/*         HttpRequest.Builder builder = new HttpRequest.Builder();
         HttpRequest request = builder.url(firstUrl).build();
-        HttpUtil.getInstance(mContext).loadString(request, new StringHttpCallback() {
+       HttpUtil.getInstance(mContext).loadString(request, new StringHttpCallback() {
             @Override
             public void onResponse(String response) {
                 // TODO: 2016/5/31  url get
@@ -52,7 +51,7 @@ public class SplashPresenter implements SplashContract.Presenter {
                 showView();
                 toastUtils.showToast("获取数据失败");
             }
-        });
+        });*/
     }
 
     // TODO: 2016/5/31  using rxJava to process
@@ -91,7 +90,7 @@ public class SplashPresenter implements SplashContract.Presenter {
 
     @Override
     public void attachView(SplashContract.View view) {
-        mView=view;
+        mView = view;
     }
 
     @Override

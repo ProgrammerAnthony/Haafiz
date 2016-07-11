@@ -10,6 +10,8 @@ import butterknife.OnClick;
 import edu.com.app.R;
 import edu.com.app.base.AbsBaseFragment;
 import edu.com.app.base.widget.ViewDisplay;
+
+import edu.com.app.ui.find.shake.ShakeDialogFragment;
 import edu.com.app.ui.main.MainActivity;
 import edu.com.app.util.ToastUtils;
 
@@ -57,16 +59,17 @@ public class FindFragment extends AbsBaseFragment {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.txt_friendCircle:
-                viewDisplay.showActivity(mContext,"FriendCircleActivity");
+                viewDisplay.showActivity(mContext, "FriendCircleActivity");
                 break;
             case R.id.txt_nearby:
-                viewDisplay.showActivity(mContext,"NearByActivity");
+                viewDisplay.showActivity(mContext, "NearByActivity");
                 break;
             case R.id.txt_scan:
                 toastUtils.showToast("scan");
                 break;
             case R.id.txt_shake:
-                toastUtils.showToast("shake");
+                ShakeDialogFragment fragment= (ShakeDialogFragment)viewDisplay.createFragment(mContext, "ShakeDialogFragment", null);
+                fragment.show(getChildFragmentManager(),"alert");
                 break;
         }
     }

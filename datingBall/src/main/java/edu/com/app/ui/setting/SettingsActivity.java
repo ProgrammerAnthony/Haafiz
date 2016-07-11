@@ -46,6 +46,7 @@ public class SettingsActivity extends AbsSwipeBackActivity {
         titleTxtCenter.setText("设置");
         titleTxtRight.setVisibility(View.GONE);
         titleImageLeft.setImageResource(R.drawable.ico_back);
+
         rxBus.
                 toObservable(Event.class).
                 subscribe(new Action1<Event>() {

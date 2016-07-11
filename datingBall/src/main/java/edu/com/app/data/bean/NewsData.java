@@ -10,9 +10,7 @@ import java.util.ArrayList;
 
 import edu.com.app.data.Constants;
 import edu.com.app.ui.news.newsList.NewsContract;
-import edu.com.app.data.http.HttpUtil;
-import edu.com.app.data.http.callback.StringHttpCallback;
-import edu.com.app.data.http.request.HttpRequest;
+
 import edu.com.app.util.JSONObjectHelper;
 
 /**
@@ -42,7 +40,7 @@ public class NewsData {
      */
     public void parseUrl(String url) {
 
-        HttpRequest.Builder builder = new HttpRequest.Builder();
+/*        HttpRequest.Builder builder = new HttpRequest.Builder();
         HttpRequest request = builder.url(url).build();
         HttpUtil.getInstance(mContext).loadString(request, new StringHttpCallback() {
             @Override
@@ -55,6 +53,7 @@ public class NewsData {
                mListener.onError();
             }
         });
+        */
 
 //        for(int i=0;i<=2;i++){
 //            Channel channel=new Channel();

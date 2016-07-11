@@ -3,43 +3,43 @@
   "channels": [
     {
       "title": "nba",
-      "type": "2006",
+      "type": "WebViewFragment",
       "url": "http://m.hupu.com/nba/news/"
     },
     {
       "title": "cba",
-      "type": "2006",
+      "type": "WebViewFragment",
       "url": "http://m.hupu.com/cba/news/"
     },
     {
       "title": "英超",
-      "type": "2006",
+      "type": "WebViewFragment",
       "url": "http://m.hupu.com/soccer/england/news"
     },
     {
       "title": "德甲",
-      "type": "2006",
+      "type": "WebViewFragment",
       "url": "http://m.hupu.com/soccer/germany/news"
     }
   ,
     {
       "title": "西甲",
-      "type": "2006",
+      "type": "WebViewFragment",
       "url": "http://m.hupu.com/soccer/spain/news"
     },
     {
       "title": "意甲",
-      "type": "2006",
+      "type": "WebViewFragment",
       "url": "http://m.hupu.com/soccer/italy/news"
     },
     {
       "title": "欧冠",
-      "type": "2006",
+      "type": "WebViewFragment",
       "url": "http://m.hupu.com/soccer/uefa/news"
     },
     {
       "title": "法甲",
-      "type": "2006",
+      "type": "WebViewFragment",
       "url": "http://m.hupu.com/soccer/france/news"
     }
   ]

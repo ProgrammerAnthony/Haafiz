@@ -17,7 +17,7 @@ public class EventPosterHelper {
 
     @Inject
     public EventPosterHelper(Bus bus) {
-        mBus = bus;
+        mBus = new Bus();
     }
 
     public Bus getBus() {

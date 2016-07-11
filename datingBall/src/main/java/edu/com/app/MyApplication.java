@@ -2,10 +2,14 @@ package edu.com.app;
 
 import android.app.Application;
 import android.content.Context;
+import android.os.Environment;
 import android.support.multidex.MultiDex;
+import android.util.Log;
 
 import com.avos.avoscloud.AVOSCloud;
 import com.squareup.otto.Bus;
+
+import java.io.File;
 
 import javax.inject.Inject;
 
@@ -81,5 +85,21 @@ public class MyApplication extends Application {
         mAppComponent = appComponent;
     }
 
+    @Override
+    public File getCacheDir() {
+        Log.i("getCacheDir", "cache sdcard state: " + Environment.getExternalStorageState());
+        if(Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)){
+            File cacheDir = getExternalCacheDir();
+            if(cacheDir != null && (cacheDir.exists() || cacheDir.mkdirs())){
+                Log.i("getCacheDir", "cache dir: " + cacheDir.getAbsolutePath());
+                return cacheDir;
+            }
+        }
+
+        File cacheDir = super.getCacheDir();
+        Log.i("getCacheDir", "cache dir: " + cacheDir.getAbsolutePath());
+
+        return cacheDir;
+    }
 
 }

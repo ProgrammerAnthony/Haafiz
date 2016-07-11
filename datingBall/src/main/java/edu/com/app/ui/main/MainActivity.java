@@ -19,8 +19,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-//import com.hyphenate.easeui.EaseConstant;
-
 import java.io.File;
 
 import javax.inject.Inject;
@@ -28,20 +26,21 @@ import javax.inject.Inject;
 import butterknife.Bind;
 import butterknife.OnClick;
 import cn.pedant.SweetAlert.SweetAlertDialog;
-import edu.com.app.base.widget.dialog.DialogManager;
-import edu.com.app.data.rx.RxBus;
-import edu.com.app.base.widget.dialog.ChoosePicDialog;
-import edu.com.app.base.widget.statusbar.StatusBarUtil;
-import edu.com.app.base.widget.ViewDisplay;
 import edu.com.app.R;
+import edu.com.app.base.AbsBaseActivity;
+import edu.com.app.base.widget.ViewDisplay;
+import edu.com.app.base.widget.dialog.ChoosePicDialog;
+import edu.com.app.base.widget.dialog.DialogManager;
+
+import edu.com.app.data.local.PreferencesHelper;
+import edu.com.app.data.rx.RxBus;
 import edu.com.app.ui.chat.ChattingListFragment;
 import edu.com.app.ui.personal.info.PersonalInfoActivity;
 import edu.com.app.ui.personal.login.NewLoginActivity;
 import edu.com.app.ui.setting.about.AboutActivity;
-import edu.com.app.data.bean.Channel;
-import edu.com.app.base.AbsBaseActivity;
-import edu.com.app.data.local.PreferencesHelper;
 import pl.aprilapps.easyphotopicker.EasyImage;
+
+//import com.hyphenate.easeui.EaseConstant;
 
 /**
  * Created by Anthony on 2016/5/3.
@@ -117,7 +116,7 @@ public class MainActivity extends AbsBaseActivity implements MainContract.View, 
 
     @Override
     protected void initViewsAndEvents() {
-        StatusBarUtil.setColor(this, getResources().getColor(R.color.colorPrimary));
+//        StatusBarUtil.setColor(this, getResources().getColor(R.color.colorPrimary));
 //        mPicDialog = new ChoosePicDialog(this);
         // todo 消息推送
 //        PushService.setDefaultPushCallback(this, MainActivity.class);
@@ -245,37 +244,38 @@ public class MainActivity extends AbsBaseActivity implements MainContract.View, 
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        Channel mChannel = new Channel();
         String mFragmentTag = null;
+        String fragmentName = null;
         switch (id) {
             case R.id.nav_chat:                //聊天列表fragment
-                mChannel.setType("2002");
+                fragmentName = "ChattingListFragment";
                 mFragmentTag = "聊天";
                 collapsingToolbarLayout.setTitle("聊天");
                 break;
             case R.id.nav_friends:                 //好友列表fragment
-                mChannel.setType("2003");
+                fragmentName = "FriendsListFragment";
                 mFragmentTag = "好友";
                 collapsingToolbarLayout.setTitle("好友");
                 break;
             case R.id.nav_find:                  //发现列表fragment（好友圈+附近的人）
-                mChannel.setType("2007");  // TODO: 2016/5/26  目前是NearByListFragment 附近的人，待修改
+                fragmentName = "FindFragment";
                 mFragmentTag = "发现";
                 collapsingToolbarLayout.setTitle("发现");
                 break;
             case R.id.nav_news:                 //资讯列表fragment
-                mChannel.setType("2005");
+                fragmentName = "NewsFragment";
                 mFragmentTag = "资讯";
                 collapsingToolbarLayout.setTitle("资讯");
                 break;
             case R.id.nav_setting:                //设置界面（activity）
-                mChannel.setType("1005");
+                viewDisplay.showActivity(mContext, "SettingsActivity");
                 mFragmentTag = null;
+                fragmentName = null;
                 break;
             default:
                 break;
         }
-        Fragment fragment = viewDisplay.initialView(mContext, mChannel);
+        Fragment fragment = viewDisplay.createFragment(mContext,fragmentName,null);
         if (mFragmentTag != null && fragment != null) {
             mMainPresenter.replaceFragment(fragment, mFragmentTag, false);
             drawerLayout.closeDrawer(GravityCompat.START);

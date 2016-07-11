@@ -1,13 +1,13 @@
 package edu.com.app.ui.find.nearby;
 
-import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.anthony.ultimateswipetool.cards.SwipeCards;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,26 +15,25 @@ import java.util.List;
 import javax.inject.Inject;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import edu.com.app.R;
 import edu.com.app.base.AbsSwipeBackActivity;
-import edu.com.app.base.widget.swipeStack.SwipeStack;
+
 import edu.com.app.util.ToastUtils;
 
 /**
  * Created by Anthony on 2016/6/27.
  * Class Note:
  */
-public class NearByActivity extends AbsSwipeBackActivity implements SwipeStack.SwipeStackListener {
+public class NearByActivity extends AbsSwipeBackActivity implements SwipeCards.SwipeCardsListener {
 
 
     @Bind(R.id.title_image_left)
     ImageView titleImageLeft;
     @Bind(R.id.title_txt_center)
     TextView titleTxtCenter;
-    @Bind(R.id.swipeStack)
-    SwipeStack swipeStack;
+    @Bind(R.id.swipe_cards)
+    SwipeCards swipeCards;
     @Bind(R.id.buttonSwipeLeft)
     Button buttonSwipeLeft;
     @Bind(R.id.buttonSwipeRight)
@@ -53,8 +52,8 @@ public class NearByActivity extends AbsSwipeBackActivity implements SwipeStack.S
     protected void initViewsAndEvents() {
         mData = new ArrayList<>();
         mAdapter = new SwipeStackAdapter(mData);
-        swipeStack.setAdapter(mAdapter);
-        swipeStack.setListener(this);
+        swipeCards.setAdapter(mAdapter);
+        swipeCards.setListener(this);
         fillWithTestData();
     }
 
@@ -74,20 +73,19 @@ public class NearByActivity extends AbsSwipeBackActivity implements SwipeStack.S
     }
 
 
-    @OnClick({R.id.title_image_left, R.id.swipeStack, R.id.buttonSwipeLeft, R.id.buttonSwipeRight,R.id.title_image_right})
+    @OnClick({R.id.title_image_left,R.id.buttonSwipeLeft, R.id.buttonSwipeRight,R.id.title_image_right})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.title_image_left:
                 scrollToFinishActivity();
                 break;
-            case R.id.swipeStack:
-                break;
+
             case R.id.buttonSwipeLeft:
-                swipeStack.swipeTopViewToLeft();
+                swipeCards.swipeTopViewToLeft();
                 toast.showToast("left");
                 break;
             case R.id.buttonSwipeRight:
-                swipeStack.swipeTopViewToRight();
+                swipeCards.swipeTopViewToRight();
                 toast.showToast("right");
                 break;
             case R.id.title_image_right:
@@ -117,7 +115,7 @@ public class NearByActivity extends AbsSwipeBackActivity implements SwipeStack.S
     }
 
     @Override
-    public void onStackEmpty() {
+    public void onCardsEmpty() {
 //        Toast.makeText(this, R.string.stack_empty, Toast.LENGTH_SHORT).show();
         toast.showToast(getResources().getString(R.string.stack_empty));
     }

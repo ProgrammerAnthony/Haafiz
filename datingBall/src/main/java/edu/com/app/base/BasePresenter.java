@@ -18,6 +18,7 @@ public interface BasePresenter<T extends BaseView> {
      * 释放资源
      */
     void detachView();
+
 }
 /*
     protected Reference<T> mViewRef;

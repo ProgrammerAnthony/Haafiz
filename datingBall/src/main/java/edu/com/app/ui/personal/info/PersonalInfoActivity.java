@@ -1,7 +1,6 @@
 package edu.com.app.ui.personal.info;
 
 import android.graphics.drawable.Drawable;
-import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -17,15 +16,13 @@ import java.util.List;
 import javax.inject.Inject;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import edu.com.app.R;
 import edu.com.app.base.AbsSwipeBackActivity;
-import edu.com.app.base.widget.ViewDisplay;
 import edu.com.app.base.widget.autoscrollViewPager.AutoScrollViewPager;
 import edu.com.app.base.widget.autoscrollViewPager.ImagePagerAdapter;
 import edu.com.app.base.widget.recyclerviewHelper.ParallaxRecyclerAdapter;
-import edu.com.app.base.widget.statusbar.StatusBarUtil;
+
 import edu.com.app.util.ListUtils;
 import edu.com.app.util.ToastUtils;
 
@@ -48,8 +45,7 @@ public class PersonalInfoActivity extends AbsSwipeBackActivity implements Person
     @Bind(R.id.delete_account_txt)
     RelativeLayout deleteAccountTxt;
 
-    @Inject
-    ViewDisplay viewDisplay;
+
     @Inject
     ToastUtils toastUtils;
     private AutoScrollViewPager autoScrollViewpager;
@@ -57,8 +53,8 @@ public class PersonalInfoActivity extends AbsSwipeBackActivity implements Person
 
     @Override
     protected void initViewsAndEvents() {
-        StatusBarUtil.setTranslucent(this);
-        StatusBarUtil.setColor(this,R.color.colorPrimary);
+//        StatusBarUtil.setTranslucent(this);
+//        StatusBarUtil.setColor(this,R.color.colorPrimary);
         createAdapter(recyclerView);
     }
 
@@ -172,6 +168,13 @@ public class PersonalInfoActivity extends AbsSwipeBackActivity implements Person
                 toastUtils.showToast("修改个人数据");
                 break;
         }
+    }
+
+    @Override
+    public void finish() {
+        Drawable c = personalTopBar.getBackground();
+        c.setAlpha(Math.round(255));
+        super.finish();
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {

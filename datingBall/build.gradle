@@ -149,7 +149,7 @@ dependencies {
     compile('cn.leancloud.android:avoscloud-push:v3.+@aar') { transitive = true }
 
     // LeanCloud 统计包
-    compile('cn.leancloud.android:avoscloud-statistics:v3.+')
+//    compile('cn.leancloud.android:avoscloud-statistics:v3.+')
 
     // LeanCloud 用户反馈包
     compile('cn.leancloud.android:avoscloud-feedback:v3.+@aar')
@@ -162,5 +162,11 @@ dependencies {
 
     // LeanCloud 应用内搜索包
     compile('cn.leancloud.android:avoscloud-search:v3.+@aar')
+
+    //各种swipe 效果的包
+    compile "com.anthony.ultimateswipetool:library:1.0.1"
+
+    //状态栏变色
+    compile 'com.jaeger.statusbaruitl:library:1.1.1'
 
 }

@@ -50,4 +50,8 @@ public class Constants {
     public static final String APP_KEY = "56de821ce0f55ae9900030d4";
     public static final String UMENG_APPKEY = "5424dc93fd98c58ec20289da";
 
+
+    public static final String Remote_BASE_END_POINT = "http://218.89.185.79:8080/";//url for testing
+    public static final String LOCAL_FILE_BASE_END_POINT = "raw://";
+
 }

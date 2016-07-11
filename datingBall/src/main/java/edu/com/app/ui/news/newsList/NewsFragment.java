@@ -19,12 +19,12 @@ import javax.inject.Inject;
 import butterknife.Bind;
 import butterknife.OnClick;
 import edu.com.app.R;
+import edu.com.app.base.widget.ViewDisplay;
 import edu.com.app.data.bean.Channel;
 import edu.com.app.data.bean.NewsData;
 import edu.com.app.base.AbsBaseFragment;
 import edu.com.app.ui.main.MainActivity;
 import edu.com.app.ui.news.channel.ChannelChooseActivity;
-import edu.com.app.base.widget.ViewDisplay;
 import edu.com.app.util.AppUtils;
 
 /**
@@ -48,11 +48,8 @@ public class NewsFragment extends AbsBaseFragment implements NewsContract.View {
     @Bind(R.id.tab_strip)
     PagerSlidingTabStrip mTabStrip;
 
-
     @Inject
     ViewDisplay viewDisplay;
-//    @Inject
-//    Activity mActivity;
 
     protected static String TAG = "NewsFragment";
     private static int INIT_INDEX = 0;
@@ -101,8 +98,7 @@ public class NewsFragment extends AbsBaseFragment implements NewsContract.View {
     }
 
     protected void loadData() {
-/*        if (mPresenter == null)
-            mPresenter = new NewsPresenter(mContext);*/
+
         mPresenter.attachView(this);
         mPresenter.getData("raw://news_channels");
 
@@ -144,12 +140,12 @@ public class NewsFragment extends AbsBaseFragment implements NewsContract.View {
         @Override
         public Fragment getItem(int position) {
             //show child fragment
-            Fragment fragment = viewDisplay.initialView(mContext, mChannels.get(position));
+
+            Fragment fragment =viewDisplay.createFragment(mContext,mChannels.get(position));
             if (fragment == null) {
-                throw new IllegalArgumentException("cannnot get fragment");
+                throw new IllegalArgumentException("cannot load fragment");
             }
             return fragment;
-//        return ViewDisplay.createFragment(mContext, channel);
         }
 
         @Override
