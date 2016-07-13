@@ -1,4 +1,4 @@
-package edu.com.app.base.widget.recyclerviewHelper;
+package edu.com.app.base.widget.recyclerview;
 
 import android.content.Context;
 import android.graphics.Canvas;

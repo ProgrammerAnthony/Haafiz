@@ -21,7 +21,7 @@ import edu.com.app.R;
 import edu.com.app.base.AbsSwipeBackActivity;
 import edu.com.app.base.widget.autoscrollViewPager.AutoScrollViewPager;
 import edu.com.app.base.widget.autoscrollViewPager.ImagePagerAdapter;
-import edu.com.app.base.widget.recyclerviewHelper.ParallaxRecyclerAdapter;
+import edu.com.app.base.widget.recyclerview.ParallaxRecyclerAdapter;
 
 import edu.com.app.util.ListUtils;
 import edu.com.app.util.ToastUtils;

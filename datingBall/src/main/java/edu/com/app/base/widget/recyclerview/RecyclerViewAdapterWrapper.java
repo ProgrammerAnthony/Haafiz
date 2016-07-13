@@ -1,4 +1,4 @@
-package edu.com.app.base.widget.recyclerviewHelper;
+package edu.com.app.base.widget.recyclerview;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 

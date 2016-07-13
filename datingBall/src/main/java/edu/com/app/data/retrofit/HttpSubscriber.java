@@ -1,4 +1,4 @@
-package edu.com.app.data.http;
+package edu.com.app.data.retrofit;
 
 import android.util.Log;
 
