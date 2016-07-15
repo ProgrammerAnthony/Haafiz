@@ -19,7 +19,7 @@ import javax.inject.Inject;
 import butterknife.Bind;
 import butterknife.OnClick;
 import edu.com.app.R;
-import edu.com.app.base.widget.ViewDisplay;
+import edu.com.app.widget.ViewDisplay;
 import edu.com.app.data.bean.Channel;
 import edu.com.app.data.bean.NewsData;
 import edu.com.app.base.AbsBaseFragment;

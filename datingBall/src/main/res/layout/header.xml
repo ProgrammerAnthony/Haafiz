@@ -4,12 +4,12 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <edu.com.app.base.widget.autoscrollViewPager.AutoScrollViewPager
+    <edu.com.app.widget.autoscrollViewPager.AutoScrollViewPager
         android:id="@+id/auto_scroll_viewpager"
         android:layout_width="match_parent"
         android:layout_height="200dp">
 
-    </edu.com.app.base.widget.autoscrollViewPager.AutoScrollViewPager>
+    </edu.com.app.widget.autoscrollViewPager.AutoScrollViewPager>
 
     <!--
         <ImageView

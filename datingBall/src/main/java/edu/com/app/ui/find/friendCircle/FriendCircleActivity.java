@@ -10,8 +10,7 @@ import butterknife.Bind;
 import butterknife.OnClick;
 import edu.com.app.R;
 import edu.com.app.base.AbsSwipeBackActivity;
-import edu.com.app.base.widget.dialog.ChooseFriendCircleDialog;
-import edu.com.app.base.widget.dialog.ChoosePicDialog;
+import edu.com.app.widget.dialog.ChooseFriendCircleDialog;
 
 /**
  * Created by Anthony on 2016/6/27.

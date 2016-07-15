@@ -8,9 +8,9 @@ import com.anthony.ultimateswipetool.activity.SwipeBackActivityBase;
 import com.anthony.ultimateswipetool.activity.SwipeBackLayout;
 
 
-//import edu.com.app.base.widget.swipebackActivity.SwipeBackActivityBase;
-//import edu.com.app.base.widget.swipebackActivity.SwipeBackActivityHelper;
-//import edu.com.app.base.widget.swipebackActivity.SwipeBackLayout;
+//import edu.com.app.widget.swipebackActivity.SwipeBackActivityBase;
+//import edu.com.app.widget.swipebackActivity.SwipeBackActivityHelper;
+//import edu.com.app.widget.swipebackActivity.SwipeBackLayout;
 
 /**
  * Created by Anthony on 2016/4/28.

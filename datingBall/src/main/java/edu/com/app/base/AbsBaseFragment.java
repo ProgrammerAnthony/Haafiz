@@ -13,7 +13,7 @@ import javax.inject.Inject;
 import butterknife.ButterKnife;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
-import edu.com.app.base.widget.dialog.DialogManager;
+import edu.com.app.widget.dialog.DialogManager;
 import edu.com.app.util.ToastUtils;
 
 

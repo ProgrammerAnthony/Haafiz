@@ -9,7 +9,7 @@ import butterknife.Bind;
 import butterknife.OnClick;
 import edu.com.app.R;
 import edu.com.app.base.AbsBaseFragment;
-import edu.com.app.base.widget.ViewDisplay;
+import edu.com.app.widget.ViewDisplay;
 
 import edu.com.app.ui.find.shake.ShakeDialogFragment;
 import edu.com.app.ui.main.MainActivity;

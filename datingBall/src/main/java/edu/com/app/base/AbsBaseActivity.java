@@ -12,12 +12,11 @@ import butterknife.ButterKnife;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
 import edu.com.app.MyApplication;
-import edu.com.app.base.widget.dialog.DialogManager;
+import edu.com.app.widget.dialog.DialogManager;
 import edu.com.app.injection.component.ActivityComponent;
 import edu.com.app.injection.component.DaggerActivityComponent;
 import edu.com.app.injection.module.ActivityModule;
 import edu.com.app.util.LogUtil;
-import edu.com.app.base.widget.BaseAppManager;
 import edu.com.app.util.ToastUtils;
 
 

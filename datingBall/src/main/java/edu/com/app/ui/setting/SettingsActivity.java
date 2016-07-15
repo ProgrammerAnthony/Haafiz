@@ -13,7 +13,7 @@ import edu.com.app.R;
 import edu.com.app.data.bean.Event;
 import edu.com.app.data.rx.RxBus;
 import edu.com.app.base.AbsSwipeBackActivity;
-import edu.com.app.base.widget.CircleImageView;
+import edu.com.app.widget.CircleImageView;
 import edu.com.app.util.ToastUtils;
 import rx.functions.Action1;
 

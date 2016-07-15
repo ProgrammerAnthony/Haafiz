@@ -28,9 +28,9 @@ import butterknife.OnClick;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import edu.com.app.R;
 import edu.com.app.base.AbsBaseActivity;
-import edu.com.app.base.widget.ViewDisplay;
-import edu.com.app.base.widget.dialog.ChoosePicDialog;
-import edu.com.app.base.widget.dialog.DialogManager;
+import edu.com.app.widget.ViewDisplay;
+import edu.com.app.widget.dialog.ChoosePicDialog;
+import edu.com.app.widget.dialog.DialogManager;
 
 import edu.com.app.data.local.PreferencesHelper;
 import edu.com.app.data.rx.RxBus;

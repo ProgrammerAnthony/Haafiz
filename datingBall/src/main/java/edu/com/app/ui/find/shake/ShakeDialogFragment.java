@@ -17,7 +17,7 @@ import com.anthony.ultimateswipetool.dialogFragment.SwipeDialogFragment;
 import java.util.Calendar;
 
 import edu.com.app.R;
-//import edu.com.app.base.widget.swipeDialogFragment.SwipeAwayDialogFragment;
+//import edu.com.app.widget.swipeDialogFragment.SwipeAwayDialogFragment;
 
 /**
  * Created by Anthony on 2016/6/28.
