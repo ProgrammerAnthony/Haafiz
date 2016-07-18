@@ -17,6 +17,8 @@ import java.util.List;
  * Class Note:
  * 实现视差效果的recyclerView
  * https://github.com/kanytu/android-parallax-recyclerview
+ *
+ * @deprecated
  */
 public abstract class ParallaxRecyclerAdapter<T> extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private float mScrollMultiplier = 0.5f;

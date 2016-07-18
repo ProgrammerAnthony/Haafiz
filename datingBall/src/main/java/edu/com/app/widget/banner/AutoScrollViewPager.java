@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package edu.com.app.widget.autoscrollViewPager;
+package edu.com.app.widget.banner;
 
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Field;

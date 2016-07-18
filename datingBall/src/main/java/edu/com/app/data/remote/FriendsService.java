@@ -12,6 +12,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
 import rx.Observable;
 
+/**
+ * @deprecated
+ */
 public interface FriendsService {
     String ENDPOINT = "https://api.ribot.io/";
 

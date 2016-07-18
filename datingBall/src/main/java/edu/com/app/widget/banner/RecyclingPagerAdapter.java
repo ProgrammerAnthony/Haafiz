@@ -1,4 +1,4 @@
-package edu.com.app.widget.autoscrollViewPager;
+package edu.com.app.widget.banner;
 
 import android.support.v4.view.PagerAdapter;
 import android.view.View;

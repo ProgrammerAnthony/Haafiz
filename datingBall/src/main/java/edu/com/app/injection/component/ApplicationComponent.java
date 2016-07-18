@@ -45,9 +45,9 @@ public interface ApplicationComponent {
 
     FriendsService ribotService();
 
-    PreferencesHelper preferencesHelper();
+//    PreferencesHelper preferencesHelper();
 
-    DatabaseHelper databaseHelper();
+//    DatabaseHelper databaseHelper();
 
     DataManager dataManager();
 

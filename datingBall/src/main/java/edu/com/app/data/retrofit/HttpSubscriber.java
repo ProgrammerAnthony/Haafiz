@@ -12,11 +12,11 @@ import rx.Subscriber;
 public abstract class HttpSubscriber<T> extends Subscriber<T> {
     @Override
     public void onCompleted() {
-        Log.v("HttpService", "Subscriber On Completed");
+        Log.v("HttpHelper", "Subscriber On Completed");
     }
 
     @Override
     public void onError(Throwable e) {
-        Log.e("HttpService", "Subscriber On Error: " + e.toString());
+        Log.e("HttpHelper", "Subscriber On Error: " + e.toString());
     }
 }

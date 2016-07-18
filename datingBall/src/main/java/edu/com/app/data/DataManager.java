@@ -20,8 +20,8 @@ import edu.com.app.data.bean.Menu;
 import edu.com.app.data.local.DatabaseHelper;
 import edu.com.app.data.local.PreferencesHelper;
 import edu.com.app.data.remote.FriendsService;
+import edu.com.app.data.retrofit.HttpHelper;
 import edu.com.app.data.retrofit.HttpResult;
-import edu.com.app.data.retrofit.HttpService;
 import edu.com.app.data.retrofit.ItemJsonDeserializer;
 import edu.com.app.data.retrofit.RemoteApi;
 import edu.com.app.injection.scope.ApplicationContext;
@@ -45,7 +45,7 @@ public class DataManager {
     FriendsService friendsService;
 
     @Inject
-    HttpService httpService;
+    HttpHelper httpHelper;
     @Inject
     DatabaseHelper mDatabaseHelper;
     @Inject
@@ -66,19 +66,20 @@ public class DataManager {
 
 
     public Observable<Friends> syncFriends() {
-        return friendsService.getFriends()
-                .concatMap(new Func1<List<Friends>, Observable<Friends>>() {
-                    @Override
-                    public Observable<Friends> call(List<Friends> friends) {
-                        return mDatabaseHelper.setFriends(friends);
-                    }
-                });
+        return null;
+//        return friendsService.getFriends()
+//                .concatMap(new Func1<List<Friends>, Observable<Friends>>() {
+//                    @Override
+//                    public Observable<Friends> call(List<Friends> friends) {
+//                        return mDatabaseHelper.setFriends(friends);
+//                    }
+//                });
     }
 
 
     public Observable<List<Friends>> getFriends() {
-//        if()
-        return mDatabaseHelper.getFriends().distinct();
+        return null;
+//        return mDatabaseHelper.getFriends().distinct();
     }
 
 
@@ -107,7 +108,7 @@ public class DataManager {
             }
         } else {
             String path = url.substring(Constants.Remote_BASE_END_POINT.length());
-            return httpService.getService(RemoteApi.class)
+            return httpHelper.getService(RemoteApi.class)
                     .loadString(path)
                     .flatMap(new Func1<ResponseBody, Observable<String>>() {
                         @Override
@@ -177,7 +178,7 @@ public class DataManager {
      * 通过POST请求发送参数到服务器
      */
     public Observable<String> postString(String url, Map<String, String> paramMap){
-        return httpService.getService(RemoteApi.class)
+        return httpHelper.getService(RemoteApi.class)
                 .postString(url,paramMap)
                 .flatMap(new Func1<ResponseBody, Observable<String>>() {
                     @Override

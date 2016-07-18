@@ -11,7 +11,7 @@ import edu.com.app.injection.scope.ApplicationContext;
 
 public class DbOpenHelper extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "friends.db";
+    public static final String DATABASE_NAME = "app.db";
     public static final int DATABASE_VERSION = 2;
 
     @Inject

@@ -32,7 +32,7 @@ public class DatabaseHelper {
         return mDb;
     }
 
-    public Observable<Friends> setFriends(final Collection<Friends> newFriends) {
+   /* public Observable<Friends> setFriends(final Collection<Friends> newFriends) {
         return Observable.create(new Observable.OnSubscribe<Friends>() {
             @Override
             public void call(Subscriber<? super Friends> subscriber) {
@@ -65,5 +65,5 @@ public class DatabaseHelper {
                     }
                 });
     }
-
+*/
 }

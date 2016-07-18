@@ -7,6 +7,7 @@ import android.view.ViewGroup;
  * Create By Anthony on 2016/1/15
  * Class Note:
  *  Base class for {@link HeaderFooterRecyclerAdapter}
+ *  @deprecated
  */
 public class RecyclerViewAdapterWrapper extends RecyclerView.Adapter {
 

@@ -11,7 +11,7 @@ import javax.inject.Inject;
 
 import butterknife.Bind;
 import edu.com.app.R;
-import edu.com.app.data.SyncService;
+//import edu.com.app.data.SyncService;
 import edu.com.app.data.bean.Friends;
 import edu.com.app.base.AbsBaseFragment;
 import edu.com.app.ui.main.MainActivity;
@@ -44,7 +44,7 @@ public class FriendsListFragment extends AbsBaseFragment implements FriendsListC
     protected void initViewsAndEvents(View rootView) {
 
         if (activity.getIntent().getBooleanExtra(EXTRA_TRIGGER_SYNC_FLAG, true)) {
-            activity.startService(SyncService.getStartIntent(activity));
+//            activity.startService(SyncService.getStartIntent(activity));
         }
 
         mRecyclerView.setAdapter(mFriendsAdapter);

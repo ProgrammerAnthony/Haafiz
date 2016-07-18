@@ -28,14 +28,14 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Class Note:
  * {@link Retrofit}封装类
  */
-public class HttpService {
+public class HttpHelper {
     private static final int DEFAULT_TIMEOUT = 30;
     private HashMap<String, Object> mServiceMap;
     private Context mContext;
 //    private OkHttpClient.Builder httpClient;
 
     @Inject
-    private HttpService(@ApplicationContext Context context) {
+    public HttpHelper(@ApplicationContext Context context) {
         //创建保存RetrofitService的Map
         mServiceMap = new HashMap<>();
         this.mContext = context;
@@ -43,11 +43,11 @@ public class HttpService {
 
     //在访问HttpService时创建单例
 //    private static class SingletonHolder {
-//        private static final HttpService INSTANCE = new HttpService();
+//        private static final HttpHelper INSTANCE = new HttpHelper();
 //    }
 
     //获取单例
-//    public static HttpService getInstance() {
+//    public static HttpHelper getInstance() {
 //        return SingletonHolder.INSTANCE;
 //    }
 
@@ -118,26 +118,26 @@ public class HttpService {
             Request request = chain.request();
 
             long t1 = System.nanoTime();
-            Log.v("HttpService", String.format("Sending request %s on %s%n%s",
+            Log.v("HttpHelper", String.format("Sending request %s on %s%n%s",
                     request.url(), chain.connection(), request.headers()));
 
             Response response = chain.proceed(request);
             long t2 = System.nanoTime();
 
-            Log.v("HttpService", String.format("Received response for %s in %.1fms%n%s",
+            Log.v("HttpHelper", String.format("Received response for %s in %.1fms%n%s",
                     response.request().url(), (t2 - t1) / 1e6d, response.headers()));
             return response;
 
             // 打印Response Body
 //            if(BuildConfig.DEBUG) {
 //                String responseBody = response.body().string();
-//                Log.v("HttpService", String.format("Received response for %s in %.1fms%n%s%n%s",
+//                Log.v("HttpHelper", String.format("Received response for %s in %.1fms%n%s%n%s",
 //                        response.request().url(), (t2 - t1) / 1e6d, response.headers(), responseBody));
 //                return response.newBuilder()
 //                        .body(ResponseBody.create(response.body().contentType(), responseBody))
 //                        .build();
 //            } else {
-//                Log.v("HttpService", String.format("Received response for %s in %.1fms%n%s",
+//                Log.v("HttpHelper", String.format("Received response for %s in %.1fms%n%s",
 //                        response.request().url(), (t2 - t1) / 1e6d, response.headers()));
 //                return response;
 //            }
