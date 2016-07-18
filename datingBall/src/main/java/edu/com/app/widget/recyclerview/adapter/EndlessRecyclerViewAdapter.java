@@ -22,6 +22,7 @@ import static android.support.v7.widget.RecyclerView.ViewHolder;
  * Create By Anthony on 2016/1/15
  * Class Note:
  * 实现双向加载更多的recyclerView
+ * @deprecated
  */
 public class EndlessRecyclerViewAdapter extends RecyclerViewAdapterWrapper {
     public static final int TYPE_PENDING_AFTER = 999; //后向加载

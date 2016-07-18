@@ -12,6 +12,7 @@ import android.view.ViewGroup;
  * Class Note:
  * 实现header和footer简单添加的RecyclerView Adapter
  * {@see http://www.tuicool.com/articles/qMnAfen}
+ * @deprecated
  */
 public class HeaderFooterRecyclerAdapter extends RecyclerViewAdapterWrapper {
     public static final int TYPE_HEADER = 111;

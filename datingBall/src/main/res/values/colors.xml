@@ -349,4 +349,7 @@
     <color name="tip">#9c9c9c</color>
     <color name="bg_focus">#DDDDDD</color>
     <color name="red_500">#ef4836</color>
+
+
+    <color name="common_tv_dark">#363636</color>
 </resources>

@@ -19,8 +19,8 @@ import butterknife.Bind;
 import butterknife.OnClick;
 import edu.com.app.R;
 import edu.com.app.base.AbsSwipeBackActivity;
-import edu.com.app.widget.autoscrollViewPager.AutoScrollViewPager;
-import edu.com.app.widget.autoscrollViewPager.ImagePagerAdapter;
+import edu.com.app.widget.banner.AutoScrollViewPager;
+import edu.com.app.widget.banner.ImagePagerAdapter;
 import edu.com.app.widget.recyclerview.adapter.ParallaxRecyclerAdapter;
 
 import edu.com.app.util.ListUtils;

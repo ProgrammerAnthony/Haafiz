@@ -35,7 +35,7 @@ public class HttpService {
 //    private OkHttpClient.Builder httpClient;
 
     @Inject
-    private HttpService(@ApplicationContext Context context) {
+    public HttpService(@ApplicationContext Context context) {
         //创建保存RetrofitService的Map
         mServiceMap = new HashMap<>();
         this.mContext = context;
