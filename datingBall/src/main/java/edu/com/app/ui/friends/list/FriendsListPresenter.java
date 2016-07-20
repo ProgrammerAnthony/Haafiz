@@ -2,17 +2,11 @@ package edu.com.app.ui.friends.list;
 
 import android.content.Context;
 
-import java.util.List;
-
 import javax.inject.Inject;
 
 import edu.com.app.data.DataManager;
-import edu.com.app.data.bean.Friends;
 import edu.com.app.injection.scope.ActivityContext;
-import rx.Subscriber;
 import rx.Subscription;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.schedulers.Schedulers;
 
 /**
  * Created by Anthony on 2016/6/13.
@@ -36,6 +30,7 @@ public class FriendsListPresenter implements FriendsListContract.Presenter {
     @Override
     public void loadFriends() {
 //        checkViewAttached();
+/*
         mSubscription = mDataManager.getFriends()
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
@@ -60,6 +55,7 @@ public class FriendsListPresenter implements FriendsListContract.Presenter {
                         }
                     }
                 });
+*/
     }
 
     @Override

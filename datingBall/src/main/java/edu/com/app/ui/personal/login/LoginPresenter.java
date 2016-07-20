@@ -17,7 +17,7 @@ import java.util.regex.Pattern;
 
 import javax.inject.Inject;
 
-import edu.com.app.data.rx.RxLeanCloud;
+import edu.com.app.data.rx.LeanCloudHelper;
 import edu.com.app.data.local.PreferencesHelper;
 import edu.com.app.injection.scope.ActivityContext;
 
@@ -29,7 +29,7 @@ public class LoginPresenter implements LoginContract.Presenter, Handler.Callback
     private LoginContract.View mLoginView;
     private Context mContext;
 
-    private RxLeanCloud mRxleanCloud;
+    private LeanCloudHelper mRxleanCloud;
     private Handler mHandler;
     private static final int MESSAGE_WHAT = 1;
     AnimatorSet mAnimatorSet;

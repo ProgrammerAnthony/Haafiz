@@ -17,7 +17,7 @@ import javax.inject.Inject;
 
 import edu.com.app.data.DataManager;
 import edu.com.app.injection.scope.ActivityContext;
-import edu.com.app.data.rx.RxLeanCloud;
+import edu.com.app.data.rx.LeanCloudHelper;
 import edu.com.app.R;
 import rx.Subscription;
 
@@ -30,7 +30,8 @@ public class MainPresenter implements MainContract.Presenter {
     private Context mContext;
     String currentFragmentTag;
     private Subscription mSubscription;
-    @Inject RxLeanCloud mRxLeanCloud;
+    @Inject
+    LeanCloudHelper mLeanCloudHelper;
     @Inject Activity mActivity;
 
 
@@ -152,13 +153,13 @@ public class MainPresenter implements MainContract.Presenter {
 /*        mMainView.showProgress("上传中...");
         try {
             AVFile file = AVFile.withFile(mPreferenceManager.getCurrentUserId(), new File(new URI(uri.toString())));
-            mRxLeanCloud.UploadPicture(file)
+            mLeanCloudHelper.UploadPicture(file)
                     .flatMap(new Func1<String, Observable<AVUser>>() {
                         @Override
                         public Observable<AVUser> call(String s) {
                             User user = User.getCurrentUser(User.class);
                             user.setBackground(s);
-                            return mRxLeanCloud.SaveUserByLeanCloud(user);
+                            return mLeanCloudHelper.SaveUserByLeanCloud(user);
                         }
                     }).observeOn(AndroidSchedulers.mainThread())
                     .subscribe(new Observer<AVUser>() {

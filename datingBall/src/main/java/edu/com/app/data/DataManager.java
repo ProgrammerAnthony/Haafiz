@@ -148,7 +148,6 @@ public class DataManager {
      * 注意:Gson数据反序列化为Menu类型
      */
     public Observable<Menu> loadMenu(String url) {
-//        return null;
         final Gson gson = new GsonBuilder().registerTypeAdapter(Menu.class, new ItemJsonDeserializer<Menu>()).create();
         return loadString(url).flatMap(new Func1<String, Observable<Menu>>() {
             @Override

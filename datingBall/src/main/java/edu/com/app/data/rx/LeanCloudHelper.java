@@ -30,7 +30,6 @@ import edu.com.app.data.dao.GalleryDao;
 import edu.com.app.data.dao.NewsDao;
 import edu.com.app.data.dao.SouvenirDao;
 import edu.com.app.data.dao.UserDao;
-import edu.com.app.injection.scope.ApplicationContext;
 import rx.Observable;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
@@ -41,12 +40,12 @@ import rx.schedulers.Schedulers;
  * Class Note:
  */
 @Singleton
-public class RxLeanCloud {
+public class LeanCloudHelper {
 
     private Context mContext;
 
     @Inject
-    public RxLeanCloud() {
+    public LeanCloudHelper() {
     }
 
     /**

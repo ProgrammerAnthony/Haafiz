@@ -1,22 +1,16 @@
 package edu.com.app.data.local;
 
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-
 import com.squareup.sqlbrite.BriteDatabase;
 import com.squareup.sqlbrite.SqlBrite;
 
-import java.util.Collection;
 import java.util.List;
-
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import edu.com.app.data.bean.Friends;
+import edu.com.app.data.bean.Menu;
 import rx.Observable;
-import rx.Subscriber;
-import rx.functions.Func1;
+
 
 @Singleton
 public class DatabaseHelper {
@@ -30,6 +24,14 @@ public class DatabaseHelper {
 
     public BriteDatabase getBriteDb() {
         return mDb;
+    }
+
+    public void setMenu(Observable<List<Menu>> menus) {
+
+    }
+
+    public Observable<List<Menu>> getMenu() {
+        return null;
     }
 
    /* public Observable<Friends> setFriends(final Collection<Friends> newFriends) {

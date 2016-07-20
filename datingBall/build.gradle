@@ -1,7 +1,14 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'realm-android'
-
+//apply plugin: 'io.fabric'
+//
+//
+//
+//repositories {
+//    mavenCentral()
+//    maven { url 'https://maven.fabric.io/public' }
+//}
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
@@ -120,7 +127,7 @@ dependencies {
 
     compile 'com.squareup.sqlbrite:sqlbrite:0.5.0'
 
-    compile 'com.jakewharton.timber:timber:4.1.0'
+    compile 'com.jakewharton.timber:timber:4.1.2'
 
     //dagger2
     apt "com.google.dagger:dagger-compiler:$rootProject.daggerCompilerVersion"
@@ -169,4 +176,8 @@ dependencies {
     //状态栏变色
     compile 'com.jaeger.statusbaruitl:library:1.1.1'
 
+//fabric crashlytics  currently not available
+//    compile('com.crashlytics.sdk.android:crashlytics:2.6.1@aar') {
+//        transitive = true;
+//    }
 }

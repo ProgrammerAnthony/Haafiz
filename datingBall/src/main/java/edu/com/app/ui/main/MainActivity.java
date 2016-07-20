@@ -99,7 +99,7 @@ public class MainActivity extends AbsBaseActivity implements MainContract.View, 
     private boolean isLogin;
 
     private boolean isConflictDialogShow = false;
-    //    private RxLeanCloud mRxLeanCloud;
+    //    private LeanCloudHelper mLeanCloudHelper;
 //    private ChoosePicDialog mPicDialog;//底部选择对话框（图库，照相，取消）
 
     @Override

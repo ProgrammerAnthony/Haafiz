@@ -15,10 +15,9 @@ import javax.inject.Inject;
 
 import edu.com.app.data.DataManager;
 import edu.com.app.injection.component.ApplicationComponent;
-
-
 import edu.com.app.injection.component.DaggerApplicationComponent;
 import edu.com.app.injection.module.ApplicationModule;
+import edu.com.app.util.FakeCrashLibrary;
 import timber.log.Timber;
 
 /**
@@ -37,7 +36,7 @@ public class MyApplication extends Application {
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
-        MultiDex.install(this);
+        MultiDex.install(this);//multi dex support
     }
 
     @Override
@@ -47,24 +46,27 @@ public class MyApplication extends Application {
         getAppComponent().inject(this);
         mEventBus.register(this);
         initLeanCloud();
-//       初始化环信EaseUI
+// init EaseUI(for IM,Instant Messaging)
 //        initEaseUI();
-
-        //异常捕获
+ //exception handler
 //        Thread.setDefaultUncaughtExceptionHandler(new LocalFileUncaughtExceptionHandler(this,
 //                Thread.getDefaultUncaughtExceptionHandler()));
 
         if (BuildConfig.DEBUG) {
             Timber.plant(new Timber.DebugTree());
+        } else {
+            //sorry,Fabric currently not available
 //            Fabric.with(this, new Crashlytics());
+//            Timber.plant(new CrashlyticsTree());
+            Timber.plant(new CrashReportingTree());
         }
-//        Timber.plant(new CrashlyticsTree());
-
+        Timber.tag("application");
+        Timber.i("test timber,application created");
     }
 
-    //初始化LeanCloud
+    //init LeanCloud (Online storage)
     private void initLeanCloud() {
-        // 初始化参数依次为 this, AppId, AppKey
+        // initial params( this, AppId, AppKey)
         AVOSCloud.initialize(this, "k9XVHXc7UHdiv6UOielOPyYc-gzGzoHsz", "5WHJ0HesNrOnveAYcoM5sLL2");
     }
 
@@ -85,12 +87,17 @@ public class MyApplication extends Application {
         mAppComponent = appComponent;
     }
 
+    /**
+     * get cache dir
+     *
+     * @return cache directory
+     */
     @Override
     public File getCacheDir() {
         Log.i("getCacheDir", "cache sdcard state: " + Environment.getExternalStorageState());
-        if(Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)){
+        if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
             File cacheDir = getExternalCacheDir();
-            if(cacheDir != null && (cacheDir.exists() || cacheDir.mkdirs())){
+            if (cacheDir != null && (cacheDir.exists() || cacheDir.mkdirs())) {
                 Log.i("getCacheDir", "cache dir: " + cacheDir.getAbsolutePath());
                 return cacheDir;
             }
@@ -101,5 +108,48 @@ public class MyApplication extends Application {
 
         return cacheDir;
     }
+
+
+
+    /** A tree which logs important information for crash reporting.fake one */
+    public  class CrashReportingTree extends Timber.Tree {
+        @Override protected void log(int priority, String tag, String message, Throwable t) {
+            if (priority == Log.VERBOSE || priority == Log.DEBUG) {
+                return;
+            }
+
+            FakeCrashLibrary.log(priority, tag, message);
+
+            if (t != null) {
+                if (priority == Log.ERROR) {
+                    FakeCrashLibrary.logError(t);
+                } else if (priority == Log.WARN) {
+                    FakeCrashLibrary.logWarning(t);
+                }
+            }
+        }
+    }
+
+    /**
+     * A logging implementation which reports 'info', 'warning', and 'error' logs to Crashlytics.
+     */
+/*    public class CrashlyticsTree extends Timber.Tree {
+
+        @Override
+        protected void log(int priority, String tag, String message, Throwable t) {
+            if (priority == Log.VERBOSE || priority == Log.DEBUG) {
+                return;
+            }
+
+            Crashlytics.log(priority, tag, message);
+
+            if (t != null) {
+                if (priority == Log.ERROR) {
+                    Crashlytics.logException(t);
+                }
+            }
+
+        }
+    }*/
 
 }

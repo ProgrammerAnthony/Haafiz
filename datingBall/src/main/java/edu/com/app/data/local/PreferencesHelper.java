@@ -8,7 +8,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import javax.inject.Inject;
-import javax.inject.Singleton;
 
 import edu.com.app.data.bean.Friends;
 import edu.com.app.injection.scope.ApplicationContext;
@@ -18,7 +17,6 @@ import edu.com.app.injection.scope.ApplicationContext;
  * Class Note:
  * SharedPreference Helper class
  */
-@Singleton
 public class PreferencesHelper {
     private static final String SETTING = "setting";
     private static final String ID = "USER_ID";

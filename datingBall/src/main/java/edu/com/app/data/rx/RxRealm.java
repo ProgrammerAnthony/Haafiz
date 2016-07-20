@@ -3,7 +3,6 @@ package edu.com.app.data.rx;
 import android.content.Context;
 
 import javax.inject.Inject;
-import javax.inject.Singleton;
 
 import edu.com.app.data.bean.News;
 import edu.com.app.injection.scope.ApplicationContext;
@@ -15,8 +14,9 @@ import rx.Observable;
 /**
  * Created by Anthony on 2016/5/23.
  * Class Note:
+ * @deprecated use SqlBrite instead
  */
-@Singleton
+
 public class RxRealm {
     private Context mContext;
     private Realm realm;
