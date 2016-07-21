@@ -9,7 +9,7 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import edu.com.app.data.remote.FriendsService;
+
 import edu.com.app.injection.scope.ApplicationContext;
 
 /**
@@ -41,11 +41,7 @@ public class ApplicationModule {
         return new Bus();
     }
 
-    @Provides
-    @Singleton
-    FriendsService provideFriendsService() {
-        return FriendsService.Creator.newFriendService();
-    }
+
 
 
 

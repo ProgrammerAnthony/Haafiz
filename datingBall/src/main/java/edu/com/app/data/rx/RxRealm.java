@@ -14,7 +14,7 @@ import rx.Observable;
 /**
  * Created by Anthony on 2016/5/23.
  * Class Note:
- * @deprecated use SqlBrite instead
+ *  use SqlBrite instead
  */
 
 public class RxRealm {

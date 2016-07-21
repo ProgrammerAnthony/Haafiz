@@ -48,20 +48,17 @@ public class MyApplication extends Application {
         initLeanCloud();
 // init EaseUI(for IM,Instant Messaging)
 //        initEaseUI();
- //exception handler
+
+//exception handler
 //        Thread.setDefaultUncaughtExceptionHandler(new LocalFileUncaughtExceptionHandler(this,
 //                Thread.getDefaultUncaughtExceptionHandler()));
 
         if (BuildConfig.DEBUG) {
             Timber.plant(new Timber.DebugTree());
         } else {
-            //sorry,Fabric currently not available
-//            Fabric.with(this, new Crashlytics());
-//            Timber.plant(new CrashlyticsTree());
+            //sorry,Fabric currently not available ,   Fabric.with(this, new Crashlytics());   Timber.plant(new CrashlyticsTree());
             Timber.plant(new CrashReportingTree());
         }
-        Timber.tag("application");
-        Timber.i("test timber,application created");
     }
 
     //init LeanCloud (Online storage)

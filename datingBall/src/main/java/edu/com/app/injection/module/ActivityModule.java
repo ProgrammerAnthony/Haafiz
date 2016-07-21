@@ -10,8 +10,11 @@ import edu.com.app.injection.scope.ActivityContext;
 /**
  * Created by Anthony on 2016/6/13.
  * Class Note:
+ * include {@link DbModule},define Database object in it
  */
+
 @Module
+        (includes = DbModule.class)
 public class ActivityModule {
     private Activity mActivity;
 

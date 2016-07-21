@@ -17,9 +17,7 @@ import javax.inject.Singleton;
 import edu.com.app.data.bean.Channel;
 import edu.com.app.data.bean.Friends;
 import edu.com.app.data.bean.Menu;
-import edu.com.app.data.local.DatabaseHelper;
-import edu.com.app.data.local.PreferencesHelper;
-import edu.com.app.data.remote.FriendsService;
+
 import edu.com.app.data.retrofit.HttpHelper;
 import edu.com.app.data.retrofit.HttpResult;
 import edu.com.app.data.retrofit.ItemJsonDeserializer;
@@ -41,13 +39,11 @@ import rx.functions.Func1;
 public class DataManager {
 
 
-    @Inject
-    FriendsService friendsService;
+
 
     @Inject
     HttpHelper httpHelper;
-    @Inject
-    DatabaseHelper mDatabaseHelper;
+
     @Inject
     PreferencesHelper mPreferencesHelper;
     @Inject

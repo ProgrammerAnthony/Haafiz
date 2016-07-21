@@ -3,6 +3,7 @@ package edu.com.app.data.dao;
 /**
  * Created by Anthony on 2016/5/24.
  * Class Note: todo edit
+ * @deprecated
  */
 public class NewsDao {
 

@@ -1,4 +1,4 @@
-package edu.com.app.data.local;
+package edu.com.app.data;
 
 import android.content.Context;
 import android.content.SharedPreferences;

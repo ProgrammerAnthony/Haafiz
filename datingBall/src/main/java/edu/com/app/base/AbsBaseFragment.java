@@ -15,9 +15,7 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 
 import edu.com.app.widget.dialog.DialogManager;
 import edu.com.app.util.ToastUtils;
-
-
-//import butterknife.ButterKnife;
+import rx.Subscription;
 
 /**
  * Created by Anthony on 2016/2/25.
@@ -31,6 +29,7 @@ import edu.com.app.util.ToastUtils;
 public abstract class AbsBaseFragment extends Fragment implements BaseView{
     /**
      * Log tag
+     *
      */
     protected static String TAG_LOG = null;
     /**
@@ -45,6 +44,8 @@ public abstract class AbsBaseFragment extends Fragment implements BaseView{
 
     @Inject
     ToastUtils toastUtils;
+
+    protected Subscription mSubscription;
 
 
     @Override
@@ -80,6 +81,13 @@ public abstract class AbsBaseFragment extends Fragment implements BaseView{
 
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if(mSubscription !=null && !mSubscription.isUnsubscribed()) {
+            mSubscription.unsubscribe();
+        }
+    }
 
     @Override
     public void onDestroyView() {

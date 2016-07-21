@@ -18,7 +18,7 @@ import java.util.regex.Pattern;
 import javax.inject.Inject;
 
 import edu.com.app.data.rx.LeanCloudHelper;
-import edu.com.app.data.local.PreferencesHelper;
+import edu.com.app.data.PreferencesHelper;
 import edu.com.app.injection.scope.ActivityContext;
 
 /**

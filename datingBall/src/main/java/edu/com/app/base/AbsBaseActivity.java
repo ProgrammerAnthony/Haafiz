@@ -18,6 +18,7 @@ import edu.com.app.injection.component.DaggerActivityComponent;
 import edu.com.app.injection.module.ActivityModule;
 import edu.com.app.util.LogUtil;
 import edu.com.app.util.ToastUtils;
+import rx.Subscription;
 
 
 /**
@@ -31,6 +32,7 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
 
     protected Context mContext = null;//context
     private ActivityComponent mActivityComponent;
+    protected Subscription mSubscription;
 
     @Inject
     ToastUtils toastUtils;
@@ -72,22 +74,15 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
         return mActivityComponent;
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
 
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-    }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         ButterKnife.unbind(this);
+        if(mSubscription !=null && !mSubscription.isUnsubscribed()) {
+            mSubscription.unsubscribe();
+        }
     }
 
     @Override

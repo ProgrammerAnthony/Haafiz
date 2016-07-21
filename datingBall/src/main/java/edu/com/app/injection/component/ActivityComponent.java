@@ -8,6 +8,7 @@ import edu.com.app.ui.find.friendCircle.FriendCircleActivity;
 import edu.com.app.ui.find.nearby.NearByActivity;
 import edu.com.app.ui.friends.add.FriendsAddActivity;
 import edu.com.app.ui.friends.list.FriendsListFragment;
+import edu.com.app.ui.friends.test.ListsFragment;
 import edu.com.app.ui.main.MainActivity;
 import edu.com.app.ui.news.channel.ChannelChooseActivity;
 import edu.com.app.ui.news.newsList.NewsFragment;
@@ -21,7 +22,14 @@ import edu.com.app.ui.splash.SplashActivity;
 /**
  * Created by Anthony on 2016/6/13.
  * Class Note:
+ * depend on {@link ApplicationComponent},so with custom {@link PerActivity}Scope.
+ *
+ * In Dagger, an unscoped component cannot depend on a scoped component. As
+ * {@link edu.com.app.injection.component.ApplicationComponent} is a scoped component ({@code @Singleton}, we create a custom
+ * scope to be used by all fragment/activity components. Additionally, a component with a specific scope
+ * cannot have a sub component with the same scope.
  */
+
 @PerActivity
 @Component(dependencies = ApplicationComponent.class, modules = ActivityModule.class)
 public interface ActivityComponent {
@@ -54,4 +62,5 @@ public interface ActivityComponent {
 
     void inject(SettingsFragment settingsFragment);
 
+    void inject(ListsFragment listsFragment);
 }

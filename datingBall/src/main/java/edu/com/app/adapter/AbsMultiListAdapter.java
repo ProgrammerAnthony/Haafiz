@@ -14,7 +14,7 @@ import java.util.List;
  * Created by Anthony on 2016/2/24.
  * Class Note:
  * Support Multi Type Layout adapter
- *
+ *@deprecated
  */
 public abstract class AbsMultiListAdapter<E> extends AbsListAdapter<E> {
     private SparseIntArray layoutId = new SparseIntArray();

@@ -19,6 +19,7 @@ import edu.com.app.ui.main.MainActivity;
 /**
  * Created by Anthony on 2016/5/10.
  * Class Note:好友列表界面,利用android-bi
+ * @deprecated  currently not available
  */
 public class FriendsListFragment extends AbsBaseFragment implements FriendsListContract.View{
     private static final String EXTRA_TRIGGER_SYNC_FLAG =

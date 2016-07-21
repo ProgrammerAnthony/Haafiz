@@ -32,7 +32,7 @@ import edu.com.app.widget.ViewDisplay;
 import edu.com.app.widget.dialog.ChoosePicDialog;
 import edu.com.app.widget.dialog.DialogManager;
 
-import edu.com.app.data.local.PreferencesHelper;
+import edu.com.app.data.PreferencesHelper;
 import edu.com.app.data.rx.RxBus;
 import edu.com.app.ui.chat.ChattingListFragment;
 import edu.com.app.ui.personal.info.PersonalInfoActivity;
@@ -253,7 +253,7 @@ public class MainActivity extends AbsBaseActivity implements MainContract.View, 
                 collapsingToolbarLayout.setTitle("聊天");
                 break;
             case R.id.nav_friends:                 //好友列表fragment
-                fragmentName = "FriendsListFragment";
+                fragmentName = "ListsFragment";//用于测试事情sqlBrite的list界面
                 mFragmentTag = "好友";
                 collapsingToolbarLayout.setTitle("好友");
                 break;

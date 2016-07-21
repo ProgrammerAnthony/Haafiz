@@ -11,8 +11,6 @@ import dagger.Component;
 import edu.com.app.MyApplication;
 import edu.com.app.data.DataManager;
 import edu.com.app.data.EventPosterHelper;
-import edu.com.app.data.SyncService;
-import edu.com.app.data.remote.FriendsService;
 import edu.com.app.data.rx.LeanCloudHelper;
 import edu.com.app.data.rx.RxBus;
 import edu.com.app.injection.module.ApplicationModule;
@@ -27,7 +25,7 @@ import edu.com.app.injection.scope.ApplicationContext;
 public interface ApplicationComponent {
 
     void inject(MyApplication application);
-    void inject(SyncService syncService);
+//    void inject(SyncService syncService);
 
     @ApplicationContext
     Context context();
@@ -40,7 +38,7 @@ public interface ApplicationComponent {
 
     RxBus rxBus();
 
-    FriendsService ribotService();
+//    FriendsService ribotService();
 
 //    PreferencesHelper preferencesHelper();
 
