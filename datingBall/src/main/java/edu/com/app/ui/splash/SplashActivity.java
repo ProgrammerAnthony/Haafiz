@@ -6,6 +6,7 @@ import javax.inject.Inject;
 
 import edu.com.app.base.AbsBaseActivity;
 import edu.com.app.R;
+import edu.com.app.injection.component.ActivityComponent;
 import edu.com.app.ui.main.MainActivity;
 
 /**
@@ -39,13 +40,10 @@ public class SplashActivity extends AbsBaseActivity implements SplashContract.Vi
     }
 
     @Override
-    protected void injectDagger() {
-        activityComponent().inject(this);
+    protected void injectDagger(ActivityComponent activityComponent) {
+        activityComponent.inject(this);
     }
 
-    @Override
-    protected void initToolBar() {
 
-    }
 
 }

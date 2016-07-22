@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Create By Anthony on 2016/1/15
  * Class Note:
- * use {@link LinkedList} to manage your activity
+ * use {@link LinkedList} to manage your activity stack
  *
  */
 public class BaseAppManager {

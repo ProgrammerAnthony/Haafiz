@@ -17,6 +17,7 @@ import butterknife.OnClick;
 import edu.com.app.R;
 import edu.com.app.data.bean.ChannelEntity;
 import edu.com.app.base.AbsSwipeBackActivity;
+import edu.com.app.injection.component.ActivityComponent;
 import edu.com.app.widget.CircleImageView;
 import edu.com.app.util.ToastUtils;
 
@@ -66,14 +67,11 @@ public class ChannelChooseActivity extends AbsSwipeBackActivity implements Chann
     }
 
     @Override
-    protected void injectDagger() {
-        activityComponent().inject(this);
+    protected void injectDagger(ActivityComponent activityComponent) {
+        activityComponent.inject(this);
     }
 
-    @Override
-    protected void initToolBar() {
 
-    }
 
 
     @OnClick({R.id.title_image_left, R.id.title_txt_right})

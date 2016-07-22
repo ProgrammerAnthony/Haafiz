@@ -13,6 +13,7 @@ import edu.com.app.R;
 import edu.com.app.data.bean.Event;
 import edu.com.app.data.rx.RxBus;
 import edu.com.app.base.AbsSwipeBackActivity;
+import edu.com.app.injection.component.ActivityComponent;
 import edu.com.app.widget.CircleImageView;
 import edu.com.app.util.ToastUtils;
 import rx.functions.Action1;
@@ -76,13 +77,8 @@ public class SettingsActivity extends AbsSwipeBackActivity {
     }
 
     @Override
-    protected void injectDagger() {
-        activityComponent().inject(this);
-    }
-
-    @Override
-    protected void initToolBar() {
-
+    protected void injectDagger(ActivityComponent activityComponent) {
+        activityComponent.inject(this);
     }
 
 

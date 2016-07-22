@@ -23,7 +23,9 @@ import android.content.IntentFilter;
 
 import java.util.ArrayList;
 
-import edu.com.app.util.LogUtil;
+//import edu.com.app.util.LogUtil;
+
+//import edu.com.app.util.LogUtil;
 
 
 public class NetStateReceiver extends BroadcastReceiver {
@@ -53,10 +55,10 @@ public class NetStateReceiver extends BroadcastReceiver {
         mBroadcastReceiver = NetStateReceiver.this;
         if (intent.getAction().equalsIgnoreCase(ANDROID_NET_CHANGE_ACTION) || intent.getAction().equalsIgnoreCase(CUSTOM_ANDROID_NET_CHANGE_ACTION)) {
             if (!NetUtils.isNetworkAvailable(context)) {
-                LogUtil.i(TAG, "<--- network disconnected --->");
+//                LogUtil.i(TAG, "<--- network disconnected --->");
                 isNetAvailable = false;
             } else {
-                LogUtil.i(TAG, "<--- network connected --->");
+//                LogUtil.i(TAG, "<--- network connected --->");
                 isNetAvailable = true;
                 mNetType = NetUtils.getAPNType(context);
             }
@@ -82,7 +84,7 @@ public class NetStateReceiver extends BroadcastReceiver {
             try {
                 mContext.getApplicationContext().unregisterReceiver(mBroadcastReceiver);
             } catch (Exception e) {
-                LogUtil.d(TAG, e.getMessage());
+//                LogUtil.d(TAG, e.getMessage());
             }
         }
 

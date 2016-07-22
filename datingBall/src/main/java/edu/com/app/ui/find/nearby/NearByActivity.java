@@ -19,6 +19,7 @@ import butterknife.OnClick;
 import edu.com.app.R;
 import edu.com.app.base.AbsSwipeBackActivity;
 
+import edu.com.app.injection.component.ActivityComponent;
 import edu.com.app.util.ToastUtils;
 
 /**
@@ -63,13 +64,8 @@ public class NearByActivity extends AbsSwipeBackActivity implements SwipeCards.S
     }
 
     @Override
-    protected void injectDagger() {
-        activityComponent().inject(this);
-    }
-
-    @Override
-    protected void initToolBar() {
-
+    protected void injectDagger(ActivityComponent activityComponent) {
+        activityComponent.inject(this);
     }
 
 

@@ -10,6 +10,7 @@ import butterknife.Bind;
 import butterknife.OnClick;
 import edu.com.app.R;
 import edu.com.app.base.AbsSwipeBackActivity;
+import edu.com.app.injection.component.ActivityComponent;
 import edu.com.app.widget.dialog.ChooseFriendCircleDialog;
 
 /**
@@ -38,14 +39,11 @@ public class FriendCircleActivity extends AbsSwipeBackActivity {
     }
 
     @Override
-    protected void injectDagger() {
-        activityComponent().inject(this);
+    protected void injectDagger(ActivityComponent activityComponent) {
+       activityComponent.inject(this);
     }
 
-    @Override
-    protected void initToolBar() {
 
-    }
 
     @OnClick({R.id.title_image_left, R.id.title_image_right})
     public void onClick(View view) {

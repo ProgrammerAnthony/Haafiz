@@ -19,6 +19,7 @@ import butterknife.Bind;
 import butterknife.OnClick;
 import edu.com.app.R;
 import edu.com.app.base.AbsSwipeBackActivity;
+import edu.com.app.injection.component.ActivityComponent;
 import edu.com.app.widget.banner.AutoScrollViewPager;
 import edu.com.app.widget.banner.ImagePagerAdapter;
 import edu.com.app.widget.recyclerview.adapter.ParallaxRecyclerAdapter;
@@ -64,14 +65,10 @@ public class PersonalInfoActivity extends AbsSwipeBackActivity implements Person
     }
 
     @Override
-    protected void injectDagger() {
-        activityComponent().inject(this);
+    protected void injectDagger(ActivityComponent activityComponent) {
+        activityComponent.inject(this);
     }
 
-    @Override
-    protected void initToolBar() {
-
-    }
 
     /**
      * create adapter for recyclerView using {@link ParallaxRecyclerAdapter}

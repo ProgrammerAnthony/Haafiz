@@ -20,11 +20,13 @@ import butterknife.Bind;
 import butterknife.OnClick;
 import edu.com.app.R;
 import edu.com.app.base.AbsSwipeBackActivity;
-import edu.com.app.util.LogUtil;
+import edu.com.app.injection.component.ActivityComponent;
 import edu.com.app.ui.main.MainActivity;
 import jp.wasabeef.blurry.Blurry;
 import shem.com.materiallogin.MaterialLoginView;
 import shem.com.materiallogin.MaterialLoginViewListener;
+
+//import edu.com.app.util.LogUtil;
 
 /**
  * Created by Anthony on 2016/5/24.
@@ -80,16 +82,12 @@ public class NewLoginActivity extends AbsSwipeBackActivity implements LoginContr
 
 
     @Override
-    protected void injectDagger() {
+    protected void injectDagger(ActivityComponent activityComponent) {
 //        mActivityComponent.inject(this);
-        activityComponent().inject(this);
+        activityComponent.inject(this);
 
     }
 
-    @Override
-    protected void initToolBar() {
-
-    }
 
 
     @Override
@@ -130,7 +128,7 @@ public class NewLoginActivity extends AbsSwipeBackActivity implements LoginContr
         animator.addListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animation) {
-                LogUtil.d("onAnimationEnd:dismiss");
+//                LogUtil.d("onAnimationEnd:dismiss");
 
                 ViewGroup parent = (ViewGroup) login.getParent();
                 if (parent != null) {

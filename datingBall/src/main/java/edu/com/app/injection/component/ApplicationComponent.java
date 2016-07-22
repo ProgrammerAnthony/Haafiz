@@ -27,6 +27,9 @@ public interface ApplicationComponent {
     void inject(MyApplication application);
 //    void inject(SyncService syncService);
 
+
+
+/**----instance expose to children----*/
     @ApplicationContext
     Context context();
 

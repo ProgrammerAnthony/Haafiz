@@ -26,7 +26,7 @@ import edu.com.app.ui.find.nearby.radarScan.Info;
 import edu.com.app.ui.find.nearby.radarScan.RadarViewGroup;
 import edu.com.app.ui.find.nearby.radarScan.ZoomOutPageTransformer;
 import edu.com.app.base.AbsTitleFragment;
-import edu.com.app.util.LogUtil;
+//import edu.com.app.util.LogUtil;
 
 /**
  * Created by Anthony on 2016/5/10.
@@ -156,18 +156,18 @@ public class NearByListFragment extends AbsTitleFragment  implements ViewPager.O
     @Override
     public void onPageSelected(int position) {
         radarViewGroup.setCurrentShowItem(position);
-        LogUtil.d("当前位置 " + mPosition);
-        LogUtil.d("速度 " + viewPager.getSpeed());
+//        LogUtil.d("当前位置 " + mPosition);
+//        LogUtil.d("速度 " + viewPager.getSpeed());
         //当手指左滑速度大于2000时viewpager右滑（注意是item+2）
         if (viewPager.getSpeed() < -1800) {
 
             viewPager.setCurrentItem(mPosition + 2);
-            LogUtil.d("位置 " + mPosition);
+//            LogUtil.d("位置 " + mPosition);
             viewPager.setSpeed(0);
         } else if (viewPager.getSpeed() > 1800 && mPosition > 0) {
             //当手指右滑速度大于2000时viewpager左滑（注意item-1即可）
             viewPager.setCurrentItem(mPosition - 1);
-            LogUtil.d("位置 " + mPosition);
+//            LogUtil.d("位置 " + mPosition);
             viewPager.setSpeed(0);
         }
     }

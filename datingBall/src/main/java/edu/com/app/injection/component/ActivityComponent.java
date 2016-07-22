@@ -11,6 +11,7 @@ import edu.com.app.ui.friends.list.FriendsListFragment;
 import edu.com.app.ui.friends.test.ListsFragment;
 import edu.com.app.ui.main.MainActivity;
 import edu.com.app.ui.news.channel.ChannelChooseActivity;
+import edu.com.app.ui.news.detail.WebViewActivity;
 import edu.com.app.ui.news.newsList.NewsFragment;
 import edu.com.app.ui.personal.edit.PersonalEditActivity;
 import edu.com.app.ui.personal.info.PersonalInfoActivity;
@@ -53,6 +54,8 @@ public interface ActivityComponent {
     void inject(FriendCircleActivity friendCircleActivity);
 
     void inject(NearByActivity nearByActivity);
+
+    void  inject(WebViewActivity webViewActivity);
 
     void inject(NewsFragment newsFragment);
 

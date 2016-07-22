@@ -28,6 +28,7 @@ import butterknife.OnClick;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import edu.com.app.R;
 import edu.com.app.base.AbsBaseActivity;
+import edu.com.app.injection.component.ActivityComponent;
 import edu.com.app.widget.ViewDisplay;
 import edu.com.app.widget.dialog.ChoosePicDialog;
 import edu.com.app.widget.dialog.DialogManager;
@@ -171,17 +172,13 @@ public class MainActivity extends AbsBaseActivity implements MainContract.View, 
 
 
     @Override
-    protected void injectDagger() {
+    protected void injectDagger(ActivityComponent activityComponent) {
 
-        activityComponent().inject(this);
+        activityComponent.inject(this);
  /*       DaggerMainActivityComponent.builder().mainActivityModule(new MainActivityModule(this, mMainPresenter, new ChoosePicDialog(this)))
                 .applicationComponent(((MyApplication) getApplication()).getAppComponent()).build().inject(this);*/
     }
 
-    @Override
-    protected void initToolBar() {
-
-    }
 
 
     @Override

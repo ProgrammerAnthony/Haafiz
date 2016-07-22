@@ -2,6 +2,7 @@ package edu.com.app.ui.personal.edit;
 
 import edu.com.app.R;
 import edu.com.app.base.AbsSwipeBackActivity;
+import edu.com.app.injection.component.ActivityComponent;
 
 /**
  * Created by Anthony on 2016/5/10.
@@ -24,11 +25,7 @@ public class PersonalEditActivity extends AbsSwipeBackActivity {
 
 
     @Override
-    protected void initToolBar() {
-
-    }
-    @Override
-    protected void injectDagger() {
-        activityComponent().inject(this);
+    protected void injectDagger(ActivityComponent activityComponent) {
+        activityComponent.inject(this);
     }
 }

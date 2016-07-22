@@ -7,7 +7,6 @@ import android.support.multidex.MultiDex;
 import android.util.Log;
 
 import com.avos.avoscloud.AVOSCloud;
-import com.squareup.otto.Bus;
 
 import java.io.File;
 
@@ -26,8 +25,8 @@ import timber.log.Timber;
  * use in AndroidManifest.xml
  */
 public class MyApplication extends Application {
-    @Inject
-    Bus mEventBus;
+//    @Inject
+//    Bus mEventBus;
     @Inject
     DataManager mDataManager;
 
@@ -44,7 +43,7 @@ public class MyApplication extends Application {
         super.onCreate();
 
         getAppComponent().inject(this);
-        mEventBus.register(this);
+//        mEventBus.register(this);
         initLeanCloud();
 // init EaseUI(for IM,Instant Messaging)
 //        initEaseUI();

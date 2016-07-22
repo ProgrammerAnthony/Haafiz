@@ -16,6 +16,7 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 import edu.com.app.widget.dialog.DialogManager;
 import edu.com.app.util.ToastUtils;
 import rx.Subscription;
+import timber.log.Timber;
 
 /**
  * Created by Anthony on 2016/2/25.
@@ -29,7 +30,6 @@ import rx.Subscription;
 public abstract class AbsBaseFragment extends Fragment implements BaseView{
     /**
      * Log tag
-     *
      */
     protected static String TAG_LOG = null;
     /**
@@ -51,7 +51,9 @@ public abstract class AbsBaseFragment extends Fragment implements BaseView{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         TAG_LOG = this.getClass().getSimpleName();
+        Timber.tag(TAG_LOG);
 
         mContext = getActivity();
 
@@ -112,9 +114,8 @@ public abstract class AbsBaseFragment extends Fragment implements BaseView{
      */
     protected abstract int getContentViewID();
 
-    /**
-     * implements methods in BaseView
-     */
+
+    /**-----------------------implements methods in BaseView------------**/
     @Override
     public void showMessage(String msg) {
         toastUtils.showToast(msg);

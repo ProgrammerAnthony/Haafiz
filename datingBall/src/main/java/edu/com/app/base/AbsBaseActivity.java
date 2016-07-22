@@ -4,30 +4,30 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;
-
 import cn.pedant.SweetAlert.SweetAlertDialog;
-
 import edu.com.app.MyApplication;
-import edu.com.app.widget.dialog.DialogManager;
+import edu.com.app.data.EventPosterHelper;
 import edu.com.app.injection.component.ActivityComponent;
 import edu.com.app.injection.component.DaggerActivityComponent;
 import edu.com.app.injection.module.ActivityModule;
-import edu.com.app.util.LogUtil;
 import edu.com.app.util.ToastUtils;
+import edu.com.app.widget.dialog.DialogManager;
 import rx.Subscription;
+import timber.log.Timber;
 
 
 /**
  * Created by Anthony on 2016/4/24.
  * Class Note:
- * 1 所有的activity继承于这个类，
- * 2 实现BaseView中的方法（处理进度条，显示对话框）
+ * 1 all activities implement from this class
+ * 2 implemented method from {@link BaseView}
+ * todo add Umeng analysis
  */
 public abstract class AbsBaseActivity extends AppCompatActivity implements BaseView {
+
     protected static String TAG_LOG = null;// Log tag
 
     protected Context mContext = null;//context
@@ -37,6 +37,8 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
     @Inject
     ToastUtils toastUtils;
 
+    @Inject
+    EventPosterHelper eventPosterHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,23 +47,29 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
 
         mContext = this;
 
+//set timber tag
         TAG_LOG = this.getClass().getSimpleName();
-        LogUtil.init(TAG_LOG);
-
+        Timber.tag(TAG_LOG);
+//save activities stack
         BaseAppManager.getInstance().addActivity(this);
-
-
+//set content view
         if (getContentViewID() != 0)
             setContentView(getContentViewID());
-
+//bind this after setContentView
         ButterKnife.bind(this);
+//inject Dagger2 here
+        injectDagger(activityComponent());
 
-        injectDagger();
-        initToolBar();
+
+//register EventBus
+        eventPosterHelper.getBus().register(this);
+//sample        eventPosterHelper.postEventSafely(xxx);
+
+//init views and events
         initViewsAndEvents();
+
+
     }
-
-
 
 
     public ActivityComponent activityComponent() {
@@ -75,12 +83,11 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
     }
 
 
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
         ButterKnife.unbind(this);
-        if(mSubscription !=null && !mSubscription.isUnsubscribed()) {
+        if (mSubscription != null && !mSubscription.isUnsubscribed()) {
             mSubscription.unsubscribe();
         }
     }
@@ -104,17 +111,10 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
     /**
      * Dagger2 use in your application module(not used in 'base' module)
      */
-    protected abstract void injectDagger();
-
-    /**
-     * todo init tool bar
-     */
-    protected abstract void initToolBar();
+    protected abstract void injectDagger(ActivityComponent activityComponent);
 
 
-    /**
-     * implements methods in BaseView
-     */
+    /**-----------------------implements methods in BaseView------------**/
     @Override
     public void showMessage(String msg) {
         toastUtils.showToast(msg);
@@ -127,12 +127,12 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
 
     @Override
     public void showProgress(String message) {
-        DialogManager.showProgressDialog(mContext,message);
+        DialogManager.showProgressDialog(mContext, message);
     }
 
     @Override
     public void showProgress(String message, int progress) {
-        DialogManager.showProgressDialog(mContext,message, progress);
+        DialogManager.showProgressDialog(mContext, message, progress);
     }
 
     @Override
@@ -142,7 +142,7 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
 
     @Override
     public void showErrorMessage(String msg, String content) {
-        DialogManager.showErrorDialog(mContext,msg, content, new SweetAlertDialog.OnSweetClickListener() {
+        DialogManager.showErrorDialog(mContext, msg, content, new SweetAlertDialog.OnSweetClickListener() {
             @Override
             public void onClick(SweetAlertDialog sweetAlertDialog) {
                 sweetAlertDialog.dismissWithAnimation();

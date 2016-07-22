@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import edu.com.app.R;
-import edu.com.app.util.LogUtil;
 
 
 /**
@@ -193,7 +192,7 @@ public class RadarViewGroup extends ViewGroup implements RadarView.IScanningList
      */
     @Override
     public void onScanSuccess() {
-        LogUtil.d("完成回调");
+//        LogUtil.d("完成回调");
         resetAnim(currentShowChild);
         currentShowChild = minShowChild;
         startAnim(currentShowChild, minItemPosition);

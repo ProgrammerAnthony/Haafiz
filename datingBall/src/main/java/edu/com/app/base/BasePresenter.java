@@ -3,20 +3,13 @@ package edu.com.app.base;
 /**
  * Created by Anthony on 2016/5/4.
  * Class Note:
- * MVP中所有Presenter的接口，完成view的绑定和解除
  *
+ * interface for all of the MVP presenter,
  */
 public interface BasePresenter<T extends BaseView> {
-    /**
-     * 注入View，使之能够与View相互响应
-     *
-     * @param view
-     */
+
     void attachView(T view );
 
-    /**
-     * 释放资源
-     */
     void detachView();
 
 }
