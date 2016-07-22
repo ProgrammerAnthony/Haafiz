@@ -7,7 +7,7 @@
     <color name="drop_down_list_header_second_font_color">#000000</color>
     <!-- drop down list footer font color -->
     <color name="drop_down_list_footer_font_color">#000000</color>
-
+    <color name="common_tv_grey">#AAAAAA</color>
 
     <color name="white">#FFFFFF</color>
     <color name="light_grey">#EEEEEE</color>

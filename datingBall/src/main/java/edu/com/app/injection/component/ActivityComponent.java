@@ -3,22 +3,20 @@ package edu.com.app.injection.component;
 import dagger.Component;
 import edu.com.app.injection.module.ActivityModule;
 import edu.com.app.injection.scope.PerActivity;
-import edu.com.app.ui.find.FindFragment;
-import edu.com.app.ui.find.friendCircle.FriendCircleActivity;
-import edu.com.app.ui.find.nearby.NearByActivity;
-import edu.com.app.ui.friends.add.FriendsAddActivity;
-import edu.com.app.ui.friends.list.FriendsListFragment;
-import edu.com.app.ui.friends.test.ListsFragment;
-import edu.com.app.ui.main.MainActivity;
-import edu.com.app.ui.news.channel.ChannelChooseActivity;
-import edu.com.app.ui.news.detail.WebViewActivity;
-import edu.com.app.ui.news.newsList.NewsFragment;
-import edu.com.app.ui.personal.edit.PersonalEditActivity;
-import edu.com.app.ui.personal.info.PersonalInfoActivity;
-import edu.com.app.ui.personal.login.NewLoginActivity;
-import edu.com.app.ui.setting.SettingsActivity;
-import edu.com.app.ui.setting.SettingsFragment;
-import edu.com.app.ui.splash.SplashActivity;
+import edu.com.app.module.find.FindFragment;
+import edu.com.app.module.find.friendCircle.FriendCircleActivity;
+import edu.com.app.module.find.nearby.NearByActivity;
+import edu.com.app.module.friends.ListsFragment;
+import edu.com.app.module.main.MainActivity;
+import edu.com.app.module.news.NewsFragment;
+import edu.com.app.module.personal.edit.PersonalEditActivity;
+import edu.com.app.module.personal.info.PersonalInfoActivity;
+import edu.com.app.module.personal.login.NewLoginActivity;
+import edu.com.app.module.setting.SettingsActivity;
+import edu.com.app.module.setting.SettingsFragment;
+import edu.com.app.module.splash.SplashActivity;
+
+//import edu.com.app.module.news.newsList.NewsFragment;
 
 /**
  * Created by Anthony on 2016/6/13.
@@ -47,23 +45,15 @@ public interface ActivityComponent {
 
     void inject(PersonalEditActivity personalEditActivity);
 
-    void inject(FriendsAddActivity friendsAddActivity);
-
-    void inject(ChannelChooseActivity channelChooseActivity);
-
     void inject(FriendCircleActivity friendCircleActivity);
 
     void inject(NearByActivity nearByActivity);
-
-    void  inject(WebViewActivity webViewActivity);
-
-    void inject(NewsFragment newsFragment);
-
-    void inject(FriendsListFragment friendsListFragment);
 
     void inject(FindFragment findFragment);
 
     void inject(SettingsFragment settingsFragment);
 
     void inject(ListsFragment listsFragment);
+
+    void inject(NewsFragment newsFragment);
 }

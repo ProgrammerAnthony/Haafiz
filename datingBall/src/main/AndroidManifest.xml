@@ -34,7 +34,7 @@
 
 
         <activity
-            android:name=".ui.splash.SplashActivity"
+            android:name=".module.splash.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -49,36 +49,36 @@
             </intent-filter>
         </receiver>
         <activity
-            android:name=".ui.main.MainActivity"
+            android:name=".module.main.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.find.friendCircle.FriendCircleActivity"
+            android:name=".module.find.friendCircle.FriendCircleActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.news.detail.WebViewActivity"
+            android:name=".module.news.detail.WebViewActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.setting.SettingsActivity"
+            android:name=".module.setting.SettingsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.personal.edit.PersonalEditActivity"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".ui.friends.add.FriendsAddActivity"
+            android:name=".module.personal.edit.PersonalEditActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.personal.login.NewLoginActivity"
+            android:name=".module.friends.add.FriendsAddActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".module.personal.login.NewLoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.personal.info.PersonalInfoActivity"
+            android:name=".module.personal.info.PersonalInfoActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.news.channel.ChannelChooseActivity"
+            android:name=".module.news.channel.ChannelChooseActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.find.nearby.NearByActivity"
+            android:name=".module.find.nearby.NearByActivity"
             android:screenOrientation="portrait" />
         <!-- 实时通信模块、推送（若使用该功能，需添加以下声明）START -->
         <service android:name="com.avos.avoscloud.PushService" />

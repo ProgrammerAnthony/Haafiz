@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="48dp">
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="match_parent"
+    android:layout_height="48dp">
 
     <TextView
         android:id="@+id/tv"
@@ -9,8 +10,10 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginLeft="16dp"
-        android:text="@string/my_channel"
-        android:textSize="16sp"/>
+        android:text="我的频道"
+        android:textColor="@color/common_tv_grey"
+        android:textSize="16sp"
+        skin:enable="true"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -18,26 +21,42 @@
         android:layout_alignBottom="@id/tv"
         android:layout_marginLeft="16dp"
         android:layout_toRightOf="@id/tv"
-        android:text="@string/drag_tip"
-        android:textColor="@color/tip"
-        android:textSize="12sp"/>
+        android:text="长按编辑 拖拽排序"
+        android:textColor="@color/common_tv_grey"
+        android:textSize="12sp"
+        skin:enable="true"/>
 
     <TextView
         android:id="@+id/tv_btn_edit"
         android:layout_width="56dp"
         android:layout_height="30dp"
+        android:layout_toLeftOf="@+id/tv_btn_back"
         android:layout_centerVertical="true"
-        android:layout_alignParentRight="true"
         android:layout_marginRight="8dp"
-        android:gravity="center"
-        android:textSize="13sp"
         android:background="@drawable/bg_btn"
-        android:textColor="@color/red_500"
-        android:text="@string/edit"/>
+        android:gravity="center"
+        android:text="编辑"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="13sp"
+        skin:enable="true" />
+
+    <TextView
+        android:id="@+id/tv_btn_back"
+        android:layout_width="56dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/bg_btn"
+        android:gravity="center"
+        android:text="返回"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="13sp"
+        skin:enable="true" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="0.3dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/tip"/>
+        android:background="@color/tip" />
 </RelativeLayout>

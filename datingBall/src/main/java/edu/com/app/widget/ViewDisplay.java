@@ -88,7 +88,7 @@ public class ViewDisplay {
      */
     public Fragment createFragment(Context context, Channel channel) {
 
-        String typeCode = channel.getType();
+        String typeCode = channel.type();
         String name = mTypeFragmentNameMap.get(typeCode);
 
         if (name != null && name.length() > 0) {
@@ -121,7 +121,7 @@ public class ViewDisplay {
         if (fragment instanceof AbsBaseFragment) {
             Bundle bundle = fragment.getArguments();
             bundle = bundle == null ? new Bundle() : bundle;
-            bundle.putString(AbsBaseFragment.EXTRA_URL, c.getUrl());
+            bundle.putString(AbsBaseFragment.EXTRA_URL, c.url());
             fragment.setArguments(bundle);
         }
 
