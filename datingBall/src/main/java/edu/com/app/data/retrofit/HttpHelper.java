@@ -26,13 +26,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 /**
  * Created by Anthony on 2016/7/8.
  * Class Note:
- * {@link Retrofit}封装类
+ * {@link Retrofit} wrapper class
  */
 public class HttpHelper {
     private static final int DEFAULT_TIMEOUT = 30;
     private HashMap<String, Object> mServiceMap;
     private Context mContext;
-//    private OkHttpClient.Builder httpClient;
+
 
     @Inject
     public HttpHelper(@ApplicationContext Context context) {
@@ -41,15 +41,6 @@ public class HttpHelper {
         this.mContext = context;
     }
 
-    //在访问HttpService时创建单例
-//    private static class SingletonHolder {
-//        private static final HttpHelper INSTANCE = new HttpHelper();
-//    }
-
-    //获取单例
-//    public static HttpHelper getInstance() {
-//        return SingletonHolder.INSTANCE;
-//    }
 
     @SuppressWarnings("unchecked")
     public <S> S getService(Class<S> serviceClass) {

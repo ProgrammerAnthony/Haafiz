@@ -24,11 +24,11 @@ public abstract class TestList implements Parcelable {
 
     public static final String ID = "_id";
     public static final String NAME = "name";
-    public static final String ARCHIVED = "archived";
+//    public static final String ARCHIVED = "archived";
 
     public abstract long id();
     public abstract String name();
-    public abstract boolean archived();
+//    public abstract boolean archived();
 
     /**
      *Func1 represents a function with one argument,cursor here
@@ -42,8 +42,8 @@ public abstract class TestList implements Parcelable {
                 while (cursor.moveToNext()) {
                     long id = Db.getLong(cursor, ID);
                     String name = Db.getString(cursor, NAME);
-                    boolean archived = Db.getBoolean(cursor, ARCHIVED);
-                    values.add(new AutoValue_TestList(id, name, archived));
+//                    boolean archived = Db.getBoolean(cursor, ARCHIVED);
+                    values.add(new AutoValue_TestList(id, name));
                 }
                 return values;
             } finally {
@@ -65,10 +65,10 @@ public abstract class TestList implements Parcelable {
             return this;
         }
 
-        public Builder archived(boolean archived) {
-            values.put(ARCHIVED, archived);
-            return this;
-        }
+//        public Builder archived(boolean archived) {
+//            values.put(ARCHIVED, archived);
+//            return this;
+//        }
 
         public ContentValues build() {
             return values; // TODO defensive copy?

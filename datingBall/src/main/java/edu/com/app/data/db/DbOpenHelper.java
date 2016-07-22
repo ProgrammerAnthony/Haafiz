@@ -19,8 +19,7 @@ public class DbOpenHelper extends SQLiteOpenHelper {
     private static final String CREATE_LIST = ""
             + "CREATE TABLE " + TestList.TABLE + "("
             + TestList.ID + " INTEGER NOT NULL PRIMARY KEY,"
-            + TestList.NAME + " TEXT NOT NULL,"
-            + TestList.ARCHIVED + " INTEGER NOT NULL DEFAULT 0"
+            + TestList.NAME + " TEXT NOT NULL"
             + ")";
 
     private static final String CREATE_ITEM = ""
@@ -41,6 +40,9 @@ public class DbOpenHelper extends SQLiteOpenHelper {
         db.execSQL(CREATE_LIST);
         db.execSQL(CREATE_ITEM);
         db.execSQL(CREATE_ITEM_LIST_ID_INDEX);
+
+
+
 //list 1
         long groceryListId = db.insert(TestList.TABLE, null, new TestList.Builder()
                 .name("Friend Group 1 ")
