@@ -1,12 +1,20 @@
 package edu.com.app.module.splash;
 
+import android.app.Application;
 import android.content.Context;
 import android.os.AsyncTask;
 
 import javax.inject.Inject;
 
+import edu.com.app.MyApplication;
+import edu.com.app.data.DataManager;
+import edu.com.app.data.bean.Menu;
+import edu.com.app.data.retrofit.HttpSubscriber;
 import edu.com.app.injection.scope.ActivityContext;
 import edu.com.app.util.ToastUtils;
+import rx.Subscription;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 /**
  * Created by Anthony on 2016/5/31.
@@ -14,14 +22,21 @@ import edu.com.app.util.ToastUtils;
  * presenter for splash view
  */
 public class SplashPresenter implements SplashContract.Presenter {
+
     private SplashContract.View mView;
     private Context mContext;
     private String firstUrl;
     private static final short SPLASH_SHOW_SECONDS = 1;
     private long mShowMainTime;
-
+    private Subscription mSubscription;
     @Inject
     ToastUtils toastUtils;
+
+    @Inject
+    DataManager dataManager;
+
+    @Inject
+    Application application;
 
     @Inject
     public SplashPresenter(@ActivityContext Context context) {
@@ -30,31 +45,28 @@ public class SplashPresenter implements SplashContract.Presenter {
 
 
     @Override
-    public void initData() {
+    public void initData(Subscription subscription) {
         mShowMainTime = System.currentTimeMillis() + SPLASH_SHOW_SECONDS * 2000;
-        // TODO: 2016/5/31  url to get data
-        firstUrl = "file://xxx";
-        showView();
-/*         HttpRequest.Builder builder = new HttpRequest.Builder();
-        HttpRequest request = builder.url(firstUrl).build();
-       HttpUtil.getInstance(mContext).loadString(request, new StringHttpCallback() {
-            @Override
-            public void onResponse(String response) {
-                // TODO: 2016/5/31  url get
-                showView();
-                toastUtils.showToast("获取数据成功");
-            }
+//        firstUrl = "file://xxx";
+//        showView();
 
-            @Override
-            public void onError(String error) {
-                // TODO: 2016/5/31 get url failed
-                showView();
-                toastUtils.showToast("获取数据失败");
-            }
-        });*/
+        mSubscription=subscription;
+
+        mSubscription = dataManager.loadMenu(getFirstMenuUrl()).subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new HttpSubscriber<Menu>() {
+                    @Override
+                    public void onNext(Menu menu) {
+                        MyApplication.setFirstLevelMenu(menu);
+                        showView();
+                    }
+                });
     }
 
-    // TODO: 2016/5/31  using rxJava to process
+    private String getFirstMenuUrl() {
+        return  "raw://main_menu";
+    }
+
     private void showView() {
         AsyncTask<String, String, String> showMainTask = new AsyncTask<String, String, String>() {
             @Override
@@ -83,11 +95,6 @@ public class SplashPresenter implements SplashContract.Presenter {
         showMainTask.execute();
     }
 
-//    @Override
-//    public void attachView(BaseView view) {
-//        mView = (SplashContract.View) view;
-//    }
-
     @Override
     public void attachView(SplashContract.View view) {
         mView = view;
@@ -95,7 +102,10 @@ public class SplashPresenter implements SplashContract.Presenter {
 
     @Override
     public void detachView() {
-
+        mView=null;
+        if (mSubscription != null && !mSubscription.isUnsubscribed()) {
+            mSubscription.unsubscribe();
+        }
     }
 
 

@@ -12,11 +12,13 @@ import java.util.Collection;
 import edu.com.app.data.db.Db;
 import edu.com.app.data.db.TestItem;
 import edu.com.app.data.db.TestList;
-
 import rx.functions.Func1;
 
 @AutoValue
 abstract class ListsItem implements Parcelable {
+  public static Collection<String> TABLES = Arrays.asList(TestList.TABLE, TestItem.TABLE);
+
+
   private static String ALIAS_LIST = "list";
   private static String ALIAS_ITEM = "item";
 
@@ -26,7 +28,7 @@ abstract class ListsItem implements Parcelable {
   private static String ITEM_ID = ALIAS_ITEM + "." + TestItem.ID;
   private static String ITEM_LIST_ID = ALIAS_ITEM + "." + TestItem.LIST_ID;
 
-  public static Collection<String> TABLES = Arrays.asList(TestList.TABLE, TestItem.TABLE);
+
 
   public static String QUERY_LIST = ""
       + "SELECT " + LIST_ID + ", " + LIST_NAME + ", COUNT(" + ITEM_ID + ") as " + ITEM_COUNT

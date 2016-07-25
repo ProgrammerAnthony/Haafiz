@@ -13,6 +13,7 @@ import java.io.File;
 import javax.inject.Inject;
 
 import edu.com.app.data.DataManager;
+import edu.com.app.data.bean.Menu;
 import edu.com.app.injection.component.ApplicationComponent;
 import edu.com.app.injection.component.DaggerApplicationComponent;
 import edu.com.app.injection.module.ApplicationModule;
@@ -31,6 +32,10 @@ public class MyApplication extends Application {
     DataManager mDataManager;
 
     private ApplicationComponent mAppComponent;
+
+
+
+    private static Menu mFirstLevelMenu;
 
     @Override
     protected void attachBaseContext(Context base) {
@@ -81,6 +86,15 @@ public class MyApplication extends Application {
 
     public void setAppComponent(ApplicationComponent appComponent) {
         mAppComponent = appComponent;
+    }
+
+
+    public static Menu getFirstLevelMenu() {
+        return mFirstLevelMenu;
+    }
+
+    public static void setFirstLevelMenu(Menu firstLevelMenu) {
+        mFirstLevelMenu = firstLevelMenu;
     }
 
     /**

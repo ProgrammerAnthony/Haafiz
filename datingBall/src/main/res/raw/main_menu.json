@@ -2,27 +2,27 @@
   "type": "1001",
   "channels": [
     {
-      "title": "个人中心",
-      "type": "2002",
+      "title": "聊天",
+      "type": "ChattingListFragment",
       "img": "drawable://selector_btn_tab_news",
       "url": "raw://news_menu"
     },
     {
       "title": "好友",
-      "type": "3002",
-      "img": "drawable://selector_btn_tab_photo",
-      "url": "raw://friends_data"
+      "type": "FriendsListFragment",
+      "img": "drawable://selector_btn_tab_friends",
+      "url": "raw://news_menu"
     },
     {
-      "title": "附近",
-      "type": "4001",
-      "img": "drawable://selector_btn_tab_trip",
+      "title": "发现",
+      "type": "FindFragment",
+      "img": "drawable://selector_btn_tab_nearby",
       "url": "raw://news_menu"
     },
     {
       "title": "资讯",
-      "type": "5001",
-      "img": "drawable://selector_btn_tab_book",
+      "type": "NewsFragment",
+      "img": "drawable://selector_btn_tab_news",
       "url": "raw://news_menu"
     }
   ]

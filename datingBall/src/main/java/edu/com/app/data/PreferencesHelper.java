@@ -2,14 +2,12 @@ package edu.com.app.data;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.annotation.Nullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import javax.inject.Inject;
 
-import edu.com.app.data.bean.Friends;
 import edu.com.app.injection.scope.ApplicationContext;
 
 /**
@@ -72,14 +70,14 @@ public class PreferencesHelper {
     }
 
 
-    public void putSignedInRibot(Friends friends) {
-        mPref.edit().putString(PREF_KEY_SIGNED_IN_RIBOT, mGson.toJson(friends)).apply();
-    }
+//    public void putSignedInRibot(Friends friends) {
+//        mPref.edit().putString(PREF_KEY_SIGNED_IN_RIBOT, mGson.toJson(friends)).apply();
+//    }
 
-    @Nullable
-    public Friends getSignedInRibot() {
-        String ribotJson = mPref.getString(PREF_KEY_SIGNED_IN_RIBOT, null);
-        if (ribotJson == null) return null;
-        return mGson.fromJson(ribotJson, Friends.class);
-    }
+//    @Nullable
+//    public Friends getSignedInRibot() {
+//        String ribotJson = mPref.getString(PREF_KEY_SIGNED_IN_RIBOT, null);
+//        if (ribotJson == null) return null;
+//        return mGson.fromJson(ribotJson, Friends.class);
+//    }
 }

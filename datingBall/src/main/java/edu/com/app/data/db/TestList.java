@@ -65,11 +65,6 @@ public abstract class TestList implements Parcelable {
             return this;
         }
 
-//        public Builder archived(boolean archived) {
-//            values.put(ARCHIVED, archived);
-//            return this;
-//        }
-
         public ContentValues build() {
             return values; // TODO defensive copy?
         }

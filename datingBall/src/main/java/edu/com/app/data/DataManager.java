@@ -15,9 +15,7 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 import edu.com.app.data.bean.Channel;
-import edu.com.app.data.bean.Friends;
 import edu.com.app.data.bean.Menu;
-
 import edu.com.app.data.retrofit.HttpHelper;
 import edu.com.app.data.retrofit.HttpResult;
 import edu.com.app.data.retrofit.ItemJsonDeserializer;
@@ -61,8 +59,8 @@ public class DataManager {
     }
 
 
-    public Observable<Friends> syncFriends() {
-        return null;
+//    public Observable<Friends> syncFriends() {
+//        return null;
 //        return friendsService.getFriends()
 //                .concatMap(new Func1<List<Friends>, Observable<Friends>>() {
 //                    @Override
@@ -70,13 +68,13 @@ public class DataManager {
 //                        return mDatabaseHelper.setFriends(friends);
 //                    }
 //                });
-    }
+//    }
 
 
-    public Observable<List<Friends>> getFriends() {
-        return null;
+//    public Observable<List<Friends>> getFriends() {
+//        return null;
 //        return mDatabaseHelper.getFriends().distinct();
-    }
+//    }
 
 
     /// Helper method to post events from doOnCompleted.

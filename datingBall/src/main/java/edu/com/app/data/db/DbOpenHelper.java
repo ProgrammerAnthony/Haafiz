@@ -4,6 +4,9 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import edu.com.app.data.bean.Channel;
+import edu.com.app.data.bean.Menu;
+
 /**
  * Created by Anthony on 2016/7/21.
  * Class Note:
@@ -16,6 +19,9 @@ public class DbOpenHelper extends SQLiteOpenHelper {
     public DbOpenHelper(Context context) {
         super(context, "sqlbrite.db", null /* factory */, VERSION);
     }
+
+
+
     private static final String CREATE_LIST = ""
             + "CREATE TABLE " + TestList.TABLE + "("
             + TestList.ID + " INTEGER NOT NULL PRIMARY KEY,"
@@ -33,6 +39,31 @@ public class DbOpenHelper extends SQLiteOpenHelper {
     private static final String CREATE_ITEM_LIST_ID_INDEX =
             "CREATE INDEX item_list_id ON " + TestItem.TABLE + " (" + TestItem.LIST_ID + ")";
 
+   //create menu data
+    private static final String CREATE_MENU_LIST=""
+            + "CREATE TABLE " + Menu.TABLE + "("
+            + Menu.ID + " INTEGER NOT NULL PRIMARY KEY,"
+            + Menu.TYPE + " TEXT NOT NULL"
+            + ")";
+
+    //create channel, notice! channel is the item of menu
+    private static final String CREATE_CHANNEL =""
+            + "CREATE TABLE " + Channel.TABLE + "("
+            + Channel.ID + " INTEGER NOT NULL PRIMARY KEY,"
+            + Channel.MENU_ID + " INTEGER NOT NULL REFERENCES " + Menu.TABLE + "(" + Menu.ID + "),"
+            + Channel.TITLE + " TEXT NOT NULL,"
+            + Channel.TYPE + " TEXT NOT NULL,"
+            + Channel.URL + " TEXT NOT NULL,"
+            + Channel.IS_FIX + " INTEGER NOT NULL DEFAULT 0,"
+            + Channel.IS_SUBSCRIBE + " INTEGER NOT NULL DEFAULT 0,"
+            + Channel.SORT + " INTEGER NOT NULL DEFAULT 0,"
+            + Channel.LRT + " INTEGER NOT NULL DEFAULT 0,"
+            + Channel.IMG + " TEXT NOT NULL"
+            + ")";
+
+    //create index(SQL CREATE UNIQUE INDEX  can be used here)
+    private static final String CREATE_ITEM_MENU_ID_INDEX =
+            "CREATE INDEX item_menu_id ON " + Channel.TABLE + " (" + Channel.MENU_ID + ")";
 
 
     @Override public void onCreate(SQLiteDatabase db) {
@@ -41,45 +72,15 @@ public class DbOpenHelper extends SQLiteOpenHelper {
         db.execSQL(CREATE_ITEM);
         db.execSQL(CREATE_ITEM_LIST_ID_INDEX);
 
+        db.execSQL(CREATE_MENU_LIST);
+        db.execSQL(CREATE_CHANNEL);
+        db.execSQL(CREATE_ITEM_MENU_ID_INDEX);
 
 
-//list 1
-        long groceryListId = db.insert(TestList.TABLE, null, new TestList.Builder()
-                .name("Friend Group 1 ")
-                .build());
-        db.insert(TestItem.TABLE, null, new TestItem.Builder()
-                .listId(groceryListId)
-                .description("1A")
-                .build());
-        db.insert(TestItem.TABLE, null, new TestItem.Builder()
-                .listId(groceryListId)
-                .description("1B")
-                .build());
-        db.insert(TestItem.TABLE, null, new TestItem.Builder()
-                .listId(groceryListId)
-                .description("1C")
-                .build());
-
-//list 2
-        long holidayPresentsListId = db.insert(TestList.TABLE, null, new TestList.Builder()
-                .name("Friend Group 2")
-                .build());
-        db.insert(TestItem.TABLE, null, new TestItem.Builder()
-                .listId(holidayPresentsListId)
-                .description("2A")
-                .build());
-        db.insert(TestItem.TABLE, null, new TestItem.Builder()
-                .listId(holidayPresentsListId)
-                .description("2B")
-                .build());
-        db.insert(TestItem.TABLE, null, new TestItem.Builder()
-                .listId(holidayPresentsListId)
-                .description("2C")
-                .build());
-        db.insert(TestItem.TABLE, null, new TestItem.Builder()
-                .listId(holidayPresentsListId)
-                .description("2D")
-                .build());
+        //add data for test!
+        TestData testData =new TestData(db);
+        testData.initTestList();
+        testData.initTestMenu();
 
     }
 
