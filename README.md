@@ -1,3 +1,6 @@
+#this project is redo using new techs , not instructive these days
+#本项目目前改版重构中，暂时可能出现编译问题。loading 。。。。。。。。
+
 # MVPCommon
 **a common Architecture and project build with blogs releasing based on MVP，integrates many Open Source Projects ,to make your developing quicker and easier.**
 
