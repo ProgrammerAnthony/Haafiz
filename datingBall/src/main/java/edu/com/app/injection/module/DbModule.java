@@ -1,6 +1,5 @@
 package edu.com.app.injection.module;
 
-import android.app.Application;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.squareup.sqlbrite.BriteDatabase;
@@ -8,7 +7,8 @@ import com.squareup.sqlbrite.SqlBrite;
 
 import dagger.Module;
 import dagger.Provides;
-import edu.com.app.data.db.DbOpenHelper;
+import edu.com.app.MyApplication;
+import edu.com.app.data.DbOpenHelper;
 import edu.com.app.injection.scope.PerActivity;
 import rx.schedulers.Schedulers;
 import timber.log.Timber;
@@ -23,7 +23,7 @@ public final class DbModule {
 
     @Provides
     @PerActivity
-    SQLiteOpenHelper provideOpenHelper(Application application) {
+    SQLiteOpenHelper provideOpenHelper(MyApplication application) {
         return new DbOpenHelper(application);
     }
 
@@ -37,7 +37,9 @@ public final class DbModule {
         });
     }
 
-    @Provides @PerActivity BriteDatabase provideDatabase(SqlBrite sqlBrite, SQLiteOpenHelper helper) {
+    @Provides
+    @PerActivity
+    BriteDatabase provideDatabase(SqlBrite sqlBrite, SQLiteOpenHelper helper) {
         BriteDatabase db = sqlBrite.wrapDatabaseHelper(helper, Schedulers.io());
         db.setLoggingEnabled(true);
         return db;

@@ -9,6 +9,7 @@ import edu.com.app.data.dao.UserDao;
 
 /**
  * Created by Administrator on 2016/4/17.
+ *  @deprecated
  */
 public class User extends AVUser implements Parcelable {
     private String nick;

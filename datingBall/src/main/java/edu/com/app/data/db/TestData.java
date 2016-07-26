@@ -2,9 +2,6 @@ package edu.com.app.data.db;
 
 import android.database.sqlite.SQLiteDatabase;
 
-import edu.com.app.data.bean.Channel;
-import edu.com.app.data.bean.Menu;
-
 
 /**
  * Created by Anthony on 2016/7/25.
@@ -63,46 +60,6 @@ public class TestData {
     }
 
 
-    public void initTestMenu() {
-        long fistMenuId = mDb.insert(Menu.TABLE, null,
-                new Menu.Builder().type("FirstMenu").build());
 
-        mDb.insert(Channel.TABLE, null, new Channel.Builder().title("聊天")
-                .isFix(0)
-                .isSubscribe(0)
-                .lrt(0)
-                .sort(0)
-                .img("test test")
-                .menuId(fistMenuId)
-                .type("ChattingListFragment")
-                .url("raw://news_menu").build());
-        mDb.insert(Channel.TABLE, null, new Channel.Builder().title("好友")
-                .isFix(0)
-                .isSubscribe(0)
-                .lrt(0)
-                .sort(0)
-                .img("test test")
-                .menuId(fistMenuId)
-                .type("FriendsListFragment")
-                .url("raw://news_menu").build());
-        mDb.insert(Channel.TABLE, null, new Channel.Builder().title("发现")
-                .isFix(0)
-                .isSubscribe(0)
-                .lrt(0)
-                .sort(0)
-                .img("test test")
-                .menuId(fistMenuId)
-                .type("FindFragment")
-                .url("raw://news_menu").build());
-        mDb.insert(Channel.TABLE, null, new Channel.Builder().title("资讯")
-                .isFix(0)
-                .isSubscribe(0)
-                .lrt(0)
-                .sort(0)
-                .img("test test")
-                .menuId(fistMenuId)
-                .type("NewsFragment")
-                .url("raw://news_menu").build());
-    }
 
 }

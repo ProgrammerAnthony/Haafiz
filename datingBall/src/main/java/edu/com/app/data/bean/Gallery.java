@@ -11,6 +11,7 @@ import edu.com.app.data.dao.GalleryDao;
 
 /**
  * Created by YX201603-6 on 2016/4/25.
+ * @deprecated
  */
 
 @AVClassName(GalleryDao.TABLENAME)

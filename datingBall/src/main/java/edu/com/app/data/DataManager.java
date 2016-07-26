@@ -12,31 +12,30 @@ import java.util.List;
 import java.util.Map;
 
 import javax.inject.Inject;
-import javax.inject.Singleton;
 
 import edu.com.app.data.bean.Channel;
-import edu.com.app.data.bean.Menu;
-import edu.com.app.data.retrofit.HttpHelper;
+import edu.com.app.data.retrofit.ChannelTypeAdapter;
 import edu.com.app.data.retrofit.HttpResult;
+import edu.com.app.data.retrofit.HttpResultFunc;
 import edu.com.app.data.retrofit.ItemJsonDeserializer;
 import edu.com.app.data.retrofit.RemoteApi;
 import edu.com.app.injection.scope.ApplicationContext;
 import edu.com.app.util.FileUtil;
 import okhttp3.ResponseBody;
 import rx.Observable;
+import rx.exceptions.Exceptions;
 import rx.functions.Action0;
 import rx.functions.Func1;
 
 /**
  * Created by Anthony on 2016/6/12.
  * Class Note:
- * 所有数据的入口
- * todo 还需要进一步整理格式
+ * data entrance
+ * todo formatting  ......
  */
-@Singleton
+
+
 public class DataManager {
-
-
 
 
     @Inject
@@ -44,6 +43,7 @@ public class DataManager {
 
     @Inject
     PreferencesHelper mPreferencesHelper;
+
     @Inject
     EventPosterHelper mEventPoster;
 
@@ -95,10 +95,11 @@ public class DataManager {
     public Observable<String> loadString(String url) {
         if (url.startsWith(Constants.LOCAL_FILE_BASE_END_POINT)) {
             try {
-                return Observable.just(FileUtil.getString(mContext, url));
+                String s = FileUtil.getString(mContext, url);
+                return Observable.just(s);
             } catch (IOException e) {
                 e.printStackTrace();
-                return null;
+                throw Exceptions.propagate(e);
             }
         } else {
             String path = url.substring(Constants.Remote_BASE_END_POINT.length());
@@ -137,42 +138,39 @@ public class DataManager {
     }
 
 
-    /**
-     * 请求本地或远程一级栏目数据函数
-     * 注意:Gson数据反序列化为Menu类型
-     */
-    public Observable<Menu> loadMenu(String url) {
-        final Gson gson = new GsonBuilder().registerTypeAdapter(Menu.class, new ItemJsonDeserializer<Menu>()).create();
-        return loadString(url).flatMap(new Func1<String, Observable<Menu>>() {
-            @Override
-            public Observable<Menu> call(String s) {
-                return Observable.just(gson.fromJson(s, Menu.class));
-            }
-        });
-    }
+
 
     /**
-     * 请求本地或远程频道数据函数
-     * 注意:Gson数据反序列化为HttpResult<List<Channel>>类型
+     * load channels data
+     * step 1 {@link #loadString(String)} online or offline
+     * step 2 Rx flatMap load string data to  {@link HttpResult}
+     * step 3 Rx map  get data field in {@link HttpResult}
+     * and return {@link HttpResultFunc}in which List<Channel> contain
      */
-    public Observable<HttpResult<List<Channel>>> loadChannel(String url) {
-      final   Type type = new TypeToken<HttpResult<List<Channel>>>() {
+    public Observable<List<Channel>> loadChannel(String url) {
+        final Type type = new TypeToken<HttpResult<List<Channel>>>() {
         }.getType();
-        final Gson gson = new GsonBuilder().registerTypeAdapter(type, new ItemJsonDeserializer<HttpResult<List<Channel>>>()).create();
-        return loadString(url).flatMap(new Func1<String, Observable<HttpResult<List<Channel>>>>() {
-            @Override
-            public Observable<HttpResult<List<Channel>>> call(String s) {
-                HttpResult<List<Channel>> obj =gson.fromJson(s,type);
-                return Observable.just(obj);
-            }
-        });
+
+        final Gson channelGson = new GsonBuilder().registerTypeAdapter(type, new ChannelTypeAdapter()).create();
+        return loadString(url)
+                .flatMap(new Func1<String, Observable<HttpResult<List<Channel>>>>() {
+                    @Override
+                    public Observable<HttpResult<List<Channel>>> call(String s) {
+                        HttpResult<List<Channel>> obj = channelGson.fromJson(s, type);
+                        return Observable.just(obj);
+                    }
+                })
+                .map(new HttpResultFunc<List<Channel>>());
     }
+
+
+
     /**
      * 通过POST请求发送参数到服务器
      */
-    public Observable<String> postString(String url, Map<String, String> paramMap){
+    public Observable<String> postString(String url, Map<String, String> paramMap) {
         return httpHelper.getService(RemoteApi.class)
-                .postString(url,paramMap)
+                .postString(url, paramMap)
                 .flatMap(new Func1<ResponseBody, Observable<String>>() {
                     @Override
                     public Observable<String> call(ResponseBody responseBody) {

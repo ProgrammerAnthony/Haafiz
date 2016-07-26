@@ -66,7 +66,7 @@ public abstract class TestList implements Parcelable {
         }
 
         public ContentValues build() {
-            return values; // TODO defensive copy?
+            return values;
         }
     }
 }

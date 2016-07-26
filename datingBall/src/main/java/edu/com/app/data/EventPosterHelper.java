@@ -15,6 +15,7 @@ import javax.inject.Inject;
 public class EventPosterHelper {
     private final Bus mBus;
 
+
     @Inject
     public EventPosterHelper(Bus bus) {
         mBus = new Bus();

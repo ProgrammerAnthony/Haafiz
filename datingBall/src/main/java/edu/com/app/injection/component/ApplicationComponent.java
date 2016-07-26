@@ -1,6 +1,5 @@
 package edu.com.app.injection.component;
 
-import android.app.Application;
 import android.content.Context;
 
 import com.squareup.otto.Bus;
@@ -9,10 +8,6 @@ import javax.inject.Singleton;
 
 import dagger.Component;
 import edu.com.app.MyApplication;
-import edu.com.app.data.DataManager;
-import edu.com.app.data.EventPosterHelper;
-import edu.com.app.data.rx.LeanCloudHelper;
-import edu.com.app.data.rx.RxBus;
 import edu.com.app.injection.module.ApplicationModule;
 import edu.com.app.injection.scope.ApplicationContext;
 
@@ -25,21 +20,29 @@ import edu.com.app.injection.scope.ApplicationContext;
 public interface ApplicationComponent {
 
     void inject(MyApplication application);
-//    void inject(SyncService syncService);
 
-
-
-/**----instance expose to children----*/
+    /**
+     * instance expose to children,
+     * because children are in different Scope {@link edu.com.app.injection.scope.PerActivity}
+     * ,so if this is field children wanna load , we must expose here
+     */
     @ApplicationContext
     Context context();
 
-    Application application();
+
+    MyApplication application();
+
+    //third part lib Otto used here
+    Bus eventBus();
+
+    //use third part lib Otto
+//    EventPosterHelper eventPosterHelper();
 
 //    RxRealm realm();
 
-    LeanCloudHelper rxLeanCLoud();
+//    LeanCloudHelper rxLeanCLoud();
 
-    RxBus rxBus();
+//    RxBus rxBus();
 
 //    FriendsService ribotService();
 
@@ -47,9 +50,9 @@ public interface ApplicationComponent {
 
 //    DatabaseHelper databaseHelper();
 
-    DataManager dataManager();
+//    DataManager dataManager();
 
-    Bus eventBus();
 
-    EventPosterHelper eventPosterHelper();
+
+
 }

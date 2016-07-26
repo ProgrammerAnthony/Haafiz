@@ -12,6 +12,8 @@ import edu.com.app.module.main.MainActivity;
 /**
  * Created by Anthony on 2016/5/31.
  * Class Note:
+ * this class is simple but indicates how to use MVP in your project
+ *
  * implements of splash view
  */
 public class SplashActivity extends AbsBaseActivity implements SplashContract.View {

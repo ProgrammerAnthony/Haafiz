@@ -32,4 +32,5 @@ public class ActivityModule {
     Context providesContext() {
         return mActivity;
     }
+
 }

@@ -11,6 +11,7 @@ import edu.com.app.data.dao.SouvenirDao;
 
 /**
  * Created by Administrator on 2016/4/20.
+ *  @deprecated
  */
 @AVClassName(SouvenirDao.TABLENAME)
 public class Souvenir extends AVObject implements Parcelable {

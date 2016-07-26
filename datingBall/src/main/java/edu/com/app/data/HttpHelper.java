@@ -1,4 +1,4 @@
-package edu.com.app.data.retrofit;
+package edu.com.app.data;
 
 import android.content.Context;
 import android.util.Log;
@@ -36,7 +36,7 @@ public class HttpHelper {
 
     @Inject
     public HttpHelper(@ApplicationContext Context context) {
-        //创建保存RetrofitService的Map
+        //Map used to store RetrofitService
         mServiceMap = new HashMap<>();
         this.mContext = context;
     }
@@ -65,16 +65,16 @@ public class HttpHelper {
     }
 
     private <S> S createService(Class<S> serviceClass) {
-        //定制OkHttp
+        //custom OkHttp
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
-        //设置超时时间
+        //time our
         httpClient.connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS);
         httpClient.writeTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS);
         httpClient.readTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS);
-        //设置缓存
+        //cache
         File httpCacheDirectory = new File(mContext.getCacheDir(), "OkHttpCache");
         httpClient.cache(new Cache(httpCacheDirectory, 10 * 1024 * 1024));
-        //设置拦截器
+        //Interceptor
         httpClient.addNetworkInterceptor(new LogInterceptor());
         httpClient.addInterceptor(new CacheControlInterceptor());
 
@@ -119,7 +119,7 @@ public class HttpHelper {
                     response.request().url(), (t2 - t1) / 1e6d, response.headers()));
             return response;
 
-            // 打印Response Body
+            // log Response Body
 //            if(BuildConfig.DEBUG) {
 //                String responseBody = response.body().string();
 //                Log.v("HttpHelper", String.format("Received response for %s in %.1fms%n%s%n%s",

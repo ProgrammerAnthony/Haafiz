@@ -8,10 +8,10 @@ import com.squareup.sqlbrite.BriteDatabase;
 import javax.inject.Inject;
 
 import butterknife.Bind;
+import edu.com.app.MyApplication;
 import edu.com.app.R;
 import edu.com.app.base.AbsBaseFragment;
 import edu.com.app.module.main.MainActivity;
-import rx.android.schedulers.AndroidSchedulers;
 import timber.log.Timber;
 
 /**
@@ -19,33 +19,36 @@ import timber.log.Timber;
  * Class Note:
  * todo implements with MVP
  */
-public class NewsFragment  extends AbsBaseFragment{
+public class NewsFragment extends AbsBaseFragment {
 
     @Bind(R.id.lists)
     ListView listView;
 
-    private MenuAdapter adapter;
 
     @Inject
     BriteDatabase db;
 
+    @Inject
+    MyApplication application;
+
     @Override
     protected void initDagger() {
-        ((MainActivity)( getActivity())).activityComponent().inject(this);
+        ((MainActivity) (getActivity())).activityComponent().inject(this);
     }
 
     @Override
     protected void initViewsAndEvents(View rootView) {
-        adapter = new MenuAdapter(mContext);
-        //        listView.setEmptyView(xxx);
-        listView.setAdapter(adapter);
-
-        mSubscription =db.createQuery(MenuItem.TABLES,MenuItem.QUERY_LIST)
-                .mapToList(MenuItem.MAPPER)
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(adapter);
-
-        Timber.i("QUERY_LIST menu SQL:"+ MenuItem.QUERY_LIST);
+        Timber.i("channels size is " + application.channels.size());
+//        adapter = new MenuAdapter(mContext);
+//        //        listView.setEmptyView(xxx);
+//        listView.setAdapter(adapter);
+//
+//        mSubscription =db.createQuery(MenuItem.TABLES,MenuItem.QUERY_LIST)
+//                .mapToList(MenuItem.MAPPER)
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(adapter);
+//
+//        Timber.i("QUERY_LIST menu SQL:"+ MenuItem.QUERY_LIST);
 
     }
 

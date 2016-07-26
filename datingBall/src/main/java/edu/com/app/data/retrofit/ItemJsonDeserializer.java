@@ -14,12 +14,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Vincent Woo
- * Date: 2016/6/29
- * Time: 11:34
+ *Created by Anthony on 2016/7/8.
+ * Class Note:
+ * 1 parse SerializeName in annotation ,field match
+ * 2 String field fault-tolerant ,all of the String field will be parse
  *
- * 功能1：解析注释中SerializedName字段，进行字段名匹配
- * 功能2：String字段容错，将Entity中所有String字段按照字符串类型来解析
  */
 public class ItemJsonDeserializer<T> implements JsonDeserializer {
     @Override

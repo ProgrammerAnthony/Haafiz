@@ -9,11 +9,12 @@ import android.util.Log;
 import com.avos.avoscloud.AVOSCloud;
 
 import java.io.File;
+import java.util.List;
 
 import javax.inject.Inject;
 
 import edu.com.app.data.DataManager;
-import edu.com.app.data.bean.Menu;
+import edu.com.app.data.bean.Channel;
 import edu.com.app.injection.component.ApplicationComponent;
 import edu.com.app.injection.component.DaggerApplicationComponent;
 import edu.com.app.injection.module.ApplicationModule;
@@ -22,11 +23,12 @@ import timber.log.Timber;
 
 /**
  * Created by Anthony on 2016/6/3.
- * Class Note:Base Application for Application
+ * Class Note:
+ * Base Application for Application
  * use in AndroidManifest.xml
  */
 public class MyApplication extends Application {
-//    @Inject
+    //    @Inject
 //    Bus mEventBus;
     @Inject
     DataManager mDataManager;
@@ -34,8 +36,8 @@ public class MyApplication extends Application {
     private ApplicationComponent mAppComponent;
 
 
-
-    private static Menu mFirstLevelMenu;
+    //global instance ,channel list data
+    public List<Channel> channels;
 
     @Override
     protected void attachBaseContext(Context base) {
@@ -89,13 +91,6 @@ public class MyApplication extends Application {
     }
 
 
-    public static Menu getFirstLevelMenu() {
-        return mFirstLevelMenu;
-    }
-
-    public static void setFirstLevelMenu(Menu firstLevelMenu) {
-        mFirstLevelMenu = firstLevelMenu;
-    }
 
     /**
      * get cache dir
@@ -120,10 +115,12 @@ public class MyApplication extends Application {
     }
 
 
-
-    /** A tree which logs important information for crash reporting.fake one */
-    public  class CrashReportingTree extends Timber.Tree {
-        @Override protected void log(int priority, String tag, String message, Throwable t) {
+    /**
+     * A tree which logs important information for crash reporting.fake one
+     */
+    public class CrashReportingTree extends Timber.Tree {
+        @Override
+        protected void log(int priority, String tag, String message, Throwable t) {
             if (priority == Log.VERBOSE || priority == Log.DEBUG) {
                 return;
             }

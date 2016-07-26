@@ -2,6 +2,7 @@ package edu.com.app.data.bean;
 
 /**
  * Created by Administrator on 2016/5/5.
+ *  @deprecated
  */
 public class UpdateVersion {
 

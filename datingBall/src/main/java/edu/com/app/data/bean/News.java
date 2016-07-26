@@ -5,6 +5,7 @@ import io.realm.RealmObject;
 /**
  * Created by Anthony on 2016/5/24.
  * Class Note:
+ *  @deprecated
  */
 public class News extends RealmObject {
     private String avatarUrl;

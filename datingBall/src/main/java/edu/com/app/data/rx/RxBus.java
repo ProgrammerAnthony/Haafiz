@@ -1,7 +1,6 @@
 package edu.com.app.data.rx;
 
 import javax.inject.Inject;
-import javax.inject.Singleton;
 
 import rx.Observable;
 import rx.subjects.PublishSubject;
@@ -14,7 +13,6 @@ import rx.subjects.Subject;
  * use RxJava to implement EventBus
  * (Sticky event @see{http://reactivex.io/documentation/subject.html})
  */
-@Singleton
 public class RxBus {
 
 //    private static volatile RxBus defaultInstance;

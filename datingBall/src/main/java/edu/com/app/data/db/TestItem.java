@@ -25,6 +25,7 @@ public abstract class TestItem implements Parcelable {
     public static final String DESCRIPTION = "description";
     public static final String COMPLETE = "complete";
 
+
     public abstract long id();
     public abstract long listId();
     public abstract String description();

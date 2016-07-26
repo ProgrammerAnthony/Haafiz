@@ -21,7 +21,6 @@ import java.util.List;
 import java.util.Map;
 
 import javax.inject.Inject;
-import javax.inject.Singleton;
 
 import edu.com.app.data.bean.Gallery;
 import edu.com.app.data.bean.Souvenir;
@@ -39,7 +38,6 @@ import rx.schedulers.Schedulers;
  * Created by Anthony on 2016/5/23.
  * Class Note:
  */
-@Singleton
 public class LeanCloudHelper {
 
     private Context mContext;

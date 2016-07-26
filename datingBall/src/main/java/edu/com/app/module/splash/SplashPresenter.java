@@ -1,14 +1,15 @@
 package edu.com.app.module.splash;
 
-import android.app.Application;
 import android.content.Context;
 import android.os.AsyncTask;
+
+import java.util.List;
 
 import javax.inject.Inject;
 
 import edu.com.app.MyApplication;
 import edu.com.app.data.DataManager;
-import edu.com.app.data.bean.Menu;
+import edu.com.app.data.bean.Channel;
 import edu.com.app.data.retrofit.HttpSubscriber;
 import edu.com.app.injection.scope.ActivityContext;
 import edu.com.app.util.ToastUtils;
@@ -25,46 +26,58 @@ public class SplashPresenter implements SplashContract.Presenter {
 
     private SplashContract.View mView;
     private Context mContext;
-    private String firstUrl;
     private static final short SPLASH_SHOW_SECONDS = 1;
     private long mShowMainTime;
     private Subscription mSubscription;
+
     @Inject
     ToastUtils toastUtils;
 
     @Inject
     DataManager dataManager;
 
-    @Inject
-    Application application;
+
+    private MyApplication application;
 
     @Inject
-    public SplashPresenter(@ActivityContext Context context) {
+    public SplashPresenter(@ActivityContext Context context, MyApplication application) {
         mContext = context;
+        this.application = application;
     }
 
 
     @Override
     public void initData(Subscription subscription) {
         mShowMainTime = System.currentTimeMillis() + SPLASH_SHOW_SECONDS * 2000;
-//        firstUrl = "file://xxx";
-//        showView();
 
-        mSubscription=subscription;
+        mSubscription = subscription;
 
-        mSubscription = dataManager.loadMenu(getFirstMenuUrl()).subscribeOn(Schedulers.io())
+        mSubscription = dataManager.loadChannel(getFirstMenuUrl())
+                .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new HttpSubscriber<Menu>() {
+                .subscribe(new HttpSubscriber<List<Channel>>() {
                     @Override
-                    public void onNext(Menu menu) {
-                        MyApplication.setFirstLevelMenu(menu);
+                    public void onNext(List<Channel> channels) {
+                        application.channels = channels;
                         showView();
                     }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        super.onError(e);
+                    }
                 });
+
     }
 
+
+    /**
+     * menu url to load channels
+     *
+     * @return
+     */
     private String getFirstMenuUrl() {
-        return  "raw://main_menu";
+        return "raw://news_menu";  //local data fot testing
     }
 
     private void showView() {
@@ -102,7 +115,7 @@ public class SplashPresenter implements SplashContract.Presenter {
 
     @Override
     public void detachView() {
-        mView=null;
+        mView = null;
         if (mSubscription != null && !mSubscription.isUnsubscribed()) {
             mSubscription.unsubscribe();
         }

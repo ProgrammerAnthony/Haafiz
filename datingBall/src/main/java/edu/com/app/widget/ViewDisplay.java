@@ -88,7 +88,7 @@ public class ViewDisplay {
      */
     public Fragment createFragment(Context context, Channel channel) {
 
-        String typeCode = channel.type();
+        String typeCode = channel.type()+"";
         String name = mTypeFragmentNameMap.get(typeCode);
 
         if (name != null && name.length() > 0) {

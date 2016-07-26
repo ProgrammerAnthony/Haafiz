@@ -11,10 +11,10 @@ import rx.Subscription;
  */
 public interface SplashContract {
     interface Presenter extends BasePresenter<View> {
-        void initData(Subscription subscription);//初始化数据
+        void initData(Subscription subscription);
     }
 
     interface View extends BaseView {
-        void toMainActivity(); //跳转到MainActivity
+        void toMainActivity();
     }
 }

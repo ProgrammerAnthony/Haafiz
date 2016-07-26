@@ -56,4 +56,5 @@ public interface ActivityComponent {
     void inject(ListsFragment listsFragment);
 
     void inject(NewsFragment newsFragment);
+
 }
