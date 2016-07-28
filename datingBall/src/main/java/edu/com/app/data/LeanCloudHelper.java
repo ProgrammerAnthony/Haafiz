@@ -1,4 +1,4 @@
-package edu.com.app.data.rx;
+package edu.com.app.data;
 
 import android.content.Context;
 

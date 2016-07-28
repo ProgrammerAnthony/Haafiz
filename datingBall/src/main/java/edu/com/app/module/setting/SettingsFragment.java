@@ -9,8 +9,8 @@ import android.preference.PreferenceScreen;
 import javax.inject.Inject;
 
 import edu.com.app.R;
-import edu.com.app.data.bean.Event;
-import edu.com.app.data.rx.RxBus;
+import edu.com.app.data.bus.event.Event;
+import edu.com.app.data.bus.RxBus;
 
 /**
  * Created by Anthony on 2016/5/13.

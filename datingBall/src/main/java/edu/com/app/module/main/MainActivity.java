@@ -34,7 +34,7 @@ import edu.com.app.widget.dialog.ChoosePicDialog;
 import edu.com.app.widget.dialog.DialogManager;
 
 import edu.com.app.data.PreferencesHelper;
-import edu.com.app.data.rx.RxBus;
+import edu.com.app.data.bus.RxBus;
 import edu.com.app.module.chat.ChattingListFragment;
 import edu.com.app.module.personal.info.PersonalInfoActivity;
 import edu.com.app.module.personal.login.NewLoginActivity;
@@ -89,7 +89,7 @@ public class MainActivity extends AbsBaseActivity implements MainContract.View, 
     PreferencesHelper mPref;
 
     @Inject
-    ViewDisplay viewDisplay;
+    ViewDisplay mViewDisplay;
 
     ImageView iv_avatar;
     TextView tv_nick;
@@ -129,7 +129,7 @@ public class MainActivity extends AbsBaseActivity implements MainContract.View, 
         isLogin = mPref.isLogined();
         //初始化Presenter
 
-        mMainPresenter.attachView(this);
+        mMainPresenter.attachView(this,mSubscription);
 
         setSupportActionBar(toolbar);
         navView.setNavigationItemSelectedListener(this);
@@ -260,19 +260,19 @@ public class MainActivity extends AbsBaseActivity implements MainContract.View, 
                 collapsingToolbarLayout.setTitle("发现");
                 break;
             case R.id.nav_news:                 //资讯列表fragment
-                fragmentName = "NewsFragment";
+                fragmentName = "NewsTabFragment";
                 mFragmentTag = "资讯";
                 collapsingToolbarLayout.setTitle("资讯");
                 break;
             case R.id.nav_setting:                //设置界面（activity）
-                viewDisplay.showActivity(mContext, "SettingsActivity");
+                mViewDisplay.showActivity(mContext, "SettingsActivity");
                 mFragmentTag = null;
                 fragmentName = null;
                 break;
             default:
                 break;
         }
-        Fragment fragment = viewDisplay.createFragment(mContext,fragmentName,null);
+        Fragment fragment = mViewDisplay.createFragment(mContext,fragmentName,null);
         if (mFragmentTag != null && fragment != null) {
             mMainPresenter.replaceFragment(fragment, mFragmentTag, false);
             drawerLayout.closeDrawer(GravityCompat.START);

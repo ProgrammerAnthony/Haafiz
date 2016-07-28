@@ -2,7 +2,6 @@ package edu.com.app.module.splash;
 
 import edu.com.app.base.BasePresenter;
 import edu.com.app.base.BaseView;
-import rx.Subscription;
 
 /**
  * Created by Anthony on 2016/5/31.
@@ -11,7 +10,7 @@ import rx.Subscription;
  */
 public interface SplashContract {
     interface Presenter extends BasePresenter<View> {
-        void initData(Subscription subscription);
+        void initData();
     }
 
     interface View extends BaseView {

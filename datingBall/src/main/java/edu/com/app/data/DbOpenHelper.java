@@ -43,16 +43,7 @@ public class DbOpenHelper extends SQLiteOpenHelper {
 
 
 
-    //create channel, notice! channel is the item of menu
-    private static final String CREATE_CHANNEL =""
-            + "CREATE TABLE " + Channel.TABLE + "("
-            + Channel.ID + " INTEGER NOT NULL PRIMARY KEY,"
-            + Channel.TITLE + " TEXT NOT NULL,"
-            + Channel.TYPE + " TEXT NOT NULL,"
-            + Channel.URL + " TEXT NOT NULL,"
-            + Channel.IS_FIX + " INTEGER NOT NULL DEFAULT 0,"
-            + Channel.IS_SUBSCRIBE + " INTEGER NOT NULL DEFAULT 0"
-            + ")";
+
 
 
 
@@ -63,7 +54,7 @@ public class DbOpenHelper extends SQLiteOpenHelper {
         db.execSQL(CREATE_ITEM_LIST_ID_INDEX);
 
 
-        db.execSQL(CREATE_CHANNEL);
+        db.execSQL(Channel.CREATE_CHANNEL);
 
 
 

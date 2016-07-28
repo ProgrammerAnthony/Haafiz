@@ -247,4 +247,20 @@
     <dimen name="common_loading_text_lines_spacing">5dp</dimen>
 
 
+
+
+    <dimen name="TextXSmall">10sp</dimen>
+    <dimen name="TextSmall">12sp</dimen>
+    <dimen name="TextMedium">14sp</dimen>
+    <dimen name="TextLarge">16sp</dimen>
+    <dimen name="TextXLarge">18sp</dimen>
+    <dimen name="TextXXLarge">20sp</dimen>
+    <dimen name="TextTopNavigation">@dimen/TextMedium</dimen>
+    <dimen name="TextBottomNavigation">@dimen/TextXSmall</dimen>
+    <dimen name="TextTitleBar">@dimen/TextXLarge</dimen>
+    <dimen name="TextTitleTabBar">@dimen/TextLarge</dimen>
+    <dimen name="TextListTitle">@dimen/TextMedium</dimen>
+    <dimen name="TextListSubTitle">@dimen/TextSmall</dimen>
+    <dimen name="TextPtrRefreshInfo">@dimen/TextMedium</dimen>
+
 </resources>

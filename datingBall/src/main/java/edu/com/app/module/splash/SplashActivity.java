@@ -31,8 +31,8 @@ public class SplashActivity extends AbsBaseActivity implements SplashContract.Vi
 
     @Override
     protected void initViewsAndEvents() {
-        mPresenter.attachView(this);
-        mPresenter.initData(mSubscription);
+        mPresenter.attachView(this,mSubscription);
+        mPresenter.initData();
     }
 
     @Override

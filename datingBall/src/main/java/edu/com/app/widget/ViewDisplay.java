@@ -9,12 +9,9 @@ import android.util.Log;
 
 import java.util.HashMap;
 
-import javax.inject.Inject;
-
 import edu.com.app.base.AbsBaseFragment;
-import edu.com.app.data.Constants;
 import edu.com.app.data.bean.Channel;
-import edu.com.app.injection.scope.ApplicationContext;
+import edu.com.app.data.bean.Constants;
 import edu.com.app.util.FileUtil2;
 
 
@@ -32,14 +29,15 @@ import edu.com.app.util.FileUtil2;
  *
  * 2 在res/raw文件夹下保存map（xxx.properties） 文件
  */
+
 public class ViewDisplay {
     public final String TAG = "ViewDisplay";
     private HashMap<String, String> mTypeActivityNameMap = new HashMap<>();
     private HashMap<String, String> mTypeFragmentNameMap = new HashMap<>();
 
 
-    @Inject
-    public ViewDisplay(@ApplicationContext Context context) {
+
+    public ViewDisplay( Context context) {
         mTypeActivityNameMap.putAll(FileUtil2.simpleProperty2HashMap(context, Constants.BASE_TYPE_ACTIVITY_MAP_PATH));
         mTypeFragmentNameMap.putAll(FileUtil2.simpleProperty2HashMap(context, Constants.BASE_TYPE_FRAGMENT_MAP_PATH));
     }

@@ -1,51 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-    <LinearLayout android:id="@+id/fragment_tab_content"
-                  android:orientation="vertical"
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent" >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-        <RelativeLayout
-                android:id="@+id/tab_container"
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2">
+    <LinearLayout
+        android:id="@+id/fragment_tab_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-            <com.astuetz.PagerSlidingTabStrip
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/tab_strip"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    app:pstsIndicator="@color/colorBlueDark"
-                    app:pstsDivider="@android:color/transparent"
-                    app:pstsIndicatorHeight="3dp"
-                    app:pstsUnderlineHeight="5dp"
-                    app:pstsDividerPadding="5dp"
-                    app:pstsTabPaddingLeftRight="3dp"
-                    app:pstsScrollOffset="5dp"
-                    app:pstsShouldExpand="true"
-                    app:pstsItemCountInScreen="5"
-                    app:pstsTextAllCaps="false"
-                    app:pstsTabCountOnScreen="true"/>
+        <include
+            layout="@layout/prj_top_bar_news"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3" />
 
-            <ImageButton
-                android:id="@+id/channel_btn"
-                android:layout_width="30dp"
+        <LinearLayout
+            android:id="@+id/tab_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@color/common_bg_light"
+            android:orientation="horizontal"
+            skin:enable="true">
+
+            <com.gxz.PagerSlidingTabStrip
+                android:id="@+id/tab_strip"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:scaleType="fitXY"
-                android:layout_alignRight="@id/tab_strip"
-                android:src="@drawable/ic_back"/>
-        </RelativeLayout>
+                android:layout_weight="13"
+                android:textColor="@color/common_tv_grey"
+                android:textSize="@dimen/TextTopNavigation"
+                app:pstsDividerColor="@android:color/transparent"
+                app:pstsIndicatorColor="@color/colorPrimary"
+                app:pstsIndicatorHeight="2dp"
+                app:pstsScaleZoomMax="0.1"
+                app:pstsTabPaddingLeftRight="10dp"
+                app:pstsTextSelectedColor="@color/colorPrimary"
+                app:pstsUnderlineColor="@android:color/transparent"
+                app:pstsUnderlineHeight="0dp"
+                skin:enable="true" />
 
-        <android.support.v4.view.ViewPager
-                android:id="@+id/view_pager"
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="35"/>
+            <RelativeLayout
+                android:id="@+id/layout_subscribe"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/common_bg_light"
+                skin:enable="true">
+
+                <ImageView
+                    android:id="@+id/ic_subscribe"
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_subscribe" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <edu.com.app.widget.CustomViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="35" />
     </LinearLayout>
 
-<!--    <include layout="@layout/layout_reload"
-             android:visibility="invisible" />-->
+    <include
+        layout="@layout/layout_reload"
+        android:visibility="invisible" />
 </RelativeLayout>

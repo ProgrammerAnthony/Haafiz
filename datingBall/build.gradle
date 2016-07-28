@@ -182,4 +182,11 @@ dependencies {
     apt "com.google.auto.value:auto-value:1.2"
     apt "com.ryanharter.auto.value:auto-value-parcel:0.2.0"
 
+
+    compile('com.gxz.pagerslidingtabstrip:library:1.3') {
+        // exclusion for update the android support jar
+        // for example, you can use the appcompat-v7 in your project
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+//        exclude group: 'com.nineoldandroids', module: 'library'
+    }
 }

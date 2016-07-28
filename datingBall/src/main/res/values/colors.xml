@@ -352,4 +352,6 @@
 
 
     <color name="common_tv_dark">#363636</color>
+    <color name="common_bg_light">#FFFFFF</color>
+    <color name="common_tv_light">#FFFFFF</color>
 </resources>

@@ -24,41 +24,44 @@ import rx.schedulers.Schedulers;
  */
 public class SplashPresenter implements SplashContract.Presenter {
 
-    private SplashContract.View mView;
-    private Context mContext;
     private static final short SPLASH_SHOW_SECONDS = 1;
     private long mShowMainTime;
+
+    private SplashContract.View mView;
+    private Context mContext;
     private Subscription mSubscription;
 
     @Inject
-    ToastUtils toastUtils;
+    ToastUtils mToastUtil;
 
     @Inject
-    DataManager dataManager;
+    DataManager mDataManager;
 
 
-    private MyApplication application;
+    private MyApplication mApplication;
 
     @Inject
     public SplashPresenter(@ActivityContext Context context, MyApplication application) {
         mContext = context;
-        this.application = application;
+        this.mApplication = application;
     }
 
 
     @Override
-    public void initData(Subscription subscription) {
+    public void initData() {
         mShowMainTime = System.currentTimeMillis() + SPLASH_SHOW_SECONDS * 2000;
 
-        mSubscription = subscription;
+//        mSubscription = subscription;
 
-        mSubscription = dataManager.loadChannel(getFirstMenuUrl())
+        //load channel list data ,then save to database
+        mSubscription = mDataManager.loadChannelList(getFirstMenuUrl())
+                .doOnNext(mDataManager.saveChannelListToDb)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new HttpSubscriber<List<Channel>>() {
                     @Override
                     public void onNext(List<Channel> channels) {
-                        application.channels = channels;
+                        mApplication.channels = channels;
                         showView();
                     }
 
@@ -69,7 +72,6 @@ public class SplashPresenter implements SplashContract.Presenter {
                 });
 
     }
-
 
     /**
      * menu url to load channels
@@ -108,9 +110,11 @@ public class SplashPresenter implements SplashContract.Presenter {
         showMainTask.execute();
     }
 
+
     @Override
-    public void attachView(SplashContract.View view) {
+    public void attachView(SplashContract.View view, Subscription subscription) {
         mView = view;
+        mSubscription = subscription;
     }
 
     @Override

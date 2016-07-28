@@ -21,17 +21,32 @@ public abstract class Channel implements Parcelable {
 
     public static final String ID = "_id";
 
-    public static final String MENU_ID = "m_id";//foreign key : menu id
+//    public static final String MENU_ID = "m_id";//foreign key : menu id
 
     public static final String TITLE = "title";
     public static final String TYPE = "type";
     public static final String URL = "url";
     public static final String IS_FIX = "is_fix";
     public static final String IS_SUBSCRIBE = "is_subscribe";
-    public static final String SORT = "sort";
-    public static final String LRT = "lrt";
-    public static final String IMG = "img";
+//    public static final String SORT = "sort";
+//    public static final String LRT = "lrt";
+//    public static final String IMG = "img";
 
+
+
+    //create channel
+    public static final String CREATE_CHANNEL =""
+            + "CREATE TABLE " + Channel.TABLE + "("
+            + Channel.ID + " INTEGER NOT NULL PRIMARY KEY,"
+            + Channel.TITLE + " TEXT NOT NULL,"
+            + Channel.TYPE + " TEXT NOT NULL,"
+            + Channel.URL + " TEXT NOT NULL,"
+            + Channel.IS_FIX + " INTEGER NOT NULL DEFAULT 0,"
+            + Channel.IS_SUBSCRIBE + " INTEGER NOT NULL DEFAULT 0"
+            + ")";
+    
+    public static final String QUERY_CHANNEL_LIST="SELECT * FROM "
+            + Channel.TABLE;
 //    public abstract long id();
 
 //    public abstract long menu_id();
@@ -58,6 +73,7 @@ public abstract class Channel implements Parcelable {
 
     /**
      * get from Db using cursor, and return Channel
+     * this is used when you save to Db before save to Channel class
      */
     public static final Func1<Cursor, Channel> MAPPER = new Func1<Cursor, Channel>() {
         @Override
@@ -81,6 +97,7 @@ public abstract class Channel implements Parcelable {
    public static Channel create( String title, int type, String url, int is_fix, int is_subscribe) {
         return new AutoValue_Channel( title, type, url, is_fix, is_subscribe);
     }
+
 
 
     public static final class Builder {

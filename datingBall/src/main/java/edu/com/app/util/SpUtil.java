@@ -3,7 +3,7 @@ package edu.com.app.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import edu.com.app.data.Constants;
+import edu.com.app.data.bean.Constants;
 
 
 public class SpUtil {

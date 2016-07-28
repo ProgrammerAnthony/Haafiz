@@ -1,10 +1,12 @@
 package edu.com.app.data;
 
 import android.content.Context;
+import android.database.Cursor;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+import com.squareup.sqlbrite.BriteDatabase;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -14,6 +16,8 @@ import java.util.Map;
 import javax.inject.Inject;
 
 import edu.com.app.data.bean.Channel;
+import edu.com.app.data.bean.Constants;
+import edu.com.app.data.db.Db;
 import edu.com.app.data.retrofit.ChannelTypeAdapter;
 import edu.com.app.data.retrofit.HttpResult;
 import edu.com.app.data.retrofit.HttpResultFunc;
@@ -23,15 +27,18 @@ import edu.com.app.injection.scope.ApplicationContext;
 import edu.com.app.util.FileUtil;
 import okhttp3.ResponseBody;
 import rx.Observable;
+import rx.android.schedulers.AndroidSchedulers;
 import rx.exceptions.Exceptions;
 import rx.functions.Action0;
+import rx.functions.Action1;
 import rx.functions.Func1;
+import rx.schedulers.Schedulers;
 
 /**
  * Created by Anthony on 2016/6/12.
  * Class Note:
  * data entrance
- * todo formatting  ......
+ * todo more to do
  */
 
 
@@ -50,6 +57,9 @@ public class DataManager {
     private Context mContext;
 
     @Inject
+    BriteDatabase mDb;
+
+    @Inject
     public DataManager(@ApplicationContext Context context) {
         this.mContext = context;
     }
@@ -59,25 +69,6 @@ public class DataManager {
     }
 
 
-//    public Observable<Friends> syncFriends() {
-//        return null;
-//        return friendsService.getFriends()
-//                .concatMap(new Func1<List<Friends>, Observable<Friends>>() {
-//                    @Override
-//                    public Observable<Friends> call(List<Friends> friends) {
-//                        return mDatabaseHelper.setFriends(friends);
-//                    }
-//                });
-//    }
-
-
-//    public Observable<List<Friends>> getFriends() {
-//        return null;
-//        return mDatabaseHelper.getFriends().distinct();
-//    }
-
-
-    /// Helper method to post events from doOnCompleted.
     private Action0 postEventAction(final Object event) {
         return new Action0() {
             @Override
@@ -88,9 +79,7 @@ public class DataManager {
     }
 
     /**
-     * 请求本地或远程String函数
-     * 注意:直接获取的String，下面的loadData、loadMenu、loadChannel都基于此函数
-     * 只是下面函数进行了相应的Gson反序列化
+     * load String local or online
      */
     public Observable<String> loadString(String url) {
         if (url.startsWith(Constants.LOCAL_FILE_BASE_END_POINT)) {
@@ -122,32 +111,13 @@ public class DataManager {
 
 
     /**
-     * 请求本地或远程数据函数
-     * 注意:按照传入的Class进行了Gson数据反序列化
-     */
-    public <T> Observable<T> loadData(String url, final Class<T> clazz) {
-        final Gson gson = new GsonBuilder().registerTypeAdapter(clazz, new ItemJsonDeserializer<T>()).create();
-        return loadString(url)
-                .flatMap(new Func1<String, Observable<T>>() {
-                    @Override
-                    public Observable<T> call(String s) {
-                        T obj = gson.fromJson(s, clazz);
-                        return Observable.just(obj);
-                    }
-                });
-    }
-
-
-
-
-    /**
-     * load channels data
+     * load channels data online or offline
      * step 1 {@link #loadString(String)} online or offline
      * step 2 Rx flatMap load string data to  {@link HttpResult}
      * step 3 Rx map  get data field in {@link HttpResult}
      * and return {@link HttpResultFunc}in which List<Channel> contain
      */
-    public Observable<List<Channel>> loadChannel(String url) {
+    public Observable<List<Channel>> loadChannelList(String url) {
         final Type type = new TypeToken<HttpResult<List<Channel>>>() {
         }.getType();
 
@@ -164,9 +134,65 @@ public class DataManager {
     }
 
 
+    /**
+     * save channel list to db
+     * step1 delete all of the data befor
+     * step2 insert channel list
+     */
+    public Action1<List<Channel>> saveChannelListToDb = new Action1<List<Channel>>() {
+        @Override
+        public void call(List<Channel> channels) {
+            //delete all of the data before
+            mDb.delete(Channel.TABLE,null,new String[]{});
+            //insert channel list
+            for (int i = 0; i < channels.size(); i++) {
+                Channel channel = channels.get(i);
+                mDb.insert(Channel.TABLE, new Channel.Builder()
+                        .title(channel.title())
+                        .url(channel.url())
+                        .type(channel.type())
+                        .isFix(channel.isFix())
+                        .isSubscribe(channel.isSubscribe())
+                        .build());
+            }
+        }
+    };
+
 
     /**
-     * 通过POST请求发送参数到服务器
+     * use BriteData to query data ,then map to list
+     *
+     * @param table
+     * @param sql
+     * @param args
+     * @return
+     */
+    public Observable<List<Channel>> queryChannelList(final String table, String sql,
+                                                      String... args) {
+        return mDb.createQuery(table, sql, args)
+                .mapToList(CHANNEL_MAPPER)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    /**
+     * create channel using data get from database
+     */
+    public Func1<Cursor, Channel> CHANNEL_MAPPER = new Func1<Cursor, Channel>() {
+        @Override
+        public Channel call(Cursor cursor) {
+            String title = Db.getString(cursor, Channel.TITLE);
+            int type = Db.getInt(cursor, Channel.TYPE);
+            String url = Db.getString(cursor, Channel.URL);
+            int is_fix = Db.getInt(cursor, Channel.IS_FIX);
+            int is_subscribe = Db.getInt(cursor, Channel.IS_SUBSCRIBE);
+            return Channel.create(title, type, url, is_fix, is_subscribe);
+        }
+    };
+
+
+    /**
+     * post string to server
      */
     public Observable<String> postString(String url, Map<String, String> paramMap) {
         return httpHelper.getService(RemoteApi.class)
@@ -181,6 +207,22 @@ public class DataManager {
                             e.printStackTrace();
                             throw new RuntimeException("IOException when convert Response Body to String");
                         }
+                    }
+                });
+    }
+
+
+    /**
+     * load String and Gson Deserialize
+     */
+    public <T> Observable<T> loadData(String url, final Class<T> clazz) {
+        final Gson gson = new GsonBuilder().registerTypeAdapter(clazz, new ItemJsonDeserializer<T>()).create();
+        return loadString(url)
+                .flatMap(new Func1<String, Observable<T>>() {
+                    @Override
+                    public Observable<T> call(String s) {
+                        T obj = gson.fromJson(s, clazz);
+                        return Observable.just(obj);
                     }
                 });
     }

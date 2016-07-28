@@ -36,6 +36,7 @@ public class FindFragment extends AbsBaseFragment {
 
     @Inject
     ToastUtils toastUtils;
+
     @Inject
     ViewDisplay viewDisplay;
 

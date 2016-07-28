@@ -2,7 +2,7 @@ package edu.com.app.data.retrofit;
 
 import java.util.Map;
 
-import edu.com.app.data.Constants;
+import edu.com.app.data.bean.Constants;
 import okhttp3.ResponseBody;
 import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;

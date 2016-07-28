@@ -1,4 +1,4 @@
-package edu.com.app.data.rx;
+package edu.com.app.data.bus;
 
 import javax.inject.Inject;
 

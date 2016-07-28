@@ -1,8 +1,9 @@
-package edu.com.app.data.bean;
+package edu.com.app.data.bus.event;
 
 /**
  * Created by Anthony on 2016/5/24.
  * Class Note:
+ * this is just a normal test event
  */
 public class Event {
     String id;

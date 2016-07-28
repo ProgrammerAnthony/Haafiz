@@ -1,4 +1,4 @@
-package edu.com.app.data;
+package edu.com.app.data.bean;
 
 /**
  * Created by Anthony on 2016/4/28.

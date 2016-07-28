@@ -17,7 +17,7 @@ import javax.inject.Inject;
 
 import edu.com.app.data.DataManager;
 import edu.com.app.injection.scope.ActivityContext;
-import edu.com.app.data.rx.LeanCloudHelper;
+import edu.com.app.data.LeanCloudHelper;
 import edu.com.app.R;
 import rx.Subscription;
 
@@ -185,9 +185,15 @@ public class MainPresenter implements MainContract.Presenter {
         }*/
     }
 
-    @Override
+/*    @Override
     public void attachView(MainContract.View view) {
         mView = view;
+    }*/
+
+    @Override
+    public void attachView(MainContract.View view, Subscription subscription) {
+        mView = view;
+        mSubscription =subscription;
     }
 
     @Override

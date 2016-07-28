@@ -56,7 +56,7 @@ public class NewLoginActivity extends AbsSwipeBackActivity implements LoginContr
     @Override
     protected void initViewsAndEvents() {
 //        mLoginPresenter = new LoginPresenter(mContext);
-        mLoginPresenter.attachView(this);
+        mLoginPresenter.attachView(this,mSubscription);
         mLoginPresenter.beginAnimation(splashBg, tvSlogan, shimmerLayout);
         mLoginPresenter.doingSplash();
 //        EMClient.getInstance().chatManager().loadAllConversations();
