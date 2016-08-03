@@ -123,4 +123,13 @@
     <style name="FabStyle">
         <item name="colorAccent">@color/colorPrimary</item>
     </style>
+
+
+
+    <!--订阅pop动画-->
+    <style name="subscribe_pop_window_anim_style">
+        <item name="android:windowEnterAnimation">@anim/subscribe_pop_show_anim</item>
+        <item name="android:windowExitAnimation">@anim/subscribe_pop_hidden_anim</item>
+    </style>
+
 </resources>

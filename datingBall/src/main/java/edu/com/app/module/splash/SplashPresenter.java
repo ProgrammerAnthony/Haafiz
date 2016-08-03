@@ -10,6 +10,7 @@ import javax.inject.Inject;
 import edu.com.app.MyApplication;
 import edu.com.app.data.DataManager;
 import edu.com.app.data.bean.Channel;
+import edu.com.app.data.bean.Constants;
 import edu.com.app.data.retrofit.HttpSubscriber;
 import edu.com.app.injection.scope.ActivityContext;
 import edu.com.app.util.ToastUtils;
@@ -54,14 +55,14 @@ public class SplashPresenter implements SplashContract.Presenter {
 //        mSubscription = subscription;
 
         //load channel list data ,then save to database
-        mSubscription = mDataManager.loadChannelList(getFirstMenuUrl())
+        mSubscription = mDataManager.loadChannelList(Constants.FIRST_MENU_URL)
                 .doOnNext(mDataManager.saveChannelListToDb)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new HttpSubscriber<List<Channel>>() {
                     @Override
                     public void onNext(List<Channel> channels) {
-                        mApplication.channels = channels;
+                        mApplication.channels = channels;//load to global instance
                         showView();
                     }
 
@@ -70,7 +71,6 @@ public class SplashPresenter implements SplashContract.Presenter {
                         super.onError(e);
                     }
                 });
-
     }
 
     /**
@@ -78,9 +78,9 @@ public class SplashPresenter implements SplashContract.Presenter {
      *
      * @return
      */
-    private String getFirstMenuUrl() {
-        return "raw://news_menu";  //local data fot testing
-    }
+//    private String getFirstMenuUrl() {
+//        return "raw://news_menu";  //local data fot testing
+//    }
 
     private void showView() {
         AsyncTask<String, String, String> showMainTask = new AsyncTask<String, String, String>() {

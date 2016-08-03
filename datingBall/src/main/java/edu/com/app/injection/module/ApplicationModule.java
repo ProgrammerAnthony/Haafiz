@@ -79,7 +79,7 @@ public class ApplicationModule {
         return SqlBrite.create(new SqlBrite.Logger() {
             @Override
             public void log(String message) {
-                Timber.tag("Database").v(message);
+                Timber.tag("My Database").i(message);
             }
         });
     }

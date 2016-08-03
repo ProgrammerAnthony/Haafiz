@@ -15,6 +15,7 @@
             layout="@layout/prj_top_bar_news"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:id="@+id/top_bar_view"
             android:layout_weight="3" />
 
         <LinearLayout

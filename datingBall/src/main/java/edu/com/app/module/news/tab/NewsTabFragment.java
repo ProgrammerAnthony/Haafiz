@@ -1,9 +1,16 @@
 package edu.com.app.module.news.tab;
 
 
+import android.graphics.drawable.BitmapDrawable;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -19,17 +26,22 @@ import butterknife.OnClick;
 import edu.com.app.R;
 import edu.com.app.adapter.TabViewPagerAdapter;
 import edu.com.app.base.AbsBaseFragment;
+import edu.com.app.data.DataManager;
 import edu.com.app.data.bean.Channel;
 import edu.com.app.data.bus.RxBus;
 import edu.com.app.module.main.MainActivity;
 import edu.com.app.module.news.NewsContract;
+import edu.com.app.util.ToastUtils;
 import edu.com.app.widget.CustomViewPager;
 import edu.com.app.widget.ViewDisplay;
+import edu.com.app.widget.channel.ChannelAdapter;
+import edu.com.app.widget.channel.ItemDragHelperCallback;
+import timber.log.Timber;
 
 /**
  * Created by Anthony on 2016/7/27.
  * Class Note:
- * todo implement function here
+ * news tab Fragment
  */
 public class NewsTabFragment extends AbsBaseFragment implements NewsContract.TabView {
     @Inject
@@ -41,6 +53,7 @@ public class NewsTabFragment extends AbsBaseFragment implements NewsContract.Tab
     @Inject
     ViewDisplay mViewDisplay;
 
+
     @Bind(R.id.txt_news_title)
     TextView mNewsTitle;
     @Bind(R.id.tab_strip)
@@ -51,11 +64,31 @@ public class NewsTabFragment extends AbsBaseFragment implements NewsContract.Tab
     CustomViewPager mViewPager;
     @Bind(R.id.layout_reload)
     RelativeLayout mLayoutReload;
+    @Bind(R.id.top_bar_view)
+    View mTopBar;
+
+    @Inject
+    DataManager mDataManager;
+
+    @Inject
+    ToastUtils toastUtils;
+
+    private PopupWindow mSubscribeWindow;
 
     private TabViewPagerAdapter mViewPagerAdapter;
 
     private static int INIT_INDEX = 0;
+    private RecyclerView mSubscribeRecyclerView;
+    public List<Channel> mMyChannels = new ArrayList<>();//my channels
+    public List<Channel> mOtherChannels = new ArrayList<>();//other channels
+    //    public List<Channel> mDbChannels;//channels same with those in db
+    private ChannelAdapter mSubscribeAdapter;
 
+
+    @Override
+    protected int getContentViewID() {
+        return R.layout.fragment_tab;
+    }
 
     @Override
     protected void initDagger() {
@@ -64,14 +97,17 @@ public class NewsTabFragment extends AbsBaseFragment implements NewsContract.Tab
 
     @Override
     protected void initViewsAndEvents(View rootView) {
+        initTabViewPager();
+        //subscription is null
+        mPresenter.attachView(NewsTabFragment.this, mSubscription);
+        mPresenter.loadDataFromDb();//we already load data in splash view ,so use db data.
 
-
-        mPresenter.attachView(this, mSubscription);
-        mPresenter.loadData();
     }
 
+
     private void initTabViewPager() {
-        mViewPagerAdapter =getPagerAdapter();
+        List<Channel> channels = new ArrayList<>();
+        mViewPagerAdapter = new TabViewPagerAdapter(mContext, channels, getChildFragmentManager(), mViewDisplay);
         mViewPager.setAdapter(mViewPagerAdapter);
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -81,7 +117,7 @@ public class NewsTabFragment extends AbsBaseFragment implements NewsContract.Tab
 
             @Override
             public void onPageSelected(int position) {
-
+                //get current Channel
             }
 
             @Override
@@ -107,42 +143,10 @@ public class NewsTabFragment extends AbsBaseFragment implements NewsContract.Tab
         mTabStrip.setViewPager(mViewPager);
     }
 
-    private TabViewPagerAdapter getPagerAdapter() {
-        List<Channel> channels =new ArrayList<>();
-        return new TabViewPagerAdapter(mContext,channels,getChildFragmentManager(),mViewDisplay);
-    }
 
     protected int getInitIndex() {
         return INIT_INDEX;
     }
-    @Override
-    protected int getContentViewID() {
-        return R.layout.fragment_tab;
-    }
-
-
-    @Override
-    public void showSubscribeView() {
-
-    }
-
-    @Override
-    public void showEmptyView() {
-
-    }
-
-    @Override
-    public void showTabView(List<Channel> channels) {
-        initTabViewPager();
-
-        mViewPagerAdapter.clear();
-        mViewPagerAdapter.addAll(channels);
-        mViewPagerAdapter.notifyDataSetChanged();
-//        mTabStrip.notifyDataSetChanged();
-        mTabStrip.setShouldExpand(true);
-    }
-
-
 
 
     @OnClick({R.id.ic_subscribe, R.id.layout_reload})
@@ -152,12 +156,162 @@ public class NewsTabFragment extends AbsBaseFragment implements NewsContract.Tab
                 showPopupWindow();
                 break;
             case R.id.layout_reload:
-                mPresenter.loadData();
+                mPresenter.loadDataOnline();
                 break;
         }
     }
 
+
     private void showPopupWindow() {
+        if (mSubscribeWindow == null) {
+            View popupView = LayoutInflater.from(getActivity()).inflate(R.layout.prj_pop_window_subscribe, null);
+            mSubscribeWindow = new PopupWindow(popupView, ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.MATCH_PARENT, true);
+            mSubscribeWindow.setBackgroundDrawable(new BitmapDrawable());
+            mSubscribeWindow.setOutsideTouchable(true);
+            mSubscribeWindow.setFocusable(true);
+            mSubscribeWindow.setAnimationStyle(R.style.subscribe_pop_window_anim_style);
+            mSubscribeRecyclerView = (RecyclerView) popupView.findViewById(R.id.subscribe_recycler_view);
+            initSubscribeRecyclerView();
+
+
+            mSubscribeWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
+                @Override
+                public void onDismiss() {
+                    updateSubscribeInfo();
+//                    sortList();
+                    notifyDataSetChanged();
+                    mSubscribeWindow = null;
+                    mViewPager.setCurrentItem(0, true);
+                }
+            });
+        } else {
+            if (mSubscribeWindow.isShowing()) {
+                mSubscribeWindow.dismiss();
+                return;
+            }
+        }
+        mSubscribeWindow.showAsDropDown(mTopBar);
+
 
     }
+
+    /**
+     * on subscribe view closing,
+     * save current channels in {@link #mMyChannels}and {@link #mOtherChannels}
+     * and update db at the same time
+     */
+    private void updateSubscribeInfo() {
+        List<Channel> channels1 = mSubscribeAdapter.getMyChannelItems();
+        //step1 update current channels,then update db
+        for (Channel channel : channels1) {
+            channel = Channel.create(channel.title(), channel.type(), channel.url(), channel.isFix(), 1);
+            mDataManager.updateChannelInDb(channel);
+        }
+        mMyChannels = channels1;
+
+        //step2 update other channels,then update db
+        List<Channel> channels2 = mSubscribeAdapter.getOtherChannelItems();
+
+        for (Channel channel : channels2) {
+            channel = Channel.create(channel.title(), channel.type(), channel.url(), channel.isFix(), 0);
+            mDataManager.updateChannelInDb(channel);
+        }
+        mOtherChannels = channels2;
+    }
+
+    /**
+     * init SubScribe RecyclerView
+     * todo sort list
+     */
+    private void initSubscribeRecyclerView() {
+        GridLayoutManager manager = new GridLayoutManager(getActivity(), 4);
+        mSubscribeRecyclerView.setLayoutManager(manager);
+
+        ItemDragHelperCallback callback = new ItemDragHelperCallback();
+        final ItemTouchHelper helper = new ItemTouchHelper(callback);
+        helper.attachToRecyclerView(mSubscribeRecyclerView);
+
+
+        mSubscribeAdapter = new ChannelAdapter(getActivity(), helper, mMyChannels, mOtherChannels);
+        manager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+            @Override
+            public int getSpanSize(int position) {
+                int viewType = mSubscribeAdapter.getItemViewType(position);
+                return viewType == ChannelAdapter.TYPE_MY || viewType == ChannelAdapter.TYPE_OTHER ? 1 : 4;
+            }
+        });
+        mSubscribeRecyclerView.setAdapter(mSubscribeAdapter);
+
+        mSubscribeAdapter.setOnMyChannelItemClickListener(new ChannelAdapter.OnMyChannelItemClickListener() {
+            @Override
+            public void onItemClick(View v, int position) {
+                mSubscribeWindow.dismiss();
+                mViewPager.setCurrentItem(position, true);
+            }
+        });
+        mSubscribeAdapter.setOnBackClickListener(new ChannelAdapter.OnBackClickListener() {
+            @Override
+            public void onBackClick() {
+                mSubscribeWindow.dismiss();
+                updateSubscribeInfo();
+//                sortList();
+                notifyDataSetChanged();
+                mViewPager.setCurrentItem(0, true);
+            }
+        });
+    }
+
+    /**
+     * --operation in contract class--
+     **/
+
+    @Override
+    public void showEmptyView() {
+        mLayoutReload.setVisibility(View.VISIBLE);
+    }
+
+
+    /**
+     * get channels data here
+     *
+     * @param channels
+     */
+    @Override
+    public void showTabView(List<Channel> channels) {
+        Timber.i("NewsTabFragment,channels we get here " + channels.size());
+        mLayoutReload.setVisibility(View.INVISIBLE);
+
+        assignChannels(channels);
+
+        notifyDataSetChanged();
+
+//        mViewPager.setCurrentItem(getInitIndex(), true);
+
+    }
+
+    private void assignChannels(List<Channel> channels) {
+        mMyChannels.clear();
+        mOtherChannels.clear();
+        for (Channel channel : channels) {
+            if (channel.isFix() == 1 || channel.isSubscribe() == 1) {
+                mMyChannels.add(channel);
+//                Timber.i("NewsTabFragment,add my channel ,channel title is" + channel.title());
+            } else {
+                mOtherChannels.add(channel);
+//                Timber.i("NewsTabFragment,add other channel ,channel title is" + channel.title());
+            }
+        }
+    }
+
+    /**
+     * update channels data on tab strip
+     */
+    private void notifyDataSetChanged() {
+        mViewPagerAdapter.clear();
+        mViewPagerAdapter.addAll(mMyChannels);
+        mViewPagerAdapter.notifyDataSetChanged();
+        mTabStrip.setShouldExpand(true);
+    }
+
 }

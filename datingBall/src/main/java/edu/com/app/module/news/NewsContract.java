@@ -16,26 +16,37 @@ import edu.com.app.data.bean.Channel;
  */
 public interface NewsContract {
 
-/**----tab fragment-------**/
-    interface TabPresenter extends BasePresenter<TabView>{
-        void loadData();
+    /**
+     * ----tab fragment-------
+     **/
+    interface TabPresenter extends BasePresenter<TabView> {
+        void loadDataFromDb();
+
+        void loadDataOnline();
+
+        void updateSubInfo();
     }
 
-    interface TabView extends BaseView{
-        void showSubscribeView();
+    interface TabView extends BaseView {
+        //        void showSubscribeView();
         void showEmptyView();
+
         void showTabView(List<Channel> channels);
     }
 
-/**----list fragment-------**/
-    interface ListPresenter extends BasePresenter<ListsView>{
+    /**
+     * ----list fragment-------
+     **/
+    interface ListPresenter extends BasePresenter<ListsView> {
 
         void refreshData();
+
         void loadMore(int pageIndex);
+
         void preLoadFromDb();
     }
 
-    interface ListsView extends BaseView{
+    interface ListsView extends BaseView {
         void toDetailActivity();
     }
 }

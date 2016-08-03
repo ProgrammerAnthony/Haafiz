@@ -1,5 +1,6 @@
 package edu.com.app.data;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 
@@ -43,7 +44,6 @@ import rx.schedulers.Schedulers;
 
 
 public class DataManager {
-
 
     @Inject
     HttpHelper httpHelper;
@@ -136,14 +136,16 @@ public class DataManager {
 
     /**
      * save channel list to db
-     * step1 delete all of the data befor
+     * step1 delete all of the data before
      * step2 insert channel list
+     * todo get data online,if not exists anymore ,
+     * todo if exists in local ,delete local data.do nothing ,if not exists in local,add.
      */
     public Action1<List<Channel>> saveChannelListToDb = new Action1<List<Channel>>() {
         @Override
         public void call(List<Channel> channels) {
             //delete all of the data before
-            mDb.delete(Channel.TABLE,null,new String[]{});
+            mDb.delete(Channel.TABLE, null, new String[]{});
             //insert channel list
             for (int i = 0; i < channels.size(); i++) {
                 Channel channel = channels.get(i);
@@ -160,35 +162,38 @@ public class DataManager {
 
 
     /**
-     * use BriteData to query data ,then map to list
+     * use BriteDatabase to query list Channels data ,then map to list
      *
-     * @param table
-     * @param sql
-     * @param args
      * @return
      */
-    public Observable<List<Channel>> queryChannelList(final String table, String sql,
-                                                      String... args) {
-        return mDb.createQuery(table, sql, args)
-                .mapToList(CHANNEL_MAPPER)
+    public Observable<List<Channel>> queryChannelList() {
+        return mDb.createQuery(Channel.TABLE, Channel.QUERY_CHANNEL_LIST, new String[]{})
+                .mapToList(new Func1<Cursor, Channel>() {
+                    @Override
+                    public Channel call(Cursor cursor) {
+                        String title = Db.getString(cursor, Channel.TITLE);
+                        int type = Db.getInt(cursor, Channel.TYPE);
+                        String url = Db.getString(cursor, Channel.URL);
+                        int is_fix = Db.getInt(cursor, Channel.IS_FIX);
+                        int is_subscribe = Db.getInt(cursor, Channel.IS_SUBSCRIBE);
+                        return Channel.create(title, type, url, is_fix, is_subscribe);
+                    }
+                })
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
     }
 
-    /**
-     * create channel using data get from database
-     */
-    public Func1<Cursor, Channel> CHANNEL_MAPPER = new Func1<Cursor, Channel>() {
-        @Override
-        public Channel call(Cursor cursor) {
-            String title = Db.getString(cursor, Channel.TITLE);
-            int type = Db.getInt(cursor, Channel.TYPE);
-            String url = Db.getString(cursor, Channel.URL);
-            int is_fix = Db.getInt(cursor, Channel.IS_FIX);
-            int is_subscribe = Db.getInt(cursor, Channel.IS_SUBSCRIBE);
-            return Channel.create(title, type, url, is_fix, is_subscribe);
-        }
-    };
+    public void updateChannelInDb(Channel channel) {
+        ContentValues contentValues = new Channel.Builder()
+                .title(channel.title())
+                .url(channel.url())
+                .isFix(channel.isFix())
+                .isSubscribe(channel.isSubscribe())
+                .type(channel.type()).build();
+        mDb.update(Channel.TABLE,contentValues,"title = '"+channel.title()+"'");
+    }
+
+
 
 
     /**

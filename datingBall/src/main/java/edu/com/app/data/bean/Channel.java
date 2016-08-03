@@ -33,9 +33,8 @@ public abstract class Channel implements Parcelable {
 //    public static final String IMG = "img";
 
 
-
     //create channel
-    public static final String CREATE_CHANNEL =""
+    public static final String CREATE_CHANNEL = ""
             + "CREATE TABLE " + Channel.TABLE + "("
             + Channel.ID + " INTEGER NOT NULL PRIMARY KEY,"
             + Channel.TITLE + " TEXT NOT NULL,"
@@ -44,19 +43,24 @@ public abstract class Channel implements Parcelable {
             + Channel.IS_FIX + " INTEGER NOT NULL DEFAULT 0,"
             + Channel.IS_SUBSCRIBE + " INTEGER NOT NULL DEFAULT 0"
             + ")";
-    
-    public static final String QUERY_CHANNEL_LIST="SELECT * FROM "
+
+    public static final String QUERY_CHANNEL_LIST = "SELECT * FROM "
             + Channel.TABLE;
+    //    UPDATE Person SET FirstName = 'Fred' WHERE LastName = 'Wilson'
+    //query channel with title and subscribe info
+    public static final String QUERY_TITLE_AND_SUB_INFO = "SELECT " + Channel.TITLE
+            + "," + Channel.IS_SUBSCRIBE + " FROM " + Channel.TABLE;
+
 //    public abstract long id();
 
 //    public abstract long menu_id();
 
     public abstract String title();
 
-//    @SerializedName(value = "type", alternate = {"channelType"})
+    //    @SerializedName(value = "type", alternate = {"channelType"})
     public abstract int type();
 
-//    @SerializedName(value = "url", alternate = {"link"})
+    //    @SerializedName(value = "url", alternate = {"link"})
     public abstract String url();
 
     public abstract int isFix();
@@ -89,15 +93,14 @@ public abstract class Channel implements Parcelable {
 //            long sort = Db.getLong(cursor, SORT);
 //            long lrt = Db.getLong(cursor, LRT);
 //            String img = Db.getString(cursor, IMG);
-            return create(  title, type, url, is_fix, is_subscribe);
+            return create(title, type, url, is_fix, is_subscribe);
 //            return new AutoValue_Channel(id,menuId,title,type,url,is_fix,is_subscribe);
         }
     };
 
-   public static Channel create( String title, int type, String url, int is_fix, int is_subscribe) {
-        return new AutoValue_Channel( title, type, url, is_fix, is_subscribe);
+    public static Channel create(String title, int type, String url, int is_fix, int is_subscribe) {
+        return new AutoValue_Channel(title, type, url, is_fix, is_subscribe);
     }
-
 
 
     public static final class Builder {
