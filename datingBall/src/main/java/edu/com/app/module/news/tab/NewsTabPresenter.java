@@ -51,17 +51,20 @@ public class NewsTabPresenter implements NewsContract.TabPresenter {
                 .subscribe(new Action1<List<Channel>>() {
                     @Override
                     public void call(List<Channel> channels) {
-                        Timber.i("NewsTabPresenter,channel size is" + channels.size());
+                        Timber.i("NewsTabPresenter,channel size is " + channels.size());
                         if (channels == null || channels.size() == 0)
                             mView.showEmptyView();
-                        else
+                        else {
+//                            assignChannels(channels);
                             mView.showTabView(channels);
+                        }
+
                     }
                 });
     }
 
     @Override
-    public void loadDataOnline() {
+    public void loadDataOnlineThenSave() {
         mSubscription = mDataManager.loadChannelList(Constants.FIRST_MENU_URL)
                 .doOnNext(mDataManager.saveChannelListToDb)
                 .subscribeOn(Schedulers.io())
@@ -69,11 +72,14 @@ public class NewsTabPresenter implements NewsContract.TabPresenter {
                 .subscribe(new HttpSubscriber<List<Channel>>() {
                     @Override
                     public void onNext(List<Channel> channels) {
-                        mApplication.channels = channels;//load to global instance
+                        Timber.i("NewsTabPresenter,channel size is " + channels.size());
+//                        mApplication.channels = channels;//load to global instance
                         if (channels == null || channels.size() == 0)
                             mView.showEmptyView();
-                        else
+                        else {
+//                            assignChannels(channels);
                             mView.showTabView(channels);
+                        }
                     }
 
                     @Override
@@ -85,8 +91,25 @@ public class NewsTabPresenter implements NewsContract.TabPresenter {
     }
 
     @Override
-    public void updateSubInfo() {
+    public void updateSubscribeInfo(List<Channel> myChannels, List<Channel> otherChannels) {
+        List<Channel> channels1 = myChannels;
+        //step1 update current channels,then update db
+        for (Channel channel : channels1) {
+            channel = Channel.create(channel.title(), channel.type(), channel.url(), channel.isFix(), 1);
+            mDataManager.updateChannelInDb(channel);
+        }
+//        mMyChannels = channels1;
+        mDataManager.mMyChannels = channels1;
 
+        //step2 update other channels,then update db
+        List<Channel> channels2 = otherChannels;
+
+        for (Channel channel : channels2) {
+            channel = Channel.create(channel.title(), channel.type(), channel.url(), channel.isFix(), 0);
+            mDataManager.updateChannelInDb(channel);
+        }
+//        mOtherChannels = channels2;
+        mDataManager.mOtherChannels = channels2;
     }
 
 
@@ -103,4 +126,6 @@ public class NewsTabPresenter implements NewsContract.TabPresenter {
             mSubscription.unsubscribe();
         }
     }
+
+
 }

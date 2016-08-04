@@ -51,18 +51,19 @@ public abstract class AbsBaseFragment extends Fragment implements BaseView{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+//set timber tag
         TAG_LOG = this.getClass().getSimpleName();
         Timber.tag(TAG_LOG);
 
         mContext = getActivity();
-
+//url
         if (getArguments() != null) {
             mUrl = getArguments().getString(EXTRA_URL);
         }
         initDagger();
     }
 
+    // ((MainActivity) (getActivity())).activityComponent().inject(this);
     protected abstract void initDagger();
 
     @Nullable

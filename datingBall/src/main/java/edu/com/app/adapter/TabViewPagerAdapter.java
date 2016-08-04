@@ -62,7 +62,8 @@ public class TabViewPagerAdapter extends FragmentPagerAdapter {
         }
         Fragment fragment = new Fragment();
 //        Timber.i(mViewDisplay.getFragmentName("VideoFragment"));
-        Fragment fragmentCreated = mViewDisplay.createFragment(mContext, type, bundle == null ? null : bundle);
+        Fragment fragmentCreated =mViewDisplay.createFragment(mContext,channel,type);
+//        Fragment fragmentCreated = mViewDisplay.createFragment(mContext, type, bundle == null ? null : bundle);
         return fragmentCreated == null ? fragment : fragmentCreated;
     }
 

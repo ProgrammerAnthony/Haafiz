@@ -14,6 +14,7 @@ import edu.com.app.R;
  * Created by Anthony on 2016/5/11.
  * Class Note:
  * 1 Same operation like AbaBaseFragment,(title+content)
+ *
  */
 public abstract class AbsTitleFragment extends AbsBaseFragment {
     protected View mTopBar;

@@ -22,9 +22,9 @@ public interface NewsContract {
     interface TabPresenter extends BasePresenter<TabView> {
         void loadDataFromDb();
 
-        void loadDataOnline();
+        void loadDataOnlineThenSave();
 
-        void updateSubInfo();
+       void updateSubscribeInfo(List<Channel> myChannels,List<Channel> otherChannels);
     }
 
     interface TabView extends BaseView {
@@ -32,6 +32,8 @@ public interface NewsContract {
         void showEmptyView();
 
         void showTabView(List<Channel> channels);
+
+
     }
 
     /**

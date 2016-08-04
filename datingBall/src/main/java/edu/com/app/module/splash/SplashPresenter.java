@@ -62,7 +62,7 @@ public class SplashPresenter implements SplashContract.Presenter {
                 .subscribe(new HttpSubscriber<List<Channel>>() {
                     @Override
                     public void onNext(List<Channel> channels) {
-                        mApplication.channels = channels;//load to global instance
+//                        mApplication.channels = channels;//load to global instance
                         showView();
                     }
 

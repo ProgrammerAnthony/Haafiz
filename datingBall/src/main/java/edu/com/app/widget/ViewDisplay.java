@@ -81,22 +81,23 @@ public class ViewDisplay {
     /**
      * create fragment with channel
      * @param context
-     * @param channel channel data
+     * @param channelInfo channel data
+     * @param typeName name to define fragment
      * @return fragment created
      */
-    public Fragment createFragment(Context context, Channel channel) {
+    public Fragment createFragment(Context context, Channel channelInfo,String typeName) {
 
-        String typeCode = channel.type()+"";
-        String name = mTypeFragmentNameMap.get(typeCode);
-
+//        String typeCode =Integer.toString(channel.type());
+        String name = mTypeFragmentNameMap.get(typeName);
+        Fragment fragment = null;
         if (name != null && name.length() > 0) {
             try {
-                Fragment fragment = null;
+
 
                 // 通过配置初始化一个fragment.
                 fragment = Fragment.instantiate(context, name);
                 // 给fragment赋值.
-                addArguments(fragment, channel);
+                addArguments(fragment, channelInfo);
 
                 return fragment;
             } catch (Exception e) {
@@ -108,7 +109,7 @@ public class ViewDisplay {
     }
 
     /**
-     *  add arguments for fragment,used in method {@link #createFragment(Context, Channel)}
+     *  add arguments for fragment,used in method {@link #createFragment(Context, Channel, String)}
      * @param fragment
      * @param c
      */

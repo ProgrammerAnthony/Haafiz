@@ -20,7 +20,7 @@ import timber.log.Timber;
 public class ChannelTypeAdapter extends TypeAdapter<HttpResult<List<Channel>>> {
     @Override
     public void write(JsonWriter out, HttpResult<List<Channel>> value) throws IOException {
-
+        // currently not used here
     }
 
     @Override

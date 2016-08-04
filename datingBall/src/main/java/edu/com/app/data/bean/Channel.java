@@ -67,6 +67,8 @@ public abstract class Channel implements Parcelable {
 
     public abstract int isSubscribe();
 
+    public long lrt;
+
 //    public abstract long sort();
 
 //    public abstract long lrt();

@@ -11,6 +11,7 @@ import com.squareup.sqlbrite.BriteDatabase;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -58,6 +59,9 @@ public class DataManager {
 
     @Inject
     BriteDatabase mDb;
+
+    public List<Channel> mMyChannels = new ArrayList<>();//my channels
+    public List<Channel> mOtherChannels = new ArrayList<>();//other channels
 
     @Inject
     public DataManager(@ApplicationContext Context context) {
@@ -162,7 +166,8 @@ public class DataManager {
 
 
     /**
-     * use BriteDatabase to query list Channels data ,then map to list
+     * use BriteDatabase to query list Channels data ,
+     * then map to list channel
      *
      * @return
      */
@@ -183,6 +188,12 @@ public class DataManager {
                 .observeOn(AndroidSchedulers.mainThread());
     }
 
+
+    /**
+     * update channel table using {@link Channel}
+     *  searching by channel title
+     * @param channel
+     */
     public void updateChannelInDb(Channel channel) {
         ContentValues contentValues = new Channel.Builder()
                 .title(channel.title())

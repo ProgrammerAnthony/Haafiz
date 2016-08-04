@@ -2,6 +2,7 @@ package edu.com.app.injection.component;
 
 import dagger.Component;
 import edu.com.app.adapter.TabViewPagerAdapter;
+import edu.com.app.module.news.AbsListFragment;
 import edu.com.app.injection.module.ActivityModule;
 import edu.com.app.injection.scope.PerActivity;
 import edu.com.app.module.find.FindFragment;
@@ -63,4 +64,6 @@ public interface ActivityComponent {
 
 
     void inject(TabViewPagerAdapter tabViewPagerAdapter);
+
+    void inject(AbsListFragment listFragment);
 }

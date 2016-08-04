@@ -79,8 +79,8 @@ public class NewsTabFragment extends AbsBaseFragment implements NewsContract.Tab
 
     private static int INIT_INDEX = 0;
     private RecyclerView mSubscribeRecyclerView;
-    public List<Channel> mMyChannels = new ArrayList<>();//my channels
-    public List<Channel> mOtherChannels = new ArrayList<>();//other channels
+    //    public List<Channel> mMyChannels = new ArrayList<>();//my channels
+//    public List<Channel> mOtherChannels = new ArrayList<>();//other channels
     //    public List<Channel> mDbChannels;//channels same with those in db
     private ChannelAdapter mSubscribeAdapter;
 
@@ -156,7 +156,7 @@ public class NewsTabFragment extends AbsBaseFragment implements NewsContract.Tab
                 showPopupWindow();
                 break;
             case R.id.layout_reload:
-                mPresenter.loadDataOnline();
+                mPresenter.loadDataOnlineThenSave();
                 break;
         }
     }
@@ -198,27 +198,13 @@ public class NewsTabFragment extends AbsBaseFragment implements NewsContract.Tab
 
     /**
      * on subscribe view closing,
-     * save current channels in {@link #mMyChannels}and {@link #mOtherChannels}
+     * save current channels in {@link DataManager#mMyChannels}and {@link DataManager#mOtherChannels}
      * and update db at the same time
      */
     private void updateSubscribeInfo() {
-        List<Channel> channels1 = mSubscribeAdapter.getMyChannelItems();
-        //step1 update current channels,then update db
-        for (Channel channel : channels1) {
-            channel = Channel.create(channel.title(), channel.type(), channel.url(), channel.isFix(), 1);
-            mDataManager.updateChannelInDb(channel);
-        }
-        mMyChannels = channels1;
-
-        //step2 update other channels,then update db
-        List<Channel> channels2 = mSubscribeAdapter.getOtherChannelItems();
-
-        for (Channel channel : channels2) {
-            channel = Channel.create(channel.title(), channel.type(), channel.url(), channel.isFix(), 0);
-            mDataManager.updateChannelInDb(channel);
-        }
-        mOtherChannels = channels2;
+        mPresenter.updateSubscribeInfo(mSubscribeAdapter.getMyChannelItems(), mSubscribeAdapter.getOtherChannelItems());
     }
+
 
     /**
      * init SubScribe RecyclerView
@@ -233,7 +219,7 @@ public class NewsTabFragment extends AbsBaseFragment implements NewsContract.Tab
         helper.attachToRecyclerView(mSubscribeRecyclerView);
 
 
-        mSubscribeAdapter = new ChannelAdapter(getActivity(), helper, mMyChannels, mOtherChannels);
+        mSubscribeAdapter = new ChannelAdapter(getActivity(), helper, mDataManager.mMyChannels, mDataManager.mOtherChannels);
         manager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {
@@ -281,8 +267,10 @@ public class NewsTabFragment extends AbsBaseFragment implements NewsContract.Tab
     public void showTabView(List<Channel> channels) {
         Timber.i("NewsTabFragment,channels we get here " + channels.size());
         mLayoutReload.setVisibility(View.INVISIBLE);
-
+        //channels show on the tab()
         assignChannels(channels);
+//        List<Channel> showChannels = mPresenter.assignChannels(channels);
+//        Timber.i("NewsTabFragment,channels we show here " + showChannels.size());
 
         notifyDataSetChanged();
 
@@ -290,28 +278,34 @@ public class NewsTabFragment extends AbsBaseFragment implements NewsContract.Tab
 
     }
 
-    private void assignChannels(List<Channel> channels) {
-        mMyChannels.clear();
-        mOtherChannels.clear();
-        for (Channel channel : channels) {
-            if (channel.isFix() == 1 || channel.isSubscribe() == 1) {
-                mMyChannels.add(channel);
-//                Timber.i("NewsTabFragment,add my channel ,channel title is" + channel.title());
-            } else {
-                mOtherChannels.add(channel);
-//                Timber.i("NewsTabFragment,add other channel ,channel title is" + channel.title());
-            }
-        }
-    }
-
     /**
      * update channels data on tab strip
      */
     private void notifyDataSetChanged() {
         mViewPagerAdapter.clear();
-        mViewPagerAdapter.addAll(mMyChannels);
+        mViewPagerAdapter.addAll(mDataManager.mMyChannels);
         mViewPagerAdapter.notifyDataSetChanged();
         mTabStrip.setShouldExpand(true);
     }
 
+
+    public void assignChannels(List<Channel> channels) {
+        mDataManager.mMyChannels.clear();
+        mDataManager.mOtherChannels.clear();
+//        mMyChannels.clear();
+//        mOtherChannels.clear();
+        for (Channel channel : channels) {
+            if (channel.isFix() == 1 || channel.isSubscribe() == 1) {
+//                mMyChannels.add(channel);
+                mDataManager.mMyChannels.add(channel);
+//                Timber.i("NewsTabFragment,add my channel ,channel title is" + channel.title());
+            } else {
+                mDataManager.mOtherChannels.add(channel);
+//                mOtherChannels.add(channel);
+//                Timber.i("NewsTabFragment,add other channel ,channel title is" + channel.title());
+            }
+        }
+
+//        return mDataManager.mMyChannels;
+    }
 }
