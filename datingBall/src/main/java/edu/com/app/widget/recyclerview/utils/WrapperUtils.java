@@ -1,4 +1,4 @@
-package edu.com.app.widget.recyclerview.util;
+package edu.com.app.widget.recyclerview.utils;
 
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;

@@ -37,9 +37,8 @@ public class NewsListPresenter implements NewsContract.ListPresenter{
         this.mApplication = application;
     }
     @Override
-    public void attachView(NewsContract.ListsView view, Subscription subscription) {
+    public void attachView(NewsContract.ListsView view) {
         this.mView =view;
-        this.mSubscription =subscription;
     }
 
     @Override

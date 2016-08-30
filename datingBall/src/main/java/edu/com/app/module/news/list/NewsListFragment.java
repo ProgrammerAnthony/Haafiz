@@ -42,7 +42,7 @@ public class NewsListFragment extends AbsBaseFragment implements NewsContract.Li
     @Override
     protected void initViewsAndEvents(View rootView) {
 
-        mPresenter.attachView(this,mSubscription);
+        mPresenter.attachView(this);
         mPresenter.refreshData();
     }
 

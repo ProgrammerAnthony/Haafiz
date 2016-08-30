@@ -2,11 +2,12 @@ package edu.com.app.widget.recyclerview.base;
 
 import android.support.v4.util.SparseArrayCompat;
 
+
 /**
- * Created by Anthony on 2016/7/15.
- * Class Note:
+ * Created by zhy on 16/6/22.
  */
-public class ItemViewDelegateManager<T> {
+public class ItemViewDelegateManager<T>
+{
     SparseArrayCompat<ItemViewDelegate<T>> delegates = new SparseArrayCompat();
 
     public int getItemViewDelegateCount()

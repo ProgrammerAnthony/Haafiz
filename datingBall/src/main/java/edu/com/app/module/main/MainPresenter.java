@@ -191,9 +191,8 @@ public class MainPresenter implements MainContract.Presenter {
     }*/
 
     @Override
-    public void attachView(MainContract.View view, Subscription subscription) {
+    public void attachView(MainContract.View view) {
         mView = view;
-        mSubscription =subscription;
     }
 
     @Override

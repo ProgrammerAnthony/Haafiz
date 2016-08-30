@@ -3,8 +3,6 @@ package edu.com.app.widget.recyclerview.adapter;
 import android.content.Context;
 import android.view.LayoutInflater;
 
-
-
 import java.util.ArrayList;
 import java.util.List;
 

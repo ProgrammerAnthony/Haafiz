@@ -16,7 +16,6 @@ import edu.com.app.data.bean.NewsItem;
 import edu.com.app.data.retrofit.HttpSubscriber;
 import edu.com.app.module.main.MainActivity;
 import edu.com.app.widget.pullrefresh.PullToRefreshView;
-import edu.com.app.widget.recyclerview.adapter.MultiItemTypeAdapter;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action0;
 import rx.schedulers.Schedulers;
@@ -32,7 +31,7 @@ public abstract class AbsListFragment extends AbsBaseFragment {
     protected int mCurrentPageIndex = getInitPageIndex();
     protected int mPageCount = 0;
     protected int mPageSize = 15;
-    protected MultiItemTypeAdapter mRecyclerAdapter;
+//    protected MultiItemTypeAdapter mRecyclerAdapter;
 
 
     @Bind(R.id.recycleView)
@@ -84,8 +83,8 @@ public abstract class AbsListFragment extends AbsBaseFragment {
         if (getItemDecoration() != null) {
             mRecyclerView.addItemDecoration(getItemDecoration());
         }
-        mRecyclerAdapter =getAdapter();
-        mRecyclerAdapter.setOnItemClickListener(getItemListener());
+//        mRecyclerAdapter =getAdapter();
+//        mRecyclerAdapter.setOnItemClickListener(getItemListener());
 
         preLoad();
     }
@@ -94,13 +93,13 @@ public abstract class AbsListFragment extends AbsBaseFragment {
 
     }
 
-    protected abstract MultiItemTypeAdapter getAdapter();
+//    protected abstract MultiItemTypeAdapter getAdapter();
 
     protected abstract RecyclerView.ItemDecoration getItemDecoration();
 
     protected abstract RecyclerView.LayoutManager getLayoutManager();
 
-    protected abstract MultiItemTypeAdapter.OnItemClickListener getItemListener();
+//    protected abstract MultiItemTypeAdapter.OnItemClickListener getItemListener();
 
 
 //    if (index == 0) {

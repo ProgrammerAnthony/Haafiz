@@ -1,7 +1,5 @@
 package edu.com.app.base;
 
-import rx.Subscription;
-
 /**
  * Created by Anthony on 2016/5/4.
  * Class Note:
@@ -10,7 +8,7 @@ import rx.Subscription;
  */
 public interface BasePresenter<T extends BaseView> {
 
-    void attachView(T view , Subscription subscription);
+    void attachView(T view );
 
     void detachView();
 

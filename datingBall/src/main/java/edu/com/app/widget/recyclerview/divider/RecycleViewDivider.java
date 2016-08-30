@@ -1,4 +1,4 @@
-package edu.com.app.widget.recyclerview;
+package edu.com.app.widget.recyclerview.divider;
 
 import android.content.Context;
 import android.content.res.TypedArray;

@@ -8,6 +8,10 @@ import rx.Subscription;
  *
  */
 public class PersonalInfoPresenter implements PersonalInfoContract.Presenter{
+
+    private PersonalInfoContract.View mView;
+
+    private Subscription mSubscription;
     @Override
     public void processAlphaTopBar() {
 
@@ -23,18 +27,16 @@ public class PersonalInfoPresenter implements PersonalInfoContract.Presenter{
 
     }
 
-/*    @Override
-    public void attachView(PersonalInfoContract.View view) {
-
-    }*/
-
     @Override
-    public void attachView(PersonalInfoContract.View view, Subscription subscription) {
-
+    public void attachView(PersonalInfoContract.View view) {
+        this.mView =view;
     }
 
     @Override
     public void detachView() {
-
+        mView = null;
+        if (mSubscription != null && !mSubscription.isUnsubscribed()) {
+            mSubscription.unsubscribe();
+        }
     }
 }

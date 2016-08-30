@@ -99,7 +99,7 @@ public class NewsTabFragment extends AbsBaseFragment implements NewsContract.Tab
     protected void initViewsAndEvents(View rootView) {
         initTabViewPager();
         //subscription is null
-        mPresenter.attachView(NewsTabFragment.this, mSubscription);
+        mPresenter.attachView(NewsTabFragment.this);
         mPresenter.loadDataFromDb();//we already load data in splash view ,so use db data.
 
     }

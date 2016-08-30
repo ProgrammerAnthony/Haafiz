@@ -106,7 +106,7 @@ public class LoginPresenter implements LoginContract.Presenter, Handler.Callback
             registerUser.setError("用户名不能有大写字母哦");
             return;
         }
-        mLoginView.showProgress("注册中...(注册功能还未实现)");
+//        mLoginView.showProgress("注册中...(注册功能还未实现)");
 
         // TODO: 2016/5/25   process register event
 /*        Observable.zip(mRxleanCloud.HXRegister(username, passwd), mRxleanCloud.Register(username, passwd), new Func2<Boolean, User, Boolean>() {
@@ -159,7 +159,7 @@ public class LoginPresenter implements LoginContract.Presenter, Handler.Callback
             passwdLogin.setError("密码不能为空");
             return;
         }
-        mLoginView.showProgress("登陆中...(登陆功能还未实现)");
+//        mLoginView.showProgress("登陆中...(登陆功能还未实现)");
 
         // TODO: 2016/5/25  process login event
 /*        mRxleanCloud.Login(username, passwd)
@@ -286,14 +286,14 @@ public class LoginPresenter implements LoginContract.Presenter, Handler.Callback
     }*/
 
     @Override
-    public void attachView(LoginContract.View view, Subscription subscription) {
+    public void attachView(LoginContract.View view) {
         mLoginView = view;
-        mSubscription =subscription;
     }
 
     @Override
     public void detachView() {
         mLoginView = null;
+        if (mSubscription != null) mSubscription.unsubscribe();
     }
 
 }

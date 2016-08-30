@@ -139,10 +139,9 @@ dependencies {
 
     //添加android缺失的部分javax注解
 
-    compile project(':pagerslidingtabstrip')
+
     compile project(':sweetDialog')
-    compile files('libs/okhttp-2.7.0.jar')
-    compile files('libs/okhttputils-2_3_4.jar')
+
 
 //--------------LeanCloud------------------------
     // LeanCloud 基础包

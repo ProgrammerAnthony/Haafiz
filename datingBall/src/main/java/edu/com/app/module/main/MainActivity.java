@@ -129,7 +129,7 @@ public class MainActivity extends AbsBaseActivity implements MainContract.View, 
         isLogin = mPref.isLogined();
         //初始化Presenter
 
-        mMainPresenter.attachView(this,mSubscription);
+        mMainPresenter.attachView(this);
 
         setSupportActionBar(toolbar);
         navView.setNavigationItemSelectedListener(this);

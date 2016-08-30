@@ -1,6 +1,5 @@
-include ':datingBall', ':pagerslidingtabstrip', ':sweetDialog'
+include ':datingBall', ':sweetDialog'
 
-project(':pagerslidingtabstrip').projectDir = new File('ThirdPart/pagerslidingtabstrip')
 project(':sweetDialog').projectDir =new File('ThirdPart/sweetDialog')
 
 rootProject.name = 'project-root'

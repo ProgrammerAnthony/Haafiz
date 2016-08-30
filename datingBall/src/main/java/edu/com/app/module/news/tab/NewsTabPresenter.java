@@ -114,9 +114,8 @@ public class NewsTabPresenter implements NewsContract.TabPresenter {
 
 
     @Override
-    public void attachView(NewsContract.TabView view, Subscription subscription) {
+    public void attachView(NewsContract.TabView view) {
         this.mView = view;
-        this.mSubscription = subscription;
     }
 
     @Override

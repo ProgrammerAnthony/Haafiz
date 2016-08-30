@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 import edu.com.app.widget.recyclerview.adapter.MultiItemTypeAdapter;
 import edu.com.app.widget.recyclerview.base.ViewHolder;
-import edu.com.app.widget.recyclerview.util.WrapperUtils;
+import edu.com.app.widget.recyclerview.utils.WrapperUtils;
 
 
 /**

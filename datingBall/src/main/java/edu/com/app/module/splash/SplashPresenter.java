@@ -52,7 +52,6 @@ public class SplashPresenter implements SplashContract.Presenter {
     public void initData() {
         mShowMainTime = System.currentTimeMillis() + SPLASH_SHOW_SECONDS * 2000;
 
-//        mSubscription = subscription;
 
         //load channel list data ,then save to database
         mSubscription = mDataManager.loadChannelList(Constants.FIRST_MENU_URL)
@@ -112,9 +111,8 @@ public class SplashPresenter implements SplashContract.Presenter {
 
 
     @Override
-    public void attachView(SplashContract.View view, Subscription subscription) {
+    public void attachView(SplashContract.View view) {
         mView = view;
-        mSubscription = subscription;
     }
 
     @Override
