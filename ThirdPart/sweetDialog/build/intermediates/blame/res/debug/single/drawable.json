@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\drawable\\success_circle.xml",
+        "source": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\src\\main\\res\\drawable\\success_circle.xml"
+    },
+    {
+        "merged": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\drawable\\warning_sigh.xml",
+        "source": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\src\\main\\res\\drawable\\warning_sigh.xml"
+    },
+    {
+        "merged": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\drawable\\error_circle.xml",
+        "source": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\src\\main\\res\\drawable\\error_circle.xml"
+    },
+    {
+        "merged": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\drawable\\warning_circle.xml",
+        "source": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\src\\main\\res\\drawable\\warning_circle.xml"
+    },
+    {
+        "merged": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\drawable\\success_bow.xml",
+        "source": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\src\\main\\res\\drawable\\success_bow.xml"
+    },
+    {
+        "merged": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\drawable\\error_center_x.xml",
+        "source": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\src\\main\\res\\drawable\\error_center_x.xml"
+    },
+    {
+        "merged": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\drawable\\gray_button_background.xml",
+        "source": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\src\\main\\res\\drawable\\gray_button_background.xml"
+    },
+    {
+        "merged": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\drawable\\blue_button_background.xml",
+        "source": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\src\\main\\res\\drawable\\blue_button_background.xml"
+    },
+    {
+        "merged": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\drawable\\red_button_background.xml",
+        "source": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\src\\main\\res\\drawable\\red_button_background.xml"
+    },
+    {
+        "merged": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\drawable\\dialog_background.xml",
+        "source": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\src\\main\\res\\drawable\\dialog_background.xml"
+    }
+]

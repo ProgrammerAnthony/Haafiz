@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/leftButton"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="Left" />
+
+    <Button
+        android:id="@+id/rightButton"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/leftButton"
+        android:layout_alignBottom="@+id/leftButton"
+        android:layout_marginLeft="24dp"
+        android:layout_toRightOf="@+id/leftButton"
+        android:text="Right" />
+
+</RelativeLayout>

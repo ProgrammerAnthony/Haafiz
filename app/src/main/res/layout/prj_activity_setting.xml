@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg_light"
+    android:orientation="vertical"
+    skin:enable="true">
+
+    <include
+        layout="@layout/prj_top_bar_setting"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="37"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/txt_count_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账号设置"
+                android:textColor="@color/common_tv_grey"
+                android:textSize="@dimen/TextSmall"
+             />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:id="@+id/txt_personal_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="个人设置"
+                    android:textColor="@color/common_tv_dark"
+                    android:textSize="@dimen/TextMedium"
+                  />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:id="@+id/txt_platform_bind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="平台绑定"
+                    android:textColor="@color/common_tv_dark"
+                    android:textSize="@dimen/TextMedium"
+                 />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/split_bg1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="#EEEEEE" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/txt_feature_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="功能设置"
+                android:textColor="@color/common_tv_grey"
+                android:textSize="@dimen/TextSmall"
+               />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:id="@+id/txt_push"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="推送通知"
+                    android:textColor="@color/common_tv_dark"
+                    android:textSize="@dimen/TextMedium"
+                  />
+
+                <CheckBox
+                    android:id="@+id/cbx_push"
+                    android:layout_width="30dp"
+                    android:layout_height="19dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/prj_check_box"
+                    android:button="@null" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:id="@+id/txt_Wifi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="仅WIFI下加载图片"
+                    android:textColor="@color/common_tv_dark"
+                    android:textSize="@dimen/TextMedium"
+                   />
+
+                <CheckBox
+                    android:id="@+id/cbx_wifi"
+                    android:layout_width="30dp"
+                    android:layout_height="19dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/prj_check_box"
+                    android:button="@null" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_cache"
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:id="@+id/txt_clear_cache"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="清理缓存"
+                    android:textColor="@color/common_tv_dark"
+                    android:textSize="@dimen/TextMedium"
+                   />
+
+                <TextView
+                    android:id="@+id/txt_cache_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="0.0MB"
+                    android:textColor="@color/common_tv_dark"
+                    android:textSize="@dimen/TextMedium"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_offline_read"
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:id="@+id/txt_offline_read"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="离线阅读"
+                    android:textColor="@color/common_tv_dark"
+                    android:textSize="@dimen/TextMedium"
+                   />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/split_bg2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="#EEEEEE" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/txt_system_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="系统设置"
+                android:textColor="@color/common_tv_grey"
+                android:textSize="@dimen/TextSmall"
+                />
+
+            <RelativeLayout
+                android:id="@+id/layout_font"
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:id="@+id/txt_font_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="字体设置"
+                    android:textColor="@color/common_tv_dark"
+                    android:textSize="@dimen/TextMedium"
+               />
+
+                <TextView
+                    android:id="@+id/txt_font_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="系统默认字体"
+                    android:textColor="@color/common_tv_dark"
+                    android:textSize="@dimen/TextMedium"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_font_size"
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:id="@+id/txt_font_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="正文字号"
+                    android:textColor="@color/common_tv_dark"
+                    android:textSize="@dimen/TextMedium"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_font_size_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="大"
+                    android:textColor="@color/common_tv_dark"
+                    android:textSize="@dimen/TextMedium"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:id="@+id/txt_night_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="夜间模式"
+                    android:textColor="@color/common_tv_dark"
+                    android:textSize="@dimen/TextMedium"
+                 />
+
+                <CheckBox
+                    android:id="@+id/cbx_night_mode"
+                    android:layout_width="30dp"
+                    android:layout_height="19dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/prj_check_box"
+                    android:button="@null" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:id="@+id/txt_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="当前版本"
+                    android:textColor="@color/common_tv_dark"
+                    android:textSize="@dimen/TextMedium"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_current_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="1.0.0"
+                    android:textColor="@color/common_tv_dark"
+                    android:textSize="@dimen/TextMedium"
+                   />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/split_bg3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

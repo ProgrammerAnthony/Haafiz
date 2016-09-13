@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ThirdPart/SegmentControl" />
+            <option value="$PROJECT_DIR$/ThirdPart/ShareSDK" />
+            <option value="$PROJECT_DIR$/ThirdPart/SlidingMenu" />
+            <option value="$PROJECT_DIR$/ThirdPart/ViewPagerIndicator" />
+            <option value="$PROJECT_DIR$/ThirdPart/citypicker" />
+            <option value="$PROJECT_DIR$/ThirdPart/sweetDialog" />
+            <option value="$PROJECT_DIR$/app" />
+          </set>
+        </option>
+        <option name="myModules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ThirdPart/SegmentControl" />
+            <option value="$PROJECT_DIR$/ThirdPart/ShareSDK" />
+            <option value="$PROJECT_DIR$/ThirdPart/SlidingMenu" />
+            <option value="$PROJECT_DIR$/ThirdPart/ViewPagerIndicator" />
+            <option value="$PROJECT_DIR$/ThirdPart/citypicker" />
+            <option value="$PROJECT_DIR$/ThirdPart/sweetDialog" />
+            <option value="$PROJECT_DIR$/app" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

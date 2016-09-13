@@ -1,0 +1,4 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@mipmap/prj_ic_rb_font_check" android:state_checked="true" android:state_enabled="true" />
+    <item android:drawable="@mipmap/prj_ic_rb_font_uncheck" android:state_checked="false" android:state_enabled="true" />
+</selector>

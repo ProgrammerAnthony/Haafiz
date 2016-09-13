@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FishMan.iml" filepath="$PROJECT_DIR$/FishMan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ThirdPart/SegmentControl/SegmentControl.iml" filepath="$PROJECT_DIR$/ThirdPart/SegmentControl/SegmentControl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ThirdPart/ShareSDK/ShareSDK.iml" filepath="$PROJECT_DIR$/ThirdPart/ShareSDK/ShareSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ThirdPart/SlidingMenu/SlidingMenu.iml" filepath="$PROJECT_DIR$/ThirdPart/SlidingMenu/SlidingMenu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ThirdPart/ViewPagerIndicator/ViewPagerIndicator.iml" filepath="$PROJECT_DIR$/ThirdPart/ViewPagerIndicator/ViewPagerIndicator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/citypicker/citypicker.iml" filepath="$PROJECT_DIR$/citypicker/citypicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ThirdPart/sweetDialog/sweetDialog.iml" filepath="$PROJECT_DIR$/ThirdPart/sweetDialog/sweetDialog.iml" />
+    </modules>
+  </component>
+</project>

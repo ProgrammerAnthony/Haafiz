@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <string-array name="bottom_navigation_colors">
+        <item>#EB413D</item>
+        <item>#F57C00</item>
+        <item>#C5EC3D</item>
+        <item>#2196F3</item>
+    </string-array>
+
+    <!-- 数据库Entity Class -->
+    <string-array name="db_tb">
+        <item>com.app.gzgov.common.data.bean.Channel</item>
+        <item>com.app.gzgov.common.data.bean.NewsItem</item>
+        <item>com.app.gzgov.common.data.bean.OfflineResource</item>
+        <item>com.app.gzgov.module.data.GZGridItem1</item>
+        <item>com.app.gzgov.module.data.GZGridItem2</item>
+        <item>com.app.gzgov.module.data.GZNewsItem</item>
+    </string-array>
+
+    <string-array name="setting_list">
+        <item>字体大小</item>
+        <item>清楚缓存</item>
+        <item>功能介绍</item>
+        <item>意见反馈</item>
+        <item>社交分享</item>
+    </string-array>
+
+
+</resources>

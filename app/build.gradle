@@ -1,0 +1,115 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId rootProject.ext.applicationId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //junit testing
+    testCompile "junit:junit:$rootProject.junitVersion"
+    //appcompat
+    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    //v4
+    compile "com.android.support:support-v4:$rootProject.supportLibraryVersion"
+    //recyclerView
+    compile "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+    //design library
+    compile "com.android.support:design:$rootProject.supportLibraryVersion"
+    //Material Design Progress Bar
+    compile "com.pnikosis:materialish-progress:$rootProject.materialishProgressVersion"
+    // Glide to load image
+    compile "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+    //butterKnife annotation
+    compile "com.jakewharton:butterknife:$rootProject.butterKnifeVersion"
+    //RxAndroid
+    compile "io.reactivex:rxandroid:$rootProject.rxandroidVersion"
+    //RxJava
+    compile "io.reactivex:rxjava:$rootProject.rxjavaVersion"
+    //RxPermission
+    compile "com.tbruyelle.rxpermissions:rxpermissions:$rootProject.rxpermissionsVersion"
+    //multiDex
+    compile "com.android.support:multidex:$rootProject.multidexVersion"
+
+    //otto eventbus
+    compile "com.squareup:otto:$rootProject.ottoVersion"
+    //各种swipe 效果的包
+    compile "com.anthony.ultimateswipetool:library:$rootProject.swipeToolVersion"
+    //retrofit
+    compile "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    compile "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
+    compile "com.squareup.retrofit2:adapter-rxjava:$rootProject.retrofitVersion"
+    //okHttp
+    compile "com.squareup.okhttp3:okhttp:$rootProject.okHttpVersion"
+    compile "com.squareup.okhttp3:logging-interceptor:$rootProject.okHttpVersion"
+
+    compile "com.jakewharton.timber:timber:$rootProject.timberVersion"
+    //dagger2
+    apt "com.google.dagger:dagger-compiler:$rootProject.daggerCompilerVersion"
+    //指定注解处理器
+    compile "com.google.dagger:dagger:$rootProject.daggerVersion"
+    //dagger公用api
+    provided "org.glassfish:javax.annotation:$rootProject.javaxAnnotationVersion"
+    //auto value
+    provided "com.google.auto.value:auto-value:$rootProject.autoValueVersion"
+    apt "com.google.auto.value:auto-value:$rootProject.autoValueVersion"
+    apt "com.ryanharter.auto.value:auto-value-parcel:$rootProject.autoValueParcelVersion"
+    compile("com.gxz.pagerslidingtabstrip:library:$rootProject.pagerSlidingTabstripVersion") {
+        // exclusion for update the android support jar
+        // for example, you can use the appcompat-v7 in your project
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+//        exclude group: 'com.nineoldandroids', module: 'library'
+    }
+    compile "com.afollestad.material-dialogs:core:$rootProject.materialDialogsVersion"
+    compile "com.bm.photoview:library:$rootProject.photoViewVersion"
+
+
+
+    compile project(':SegmentControl')
+    compile project(':ShareSDK')
+    compile project(':SlidingMenu')
+    compile project(':sweetDialog')
+    compile project(':ViewPagerIndicator')
+    compile files('libs/ormlite-android-4.49.jar')
+    compile files('libs/ormlite-core-4.49.jar')
+    compile project(':citypicker')
+    //sqlBrite
+//    compile "com.squareup.sqlbrite:sqlbrite:sqlBriteVersion0.7.0"
+
+    // LeanCloud需要的Support包
+//    compile 'com.android.support:support-v4:23.0.3'
+    // LeanCloud 基础包
+    compile "cn.leancloud.android:avoscloud-sdk:$rootProject.avosCloudSDKVersion"
+    // 推送与实时聊天需要的包
+    compile("cn.leancloud.android:avoscloud-push:$rootProject.avosCloudPushVersion") { transitive = true }
+
+}

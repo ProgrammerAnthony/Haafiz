@@ -3,29 +3,20 @@
 buildscript {
     repositories {
         jcenter()
-        mavenCentral()
-        //LeanCloud
+        //这里是 LeanCloud 的包仓库
         maven {
             url "http://mvn.leancloud.cn/nexus/content/repositories/releases"
         }
-//fabric
-//        maven { url 'https://maven.fabric.io/public' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.1.0'
-        //realm support
-        classpath 'io.realm:realm-gradle-plugin:0.91.0'
+
         // Better IDE support for annotations (so Android Studio interacts better with Dagger)
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
 
-        // The Fabric Gradle not currently not available
-//        classpath 'io.fabric.tools:gradle:1.21.6'
     }
 }
 
-// Define versions in a single place
 ext {
     // Sdk and tools
     minSdkVersion = 16
@@ -34,49 +25,47 @@ ext {
     buildToolsVersion = '23.0.3'
     versionCode = 1
     versionName = '1.0'
-    applicationId = 'edu.com.app'
+    applicationId = 'com.anthony.app'
 
-    // App dependencies
+    // base App dependencies
     supportLibraryVersion = '23.4.0'
     junitVersion = '4.12'
-    loggerVersion = '1.11'
-    materialishProgressVersion = '1.7'
     glideVersion = '3.7.0'
     butterKnifeVersion = '7.0.1'
-    aviVersion = '1.0.1'
-    photoviewVersion = '1.2.4'
     rxandroidVersion = '1.2.0'
     rxjavaVersion = '1.1.5'
     rxpermissionsVersion = '0.7.0@aar'
-    materialLoginVersion = '1.4.0'
-    shimmerVersion = '0.1.0@aar'
-    easyImageVersion = '1.2.3'
-    ucropVersion = '1.5.0'
-    blurryVersion = '2.0.2'
-    leakcanaryVersion = '1.4-beta2'
     daggerCompilerVersion = '2.0.2'
     daggerVersion = '2.0.2'
     multidexVersion = '1.0.1'
     javaxAnnotationVersion = '10.0-b28'
+    retrofitVersion = '2.0.0'
+    okHttpVersion = '3.2.0'
+    ottoVersion = '1.3.8'
+    //other app dependencies
+    materialishProgressVersion = '1.7'
+    photoViewVersion = '1.4.0'
+    materialDialogsVersion = '0.8.5.9'
+    pagerSlidingTabstripVersion = '1.3'
+    autoValueVersion = '1.2'
+    autoValueParcelVersion = '0.2.0'
+    swipeToolVersion = '1.0.1'
+    timberVersion = '4.1.2'
+    avosCloudSDKVersion = 'v3.+'
+    avosCloudPushVersion = 'v3.+@aar'
 }
+
 
 allprojects {
     repositories {
         jcenter()
-        mavenCentral()
-        maven { url "https://raw.githubusercontent.com/umeng/mvn-repo-umeng/master/repository" }
-        maven { url "http://dl.bintray.com/tbruyelle/tbruyelle" }
-        maven { url "https://jitpack.io" }
-        //leanCloud
-        maven { url "http://mvn.leancloud.cn/nexus/content/repositories/releases" }
-        //UltimateRecyclerView
-        maven { url "http://dl.bintray.com/jjhesk/maven" }
-        //fabric
-//        maven { url 'https://maven.fabric.io/public' }
+        //这里是 LeanCloud 的包仓库
+        maven {
+            url "http://mvn.leancloud.cn/nexus/content/repositories/releases"
+        }
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
-

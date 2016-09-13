@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:id="@+id/layout_comment"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_alignParentBottom="true"
+    android:background="@color/common_tv_dark"
+    android:paddingBottom="7dp"
+    android:paddingTop="7dp">
+
+    <RelativeLayout
+        android:id="@+id/layout_edit_comment"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="7dp"
+        android:background="@drawable/prj_bg_edit_comment">
+
+        <ImageView
+            android:id="@+id/ic_edit_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/prj_ic_edit_comment" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/ic_edit_comment"
+            android:text="写评论..."
+            android:textSize="@dimen/TextLarge"
+ />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/layout_edit_comment"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/layout_ic_comment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ic_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/prj_ic_comment" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_ic_star"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ic_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/prj_ic_star" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_ic_share"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ic_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/prj_ic_share" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

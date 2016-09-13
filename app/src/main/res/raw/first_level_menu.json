@@ -1,0 +1,35 @@
+﻿{
+  "type": "1001",
+  "channels": [
+    {
+      "title": "资讯",
+      "type": "2001",
+      "img": "drawable://prj_selector_btn_tab_news",
+      "url": "raw://news_menu"
+    },
+    {
+      "title": "图说",
+      "type": "3001",
+      "img": "drawable://prj_selector_btn_tab_photo",
+      "url": "index_subscribe.json"
+    },
+    {
+      "title": "旅行",
+      "type": "4001",
+      "img": "drawable://prj_selector_btn_tab_trip",
+      "url": "index_home.json"
+    },
+    {
+      "title": "通知",
+      "type": "5001",
+      "img": "drawable://prj_selector_btn_tab_notice",
+      "url": "raw://notice_menu"
+    },
+    {
+      "title": "我",
+      "type": "6001",
+      "img": "drawable://prj_selector_btn_tab_music",
+      "url": ""
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_app_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:layout_alignTop="@id/iv_app_icon"
+        android:layout_toRightOf="@id/iv_app_icon"
+        android:layout_marginLeft="5dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Notification.Title"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_name"
+        android:layout_below="@id/tv_name"
+        android:text="正在上传文件..."
+        android:textAppearance="@android:style/TextAppearance.Material.Notification.Info"
+        android:textSize="10sp" />
+
+    <ProgressBar
+        android:id="@+id/progressbar_upload"
+        style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal"
+        android:layout_below="@id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_alignLeft="@id/tv_title"
+        android:layout_marginTop="3dp"
+        android:layout_height="2dp"
+        android:layout_marginRight="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/layout_btn_cancel"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_alignTop="@id/tv_name"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/prj_bg_offline_cancel">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="取消"
+            android:textAppearance="@android:style/TextAppearance.Material.Notification.Info"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</RelativeLayout>
