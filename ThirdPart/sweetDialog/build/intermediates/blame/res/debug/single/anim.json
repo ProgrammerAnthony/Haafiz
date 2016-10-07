@@ -1,26 +1,26 @@
 [
     {
-        "merged": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\anim\\modal_in.xml",
-        "source": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\src\\main\\res\\anim\\modal_in.xml"
+        "merged": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\anim\\success_mask_layout.xml",
+        "source": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\anim\\success_mask_layout.xml"
     },
     {
-        "merged": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\anim\\success_mask_layout.xml",
-        "source": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\src\\main\\res\\anim\\success_mask_layout.xml"
+        "merged": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\anim\\success_bow_roate.xml",
+        "source": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\anim\\success_bow_roate.xml"
     },
     {
-        "merged": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\anim\\success_bow_roate.xml",
-        "source": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\src\\main\\res\\anim\\success_bow_roate.xml"
+        "merged": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\anim\\error_x_in.xml",
+        "source": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\anim\\error_x_in.xml"
     },
     {
-        "merged": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\anim\\modal_out.xml",
-        "source": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\src\\main\\res\\anim\\modal_out.xml"
+        "merged": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\anim\\error_frame_in.xml",
+        "source": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\anim\\error_frame_in.xml"
     },
     {
-        "merged": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\anim\\error_frame_in.xml",
-        "source": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\src\\main\\res\\anim\\error_frame_in.xml"
+        "merged": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\anim\\modal_in.xml",
+        "source": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\anim\\modal_in.xml"
     },
     {
-        "merged": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\anim\\error_x_in.xml",
-        "source": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\src\\main\\res\\anim\\error_x_in.xml"
+        "merged": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\debug\\anim\\modal_out.xml",
+        "source": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\src\\main\\res\\anim\\modal_out.xml"
     }
 ]
