@@ -1,4 +1,4 @@
-include ':app', ':sweetDialog', ':citypicker', ':SlidingMenu', ':ViewPagerIndicator', ':ShareSDK', ':SegmentControl',':citypicker'
+include ':app', ':sweetDialog', ':citypicker', ':SlidingMenu', ':ViewPagerIndicator', ':ShareSDK', ':SegmentControl', ':citypicker', ':rxlibrary'
 
 project(':sweetDialog').projectDir = new File('ThirdPart/sweetDialog')
 project(':SlidingMenu').projectDir = new File('ThirdPart/SlidingMenu')

@@ -14,7 +14,7 @@ public class Constants {
 
     public static final String BASE_TYPE_ACTIVITY_MAP_PATH = "raw://type_activity_map";
 
-    public static final String Remote_BASE_END_POINT = "http://m.gzgov.gov.cn/";//url for testing
+    public static final String Remote_BASE_END_POINT = "http://www.baidu.com";//url for testing
     public static final String LOCAL_FILE_BASE_END_POINT = "raw://";
 
     public static final String CURRENT_USER = "current_user";
@@ -31,20 +31,7 @@ public class Constants {
 
     public static final String TRS_FONT_MAP_PATH = "trs_font_map";
 
-
-
-    public static String USER_PROTOCOL_URL = "http://www.baidu.com";
-    //    public static String MAIN_PAGE_URL = "raw://gz_main_page";
-    public static String MAIN_PAGE_URL = "http://m.gzgov.gov.cn/index.json";
-    //    public static String LEFT_MENU = "raw://gz_channels";
-    public static String LEFT_MENU = "http://m.gzgov.gov.cn/index1.json";
-
-    public static String TAB3_PAGE_FIRST = "raw://gz_tab3_page_first";
-    public static String TAB3_PAGE_SECOND = "raw://gz_tab3_page_second";
-    public static String FRAGMENT_TAB4_URL = "http://m.gzgov.gov.cn/bdfw_1/index.json";
-
-//    public static String GRID_ITEM_LIST_TITLE = "grid_item_list_title";
-
-    public static String GRID_ITEM_LIST = "grid_item_list_items";
+    //百度api地址
+    public static final String REMOTE_BASE_END_POINT_WEATHER = "http://apis.baidu.com/";
 
 }

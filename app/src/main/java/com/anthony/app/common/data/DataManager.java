@@ -8,11 +8,13 @@ import com.anthony.app.common.data.bean.Channel;
 import com.anthony.app.common.data.bean.Menu;
 import com.anthony.app.common.data.bean.NewsItem;
 import com.anthony.app.common.data.bean.NormalJsonInfo;
+import com.anthony.app.common.data.bean.WeatherData;
 import com.anthony.app.common.data.download.DownloadService;
 import com.anthony.app.common.data.retrofit.HttpResult;
 import com.anthony.app.common.data.retrofit.HttpResultFunc;
 import com.anthony.app.common.data.retrofit.ItemJsonDeserializer;
 import com.anthony.app.common.data.retrofit.RemoteApi;
+import com.anthony.app.common.data.retrofit.WeatherApi;
 import com.anthony.app.common.data.upload.UploadParam;
 import com.anthony.app.common.data.upload.UploadService;
 import com.anthony.app.common.injection.scope.ApplicationContext;
@@ -223,5 +225,32 @@ public class DataManager {
                 .observeOn(AndroidSchedulers.mainThread());
     }
 
-
+    public Observable<WeatherData> loadWeatherData(String location) {
+        return httpHelper.getService(WeatherApi.class)
+                .loadWeatherData(location, "zh-Hans", "c", "0", "3")
+                .flatMap(new Func1<ResponseBody, Observable<String>>() {
+                    @Override
+                    public Observable<String> call(ResponseBody responseBody) {
+                        try {
+                            String result = responseBody.string();
+                            return Observable.just(result);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                            throw new RuntimeException("IOException when convert Response Body to String");
+                        }
+                    }
+                })
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .flatMap(new Func1<String, Observable<WeatherData>>() {
+                    @Override
+                    public Observable<WeatherData> call(String s) {
+                        Gson gson = new GsonBuilder().create();
+                        WeatherData obj = gson.fromJson(s,
+                                new TypeToken<WeatherData>() {
+                                }.getType());
+                        return Observable.just(obj);
+                    }
+                });
+    }
 }

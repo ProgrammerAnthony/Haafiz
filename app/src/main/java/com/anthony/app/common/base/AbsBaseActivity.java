@@ -108,7 +108,9 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
     /**
      * Dagger2 use in your application module(not used in 'base' module)
      */
-    protected abstract void injectDagger(ActivityComponent activityComponent);
+    protected  void injectDagger(ActivityComponent activityComponent){
+        activityComponent.inject(this);
+    }
     /**
      * init views and events here
      */

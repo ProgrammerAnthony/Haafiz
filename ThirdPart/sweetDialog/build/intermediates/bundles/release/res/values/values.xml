@@ -19,7 +19,11 @@
     <color name="text_color">#575757</color>
     <color name="trans_success_stroke_color">#33A5DC86</color>
     <color name="warning_stroke_color">#F8BB86</color>
-    <declare-styleable name="Rotate3dAnimation"><attr format="enum" name="rollType"><enum name="x" value="0"/><enum name="y" value="1"/><enum name="z" value="2"/></attr><attr format="float" name="fromDeg"/><attr format="float" name="toDeg"/><attr format="fraction" name="pivotX"/><attr format="fraction" name="pivotY"/></declare-styleable>
+    <declare-styleable name="Rotate3dAnimation"><attr format="enum" name="rollType">
+            <enum name="x" value="0"/>
+            <enum name="y" value="1"/>
+            <enum name="z" value="2"/>
+        </attr><attr format="float" name="fromDeg"/><attr format="float" name="toDeg"/><attr format="fraction" name="pivotX"/><attr format="fraction" name="pivotY"/></declare-styleable>
     <dimen name="alert_width">290dp</dimen>
     <dimen name="common_circle_width">3dp</dimen>
     <dimen name="progress_circle_radius">34dp</dimen>

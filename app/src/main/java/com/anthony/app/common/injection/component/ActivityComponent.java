@@ -1,12 +1,16 @@
 package com.anthony.app.common.injection.component;
 
 
+import com.anthony.app.common.base.AbsBaseActivity;
+import com.anthony.app.common.base.AbsBaseFragment;
 import com.anthony.app.common.base.AbsListFragment;
 import com.anthony.app.common.injection.module.ActivityModule;
 import com.anthony.app.common.injection.scope.PerActivity;
 import com.anthony.app.common.widgets.imagebrowse.ImageBrowserActivity;
 import com.anthony.app.common.widgets.webview.WebViewCommentActivity;
-import com.anthony.app.module.main.MainActivity;
+import com.anthony.app.module.MainListActivity;
+import com.anthony.app.module.banner.BannerActivity;
+import com.anthony.app.module.tab.TabActivity;
 import com.anthony.app.module.splash.LoadingActivity;
 
 import dagger.Component;
@@ -27,6 +31,9 @@ import dagger.Component;
 @PerActivity
 @Component(dependencies = ApplicationComponent.class, modules = ActivityModule.class)
 public interface ActivityComponent {
+    void inject(AbsBaseActivity absBaseActivity);
+
+    void inject(AbsBaseFragment absBaseFragment);
 
     //all of the project
     void inject(WebViewCommentActivity webViewActivity);
@@ -38,6 +45,10 @@ public interface ActivityComponent {
     //this project
     void inject(LoadingActivity loadingActivity);
 
-    void inject(MainActivity mainActivity);
+    void inject(TabActivity tabActivity);
+
+    void inject(MainListActivity mainListActivity);
+
+    void inject(BannerActivity bannerActivity);
 
 }

@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\androidTest\\debug\\values\\values.xml",
+        "outputFile": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 102
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 162
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -49,7 +49,7 @@
                     "endOffset": 214
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -68,7 +68,7 @@
                     "endOffset": 267
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -87,7 +87,7 @@
                     "endOffset": 321
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -106,7 +106,7 @@
                     "endOffset": 373
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -125,7 +125,7 @@
                     "endOffset": 433
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -144,7 +144,7 @@
                     "endOffset": 491
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -163,7 +163,7 @@
                     "endOffset": 549
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -182,7 +182,7 @@
                     "endOffset": 607
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -201,7 +201,7 @@
                     "endOffset": 665
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -220,7 +220,7 @@
                     "endOffset": 723
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -239,7 +239,7 @@
                     "endOffset": 774
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -258,7 +258,7 @@
                     "endOffset": 833
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -277,7 +277,7 @@
                     "endOffset": 888
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -296,7 +296,7 @@
                     "endOffset": 944
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -315,7 +315,7 @@
                     "endOffset": 989
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -334,7 +334,7 @@
                     "endOffset": 1052
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -353,7 +353,7 @@
                     "endOffset": 1107
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -365,96 +365,20 @@
             },
             {
                 "to": {
-                    "startLine": 23,
-                    "startColumn": 4,
-                    "startOffset": 2031,
-                    "endColumn": 43,
-                    "endOffset": 2070
-                },
-                "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 22,
-                        "startColumn": 4,
-                        "startOffset": 1452,
-                        "endColumn": 43,
-                        "endOffset": 1491
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 24,
-                    "startColumn": 4,
-                    "startOffset": 2075,
-                    "endColumn": 49,
-                    "endOffset": 2120
-                },
-                "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 23,
-                        "startColumn": 4,
-                        "startOffset": 1496,
-                        "endColumn": 49,
-                        "endOffset": 1541
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 25,
-                    "startColumn": 4,
-                    "startOffset": 2125,
-                    "endColumn": 53,
-                    "endOffset": 2174
-                },
-                "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 24,
-                        "startColumn": 4,
-                        "startOffset": 1546,
-                        "endColumn": 53,
-                        "endOffset": 1595
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 26,
-                    "startColumn": 4,
-                    "startOffset": 2179,
-                    "endColumn": 46,
-                    "endOffset": 2221
-                },
-                "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 25,
-                        "startColumn": 4,
-                        "startOffset": 1600,
-                        "endColumn": 46,
-                        "endOffset": 1642
-                    }
-                }
-            },
-            {
-                "to": {
                     "startLine": 27,
                     "startColumn": 4,
-                    "startOffset": 2226,
-                    "endColumn": 53,
-                    "endOffset": 2275
+                    "startOffset": 2079,
+                    "endColumn": 43,
+                    "endOffset": 2118
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
                         "startLine": 26,
                         "startColumn": 4,
-                        "startOffset": 1647,
-                        "endColumn": 53,
-                        "endOffset": 1696
+                        "startOffset": 1500,
+                        "endColumn": 43,
+                        "endOffset": 1539
                     }
                 }
             },
@@ -462,12 +386,88 @@
                 "to": {
                     "startLine": 28,
                     "startColumn": 4,
-                    "startOffset": 2280,
-                    "endColumn": 68,
-                    "endOffset": 2344
+                    "startOffset": 2123,
+                    "endColumn": 49,
+                    "endOffset": 2168
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\exploded-aar\\com.pnikosis\\materialish-progress\\1.7\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 1544,
+                        "endColumn": 49,
+                        "endOffset": 1589
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 2173,
+                    "endColumn": 53,
+                    "endOffset": 2222
+                },
+                "from": {
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 1594,
+                        "endColumn": 53,
+                        "endOffset": 1643
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 2227,
+                    "endColumn": 46,
+                    "endOffset": 2269
+                },
+                "from": {
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 29,
+                        "startColumn": 4,
+                        "startOffset": 1648,
+                        "endColumn": 46,
+                        "endOffset": 1690
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 2274,
+                    "endColumn": 53,
+                    "endOffset": 2323
+                },
+                "from": {
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 4,
+                        "startOffset": 1695,
+                        "endColumn": 53,
+                        "endOffset": 1744
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 2328,
+                    "endColumn": 68,
+                    "endOffset": 2392
+                },
+                "from": {
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\exploded-aar\\com.pnikosis\\materialish-progress\\1.7\\res\\values\\values.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -479,100 +479,100 @@
             },
             {
                 "to": {
-                    "startLine": 29,
+                    "startLine": 33,
                     "startColumn": 4,
-                    "startOffset": 2349,
+                    "startOffset": 2397,
                     "endColumn": 48,
-                    "endOffset": 2393
+                    "endOffset": 2441
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
-                        "startLine": 27,
+                        "startLine": 31,
                         "startColumn": 4,
-                        "startOffset": 1701,
+                        "startOffset": 1749,
                         "endColumn": 48,
-                        "endOffset": 1745
+                        "endOffset": 1793
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 30,
+                    "startLine": 34,
                     "startColumn": 4,
-                    "startOffset": 2398,
+                    "startOffset": 2446,
                     "endColumn": 67,
-                    "endOffset": 2461
+                    "endOffset": 2509
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
-                        "startLine": 28,
+                        "startLine": 32,
                         "startColumn": 4,
-                        "startOffset": 1750,
+                        "startOffset": 1798,
                         "endColumn": 67,
-                        "endOffset": 1813
+                        "endOffset": 1861
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 31,
+                    "startLine": 35,
                     "startColumn": 4,
-                    "startOffset": 2466,
+                    "startOffset": 2514,
                     "endColumn": 40,
-                    "endOffset": 2502
+                    "endOffset": 2550
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
-                        "startLine": 29,
+                        "startLine": 33,
                         "startColumn": 4,
-                        "startOffset": 1818,
+                        "startOffset": 1866,
                         "endColumn": 40,
-                        "endOffset": 1854
+                        "endOffset": 1902
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 32,
+                    "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 2507,
-                    "endLine": 41,
+                    "startOffset": 2555,
+                    "endLine": 45,
                     "endColumn": 12,
-                    "endOffset": 3074
+                    "endOffset": 3122
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
-                        "startLine": 30,
+                        "startLine": 34,
                         "startColumn": 4,
-                        "startOffset": 1859,
-                        "endLine": 39,
+                        "startOffset": 1907,
+                        "endLine": 43,
                         "endColumn": 12,
-                        "endOffset": 2426
+                        "endOffset": 2474
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 42,
+                    "startLine": 46,
                     "startColumn": 4,
-                    "startOffset": 3079,
-                    "endLine": 50,
+                    "startOffset": 3127,
+                    "endLine": 54,
                     "endColumn": 12,
-                    "endOffset": 3581
+                    "endOffset": 3629
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\sourcecode\\FishMan\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
                     "position": {
-                        "startLine": 40,
+                        "startLine": 44,
                         "startColumn": 4,
-                        "startOffset": 2431,
-                        "endLine": 48,
+                        "startOffset": 2479,
+                        "endLine": 52,
                         "endColumn": 12,
-                        "endOffset": 2933
+                        "endOffset": 2981
                     }
                 }
             }

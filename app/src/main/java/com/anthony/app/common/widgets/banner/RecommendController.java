@@ -20,6 +20,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+/**
+ * a implementation of banner pics
+ * using {@link NewsItem} as a item of banner
+ */
 public class RecommendController {
 
 

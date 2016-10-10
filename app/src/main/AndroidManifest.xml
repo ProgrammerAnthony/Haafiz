@@ -9,7 +9,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".module.splash.LoadingActivity">
+        <activity android:name=".module.splash.LoadingActivity"></activity>
+
+        <activity android:name=".module.MainListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,7 +19,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".module.main.MainActivity" />
+        <activity android:name=".module.banner.BannerActivity" />
+        <activity android:name=".module.tab.TabActivity" />
 
         <activity
             android:name="com.anthony.citypicker.CityPickerActivity"

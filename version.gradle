@@ -1,0 +1,103 @@
+/*
+Shared gradle properties
+ */
+ext {
+
+    android = [
+            compileSdkVersion: 23,
+            buildToolsVersion: '23.0.3',
+            minSdkVersion    : 15,
+            targetSdkVersion : 23,
+            javaVersion      : JavaVersion.VERSION_1_8,
+    ]
+    olderDepsVersion = [
+            // Sdk and tools
+            minSdkVersion = 16,
+            targetSdkVersion = 23,
+            compileSdkVersion = 23,
+            buildToolsVersion = '23.0.3',
+            versionCode = 1,
+            versionName = '1.0',
+            applicationId = 'com.anthony.app',
+
+            // base App dependencies
+            supportLibraryVersion = '23.4.0',
+            junitVersion = '4.12',
+            glideVersion = '3.7.0',
+            butterKnifeVersion = '7.0.1',
+            rxandroidVersion = '1.2.0',
+            rxjavaVersion = '1.1.5',
+            rxpermissionsVersion = '0.7.0@aar',
+            daggerCompilerVersion = '2.0.2',
+            daggerVersion = '2.0.2',
+            multidexVersion = '1.0.1',
+            javaxAnnotationVersion = '10.0-b28',
+            retrofitVersion = '2.0.0',
+            okHttpVersion = '3.2.0',
+            ottoVersion = '1.3.8',
+            //other app dependencies
+            materialishProgressVersion = '1.7',
+            photoViewVersion = '1.4.0',
+            materialDialogsVersion = '0.8.5.9',
+            pagerSlidingTabstripVersion = '1.3',
+            autoValueVersion = '1.2',
+            autoValueParcelVersion = '0.2.0',
+            swipeToolVersion = '1.0.1',
+            timberVersion = '4.1.2',
+            avosCloudSDKVersion = 'v3.+',
+            avosCloudPushVersion = 'v3.+@aar',
+    ]
+    depsVersion = [
+            supportVersion                    : '23.4.0',
+            okhttpVersion                     : '3.4.1',
+            retrofitVersion                   : '2.1.0',
+            butterknifeVersion                : '8.2.1',
+            timberVersion                     : '4.1.2',
+            rxJavaVersion                     : '1.1.8',
+            rxAndroidVersion                  : '1.2.1',
+            supportUiVersion                  : '0.1.9',
+            recyclerviewFlexibleDividerVersion: '1.2.9',
+            frescoVersion                     : '0.11.0',
+            leakcanaryAndroidVersion          : '1.3.1',
+            ottoVersion                       : '1.3.8',
+            paginateVersion                   : '0.5.1',
+            materialDialogsVersion            : '0.8.5.6@aar',
+            kprogresshudVersion               : '1.0.5',
+            easyrecycleradaptersVersion       : '1.0.10',
+            prefsVersion                      : '1.1.0',
+            smoothprogressbarVersion          : '1.1.0',
+            recyclerviewAnimatorsbarVersion   : '1.3.0',
+    ]
+
+    deps = [
+            supportV4                  : 'com.android.support:support-v4:' + depsVersion.supportVersion,
+            supportAnnotations         : 'com.android.support:support-annotations:' + depsVersion.supportVersion,
+            appcompatV7                : 'com.android.support:appcompat-v7:' + depsVersion.supportVersion,
+            design                     : 'com.android.support:design:' + depsVersion.supportVersion,
+            gridlayoutV7               : 'com.android.support:gridlayout-v7:' + depsVersion.supportVersion,
+            recyclerviewV7             : 'com.android.support:recyclerview-v7:' + depsVersion.supportVersion,
+            cardviewV7                 : 'com.android.support:cardview-v7:' + depsVersion.supportVersion,
+            okhttp                     : 'com.squareup.okhttp3:okhttp:' + depsVersion.okhttpVersion,
+            okhttpUrlconnection        : 'com.squareup.okhttp3:okhttp-urlconnection:' + depsVersion.okhttpVersion,
+            loggingInterceptor         : 'com.squareup.okhttp3:logging-interceptor:' + depsVersion.okhttpVersion,
+            rxjava                     : 'io.reactivex:rxjava:' + depsVersion.rxJavaVersion,
+            rxandroid                  : 'io.reactivex:rxandroid:' + depsVersion.rxAndroidVersion,
+            retrofit                   : 'com.squareup.retrofit2:retrofit:' + depsVersion.retrofitVersion,
+            converterJackson           : 'com.squareup.retrofit2:converter-jackson:' + depsVersion.retrofitVersion,
+            butterknife                : 'com.jakewharton:butterknife:' + depsVersion.butterknifeVersion,
+            timber                     : 'com.jakewharton.timber:timber:' + depsVersion.timberVersion,
+            easyrecycleradapters       : 'com.smartydroid:easyrecycleradapters:' + depsVersion.easyrecycleradaptersVersion,
+            prefs                      : 'me.alexrs:prefs:' + depsVersion.prefsVersion,
+            smoothprogressbar          : 'com.github.castorflex.smoothprogressbar:library-circular:' + depsVersion.smoothprogressbarVersion,
+            recyclerviewAnimators      : 'jp.wasabeef:recyclerview-animators:' + depsVersion.recyclerviewAnimatorsbarVersion,
+            kprogresshud               : 'com.kaopiz:kprogresshud:' + depsVersion.kprogresshudVersion,
+            materialDialogs            : 'com.github.afollestad.material-dialogs:core:' + depsVersion.materialDialogsVersion,
+            paginate                   : 'com.github.markomilos:paginate:' + depsVersion.paginateVersion,
+            supportUi                  : 'com.smartydroid:support-ui:' + depsVersion.supportUiVersion,
+            recyclerviewFlexibleDivider: 'com.yqritc:recyclerview-flexibledivider:' + depsVersion.recyclerviewFlexibleDividerVersion,
+            fresco                     : 'com.facebook.fresco:fresco:' + depsVersion.frescoVersion,
+            leakcanaryAndroid          : 'com.squareup.leakcanary:leakcanary-android:' + depsVersion.leakcanaryAndroidVersion,
+            leakcanaryAndroidNoOp      : 'com.squareup.leakcanary:leakcanary-android-no-op:' + depsVersion.leakcanaryAndroidVersion,
+            otto                       : 'com.squareup:otto:' + depsVersion.ottoVersion,
+    ]
+}

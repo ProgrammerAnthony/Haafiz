@@ -109,7 +109,9 @@ public abstract class AbsBaseFragment extends Fragment implements BaseView {
     /**
      * override this method to use Dagger2 which support for Dependency Injection
      */
-    protected abstract void initDagger2(ActivityComponent activityComponent);
+    protected void initDagger2(ActivityComponent activityComponent) {
+        activityComponent.inject(this);
+    }
 
     /**
      * override this method to do operation in the fragment

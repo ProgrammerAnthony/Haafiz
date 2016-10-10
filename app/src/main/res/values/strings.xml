@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MVPCommon示例</string>
+    <string name="app_name">代码架构示例</string>
     <string name="exit_app">再按一次返回键退出程序</string>
 
     <string name="prj_reload_hint">加载数据失败 点击屏幕重试</string>

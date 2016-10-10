@@ -50,6 +50,11 @@ public class Channel implements Serializable {
     @DatabaseField(columnName = "lrt") //Last Refresh Time
     private long lrt = 0;
 
+    public Channel(String title, String url) {
+        this.title = title;
+        this.url = url;
+    }
+
 
     @Override
     public boolean equals(Object o) {

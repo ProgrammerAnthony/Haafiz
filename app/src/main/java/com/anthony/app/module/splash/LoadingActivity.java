@@ -153,7 +153,7 @@ public class LoadingActivity extends AbsBaseActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_enter_home:
-                mViewDisplay.showActivity(this, "1001");
+                mViewDisplay.showActivity(this, "1000");
                 this.finish();
                 break;
             case R.id.pb_splash:
@@ -225,6 +225,6 @@ public class LoadingActivity extends AbsBaseActivity {
     }
 
     protected void showMain() {
-        mViewDisplay.showActivity(this, "1001");
+        mViewDisplay.showActivity(this, "1000");
     }
 }
