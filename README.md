@@ -1,7 +1,7 @@
-# MVPCommon
-**example project make your architecting of android apps quicker and smoother ,long-term maintenance by me，blog update at the same time.**
+# Ant
+**example project make your architecting of android apps quicker and smoother ,long-term maintenance by me，blog updating at the same time.Used  in real project in my development**
 
-**由作者长期维护的示例代码，博客更新，希望对你的安卓架构提供指导性的意义**
+**由作者长期维护的架构以及示例代码，用于本人的各种真实项目。博客更新，希望对你的安卓架构提供指导性的意义**
 
 
 
