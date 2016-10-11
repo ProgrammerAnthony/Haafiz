@@ -3,8 +3,8 @@
     package="cn.pedant.SweetAlert.test" >
 
     <uses-sdk
-        android:minSdkVersion="16"
-        android:targetSdkVersion="23" />
+        android:minSdkVersion="15"
+        android:targetSdkVersion="24" />
 
     <instrumentation
         android:name="android.test.InstrumentationTestRunner"

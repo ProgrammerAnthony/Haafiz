@@ -5,7 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import starter.kit.rx.R;
+import com.anthony.rxlibrary.R;
+
 
 public class DefaultLoadView extends FrameLayout {
 

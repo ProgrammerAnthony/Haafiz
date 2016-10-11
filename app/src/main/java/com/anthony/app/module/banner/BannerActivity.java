@@ -14,7 +14,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * Created by Anthony on 2016/10/10.
@@ -30,7 +30,7 @@ public class BannerActivity extends AbsBaseActivity {
             "http://f.hiphotos.baidu.com/image/pic/item/b151f8198618367ac7d2a1e92b738bd4b31ce5af.jpg",
             "http://c.hiphotos.baidu.com/image/pic/item/0b7b02087bf40ad128102ae7552c11dfa9ecce3a.jpg"
     };
-    @Bind(R.id.banner_bg)
+    @BindView(R.id.banner_bg)
     RelativeLayout bannerBg;
     private RecommendController mController;
     @Inject

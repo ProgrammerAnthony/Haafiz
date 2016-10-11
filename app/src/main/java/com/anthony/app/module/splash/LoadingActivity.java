@@ -25,7 +25,7 @@ import java.util.ArrayList;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -36,17 +36,17 @@ import butterknife.OnClick;
  */
 public class LoadingActivity extends AbsBaseActivity {
 
-    @Bind(R.id.view_pager)
+    @BindView(R.id.view_pager)
     ViewPager mViewPager;
-    @Bind(R.id.pager_indicator)
+    @BindView(R.id.pager_indicator)
     CirclePageIndicator mPagerIndicator;
-    @Bind(R.id.btn_enter_home)
+    @BindView(R.id.btn_enter_home)
     Button mBtnEnterHome;
-    @Bind(R.id.layout_intro)
+    @BindView(R.id.layout_intro)
     RelativeLayout mLayoutIntro;
-    @Bind(R.id.pb_splash)
+    @BindView(R.id.pb_splash)
     CircleProgressBar mProgressBar;
-    @Bind(R.id.layout_splash)
+    @BindView(R.id.layout_splash)
     RelativeLayout mLayoutSplash;
 
     @Inject

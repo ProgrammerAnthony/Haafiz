@@ -28,7 +28,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 
 public class ImageBrowserActivity extends AbsBaseActivity {
@@ -36,25 +36,25 @@ public class ImageBrowserActivity extends AbsBaseActivity {
     public static String IMAGE_BROWSER_TITLE = "ImageBrowserTitle";
     public static String IMAGE_BROWSER_INIT_SRC = "ImageBrowserInitSrc";
     public static String IMAGE_BROWSER_URL = "ImageBrowserUrl";
-    @Bind(R.id.view_pager)
+    @BindView(R.id.view_pager)
     ViewPager mViewPager;
-    @Bind(R.id.tv_page_index)
+    @BindView(R.id.tv_page_index)
     TextView mPageIndex;
-    @Bind(R.id.layout_img_top_bar)
+    @BindView(R.id.layout_img_top_bar)
     RelativeLayout mTopBar;
-    @Bind(R.id.layout_comment)
+    @BindView(R.id.layout_comment)
     CommentView mCommentView;
-    @Bind(R.id.tv_img_title)
+    @BindView(R.id.tv_img_title)
     TextView mImgTitle;
-    @Bind(R.id.tv_img_description)
+    @BindView(R.id.tv_img_description)
     TextView mImgDescription;
-    @Bind(R.id.layout_description)
+    @BindView(R.id.layout_description)
     LinearLayout mLayoutDescription;
-    @Bind(R.id.tv_page_index_light_off)
+    @BindView(R.id.tv_page_index_light_off)
     TextView mPageIndexLightOff;
-    @Bind(R.id.iv_download)
+    @BindView(R.id.iv_download)
     ImageView mIvDownload;
-    @Bind(R.id.layout_light_off)
+    @BindView(R.id.layout_light_off)
     RelativeLayout mLayoutLightOff;
 
     private List<Image> mList;

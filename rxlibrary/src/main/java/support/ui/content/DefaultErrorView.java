@@ -9,8 +9,9 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.anthony.rxlibrary.R;
+
 import butterknife.ButterKnife;
-import starter.kit.rx.R;
 import support.ui.utilities.ViewUtils;
 
 public class DefaultErrorView extends FrameLayout implements ErrorView, View.OnClickListener {
@@ -114,6 +115,7 @@ public class DefaultErrorView extends FrameLayout implements ErrorView, View.OnC
     if (imageView == null) {
       imageView = ButterKnife.findById(this, R.id.support_ui_error_image_view);
     }
+
     return imageView;
   }
 

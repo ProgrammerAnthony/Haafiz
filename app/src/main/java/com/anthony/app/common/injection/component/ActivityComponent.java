@@ -12,6 +12,7 @@ import com.anthony.app.module.MainListActivity;
 import com.anthony.app.module.banner.BannerActivity;
 import com.anthony.app.module.tab.TabActivity;
 import com.anthony.app.module.splash.LoadingActivity;
+import com.anthony.app.module.weather.WeatherActivity;
 
 import dagger.Component;
 
@@ -50,5 +51,7 @@ public interface ActivityComponent {
     void inject(MainListActivity mainListActivity);
 
     void inject(BannerActivity bannerActivity);
+
+    void inject(WeatherActivity weatherActivity);
 
 }

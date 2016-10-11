@@ -54,8 +54,9 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
+    testCompile deps.jUnit
 
+    compile deps.supportV4
     compile deps.appcompatV7
     compile deps.cardviewV7
 
@@ -78,8 +79,14 @@ dependencies {
 
     compile deps.smoothprogressbar
 
-    compile "com.android.support:recyclerview-v7:23.4.0"
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+    compile deps.supportAnnotations
+
+    compile deps.adapterRxjava
+
+//    compile deps.butterknife
+//    apt deps.butterknifeCompiler
+    compile deps.butterknife
+    apt 'com.jakewharton:butterknife-compiler:' + rootProject.ext.depsVersion.butterknifeVersion
 
     compile 'com.trello:rxlifecycle:0.6.1'
 
@@ -88,8 +95,7 @@ dependencies {
     compile 'frankiesardo:icepick:3.2.0'
     apt 'frankiesardo:icepick-processor:3.2.0'
 
-    compile deps.butterknife
-    apt 'com.jakewharton:butterknife-compiler:' + rootProject.ext.depsVersion.butterknifeVersion
+
 }
 
 if (project.hasProperty('POM_DEVELOPER_ID')) {

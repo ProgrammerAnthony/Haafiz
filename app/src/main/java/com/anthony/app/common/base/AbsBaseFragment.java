@@ -12,6 +12,7 @@ import com.anthony.app.common.injection.component.ActivityComponent;
 import com.anthony.app.common.widgets.dialog.DialogManager;
 
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import rx.Subscription;
 import timber.log.Timber;
@@ -42,7 +43,7 @@ public abstract class AbsBaseFragment extends Fragment implements BaseView {
 
     protected Subscription mSubscription;
 
-
+    private Unbinder mUnbinder;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,7 +74,7 @@ public abstract class AbsBaseFragment extends Fragment implements BaseView {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ButterKnife.bind(this, view);
+        mUnbinder = ButterKnife.bind(this, view);
         initViewsAndEvents(view);
 
     }
@@ -89,7 +90,11 @@ public abstract class AbsBaseFragment extends Fragment implements BaseView {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
+//        ButterKnife.unbind(this);
+        if (mUnbinder != null) {
+            mUnbinder.unbind();
+            mUnbinder = null;
+        }
     }
 
 

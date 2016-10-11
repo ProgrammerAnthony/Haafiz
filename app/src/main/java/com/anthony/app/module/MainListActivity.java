@@ -20,7 +20,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * Created by Anthony on 2016/10/10.
@@ -31,7 +31,7 @@ import butterknife.Bind;
 
 public class MainListActivity extends AbsBaseActivity {
     List<Channel> strs = new ArrayList<>();
-    @Bind(R.id.recycleView)
+    @BindView(R.id.recycleView)
     RecyclerView recycleView;
     @Inject
     ViewDisplay mViewDisplay;

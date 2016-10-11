@@ -94,7 +94,7 @@ dependencies {
   compile deps.recyclerviewFlexibleDivider
 
   compile deps.butterknife
-  apt 'com.jakewharton:butterknife-compiler:' + rootProject.ext.depsVersion.butterknifeVersion
+  apt deps.butterknifeCompiler
 
 //  compile project(':rxlibrary')
   compile 'com.smartydroid:rxstarter:0.1'

@@ -14,6 +14,7 @@ import com.anthony.app.common.widgets.dialog.DialogManager;
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import rx.Subscription;
 import timber.log.Timber;
@@ -33,6 +34,7 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
     protected Context mContext = null;//context
     private ActivityComponent mActivityComponent;
     protected Subscription mSubscription;
+    private Unbinder mUnbinder;
 
     @Inject
     ToastUtils toastUtils;
@@ -56,7 +58,7 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
         if (getContentViewID() != 0)
             setContentView(getContentViewID());
 //bind this after setContentView
-        ButterKnife.bind(this);
+        mUnbinder = ButterKnife.bind(this);
 //inject Dagger2 here
         injectDagger(activityComponent());
 
@@ -86,7 +88,11 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ButterKnife.unbind(this);
+//        ButterKnife.unbind(this);
+        if (mUnbinder != null) {
+            mUnbinder.unbind();
+            mUnbinder = null;
+        }
         if (mSubscription != null && !mSubscription.isUnsubscribed()) {
             mSubscription.unsubscribe();
         }
@@ -99,7 +105,6 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
     }
 
 
-
     /**
      * bind layout resource file
      */
@@ -108,15 +113,18 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
     /**
      * Dagger2 use in your application module(not used in 'base' module)
      */
-    protected  void injectDagger(ActivityComponent activityComponent){
+    protected void injectDagger(ActivityComponent activityComponent) {
         activityComponent.inject(this);
     }
+
     /**
      * init views and events here
      */
     protected abstract void initViewsAndEvents();
 
-    /**-----------------------using in MVP implements methods in BaseView------------**/
+    /**
+     * -----------------------using in MVP implements methods in BaseView------------
+     **/
     @Override
     public void showMessage(String msg) {
         toastUtils.showToast(msg);

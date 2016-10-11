@@ -14,7 +14,8 @@ import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import starter.kit.rx.R;
+import com.anthony.rxlibrary.R;
+
 
 public class ForegroundImageView extends ImageView {
   private Drawable foreground;

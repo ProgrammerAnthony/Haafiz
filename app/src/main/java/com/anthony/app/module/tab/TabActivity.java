@@ -12,7 +12,7 @@ import com.anthony.app.R;
 import com.anthony.app.common.base.AbsBaseActivity;
 import com.anthony.app.common.injection.component.ActivityComponent;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -26,21 +26,21 @@ import butterknife.OnClick;
  * 5 我的
  */
 public class TabActivity extends AbsBaseActivity {
-    @Bind(R.id.main_tab_content)
+    @BindView(R.id.main_tab_content)
     FrameLayout tabContent;
-    @Bind(R.id.prj_layout_reload)
+    @BindView(R.id.prj_layout_reload)
     RelativeLayout prjLayoutReload;
-    @Bind(R.id.layout_bottom_tab1_main)
+    @BindView(R.id.layout_bottom_tab1_main)
     LinearLayout layoutBottomTab1Main;
-    @Bind(R.id.layout_bottom_tab2_local)
+    @BindView(R.id.layout_bottom_tab2_local)
     LinearLayout layoutBottomTab2Local;
-    @Bind(R.id.layout_bottom_tab3_store)
+    @BindView(R.id.layout_bottom_tab3_store)
     LinearLayout layoutBottomTab3Store;
-    @Bind(R.id.layout_bottom_tab4_find)
+    @BindView(R.id.layout_bottom_tab4_find)
     LinearLayout layoutBottomTab4Find;
-    @Bind(R.id.layout_bottom_tab5_mine)
+    @BindView(R.id.layout_bottom_tab5_mine)
     LinearLayout layoutBottomTab5Mine;
-    @Bind(R.id.bottomId)
+    @BindView(R.id.bottomId)
     LinearLayout bottomId;
 
     private static final int INIT_TAB_INDEX = 0;

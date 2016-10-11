@@ -41,7 +41,7 @@ import java.io.InputStream;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -51,15 +51,15 @@ import butterknife.OnClick;
  */
 public class WebViewCommentActivity extends AbsBaseActivity {
 
-    @Bind(R.id.txt_title)
+    @BindView(R.id.txt_title)
     TextView txt_title;
-    @Bind(R.id.layout_comments)
+    @BindView(R.id.layout_comments)
     CommentView mCommentView;
-    @Bind(R.id.web_view)
+    @BindView(R.id.web_view)
     WebView mWebView;
-    @Bind(R.id.progress)
+    @BindView(R.id.progress)
     ProgressBar progress;
-    @Bind(R.id.prj_layout_reload)
+    @BindView(R.id.prj_layout_reload)
     RelativeLayout mReloadLayout;
     @Inject
     MyApplication mApplication;

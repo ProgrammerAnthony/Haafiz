@@ -9,9 +9,10 @@ import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.ViewTreeObserver;
 
+import com.anthony.rxlibrary.R;
+
 import java.util.List;
 
-import starter.kit.rx.R;
 import support.ui.utilities.ViewUtils;
 
 public class NineGirdView extends RecyclerView {

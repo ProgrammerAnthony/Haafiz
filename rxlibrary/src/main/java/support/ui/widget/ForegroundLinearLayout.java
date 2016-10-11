@@ -26,7 +26,8 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.widget.LinearLayout;
 
-import starter.kit.rx.R;
+import com.anthony.rxlibrary.R;
+
 
 public class ForegroundLinearLayout extends LinearLayout {
 

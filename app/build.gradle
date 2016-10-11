@@ -1,16 +1,17 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'android-apt'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
 
     defaultConfig {
-        applicationId rootProject.ext.applicationId
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode rootProject.ext.versionCode
-        versionName rootProject.ext.versionName
+        applicationId  'com.anthony.app'
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 1
+        versionName '1.0'
 
         multiDexEnabled true
     }
@@ -36,62 +37,65 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     //junit testing
-    testCompile "junit:junit:$rootProject.junitVersion"
+    testCompile deps.jUnit
     //appcompat
-    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    compile deps.appcompatV7
     //v4
-    compile "com.android.support:support-v4:$rootProject.supportLibraryVersion"
+    compile deps.supportV4
     //recyclerView
-    compile "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+    compile deps.recyclerviewV7
     //design library
-    compile "com.android.support:design:$rootProject.supportLibraryVersion"
+    compile deps.design
     //Material Design Progress Bar
-    compile "com.pnikosis:materialish-progress:$rootProject.materialishProgressVersion"
+    compile deps.materialishProgress
     // Glide to load image
-    compile "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+    compile deps.glide
     //butterKnife annotation
-    compile "com.jakewharton:butterknife:$rootProject.butterKnifeVersion"
+//    compile deps.butterknife
+//    apt deps.butterknifeCompiler
+    compile deps.butterknife
+    apt 'com.jakewharton:butterknife-compiler:' + rootProject.ext.depsVersion.butterknifeVersion
     //RxAndroid
-    compile "io.reactivex:rxandroid:$rootProject.rxandroidVersion"
+    compile deps.rxandroid
     //RxJava
-    compile "io.reactivex:rxjava:$rootProject.rxjavaVersion"
+    compile deps.rxjava
     //RxPermission
-    compile "com.tbruyelle.rxpermissions:rxpermissions:$rootProject.rxpermissionsVersion"
+    compile deps.rxPermission
     //multiDex
-    compile "com.android.support:multidex:$rootProject.multidexVersion"
+    compile deps.multiDex
 
     //otto eventbus
-    compile "com.squareup:otto:$rootProject.ottoVersion"
+    compile deps.otto
     //各种swipe 效果的包
-    compile "com.anthony.ultimateswipetool:library:$rootProject.swipeToolVersion"
+    compile deps.ultimateSwipeTool
     //retrofit
-    compile "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
-    compile "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
-    compile "com.squareup.retrofit2:adapter-rxjava:$rootProject.retrofitVersion"
+    compile deps.retrofit
+    compile deps.converterGson
+    compile deps.adapterRxjava
     //okHttp
-    compile "com.squareup.okhttp3:okhttp:$rootProject.okHttpVersion"
-    compile "com.squareup.okhttp3:logging-interceptor:$rootProject.okHttpVersion"
-
-    compile "com.jakewharton.timber:timber:$rootProject.timberVersion"
+    compile deps.okhttp
+    compile deps.okhttpUrlconnection
+    compile deps.loggingInterceptor
+    //timber logging
+    compile deps.timber
     //dagger2
-    apt "com.google.dagger:dagger-compiler:$rootProject.daggerCompilerVersion"
-    //指定注解处理器
-    compile "com.google.dagger:dagger:$rootProject.daggerVersion"
-    //dagger公用api
-    provided "org.glassfish:javax.annotation:$rootProject.javaxAnnotationVersion"
-    //auto value
-    provided "com.google.auto.value:auto-value:$rootProject.autoValueVersion"
-    apt "com.google.auto.value:auto-value:$rootProject.autoValueVersion"
-    apt "com.ryanharter.auto.value:auto-value-parcel:$rootProject.autoValueParcelVersion"
-    compile("com.gxz.pagerslidingtabstrip:library:$rootProject.pagerSlidingTabstripVersion") {
+    apt deps.daggerCompiler
+    compile deps.dagger
+    provided deps.javaxAnnotation    //dagger公用api
+    // LeanCloud 基础包
+    compile deps.avosCloudSDK
+    // 推送与实时聊天需要的包
+    compile(deps.avosCloudPush) {
+        transitive = true
+    }
+    compile(deps.pagerSlidingTabStrip) {
         // exclusion for update the android support jar
         // for example, you can use the appcompat-v7 in your project
         exclude group: 'com.android.support', module: 'appcompat-v7'
 //        exclude group: 'com.nineoldandroids', module: 'library'
     }
-    compile "com.afollestad.material-dialogs:core:$rootProject.materialDialogsVersion"
-    compile "com.bm.photoview:library:$rootProject.photoViewVersion"
-
+    compile deps.materialDialogs
+    compile deps.photoView
 
 
     compile project(':SegmentControl')
@@ -102,14 +106,13 @@ dependencies {
     compile files('libs/ormlite-android-4.49.jar')
     compile files('libs/ormlite-core-4.49.jar')
     compile project(':citypicker')
-    //sqlBrite
+//sqlBrite
 //    compile "com.squareup.sqlbrite:sqlbrite:sqlBriteVersion0.7.0"
+//auto value
+//    provided "com.google.auto.value:auto-value:$rootProject.autoValueVersion"
+//    apt "com.google.auto.value:auto-value:$rootProject.autoValueVersion"
+//    apt "com.ryanharter.auto.value:auto-value-parcel:$rootProject.autoValueParcelVersion"
 
-    // LeanCloud需要的Support包
-//    compile 'com.android.support:support-v4:23.0.3'
-    // LeanCloud 基础包
-    compile "cn.leancloud.android:avoscloud-sdk:$rootProject.avosCloudSDKVersion"
-    // 推送与实时聊天需要的包
-    compile("cn.leancloud.android:avoscloud-push:$rootProject.avosCloudPushVersion") { transitive = true }
+
 
 }

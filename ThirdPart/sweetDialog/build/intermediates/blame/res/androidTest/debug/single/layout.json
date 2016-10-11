@@ -2,9 +2,5 @@
     {
         "merged": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\alert_dialog.xml",
         "source": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\layout\\alert_dialog.xml"
-    },
-    {
-        "merged": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\alert_dialog.xml",
-        "source": "D:\\work\\workspace\\MVPCommon\\ThirdPart\\sweetDialog\\build\\intermediates\\bundles\\debug\\res\\layout\\alert_dialog.xml"
     }
 ]

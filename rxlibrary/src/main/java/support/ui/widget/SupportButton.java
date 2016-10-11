@@ -14,9 +14,10 @@ import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.widget.AppCompatButton;
 import android.util.AttributeSet;
 
+import com.anthony.rxlibrary.R;
+
 import java.util.Arrays;
 
-import starter.kit.rx.R;
 import support.ui.utilities.BuildCompat;
 import support.ui.utilities.ThemeCompat;
 import support.ui.utilities.ViewUtils;
