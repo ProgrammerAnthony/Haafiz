@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <item name="support_ui_load_view" type="id"/>
+  <item name="support_ui_empty_view" type="id"/>
+  <item name="support_ui_error_view" type="id"/>
+  <item name="support_ui_content_view" type="id"/>
+  <item name="support_ui_empty_title" type="id"/>
+  <item name="support_ui_empty_subtitle" type="id"/>
+  <item name="support_ui_empty_image_view" type="id"/>
+  <item name="support_ui_error_title" type="id"/>
+  <item name="support_ui_error_subtitle" type="id"/>
+  <item name="support_ui_error_image_view" type="id"/>
+  <item name="support_ui_content_container" type="id"/>
+  <item name="support_ui_content_recycler_view" type="id"/>
+
+  <item name="swipeRefreshLayout" type="id"/>
+</resources>

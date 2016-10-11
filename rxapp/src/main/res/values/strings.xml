@@ -1,0 +1,35 @@
+<resources>
+  <string name="app_name">AndroidStarterKit</string>
+  <string name="toolbar_title_account">个人中心</string>
+
+  <string name="drawer_item_settings">Settings</string>
+  <string name="drawer_item_open_source">Open Source</string>
+
+  <string name="label_simple_hud">SimpleHud</string>
+  <string name="label_content">Content Demo</string>
+  <string name="label_rx_pref">RxPreferences</string>
+  <string name="label_direction">SwipeRefreshLayout Direction</string>
+
+  <string name="tab_home">首页</string>
+  <string name="tab_account">我的</string>
+  <string name="feed_with_page">Page分页</string>
+  <string name="feed_with_id">ID分页</string>
+  <string name="feed_without">普通</string>
+
+  <string name="account_settings">设置</string>
+
+  <string name="login_username_hint">手机号</string>
+  <string name="login_passowrd_hint">密码</string>
+  <string name="login_passowrd_error">密码长度不能低于6位</string>
+  <string name="login_username_error">手机号码格式不对</string>
+  <string name="login_bottom_register">没有账号?去注册</string>
+  <string name="btn_login">登录</string>
+  <string name="login_or">或</string>
+
+  <string name="content_description">Content Description</string>
+  <string name="placehold_short">Placehold</string>
+  <string name="placehold_long">Fugit assumenda est incidunt. Odio doloribus non consequatur itaque. Reiciendis et laborum non enim. </string>
+
+  <string name="foo">foo</string>
+  <string name="contentDescription">contentDescription</string>
+</resources>

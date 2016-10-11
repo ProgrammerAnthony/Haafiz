@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="AppTheme"
+      parent="Base.AppTheme">
+  </style>
+
+  <style name="AppTheme.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+  </style>
+
+  <style name="AppTheme.Close">
+    <item name="homeAsUpIndicator">@drawable/ic_close_white_24dp</item>
+  </style>
+
+
+</resources>

@@ -1,0 +1,43 @@
+<resources>
+  <!-- Default screen margins, per the Android Design guidelines. -->
+  <dimen name="activity_horizontal_margin">16dp</dimen>
+  <dimen name="activity_vertical_margin">16dp</dimen>
+
+  <dimen name="app_margin">16dp</dimen>
+
+  <dimen name="tab_indicator_height">4dp</dimen>
+  <dimen name="tab_bar_height">56dp</dimen>
+  <dimen name="toolbar_height">56dp</dimen>
+
+  <dimen name="text_size_small">14sp</dimen>
+  <dimen name="text_size_medium">18sp</dimen>
+  <dimen name="text_size_large">22sp</dimen>
+  <dimen name="text_size_button">14sp</dimen>
+  <dimen name="text_size_display_4_material">112sp</dimen>
+  <dimen name="text_size_display_3_material">56sp</dimen>
+  <dimen name="text_size_display_2_material">45sp</dimen>
+  <dimen name="text_size_display_1_material">34sp</dimen>
+  <dimen name="text_size_headline_material">24sp</dimen>
+
+  <dimen name="inline_padding">4dp</dimen>
+  <dimen name="default_padding">8dp</dimen>
+  <dimen name="default_padding_tip">10dp</dimen>
+  <dimen name="large_padding">16dp</dimen>
+  <dimen name="xlarge_padding">20dp</dimen>
+  <dimen name="item_padding">2dp</dimen>
+  <dimen name="huge_padding">40dp</dimen>
+
+  <dimen name="listPreferredItemHeight">64dp</dimen>
+  <dimen name="listPreferredItemHeightSmall">48dp</dimen>
+  <dimen name="listPreferredItemHeightLarge">80dp</dimen>
+  <dimen name="listPreferredItemPaddingLeft">40dp</dimen>
+  <dimen name="listPreferredItemPaddingRight">40dp</dimen>
+
+  <dimen name="divider_height">1dp</dimen>
+
+  <dimen name="feed_user_avatar_size">56dp</dimen>
+  <dimen name="feed_thumbnail_size">80dp</dimen>
+  <dimen name="feed_activity_horizontal_margin_left">88dp</dimen>
+
+  <dimen name="button_margin">10dp</dimen>
+</resources>

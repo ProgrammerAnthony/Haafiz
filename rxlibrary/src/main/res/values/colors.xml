@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <color name="support_ui_red">#F00</color>
+  <color name="support_ui_green">#0F0</color>
+  <color name="support_ui_blue">#00F</color>
+  <color name="support_ui_yellow">#FF0</color>
+
+  <integer-array name="support_ui_color_array">
+    <item>@color/support_ui_red</item>
+    <item>@color/support_ui_green</item>
+    <item>@color/support_ui_blue</item>
+    <item>@color/support_ui_yellow</item>
+  </integer-array>
+
+</resources>

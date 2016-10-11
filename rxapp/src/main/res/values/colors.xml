@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EF6C00</color>
+    <color name="colorPrimaryDark">#E65100</color>
+    <color name="colorAccent">#FBC55C</color>
+    <color name="windowBackground">#EEEEEE</color>
+
+    <color name="primary_btn_normal">@color/colorPrimary</color>
+    <color name="primary_btn_pressed">@color/colorPrimaryDark</color>
+    <color name="btn_disable">#CCCCCC</color>
+
+    <color name="tab_text_color_normal">#858585</color>
+    <color name="tab_text_color_selected">@color/colorPrimary</color>
+
+    <color name="dividerColor">#EEEEEE</color>
+</resources>

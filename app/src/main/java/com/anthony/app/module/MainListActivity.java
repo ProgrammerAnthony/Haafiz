@@ -61,10 +61,11 @@ public class MainListActivity extends AbsBaseActivity {
         strs.add(new Channel("loading 加载页面", "1002"));
         strs.add(new Channel("city list 城市列表", "1003"));//com.anthony.citypicker.CityPickerActivity
         strs.add(new Channel("banner 广告栏", "1004"));
+        strs.add(new Channel("todo天气接口接入", ""));
         strs.add(new Channel("todo网页加载", ""));
+        strs.add(new Channel("todo 推送", ""));
 //        strs.add(new Channel("todo图片加载", ""));
         strs.add(new Channel("todo图文添加以及上传", ""));
-        strs.add(new Channel("todo天气接口接入", ""));
         strs.add(new Channel("todo栏目订阅排序", ""));
         strs.add(new Channel("todo LeadCloud登录注册", ""));
         strs.add(new Channel("todo ShareSDK分享", ""));

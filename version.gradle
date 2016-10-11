@@ -4,24 +4,24 @@ Shared gradle properties
 ext {
 
     android = [
-            compileSdkVersion: 23,
-            buildToolsVersion: '23.0.3',
+            compileSdkVersion: 24,
+            buildToolsVersion: '24.0.1',
             minSdkVersion    : 15,
-            targetSdkVersion : 23,
+            targetSdkVersion : 24,
             javaVersion      : JavaVersion.VERSION_1_8,
     ]
     olderDepsVersion = [
             // Sdk and tools
             minSdkVersion = 16,
-            targetSdkVersion = 23,
-            compileSdkVersion = 23,
-            buildToolsVersion = '23.0.3',
+            targetSdkVersion = 24,
+            compileSdkVersion = 24,
+            buildToolsVersion = '24.0.1',
             versionCode = 1,
             versionName = '1.0',
             applicationId = 'com.anthony.app',
 
             // base App dependencies
-            supportLibraryVersion = '23.4.0',
+            supportLibraryVersion = '24.1.1',
             junitVersion = '4.12',
             glideVersion = '3.7.0',
             butterKnifeVersion = '7.0.1',
@@ -47,8 +47,9 @@ ext {
             avosCloudSDKVersion = 'v3.+',
             avosCloudPushVersion = 'v3.+@aar',
     ]
+
     depsVersion = [
-            supportVersion                    : '23.4.0',
+            supportVersion                    : '24.1.1',
             okhttpVersion                     : '3.4.1',
             retrofitVersion                   : '2.1.0',
             butterknifeVersion                : '8.2.1',
