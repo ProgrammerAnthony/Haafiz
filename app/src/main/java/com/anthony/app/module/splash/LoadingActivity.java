@@ -33,6 +33,10 @@ import butterknife.OnClick;
  * Class Note:
  * loading introduction view when firstly open this project
  * or loading splash view when open this project but not the first time
+ * todo add Ads
+ * 第一次打开app时加载引导页
+ * 后面打开app时加载闪屏页
+ * todo 加入广告页
  */
 public class LoadingActivity extends AbsBaseActivity {
 

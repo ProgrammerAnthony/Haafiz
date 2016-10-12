@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-        android:src="@mipmap/prj_default_pic_big" />
+        android:src="@mipmap/bg_beautiful" />
 
     <TextView
         android:id="@+id/weather_city"

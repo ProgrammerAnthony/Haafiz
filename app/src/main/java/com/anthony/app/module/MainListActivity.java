@@ -61,7 +61,7 @@ public class MainListActivity extends AbsBaseActivity {
         strs.add(new Channel("loading 加载页面", "1002"));
         strs.add(new Channel("city list 城市列表", "1003"));//com.anthony.citypicker.CityPickerActivity
         strs.add(new Channel("banner 广告栏", "1004"));
-        strs.add(new Channel("todo天气接口接入", ""));
+        strs.add(new Channel("天气接口接入", "1005"));
         strs.add(new Channel("todo网页加载", ""));
         strs.add(new Channel("todo 推送", ""));
 //        strs.add(new Channel("todo图片加载", ""));
@@ -98,7 +98,7 @@ public class MainListActivity extends AbsBaseActivity {
                 @Override
                 public void onClick(View v) {
                     if (channel.getUrl() != null && !channel.getUrl().isEmpty()) {
-                        mViewDisplay.showActivity(mContext, channel.getUrl());
+                        mViewDisplay.showActivity(mContext, channel.getUrl());//打开activity
                     } else {
                         toastUtils.showToast("暂未提供实现");
                     }
