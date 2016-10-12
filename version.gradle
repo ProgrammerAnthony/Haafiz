@@ -25,6 +25,7 @@ ext {
             rxJavaVersion                     : '1.1.8',
             rxAndroidVersion                  : '1.2.1',
             rxpermissionsVersion              : '0.7.0@aar',
+            rxLifecycleVersion                : '0.6.1',
             supportUiVersion                  : '0.1.9',
             recyclerviewFlexibleDividerVersion: '1.2.9',
             frescoVersion                     : '0.11.0',
@@ -48,6 +49,9 @@ ext {
             pagerSlidingTabstripVersion       : '1.3',
             avosCloudSDKVersion               : 'v3.+',
             avosCloudPushVersion              : 'v3.+@aar',
+            loggerVersion                     : '1.13',
+            icePickVersion                    : '3.2.0',
+            icePickProcessorVersion           : '3.2.0',
     ]
 
     deps = [
@@ -96,5 +100,9 @@ ext {
             pagerSlidingTabStrip       : 'com.gxz.pagerslidingtabstrip:library:' + depsVersion.pagerSlidingTabstripVersion,
             avosCloudSDK               : 'cn.leancloud.android:avoscloud-sdk:' + depsVersion.avosCloudSDKVersion,
             avosCloudPush              : 'cn.leancloud.android:avoscloud-push:' + depsVersion.avosCloudPushVersion,
+            rxLifecycle                : 'com.trello:rxlifecycle:' + depsVersion.rxLifecycleVersion,
+            logger                     : 'com.orhanobut:logger:' + depsVersion.loggerVersion,
+            icePick                    : 'frankiesardo:icepick:' + depsVersion.icePickVersion,
+            icePickProcessor           : 'frankiesardo:icepick-processor:' + depsVersion.icePickProcessorVersion,
     ]
 }

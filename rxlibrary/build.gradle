@@ -83,17 +83,17 @@ dependencies {
 
     compile deps.adapterRxjava
 
-//    compile deps.butterknife
-//    apt deps.butterknifeCompiler
     compile deps.butterknife
-    apt 'com.jakewharton:butterknife-compiler:' + rootProject.ext.depsVersion.butterknifeVersion
+    apt deps.butterknifeCompiler
+//    compile deps.butterknife
+//    apt 'com.jakewharton:butterknife-compiler:' + rootProject.ext.depsVersion.butterknifeVersion
 
-    compile 'com.trello:rxlifecycle:0.6.1'
+    compile deps.rxLifecycle
 
-    compile 'com.orhanobut:logger:1.13'
+    compile deps.logger
 
-    compile 'frankiesardo:icepick:3.2.0'
-    apt 'frankiesardo:icepick-processor:3.2.0'
+    compile deps.icePick
+    apt deps.icePickProcessor
 
 
 }

@@ -51,10 +51,10 @@ dependencies {
     // Glide to load image
     compile deps.glide
     //butterKnife annotation
-//    compile deps.butterknife
-//    apt deps.butterknifeCompiler
     compile deps.butterknife
-    apt 'com.jakewharton:butterknife-compiler:' + rootProject.ext.depsVersion.butterknifeVersion
+    apt deps.butterknifeCompiler
+//    compile deps.butterknife
+//    apt 'com.jakewharton:butterknife-compiler:' + rootProject.ext.depsVersion.butterknifeVersion
     //RxAndroid
     compile deps.rxandroid
     //RxJava
