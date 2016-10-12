@@ -2,11 +2,13 @@ package com.anthony.app.common.data.retrofit;
 
 
 import com.anthony.app.common.base.Constants;
+import com.anthony.app.common.data.bean.WeatherData;
 
-import okhttp3.ResponseBody;
+import java.util.Map;
+
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
-import retrofit2.http.Query;
+import retrofit2.http.QueryMap;
 import rx.Observable;
 
 /**
@@ -22,11 +24,8 @@ public interface WeatherApi {
 
     //天气示例 ，需要添加apiKey到header
 // "http://apis.baidu.com/thinkpage/weather_api/suggestion?location=beijing&language=zh-Hans&unit=c&start=0&days=3";
+
     @Headers("apikey: 87f4cacc3ffe1f1025ebf1ea415ff112")
     @GET("/thinkpage/weather_api/suggestion")
-    Observable<ResponseBody> loadWeatherData(@Query("location") String location,//位置,拼音
-                                             @Query(value = "language", encoded = true) String language,//语言，默认使用zh-Hans
-                                             @Query("unit") String unit,//单位，默认为c
-                                             @Query("start") String start,//起始时间
-                                             @Query("days") String days);//天数
+    Observable<WeatherData> loadWeatherData(@QueryMap Map<String,String> params);
 }

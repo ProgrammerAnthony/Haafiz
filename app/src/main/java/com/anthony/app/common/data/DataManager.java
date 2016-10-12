@@ -25,6 +25,7 @@ import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -119,7 +120,6 @@ public class DataManager {
     }
 
 
-
     /**
      * post string to server
      */
@@ -201,9 +201,6 @@ public class DataManager {
     }
 
 
-
-
-
     /**
      * load news data in { com.app.gzgov.module.tab1.GZTab1Fragment}
      *
@@ -226,31 +223,15 @@ public class DataManager {
     }
 
     public Observable<WeatherData> loadWeatherData(String location) {
+        Map<String, String> params = new HashMap<>();
+        params.put("location", location);
+        params.put("language", "zh-Hans");
+        params.put("unit", "c");
+        params.put("start", "0");
+        params.put("days", "3");
         return httpHelper.getService(WeatherApi.class)
-                .loadWeatherData(location, "zh-Hans", "c", "0", "3")
-                .flatMap(new Func1<ResponseBody, Observable<String>>() {
-                    @Override
-                    public Observable<String> call(ResponseBody responseBody) {
-                        try {
-                            String result = responseBody.string();
-                            return Observable.just(result);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                            throw new RuntimeException("IOException when convert Response Body to String");
-                        }
-                    }
-                })
+                .loadWeatherData(params)
                 .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .flatMap(new Func1<String, Observable<WeatherData>>() {
-                    @Override
-                    public Observable<WeatherData> call(String s) {
-                        Gson gson = new GsonBuilder().create();
-                        WeatherData obj = gson.fromJson(s,
-                                new TypeToken<WeatherData>() {
-                                }.getType());
-                        return Observable.just(obj);
-                    }
-                });
+                .observeOn(AndroidSchedulers.mainThread());
     }
 }
