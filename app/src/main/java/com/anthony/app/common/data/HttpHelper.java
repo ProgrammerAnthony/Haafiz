@@ -29,14 +29,14 @@ import timber.log.Timber;
  * Class Note:
  * entrance class to access network with {@link Retrofit}
  * used only by{@link DataManager} is recommended
- *
+ * <p>
  * 使用retrofit进行网络访问的入口类，推荐只在{@link DataManager}中使用
  */
 public class HttpHelper {
     private static final int DEFAULT_TIMEOUT = 30;
     private HashMap<String, Object> mServiceMap;
     private Context mContext;
-
+//    private Gson gson = new GsonBuilder().setLenient().create();
 
     @Inject
     public HttpHelper(@ApplicationContext Context context) {
@@ -113,13 +113,13 @@ public class HttpHelper {
             Request request = chain.request();
 
             long t1 = System.nanoTime();
-            Timber.d("HttpHelper"+String.format("Sending request %s on %s%n%s",
+            Timber.i("HttpHelper" + String.format("Sending request %s on %s%n%s",
                     request.url(), chain.connection(), request.headers()));
 
             Response response = chain.proceed(request);
             long t2 = System.nanoTime();
 
-            Timber.d("HttpHelper"+String.format("Received response for %s in %.1fms%n%s",
+            Timber.i("HttpHelper" + String.format("Received response for %s in %.1fms%n%s",
                     response.request().url(), (t2 - t1) / 1e6d, response.headers()));
             return response;
 

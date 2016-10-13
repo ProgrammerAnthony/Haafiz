@@ -20,7 +20,6 @@ import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
-import com.anthony.app.common.utils.AppUtils;
 import com.anthony.app.common.widgets.imageloader.ImageLoader;
 import com.anthony.app.common.widgets.imageloader.ImageLoaderUtil;
 
@@ -106,21 +105,7 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         return this;
     }
 
-    public ViewHolder setImageUrlInGZ(int viewId, String url) {
-        String newUrl = url;
-        ImageView view = getView(viewId);
-        ImageLoader.Builder builder = new ImageLoader.Builder();
-        if (url != null && url.startsWith("W")) {
-            newUrl = AppUtils.convertPicStartWithW(url);
-        }
-        if (url == null) {
-            newUrl = "";
-        }
-        ImageLoader img = builder.url(newUrl)
-                .imgView(view).strategy(ImageLoaderUtil.LOAD_STRATEGY_ONLY_WIFI).build();
-        imageLoaderUtil.loadImage(mContext, img);
-        return this;
-    }
+
 
 
     public ViewHolder setImageBitmap(int viewId, Bitmap bitmap) {

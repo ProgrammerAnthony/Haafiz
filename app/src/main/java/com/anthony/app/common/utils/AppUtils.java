@@ -21,6 +21,8 @@ import android.util.DisplayMetrics;
 import android.view.inputmethod.InputMethodManager;
 
 import com.anthony.app.common.base.Constants;
+import com.anthony.app.common.data.bean.NewsItem;
+import com.anthony.app.common.widgets.webview.WebViewCommentActivity;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -544,5 +546,17 @@ public class AppUtils {
         StringBuilder newStr = new StringBuilder();
         newStr.append(Constants.Remote_BASE_END_POINT + "webpic/" + originalStr.substring(0, 8) + "/" + originalStr.substring(0, 10) + "/" + originalStr);
         return newStr.toString();
+    }
+
+    /**
+     * 加载网页，每个网页都需要NewsItem对象
+     *
+     * @param context
+     * @param newsItem
+     */
+    public static void loadWebViewActivity(Context context, NewsItem newsItem) {
+        Intent intent = new Intent(context, WebViewCommentActivity.class);
+        intent.putExtra(WebViewCommentActivity.WEB_VIEW_ITEM, newsItem);
+        context.startActivity(intent);
     }
 }

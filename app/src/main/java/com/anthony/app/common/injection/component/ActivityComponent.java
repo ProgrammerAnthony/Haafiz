@@ -10,6 +10,7 @@ import com.anthony.app.common.widgets.imagebrowse.ImageBrowserActivity;
 import com.anthony.app.common.widgets.webview.WebViewCommentActivity;
 import com.anthony.app.module.MainListActivity;
 import com.anthony.app.module.banner.BannerActivity;
+import com.anthony.app.module.github.GithubActivity;
 import com.anthony.app.module.tab.TabActivity;
 import com.anthony.app.module.splash.LoadingActivity;
 import com.anthony.app.module.weather.WeatherActivity;
@@ -53,5 +54,7 @@ public interface ActivityComponent {
     void inject(BannerActivity bannerActivity);
 
     void inject(WeatherActivity weatherActivity);
+
+    void inject(GithubActivity githubActivity);
 
 }

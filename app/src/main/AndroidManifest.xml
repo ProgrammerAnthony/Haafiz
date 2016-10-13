@@ -22,6 +22,8 @@
         <activity android:name=".module.banner.BannerActivity" />
         <activity android:name=".module.tab.TabActivity" />
         <activity android:name=".module.weather.WeatherActivity" />
+        <activity android:name=".module.github.GithubActivity" />
+        <activity android:name=".common.widgets.webview.WebViewCommentActivity" />
         <activity
             android:name="com.anthony.citypicker.CityPickerActivity"
             android:windowSoftInputMode="stateUnchanged|adjustPan" />

@@ -4,24 +4,16 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.anthony.app.common.base.Constants;
-import com.anthony.app.common.data.bean.Channel;
-import com.anthony.app.common.data.bean.Menu;
-import com.anthony.app.common.data.bean.NewsItem;
-import com.anthony.app.common.data.bean.NormalJsonInfo;
+import com.anthony.app.common.data.bean.GithubUser;
 import com.anthony.app.common.data.bean.WeatherData;
 import com.anthony.app.common.data.download.DownloadService;
-import com.anthony.app.common.data.retrofit.HttpResult;
-import com.anthony.app.common.data.retrofit.HttpResultFunc;
-import com.anthony.app.common.data.retrofit.ItemJsonDeserializer;
+import com.anthony.app.common.data.retrofit.GithubApi;
 import com.anthony.app.common.data.retrofit.RemoteApi;
 import com.anthony.app.common.data.retrofit.WeatherApi;
 import com.anthony.app.common.data.upload.UploadParam;
 import com.anthony.app.common.data.upload.UploadService;
 import com.anthony.app.common.injection.scope.ApplicationContext;
 import com.anthony.app.common.utils.FileUtil;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -50,7 +42,6 @@ import rx.schedulers.Schedulers;
  */
 public class DataManager {
 
-    private final Gson gson;
     @Inject
     HttpHelper httpHelper;
 
@@ -68,9 +59,7 @@ public class DataManager {
     @Inject
     public DataManager(@ApplicationContext Context context) {
         this.mContext = context;
-        gson = new GsonBuilder()
-                .registerTypeAdapter(NewsItem.class, new ItemJsonDeserializer<NewsItem>())
-                .create();
+
     }
 
     public PreferencesHelper getPreferencesHelper() {
@@ -89,6 +78,58 @@ public class DataManager {
             }
         };
     }
+    /**
+     * load weather data from Baidu API
+     * @param location
+     * @return
+     */
+    public Observable<WeatherData> loadWeatherData(String location) {
+        Map<String, String> params = new HashMap<>();
+        params.put("location", location);
+        params.put("language", "zh-Hans");
+        params.put("unit", "c");
+        params.put("start", "0");
+        params.put("days", "3");
+        return httpHelper.getService(WeatherApi.class)
+                .loadWeatherData(params)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    /**
+     * load  following list of github users
+     * @return Observable<String>
+     */
+     public Observable<String> loadUserFollowingString(String userName){
+         return httpHelper.getService(GithubApi.class)
+                 .loadUserFollowingString(userName)
+                 .flatMap(new Func1<ResponseBody, Observable<String>>() {
+                     @Override
+                     public Observable<String> call(ResponseBody responseBody) {
+                         try {
+                             String result = responseBody.string();
+                             return Observable.just(result);
+                         } catch (IOException e) {
+                             e.printStackTrace();
+                             throw new RuntimeException("IOException when convert Response Body to String");
+                         }
+                     }
+                 })
+                 .subscribeOn(Schedulers.io())
+                 .observeOn(AndroidSchedulers.mainThread());
+     }
+
+    /**
+     * load  following list of github users
+     * @return Observable<List<GithubUser>>
+     */
+    public Observable<List<GithubUser>> loadUserFollowingList(String userName){
+        return httpHelper.getService(GithubApi.class)
+                .loadUserFollowingList(userName)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
 
     /**
      * load String local or online
@@ -143,34 +184,6 @@ public class DataManager {
     }
 
 
-    /**
-     * 请求本地或远程一级栏目数据函数
-     * 注意:Gson数据反序列化为TRSMenu类型
-     */
-    public Observable<Menu> loadMenu(String url) {
-        return loadString(url).flatMap(new Func1<String, Observable<Menu>>() {
-            @Override
-            public Observable<Menu> call(String s) {
-                return Observable.just(gson.fromJson(s, Menu.class));
-            }
-        });
-    }
-
-    /**
-     * 请求本地或远程频道数据函数
-     * 注意:Gson数据反序列化为HttpResult<List<TRSChannel>>类型
-     */
-    public Observable<HttpResult<List<Channel>>> loadChannel(String url) {
-        return loadString(url).flatMap(new Func1<String, Observable<HttpResult<List<Channel>>>>() {
-            @Override
-            public Observable<HttpResult<List<Channel>>> call(String s) {
-                HttpResult<List<Channel>> obj = gson.fromJson(s,
-                        new TypeToken<HttpResult<List<Channel>>>() {
-                        }.getType());
-                return Observable.just(obj);
-            }
-        });
-    }
 
     /**
      * 通过GET方式下载远程文件，支持大文件下载
@@ -203,37 +216,5 @@ public class DataManager {
     }
 
 
-    /**
-     * load news data in { com.app.gzgov.module.tab1.GZTab1Fragment}
-     *
-     * @param url
-     * @return
-     */
-    public Observable<NormalJsonInfo> loadNormalNewsData(String url) {
-        return loadString(url)
-                .flatMap(new Func1<String, Observable<HttpResult<NormalJsonInfo>>>() {
-                    @Override
-                    public Observable<HttpResult<NormalJsonInfo>> call(String s) {
-                        HttpResult<NormalJsonInfo> obj = gson.fromJson(s,
-                                new TypeToken<HttpResult<NormalJsonInfo>>() {
-                                }.getType());
-                        return Observable.just(obj);
-                    }
-                }).map(new HttpResultFunc<NormalJsonInfo>())
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread());
-    }
 
-    public Observable<WeatherData> loadWeatherData(String location) {
-        Map<String, String> params = new HashMap<>();
-        params.put("location", location);
-        params.put("language", "zh-Hans");
-        params.put("unit", "c");
-        params.put("start", "0");
-        params.put("days", "3");
-        return httpHelper.getService(WeatherApi.class)
-                .loadWeatherData(params)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread());
-    }
 }

@@ -15,6 +15,7 @@ public class Constants {
     public static final String BASE_TYPE_ACTIVITY_MAP_PATH = "raw://type_activity_map";
 
     public static final String Remote_BASE_END_POINT = "http://www.baidu.com";//url for testing
+    public static final String Remote_BASE_END_POINT_GITHUB = "https://api.github.com/";//url for testing
     public static final String LOCAL_FILE_BASE_END_POINT = "raw://";
 
     public static final String CURRENT_USER = "current_user";
