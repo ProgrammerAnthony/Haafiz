@@ -7,6 +7,9 @@ import com.google.gson.annotations.SerializedName;
  * Class Note:
  * wrapper for return result，include {@link #code}， {@link #message}
  * and {@link #response}
+ *
+ * 对请求结果返回对象的封装，包含{@link #code}， {@link #message}
+ * 和{@link #response}
  */
 public class HttpResult<T> {
     public int code;

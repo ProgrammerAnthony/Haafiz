@@ -14,6 +14,10 @@ import rx.Observable;
 /**
  * Created by Anthony on 2016/9/22.
  * Class Note:
+ * Weather API
+ * entity class {@link com.anthony.app.common.data.bean.WeatherData}
+ * data from {@see "http://apistore.baidu.com/apiworks/servicedetail/2573.html?qq-pf-to=pcqq.c2c"}
+ *
  * 天气api接口
  * 实体类{@link com.anthony.app.common.data.bean.WeatherData}
  * 天气数据来自 http://apistore.baidu.com/apiworks/servicedetail/2573.html?qq-pf-to=pcqq.c2c
@@ -22,7 +26,7 @@ import rx.Observable;
 public interface WeatherApi {
     String end_point = Constants.REMOTE_BASE_END_POINT_WEATHER;
 
-    //天气示例 ，需要添加apiKey到header
+    //example , remember to add a apikey to your header
 // "http://apis.baidu.com/thinkpage/weather_api/suggestion?location=beijing&language=zh-Hans&unit=c&start=0&days=3";
 
     @Headers("apikey: 87f4cacc3ffe1f1025ebf1ea415ff112")

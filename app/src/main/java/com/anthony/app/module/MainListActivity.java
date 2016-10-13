@@ -58,10 +58,11 @@ public class MainListActivity extends AbsBaseActivity {
 
     private void initData() {
         strs.add(new Channel("tab 底部标签页面", "1001"));
-        strs.add(new Channel("loading 加载页面", "1002"));
+        strs.add(new Channel("splash view 闪屏页", "1002"));
         strs.add(new Channel("city list 城市列表", "1003"));//com.anthony.citypicker.CityPickerActivity
         strs.add(new Channel("banner 广告栏", "1004"));
-        strs.add(new Channel("天气接口接入", "1005"));
+        strs.add(new Channel("weather API 天气接口接入", "1005"));
+//        strs.add(new Channel("通用retrofit封装使用", ""));
         strs.add(new Channel("todo网页加载", ""));
         strs.add(new Channel("todo 推送", ""));
 //        strs.add(new Channel("todo图片加载", ""));

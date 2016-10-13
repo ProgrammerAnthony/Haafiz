@@ -11,6 +11,8 @@ import javax.inject.Inject;
  * Created by Anthony on 2016/6/12.
  * Class Note:
  * Provides helper methods to post event to an Otto event bus
+ * used only by{@link DataManager} is recommended
+ * 提供Otto事件总线的帮助类,推荐只在{@link DataManager}中使用
  */
 public class EventPosterHelper {
     private final Bus mBus;

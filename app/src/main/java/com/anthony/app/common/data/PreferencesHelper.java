@@ -11,7 +11,9 @@ import javax.inject.Inject;
 /**
  * Created by Anthony on 2016/5/23.
  * Class Note:
- * SharedPreference Helper class
+ * SharedPreference Helper class,used only by{@link DataManager} is recommended
+ *
+ * Preference 的帮助类，推荐只在{@link DataManager}中使用
  */
 public class PreferencesHelper {
     private static final String SETTING = "setting";

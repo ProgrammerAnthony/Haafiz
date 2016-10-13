@@ -1,7 +1,6 @@
 package com.anthony.app.common.data;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.anthony.app.common.injection.scope.ApplicationContext;
 import com.anthony.app.common.utils.AppUtils;
@@ -23,11 +22,15 @@ import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
+import timber.log.Timber;
 
 /**
  * Created by Anthony on 2016/7/8.
  * Class Note:
- * {@link Retrofit} wrapper class
+ * entrance class to access network with {@link Retrofit}
+ * used only by{@link DataManager} is recommended
+ *
+ * 使用retrofit进行网络访问的入口类，推荐只在{@link DataManager}中使用
  */
 public class HttpHelper {
     private static final int DEFAULT_TIMEOUT = 30;
@@ -110,13 +113,13 @@ public class HttpHelper {
             Request request = chain.request();
 
             long t1 = System.nanoTime();
-            Log.v("HttpHelper", String.format("Sending request %s on %s%n%s",
+            Timber.d("HttpHelper"+String.format("Sending request %s on %s%n%s",
                     request.url(), chain.connection(), request.headers()));
 
             Response response = chain.proceed(request);
             long t2 = System.nanoTime();
 
-            Log.v("HttpHelper", String.format("Received response for %s in %.1fms%n%s",
+            Timber.d("HttpHelper"+String.format("Received response for %s in %.1fms%n%s",
                     response.request().url(), (t2 - t1) / 1e6d, response.headers()));
             return response;
 

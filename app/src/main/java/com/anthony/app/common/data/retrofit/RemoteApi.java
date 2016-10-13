@@ -17,7 +17,10 @@ import rx.Observable;
 /**
  * Created by Anthony on 2016/7/8.
  * Class Note:
- * {@link retrofit2.Retrofit} 使用的RemoteApi，
+ * interface class of api ,replace {@link Constants#Remote_BASE_END_POINT}
+ * with your own base url
+ *
+ * API接口类，请在 {@link Constants#Remote_BASE_END_POINT}中替换基地址
  */
 public interface RemoteApi {
     String end_point = Constants.Remote_BASE_END_POINT;

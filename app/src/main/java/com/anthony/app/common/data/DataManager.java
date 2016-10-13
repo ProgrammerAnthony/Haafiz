@@ -43,9 +43,11 @@ import rx.schedulers.Schedulers;
  * Created by Anthony on 2016/6/12.
  * Class Note:
  * data entrance of all kinds of data
+ * using {@link HttpHelper},{@link PreferencesHelper},
+ * {@link EventPosterHelper} and {@link RxBus} to access data
+ * <p>
+ * 所有数据的入口类
  */
-
-
 public class DataManager {
 
     private final Gson gson;
