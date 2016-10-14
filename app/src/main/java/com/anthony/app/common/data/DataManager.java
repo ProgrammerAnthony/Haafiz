@@ -43,7 +43,7 @@ import rx.schedulers.Schedulers;
 public class DataManager {
 
     @Inject
-    HttpHelper httpHelper;
+    HttpHelper mHttpHelper;
 
     @Inject
     PreferencesHelper mPreferencesHelper;
@@ -90,7 +90,7 @@ public class DataManager {
         params.put("unit", "c");
         params.put("start", "0");
         params.put("days", "3");
-        return httpHelper.getService(WeatherApi.class)
+        return mHttpHelper.getService(WeatherApi.class)
                 .loadWeatherData(params)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
@@ -101,7 +101,7 @@ public class DataManager {
      * @return Observable<String>
      */
      public Observable<String> loadUserFollowingString(String userName){
-         return httpHelper.getService(GithubApi.class)
+         return mHttpHelper.getService(GithubApi.class)
                  .loadUserFollowingString(userName)
                  .flatMap(new Func1<ResponseBody, Observable<String>>() {
                      @Override
@@ -124,7 +124,7 @@ public class DataManager {
      * @return Observable<List<GithubUser>>
      */
     public Observable<List<GithubUser>> loadUserFollowingList(String userName){
-        return httpHelper.getService(GithubApi.class)
+        return mHttpHelper.getService(GithubApi.class)
                 .loadUserFollowingList(userName)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
@@ -145,7 +145,7 @@ public class DataManager {
             }
         } else {
             String path = url.substring(Constants.Remote_BASE_END_POINT.length());
-            return httpHelper.getService(RemoteApi.class)
+            return mHttpHelper.getService(RemoteApi.class)
                     .loadString(path)
                     .flatMap(new Func1<ResponseBody, Observable<String>>() {
                         @Override
@@ -167,7 +167,7 @@ public class DataManager {
      * post string to server
      */
     public Observable<String> postString(String url, Map<String, String> paramMap) {
-        return httpHelper.getService(RemoteApi.class)
+        return mHttpHelper.getService(RemoteApi.class)
                 .postString(url, paramMap)
                 .flatMap(new Func1<ResponseBody, Observable<String>>() {
                     @Override

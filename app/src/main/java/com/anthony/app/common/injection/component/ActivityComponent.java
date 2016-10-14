@@ -9,6 +9,7 @@ import com.anthony.app.common.injection.scope.PerActivity;
 import com.anthony.app.common.widgets.imagebrowse.ImageBrowserActivity;
 import com.anthony.app.common.widgets.webview.WebViewCommentActivity;
 import com.anthony.app.module.MainListActivity;
+import com.anthony.app.module.segment.SegmentControlActivity;
 import com.anthony.app.module.banner.BannerActivity;
 import com.anthony.app.module.github.GithubActivity;
 import com.anthony.app.module.tab.TabActivity;
@@ -56,5 +57,7 @@ public interface ActivityComponent {
     void inject(WeatherActivity weatherActivity);
 
     void inject(GithubActivity githubActivity);
+
+    void inject(SegmentControlActivity segmentControlActivity);
 
 }
