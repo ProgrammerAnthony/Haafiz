@@ -9,7 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.anthony.app.common.injection.component.ActivityComponent;
+import com.anthony.app.common.utils.ToastUtils;
 import com.anthony.app.common.widgets.dialog.DialogManager;
+
+import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
@@ -44,6 +47,10 @@ public abstract class AbsBaseFragment extends Fragment implements BaseView {
     protected Subscription mSubscription;
 
     private Unbinder mUnbinder;
+
+    @Inject
+    ToastUtils toastUtils;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -123,6 +130,10 @@ public abstract class AbsBaseFragment extends Fragment implements BaseView {
      */
     protected abstract void initViewsAndEvents(View rootView);
 
+
+    protected void showToast(String content) {
+        toastUtils.showToast(content);
+    }
 
     /**
      * -----------------------implements methods in BaseView------------

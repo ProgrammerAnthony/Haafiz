@@ -25,7 +25,7 @@
         <activity android:name=".module.github.GithubActivity" />
         <activity android:name=".common.widgets.webview.WebViewCommentActivity" />
         <activity android:name=".module.segment.SegmentControlActivity" />
-
+        <activity android:name=".module.videolist.VideoListActivity" />
         <activity
             android:name="com.anthony.citypicker.CityPickerActivity"
             android:windowSoftInputMode="stateUnchanged|adjustPan" />

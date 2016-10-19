@@ -42,6 +42,7 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
     @Inject
     EventPosterHelper eventPosterHelper;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -121,6 +122,12 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
      * init views and events here
      */
     protected abstract void initViewsAndEvents();
+
+
+    protected void showToast(String content) {
+        toastUtils.showToast(content);
+    }
+
 
     /**
      * -----------------------using in MVP implements methods in BaseView------------

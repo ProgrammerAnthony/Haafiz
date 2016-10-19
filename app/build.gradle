@@ -103,9 +103,10 @@ dependencies {
     compile project(':SlidingMenu')
     compile project(':sweetDialog')
     compile project(':ViewPagerIndicator')
+    compile project(':citypicker')
+    compile project(':VideoListPlayer')
     compile files('libs/ormlite-android-4.49.jar')
     compile files('libs/ormlite-core-4.49.jar')
-    compile project(':citypicker')
 //sqlBrite
 //    compile "com.squareup.sqlbrite:sqlbrite:sqlBriteVersion0.7.0"
 //auto value

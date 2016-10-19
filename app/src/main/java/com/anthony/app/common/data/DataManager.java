@@ -5,15 +5,23 @@ import android.content.Intent;
 
 import com.anthony.app.common.base.Constants;
 import com.anthony.app.common.data.bean.GithubUser;
+import com.anthony.app.common.data.bean.NewsItem;
+import com.anthony.app.common.data.bean.NormalJsonInfo;
 import com.anthony.app.common.data.bean.WeatherData;
 import com.anthony.app.common.data.download.DownloadService;
 import com.anthony.app.common.data.retrofit.GithubApi;
+import com.anthony.app.common.data.retrofit.HttpResult;
+import com.anthony.app.common.data.retrofit.HttpResultFunc;
 import com.anthony.app.common.data.retrofit.RemoteApi;
 import com.anthony.app.common.data.retrofit.WeatherApi;
 import com.anthony.app.common.data.upload.UploadParam;
 import com.anthony.app.common.data.upload.UploadService;
 import com.anthony.app.common.injection.scope.ApplicationContext;
 import com.anthony.app.common.utils.FileUtil;
+import com.anthony.app.common.utils.SpUtil;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,8 +36,10 @@ import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.exceptions.Exceptions;
 import rx.functions.Action0;
+import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
+import timber.log.Timber;
 
 /**
  * Created by Anthony on 2016/6/12.
@@ -132,7 +142,7 @@ public class DataManager {
 
 
     /**
-     * load String local or online
+     * load String data ,support data from local and  online
      */
     public Observable<String> loadString(String url) {
         if (url.startsWith(Constants.LOCAL_FILE_BASE_END_POINT)) {
@@ -183,7 +193,35 @@ public class DataManager {
                 });
     }
 
+    /**
+     * 加载第一个tab 的url数据，返回新闻列表数据
+     *
+     * @param url 需要加载的url
+     * @return NormalJsonInfo<NewsItem>
+     */
 
+    public Observable<NormalJsonInfo<NewsItem>> loadNewsJsonInfo(final String url) {
+        final Gson gson = new GsonBuilder().create();
+        return loadString(url)
+                .doOnNext(new Action1<String>() {
+                    @Override
+                    public void call(String result) {
+                        SpUtil.putString(mContext, url, result);
+                        Timber.i("currently data string news ---> " + SpUtil.getString(mContext, url));
+                    }
+                })
+                .flatMap(new Func1<String, Observable<HttpResult<NormalJsonInfo<NewsItem>>>>() {
+                    @Override
+                    public Observable<HttpResult<NormalJsonInfo<NewsItem>>> call(String s) {
+                        HttpResult<NormalJsonInfo<NewsItem>> obj = gson.fromJson(s,
+                                new TypeToken<HttpResult<NormalJsonInfo<NewsItem>>>() {
+                                }.getType());
+                        return Observable.just(obj);
+                    }
+                }).map(new HttpResultFunc<NormalJsonInfo<NewsItem>>())
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
 
     /**
      * 通过GET方式下载远程文件，支持大文件下载

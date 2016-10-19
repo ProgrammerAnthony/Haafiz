@@ -16,7 +16,6 @@ import com.anthony.app.common.base.AbsBaseActivity;
 import com.anthony.app.common.base.MyApplication;
 import com.anthony.app.common.data.DataManager;
 import com.anthony.app.common.injection.component.ActivityComponent;
-import com.anthony.app.common.utils.ToastUtils;
 import com.anthony.app.common.widgets.CircleProgressBar;
 import com.anthony.app.common.widgets.ViewDisplay;
 import com.viewpagerindicator.CirclePageIndicator;
@@ -53,16 +52,14 @@ public class LoadingActivity extends AbsBaseActivity {
     @BindView(R.id.layout_splash)
     RelativeLayout mLayoutSplash;
 
-    @Inject
-    ToastUtils mToastUtil;
+
     @Inject
     ViewDisplay mViewDisplay;
     @Inject
     DataManager mDataManager;
     @Inject
     MyApplication mApplication;
-    @Inject
-    ToastUtils toastUtils;
+
 
     int[] loadingPics = new int[]{R.mipmap.loading_bg1, R.mipmap.loading_bg2, R.mipmap.loading_bg3};
 

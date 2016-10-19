@@ -36,6 +36,9 @@ public class NewsItem implements Serializable{
     @SerializedName(value = "type", alternate = {"t", "docType"})
     private int type;
 
+    @DatabaseField(columnName = "video", dataType = DataType.SERIALIZABLE)
+    @SerializedName(value = "video", alternate = {"RelVideo"})
+    private ArrayList<Video> video;
 
     @DatabaseField(columnName = "img", dataType = DataType.SERIALIZABLE)
     @SerializedName(value = "image", alternate = {"ic", "images", "picture", "pic", "img"})
@@ -269,5 +272,13 @@ public class NewsItem implements Serializable{
 
     public void setIcon(String icon) {
         this.icon = icon;
+    }
+
+    public ArrayList<Video> getVideo() {
+        return video;
+    }
+
+    public void setVideo(ArrayList<Video> video) {
+        this.video = video;
     }
 }

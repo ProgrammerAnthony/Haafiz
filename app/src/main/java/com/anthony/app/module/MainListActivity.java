@@ -9,7 +9,6 @@ import com.anthony.app.R;
 import com.anthony.app.common.base.AbsBaseActivity;
 import com.anthony.app.common.data.bean.Channel;
 import com.anthony.app.common.injection.component.ActivityComponent;
-import com.anthony.app.common.utils.ToastUtils;
 import com.anthony.app.common.widgets.ViewDisplay;
 import com.anthony.app.common.widgets.recyclerview.adapter.CommonAdapter;
 import com.anthony.app.common.widgets.recyclerview.base.ViewHolder;
@@ -35,8 +34,7 @@ public class MainListActivity extends AbsBaseActivity {
     RecyclerView recycleView;
     @Inject
     ViewDisplay mViewDisplay;
-    @Inject
-    ToastUtils toastUtils;
+
     private JustTitleAdapter mJustTitleAdapter;
 
     @Override
@@ -64,6 +62,8 @@ public class MainListActivity extends AbsBaseActivity {
         strs.add(new Channel("weather API 天气接口接入", "1005"));
         strs.add(new Channel("load github API 通用retrofit 加载github数据", "1006"));
         strs.add(new Channel("SegmentControl 分段控件", "1007"));
+        strs.add(new Channel("视频播放列表", "1008"));
+        strs.add(new Channel("todo 新闻列表", ""));
         strs.add(new Channel("todo Emoji Input Layout emoji输入框", ""));
         strs.add(new Channel("todo Image Compress 图片压缩", ""));
 //        strs.add(new Channel("todo网页加载", ""));
@@ -74,7 +74,6 @@ public class MainListActivity extends AbsBaseActivity {
         strs.add(new Channel("todo LeadCloud登录注册", ""));
         strs.add(new Channel("todo ShareSDK分享", ""));
         strs.add(new Channel("todo 普通新闻列表", ""));
-        strs.add(new Channel("todo 视频播放列表", ""));
         strs.add(new Channel("todo 即时通讯", ""));
         strs.add(new Channel("todo 直播", ""));
 
@@ -104,7 +103,7 @@ public class MainListActivity extends AbsBaseActivity {
                     if (channel.getUrl() != null && !channel.getUrl().isEmpty()) {
                         mViewDisplay.showActivity(mContext, channel.getUrl());//打开activity
                     } else {
-                        toastUtils.showToast("暂未提供实现");
+                        showToast("暂未提供实现");
                     }
 
                 }

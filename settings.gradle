@@ -1,4 +1,4 @@
-include ':app', ':rxapp',':sweetDialog', ':citypicker', ':SlidingMenu', ':ViewPagerIndicator', ':ShareSDK', ':SegmentControl', ':citypicker', ':rxlibrary'
+include ':app', ':rxapp', ':sweetDialog', ':citypicker', ':SlidingMenu', ':ViewPagerIndicator', ':ShareSDK', ':SegmentControl', ':citypicker', ':rxlibrary', ':VideoListPlayer'
 
 project(':sweetDialog').projectDir = new File('ThirdPart/sweetDialog')
 project(':SlidingMenu').projectDir = new File('ThirdPart/SlidingMenu')
@@ -6,5 +6,5 @@ project(':ViewPagerIndicator').projectDir = new File('ThirdPart/ViewPagerIndicat
 project(':ShareSDK').projectDir = new File('ThirdPart/ShareSDK')
 project(':SegmentControl').projectDir = new File('ThirdPart/SegmentControl')
 project(':citypicker').projectDir = new File('ThirdPart/citypicker')
-
+project(':VideoListPlayer').projectDir = new File('ThirdPart/VideoListPlayer')
 

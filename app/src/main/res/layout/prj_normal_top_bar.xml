@@ -1,56 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/app_primary"
-    android:orientation="horizontal">
+    android:background="@color/app_primary">
 
-    <RelativeLayout
-        android:id="@+id/layout_location"
-        android:layout_width="0dp"
+    <ImageView
+        android:id="@+id/iv_title_left"
+        android:layout_width="30dp"
         android:layout_height="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_weight="1">
+        android:layout_margin="5dp"
+        android:src="@mipmap/prj_ic_back" />
 
-        <TextView
-            android:id="@+id/tv_location"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:text="成都"
-            android:textColor="@color/white" />
+    <TextView
+        android:id="@+id/tv_title_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="标题"
+        android:textColor="@color/common_tv_light"
+        android:textSize="@dimen/TextTitleBar" />
 
-        <ImageView
 
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_centerVertical="true"
-            android:layout_margin="5dp"
-            android:layout_toRightOf="@id/tv_location"
-            android:src="@mipmap/prj_ic_back_right" />
-    </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/layout_search"
-        android:layout_width="0dp"
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/iv_title_right"
+        android:layout_width="30dp"
         android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
         android:layout_margin="10dp"
-        android:layout_weight="4"
-        android:background="@drawable/prj_enter_txt_round_bg">
-
-        <ImageView
-            android:id="@+id/iv_title_right"
-            android:layout_width="30dp"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp"
-            android:layout_marginLeft="10dp"
-            android:src="@mipmap/prj_ic_search" />
-
-    </RelativeLayout>
-
-    <View
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1" />
-
-</LinearLayout>
+        android:src="@mipmap/prj_ic_search" />
+</RelativeLayout>

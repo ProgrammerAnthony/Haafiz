@@ -9,11 +9,14 @@ import com.anthony.app.common.injection.scope.PerActivity;
 import com.anthony.app.common.widgets.imagebrowse.ImageBrowserActivity;
 import com.anthony.app.common.widgets.webview.WebViewCommentActivity;
 import com.anthony.app.module.MainListActivity;
-import com.anthony.app.module.segment.SegmentControlActivity;
 import com.anthony.app.module.banner.BannerActivity;
 import com.anthony.app.module.github.GithubActivity;
-import com.anthony.app.module.tab.TabActivity;
+import com.anthony.app.module.newslist.NewsListFragment;
+import com.anthony.app.module.segment.SegmentControlActivity;
 import com.anthony.app.module.splash.LoadingActivity;
+import com.anthony.app.module.tab.TabActivity;
+import com.anthony.app.module.videolist.NewsVideoFragment;
+import com.anthony.app.module.videolist.VideoListActivity;
 import com.anthony.app.module.weather.WeatherActivity;
 
 import dagger.Component;
@@ -60,4 +63,9 @@ public interface ActivityComponent {
 
     void inject(SegmentControlActivity segmentControlActivity);
 
+    void inject(VideoListActivity videoListActivity);
+
+    void inject(NewsListFragment newsListFragment);
+
+    void inject(NewsVideoFragment newsVideoFragment);
 }

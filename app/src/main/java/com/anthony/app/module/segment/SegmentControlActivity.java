@@ -5,10 +5,7 @@ import android.widget.FrameLayout;
 import com.anthony.app.R;
 import com.anthony.app.common.base.AbsBaseActivity;
 import com.anthony.app.common.injection.component.ActivityComponent;
-import com.anthony.app.common.utils.ToastUtils;
 import com.anthony.segmentcontrol.SegmentControl;
-
-import javax.inject.Inject;
 
 import butterknife.BindView;
 
@@ -23,8 +20,7 @@ public class SegmentControlActivity extends AbsBaseActivity {
     @BindView(R.id.child_fragment_content)
     FrameLayout childFragmentContent;
 
-    @Inject
-    ToastUtils toastUtils;
+
 
     @Override
     protected int getContentViewID() {
@@ -36,14 +32,13 @@ public class SegmentControlActivity extends AbsBaseActivity {
         segmentControl.setOnSegmentControlClickListener(new SegmentControl.OnSegmentControlClickListener() {
             @Override
             public void onSegmentControlClick(int index) {
-                toastUtils.showToast("click "+ index);
+                showToast("click "+ index);
             }
         });
     }
 
     @Override
     protected void injectDagger(ActivityComponent activityComponent) {
-//        super.injectDagger(activityComponent);
         activityComponent.inject(this);
     }
 

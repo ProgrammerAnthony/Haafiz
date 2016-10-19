@@ -10,7 +10,6 @@ import com.anthony.app.common.data.DataManager;
 import com.anthony.app.common.data.bean.WeatherData;
 import com.anthony.app.common.data.retrofit.HttpSubscriber;
 import com.anthony.app.common.injection.component.ActivityComponent;
-import com.anthony.app.common.utils.ToastUtils;
 
 import java.util.List;
 
@@ -57,8 +56,7 @@ public class WeatherActivity extends AbsBaseActivity {
 
     @Inject
     DataManager mDataManager;
-    @Inject
-    ToastUtils toastUtils;
+
     private String cityWeatherToCheck;
 
     @Override
@@ -83,7 +81,7 @@ public class WeatherActivity extends AbsBaseActivity {
             @Override
             public void onError(Throwable e) {
                 super.onError(e);
-                toastUtils.showToast("加载天气信息失败");
+                showToast("加载天气信息失败");
             }
         });
     }

@@ -10,11 +10,9 @@ import android.widget.Toast;
 import com.anthony.app.R;
 import com.anthony.app.common.data.DataManager;
 import com.anthony.app.common.data.bean.Channel;
+import com.anthony.app.common.data.bean.NewsItem;
 import com.anthony.app.common.data.bean.NormalJsonInfo;
-import com.anthony.app.common.data.retrofit.HttpResult;
-import com.anthony.app.common.data.retrofit.HttpResultFunc;
 import com.anthony.app.common.data.retrofit.HttpSubscriber;
-import com.anthony.app.common.data.retrofit.ItemJsonDeserializer;
 import com.anthony.app.common.injection.component.ActivityComponent;
 import com.anthony.app.common.utils.SpUtil;
 import com.anthony.app.common.utils.TimeUtils;
@@ -23,26 +21,19 @@ import com.anthony.app.common.widgets.recyclerview.adapter.MultiItemTypeAdapter;
 import com.anthony.app.common.widgets.recyclerview.wrapper.TopicWrapper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
 
 import java.util.List;
 
 import javax.inject.Inject;
 
-import rx.Observable;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action0;
-import rx.functions.Action1;
-import rx.functions.Func1;
-import rx.schedulers.Schedulers;
-import timber.log.Timber;
 
 /**
  * Created by Anthony on 2016/9/9.
  * Class Note:
  * abstract class support pullToRefresh  + RecyclerView
  * <p/>
- * todo preload + page count!!!!
+ * todo preload !!!!
  */
 public abstract class AbsListFragment extends AbsBaseFragment {
 
@@ -56,14 +47,14 @@ public abstract class AbsListFragment extends AbsBaseFragment {
 
     private RelativeLayout mReloadLayout;
     protected RecyclerView mRecyclerView;
-    private PullToRefreshView mPtr;
+    protected PullToRefreshView mPtr;
     protected MultiItemTypeAdapter mRecyclerAdapter;
     private TopicWrapper mTopicWrapper;
     @Inject
     DataManager mDataManager;
     protected Gson mGson;
     private String newUrl = "";
-//    protected NormalJsonInfo jsonInfo;
+
 
     @Override
     protected int getContentViewID() {
@@ -78,10 +69,7 @@ public abstract class AbsListFragment extends AbsBaseFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mGson = new GsonBuilder()
-                .registerTypeAdapter(new TypeToken<NormalJsonInfo>() {
-                }.getType(), new ItemJsonDeserializer<NormalJsonInfo>())
-                .create();
+        mGson = new GsonBuilder().create();
         if (getArguments() != null) {
             mChannel = (Channel) getArguments().getSerializable(EXTRA_CHANNEL);
         }
@@ -99,17 +87,13 @@ public abstract class AbsListFragment extends AbsBaseFragment {
 
             @Override
             public void onLoadMore() {
-                if (mPageCount == 0) {            // 不支持分页
+                if (mCurrentPageIndex < mPageCount + (getInitPageIndex() - 1)) {
+                    refreshMoreData(mCurrentPageIndex + 1);
+                } else {
                     Toast.makeText(mContext, "没有更多啦", Toast.LENGTH_SHORT).show();
                     mPtr.onFinishLoading();
-                } else {               //支持分页
-                    if (mCurrentPageIndex < mPageCount + (getInitPageIndex() - 1)) {
-                        refreshMoreData(mCurrentPageIndex + 1);
-                    } else {
-                        Toast.makeText(mContext, "没有更多啦", Toast.LENGTH_SHORT).show();
-                        mPtr.onFinishLoading();
-                    }
                 }
+
             }
         });
 
@@ -183,45 +167,27 @@ public abstract class AbsListFragment extends AbsBaseFragment {
     }
 
     protected void refreshMoreData(int index) {
+
         loadData(index);
     }
 
     protected void loadData(final int requestPageIndex) {
         newUrl = getRequestUrl(requestPageIndex);
-        mSubscription = mDataManager
-                .loadString(newUrl)
-                .doOnNext(new Action1<String>() {
-                    @Override
-                    public void call(String result) {
-                        SpUtil.putString(mContext, newUrl, result);
-                        Timber.i("currently data string ---> " + SpUtil.getString(mContext, newUrl));
-                    }
-                })
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
+        mSubscription = mDataManager.loadNewsJsonInfo(newUrl)
                 .doOnTerminate(new Action0() {
                     @Override
                     public void call() {
                         mPtr.onFinishLoading();
                     }
                 })
-                .flatMap(new Func1<String, Observable<HttpResult<NormalJsonInfo>>>() {
+                .subscribe(new HttpSubscriber<NormalJsonInfo<NewsItem>>() {
                     @Override
-                    public Observable<HttpResult<NormalJsonInfo>> call(String s) {
-                        HttpResult<NormalJsonInfo> obj = mGson.fromJson(s,
-                                new TypeToken<HttpResult<NormalJsonInfo>>() {
-                                }.getType());
-                        return Observable.just(obj);
-                    }
-                }).map(new HttpResultFunc<NormalJsonInfo>())
-                .subscribe(new HttpSubscriber<NormalJsonInfo>() {
-                    @Override
-                    public void onNext(NormalJsonInfo jsonInfo) {
+                    public void onNext(NormalJsonInfo<NewsItem> jsonInfo) {
                         SpUtil.putLong(getActivity(), newUrl + "_LRT", TimeUtils.getNowTime());
                         if (requestPageIndex == getInitPageIndex()) {
-//                            if (jsonInfo.page_info != null) {
-//                                mPageCount = parsePageCount(jsonInfo);
-//                            }
+                            if (jsonInfo.page_info != null) {
+                                mPageCount = parsePageCount(jsonInfo);
+                            }
                             mCurrentPageIndex = getInitPageIndex();
                         }
 
@@ -258,6 +224,10 @@ public abstract class AbsListFragment extends AbsBaseFragment {
 
         restoreTopic(topic);
         restoreData(data);
+    }
+
+    public void toggleAutoRefresh() {
+        mPtr.onAutoRefresh();
     }
 
     protected void onErrorDataReceived() {

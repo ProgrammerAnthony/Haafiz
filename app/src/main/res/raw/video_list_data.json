@@ -1,0 +1,253 @@
+{
+  "code": 0,
+  "message": "请求视频列表数据成功",
+  "response": {
+    "page_info": {
+      "page_index": 0,
+      "page_count": 1
+    },
+    "topic_datas": [],
+    "datas": [
+      {
+        "MetaDataTitle": "中国延时摄影：《韵动中国》",
+        "author": "",
+        "Content": "",
+        "docURL": "http://www.tibetapp.cn/kanjian/sp/201609/t20160921_1447883.json",
+        "PaperType2": "0",
+        "imgstyle": "0",
+        "SourceLink": "",
+        "picIds": "381053",
+        "image": [
+          "http://www.xzcmmat.cn/20160921/W020160921661064267334.jpg"
+        ],
+        "RelVideo": [
+          {
+            "picS": "http://www.xzcmvideo.cn//masvod/public/2016/09/21/10525.images/v10525_b1474453237612_list.jpg",
+            "picRS": "http://www.xzcmvideo.cn//masvod/public/2016/09/21/10525.images/v10525_b1474453237612_app.jpg",
+            "pic": "http://www.xzcmvideo.cn//masvod/public/2016/09/21/10525.images/v10525_b1474453237612.jpg",
+            "dURL": "http://www.xzcmvideo.cn//masvod/public/2016/09/21/20160921_1574c418010_r1.mp4",
+            "webPlayURL": "http://220.182.46.100:8080/mas/openapi/pages.do?method=exPlay&appKey=TRSWCM1&type=vod&id=10525&docId=1447883",
+            "masid": "10525",
+            "playCount": "0",
+            "mediaType": "V",
+            "duration": "647"
+          }
+        ],
+        "materialId": "",
+        "docid": "1447883",
+        "PubDate": "2016-09-21 18:13:38",
+        "type": "0"
+      },
+      {
+        "MetaDataTitle": "视频 | 小编带你看满目琳琅的藏博会",
+        "author": "",
+        "Content": "",
+        "docURL": "http://www.tibetapp.cn/kanjian/sp/201609/t20160918_1438409.json",
+        "PaperType2": "0",
+        "imgstyle": "0",
+        "SourceLink": "",
+        "picIds": "379562",
+        "image": [
+          "http://www.xzcmmat.cn/20160918/W020160918590937394204.jpg"
+        ],
+        "RelVideo": [
+          {
+            "picS": "http://www.xzcmvideo.cn//masvod/public/2016/09/18/10501.images/v10501_b1474187152790_list.jpg",
+            "picRS": "http://www.xzcmvideo.cn//masvod/public/2016/09/18/10501.images/v10501_b1474187152790_app.jpg",
+            "pic": "http://www.xzcmvideo.cn//masvod/public/2016/09/18/10501.images/v10501_b1474187152790.jpg",
+            "dURL": "http://www.xzcmvideo.cn//masvod/public/2016/09/18/20160918_1573c666a4c_r1_1200k.mp4",
+            "webPlayURL": "http://220.182.46.100:8080/mas/openapi/pages.do?method=exPlay&appKey=TRSWCM1&type=vod&id=10501&docId=1438409",
+            "masid": "10501",
+            "playCount": "0",
+            "mediaType": "V",
+            "duration": "217"
+          }
+        ],
+        "materialId": "",
+        "docid": "1438409",
+        "PubDate": "2016-09-18 16:21:53",
+        "type": "0"
+      },
+      {
+        "MetaDataTitle": "《多彩西藏》——第三届藏博会宣传片",
+        "author": "",
+        "Content": "",
+        "docURL": "http://www.tibetapp.cn/kanjian/sp/201609/t20160910_1425330.json",
+        "PaperType2": "0",
+        "imgstyle": "0",
+        "SourceLink": "",
+        "picIds": "377958",
+        "image": [
+          "http://www.xzcmmat.cn/20160910/W020160910426620132904.jpg"
+        ],
+        "RelVideo": [
+          {
+            "picS": "http://www.xzcmvideo.cn//masvod/public/2016/09/12/10423.images/v10423_b1473654576673_list.jpg",
+            "picRS": "http://www.xzcmvideo.cn//masvod/public/2016/09/12/10423.images/v10423_b1473654576673_app.jpg",
+            "pic": "http://www.xzcmvideo.cn//masvod/public/2016/09/12/10423.images/v10423_b1473654576673.jpg",
+            "dURL": "http://www.xzcmvideo.cn//masvod/public/2016/09/12/20160912_1571ca8079f_r1.mp4",
+            "webPlayURL": "http://220.182.46.100:8080/mas/openapi/pages.do?method=exPlay&appKey=TRSWCM1&type=vod&id=10423&docId=1425330",
+            "masid": "10423",
+            "playCount": "0",
+            "mediaType": "V",
+            "duration": "532"
+          }
+        ],
+        "materialId": "",
+        "docid": "1425330",
+        "PubDate": "2016-09-12 12:30:30",
+        "type": "0"
+      },
+      {
+        "MetaDataTitle": "鸟瞰天湖纳木措 感受摄人心魄的天湖美景",
+        "author": "",
+        "Content": "",
+        "docURL": "http://www.tibetapp.cn/kanjian/sp/201609/t20160908_1420383.json",
+        "PaperType2": "0",
+        "imgstyle": "0",
+        "SourceLink": "",
+        "picIds": "377003",
+        "image": [
+          "http://www.xzcmmat.cn/20160908/W020160908439275581213.jpg"
+        ],
+        "RelVideo": [
+          {
+            "picS": "http://www.xzcmvideo.cn//masvod/public/2016/09/08/10339.images/v10339_b1473307970210_list.jpg",
+            "picRS": "http://www.xzcmvideo.cn//masvod/public/2016/09/08/10339.images/v10339_b1473307970210_app.jpg",
+            "pic": "http://www.xzcmvideo.cn//masvod/public/2016/09/08/10339.images/v10339_b1473307970210.jpg",
+            "dURL": "http://www.xzcmvideo.cn//masvod/public/2016/09/08/20160908_15707ff550a_r1_1200k.mp4",
+            "webPlayURL": "http://220.182.46.100:8080/mas/openapi/pages.do?method=exPlay&appKey=TRSWCM1&type=vod&id=10339&docId=1420383",
+            "masid": "10339",
+            "playCount": "191",
+            "mediaType": "V",
+            "duration": "179"
+          }
+        ],
+        "materialId": "",
+        "docid": "1420383",
+        "PubDate": "2016-09-08 12:06:29",
+        "type": "0"
+      },
+      {
+        "MetaDataTitle": "《珞瑜风情》",
+        "author": "",
+        "Content": "",
+        "docURL": "http://www.tibetapp.cn/kanjian/sp/201608/t20160831_1412702.json",
+        "PaperType2": "0",
+        "imgstyle": "0",
+        "SourceLink": "",
+        "picIds": "376220",
+        "image": [
+          "http://www.xzcmmat.cn/20160831/W020160831428255534120.jpg"
+        ],
+        "RelVideo": [
+          {
+            "picS": "http://www.xzcmvideo.cn//masvod/public/2016/08/31/10313.images/v10313_b1472615508282_list.jpg",
+            "picRS": "http://www.xzcmvideo.cn//masvod/public/2016/08/31/10313.images/v10313_b1472615508282_app.jpg",
+            "pic": "http://www.xzcmvideo.cn//masvod/public/2016/08/31/10313.images/v10313_b1472615508282.jpg",
+            "dURL": "http://www.xzcmvideo.cn//masvod/public/2016/08/31/20160831_156deb7f570_r1.mp4",
+            "webPlayURL": "http://220.182.46.100:8080/mas/openapi/pages.do?method=exPlay&appKey=TRSWCM1&type=vod&id=10313&docId=1412702",
+            "masid": "10313",
+            "playCount": "1",
+            "mediaType": "V",
+            "duration": "1448"
+          }
+        ],
+        "materialId": "",
+        "docid": "1412702",
+        "PubDate": "2016-08-31 11:48:10",
+        "type": "0"
+      },
+      {
+        "MetaDataTitle": "索朗德吉《爱在思金拉措》藏语版",
+        "author": "",
+        "Content": "",
+        "docURL": "http://www.tibetapp.cn/kanjian/sp/201608/t20160829_1408255.json",
+        "PaperType2": "0",
+        "imgstyle": "0",
+        "SourceLink": "",
+        "picIds": "375738",
+        "image": [
+          "http://www.xzcmmat.cn/20160829/W020160829415812002366.jpg"
+        ],
+        "RelVideo": [
+          {
+            "picS": "http://www.xzcmvideo.cn//masvod/public/2016/08/29/10295.images/v10295_b1472441332342_list.jpg",
+            "picRS": "http://www.xzcmvideo.cn//masvod/public/2016/08/29/10295.images/v10295_b1472441332342_app.jpg",
+            "pic": "http://www.xzcmvideo.cn//masvod/public/2016/08/29/10295.images/v10295_b1472441332342.jpg",
+            "dURL": "http://www.xzcmvideo.cn//masvod/public/2016/08/29/20160829_156d457a549_r1.mp4",
+            "webPlayURL": "http://220.182.46.100:8080/mas/openapi/pages.do?method=exPlay&appKey=TRSWCM1&type=vod&id=10295&docId=1408255",
+            "masid": "10295",
+            "playCount": "121",
+            "mediaType": "V",
+            "duration": "323"
+          }
+        ],
+        "materialId": "",
+        "docid": "1408255",
+        "PubDate": "2016-08-29 11:15:52",
+        "type": "0"
+      },
+      {
+        "MetaDataTitle": "秒秒成就经典-《美丽西藏》",
+        "author": "",
+        "Content": "",
+        "docURL": "http://www.tibetapp.cn/kanjian/sp/201608/t20160825_1402589.json",
+        "PaperType2": "0",
+        "imgstyle": "0",
+        "SourceLink": "",
+        "picIds": "375017",
+        "image": [
+          "http://www.xzcmmat.cn/20160825/W020160825357813393640.jpg"
+        ],
+        "RelVideo": [
+          {
+            "picS": "http://www.xzcmvideo.cn//masvod/public/2016/08/25/10271.images/v10271_b1472090096195_list.jpg",
+            "picRS": "http://www.xzcmvideo.cn//masvod/public/2016/08/25/10271.images/v10271_b1472090096195_app.jpg",
+            "pic": "http://www.xzcmvideo.cn//masvod/public/2016/08/25/10271.images/v10271_b1472090096195.jpg",
+            "dURL": "http://www.xzcmvideo.cn//masvod/public/2016/08/25/20160825_156bf6834fc_r1_1200k.mp4",
+            "webPlayURL": "http://220.182.46.100:8080/mas/openapi/pages.do?method=exPlay&appKey=TRSWCM1&type=vod&id=10271&docId=1402589",
+            "masid": "10271",
+            "playCount": "1",
+            "mediaType": "V",
+            "duration": "30"
+          }
+        ],
+        "materialId": "",
+        "docid": "1402589",
+        "PubDate": "2016-08-25 09:52:11",
+        "type": "0"
+      },
+      {
+        "MetaDataTitle": "益西 藏语版《明天你好》",
+        "author": "",
+        "Content": "",
+        "docURL": "http://www.tibetapp.cn/kanjian/sp/201608/t20160823_1398724.json",
+        "PaperType2": "0",
+        "imgstyle": "0",
+        "SourceLink": "",
+        "picIds": "374605",
+        "image": [
+          "http://www.xzcmmat.cn/20160823/W020160823438082787849.jpg"
+        ],
+        "RelVideo": [
+          {
+            "picS": "http://www.xzcmvideo.cn//masvod/public/2016/08/23/10265.images/v10265_b1471925401513_list.jpg",
+            "picRS": "http://www.xzcmvideo.cn//masvod/public/2016/08/23/10265.images/v10265_b1471925401513_app.jpg",
+            "pic": "http://www.xzcmvideo.cn//masvod/public/2016/08/23/10265.images/v10265_b1471925401513.jpg",
+            "dURL": "http://www.xzcmvideo.cn//masvod/public/2016/08/23/20160823_156b596d8d1_r1_1200k.mp4",
+            "webPlayURL": "http://220.182.46.100:8080/mas/openapi/pages.do?method=exPlay&appKey=TRSWCM1&type=vod&id=10265&docId=1398724",
+            "masid": "10265",
+            "playCount": "4",
+            "mediaType": "V",
+            "duration": "333"
+          }
+        ],
+        "materialId": "",
+        "docid": "1398724",
+        "PubDate": "2016-08-23 12:03:19",
+        "type": "0"
+      }
+    ]
+  }
+}

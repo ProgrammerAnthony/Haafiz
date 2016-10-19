@@ -6,13 +6,10 @@ import com.anthony.app.R;
 import com.anthony.app.common.base.AbsBaseActivity;
 import com.anthony.app.common.data.bean.NewsItem;
 import com.anthony.app.common.injection.component.ActivityComponent;
-import com.anthony.app.common.utils.ToastUtils;
 import com.anthony.app.common.widgets.banner.RecommendController;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.inject.Inject;
 
 import butterknife.BindView;
 
@@ -33,8 +30,7 @@ public class BannerActivity extends AbsBaseActivity {
     @BindView(R.id.banner_bg)
     RelativeLayout bannerBg;
     private RecommendController mController;
-    @Inject
-    ToastUtils toastUtils;
+
 
     @Override
     protected int getContentViewID() {
@@ -47,7 +43,7 @@ public class BannerActivity extends AbsBaseActivity {
         mController.setOnClickListener(new RecommendController.OnItemClickListener() {
             @Override
             public void onItemClick(NewsItem topic) {
-                toastUtils.showToast(topic.getTitle());
+                showToast(topic.getTitle());
             }
 
         });
