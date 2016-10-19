@@ -22,7 +22,6 @@ import javax.inject.Inject;
  * Created by Anthony on 2016/9/9.
  * Class Note:
  * normal news list fragment
- *
  */
 public class NewsListFragment extends AbsListFragment {
 
@@ -41,9 +40,7 @@ public class NewsListFragment extends AbsListFragment {
 
     @Override
     protected MultiItemTypeAdapter getAdapter() {
-//        return new GZNewsMultiAdapter(mContext);
-//        return new GZNewsListAdapter(mContext);
-        return null;
+        return new NewsMultiAdapter(mContext);
     }
 
     @Override
@@ -78,10 +75,12 @@ public class NewsListFragment extends AbsListFragment {
             return prefix + "_" + String.valueOf(index) + ".json";
         }
     }
+
     @Override
     protected void initDagger2(ActivityComponent activityComponent) {
         activityComponent.inject(this);
     }
+
     @Override
     protected List parseData(NormalJsonInfo jsonInfo) {
         return jsonInfo.datas;
@@ -107,8 +106,6 @@ public class NewsListFragment extends AbsListFragment {
     protected void restoreTopic(List data) {
         restore(data, true);
     }
-
-
 
 
     private void restore(List data, boolean isTopic) {

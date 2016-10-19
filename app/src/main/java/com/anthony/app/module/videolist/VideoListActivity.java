@@ -1,5 +1,6 @@
 package com.anthony.app.module.videolist;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -11,6 +12,8 @@ import android.widget.TextView;
 import com.anthony.app.R;
 import com.anthony.app.common.base.AbsBaseActivity;
 import com.anthony.app.common.base.AbsBaseFragment;
+import com.anthony.app.common.data.RxBus;
+import com.anthony.app.common.data.event.VideoOrientationChangeEvent;
 import com.anthony.app.common.injection.component.ActivityComponent;
 
 import butterknife.BindView;
@@ -30,6 +33,8 @@ public class VideoListActivity extends AbsBaseActivity {
     TextView tvTitleCenter;
     @BindView(R.id.layout_content)
     FrameLayout layoutContent;
+//    @Inject
+//    RxBus rxBus;
     public static String URL = "url";
     public static String NAME = "name";
 
@@ -74,5 +79,13 @@ public class VideoListActivity extends AbsBaseActivity {
     @OnClick(R.id.iv_title_left)
     public void onClick() {
         this.finish();
+    }
+
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        RxBus.getDefault().post(new VideoOrientationChangeEvent(newConfig));
     }
 }

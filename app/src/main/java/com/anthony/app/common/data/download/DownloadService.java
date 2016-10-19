@@ -37,8 +37,7 @@ public class DownloadService extends Service {
     private static int ACTION_CANCEL = 1;
     private NotificationManager mNotificationManager;
     private HashMap<String, DownloadTask> mTaskMap = new HashMap<>();
-    @Inject
-    RxBus bus;
+
     @Inject
     ToastUtils
             toastUtils;
@@ -48,8 +47,7 @@ public class DownloadService extends Service {
         super.onCreate();
         mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
-        bus
-                .toObservable(DownloadEvent.class)
+        RxBus.getDefault().toObserverable(DownloadEvent.class)
                 .onBackpressureBuffer()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -89,8 +87,7 @@ public class DownloadService extends Service {
                     }
                 });
 
-        bus
-                .toObservable(DownloadFinishEvent.class)
+        RxBus.getDefault().toObserverable(DownloadFinishEvent.class)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Action1<DownloadFinishEvent>() {

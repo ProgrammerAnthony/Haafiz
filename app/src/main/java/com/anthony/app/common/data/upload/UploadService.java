@@ -45,8 +45,7 @@ public class UploadService extends Service {
     private static int ACTION_CANCEL = 1;
     private NotificationManager mNotificationManager;
     private HashMap<Integer, UploadTask> mTaskMap = new HashMap<>();
-    @Inject
-    RxBus bus;
+
 @Inject
 ToastUtils toastUtils;
     @Override
@@ -55,7 +54,7 @@ ToastUtils toastUtils;
         mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
 
-        bus.toObservable(UploadEventInternal.class)
+        RxBus.getDefault().toObserverable(UploadEventInternal.class)
                 .onBackpressureBuffer()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -73,11 +72,11 @@ ToastUtils toastUtils;
                                 mNotificationManager.notify(uploadEvent.task.id, uploadEvent.task.mNotification);
                             }
                             Log.v("FileUpload", "Process: " + String.valueOf((int) percent));
-                            bus.post(new UploadEvent(uploadEvent.task.total,
+                           RxBus.getDefault().post(new UploadEvent(uploadEvent.task.total,
                                     uploadEvent.task.progress, uploadEvent.task));
 
                             if ((int) percent == 100) {
-                                bus.post(new UploadFinishEvent(uploadEvent.task, true));
+                                RxBus.getDefault().post(new UploadFinishEvent(uploadEvent.task, true));
                             }
                         }
                     }
@@ -88,8 +87,7 @@ ToastUtils toastUtils;
                     }
                 });
 
-        bus
-                .toObservable(UploadFinishEvent.class)
+        RxBus.getDefault().toObserverable(UploadFinishEvent.class)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Action1<UploadFinishEvent>() {

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/common_bg_light"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    skin:enable="true">
+
+    <ImageView
+        android:id="@+id/img_news_image"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_today_topic" />
+
+    <View
+        android:layout_marginLeft="10dp"
+        android:layout_width="1dp"
+        android:layout_height="60dp"
+        android:background="@color/gz_background_gray"/>
+    <RelativeLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:id="@+id/layout_description"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+
+            android:id="@+id/tv_title_center"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="今日头条样式今日头条样式今日头条样式今日头条样式"
+            android:textColor="@color/common_tv_dark"
+            android:textSize="@dimen/TextLarge" />
+
+
+        <ImageView
+            android:id="@+id/news_date_icon"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@id/tv_title_center"
+            android:layout_alignTop="@id/tv_news_date"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/ic_news_time" />
+
+        <TextView
+            android:id="@+id/tv_news_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@id/news_date_icon"
+            android:text="2016-03-08 "
+            android:textColor="@color/common_tv_grey"
+            android:textSize="@dimen/TextListSubTitle" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

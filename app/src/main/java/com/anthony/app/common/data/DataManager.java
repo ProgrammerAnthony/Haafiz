@@ -61,8 +61,8 @@ public class DataManager {
     @Inject
     EventPosterHelper mEventPoster; //otto
 
-    @Inject
-    RxBus mRxBus;
+//    @Inject
+//    RxBus mRxBus;
 
     private Context mContext;
 
@@ -76,9 +76,9 @@ public class DataManager {
         return mPreferencesHelper;
     }
 
-    public RxBus getRxBus() {
-        return mRxBus;
-    }
+//    public RxBus getRxBus() {
+//        return mRxBus;
+//    }
 
     private Action0 postEventAction(final Object event) {
         return new Action0() {

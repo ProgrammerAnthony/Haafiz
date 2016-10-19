@@ -27,8 +27,8 @@ import com.anthony.app.common.widgets.recyclerview.adapter.CommonAdapter;
 import com.anthony.app.common.widgets.recyclerview.adapter.MultiItemTypeAdapter;
 import com.anthony.app.common.widgets.recyclerview.base.ViewHolder;
 import com.anthony.app.common.widgets.recyclerview.divider.RecycleViewDivider;
-import com.anthony.videolistplayet.VideoPlayView;
-import com.anthony.videolistplayet.media.IjkVideoView;
+import com.anthony.videolistplayer.VideoPlayView;
+import com.anthony.videolistplayer.media.IjkVideoView;
 
 import java.util.List;
 
@@ -38,6 +38,12 @@ import rx.functions.Action1;
 import tv.danmaku.ijk.media.player.IMediaPlayer;
 
 
+/**
+ * Created by Anthony on 2016/10/19.
+ * Class Note:
+ * video list fragment is a sub-component of {@link VideoListActivity}
+ * currently load data from local "raw://video_list_data"
+ */
 public class NewsVideoFragment extends AbsListFragment {
     private int current_play_position = -1; //正在播放的item位置，如果为-1表明当前没有视频在播放
     private VideoPlayView mVideoPlayView;
@@ -50,12 +56,12 @@ public class NewsVideoFragment extends AbsListFragment {
     private FrameLayout mVideoPlayFullHolder;
     private ImageView mClosePlayWindowBtn;
     private LinearLayoutManager mLayoutManager;
-    @Inject
-    RxBus rxBus;
+//    @Inject
+//    RxBus rxBus;
     @Inject
     NewsItemDao newsItemDao;
-   @Inject
-   ImageLoaderUtil imageLoaderUtil;
+    @Inject
+    ImageLoaderUtil imageLoaderUtil;
 
 
     @Override
@@ -99,6 +105,7 @@ public class NewsVideoFragment extends AbsListFragment {
         mVideoPlayFullHolder = (FrameLayout) rootView.findViewById(R.id.layout_play_full_holder);
 
         mVideoPlayView = new VideoPlayView(getActivity());
+
         mVideoPlayView.setCompletionListener(new VideoPlayView.CompletionListener() {
             @Override
             public void completion(IMediaPlayer mp) {
@@ -146,7 +153,7 @@ public class NewsVideoFragment extends AbsListFragment {
         });
 
         //监听item中layout_thumbnail的点击事件，开始播放视频
-        rxBus.toObservable(VideoListClickEvent.class)
+        RxBus.getDefault().toObserverable(VideoListClickEvent.class)
                 .subscribe(new Action1<VideoListClickEvent>() {
                     @Override
                     public void call(VideoListClickEvent event) {
@@ -192,7 +199,7 @@ public class NewsVideoFragment extends AbsListFragment {
                     }
                 });
 
-        rxBus.toObservable(VideoOrientationChangeEvent.class)
+        RxBus.getDefault().toObserverable(VideoOrientationChangeEvent.class)
                 .subscribe(new Action1<VideoOrientationChangeEvent>() {
                     @Override
                     public void call(VideoOrientationChangeEvent event) {
@@ -244,7 +251,7 @@ public class NewsVideoFragment extends AbsListFragment {
                 });
 
         //监听ViewPager切换的event，以便及时停止视频播放
-        rxBus.toObservable(ViewPagerSelectedEvent.class)
+        RxBus.getDefault().toObserverable(ViewPagerSelectedEvent.class)
                 .subscribe(new Action1<ViewPagerSelectedEvent>() {
                     @Override
                     public void call(ViewPagerSelectedEvent event) {
@@ -451,7 +458,6 @@ public class NewsVideoFragment extends AbsListFragment {
 //    }
 
 
-
     public class NewsVideoAdapter extends CommonAdapter<NewsItem> {
         public NewsVideoAdapter(Context context) {
             super(context, R.layout.list_item_video);
@@ -469,17 +475,19 @@ public class NewsVideoFragment extends AbsListFragment {
                 ImageLoader.Builder builder = new ImageLoader.Builder();
                 ImageLoader img = builder.url(url)
                         .imgView(news_img).strategy(ImageLoaderUtil.LOAD_STRATEGY_ONLY_WIFI).build();
-               imageLoaderUtil.loadImage(mContext, img);
+                imageLoaderUtil.loadImage(mContext, img);
             }
 
             holder.setOnClickListener(R.id.layout_thumbnail, new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     v.setVisibility(View.GONE);
-                    rxBus.post(new VideoListClickEvent(holder.getAdapterPosition(), item));
+                    RxBus.getDefault().post(new VideoListClickEvent(holder.getAdapterPosition(), item));
                 }
             });
         }
     }
+
+
 
 }

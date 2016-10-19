@@ -1,0 +1,150 @@
+{
+  "code": 0,
+  "message": "获取新闻数据成功",
+  "response": {
+    "page_info": {
+      "page_index": 0,
+      "page_count": 1
+    },
+    "topic_datas": [
+      {
+        "channelId": 4130,
+        "docId": 649720,
+        "docType": 0,
+        "title": "篮协新规遮眼防守被禁 球迷:巴蒂尔来这得失业",
+        "content": "",
+        "source": "新浪体育",
+        "images": [
+          "http://k.sinaimg.cn/n/sports/transform/20161019/y-bN-fxwvpaq1722950.jpg/w5708ef.jpg"
+        ],
+        "url": "http://sports.sina.com.cn/cba/2016-10-19/doc-ifxwvpar8442900.shtml",
+        "media": "",
+        "RelPhotos": "",
+        "date": "2016-10-19"
+      },
+      {
+        "channelId": 4130,
+        "docId": 649552,
+        "docType": 0,
+        "title": "三星Note 7事件再发酵：可能面临集体诉讼",
+        "content": "",
+        "source": "新浪科技",
+        "images": [
+          "http://n.sinaimg.cn/tech/transform/20160914/N4MN-fxvukhv8358473.jpg"
+        ],
+        "url": "http://tech.sina.com.cn/it/2016-10-19/doc-ifxwvpaq1703952.shtml",
+        "media": "",
+        "RelPhotos": "",
+        "date": "2016-10-18"
+      },
+      {
+        "channelId": 4130,
+        "docId": 649551,
+        "docType": 0,
+        "title": "油价上调料创年内最大涨幅 私家车一油箱或多15 20元",
+        "content": "",
+        "source": "中国新闻网",
+        "images": [
+          "http://finance.ifeng.com/a/20161019/14946353_0.shtml"
+        ],
+        "url": "http://finance.ifeng.com/a/20161019/14946353_0.shtml",
+        "media": "",
+        "RelPhotos": "",
+        "date": "2016-10-18"
+      }
+    ],
+    "datas": [
+      {
+        "channelId": 4150,
+        "docId": 649573,
+        "docType": 1,
+        "title": "全球十大最受欢迎宠物犬排行 拉布拉多位列榜首",
+        "content": "",
+        "source": "科技讯",
+        "images": [
+          ""
+        ],
+        "url": "http://mt.sohu.com/20151108/n425659518.shtml",
+        "media": "",
+        "RelPhotos": "",
+        "date": "2016-10-19"
+      }, {
+        "channelId": 4130,
+        "docId": 649720,
+        "docType": 2,
+        "title": "篮协新规遮眼防守被禁 球迷:巴蒂尔来这得失业",
+        "content": "",
+        "source": "新浪体育",
+        "images": [
+          "http://k.sinaimg.cn/n/sports/transform/20161019/y-bN-fxwvpaq1722950.jpg/w5708ef.jpg"
+        ],
+        "url": "http://sports.sina.com.cn/cba/2016-10-19/doc-ifxwvpar8442900.shtml",
+        "media": "",
+        "RelPhotos": "",
+        "date": "2016-10-19"
+      },
+      {
+        "channelId": 4130,
+        "docId": 649552,
+        "docType": 3,
+        "title": "三星Note 7事件再发酵：可能面临集体诉讼",
+        "content": "",
+        "source": "新浪科技",
+        "images": [
+          "http://n.sinaimg.cn/tech/transform/20160914/N4MN-fxvukhv8358473.jpg"
+        ],
+        "url": "http://tech.sina.com.cn/it/2016-10-19/doc-ifxwvpaq1703952.shtml",
+        "media": "",
+        "RelPhotos": "",
+        "date": "2016-10-18"
+      },
+      {
+        "channelId": 4130,
+        "docId": 649551,
+        "docType": 4,
+        "title": "油价上调料创年内最大涨幅 私家车一油箱或多15 20元",
+        "content": "",
+        "source": "中国新闻网",
+        "images": [
+          "http://p0.ifengimg.com/cmpp/2016/10/19/00/e35aafe2-b76d-46a2-bd71-ac615536d48f_size66_w500_h332.jpg"
+        ],
+        "url": "http://finance.ifeng.com/a/20161019/14946353_0.shtml",
+        "media": "",
+        "RelPhotos": "",
+        "date": "2016-10-18"
+      },
+      {
+        "channelId": 4154,
+        "docId": 647485,
+        "docType": 5,
+        "title": "三星独家拿下骁龙830订单 但高通有一个条件",
+        "content": "",
+        "source": "太平洋电脑网",
+        "images": [
+          "http://www.cs.com.cn/ssgs/kj/201610/W020161018676477699304.png"
+        ],
+        "url": "http://www.cs.com.cn/ssgs/kj/201610/t20161018_5074011.html",
+        "media": "",
+        "RelPhotos": "",
+        "date": "2016-10-12"
+      },
+      {
+        "channelId": 4154,
+        "docId": 439593,
+        "docType": 6,
+        "title": "自驾游川藏线，到底怎么走才划算？",
+        "content": "",
+        "source": "川藏线自驾联盟俱乐部",
+        "images": [
+          "http://img.mp.itc.cn/upload/20160416/13b7eb39dc184ce0a4c55396d313f233_th.jpg",
+          "http://img.mp.itc.cn/upload/20160416/02741d81d81c4ed7955badbc9be5774f_th.jpg",
+          "http://img.mp.itc.cn/upload/20160416/aae9963d95764b7a8766768612c17dd6_th.jpg"
+        ],
+        "url": "http://mt.sohu.com/20160416/n444508894.shtml",
+        "media": "",
+        "RelPhotos": "",
+        "date": "2016-07-08"
+      }
+    ]
+  }
+}
