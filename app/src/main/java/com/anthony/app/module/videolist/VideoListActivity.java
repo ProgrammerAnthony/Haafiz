@@ -1,12 +1,15 @@
 package com.anthony.app.module.videolist;
 
+import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.anthony.app.R;
@@ -18,6 +21,7 @@ import com.anthony.app.common.injection.component.ActivityComponent;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import rx.functions.Action1;
 
 /**
  * Created by Anthony on 2016/10/19.
@@ -33,10 +37,13 @@ public class VideoListActivity extends AbsBaseActivity {
     TextView tvTitleCenter;
     @BindView(R.id.layout_content)
     FrameLayout layoutContent;
-//    @Inject
+    @BindView(R.id.titleLayout)
+    RelativeLayout titleLayout;
+    //    @Inject
 //    RxBus rxBus;
     public static String URL = "url";
     public static String NAME = "name";
+
 
     private String mUrl = "";
     private String mName = "";
@@ -68,6 +75,27 @@ public class VideoListActivity extends AbsBaseActivity {
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.add(R.id.layout_content, fragment).commit();
+
+
+        //监听屏幕方向变化，显示或隐藏底部Tab导航栏，方便全屏播放
+        RxBus.getDefault().toObserverable(VideoOrientationChangeEvent.class)
+                .subscribe(new Action1<VideoOrientationChangeEvent>() {
+                    @Override
+                    public void call(VideoOrientationChangeEvent event) {
+                        if (event.newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+                            titleLayout.setVisibility(View.VISIBLE);
+                        }
+
+                        if (event.newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+                            titleLayout.setVisibility(View.GONE);
+                        }
+                    }
+                }, new Action1<Throwable>() {
+                    @Override
+                    public void call(Throwable throwable) {
+                        throwable.printStackTrace();
+                    }
+                });
     }
 
     @Override
@@ -88,4 +116,15 @@ public class VideoListActivity extends AbsBaseActivity {
 
         RxBus.getDefault().post(new VideoOrientationChangeEvent(newConfig));
     }
+
+    @Override
+    public void onBackPressed() {
+
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+            return;
+        }
+        super.onBackPressed();
+    }
+
 }
