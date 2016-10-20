@@ -3,7 +3,7 @@ package com.anthony.app.common.base;
 /**
  * Created by Anthony on 2016/5/4.
  * Class Note:
- *
+ * @deprecated
  * interface for all of the MVP presenter,
  */
 public interface BasePresenter<T extends BaseView> {

@@ -10,13 +10,11 @@ import android.view.ViewGroup;
 
 import com.anthony.app.common.injection.component.ActivityComponent;
 import com.anthony.app.common.utils.ToastUtils;
-import com.anthony.app.common.widgets.dialog.DialogManager;
 
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import cn.pedant.SweetAlert.SweetAlertDialog;
 import rx.Subscription;
 import timber.log.Timber;
 
@@ -29,7 +27,7 @@ import timber.log.Timber;
  * some base operation.
  * 2 do operation in initViewAndEvents(){@link #initViewsAndEvents(View rootView)}
  */
-public abstract class AbsBaseFragment extends Fragment implements BaseView {
+public abstract class AbsBaseFragment extends Fragment {
     /**
      * Log tag
      */
@@ -114,7 +112,10 @@ public abstract class AbsBaseFragment extends Fragment implements BaseView {
     }
 
     /**
-     * override this method to return content view id of the fragment
+     * Every fragment has to inflate a layout in the onCreateView method. We have added this method
+     * to
+     * avoid duplicate all the inflate code in every fragment. You only have to return the layout to
+     * inflate in this method when extends AbsBaseFragment.
      */
     protected abstract int getContentViewID();
 
@@ -135,45 +136,6 @@ public abstract class AbsBaseFragment extends Fragment implements BaseView {
         toastUtils.showToast(content);
     }
 
-    /**
-     * -----------------------implements methods in BaseView------------
-     * todo currently not used
-     **/
-    @Override
-    public void showMessage(String msg) {
-//        toastUtils.showToast(msg);
-//            Snackbar.make(this, msg, Snackbar.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void close() {
-//        finish();
-    }
-
-    @Override
-    public void showProgress(String message) {
-        DialogManager.showProgressDialog(mContext, message);
-    }
-
-    @Override
-    public void showProgress(String message, int progress) {
-        DialogManager.showProgressDialog(mContext, message, progress);
-    }
-
-    @Override
-    public void hideProgress() {
-        DialogManager.hideProgressDialog();
-    }
-
-    @Override
-    public void showErrorMessage(String msg, String content) {
-        DialogManager.showErrorDialog(mContext, msg, content, new SweetAlertDialog.OnSweetClickListener() {
-            @Override
-            public void onClick(SweetAlertDialog sweetAlertDialog) {
-                sweetAlertDialog.dismissWithAnimation();
-            }
-        });
-    }
 
 }
 

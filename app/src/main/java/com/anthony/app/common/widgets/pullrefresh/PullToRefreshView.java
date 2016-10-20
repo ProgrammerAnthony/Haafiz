@@ -20,7 +20,7 @@ import com.anthony.app.R;
 /**
  * Created by Anthony on 2016/7/18.
  * 实现对子view 的上拉和下拉的监听实现，提供下拉和下拉的视图和接口
- * todo 提供示例
+ *
  */
 public class PullToRefreshView extends ViewGroup{
 

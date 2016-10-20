@@ -4,6 +4,7 @@ package com.anthony.app.common.base;
  * Created by Anthony on 2016/5/3.
  * Class Note:
  * interface for MVP View in all of the project
+ * @deprecated
  */
 public interface BaseView {
 

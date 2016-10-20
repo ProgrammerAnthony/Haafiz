@@ -9,13 +9,11 @@ import com.anthony.app.common.injection.component.ActivityComponent;
 import com.anthony.app.common.injection.component.DaggerActivityComponent;
 import com.anthony.app.common.injection.module.ActivityModule;
 import com.anthony.app.common.utils.ToastUtils;
-import com.anthony.app.common.widgets.dialog.DialogManager;
 
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import cn.pedant.SweetAlert.SweetAlertDialog;
 import rx.Subscription;
 import timber.log.Timber;
 
@@ -24,10 +22,10 @@ import timber.log.Timber;
  * Created by Anthony on 2016/4/24.
  * Class Note:
  * 1 all activities implement from this class
- * 2 implemented method from {@link BaseView}
+ *
  * todo add Umeng analysis
  */
-public abstract class AbsBaseActivity extends AppCompatActivity implements BaseView {
+public abstract class AbsBaseActivity extends AppCompatActivity  {
 
     protected static String TAG_LOG = null;// Log tag
 
@@ -129,42 +127,5 @@ public abstract class AbsBaseActivity extends AppCompatActivity implements BaseV
     }
 
 
-    /**
-     * -----------------------using in MVP implements methods in BaseView------------
-     **/
-    @Override
-    public void showMessage(String msg) {
-        toastUtils.showToast(msg);
-    }
-
-    @Override
-    public void close() {
-        finish();
-    }
-
-    @Override
-    public void showProgress(String message) {
-        DialogManager.showProgressDialog(mContext, message);
-    }
-
-    @Override
-    public void showProgress(String message, int progress) {
-        DialogManager.showProgressDialog(mContext, message, progress);
-    }
-
-    @Override
-    public void hideProgress() {
-        DialogManager.hideProgressDialog();
-    }
-
-    @Override
-    public void showErrorMessage(String msg, String content) {
-        DialogManager.showErrorDialog(mContext, msg, content, new SweetAlertDialog.OnSweetClickListener() {
-            @Override
-            public void onClick(SweetAlertDialog sweetAlertDialog) {
-                sweetAlertDialog.dismissWithAnimation();
-            }
-        });
-    }
 }
 

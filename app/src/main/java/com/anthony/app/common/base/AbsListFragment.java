@@ -32,7 +32,7 @@ import rx.functions.Action0;
  * Created by Anthony on 2016/9/9.
  * Class Note:
  * abstract class support pullToRefresh  + RecyclerView
- * <p/>
+ *
  * todo preload !!!!
  */
 public abstract class AbsListFragment extends AbsBaseFragment {
