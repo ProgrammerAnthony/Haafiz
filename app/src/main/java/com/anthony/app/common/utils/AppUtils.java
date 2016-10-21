@@ -14,6 +14,7 @@ import android.content.pm.PackageManager;
 import android.content.res.TypedArray;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Environment;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
@@ -24,6 +25,7 @@ import com.anthony.app.common.base.Constants;
 import com.anthony.app.common.data.bean.NewsItem;
 import com.anthony.app.common.widgets.webview.WebViewCommentActivity;
 
+import java.io.File;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.SimpleDateFormat;
@@ -558,5 +560,24 @@ public class AppUtils {
         Intent intent = new Intent(context, WebViewCommentActivity.class);
         intent.putExtra(WebViewCommentActivity.WEB_VIEW_ITEM, newsItem);
         context.startActivity(intent);
+    }
+
+    /**
+     * install APK File from folder
+     * @param context
+     * @param apkFullFileName  apk path+apk name
+     */
+    public static void installApk(Context context,String apkFullFileName) {
+//        String saveFileName = Environment.getExternalStorageDirectory().getAbsolutePath()
+//                + "/Download/" + downloadFileName;
+        File apkFile = new File(apkFullFileName);
+        if (!apkFile.exists()) {
+            return;
+        }
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setDataAndType(Uri.fromFile(apkFile), "application/vnd.android.package-archive");
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(i);
+
     }
 }

@@ -1,5 +1,7 @@
 package com.anthony.app.common.base;
 
+import android.os.Environment;
+
 /**
  * Created by Anthony on 2016/4/28.
  * Class Note:
@@ -35,4 +37,6 @@ public class Constants {
     //百度api地址
     public static final String REMOTE_BASE_END_POINT_WEATHER = "http://apis.baidu.com/";
 
+    public static String DOWNLOAD_STORE_FOLDER = Environment.getExternalStorageDirectory().getAbsolutePath()
+            + "/Download/";
 }

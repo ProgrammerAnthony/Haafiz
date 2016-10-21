@@ -8,6 +8,8 @@ import com.anthony.app.common.data.bean.GithubUser;
 import com.anthony.app.common.data.bean.NewsItem;
 import com.anthony.app.common.data.bean.NormalJsonInfo;
 import com.anthony.app.common.data.bean.WeatherData;
+import com.anthony.app.common.data.download.DownloadEvent;
+import com.anthony.app.common.data.download.DownloadFinishEvent;
 import com.anthony.app.common.data.download.DownloadService;
 import com.anthony.app.common.data.retrofit.GithubApi;
 import com.anthony.app.common.data.retrofit.HttpResult;
@@ -225,8 +227,8 @@ public class DataManager {
 
     /**
      * 通过GET方式下载远程文件，支持大文件下载
-     * 想要获知下载进度事件，请订阅com.trs.library.rx.bus.event.DownloadEvent
-     * 想要获知下载完成事件，请订阅com.trs.library.rx.bus.event.DownloadFinishEvent
+     * 想要获知下载进度事件，请订阅{@link DownloadEvent}
+     * 想要获知下载完成事件，请订阅{@link DownloadFinishEvent}
      */
     public void downloadFile(Context ctx, final String url) {
         Intent startIntent = new Intent(ctx, DownloadService.class);
@@ -236,8 +238,8 @@ public class DataManager {
 
     /**
      * 通过POST方式上传文件，支持多文件上传
-     * 想要获知上传进度事件，请订阅com.trs.library.rx.bus.event.UploadEvent
-     * 想要获知上传完成事件，请订阅com.trs.library.rx.bus.event.UploadFinishEvent
+     * 想要获知上传进度事件，请订阅{@link com.anthony.app.common.data.event.UploadEvent}
+     * 想要获知上传完成事件，请订阅{@link com.anthony.app.common.data.event.UploadFinishEvent}
      */
     public void uploadFile(Context ctx, String url, ArrayList<UploadParam> fileList, ArrayList<UploadParam> paramList) {
         Intent startIntent = new Intent(ctx, UploadService.class);

@@ -12,25 +12,25 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.RemoteViews;
+import android.widget.Toast;
 
 import com.anthony.app.R;
 import com.anthony.app.common.data.RxBus;
-import com.anthony.app.common.data.event.DownloadEvent;
-import com.anthony.app.common.data.event.DownloadFinishEvent;
 import com.anthony.app.common.utils.AppUtils;
-import com.anthony.app.common.utils.ToastUtils;
 
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import javax.inject.Inject;
-
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
 import rx.schedulers.Schedulers;
 
-
+/**
+ * Created by Anthony on 2016/6/12.
+ * Class Note:
+ *  Download Service to load {@link NotificationManager}
+ */
 public class DownloadService extends Service {
     public static String DOWNLOAD_URL = "DOWNLOAD_URL";
     private static String ACTION = "DOWNLOAD_ACTION";
@@ -38,16 +38,14 @@ public class DownloadService extends Service {
     private NotificationManager mNotificationManager;
     private HashMap<String, DownloadTask> mTaskMap = new HashMap<>();
 
-    @Inject
-    ToastUtils
-            toastUtils;
 
     @Override
     public void onCreate() {
         super.onCreate();
         mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
-        RxBus.getDefault().toObserverable(DownloadEvent.class)
+        RxBus.getDefault()
+                .toObserverable(DownloadEvent.class)
                 .onBackpressureBuffer()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -87,7 +85,8 @@ public class DownloadService extends Service {
                     }
                 });
 
-        RxBus.getDefault().toObserverable(DownloadFinishEvent.class)
+        RxBus.getDefault()
+                .toObserverable(DownloadFinishEvent.class)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Action1<DownloadFinishEvent>() {
@@ -95,11 +94,15 @@ public class DownloadService extends Service {
                     public void call(DownloadFinishEvent downloadFinishEvent) {
                         if (mNotificationManager != null) {
                             mNotificationManager.cancel(downloadFinishEvent.task.id);
+                            mNotificationManager = null;
                         }
 
                         if (!downloadFinishEvent.isSuccess) {
-                           toastUtils.showToast("下载失败");
+                            Toast.makeText(getApplicationContext(), "下载失败", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getApplicationContext(), "下载成功", Toast.LENGTH_SHORT).show();
                         }
+
 
                         mTaskMap.remove(downloadFinishEvent.task.mUrl);
                     }
@@ -128,9 +131,9 @@ public class DownloadService extends Service {
 
             if (!TextUtils.isEmpty(url)) {
                 if (mTaskMap.containsKey(url)) {
-                    toastUtils.showToast("正在下载中...");
+                    Toast.makeText(getApplicationContext(), "正在下载中...", Toast.LENGTH_SHORT).show();
                 } else {
-                    DownloadTask task = new DownloadTask(mTaskMap.size(), url);
+                    DownloadTask task = new DownloadTask(mTaskMap.size(), url, getApplicationContext());
                     mTaskMap.put(url, task);
                     task.start();
                     createNotification(task);

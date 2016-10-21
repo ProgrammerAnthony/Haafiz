@@ -1,12 +1,11 @@
 package com.anthony.app.common.data.download;
 
 import android.app.Notification;
-import android.os.Environment;
+import android.content.Context;
 
+import com.anthony.app.common.base.Constants;
 import com.anthony.app.common.data.HttpHelper;
 import com.anthony.app.common.data.RxBus;
-import com.anthony.app.common.data.event.DownloadEvent;
-import com.anthony.app.common.data.event.DownloadFinishEvent;
 import com.anthony.app.common.utils.AppUtils;
 
 import java.io.File;
@@ -16,33 +15,36 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.Serializable;
 
-import javax.inject.Inject;
-
 import okhttp3.ResponseBody;
 import rx.Subscription;
 import rx.functions.Action1;
 import rx.schedulers.Schedulers;
 
-
+/**
+ * Created by Anthony on 2016/6/12.
+ * Class Note:
+ *
+ */
 public class DownloadTask implements Serializable {
+    private Context mContext;
     public int id;
     public String mUrl;
     public Subscription mSubscription;
     public Notification mNotification;
     public int current_percent = 0;
     public boolean isUnknownLength = false;
-    @Inject
+
     HttpHelper httpHelper;
-    @Inject
-    RxBus rxBus;
 
 
-    public DownloadTask(int id, String mUrl) {
+    public DownloadTask(int id, String mUrl, Context context) {
         this.id = id;
         this.mUrl = mUrl;
+        this.mContext = context;
     }
 
     public void start() {
+        httpHelper = new HttpHelper(mContext);
         mSubscription = httpHelper.getService(DownloadApi.class)
                 .downloadFile(mUrl)
                 .subscribeOn(Schedulers.io())
@@ -51,13 +53,13 @@ public class DownloadTask implements Serializable {
                     @Override
                     public void call(ResponseBody responseBody) {
                         boolean result = writeResponseBodyToDisk(responseBody, AppUtils.getUrlFileName(mUrl));
-                       rxBus.post(new DownloadFinishEvent(DownloadTask.this, result));
+                        RxBus.getDefault().post(new DownloadFinishEvent(DownloadTask.this, result));
                     }
                 }, new Action1<Throwable>() {
                     @Override
                     public void call(Throwable throwable) {
                         throwable.printStackTrace();
-                       rxBus.post(new DownloadFinishEvent(DownloadTask.this, false));
+                        RxBus.getDefault().post(new DownloadFinishEvent(DownloadTask.this, false));
                     }
                 });
     }
@@ -70,8 +72,7 @@ public class DownloadTask implements Serializable {
 
     private boolean writeResponseBodyToDisk(ResponseBody body, String fileName) {
         try {
-            String store_path = Environment.getExternalStorageDirectory().getAbsolutePath()
-                    + "/Download/";
+            String store_path = Constants.DOWNLOAD_STORE_FOLDER;
             File futureStudioIconFile = new File(store_path + fileName);
 
             InputStream inputStream = null;
@@ -97,7 +98,7 @@ public class DownloadTask implements Serializable {
 
                     fileSizeDownloaded += read;
 
-                   rxBus.post(new DownloadEvent(mUrl, fileSize, fileSizeDownloaded, this));
+                    RxBus.getDefault().post(new DownloadEvent(mUrl, fileSize, fileSizeDownloaded, this));
 //                    Log.d("FileDownload", "file download: " + fileSizeDownloaded + " of " + fileSize);
                 }
 

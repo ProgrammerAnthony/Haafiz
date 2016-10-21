@@ -1,7 +1,5 @@
-package com.anthony.app.common.data.event;
+package com.anthony.app.common.data.download;
 
-
-import com.anthony.app.common.data.download.DownloadTask;
 
 public class DownloadEvent {
     public String url;

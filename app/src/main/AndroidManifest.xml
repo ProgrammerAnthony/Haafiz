@@ -8,6 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <service android:name=".common.data.download.DownloadService" />
 
         <activity android:name=".module.splash.LoadingActivity"></activity>
 
