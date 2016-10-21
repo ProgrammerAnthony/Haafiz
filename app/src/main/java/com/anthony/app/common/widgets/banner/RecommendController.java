@@ -12,8 +12,8 @@ import android.widget.TextView;
 
 import com.anthony.app.R;
 import com.anthony.app.common.data.bean.NewsItem;
-import com.anthony.app.common.widgets.imageloader.ImageLoader;
-import com.anthony.app.common.widgets.imageloader.ImageLoaderUtil;
+import com.anthony.imageloader.ImageLoader;
+import com.anthony.imageloader.ImageLoaderUtil;
 import com.viewpagerindicator.PageIndicator;
 
 import java.util.ArrayList;

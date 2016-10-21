@@ -9,6 +9,7 @@ import com.anthony.app.common.injection.module.ApplicationModule;
 import com.anthony.app.common.injection.scope.ApplicationContext;
 import com.anthony.app.common.widgets.CircleProgressBar;
 import com.anthony.app.common.widgets.ViewDisplay;
+import com.anthony.imageloader.ImageLoaderUtil;
 import com.squareup.otto.Bus;
 
 import javax.inject.Singleton;
@@ -46,4 +47,6 @@ public interface ApplicationComponent {
     ChannelDao channelDao();
 
     NewsItemDao newsItemDao();
+
+    ImageLoaderUtil imageLoaderUtil();
 }

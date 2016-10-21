@@ -9,6 +9,7 @@ import com.anthony.app.common.data.database.dao.NewsItemDao;
 import com.anthony.app.common.injection.scope.ApplicationContext;
 import com.anthony.app.common.widgets.CircleProgressBar;
 import com.anthony.app.common.widgets.ViewDisplay;
+import com.anthony.imageloader.ImageLoaderUtil;
 import com.squareup.otto.Bus;
 
 import javax.inject.Singleton;
@@ -82,5 +83,10 @@ public class ApplicationModule {
         return new NewsItemDao(mApplication);
     }
 
+    @Provides
+    @Singleton
+    ImageLoaderUtil imageLoaderUtil() {
+        return new ImageLoaderUtil();
+    }
 
 }

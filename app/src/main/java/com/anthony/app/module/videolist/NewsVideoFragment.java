@@ -21,12 +21,12 @@ import com.anthony.app.common.data.event.VideoListClickEvent;
 import com.anthony.app.common.data.event.VideoOrientationChangeEvent;
 import com.anthony.app.common.data.event.ViewPagerSelectedEvent;
 import com.anthony.app.common.injection.component.ActivityComponent;
-import com.anthony.app.common.widgets.imageloader.ImageLoader;
-import com.anthony.app.common.widgets.imageloader.ImageLoaderUtil;
 import com.anthony.app.common.widgets.recyclerview.adapter.CommonAdapter;
 import com.anthony.app.common.widgets.recyclerview.adapter.MultiItemTypeAdapter;
 import com.anthony.app.common.widgets.recyclerview.base.ViewHolder;
 import com.anthony.app.common.widgets.recyclerview.divider.RecycleViewDivider;
+import com.anthony.imageloader.ImageLoader;
+import com.anthony.imageloader.ImageLoaderUtil;
 import com.anthony.videolistplayer.VideoPlayView;
 import com.anthony.videolistplayer.media.IjkVideoView;
 

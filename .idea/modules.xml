@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Ant.iml" filepath="$PROJECT_DIR$/Ant.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ThirdPart/ImageLoader/ImageLoader.iml" filepath="$PROJECT_DIR$/ThirdPart/ImageLoader/ImageLoader.iml" />
       <module fileurl="file://$PROJECT_DIR$/ThirdPart/SegmentControl/SegmentControl.iml" filepath="$PROJECT_DIR$/ThirdPart/SegmentControl/SegmentControl.iml" />
       <module fileurl="file://$PROJECT_DIR$/ThirdPart/ShareSDK/ShareSDK.iml" filepath="$PROJECT_DIR$/ThirdPart/ShareSDK/ShareSDK.iml" />
       <module fileurl="file://$PROJECT_DIR$/ThirdPart/SlidingMenu/SlidingMenu.iml" filepath="$PROJECT_DIR$/ThirdPart/SlidingMenu/SlidingMenu.iml" />

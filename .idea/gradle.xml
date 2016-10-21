@@ -9,6 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ThirdPart/ImageLoader" />
             <option value="$PROJECT_DIR$/ThirdPart/SegmentControl" />
             <option value="$PROJECT_DIR$/ThirdPart/ShareSDK" />
             <option value="$PROJECT_DIR$/ThirdPart/SlidingMenu" />

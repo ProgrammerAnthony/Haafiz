@@ -20,8 +20,8 @@ import com.anthony.app.common.base.AbsBaseActivity;
 import com.anthony.app.common.data.bean.Image;
 import com.anthony.app.common.injection.component.ActivityComponent;
 import com.anthony.app.common.widgets.CommentView;
-import com.anthony.app.common.widgets.imageloader.ImageLoader;
-import com.anthony.app.common.widgets.imageloader.ImageLoaderUtil;
+import com.anthony.imageloader.ImageLoader;
+import com.anthony.imageloader.ImageLoaderUtil;
 import com.bm.library.PhotoView;
 
 import java.util.List;

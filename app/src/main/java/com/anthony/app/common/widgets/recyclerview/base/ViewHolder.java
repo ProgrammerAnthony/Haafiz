@@ -20,8 +20,8 @@ import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
-import com.anthony.app.common.widgets.imageloader.ImageLoader;
-import com.anthony.app.common.widgets.imageloader.ImageLoaderUtil;
+import com.anthony.imageloader.ImageLoader;
+import com.anthony.imageloader.ImageLoaderUtil;
 
 
 public class ViewHolder extends RecyclerView.ViewHolder {
