@@ -40,6 +40,7 @@ public class MyApplication extends Application {
     DataManager mDataManager;
 
     private ApplicationComponent mAppComponent;
+
     public DatabaseHelper dbHelper;
 
     //global instance ,channel list data
@@ -57,6 +58,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
+//Dagger2 inject
         getAppComponent().inject(this);
 //        mEventBus.register(this);
         initAVOS();
@@ -78,7 +80,7 @@ public class MyApplication extends Application {
     }
 
     private void initDb() {
-        //初始化数据库
+        //init database
         if (TextUtils.isEmpty(SpUtil.getString(this, Constants.CURRENT_USER, ""))) {
             SpUtil.putString(this, Constants.CURRENT_USER, "fish_man_default");
         }
@@ -93,7 +95,7 @@ public class MyApplication extends Application {
                     .getApplicationInfo(getPackageName(), PackageManager.GET_META_DATA);
             String id = appInfo.metaData.getString("AVOS_APP_ID");
             String key = appInfo.metaData.getString("AVOS_APP_KEY");
-            // LeanCloud初始化参数AppId和AppKey
+            // init LeanCloud AppId and AppKey
             AVOSCloud.initialize(this, id, key);
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
@@ -124,7 +126,6 @@ public class MyApplication extends Application {
     public void setAppComponent(ApplicationComponent appComponent) {
         mAppComponent = appComponent;
     }
-
 
 
     /**

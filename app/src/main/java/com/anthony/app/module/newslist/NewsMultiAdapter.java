@@ -6,9 +6,9 @@ import android.view.View;
 
 import com.anthony.app.R;
 import com.anthony.app.common.data.bean.NewsItem;
-import com.anthony.app.common.widgets.recyclerview.adapter.MultiItemTypeAdapter;
-import com.anthony.app.common.widgets.recyclerview.base.ItemViewDelegate;
-import com.anthony.app.common.widgets.recyclerview.base.ViewHolder;
+import com.anthony.rvhelper.adapter.MultiItemTypeAdapter;
+import com.anthony.rvhelper.base.ItemViewDelegate;
+import com.anthony.rvhelper.base.ViewHolder;
 
 
 /**

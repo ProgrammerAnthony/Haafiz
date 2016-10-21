@@ -11,8 +11,8 @@ import com.anthony.app.common.data.bean.NormalJsonInfo;
 import com.anthony.app.common.data.database.dao.NewsItemDao;
 import com.anthony.app.common.injection.component.ActivityComponent;
 import com.anthony.app.common.utils.AppUtils;
-import com.anthony.app.common.widgets.recyclerview.adapter.MultiItemTypeAdapter;
-import com.anthony.app.common.widgets.recyclerview.divider.RecycleViewDivider;
+import com.anthony.rvhelper.adapter.MultiItemTypeAdapter;
+import com.anthony.rvhelper.divider.RecycleViewDivider;
 
 import java.util.List;
 

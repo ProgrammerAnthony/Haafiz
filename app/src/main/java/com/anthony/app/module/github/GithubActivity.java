@@ -13,9 +13,9 @@ import com.anthony.app.common.data.bean.NewsItem;
 import com.anthony.app.common.data.retrofit.HttpSubscriber;
 import com.anthony.app.common.injection.component.ActivityComponent;
 import com.anthony.app.common.utils.AppUtils;
-import com.anthony.app.common.widgets.recyclerview.adapter.CommonAdapter;
-import com.anthony.app.common.widgets.recyclerview.base.ViewHolder;
-import com.anthony.app.common.widgets.recyclerview.divider.RecycleViewDivider;
+import com.anthony.rvhelper.adapter.CommonAdapter;
+import com.anthony.rvhelper.base.ViewHolder;
+import com.anthony.rvhelper.divider.RecycleViewDivider;
 
 import java.util.List;
 
