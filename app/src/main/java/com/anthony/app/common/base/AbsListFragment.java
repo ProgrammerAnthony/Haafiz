@@ -16,7 +16,7 @@ import com.anthony.app.common.data.retrofit.HttpSubscriber;
 import com.anthony.app.common.injection.component.ActivityComponent;
 import com.anthony.app.common.utils.SpUtil;
 import com.anthony.app.common.utils.TimeUtils;
-import com.anthony.app.common.widgets.pullrefresh.PullToRefreshView;
+import com.anthony.pullrefreshview.PullToRefreshView;
 import com.anthony.rvhelper.adapter.MultiItemTypeAdapter;
 import com.anthony.app.common.widgets.TopicWrapper;
 import com.google.gson.Gson;

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- 下拉刷新组件自定义属性 -->
+    <declare-styleable name="PullToRefresh">
+        <attr name="header_indicator" format="string"/>
+        <attr name="footer_indicator" format="string"/>
+    </declare-styleable>
+
+
+</resources>

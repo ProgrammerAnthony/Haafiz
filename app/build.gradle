@@ -107,6 +107,7 @@ dependencies {
     compile project(':VideoListPlayer')
     compile project(':ImageLoader')
     compile project(':RVHelper')
+    compile project(':PullRefreshView')
     compile files('libs/ormlite-android-4.49.jar')
     compile files('libs/ormlite-core-4.49.jar')
 //sqlBrite

@@ -6,7 +6,7 @@
     android:background="@color/common_bg_dark"
     skin:enable="true">
 
-    <com.anthony.app.common.widgets.pullrefresh.PullToRefreshView
+    <com.anthony.pullrefreshview.PullToRefreshView
         android:id="@+id/ptr"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -17,7 +17,7 @@
             android:layout_height="match_parent"
             android:scrollbars="vertical" />
 
-    </com.anthony.app.common.widgets.pullrefresh.PullToRefreshView>
+    </com.anthony.pullrefreshview.PullToRefreshView>
 
     <RelativeLayout
         android:id="@+id/layout_play_window"

@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/ThirdPart/ImageLoader" />
+            <option value="$PROJECT_DIR$/ThirdPart/PullRefreshView" />
             <option value="$PROJECT_DIR$/ThirdPart/RVHelper" />
             <option value="$PROJECT_DIR$/ThirdPart/SegmentControl" />
             <option value="$PROJECT_DIR$/ThirdPart/ShareSDK" />
