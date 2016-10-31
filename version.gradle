@@ -46,6 +46,7 @@ ext {
             javaxAnnotationVersion            : '10.0-b28',
             swipeToolVersion                  : '1.0.1',
             photoViewVersion                  : '1.4.0',
+            chrisbanesphotoViewVersion        : '1.3.1',
             pagerSlidingTabstripVersion       : '1.3',
             avosCloudSDKVersion               : 'v3.+',
             avosCloudPushVersion              : 'v3.+@aar',
@@ -104,5 +105,6 @@ ext {
             logger                     : 'com.orhanobut:logger:' + depsVersion.loggerVersion,
             icePick                    : 'frankiesardo:icepick:' + depsVersion.icePickVersion,
             icePickProcessor           : 'frankiesardo:icepick-processor:' + depsVersion.icePickProcessorVersion,
+            chrisbanesPhotoView        : 'com.github.chrisbanes:PhotoView:' + depsVersion.chrisbanesphotoViewVersion,
     ]
 }
