@@ -3,9 +3,9 @@ package com.anthony.app.common.injection.component;
 import android.content.Context;
 
 import com.anthony.app.common.base.MyApplication;
-import com.anthony.app.common.data.database.NewsItemDaoOld;
 import com.anthony.app.common.data.database.dao.ChannelDao;
 import com.anthony.app.common.data.database.dao.NewsItemDao;
+import com.anthony.app.common.data.database.dao.OfflineResourceDao;
 import com.anthony.app.common.injection.module.ApplicationModule;
 import com.anthony.app.common.injection.scope.ApplicationContext;
 import com.anthony.app.common.widgets.CircleProgressBar;
@@ -45,11 +45,13 @@ public interface ApplicationComponent {
 
     CircleProgressBar circleProgressBar();
 
-    NewsItemDaoOld newsItemDaoOld();
+//    NewsItemDaoOld newsItemDaoOld();
 
     ChannelDao channelDao();
 
     NewsItemDao newsItemDao();
+
+    OfflineResourceDao offlineResourceDao();
 
     ImageLoaderUtil imageLoaderUtil();
 }

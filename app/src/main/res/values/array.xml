@@ -12,12 +12,9 @@
 
     <!-- 数据库Entity Class -->
     <string-array name="db_tb">
-        <item>com.app.gzgov.common.data.bean.Channel</item>
-        <item>com.app.gzgov.common.data.bean.NewsItem</item>
-        <item>com.app.gzgov.common.data.bean.OfflineResource</item>
-        <item>com.app.gzgov.module.data.GZGridItem1</item>
-        <item>com.app.gzgov.module.data.GZGridItem2</item>
-        <item>com.app.gzgov.module.data.GZNewsItem</item>
+        <item>com.anthony.app.common.data.bean.Channel</item>
+        <item>com.anthony.app.common.data.bean.NewsItem</item>
+        <item>com.anthony.app.common.data.bean.OfflineResource</item>
     </string-array>
 
     <string-array name="setting_list">

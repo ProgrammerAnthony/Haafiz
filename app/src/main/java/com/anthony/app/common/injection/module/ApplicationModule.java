@@ -7,6 +7,7 @@ import com.anthony.app.common.base.MyApplication;
 import com.anthony.app.common.data.database.NewsItemDaoOld;
 import com.anthony.app.common.data.database.dao.ChannelDao;
 import com.anthony.app.common.data.database.dao.NewsItemDao;
+import com.anthony.app.common.data.database.dao.OfflineResourceDao;
 import com.anthony.app.common.injection.scope.ApplicationContext;
 import com.anthony.app.common.widgets.CircleProgressBar;
 import com.anthony.app.common.widgets.ViewDisplay;
@@ -29,6 +30,12 @@ public class ApplicationModule {
 
     public ApplicationModule(MyApplication application) {
         mApplication = application;
+    }
+
+    @Provides
+    @Singleton
+    NewsItemDaoOld newsItemDaoOld() {
+        return new NewsItemDaoOld(mApplication);
     }
 
     @Provides
@@ -80,8 +87,14 @@ public class ApplicationModule {
 
     @Provides
     @Singleton
-    NewsItemDao newsItemDao() {
+    NewsItemDao provideNewsItemDao() {
         return new NewsItemDao(mApplication);
+    }
+
+    @Provides
+    @Singleton
+    OfflineResourceDao provideOfflineResourceDao() {
+        return new OfflineResourceDao(mApplication);
     }
 
     @Provides
@@ -90,10 +103,5 @@ public class ApplicationModule {
         return new ImageLoaderUtil();
     }
 
-    @Provides
-    @Singleton
-    NewsItemDaoOld newsItemDaoOld() {
-        return new NewsItemDaoOld(mApplication);
-    }
 
 }

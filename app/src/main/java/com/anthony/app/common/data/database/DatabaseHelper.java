@@ -4,10 +4,9 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
-import com.anthony.app.common.data.bean.NewsItem;
+import com.anthony.app.R;
 import com.anthony.app.common.injection.scope.ApplicationContext;
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
-import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 
@@ -40,18 +39,18 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     // any time you make changes to your database objects, you may have to increase the database version
     private static final int DATABASE_VERSION = 1;
     // the DAO object we use to access the NewsItem table
-    private Dao<NewsItem, Integer> simpleDao = null;
+//    private Dao<NewsItem, Integer> simpleDao = null;
 
     /**
      * Returns the Database Access Object (DAO) for our NewsItem class. I
      * t will create it or just give the cached value.
      */
-    public Dao<NewsItem, Integer> getNewsItemDao() throws SQLException {
-        if (simpleDao == null) {
-            simpleDao = getDao(NewsItem.class);
-        }
-        return simpleDao;
-    }
+//    public Dao<NewsItem, Integer> getNewsItemDao() throws SQLException {
+//        if (simpleDao == null) {
+//            simpleDao = getDao(NewsItem.class);
+//        }
+//        return simpleDao;
+//    }
 
 
     @Inject
@@ -63,44 +62,44 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase database, ConnectionSource connectionSource) {
-        try {
-            TableUtils.createTable(connectionSource, NewsItem.class);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
 //        try {
-//            String[] tb = mContext.getResources().getStringArray(R.array.db_tb);
-//            for (int i = 0; i < tb.length; i++) {
-//                Class clazz = Class.forName(tb[i]);
-//                TableUtils.createTable(connectionSource, clazz);
-//            }
+//            TableUtils.createTable(connectionSource, NewsItem.class);
 //        } catch (SQLException e) {
 //            e.printStackTrace();
-//        } catch (ClassNotFoundException e) {
-//            e.printStackTrace();
 //        }
+        try {
+            String[] tb = mContext.getResources().getStringArray(R.array.db_tb);
+            for (int i = 0; i < tb.length; i++) {
+                Class clazz = Class.forName(tb[i]);
+                TableUtils.createTable(connectionSource, clazz);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase database, ConnectionSource connectionSource,
                           int oldVersion, int newVersion) {
-        try {
-            TableUtils.dropTable(connectionSource, NewsItem.class, true);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
 //        try {
-//            String[] tb = mContext.getResources().getStringArray(R.array.db_tb);
-//            for (int i = 0; i < tb.length; i++) {
-//                Class clazz = Class.forName(tb[i]);
-//                TableUtils.dropTable(connectionSource, clazz, true);
-//            }
-//            onCreate(database, connectionSource);
+//            TableUtils.dropTable(connectionSource, NewsItem.class, true);
 //        } catch (SQLException e) {
 //            e.printStackTrace();
-//        } catch (ClassNotFoundException e) {
-//            e.printStackTrace();
 //        }
+        try {
+            String[] tb = mContext.getResources().getStringArray(R.array.db_tb);
+            for (int i = 0; i < tb.length; i++) {
+                Class clazz = Class.forName(tb[i]);
+                TableUtils.dropTable(connectionSource, clazz, true);
+            }
+            onCreate(database, connectionSource);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     /**

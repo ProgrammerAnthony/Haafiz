@@ -66,9 +66,6 @@ public class DataManager {
     @Inject
     EventPosterHelper mEventPoster; //otto
 
-
-
-
     @Inject
     DatabaseHelper mDatabaseHelper;
 //    @Inject
@@ -82,14 +79,15 @@ public class DataManager {
 
     }
 
+    public DatabaseHelper getDatabaseHelper() {
+        return mDatabaseHelper;
+    }
+
     public PreferencesHelper getPreferencesHelper() {
         return mPreferencesHelper;
     }
 
 
-    public DatabaseHelper getDatabaseHelper() {
-        return mDatabaseHelper;
-    }
 //    public RxBus getRxBus() {
 //        return mRxBus;
 //    }
