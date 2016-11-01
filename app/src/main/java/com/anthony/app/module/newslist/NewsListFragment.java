@@ -8,7 +8,7 @@ import com.anthony.app.R;
 import com.anthony.app.common.base.AbsListFragment;
 import com.anthony.app.common.data.bean.NewsItem;
 import com.anthony.app.common.data.bean.NormalJsonInfo;
-import com.anthony.app.common.data.database.dao.NewsItemDao;
+import com.anthony.app.common.data.database.NewsItemDaoOld;
 import com.anthony.app.common.injection.component.ActivityComponent;
 import com.anthony.app.common.utils.AppUtils;
 import com.anthony.rvhelper.adapter.MultiItemTypeAdapter;
@@ -25,8 +25,11 @@ import javax.inject.Inject;
  */
 public class NewsListFragment extends AbsListFragment {
 
+//    @Inject
+//    NewsItemDao newsItemDao;
+
     @Inject
-    NewsItemDao newsItemDao;
+    NewsItemDaoOld newsItemDao;
 
     @Override
     protected RecyclerView.LayoutManager getLayoutManager() {

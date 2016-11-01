@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
+        "outputFile": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 102
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 162
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -49,7 +49,7 @@
                     "endOffset": 214
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -68,7 +68,7 @@
                     "endOffset": 267
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -87,7 +87,7 @@
                     "endOffset": 321
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -106,7 +106,7 @@
                     "endOffset": 373
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -125,7 +125,7 @@
                     "endOffset": 433
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -144,7 +144,7 @@
                     "endOffset": 491
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -163,7 +163,7 @@
                     "endOffset": 549
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -182,7 +182,7 @@
                     "endOffset": 607
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -201,7 +201,7 @@
                     "endOffset": 665
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -220,7 +220,7 @@
                     "endOffset": 723
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -239,7 +239,7 @@
                     "endOffset": 774
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -258,7 +258,7 @@
                     "endOffset": 833
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -277,7 +277,7 @@
                     "endOffset": 888
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -296,7 +296,7 @@
                     "endOffset": 944
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -315,7 +315,7 @@
                     "endOffset": 989
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -334,7 +334,7 @@
                     "endOffset": 1052
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -353,7 +353,7 @@
                     "endOffset": 1107
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\colors.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\colors.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -372,7 +372,7 @@
                     "endOffset": 2118
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\dimen.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\dimen.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -391,7 +391,7 @@
                     "endOffset": 2168
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\dimen.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\dimen.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -410,7 +410,7 @@
                     "endOffset": 2222
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\dimen.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\dimen.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -429,7 +429,7 @@
                     "endOffset": 2269
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\strings.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -448,7 +448,7 @@
                     "endOffset": 2323
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\strings.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -467,7 +467,7 @@
                     "endOffset": 2392
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\build\\intermediates\\exploded-aar\\com.pnikosis\\materialish-progress\\1.7\\res\\values\\values.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\build\\intermediates\\exploded-aar\\com.pnikosis\\materialish-progress\\1.7\\res\\values\\values.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -486,7 +486,7 @@
                     "endOffset": 2441
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\strings.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -505,7 +505,7 @@
                     "endOffset": 2509
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\strings.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -524,7 +524,7 @@
                     "endOffset": 2550
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\strings.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -544,7 +544,7 @@
                     "endOffset": 3122
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\styles.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -565,7 +565,7 @@
                     "endOffset": 3629
                 },
                 "from": {
-                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\sweetDialog\\src\\main\\res\\values\\styles.xml",
+                    "file": "D:\\work\\workspace\\Ant\\ThirdPart\\SweetDialog\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,

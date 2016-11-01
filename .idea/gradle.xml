@@ -9,6 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ThirdPart/CityPicker" />
             <option value="$PROJECT_DIR$/ThirdPart/DropDownMenu" />
             <option value="$PROJECT_DIR$/ThirdPart/ImageLoader" />
             <option value="$PROJECT_DIR$/ThirdPart/ImagePicker" />
@@ -17,11 +18,11 @@
             <option value="$PROJECT_DIR$/ThirdPart/SegmentControl" />
             <option value="$PROJECT_DIR$/ThirdPart/ShareSDK" />
             <option value="$PROJECT_DIR$/ThirdPart/SlidingMenu" />
+            <option value="$PROJECT_DIR$/ThirdPart/SweetDialog" />
             <option value="$PROJECT_DIR$/ThirdPart/VideoListPlayer" />
             <option value="$PROJECT_DIR$/ThirdPart/ViewPagerIndicator" />
-            <option value="$PROJECT_DIR$/ThirdPart/citypicker" />
-            <option value="$PROJECT_DIR$/ThirdPart/sweetDialog" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/citypicker" />
             <option value="$PROJECT_DIR$/rxapp" />
             <option value="$PROJECT_DIR$/rxlibrary" />
           </set>

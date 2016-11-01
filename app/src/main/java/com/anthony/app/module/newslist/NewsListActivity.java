@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -11,7 +12,10 @@ import android.widget.TextView;
 import com.anthony.app.R;
 import com.anthony.app.common.base.AbsBaseActivity;
 import com.anthony.app.common.base.AbsBaseFragment;
+import com.anthony.app.common.base.MyApplication;
 import com.anthony.app.common.injection.component.ActivityComponent;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -30,10 +34,14 @@ public class NewsListActivity extends AbsBaseActivity {
     TextView tvTitleCenter;
     @BindView(R.id.layout_content)
     FrameLayout layoutContent;
-//    @Inject
+    @Inject
+    MyApplication myApplication;
+
+    //    @Inject
 //    RxBus rxBus;
     public static String URL = "url";
     public static String NAME = "name";
+
 
     private String mUrl = "";
     private String mName = "";
@@ -73,11 +81,18 @@ public class NewsListActivity extends AbsBaseActivity {
     }
 
 
-    @OnClick(R.id.iv_title_left)
-    public void onClick() {
-        this.finish();
+    @OnClick({R.id.iv_title_left, R.id.iv_title_right})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.iv_title_left:
+                this.finish();
+                break;
+            case R.id.iv_title_right:
+                myApplication.dbHelper.exportDb();
+//                showToast("导出数据库成功");
+                break;
+        }
     }
-
 
 
 }

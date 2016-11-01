@@ -8,6 +8,7 @@ import com.anthony.app.common.data.bean.GithubUser;
 import com.anthony.app.common.data.bean.NewsItem;
 import com.anthony.app.common.data.bean.NormalJsonInfo;
 import com.anthony.app.common.data.bean.WeatherData;
+import com.anthony.app.common.data.database.DatabaseHelper;
 import com.anthony.app.common.data.download.DownloadEvent;
 import com.anthony.app.common.data.download.DownloadFinishEvent;
 import com.anthony.app.common.data.download.DownloadService;
@@ -48,7 +49,9 @@ import timber.log.Timber;
  * Class Note:
  * data entrance of all kinds of data
  * using {@link HttpHelper},{@link PreferencesHelper},
- * {@link EventPosterHelper} and {@link RxBus} to access data
+ * {@link EventPosterHelper} ，
+ * {@link com.anthony.app.common.data.database.DatabaseHelper}
+ * and {@link RxBus} to access data
  * <p>
  * 所有数据的入口类
  */
@@ -63,6 +66,11 @@ public class DataManager {
     @Inject
     EventPosterHelper mEventPoster; //otto
 
+
+
+
+    @Inject
+    DatabaseHelper mDatabaseHelper;
 //    @Inject
 //    RxBus mRxBus;
 
@@ -78,6 +86,10 @@ public class DataManager {
         return mPreferencesHelper;
     }
 
+
+    public DatabaseHelper getDatabaseHelper() {
+        return mDatabaseHelper;
+    }
 //    public RxBus getRxBus() {
 //        return mRxBus;
 //    }
@@ -90,8 +102,10 @@ public class DataManager {
             }
         };
     }
+
     /**
      * load weather data from Baidu API
+     *
      * @param location
      * @return
      */
@@ -110,32 +124,34 @@ public class DataManager {
 
     /**
      * load  following list of github users
+     *
      * @return Observable<String>
      */
-     public Observable<String> loadUserFollowingString(String userName){
-         return mHttpHelper.getService(GithubApi.class)
-                 .loadUserFollowingString(userName)
-                 .flatMap(new Func1<ResponseBody, Observable<String>>() {
-                     @Override
-                     public Observable<String> call(ResponseBody responseBody) {
-                         try {
-                             String result = responseBody.string();
-                             return Observable.just(result);
-                         } catch (IOException e) {
-                             e.printStackTrace();
-                             throw new RuntimeException("IOException when convert Response Body to String");
-                         }
-                     }
-                 })
-                 .subscribeOn(Schedulers.io())
-                 .observeOn(AndroidSchedulers.mainThread());
-     }
+    public Observable<String> loadUserFollowingString(String userName) {
+        return mHttpHelper.getService(GithubApi.class)
+                .loadUserFollowingString(userName)
+                .flatMap(new Func1<ResponseBody, Observable<String>>() {
+                    @Override
+                    public Observable<String> call(ResponseBody responseBody) {
+                        try {
+                            String result = responseBody.string();
+                            return Observable.just(result);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                            throw new RuntimeException("IOException when convert Response Body to String");
+                        }
+                    }
+                })
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
 
     /**
      * load  following list of github users
+     *
      * @return Observable<List<GithubUser>>
      */
-    public Observable<List<GithubUser>> loadUserFollowingList(String userName){
+    public Observable<List<GithubUser>> loadUserFollowingList(String userName) {
         return mHttpHelper.getService(GithubApi.class)
                 .loadUserFollowingList(userName)
                 .subscribeOn(Schedulers.io())
@@ -254,7 +270,6 @@ public class DataManager {
     public void uploadFile(Context ctx, String url, ArrayList<UploadParam> fileList) {
         uploadFile(ctx, url, fileList, null);
     }
-
 
 
 }

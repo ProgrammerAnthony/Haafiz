@@ -24,11 +24,10 @@
 
 
     <ImageView
-        android:visibility="invisible"
         android:id="@+id/iv_title_right"
         android:layout_width="30dp"
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"
         android:layout_margin="10dp"
-        android:src="@mipmap/prj_ic_search" />
+        android:src="@mipmap/prj_ic_download" />
 </RelativeLayout>

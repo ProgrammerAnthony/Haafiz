@@ -4,6 +4,7 @@ package com.anthony.app.common.injection.module;
 import android.content.Context;
 
 import com.anthony.app.common.base.MyApplication;
+import com.anthony.app.common.data.database.NewsItemDaoOld;
 import com.anthony.app.common.data.database.dao.ChannelDao;
 import com.anthony.app.common.data.database.dao.NewsItemDao;
 import com.anthony.app.common.injection.scope.ApplicationContext;
@@ -87,6 +88,12 @@ public class ApplicationModule {
     @Singleton
     ImageLoaderUtil imageLoaderUtil() {
         return new ImageLoaderUtil();
+    }
+
+    @Provides
+    @Singleton
+    NewsItemDaoOld newsItemDaoOld() {
+        return new NewsItemDaoOld(mApplication);
     }
 
 }

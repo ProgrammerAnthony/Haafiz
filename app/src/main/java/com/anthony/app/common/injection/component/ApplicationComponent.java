@@ -3,6 +3,7 @@ package com.anthony.app.common.injection.component;
 import android.content.Context;
 
 import com.anthony.app.common.base.MyApplication;
+import com.anthony.app.common.data.database.NewsItemDaoOld;
 import com.anthony.app.common.data.database.dao.ChannelDao;
 import com.anthony.app.common.data.database.dao.NewsItemDao;
 import com.anthony.app.common.injection.module.ApplicationModule;
@@ -43,6 +44,8 @@ public interface ApplicationComponent {
     ViewDisplay viewDisplay();
 
     CircleProgressBar circleProgressBar();
+
+    NewsItemDaoOld newsItemDaoOld();
 
     ChannelDao channelDao();
 

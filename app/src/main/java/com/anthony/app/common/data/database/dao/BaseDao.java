@@ -17,7 +17,12 @@ public class BaseDao<T> {
     protected Dao<T, Integer> daoOpe;
 
 
-    public BaseDao( MyApplication mApplication) {
+    /**
+     * get dao class through {@link com.anthony.app.common.data.database.DatabaseHelper}
+     *
+     * @param mApplication using this to get instance of  DatabaseHelper
+     */
+    public BaseDao(MyApplication mApplication) {
         Class clazz = getClass();
 
         while (clazz != Object.class) {
@@ -108,7 +113,8 @@ public class BaseDao<T> {
             e.printStackTrace();
         }
     }
-    public void deleteByColumn(String columnName,Object columnValue){
+
+    public void deleteByColumn(String columnName, Object columnValue) {
         try {
             DeleteBuilder builder = daoOpe.deleteBuilder();
             builder.where().eq(columnName, columnValue);
@@ -117,6 +123,7 @@ public class BaseDao<T> {
             e.printStackTrace();
         }
     }
+
     public void clearAll() {
         try {
             daoOpe.deleteBuilder().delete();

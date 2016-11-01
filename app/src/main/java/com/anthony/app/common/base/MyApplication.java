@@ -6,7 +6,6 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.os.Environment;
 import android.support.multidex.MultiDex;
-import android.text.TextUtils;
 import android.util.Log;
 
 import com.anthony.app.BuildConfig;
@@ -18,7 +17,6 @@ import com.anthony.app.common.injection.component.ApplicationComponent;
 import com.anthony.app.common.injection.component.DaggerApplicationComponent;
 import com.anthony.app.common.injection.module.ApplicationModule;
 import com.anthony.app.common.utils.FakeCrashLibrary;
-import com.anthony.app.common.utils.SpUtil;
 import com.avos.avoscloud.AVOSCloud;
 
 import java.io.File;
@@ -75,18 +73,19 @@ public class MyApplication extends Application {
             Timber.plant(new CrashReportingTree());
         }
 
-
-        initDb();
+        dbHelper = mDataManager.getDatabaseHelper();
+//        initDb();
     }
 
-    private void initDb() {
-        //init database
-        if (TextUtils.isEmpty(SpUtil.getString(this, Constants.CURRENT_USER, ""))) {
-            SpUtil.putString(this, Constants.CURRENT_USER, "fish_man_default");
-        }
-        String current_user = SpUtil.getString(this, Constants.CURRENT_USER, "");
-        dbHelper = new DatabaseHelper(this, current_user + ".db");
-    }
+//    private void initDb() {
+//        //初始化数据库
+//        if (TextUtils.isEmpty(SpUtil.getString(this, Constants.CURRENT_USER, ""))) {
+//            SpUtil.putString(this, Constants.CURRENT_USER, "fish_man_default");
+//        }
+//        String current_user = SpUtil.getString(this, Constants.CURRENT_USER, "");
+//        dbHelper = new DatabaseHelper(this, current_user + ".db");
+//    }
+
 
     //init LeanCloud (Online storage)
     private void initAVOS() {
