@@ -5,8 +5,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import com.anthony.app.R;
+import com.anthony.app.common.data.bean.NewsItem;
 import com.anthony.app.common.injection.scope.ApplicationContext;
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
+import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 
@@ -39,18 +41,19 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     // any time you make changes to your database objects, you may have to increase the database version
     private static final int DATABASE_VERSION = 1;
     // the DAO object we use to access the NewsItem table
-//    private Dao<NewsItem, Integer> simpleDao = null;
+    private Dao<NewsItem, Integer> simpleDao = null;
 
     /**
+     * @deprecated
      * Returns the Database Access Object (DAO) for our NewsItem class. I
      * t will create it or just give the cached value.
      */
-//    public Dao<NewsItem, Integer> getNewsItemDao() throws SQLException {
-//        if (simpleDao == null) {
-//            simpleDao = getDao(NewsItem.class);
-//        }
-//        return simpleDao;
-//    }
+    public Dao<NewsItem, Integer> getNewsItemDao() throws SQLException {
+        if (simpleDao == null) {
+            simpleDao = getDao(NewsItem.class);
+        }
+        return simpleDao;
+    }
 
 
     @Inject

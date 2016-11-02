@@ -10,6 +10,7 @@ import java.util.List;
 /**
  * Created by Anthony on 2016/11/1.
  * Class Note:
+ * @deprecated  use {@link com.anthony.app.common.data.database.dao.NewsItemDao}
  */
 
 public class NewsItemDaoOld {

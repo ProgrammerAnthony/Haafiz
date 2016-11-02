@@ -38,11 +38,11 @@ import dagger.Component;
 @PerActivity
 @Component(dependencies = ApplicationComponent.class, modules = ActivityModule.class)
 public interface ActivityComponent {
+    //all of the project
     void inject(AbsBaseActivity absBaseActivity);
 
     void inject(AbsBaseFragment absBaseFragment);
 
-    //all of the project
     void inject(WebViewCommentActivity webViewActivity);
 
     void inject(ImageBrowserActivity imageBrowserActivity);

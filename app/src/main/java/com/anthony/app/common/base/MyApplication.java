@@ -38,26 +38,20 @@ public class MyApplication extends Application {
     DataManager mDataManager;
 
     private ApplicationComponent mAppComponent;
-
     public DatabaseHelper dbHelper;
-
     //global instance ,channel list data
     public List<Channel> channels;
     private Menu mFirstLevelMenu;
 
-
-    @Override
-    protected void attachBaseContext(Context base) {
-        super.attachBaseContext(base);
-        MultiDex.install(this);//multi dex support
-    }
-
     @Override
     public void onCreate() {
+
         super.onCreate();
 
 //Dagger2 inject
         getAppComponent().inject(this);
+//get DatabaseHelper instance
+        dbHelper = mDataManager.getDatabaseHelper();
 //        mEventBus.register(this);
         initAVOS();
 
@@ -73,10 +67,16 @@ public class MyApplication extends Application {
             Timber.plant(new CrashReportingTree());
         }
 
-        dbHelper = mDataManager.getDatabaseHelper();
+
 //        initDb();
     }
 
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);//multi dex support
+    }
 //    private void initDb() {
 //        //初始化数据库
 //        if (TextUtils.isEmpty(SpUtil.getString(this, Constants.CURRENT_USER, ""))) {

@@ -55,6 +55,8 @@ public class Channel implements Serializable {
         this.url = url;
     }
 
+    public Channel() {
+    }
 
     @Override
     public boolean equals(Object o) {
