@@ -77,7 +77,7 @@ public abstract class AbsListFragment extends AbsBaseFragment {
 
 
     @Override
-    protected void initViewsAndEvents(View rootView) {
+    protected void initViews(View rootView) {
         mPtr = (PullToRefreshView) rootView.findViewById(R.id.ptr);
         mPtr.setListener(new PullToRefreshView.OnRefreshListener() {
             @Override
@@ -90,7 +90,7 @@ public abstract class AbsListFragment extends AbsBaseFragment {
                 if (mCurrentPageIndex < mPageCount + (getInitPageIndex() - 1)) {
                     refreshMoreData(mCurrentPageIndex + 1);
                 } else {
-                    Toast.makeText(mContext, "没有更多啦", Toast.LENGTH_SHORT).show();
+                    showToast("没有更多啦");
                     mPtr.onFinishLoading();
                 }
 
@@ -265,4 +265,10 @@ public abstract class AbsListFragment extends AbsBaseFragment {
     protected abstract void restoreData(List data);
 
     protected abstract void restoreTopic(List data);
+
+    @Override
+    protected void loadData() {
+        //empty implements
+    }
+
 }

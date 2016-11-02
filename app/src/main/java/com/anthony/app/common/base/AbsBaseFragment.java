@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.anthony.app.common.data.DataManager;
 import com.anthony.app.common.injection.component.ActivityComponent;
 import com.anthony.app.common.utils.ToastUtils;
 
@@ -25,7 +26,7 @@ import timber.log.Timber;
  * Base Fragment for all the Fragment defined in the project
  * 1 extended from {@link AbsBaseFragment} to do
  * some base operation.
- * 2 do operation in initViewAndEvents(){@link #initViewsAndEvents(View rootView)}
+ * 2 do operation in {@link #initViews(View rootView)}
  */
 public abstract class AbsBaseFragment extends Fragment {
     /**
@@ -33,10 +34,12 @@ public abstract class AbsBaseFragment extends Fragment {
      */
     protected static String TAG_LOG = null;
     /**
-     * url passed into fragment
+     * url and title passed into fragment
      */
     public static String EXTRA_URL = "url";
     private String mUrl;
+    public static String EXTRA_TITLE = "url";
+    private String mTitle;
     /**
      * activity context of fragment
      */
@@ -44,10 +47,17 @@ public abstract class AbsBaseFragment extends Fragment {
 
     protected Subscription mSubscription;
 
-    private Unbinder mUnbinder;
+    private Unbinder mUnBinder;
+
 
     @Inject
-    ToastUtils toastUtils;
+    ToastUtils mToastUtils;
+
+    @Inject
+    DataManager mDataManager;
+
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -57,13 +67,19 @@ public abstract class AbsBaseFragment extends Fragment {
         Timber.tag(TAG_LOG);
 //set a context from current activity
         mContext = getActivity();
-//url
+//url and title
         if (getArguments() != null) {
             mUrl = getArguments().getString(EXTRA_URL);
+            mTitle = getArguments().getString(EXTRA_TITLE);
         }
 //initialize Dagger2 to support DI
         initDagger2(((AbsBaseActivity) getActivity()).activityComponent());
+
+        loadData();
+
     }
+
+
 
 
     @Nullable
@@ -79,8 +95,10 @@ public abstract class AbsBaseFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mUnbinder = ButterKnife.bind(this, view);
-        initViewsAndEvents(view);
+        //bind The View returned by {@link #onCreateView(LayoutInflater, ViewGroup, Bundle)}.
+        mUnBinder = ButterKnife.bind(this, view);
+        //init views events here so we can use ButterKnife
+        initViews(view);
 
     }
 
@@ -96,9 +114,9 @@ public abstract class AbsBaseFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
 //        ButterKnife.unbind(this);
-        if (mUnbinder != null) {
-            mUnbinder.unbind();
-            mUnbinder = null;
+        if (mUnBinder != null) {
+            mUnBinder.unbind();
+            mUnBinder = null;
         }
     }
 
@@ -112,10 +130,9 @@ public abstract class AbsBaseFragment extends Fragment {
     }
 
     /**
-     * Every fragment has to inflate a layout in the onCreateView method. We have added this method
-     * to
-     * avoid duplicate all the inflate code in every fragment. You only have to return the layout to
-     * inflate in this method when extends AbsBaseFragment.
+     * Every fragment has to inflate a layout in the onCreateView method.
+     * We have added this method to avoid duplicate all the inflate code in every fragment.
+     * You only have to return the layout to inflate in this method when extends AbsBaseFragment.
      */
     protected abstract int getContentViewID();
 
@@ -129,12 +146,20 @@ public abstract class AbsBaseFragment extends Fragment {
     /**
      * override this method to do operation in the fragment
      */
-    protected abstract void initViewsAndEvents(View rootView);
+    protected abstract void initViews(View rootView);
 
+    protected abstract void loadData();//load data in onCreate method
 
     protected void showToast(String content) {
-        toastUtils.showToast(content);
+        mToastUtils.showToast(content);
     }
+
+
+    public DataManager getDataManager() {
+        return mDataManager;
+    }
+
+
 
 
 }

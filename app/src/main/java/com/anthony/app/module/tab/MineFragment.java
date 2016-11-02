@@ -25,7 +25,12 @@ public class MineFragment extends AbsBaseFragment {
     }
 
     @Override
-    protected void initViewsAndEvents(View rootView) {
+    protected void initViews(View rootView) {
+
+    }
+
+    @Override
+    protected void loadData() {
 
     }
 }

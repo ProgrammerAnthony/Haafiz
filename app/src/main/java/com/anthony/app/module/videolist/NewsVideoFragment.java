@@ -75,8 +75,8 @@ public class NewsVideoFragment extends AbsListFragment {
     }
 
     @Override
-    protected void initViewsAndEvents(View rootView) {
-        super.initViewsAndEvents(rootView);
+    protected void initViews(View rootView) {
+        super.initViews(rootView);
 
         mVideoPlayWindowLayout = (RelativeLayout) rootView.findViewById(R.id.layout_play_window);
         mVideoPlayWindowLayout.setOnClickListener(new View.OnClickListener() {
