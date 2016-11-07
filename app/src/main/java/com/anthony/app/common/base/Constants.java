@@ -34,7 +34,7 @@ public class Constants {
 
     public static final String TRS_FONT_MAP_PATH = "trs_font_map";
 
-    //百度api地址
+    //Baidu api
     public static final String REMOTE_BASE_END_POINT_WEATHER = "http://apis.baidu.com/";
 
     public static String DOWNLOAD_STORE_FOLDER = Environment.getExternalStorageDirectory().getAbsolutePath()

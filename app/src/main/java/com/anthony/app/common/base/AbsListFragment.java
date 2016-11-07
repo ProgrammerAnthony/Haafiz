@@ -90,7 +90,7 @@ public abstract class AbsListFragment extends AbsBaseFragment {
                 if (mCurrentPageIndex < mPageCount + (getInitPageIndex() - 1)) {
                     refreshMoreData(mCurrentPageIndex + 1);
                 } else {
-                    showToast("没有更多啦");
+                    showToast("no more");
                     mPtr.onFinishLoading();
                 }
 

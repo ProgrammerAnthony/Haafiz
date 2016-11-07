@@ -8,6 +8,8 @@ buildscript {
         maven {
             url "http://mvn.leancloud.cn/nexus/content/repositories/releases"
         }
+        //EasyImage的jitPack仓库
+        maven { url "https://jitpack.io" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.2.0'
