@@ -40,4 +40,13 @@
         android:layout_marginTop="16dp"
         android:textColor="#FFFFFF"/>
 
+    <Button
+        android:id="@+id/contentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/errorButton"
+        android:text="Show Content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textColor="#FFFFFF"/>
 </RelativeLayout>

@@ -63,12 +63,10 @@ public class MyApplication extends Application {
         if (BuildConfig.DEBUG) {
             Timber.plant(new Timber.DebugTree());
         } else {
-            //sorry,Fabric currently not available ,   Fabric.with(this, new Crashlytics());   Timber.plant(new CrashlyticsTree());
+            //oops,Fabric currently not available ,   Fabric.with(this, new Crashlytics());   Timber.plant(new CrashlyticsTree());
             Timber.plant(new CrashReportingTree());
         }
 
-
-//        initDb();
     }
 
 
@@ -77,14 +75,6 @@ public class MyApplication extends Application {
         super.attachBaseContext(base);
         MultiDex.install(this);//multi dex support
     }
-//    private void initDb() {
-//        //初始化数据库
-//        if (TextUtils.isEmpty(SpUtil.getString(this, Constants.CURRENT_USER, ""))) {
-//            SpUtil.putString(this, Constants.CURRENT_USER, "fish_man_default");
-//        }
-//        String current_user = SpUtil.getString(this, Constants.CURRENT_USER, "");
-//        dbHelper = new DatabaseHelper(this, current_user + ".db");
-//    }
 
 
     //init LeanCloud (Online storage)
@@ -120,10 +110,6 @@ public class MyApplication extends Application {
 
     public static MyApplication get(Context context) {
         return (MyApplication) context.getApplicationContext();
-    }
-
-    public void setAppComponent(ApplicationComponent appComponent) {
-        mAppComponent = appComponent;
     }
 
 

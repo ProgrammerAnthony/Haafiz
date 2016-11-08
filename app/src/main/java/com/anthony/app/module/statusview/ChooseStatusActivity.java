@@ -1,72 +1,72 @@
 package com.anthony.app.module.statusview;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
 import com.anthony.app.R;
+import com.anthony.app.common.base.AbsBaseActivity;
+import com.anthony.app.common.injection.component.ActivityComponent;
 
-public class ChooseStatusActivity extends AppCompatActivity {
+import butterknife.BindView;
+import butterknife.OnClick;
 
+public class ChooseStatusActivity extends AbsBaseActivity {
+    @BindView(R.id.activityToolbar)
     Toolbar activityToolbar;
-
+    @BindView(R.id.loadingButton)
     Button loadingButton;
+    @BindView(R.id.emptyButton)
     Button emptyButton;
+    @BindView(R.id.errorButton)
     Button errorButton;
+    @BindView(R.id.contentButton)
+    Button contentButton;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choose_status_view);
+    protected int getContentViewID() {
+        return R.layout.activity_choose_status_view;
+    }
 
-        activityToolbar = (Toolbar) findViewById(R.id.activityToolbar);
-        loadingButton = (Button) findViewById(R.id.loadingButton);
-        emptyButton = (Button) findViewById(R.id.emptyButton);
-        errorButton = (Button) findViewById(R.id.errorButton);
-
+    @Override
+    protected void initViewsAndEvents() {
         setToolbar();
-        setListeners();
+    }
+
+
+    @Override
+    protected void injectDagger(ActivityComponent activityComponent) {
+        activityComponent.inject(this);
     }
 
     private void setToolbar() {
         setSupportActionBar(activityToolbar);
 
         if (getSupportActionBar() != null) {
-            setTitle("Progress Activity");
+            setTitle("Status Layout");
         }
     }
 
-    private void setListeners() {
 
-        loadingButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ShowStatusActivity.class);
+    @OnClick({R.id.loadingButton, R.id.emptyButton, R.id.errorButton, R.id.contentButton})
+    public void onClick(View view) {
+        Intent intent = new Intent(getApplicationContext(), ShowStatusActivity.class);
+        switch (view.getId()) {
+            case R.id.loadingButton:
                 intent.putExtra("STATE", "LOADING");
-                startActivity(intent);
-            }
-        });
-
-        emptyButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ShowStatusActivity.class);
+                break;
+            case R.id.emptyButton:
                 intent.putExtra("STATE", "EMPTY");
-                startActivity(intent);
-            }
-        });
-
-        errorButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ShowStatusActivity.class);
+                break;
+            case R.id.errorButton:
                 intent.putExtra("STATE", "ERROR");
-                startActivity(intent);
-            }
-        });
-
+                break;
+            case R.id.contentButton:
+                intent.putExtra("STATE", "CONTENT");
+                break;
+        }
+        startActivity(intent);
     }
+
 }

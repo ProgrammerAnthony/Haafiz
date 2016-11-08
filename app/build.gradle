@@ -96,7 +96,6 @@ dependencies {
     }
     compile deps.materialDialogs
     compile deps.photoView
-
     compile deps.materialicons
 
     compile project(':SegmentControl')

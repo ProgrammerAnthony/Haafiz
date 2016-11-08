@@ -15,6 +15,8 @@ import com.anthony.app.module.newslist.NewsListActivity;
 import com.anthony.app.module.newslist.NewsListFragment;
 import com.anthony.app.module.segment.SegmentControlActivity;
 import com.anthony.app.module.splash.LoadingActivity;
+import com.anthony.app.module.statusview.ChooseStatusActivity;
+import com.anthony.app.module.statusview.ShowStatusActivity;
 import com.anthony.app.module.tab.TabActivity;
 import com.anthony.app.module.videolist.NewsVideoFragment;
 import com.anthony.app.module.videolist.VideoListActivity;
@@ -71,4 +73,8 @@ public interface ActivityComponent {
     void inject(NewsListFragment newsListFragment);
 
     void inject(NewsListActivity newsListActivity);
+
+    void inject(ShowStatusActivity showStatusActivity);
+
+    void inject(ChooseStatusActivity chooseStatusActivity);
 }

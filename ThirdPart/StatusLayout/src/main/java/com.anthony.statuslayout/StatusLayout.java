@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -165,9 +166,42 @@ public class StatusLayout extends RelativeLayout {
         if (child.getTag() == null || (!child.getTag().equals(TAG_LOADING) &&
                 !child.getTag().equals(TAG_EMPTY) && !child.getTag().equals(TAG_ERROR))) {
 
-            contentViews.add(child);
+//            contentViews.add(child);
+            contentViews = getAllChildren(child);
+            Log.i("StatusLayout", "sub children count of statuslayout is" + contentViews.size());
         }
     }
+
+
+    /**
+     * save all of the ids of child view
+     *
+     * @param
+     */
+    private ArrayList<View> getAllChildren(View v) {
+
+        if (!(v instanceof ViewGroup)) {
+            ArrayList<View> viewArrayList = new ArrayList<View>();
+            viewArrayList.add(v);
+            return viewArrayList;
+        }
+
+        ArrayList<View> result = new ArrayList<View>();
+
+        ViewGroup vg = (ViewGroup) v;
+        for (int i = 0; i < vg.getChildCount(); i++) {
+
+            View child = vg.getChildAt(i);
+
+            ArrayList<View> viewArrayList = new ArrayList<View>();
+            viewArrayList.add(v);
+            viewArrayList.addAll(getAllChildren(child));
+
+            result.addAll(viewArrayList);
+        }
+        return result;
+    }
+
 
     /**
      * Hide all other states and show content
@@ -440,11 +474,22 @@ public class StatusLayout extends RelativeLayout {
         }
     }
 
+    /**
+     * set children visibility of StatusLayout
+     * notice!!! now Only support direct child
+     * cause we add direct children in {@link #contentViews}
+     *
+     * @param visible
+     * @param skipIds
+     */
     private void setContentVisibility(boolean visible, List<Integer> skipIds) {
         for (View v : contentViews) {
-            if (!skipIds.contains(v.getId())) {
-                v.setVisibility(visible ? View.VISIBLE : View.GONE);
+            if (v != null) {
+                if (!skipIds.contains(v.getId())) {
+                    v.setVisibility(visible ? View.VISIBLE : View.GONE);
+                }
             }
+
         }
     }
 
@@ -465,7 +510,7 @@ public class StatusLayout extends RelativeLayout {
 
             //Restore the background color if not TRANSPARENT
             if (emptyStateBackgroundColor != Color.TRANSPARENT) {
-                this.setBackgroundDrawable(currentBackground);;
+                this.setBackgroundDrawable(currentBackground);
             }
         }
     }
@@ -476,7 +521,7 @@ public class StatusLayout extends RelativeLayout {
 
             //Restore the background color if not TRANSPARENT
             if (errorStateBackgroundColor != Color.TRANSPARENT) {
-                this.setBackgroundDrawable(currentBackground);;
+                this.setBackgroundDrawable(currentBackground);
             }
 
         }

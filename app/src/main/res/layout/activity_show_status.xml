@@ -1,17 +1,7 @@
-<com.anthony.statuslayout.StatusLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:progressActivity="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/progress"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    progressActivity:loadingBackgroundColor="#FFFFFF"
-    progressActivity:emptyBackgroundColor="#fbc02d"
-    progressActivity:emptyContentTextColor="#FFFFFF"
-    progressActivity:emptyTitleTextColor="#FFFFFF"
-    progressActivity:errorBackgroundColor="#42a5f5"
-    progressActivity:errorButtonTextColor="#FFFFFF"
-    progressActivity:errorContentTextColor="#FFFFFF"
-    progressActivity:errorTitleTextColor="#FFFFFF">
+    android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/activityToolbar"
@@ -24,10 +14,39 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/activityToolbar"
-        android:layout_marginTop="56dp"
         android:layout_centerInParent="true"
+        android:layout_marginTop="56dp"
         android:gravity="center"
-        android:text="@string/hello_world" />
+        android:text="content" />
 
-</com.anthony.statuslayout.StatusLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="@color/app_primary">
+
+        <RelativeLayout
+            android:id="@+id/layout_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/prj_default_pic_big" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_title_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="测试"
+            android:textColor="@color/black"
+            android:textSize="@dimen/TextTitleBar" />
+    </RelativeLayout>
+</LinearLayout>
+
 

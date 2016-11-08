@@ -14,7 +14,7 @@ import android.view.ViewGroup;
  * must load data in method {@link #loadLazyData()}
  */
 
-public abstract class LazyBaseFragment extends AbsBaseFragment {
+public abstract class BaseLazyFragment extends AbsBaseFragment {
     private boolean isPrepared;//flag whether view is okay
     private boolean isFirstLoad = true;//flag whether firstly load
     private boolean isVisible;//flag whether view is visible
