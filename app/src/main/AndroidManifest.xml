@@ -35,6 +35,8 @@
             android:name="com.anthony.citypicker.CityPickerActivity"
             android:windowSoftInputMode="stateUnchanged|adjustPan" />
 
+        <activity android:name=".module.statusview.ChooseStatusActivity" />
+        <activity android:name=".module.statusview.ShowStatusActivity" />
         <!-- 实时通信模块、推送（若使用该功能，需添加以下声明）START -->
         <service android:name="com.avos.avoscloud.PushService" />
         <receiver android:name="com.avos.avoscloud.AVBroadcastReceiver">

@@ -53,6 +53,7 @@ ext {
             loggerVersion                     : '1.13',
             icePickVersion                    : '3.2.0',
             icePickProcessorVersion           : '3.2.0',
+            materialiconsVersion              : '1.0.2',
     ]
 
     deps = [
@@ -106,5 +107,6 @@ ext {
             icePick                    : 'frankiesardo:icepick:' + depsVersion.icePickVersion,
             icePickProcessor           : 'frankiesardo:icepick-processor:' + depsVersion.icePickProcessorVersion,
             chrisbanesPhotoView        : 'com.github.chrisbanes:PhotoView:' + depsVersion.chrisbanesphotoViewVersion,
+            materialicons              : 'com.malinskiy:materialicons:' + depsVersion.materialiconsVersion
     ]
 }

@@ -1,4 +1,4 @@
-include ':app', ':rxapp', ':SweetDialog', ':CityPicker', ':SlidingMenu', ':ViewPagerIndicator', ':ShareSDK', ':SegmentControl', ':citypicker', ':rxlibrary', ':VideoListPlayer', ':ImageLoader', ':RVHelper', ':PullRefreshView', ':ImagePicker', ':DropDownMenu', ':LoadingLayout'
+include ':app', ':rxapp', ':SweetDialog', ':CityPicker', ':SlidingMenu', ':ViewPagerIndicator', ':ShareSDK', ':SegmentControl', ':citypicker', ':rxlibrary', ':VideoListPlayer', ':ImageLoader', ':RVHelper', ':PullRefreshView', ':ImagePicker', ':DropDownMenu', ':StatusLayout'
 
 project(':SweetDialog').projectDir = new File('ThirdPart/SweetDialog')
 project(':SlidingMenu').projectDir = new File('ThirdPart/SlidingMenu')
@@ -12,4 +12,4 @@ project(':RVHelper').projectDir = new File('ThirdPart/RVHelper')
 project(':PullRefreshView').projectDir = new File('ThirdPart/PullRefreshView')
 project(':ImagePicker').projectDir = new File('ThirdPart/ImagePicker')
 project(':DropDownMenu').projectDir = new File('ThirdPart/DropDownMenu')
-project(':LoadingLayout').projectDir = new File('ThirdPart/LoadingLayout')
+project(':StatusLayout').projectDir = new File('ThirdPart/StatusLayout')

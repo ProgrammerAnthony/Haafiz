@@ -7,7 +7,7 @@ android {
     buildToolsVersion rootProject.ext.android.buildToolsVersion
 
     defaultConfig {
-        applicationId  'com.anthony.app'
+        applicationId 'com.anthony.app'
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode 1
@@ -97,6 +97,7 @@ dependencies {
     compile deps.materialDialogs
     compile deps.photoView
 
+    compile deps.materialicons
 
     compile project(':SegmentControl')
     compile project(':ShareSDK')
@@ -108,6 +109,7 @@ dependencies {
     compile project(':ImageLoader')
     compile project(':RVHelper')
     compile project(':PullRefreshView')
+    compile project(':StatusLayout')
     compile files('libs/ormlite-android-4.49.jar')
     compile files('libs/ormlite-core-4.49.jar')
 //sqlBrite
@@ -116,7 +118,6 @@ dependencies {
 //    provided "com.google.auto.value:auto-value:$rootProject.autoValueVersion"
 //    apt "com.google.auto.value:auto-value:$rootProject.autoValueVersion"
 //    apt "com.ryanharter.auto.value:auto-value-parcel:$rootProject.autoValueParcelVersion"
-
 
 
 }

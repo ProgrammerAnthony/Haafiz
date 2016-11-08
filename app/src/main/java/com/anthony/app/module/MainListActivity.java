@@ -64,6 +64,7 @@ public class MainListActivity extends AbsBaseActivity {
         strs.add(new Channel("SegmentControl 分段控件", "1007"));
         strs.add(new Channel("Video List 视频播放列表", "1008"));
         strs.add(new Channel("News List 新闻列表", "1009"));
+        strs.add(new Channel("StatusLayout 多状态布局", "1010"));
 
         strs.add(new Channel("todo Emoji Input Layout emoji输入框", ""));
         strs.add(new Channel("todo Image Compress 图片压缩", ""));
