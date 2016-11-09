@@ -21,32 +21,31 @@
 
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:background="@color/app_primary">
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/test_sub_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/app_primary" />
 
         <RelativeLayout
-            android:id="@+id/layout_back"
-            android:layout_width="40dp"
-            android:layout_height="match_parent">
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true">
 
             <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_centerInParent="true"
-                android:src="@mipmap/prj_default_pic_big" />
+                android:id="@+id/test_sub_iv2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@color/colorAccent" />
         </RelativeLayout>
-
-        <TextView
-            android:id="@+id/tv_title_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="测试"
-            android:textColor="@color/black"
-            android:textSize="@dimen/TextTitleBar" />
     </RelativeLayout>
+
+
 </LinearLayout>
 
 

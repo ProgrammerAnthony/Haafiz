@@ -161,6 +161,11 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
         toastUtils.showToast(content);
     }
 
+
+    protected void showContent() {
+        showContent(null);
+    }
+
     /**
      * Hide all other states and show content
      */

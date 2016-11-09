@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -167,41 +168,46 @@ public class StatusLayout extends RelativeLayout {
                 !child.getTag().equals(TAG_EMPTY) && !child.getTag().equals(TAG_ERROR))) {
 
 //            contentViews.add(child);
-            contentViews = getAllChildren(child);
-            Log.i("StatusLayout", "sub children count of statuslayout is" + contentViews.size());
+            contentViews.addAll(getAllChildren(child));
+            Log.i("StatusLayout", "sub children count of StatusLayout is" + contentViews.size());
         }
     }
 
 
     /**
-     * save all of the ids of child view
+     * save all of the direct and  indirect children views
      *
      * @param
      */
-    private ArrayList<View> getAllChildren(View v) {
+    private List<View> getAllChildren(View v) {
 
         if (!(v instanceof ViewGroup)) {
-            ArrayList<View> viewArrayList = new ArrayList<View>();
+            List<View> viewArrayList = new ArrayList<>();
             viewArrayList.add(v);
             return viewArrayList;
+        } else {
+            if (((ViewGroup) v).getChildCount() == 0) {
+                List<View> viewArrayList = new ArrayList<>();
+                viewArrayList.add(v);
+                return viewArrayList;
+            } else {
+                List<View> result = new ArrayList<>();
+
+                ViewGroup vg = (ViewGroup) v;
+                for (int i = 0; i < vg.getChildCount(); i++) {
+
+                    View child = vg.getChildAt(i);
+
+                    List<View> viewArrayList = new ArrayList<>();
+                    viewArrayList.add(v);
+                    viewArrayList.addAll(getAllChildren(child));
+
+                    result.addAll(viewArrayList);
+                }
+                return result;
+            }
         }
-
-        ArrayList<View> result = new ArrayList<View>();
-
-        ViewGroup vg = (ViewGroup) v;
-        for (int i = 0; i < vg.getChildCount(); i++) {
-
-            View child = vg.getChildAt(i);
-
-            ArrayList<View> viewArrayList = new ArrayList<View>();
-            viewArrayList.add(v);
-            viewArrayList.addAll(getAllChildren(child));
-
-            result.addAll(viewArrayList);
-        }
-        return result;
     }
-
 
     /**
      * Hide all other states and show content
@@ -476,22 +482,46 @@ public class StatusLayout extends RelativeLayout {
 
     /**
      * set children visibility of StatusLayout
-     * notice!!! now Only support direct child
-     * cause we add direct children in {@link #contentViews}
      *
      * @param visible
      * @param skipIds
      */
     private void setContentVisibility(boolean visible, List<Integer> skipIds) {
+        boolean parentVisibleFlag = false;
         for (View v : contentViews) {
-            if (v != null) {
-                if (!skipIds.contains(v.getId())) {
-                    v.setVisibility(visible ? View.VISIBLE : View.GONE);
+            // when visible is true,which means set content Layout, the skipIds component need to be hide
+            if (visible) {
+                if (skipIds.contains(v.getId())) {
+                    v.setVisibility(View.INVISIBLE);
                 }
             }
+            if (!skipIds.contains(v.getId())) {
+                v.setVisibility(visible ? View.VISIBLE : View.INVISIBLE);
+            }
 
+            //set parent visible flag to be visible when one child want to be visible
+            if (v.getVisibility() == View.VISIBLE) {
+                parentVisibleFlag = true;
+            }
+            //set  all of the parent to be visible
+            if(parentVisibleFlag &&(contentViews.get(contentViews.size()-1)==v)){
+                setParentToVisible(v);
+            }
+            int visibility = v.getVisibility();
+            Log.i("StatusLayout", v + " view id " + v.getId() + " visibility " + visibility);
         }
     }
+
+    public void setParentToVisible(View v) {
+        ViewParent mParent = v.getParent();
+        if (mParent != null && (mParent instanceof ViewGroup)) {
+            ((ViewGroup) mParent).setVisibility(View.VISIBLE);
+            if (mParent.getParent() != null) {
+                setParentToVisible((View) mParent);
+            }
+        }
+    }
+
 
     private void hideLoadingView() {
         if (loadingStateRelativeLayout != null) {

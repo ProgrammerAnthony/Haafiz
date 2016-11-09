@@ -28,12 +28,13 @@ public class ShowStatusActivity extends AbsBaseActivity {
 
         List<Integer> skipIds = new ArrayList<>();
         skipIds.add(R.id.activityToolbar);
-        skipIds.add(R.id.tv_title_login);
+//        skipIds.add(R.id.test_sub_iv);
+//        skipIds.add(R.id.test_sub_iv2);
 
         String state = getIntent().getStringExtra("STATE");
         switch (state) {
             case "CONTENT":
-                showContent(null);
+                showContent();
                 setTitle("Content");
                 break;
             case "LOADING":
