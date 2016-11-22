@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/LibMatchWrap"
+    android:background="@color/mq_item_normal">
+
+    <com.anthony.inputlayout.layout.EmotionKeyboardLayout
+        android:id="@+id/emotionKeyboardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mq_custom_keyboard_height"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <com.anthony.inputlayout.layout.RecorderKeyboardLayout
+        android:id="@+id/recorderKeyboardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mq_custom_keyboard_height"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <View style="@style/LibHLine" />
+</RelativeLayout>

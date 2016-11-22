@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LibMatchMatch"
+    android:padding="@dimen/mq_audio_edge">
+
+    <TextView
+        android:id="@+id/tv_recorder_keyboard_status"
+        style="@style/LibWrapWrap"
+        android:layout_centerHorizontal="true"
+        android:text="@string/mq_audio_status_normal"
+        android:textColor="@color/mq_chat_audio_recorder_tip_textColor"
+        android:textSize="@dimen/mq_audio_textSize" />
+
+    <ImageView
+        android:id="@+id/iv_recorder_keyboard_anim"
+        style="@style/LibWrapWrap"
+        android:layout_below="@id/tv_recorder_keyboard_status"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:src="@drawable/voice_level1" />
+
+</RelativeLayout>

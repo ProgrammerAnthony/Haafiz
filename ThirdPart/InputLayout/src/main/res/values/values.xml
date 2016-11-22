@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="common_tv_dark">#363636</color>
+    <color name="mq_activity_bg">#F6F7F9</color>
+    <color name="mq_activity_title_bg">@android:color/white</color>
+    <color name="mq_activity_title_textColor">@android:color/black</color>
+    <color name="mq_btn_slit_line_bg">#eaebed</color>
+    <color name="mq_chat_audio_recorder_icon">@color/mq_colorPrimary</color>
+    <color name="mq_chat_audio_recorder_tip_textColor">#767D85</color>
+    <color name="mq_chat_direct_agent_nickname_textColor">#43CAA9</color>
+    <color name="mq_chat_et_textColor">#333333</color>
+    <color name="mq_chat_event_gray">@color/mq_gray</color>
+    <color name="mq_chat_left_bubble">@color/mq_chat_left_bubble_final</color>
+    <color name="mq_chat_left_bubble_final">#ebecef</color>
+    <color name="mq_chat_left_link_textColor">@color/mq_chat_left_textColor</color>
+    <color name="mq_chat_left_textColor">#333333</color>
+    <color name="mq_chat_right_bubble">@color/mq_chat_right_bubble_final</color>
+    <color name="mq_chat_right_bubble_final">#1fd0d9</color>
+    <color name="mq_chat_right_link_textColor">@color/mq_chat_right_textColor</color>
+    <color name="mq_chat_right_textColor">@android:color/white</color>
+    <color name="mq_chat_robot_evaluate_textColor">@color/mq_colorPrimary</color>
+    <color name="mq_chat_robot_menu_item_textColor">@color/mq_colorPrimary</color>
+    <color name="mq_chat_robot_menu_tip_textColor">#767D85</color>
+    <color name="mq_chat_unread_circle_bg">#E66B62</color>
+    <color name="mq_circle_progress_bg">#c6cbd0</color>
+    <color name="mq_circle_progress_color">@color/mq_colorPrimary</color>
+    <color name="mq_colorPrimary">#17C7D1</color>
+    <color name="mq_colorPrimaryDark">#8017C7D1</color>
+    <color name="mq_error">#ff5c5e</color>
+    <color name="mq_evaluate_bad">#FF5C5E</color>
+    <color name="mq_evaluate_enabled">@color/mq_colorPrimary</color>
+    <color name="mq_evaluate_good">#00CE7D</color>
+    <color name="mq_evaluate_hint">#ACB1BA</color>
+    <color name="mq_evaluate_medium">#FFB652</color>
+    <color name="mq_evaluate_not_enabled">#C6CACF</color>
+    <color name="mq_form_et_bg_focus">@color/mq_colorPrimary</color>
+    <color name="mq_form_et_bg_normal">#C6CBD0</color>
+    <color name="mq_form_et_textColor">#303D42</color>
+    <color name="mq_form_et_textColorHint">#ADB2BB</color>
+    <color name="mq_form_shadow">#e6e7eb</color>
+    <color name="mq_form_tip_textColor">#767D85</color>
+    <color name="mq_gray">#808080</color>
+    <color name="mq_indicator_normal">#EDEDED</color>
+    <color name="mq_indicator_selected">@color/mq_colorPrimary</color>
+    <color name="mq_item_normal">@android:color/white</color>
+    <color name="mq_item_pressed">#EFEFEF</color>
+    <color name="mq_loading_progress_centerColor">@color/mq_colorPrimary</color>
+    <color name="mq_loading_progress_endColor">@color/mq_colorPrimaryDark</color>
+    <color name="mq_loading_progress_startColor">@android:color/white</color>
+    <color name="mq_photo_activity_bg">#1A1A1A</color>
+    <color name="mq_photo_selected_color">#4D000000</color>
+    <color name="mq_photo_send_disabled">#8017C7D1</color>
+    <color name="mq_photo_send_enabled">#17C7D1</color>
+    <color name="mq_photo_title_bg">#303D42</color>
+    <color name="mq_top_pop_tip_bg">#969faa</color>
+    <color name="mq_white">@android:color/white</color>
+    <declare-styleable name="MQImageView">
+        <attr name="android:src" />
+        <attr name="mq_iv_isCircle" format="boolean" />
+        <attr name="mq_iv_cornerRadius" format="reference|dimension" />
+        <attr name="mq_iv_isSquare" format="boolean" />
+        <attr name="mq_iv_borderWidth" format="reference|dimension" />
+        <attr name="mq_iv_borderColor" format="reference|color" />
+    </declare-styleable>
+    <dimen name="mq_audio_edge">20dp</dimen>
+    <dimen name="mq_audio_textSize">16sp</dimen>
+    <dimen name="mq_chat_box_height">50dp</dimen>
+    <dimen name="mq_custom_keyboard_height">260dp</dimen>
+    <dimen name="mq_size_level1">4dp</dimen>
+    <dimen name="mq_size_level10">40dp</dimen>
+    <dimen name="mq_size_level2">8dp</dimen>
+    <dimen name="mq_size_level3">12dp</dimen>
+    <dimen name="mq_size_level4">16dp</dimen>
+    <dimen name="mq_size_level5">20dp</dimen>
+    <dimen name="mq_size_level6">24dp</dimen>
+    <dimen name="mq_size_level7">28dp</dimen>
+    <dimen name="mq_size_level8">32dp</dimen>
+    <dimen name="mq_size_level9">36dp</dimen>
+    <dimen name="mq_textSize_level1">12sp</dimen>
+    <dimen name="mq_textSize_level2">16sp</dimen>
+    <dimen name="mq_textSize_rich_text">14sp</dimen>
+    <dimen name="mq_title_height">48dp</dimen>
+    <dimen name="mq_title_left_right_textSize">16sp</dimen>
+    <dimen name="mq_titlebar_textSize">20sp</dimen>
+    <dimen name="mq_top_tip_height">38dp</dimen>
+    <string name="app_name">InputLayout</string>
+    <string name="mq_add_picture">添加图片</string>
+    <string name="mq_all_image">所有图片</string>
+    <string name="mq_allocate_agent">正在分配客服...</string>
+    <string name="mq_allocate_agent_tip">正在为您分配客服，请稍后重发。</string>
+    <string name="mq_allocate_queue_tip">正在排队，请等待客服接入后发送消息</string>
+    <string name="mq_allocate_queue_title">排队等待中...</string>
+    <string name="mq_already_feedback">已反馈</string>
+    <string name="mq_at_least_one_contact">至少填写一种联系方式</string>
+    <string name="mq_audio_status_normal">按住说话</string>
+    <string name="mq_audio_status_recording">手指上滑，取消发送</string>
+    <string name="mq_audio_status_want_cancel">松开手指，取消发送</string>
+    <string name="mq_auth_code">验证码</string>
+    <string name="mq_back" />
+    <string name="mq_blacklist_tips">对不起，当前客服系统暂时无法使用</string>
+    <string name="mq_cancel">取消</string>
+    <string name="mq_choose">选择</string>
+    <string name="mq_choose_ticket_category">选择分类</string>
+    <string name="mq_confirm">确定</string>
+    <string name="mq_copy_success">复制成功</string>
+    <string name="mq_data_is_loading">数据加载中...</string>
+    <string name="mq_dialog_select_camera">相机</string>
+    <string name="mq_dialog_select_gallery">图库</string>
+    <string name="mq_dialog_select_title">请选择图片来源：</string>
+    <string name="mq_direct_content">接下来由 %1$s 为你服务</string>
+    <string name="mq_download_audio_failure">下载录音失败!</string>
+    <string name="mq_download_complete">下载完成</string>
+    <string name="mq_download_error">下载文件失败</string>
+    <string name="mq_download_img_failure">下载到图片失败</string>
+    <string name="mq_downloading">下载中 …</string>
+    <string name="mq_email">邮箱</string>
+    <string name="mq_email_hint">请输入你的邮箱</string>
+    <string name="mq_error_auth_code_wrong">验证码错误或者已过期</string>
+    <string name="mq_error_submit_form">提交表单失败,请稍后再试</string>
+    <string name="mq_evaluate_bad">差评</string>
+    <string name="mq_evaluate_failure">评价失败</string>
+    <string name="mq_evaluate_good">好评</string>
+    <string name="mq_evaluate_hint">填写评价内容 (选填)</string>
+    <string name="mq_evaluate_medium">中评</string>
+    <string name="mq_evaluate_result_prefix">你给出了  </string>
+    <string name="mq_evaluate_title">你对本次服务满意吗？</string>
+    <string name="mq_expire_after"> %1$s 小时后过期</string>
+    <string name="mq_expired">已过期</string>
+    <string name="mq_expired_top_tip">文件已过期，无法下载</string>
+    <string name="mq_hint_input">输入</string>
+    <string name="mq_input_hint">请输入...</string>
+    <string name="mq_inquire_gender_choice">["男","女"]</string>
+    <string name="mq_leave_msg">留言</string>
+    <string name="mq_leave_msg_hint">请输入你的留言</string>
+    <string name="mq_leave_msg_tips">抱歉，现在没有客服人员在线\n你可以继续写下你的问题，我们会尽快回复</string>
+    <string name="mq_manual_redirect_tip">您的问题如果需要人工支持，可以</string>
+    <string name="mq_name">姓名</string>
+    <string name="mq_name_hint">请输入你的姓名</string>
+    <string name="mq_no_agent_leave_msg_tip">抱歉，当前没有客服在线，你可以给我们</string>
+    <string name="mq_no_app_open_file">当前没有应用打开此文件</string>
+    <string name="mq_no_sdcard">SD卡不存在</string>
+    <string name="mq_param_not_allow_empty">%1$s 不能为空</string>
+    <string name="mq_permission_denied_tip">您拒绝了咨询客服所需要的相关权限!</string>
+    <string name="mq_phone">手机</string>
+    <string name="mq_phone_hint">请输入你的手机</string>
+    <string name="mq_photo_not_support">当前设备不支持发送图片</string>
+    <string name="mq_qq">QQ</string>
+    <string name="mq_qq_hint">请输入你的QQ</string>
+    <string name="mq_queue_leave_msg">请稍等，你前面还有 %1$s 个访客，你也可以选择给我们</string>
+    <string name="mq_record_cancel">取消发送</string>
+    <string name="mq_record_count_down">还可以再说 %1$d 秒</string>
+    <string name="mq_record_failed">录音失败，请检查是否有录音权限</string>
+    <string name="mq_record_not_support">当前设别不支持语音</string>
+    <string name="mq_record_record_time_is_short">录音时间太短</string>
+    <string name="mq_record_up_and_cancel">上滑，取消发送</string>
+    <string name="mq_recorder_no_permission">没有录音权限!</string>
+    <string name="mq_recorder_remaining_time">还可以说 %1$s 秒</string>
+    <string name="mq_redirect_human">转人工</string>
+    <string name="mq_robot_menu_tip">点击问题或回复对应数字查看答案</string>
+    <string name="mq_runtime_permission_tip">咨询客服需要以下权限:\n\n1.访问设备上的照片\n2.录制音频</string>
+    <string name="mq_save">保存</string>
+    <string name="mq_save_img_failure">保存图片失败，再试试?</string>
+    <string name="mq_save_img_success_folder">图片已保存至 %s 文件夹</string>
+    <string name="mq_sdcard_no_permission">当前没有媒体访问权限</string>
+    <string name="mq_send">发送</string>
+    <string name="mq_send_msg">发送消息</string>
+    <string name="mq_send_robot_msg_time_limit_tip">您发送的太快啦，请休息一下吧~</string>
+    <string name="mq_submit">提交</string>
+    <string name="mq_submit_leave_msg_success">留言提交成功</string>
+    <string name="mq_take_picture">拍摄照片</string>
+    <string name="mq_timeline_today">今天</string>
+    <string name="mq_timeline_yesterday">昨天</string>
+    <string name="mq_tip_required_before_submit">红色文字的地方为必填项,请填写完整</string>
+    <string name="mq_title_collect_info">请填写以下内容</string>
+    <string name="mq_title_inputting">正在输入...</string>
+    <string name="mq_title_leave_msg">留言</string>
+    <string name="mq_title_net_not_work">网络加载失败</string>
+    <string name="mq_title_service_support">客服支持</string>
+    <string name="mq_title_submit_btn">提交</string>
+    <string name="mq_title_unknown_error">未知错误</string>
+    <string name="mq_title_webview_rich_text">图文消息</string>
+    <string name="mq_toast_photo_picker_max">最多只能选择 %1$s 张图片</string>
+    <string name="mq_unknown_msg_tip">当前 App 暂不支持该类型消息，请升级您的 App 到最新版本</string>
+    <string name="mq_useful">解决</string>
+    <string name="mq_useless">未解决</string>
+    <string name="mq_useless_redirect_tip">很抱歉您不满意机器人的回答，您可以尝试</string>
+    <string name="mq_view_photo">查看图片</string>
+    <string name="mq_wechat">微信</string>
+    <string name="mq_wechat_hint">请输入你的微信</string>
+
+
+
+    <style name="LibClickableItem" parent="LibMatchWrap">
+        <item name="android:clickable">true</item>
+        <item name="android:paddingLeft">@dimen/mq_size_level4</item>
+        <item name="android:paddingRight">@dimen/mq_size_level4</item>
+        <item name="android:paddingTop">@dimen/mq_size_level3</item>
+        <item name="android:paddingBottom">@dimen/mq_size_level3</item>
+        <item name="android:textSize">@dimen/mq_textSize_level2</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="LibClickableItem.Bottom">
+        <item name="android:background">@drawable/selector_item_bottom</item>
+    </style>
+
+    <style name="LibClickableItem.Center">
+        <item name="android:background">@drawable/selector_item_center</item>
+    </style>
+
+    <style name="LibClickableItem.Top">
+        <item name="android:background">@drawable/selector_item_top</item>
+    </style>
+
+    <style name="LibDialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="LibFormDeleteIv" parent="LibWrapWrap">
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:src">@drawable/ic_delete_icon</item>
+    </style>
+
+    <style name="LibFormEditText">
+        <item name="android:background">@drawable/selector_input_bg</item>
+        <item name="android:paddingBottom">@dimen/mq_size_level2</item>
+        <item name="android:paddingTop">@dimen/mq_size_level4</item>
+    </style>
+
+    <style name="LibFormImageSiv" parent="LibMatchWrap">
+        <item name="android:layout_marginRight">@dimen/mq_size_level3</item>
+        <item name="android:layout_marginTop">@dimen/mq_size_level3</item>
+        <item name="android:clickable">true</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="mq_iv_isSquare">true</item>
+    </style>
+
+    <style name="LibTheme" parent="@android:style/Theme.Light.NoTitleBar" />
+    <style name="LibAutoMatch">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="LibAutoMatch.Horizontal">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="LibAutoMatch.Vertical">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LibAutoWrap">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="LibAutoWrap.Horizontal">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="LibAutoWrap.Vertical">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LibHLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/mq_item_pressed</item>
+    </style>
+
+    <style name="LibVLine">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/mq_item_pressed</item>
+    </style>
+
+    <style name="LibMatchAuto">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+
+    <style name="LibMatchAuto.Horizontal">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="LibMatchAuto.Vertical">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LibMatchMatch">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="LibMatchMatch.Horizontal">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="LibMatchMatch.Vertical">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LibMatchWrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="LibMatchWrap.Horizontal">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="LibMatchWrap.Vertical">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+
+    <style name="LibWrapAuto">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+
+    <style name="LibWrapAuto.Horizontal">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="LibWrapAuto.Vertical">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LibWrapMatch">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="LibWrapMatch.Horizontal">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="LibWrapMatch.Vertical">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LibWrapWrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="LibWrapWrap.Horizontal">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="LibWrapWrap.Vertical">
+        <item name="android:orientation">vertical</item>
+    </style>
+</resources>

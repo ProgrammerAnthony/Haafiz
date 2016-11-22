@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/LibMatchMatch.Vertical"
+    android:padding="@dimen/mq_size_level1">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_emotion_keyboard_content"
+        style="@style/LibMatchAuto"
+        android:overScrollMode="never" />
+
+    <LinearLayout
+        android:id="@+id/ll_emotion_keyboard_indicator"
+        style="@style/LibMatchWrap.Horizontal"
+        android:gravity="center"
+        android:padding="@dimen/mq_size_level1"
+        tools:background="#00f" />
+</LinearLayout>

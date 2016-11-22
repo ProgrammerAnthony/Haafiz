@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chat_foot_ll"
+    style="@style/LibMatchWrap.Vertical"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/conversation_edit_bg"
+    android:minHeight="92dp">
+
+    <EditText
+        android:id="@+id/input_et"
+        style="@style/LibMatchWrap"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/mq_size_level4"
+        android:layout_marginRight="@dimen/mq_size_level4"
+        android:layout_marginTop="@dimen/mq_size_level2"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/mq_send_msg"
+        android:maxLines="5"
+        android:minHeight="40dp"
+        android:textColor="@color/mq_chat_et_textColor"
+        android:textCursorDrawable="@drawable/shape_cursor"
+        android:textSize="@dimen/mq_textSize_level2" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageButton
+            android:id="@+id/send_text_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_send_back_normal"
+            android:src="@drawable/ic_send_icon_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/send_text_btn">
+
+
+            <RelativeLayout
+                android:id="@+id/emoji_select_btn"
+                android:layout_width="48dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/emoji_select_img"
+                    android:layout_width="@dimen/mq_size_level6"
+                    android:layout_height="@dimen/mq_size_level6"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_emoji_normal" />
+
+                <View
+                    android:id="@+id/emoji_select_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/mq_indicator_selected"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/photo_select_btn"
+                android:layout_width="48dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/photo_select_iv"
+                    android:layout_width="@dimen/mq_size_level6"
+                    android:layout_height="@dimen/mq_size_level6"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/selector_ic_image" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/camera_select_btn"
+                android:layout_width="48dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/camera_select_iv"
+                    android:layout_width="@dimen/mq_size_level6"
+                    android:layout_height="@dimen/mq_size_level6"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/selector_ic_camera" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mic_select_btn"
+                android:layout_width="48dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/conversation_voice_img"
+                    android:layout_width="@dimen/mq_size_level6"
+                    android:layout_height="@dimen/mq_size_level6"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_mic_normal" />
+
+                <View
+                    android:id="@+id/conversation_voice_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/mq_indicator_selected"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/evaluate_select_btn"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/evaluate_select_iv"
+                    android:layout_width="@dimen/mq_size_level6"
+                    android:layout_height="@dimen/mq_size_level6"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/selector_ic_evaluate" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.anthony.inputlayout.layout.CustomKeyboardLayout
+        android:id="@+id/customKeyboardLayout"
+        style="@style/LibMatchWrap" />
+</LinearLayout>
