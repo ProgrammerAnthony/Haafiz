@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/ThirdPart/DropDownMenu" />
             <option value="$PROJECT_DIR$/ThirdPart/ImageLoader" />
             <option value="$PROJECT_DIR$/ThirdPart/ImagePicker" />
+            <option value="$PROJECT_DIR$/ThirdPart/InputLayout" />
             <option value="$PROJECT_DIR$/ThirdPart/PullRefreshView" />
             <option value="$PROJECT_DIR$/ThirdPart/RVHelper" />
             <option value="$PROJECT_DIR$/ThirdPart/SegmentControl" />
@@ -23,7 +24,6 @@
             <option value="$PROJECT_DIR$/ThirdPart/VideoListPlayer" />
             <option value="$PROJECT_DIR$/ThirdPart/ViewPagerIndicator" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/citypicker" />
             <option value="$PROJECT_DIR$/rxapp" />
             <option value="$PROJECT_DIR$/rxlibrary" />
           </set>

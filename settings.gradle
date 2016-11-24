@@ -1,4 +1,4 @@
-include ':app', ':rxapp', ':SweetDialog', ':CityPicker', ':SlidingMenu', ':ViewPagerIndicator', ':ShareSDK', ':SegmentControl', ':citypicker', ':rxlibrary', ':VideoListPlayer', ':ImageLoader', ':RVHelper', ':PullRefreshView', ':ImagePicker', ':DropDownMenu', ':StatusLayout', ':InputLayout'
+include ':app', ':rxapp', ':SweetDialog', ':CityPicker', ':SlidingMenu', ':ViewPagerIndicator', ':ShareSDK', ':SegmentControl', ':rxlibrary', ':VideoListPlayer', ':ImageLoader', ':RVHelper', ':PullRefreshView', ':ImagePicker', ':DropDownMenu', ':StatusLayout', ':InputLayout'
 
 project(':SweetDialog').projectDir = new File('ThirdPart/SweetDialog')
 project(':SlidingMenu').projectDir = new File('ThirdPart/SlidingMenu')

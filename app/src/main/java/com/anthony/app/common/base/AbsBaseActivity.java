@@ -26,7 +26,7 @@ import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import rx.Subscription;
+import rx.subscriptions.CompositeSubscription;
 import timber.log.Timber;
 
 
@@ -42,9 +42,14 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
     protected static String TAG_LOG = null;// Log tag
 
     protected Context mContext = null;//context
-    private ActivityComponent mActivityComponent;
-    protected Subscription mSubscription;
+
+    private ActivityComponent mActivityComponent;//dagger2 ActivityComponent
+
+    //    protected Subscription mSubscription;
+    private CompositeSubscription mSubscriptions;
+
     private Unbinder mUnbinder;
+
     private StatusLayout mStatusLayout;//global status to define progress/error/content/empty
 
     @Inject
@@ -67,6 +72,8 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
         Timber.tag(TAG_LOG);
 //save activities stack
         BaseAppManager.getInstance().addActivity(this);
+//rxjava subscriptions,use it like  --->       mSubscriptions.add(subscription)
+        mSubscriptions = new CompositeSubscription();
 
 //        if (getContentViewID() != 0)
 //            setContentView(getContentViewID());
@@ -106,9 +113,7 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
             mUnbinder.unbind();
             mUnbinder = null;
         }
-        if (mSubscription != null && !mSubscription.isUnsubscribed()) {
-            mSubscription.unsubscribe();
-        }
+        mSubscriptions.clear();
     }
 
     @Override
@@ -137,6 +142,8 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
 
     /**
      * Dagger2 use in your application module(not used in 'base' module)
+     * <p>
+     * using dagger2 in base class：https://github.com/google/dagger/issues/73
      */
     protected void injectDagger(ActivityComponent activityComponent) {
         activityComponent.inject(this);

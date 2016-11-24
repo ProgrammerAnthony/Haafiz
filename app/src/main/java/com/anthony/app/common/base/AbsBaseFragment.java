@@ -16,7 +16,7 @@ import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import rx.Subscription;
+import rx.subscriptions.CompositeSubscription;
 import timber.log.Timber;
 
 /**
@@ -45,7 +45,8 @@ public abstract class AbsBaseFragment extends Fragment {
      */
     protected Context mContext;
 
-    protected Subscription mSubscription;
+    //    protected Subscription mSubscription;
+    private CompositeSubscription mSubscriptions;
 
     private Unbinder mUnBinder;
 
@@ -55,8 +56,6 @@ public abstract class AbsBaseFragment extends Fragment {
 
     @Inject
     DataManager mDataManager;
-
-
 
 
     @Override
@@ -74,12 +73,12 @@ public abstract class AbsBaseFragment extends Fragment {
         }
 //initialize Dagger2 to support DI
         initDagger2(((AbsBaseActivity) getActivity()).activityComponent());
+//rxjava subscriptions,use it like  --->       mSubscriptions.add(subscription)
+        mSubscriptions = new CompositeSubscription();
 
         loadData();
 
     }
-
-
 
 
     @Nullable
@@ -105,15 +104,13 @@ public abstract class AbsBaseFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if (mSubscription != null && !mSubscription.isUnsubscribed()) {
-            mSubscription.unsubscribe();
-        }
+        mSubscriptions.clear();
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-//        ButterKnife.unbind(this);
+//ButterKnife unbind
         if (mUnBinder != null) {
             mUnBinder.unbind();
             mUnBinder = null;
@@ -138,6 +135,8 @@ public abstract class AbsBaseFragment extends Fragment {
 
     /**
      * override this method to use Dagger2 which support for Dependency Injection
+     * <p>
+     * using dagger2 in base class：https://github.com/google/dagger/issues/73
      */
     protected void initDagger2(ActivityComponent activityComponent) {
         activityComponent.inject(this);
@@ -158,8 +157,6 @@ public abstract class AbsBaseFragment extends Fragment {
     public DataManager getDataManager() {
         return mDataManager;
     }
-
-
 
 
 }
