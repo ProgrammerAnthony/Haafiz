@@ -26,13 +26,14 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import rx.Subscription;
 import rx.functions.Action0;
 
 /**
  * Created by Anthony on 2016/9/9.
  * Class Note:
  * abstract class support pullToRefresh  + RecyclerView
- *
+ * <p>
  * todo preload data !!!!
  */
 public abstract class AbsListFragment extends AbsBaseFragment {
@@ -173,7 +174,7 @@ public abstract class AbsListFragment extends AbsBaseFragment {
 
     protected void loadData(final int requestPageIndex) {
         newUrl = getRequestUrl(requestPageIndex);
-        mSubscription = mDataManager.loadNewsJsonInfo(newUrl)
+        Subscription subscription = mDataManager.loadNewsJsonInfo(newUrl)
                 .doOnTerminate(new Action0() {
                     @Override
                     public void call() {
@@ -200,6 +201,8 @@ public abstract class AbsListFragment extends AbsBaseFragment {
                         onErrorDataReceived();
                     }
                 });
+
+        mSubscriptions.add(subscription);
     }
 
     private void onDataReceived(int requestIndex, List topic, List data) {

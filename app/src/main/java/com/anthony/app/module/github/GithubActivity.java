@@ -22,6 +22,7 @@ import java.util.List;
 import javax.inject.Inject;
 
 import butterknife.BindView;
+import rx.Subscription;
 
 /**
  * Created by Anthony on 2016/10/13.
@@ -59,7 +60,7 @@ public class GithubActivity extends AbsBaseActivity {
 //                });
 
 // load data,what we get is List<GithubUser>
-        mSubscription = mDataManager.loadUserFollowingList("CameloeAnthony")
+        Subscription subscription = mDataManager.loadUserFollowingList("CameloeAnthony")
                 .subscribe(new HttpSubscriber<List<GithubUser>>() {
                     @Override
                     public void onNext(List<GithubUser> users) {
@@ -67,6 +68,8 @@ public class GithubActivity extends AbsBaseActivity {
                         mUserItemAdapter.notifyDataSetChanged();
                     }
                 });
+
+        mSubscriptions.add(subscription);
     }
 
     @Override

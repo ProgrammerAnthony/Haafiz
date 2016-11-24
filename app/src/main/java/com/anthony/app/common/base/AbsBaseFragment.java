@@ -46,7 +46,7 @@ public abstract class AbsBaseFragment extends Fragment {
     protected Context mContext;
 
     //    protected Subscription mSubscription;
-    private CompositeSubscription mSubscriptions;
+    protected CompositeSubscription mSubscriptions;
 
     private Unbinder mUnBinder;
 

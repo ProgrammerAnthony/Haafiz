@@ -16,6 +16,7 @@ import java.util.List;
 import javax.inject.Inject;
 
 import butterknife.BindView;
+import rx.Subscription;
 
 /**
  * Created by Anthony on 2016/10/11.
@@ -72,7 +73,7 @@ public class WeatherActivity extends AbsBaseActivity {
     }
 
     private void loadWeatherData() {
-        mSubscription = mDataManager.loadWeatherData(cityWeatherToCheck).subscribe(new HttpSubscriber<WeatherData>() {
+        Subscription subscription = mDataManager.loadWeatherData(cityWeatherToCheck).subscribe(new HttpSubscriber<WeatherData>() {
             @Override
             public void onNext(WeatherData weatherData) {
                 onWeatherDataLoaded(weatherData);
@@ -84,6 +85,7 @@ public class WeatherActivity extends AbsBaseActivity {
                 showToast("加载天气信息失败");
             }
         });
+        mSubscriptions.add(subscription);
     }
 
     /**
