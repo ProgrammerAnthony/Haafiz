@@ -2,6 +2,8 @@
 package com.anthony.app.common.base;
 
 import android.app.Activity;
+import android.app.ActivityManager;
+import android.content.Context;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -38,6 +40,7 @@ public class BaseAppManager {
         return mActivities.size();
     }
 
+
     public synchronized Activity getForwardActivity() {
         return size() > 0 ? mActivities.get(size() - 1) : null;
     }
@@ -68,5 +71,23 @@ public class BaseAppManager {
             activity.finish();
             i = mActivities.size() - 1;
         }
+    }
+
+    /**
+     * 退出应用程序
+     */
+    public void AppExit(Context context) {
+        try {
+            clear();
+            ActivityManager activityMgr =
+                    (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+            activityMgr.killBackgroundProcesses(context.getPackageName());
+            System.exit(0);
+        } catch (Exception e) {
+        }
+    }
+
+    public boolean isAppExit() {
+        return mActivities == null || mActivities.isEmpty();
     }
 }

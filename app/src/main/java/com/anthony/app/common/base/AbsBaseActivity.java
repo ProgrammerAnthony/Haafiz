@@ -7,6 +7,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +21,7 @@ import com.anthony.app.common.injection.component.ActivityComponent;
 import com.anthony.app.common.injection.component.DaggerActivityComponent;
 import com.anthony.app.common.injection.module.ActivityModule;
 import com.anthony.app.common.utils.ToastUtils;
+import com.anthony.app.common.widgets.statusbar.StatusBarUtil;
 import com.anthony.statuslayout.StatusLayout;
 import com.malinskiy.materialicons.IconDrawable;
 import com.malinskiy.materialicons.Iconify;
@@ -70,6 +72,9 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        //设置状态栏透明
+        setStatusBarColor();
+//        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         init(savedInstanceState);
     }
 
@@ -295,5 +300,25 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
         finish();
         overridePendingTransition(0, 0);
         startActivity(intent);
+    }
+
+    public void setStatusBarColor() {
+        StatusBarUtil.setTransparent(this);
+//        StatusBarUtil.setTranslucent(this);
+    }
+
+    protected void setToolBar(Toolbar toolbar, String title) {
+        toolbar.setTitle(title);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        toolbar.setNavigationIcon(R.mipmap.ic_arrow_back_white_24dp);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                onBackPressedSupport();
+                onBackPressed();
+            }
+        });
     }
 }
