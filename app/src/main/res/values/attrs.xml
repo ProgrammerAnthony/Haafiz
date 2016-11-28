@@ -36,4 +36,10 @@
 
     <attr name="border_color" format="color" />
     <attr name="border_width" format="dimension" />
+
+
+    <attr name="themeColor" format="color|reference" />
+    <attr name="widgetBackground" format="color|reference" />
+    <attr name="widgetBackgroundDark" format="color|reference" />
+    <attr name="widgetBackgroundTitle" format="color|reference" />
 </resources>

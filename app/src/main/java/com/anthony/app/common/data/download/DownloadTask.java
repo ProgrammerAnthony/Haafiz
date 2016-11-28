@@ -6,7 +6,7 @@ import android.content.Context;
 import com.anthony.app.common.base.Constants;
 import com.anthony.app.common.data.HttpHelper;
 import com.anthony.app.common.data.RxBus;
-import com.anthony.app.common.utils.AppUtils;
+import com.anthony.app.common.utils.FileUtil;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -52,7 +52,7 @@ public class DownloadTask implements Serializable {
                 .subscribe(new Action1<ResponseBody>() {
                     @Override
                     public void call(ResponseBody responseBody) {
-                        boolean result = writeResponseBodyToDisk(responseBody, AppUtils.getUrlFileName(mUrl));
+                        boolean result = writeResponseBodyToDisk(responseBody, FileUtil.getUrlFileName(mUrl));
                         RxBus.getDefault().post(new DownloadFinishEvent(DownloadTask.this, result));
                     }
                 }, new Action1<Throwable>() {

@@ -6,8 +6,8 @@ import android.util.Log;
 import com.anthony.app.common.data.HttpHelper;
 import com.anthony.app.common.data.RxBus;
 import com.anthony.app.common.data.event.UploadFinishEvent;
-import com.anthony.app.common.utils.AppUtils;
 import com.anthony.app.common.utils.FileTypeUtil;
+import com.anthony.app.common.utils.FileUtil;
 
 import java.io.File;
 import java.io.IOException;
@@ -62,7 +62,7 @@ public class UploadTask {
             File file = (File) entry.getValue();
 
             RequestBody fileBody = RequestBody.create(MediaType.parse(getContentType(file)), file);
-            files.put("" + key + "\"; filename=\"" + AppUtils.getUrlFileName(file.getAbsolutePath()) + "",
+            files.put("" + key + "\"; filename=\"" + FileUtil.getUrlFileName(file.getAbsolutePath()) + "",
                     new UploadRequestBody(fileBody, this));
         }
 

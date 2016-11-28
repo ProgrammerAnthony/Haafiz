@@ -505,4 +505,12 @@ public class FileUtil {
         }
         return builder.toString();
     }
+
+    public static String getUrlFileName(String url) {
+        return url.substring(url.lastIndexOf("/") + 1);
+    }
+
+    public static String getUrlPath(String url) {
+        return url.substring(0, url.lastIndexOf("/") + 1);
+    }
 }

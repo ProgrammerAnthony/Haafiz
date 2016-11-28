@@ -27,4 +27,17 @@
     <color name="gz_btn_yellow">#e6aa3c</color>
     <color name="gz_txt_green">#1bb895</color>
     <color name="text_color">#575757</color>
+
+    <color name="window_background_light">#ffeeeeee</color>
+    <color name="window_background_dark">#ff303030</color>
+    <color name="text_color_light">#b3ffffff</color>
+    <color name="text_color_dark">#de000000</color>
+    <color name="list_divider_light">#ffe0e0e0</color>
+    <color name="list_divider_dark">#ff666666</color>
+    <color name="selectable_item_background_general_light_normal">@android:color/white</color>
+    <color name="selectable_item_background_general_light_pressed">#ffeeeeee</color>
+    <color name="selectable_item_background_general_light_accent">#ffcccccc</color>
+    <color name="selectable_item_background_general_dark_normal">#ff3c3c3c</color>
+    <color name="selectable_item_background_general_dark_pressed">#ff444444</color>
+    <color name="selectable_item_background_general_dark_accent">#ff666666</color>
 </resources>

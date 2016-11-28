@@ -10,7 +10,7 @@ import android.util.Log;
 import com.anthony.app.common.base.AbsBaseFragment;
 import com.anthony.app.common.base.Constants;
 import com.anthony.app.common.data.bean.Channel;
-import com.anthony.app.common.utils.FileUtil2;
+import com.anthony.app.common.utils.FileUtil;
 import com.anthony.app.common.widgets.webview.WebViewCommentActivity;
 
 import java.io.Serializable;
@@ -39,8 +39,8 @@ public class ViewDisplay {
 
 
     public ViewDisplay(Context context) {
-        mTypeActivityNameMap.putAll(FileUtil2.simpleProperty2HashMap(context, Constants.BASE_TYPE_ACTIVITY_MAP_PATH));
-        mTypeFragmentNameMap.putAll(FileUtil2.simpleProperty2HashMap(context, Constants.BASE_TYPE_FRAGMENT_MAP_PATH));
+        mTypeActivityNameMap.putAll(FileUtil.simpleProperty2HashMap(context, Constants.BASE_TYPE_ACTIVITY_MAP_PATH));
+        mTypeFragmentNameMap.putAll(FileUtil.simpleProperty2HashMap(context, Constants.BASE_TYPE_FRAGMENT_MAP_PATH));
     }
 
     /**

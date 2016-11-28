@@ -1,53 +1,41 @@
 package com.anthony.app.common.utils;
 
-import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.ActivityManager.RunningAppProcessInfo;
 import android.app.ActivityManager.RunningTaskInfo;
 import android.app.AlertDialog;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.content.res.TypedArray;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Environment;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
-import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 
-import com.anthony.app.common.base.Constants;
 import com.anthony.app.common.data.bean.NewsItem;
 import com.anthony.app.common.widgets.webview.WebViewCommentActivity;
 
 import java.io.File;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
-import java.util.regex.Pattern;
-
-import static com.google.gson.internal.$Gson$Preconditions.checkNotNull;
 
 /**
  * Created by Anthony on 2016/1/25.
- * Class Note:SwipeBackUtils class  for common operation of app
+ * Class Note:
+ *
  */
 public class AppUtils {
 
-    private AppUtils() {
-        throw new AssertionError();
-    }
+
 
     /**
      * whether this process is named with processName
@@ -104,86 +92,7 @@ public class AppUtils {
         return false;
     }
 
-    /**
-     * get screen size width in pixels
-     *
-     * @param context
-     * @return the pixels of the screen width
-     */
-    public static int getWidth(Activity context) {
-        DisplayMetrics dm = new DisplayMetrics();
-        context.getWindowManager().getDefaultDisplay().getMetrics(dm);
-        return dm.widthPixels;
-    }
 
-    public static String getUrlFileName(String url) {
-        return url.substring(url.lastIndexOf("/") + 1);
-    }
-
-    public static String getUrlPath(String url) {
-        return url.substring(0, url.lastIndexOf("/") + 1);
-    }
-
-    /**
-     * get screen size height in pixels
-     *
-     * @param context
-     * @return the pixels of the screen height
-     */
-    public static int getHeight(Activity context) {
-        DisplayMetrics dm = new DisplayMetrics();
-        context.getWindowManager().getDefaultDisplay().getMetrics(dm);
-        return dm.heightPixels;
-    }
-
-
-    /**
-     * convert dip to px
-     *
-     * @param context
-     * @param dpValue
-     * @return
-     */
-    public static int dip2px(Context context, float dpValue) {
-        final float scale = context.getResources().getDisplayMetrics().density;
-        return (int) (dpValue * scale + 0.5f);
-    }
-
-    /**
-     * convert px to dip
-     *
-     * @param context
-     * @param pxValue
-     * @return
-     */
-    public static int px2dip(Context context, float pxValue) {
-        final float scale = context.getResources().getDisplayMetrics().density;
-        return (int) (pxValue / scale + 0.5f);
-    }
-
-    /**
-     * convert px to sp
-     *
-     * @param context
-     * @param pxValue
-     * @return
-     */
-    public static int px2sp(Context context, float pxValue) {
-        final float scale = context.getResources().getDisplayMetrics().density;
-        return (int) (pxValue / scale + 0.5f);
-    }
-
-    /**
-     * convert sp to px
-     *
-     * @param context
-     * @param spValue
-     * @return
-     */
-    public static int sp2px(Context context, float spValue) {
-        final float scale = context.getResources().getDisplayMetrics().density;
-        return (int) (spValue * scale + 0.5f);
-    }
 
     /**
      * get the package information of the context
@@ -217,19 +126,6 @@ public class AppUtils {
         return false;
     }
 
-    /**
-     * hide keyboard
-     *
-     * @param activity
-     */
-    public static void hidekeyboard(Activity activity) {
-        try {
-            ((InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE))
-                    .hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-    }
 
     /**
      * whether the network is connected
@@ -394,169 +290,6 @@ public class AppUtils {
     }
 
     /**
-     * return if str is empty
-     *
-     * @param str
-     * @return
-     */
-    public static boolean isEmpty(String str) {
-        if (str == null || str.length() == 0 || str.equalsIgnoreCase("null") || str.isEmpty() || str.equals("")) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    /**
-     * get format date
-     *
-     * @param timemillis
-     * @return
-     */
-    public static String getFormatDate(long timemillis) {
-        return new SimpleDateFormat("yyyy年MM月dd日").format(new Date(timemillis));
-    }
-
-    /**
-     * decode Unicode string
-     *
-     * @param s
-     * @return
-     */
-    public static String decodeUnicodeStr(String s) {
-        StringBuilder sb = new StringBuilder(s.length());
-        char[] chars = s.toCharArray();
-        for (int i = 0; i < chars.length; i++) {
-            char c = chars[i];
-            if (c == '\\' && chars[i + 1] == 'u') {
-                char cc = 0;
-                for (int j = 0; j < 4; j++) {
-                    char ch = Character.toLowerCase(chars[i + 2 + j]);
-                    if ('0' <= ch && ch <= '9' || 'a' <= ch && ch <= 'f') {
-                        cc |= (Character.digit(ch, 16) << (3 - j) * 4);
-                    } else {
-                        cc = 0;
-                        break;
-                    }
-                }
-                if (cc > 0) {
-                    i += 5;
-                    sb.append(cc);
-                    continue;
-                }
-            }
-            sb.append(c);
-        }
-        return sb.toString();
-    }
-
-    /**
-     * encode Unicode string
-     *
-     * @param s
-     * @return
-     */
-    public static String encodeUnicodeStr(String s) {
-        StringBuilder sb = new StringBuilder(s.length() * 3);
-        for (char c : s.toCharArray()) {
-            if (c < 256) {
-                sb.append(c);
-            } else {
-                sb.append("\\u");
-                sb.append(Character.forDigit((c >>> 12) & 0xf, 16));
-                sb.append(Character.forDigit((c >>> 8) & 0xf, 16));
-                sb.append(Character.forDigit((c >>> 4) & 0xf, 16));
-                sb.append(Character.forDigit((c) & 0xf, 16));
-            }
-        }
-        return sb.toString();
-    }
-
-    /**
-     * convert time str
-     *
-     * @param time
-     * @return
-     */
-    public static String convertTime(int time) {
-
-        time /= 1000;
-        int minute = time / 60;
-        int second = time % 60;
-        minute %= 60;
-        return String.format("%02d:%02d", minute, second);
-    }
-
-    /**
-     * url is usable
-     *
-     * @param url
-     * @return
-     */
-    public static boolean isUrlUsable(String url) {
-        if (AppUtils.isEmpty(url)) {
-            return false;
-        }
-
-        URL urlTemp = null;
-        HttpURLConnection connt = null;
-        try {
-            urlTemp = new URL(url);
-            connt = (HttpURLConnection) urlTemp.openConnection();
-            connt.setRequestMethod("HEAD");
-            int returnCode = connt.getResponseCode();
-            if (returnCode == HttpURLConnection.HTTP_OK) {
-                return true;
-            }
-        } catch (Exception e) {
-            return false;
-        } finally {
-            connt.disconnect();
-        }
-        return false;
-    }
-
-    /**
-     * is url
-     *
-     * @param url
-     * @return
-     */
-    public static boolean isUrl(String url) {
-        Pattern pattern = Pattern.compile("^([hH][tT]{2}[pP]://|[hH][tT]{2}[pP][sS]://)(([A-Za-z0-9-~]+).)+([A-Za-z0-9-~\\/])+$");
-        return pattern.matcher(url).matches();
-    }
-
-    /**
-     * get toolbar height
-     *
-     * @param context
-     * @return
-     */
-    public static int getToolbarHeight(Context context) {
-        final TypedArray styledAttributes = context.getTheme().obtainStyledAttributes(
-                new int[]{android.R.attr.actionBarSize});
-        int toolbarHeight = (int) styledAttributes.getDimension(0, 0);
-        styledAttributes.recycle();
-
-        return toolbarHeight;
-    }
-
-    /**
-     * W020160906622900105417.png W开头图片转换规则
-     * http://m.gzgov.gov.cn/webpic/+文件名前八位+/+文件名前十位+/文件名
-     * http://m.gzgov.gov.cn/webpic/W0201609/W020160906/W020160906622900105417.png
-     *
-     * @param originalStr
-     * @return
-     */
-    public static String convertPicStartWithW(String originalStr) {
-        StringBuilder newStr = new StringBuilder();
-        newStr.append(Constants.Remote_BASE_END_POINT + "webpic/" + originalStr.substring(0, 8) + "/" + originalStr.substring(0, 10) + "/" + originalStr);
-        return newStr.toString();
-    }
-
-    /**
      * 加载网页，每个网页都需要NewsItem对象
      *
      * @param context
@@ -587,17 +320,126 @@ public class AppUtils {
 
     }
 
+
+    //分享
+    public static void share(Context context, String questionTitle, String questionUrl) {
+        Intent share = new Intent(Intent.ACTION_SEND);
+        share.setType("text/plain");
+        //noinspection deprecation
+        share.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+        share.putExtra(Intent.EXTRA_TEXT, questionTitle + " " + questionUrl + " 分享自Anthony Github");
+        context.startActivity(Intent.createChooser(share,"分享至。。。"));
+    }
+
+
+
     /**
-     * The {@code fragment} is added to the container view with id {@code frameId}. The operation is
-     * performed by the {@code fragmentManager}.
+     * 安装文件
      *
+     * @param data
      */
-    public static void addFragmentToActivity (@NonNull FragmentManager fragmentManager,
-                                              @NonNull Fragment fragment, int frameId) {
-        checkNotNull(fragmentManager);
-        checkNotNull(fragment);
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.add(frameId, fragment);
-        transaction.commit();
+    public static void promptInstall(Context context, Uri data) {
+        Intent promptInstall = new Intent(Intent.ACTION_VIEW)
+                .setDataAndType(data, "application/vnd.android.package-archive");
+        // FLAG_ACTIVITY_NEW_TASK 可以保证安装成功时可以正常打开 app
+        promptInstall.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(promptInstall);
+    }
+
+    public static void copy2clipboard(Context context, String text) {
+        ClipboardManager cm = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+        ClipData clip = ClipData.newPlainText("clip", text);
+        cm.setPrimaryClip(clip);
+    }
+
+    /**
+     * 显示软键盘
+     */
+    public static void openSoftInput(EditText et) {
+        InputMethodManager inputMethodManager = (InputMethodManager) et.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputMethodManager.showSoftInput(et, InputMethodManager.HIDE_NOT_ALWAYS);
+    }
+
+    /**
+     * 隐藏软键盘
+     */
+    public static void hideSoftInput(EditText et) {
+        InputMethodManager inputMethodManager = (InputMethodManager) et.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(et.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+    }
+
+    /**
+     * 获取SD卡路径
+     *
+     * @return 如果sd卡不存在则返回null
+     */
+    public static File getSDPath() {
+        File sdDir = null;
+        boolean sdCardExist = Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);   //判断sd卡是否存在
+        if (sdCardExist) {
+            sdDir = Environment.getExternalStorageDirectory();//获取跟目录
+        }
+        return sdDir;
+    }
+
+
+    /**
+     * 获取版本名称
+     */
+    public static String getAppVersionName(Context context) {
+        String versionName = "";
+        try {
+            // ---get the package info---
+            PackageManager pm = context.getPackageManager();
+            PackageInfo pi = pm.getPackageInfo(context.getPackageName(), 0);
+            versionName = pi.versionName;
+            if (versionName == null || versionName.length() <= 0) {
+                return "";
+            }
+        } catch (Exception e) {
+            Log.e("VersionInfo", "Exception", e);
+        }
+        return versionName;
+    }
+
+    /**
+     * 获取版本号
+     */
+    public static int getAppVersionCode(Context context) {
+        int versioncode = -1;
+        try {
+            // ---get the package info---
+            PackageManager pm = context.getPackageManager();
+            PackageInfo pi = pm.getPackageInfo(context.getPackageName(), 0);
+            versioncode = pi.versionCode;
+        } catch (Exception e) {
+            Log.e("VersionInfo", "Exception", e);
+        }
+        return versioncode;
+    }
+
+    public static String getIMEI(Context context) {
+        TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+        return tm.getDeviceId();
+    }
+
+    public static boolean isServiceRunning(Context context, Class serviceClass) {
+        ActivityManager manager =
+                (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        for (ActivityManager.RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
+            if (serviceClass.getName().equals(service.service.getClassName())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static void toggleComponent(Context context, Class componentClass, boolean enable) {
+        ComponentName componentName = new ComponentName(context, componentClass);
+        PackageManager pm = context.getPackageManager();
+        pm.setComponentEnabledSetting(componentName,
+                enable ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED :
+                        PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+                PackageManager.DONT_KILL_APP);
     }
 }

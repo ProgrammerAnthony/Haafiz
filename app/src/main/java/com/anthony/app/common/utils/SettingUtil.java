@@ -1,12 +1,9 @@
 package com.anthony.app.common.utils;
 
 import android.content.Context;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.os.Handler;
 import android.os.Looper;
 
-import com.anthony.app.common.base.Constants;
 import com.anthony.app.common.data.bean.Font;
 
 import java.io.File;
@@ -14,25 +11,31 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Vincent Woo
- * Date: 2016/1/5
- * Time: 11:23
- */
-public class SettingUtil {
 
-//    @Inject
-//    MyApplication mApplication;
+public class SettingUtil {
+    public static final String SP_ONLY_WIFI_LOAD_IMG = "OnlyWifiLoadImg";
+    public static final String SP_CURRENT_FONT_PATH = "current_font_path";
+    public static final String SP_CURRENT_FONT_SIZE = "current_font_size";
+
+
+    private static final boolean DEFAULT_NO_IMAGE = false;
+    private static final boolean DEFAULT_AUTO_SAVE = true;
+    public static final String SP_NO_IMAGE = "no_image";
+
+
+    public static final String SP_AUTO_CACHE = "auto_cache";
+    public static final String SP_THEM_INDEX = "ThemeIndex";
+    public static final String SP_NIGHT_MODE = "pNightMode";
 
     /**
      * WIFI下加载大图
      */
     public static boolean getOnlyWifiLoadImg(Context ctx) {
-        return SpUtil.getBoolean(ctx, Constants.ONLY_WIFI_LOAD_IMG, false);
+        return SpUtil.getBoolean(ctx, SP_ONLY_WIFI_LOAD_IMG, false);
     }
 
     public static void setOnlyWifiLoadImg(Context ctx, boolean isOn) {
-        SpUtil.putBoolean(ctx, Constants.ONLY_WIFI_LOAD_IMG, isOn);
+        SpUtil.putBoolean(ctx, SP_ONLY_WIFI_LOAD_IMG, isOn);
     }
 
     /**
@@ -55,18 +58,18 @@ public class SettingUtil {
     }
 
     public static String getCurrentFont(Context ctx) {
-        return SpUtil.getString(ctx, Constants.CURRENT_FONT_PATH, "");
+        return SpUtil.getString(ctx, SP_CURRENT_FONT_PATH, "");
     }
 
     /**
      * 设置字号
      */
     public static int getCurrentFontSize(Context ctx) {
-        return SpUtil.getInt(ctx, Constants.CURRENT_FONT_SIZE, 0);
+        return SpUtil.getInt(ctx, SP_CURRENT_FONT_SIZE, 0);
     }
 
     public static void setCurrentFontSize(Context ctx, int size) {
-        SpUtil.putInt(ctx, Constants.CURRENT_FONT_SIZE, size);
+        SpUtil.putInt(ctx, SP_CURRENT_FONT_SIZE, size);
     }
 
 //    public static int getThemeId(String theme) {
@@ -213,35 +216,15 @@ public class SettingUtil {
         return deletedFiles;
     }
 
+
     /**
-     * 版本管理
+     * 是否需要更新
+     *
+     * @param ctx
+     * @return
      */
-    public static String getVersionName(Context ctx) {
-        PackageManager packageManager = ctx.getPackageManager();
-        PackageInfo packInfo = null;
-        try {
-            packInfo = packageManager.getPackageInfo(ctx.getPackageName(), 0);
-            return packInfo.versionName;
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-            return "";
-        }
-    }
-
-    public static int getVersionCode(Context ctx) {
-        PackageManager packageManager = ctx.getPackageManager();
-        PackageInfo packInfo = null;
-        try {
-            packInfo = packageManager.getPackageInfo(ctx.getPackageName(), 0);
-            return packInfo.versionCode;
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-            return -1;
-        }
-    }
-
     public static boolean isNeedUpdate(Context ctx) {
-        int local_code = convertVersionNameToInt(getVersionName(ctx));
+        int local_code = convertVersionNameToInt(AppUtils.getAppVersionName(ctx));
         int remote_code = convertVersionNameToInt("2.0.0");
         return remote_code > local_code;
     }
@@ -250,4 +233,51 @@ public class SettingUtil {
         String version = versionName.replaceAll("\\.", "");
         return Integer.parseInt(version);
     }
+
+    /**
+     * 无图模式
+     * @param context
+     * @return
+     */
+    public static boolean getNoImageState(Context context) {
+        return SpUtil.getBoolean(context, SP_NO_IMAGE);
+    }
+
+    public static void setNoImageState(Context context, boolean state) {
+        SpUtil.putBoolean(context, SP_NO_IMAGE, DEFAULT_NO_IMAGE);
+    }
+
+    /**
+     * 自动缓存
+     * @param context
+     * @return
+     */
+    public static boolean getAutoCacheState(Context context) {
+        return SpUtil.getBoolean(context, SP_AUTO_CACHE);
+    }
+
+    public static void setAutoCacheState(Context context,boolean state) {
+        SpUtil.putBoolean(context, SP_AUTO_CACHE, DEFAULT_AUTO_SAVE);
+    }
+
+    //不同主题
+    public static int getThemeIndex(Context context) {
+        return SpUtil.getInt(context,SP_THEM_INDEX);
+    }
+
+    public static void setThemeIndex(Context context, int index) {
+        SpUtil.putInt(context,SP_THEM_INDEX,index);
+    }
+
+    //主题模式（日间，夜间）
+    public static boolean getNightModel(Context context) {
+        return SpUtil.getBoolean(context,SP_NIGHT_MODE);
+
+    }
+
+    public static void setNightModel(Context context, boolean nightModel) {
+        SpUtil.putBoolean(context,SP_NIGHT_MODE,nightModel);
+    }
+
+
 }

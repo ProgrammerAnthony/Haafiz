@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_titlebar"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="?attr/colorPrimary"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/titlebar_iv_left"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_primary2dark_sel"
+        android:padding="13dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/titlebar_tv_left"
+        style="@style/TextViewSubhead"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_primary2dark_sel"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_medium"
+        android:paddingRight="@dimen/margin_medium"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/titlebar_tv"
+        style="@style/TextViewTitle"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:maxWidth="224dp"
+        android:textColor="@android:color/white"
+        android:textSize="26sp" />
+
+    <ImageView
+        android:id="@+id/titlebar_iv_right"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_primary2dark_sel"
+        android:padding="13dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/titlebar_tv_right"
+        style="@style/TextViewSubhead"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/bg_primary2dark_sel"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_medium"
+        android:paddingRight="@dimen/margin_medium"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+</RelativeLayout>

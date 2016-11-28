@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Theme Light -->
+    <style name="BaseAppThemeLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="colorPrimary">?attr/themeColor</item>
+        <item name="colorPrimaryDark">?attr/themeColor</item>
+        <item name="colorAccent">?attr/themeColor</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:windowBackground">@color/window_background_light</item>
+        <item name="android:listDivider">@color/list_divider_light</item>
+        <item name="widgetBackground">@color/selectable_item_background_general_light_normal</item>
+        <item name="widgetBackgroundDark">@color/selectable_item_background_general_light_pressed
+        </item>
+        <item name="widgetBackgroundTitle">@android:color/white</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="AppThemeLight" parent="BaseAppThemeLight">
+        <item name="themeColor">@color/md_green_500</item>
+    </style>
+
+    <style name="AppThemeLight.NoTranslucent" parent="BaseAppThemeLight">
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+    <style name="AppThemeLight.FitsStatusBar" />
+
+    <!-- App Theme Dark -->
+    <style name="BaseAppThemeDark" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="colorPrimary">?attr/themeColor</item>
+        <item name="colorPrimaryDark">?attr/themeColor</item>
+        <item name="colorAccent">?attr/themeColor</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:windowBackground">@color/window_background_dark</item>
+        <item name="android:listDivider">@color/list_divider_dark</item>
+        <item name="widgetBackground">@color/selectable_item_background_general_dark_normal</item>
+        <item name="widgetBackgroundDark">@color/selectable_item_background_general_dark_pressed
+        </item>
+        <item name="widgetBackgroundTitle">?attr/colorPrimary</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="AppThemeDark" parent="BaseAppThemeDark">
+        <item name="themeColor">@color/md_green_700</item>item
+    </style>
+
+    <style name="AppThemeDark.NoTranslucent" parent="BaseAppThemeDark">
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+    <style name="AppThemeDark.FitsStatusBar" />
+
+    <!-- App Theme Launch -->
+    <style name="AppThemeLaunch" parent="BaseAppThemeLight">
+        <item name="android:windowBackground">?attr/colorPrimary</item>
+    </style>
+
+    <style name="AppWidget" parent="Theme.AppCompat.Light" />
+
+    <style name="AppWidget.DeepLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+    <style name="AppWidget.DeepLine.Vertical">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+
+    <!-- red -->
+    <style name="AppThemeLight.Red">
+        <item name="themeColor">@color/md_red_500</item>
+    </style>
+
+    <style name="AppThemeDark.Red">
+        <item name="themeColor">@color/md_red_700</item>
+    </style>
+
+
+    <!-- pink -->
+    <style name="AppThemeLight.Pink">
+        <item name="themeColor">@color/md_pink_500</item>
+    </style>
+
+    <style name="AppThemeDark.Pink">
+        <item name="themeColor">@color/md_pink_700</item>
+    </style>
+
+
+    <!-- purple -->
+    <style name="AppThemeLight.Purple">
+        <item name="themeColor">@color/md_purple_500</item>
+    </style>
+
+    <style name="AppThemeDark.Purple">
+        <item name="themeColor">@color/md_purple_700</item>
+    </style>
+
+
+    <!-- deep_purple -->
+    <style name="AppThemeLight.DeepPurple">
+        <item name="themeColor">@color/md_deep_purple_500</item>
+    </style>
+
+    <style name="AppThemeDark.DeepPurple">
+        <item name="themeColor">@color/md_deep_purple_700</item>
+    </style>
+
+
+    <!-- indigo -->
+    <style name="AppThemeLight.Indigo">
+        <item name="themeColor">@color/md_indigo_500</item>
+    </style>
+
+    <style name="AppThemeDark.Indigo">
+        <item name="themeColor">@color/md_indigo_700</item>
+    </style>
+
+
+    <!-- blue -->
+    <style name="AppThemeLight.Blue">
+        <item name="themeColor">@color/md_blue_500</item>
+    </style>
+
+    <style name="AppThemeDark.Blue">
+        <item name="themeColor">@color/md_blue_700</item>
+    </style>
+
+
+    <!-- light_blue -->
+    <style name="AppThemeLight.LightBlue">
+        <item name="themeColor">@color/md_light_blue_500</item>
+    </style>
+
+    <style name="AppThemeDark.LightBlue">
+        <item name="themeColor">@color/md_light_blue_700</item>
+    </style>
+
+
+    <!-- cyan -->
+    <style name="AppThemeLight.Cyan">
+        <item name="themeColor">@color/md_cyan_500</item>
+    </style>
+
+    <style name="AppThemeDark.Cyan">
+        <item name="themeColor">@color/md_cyan_700</item>
+    </style>
+
+
+    <!-- teal -->
+    <style name="AppThemeLight.Teal">
+        <item name="themeColor">@color/md_teal_500</item>
+    </style>
+
+    <style name="AppThemeDark.Teal">
+        <item name="themeColor">@color/md_teal_700</item>
+    </style>
+
+
+    <!-- green -->
+    <style name="AppThemeLight.Green">
+        <item name="themeColor">@color/md_green_500</item>
+    </style>
+
+    <style name="AppThemeDark.Green">
+        <item name="themeColor">@color/md_green_700</item>
+    </style>
+
+
+    <!-- light_green -->
+    <style name="AppThemeLight.LightGreen">
+        <item name="themeColor">@color/md_light_green_500</item>
+    </style>
+
+    <style name="AppThemeDark.LightGreen">
+        <item name="themeColor">@color/md_light_green_700</item>
+    </style>
+
+
+    <!-- lime -->
+    <style name="AppThemeLight.Lime">
+        <item name="themeColor">@color/md_lime_500</item>
+    </style>
+
+    <style name="AppThemeDark.Lime">
+        <item name="themeColor">@color/md_lime_700</item>
+    </style>
+
+
+    <!-- yellow -->
+    <style name="AppThemeLight.Yellow">
+        <item name="themeColor">@color/md_yellow_500</item>
+    </style>
+
+    <style name="AppThemeDark.Yellow">
+        <item name="themeColor">@color/md_yellow_700</item>
+    </style>
+
+
+    <!-- amber -->
+    <style name="AppThemeLight.Amber">
+        <item name="themeColor">@color/md_amber_500</item>
+    </style>
+
+    <style name="AppThemeDark.Amber">
+        <item name="themeColor">@color/md_amber_700</item>
+    </style>
+
+
+    <!-- orange -->
+    <style name="AppThemeLight.Orange">
+        <item name="themeColor">@color/md_orange_500</item>
+    </style>
+
+    <style name="AppThemeDark.Orange">
+        <item name="themeColor">@color/md_orange_700</item>
+    </style>
+
+
+    <!-- deep_orange -->
+    <style name="AppThemeLight.DeepOrange">
+        <item name="themeColor">@color/md_deep_orange_500</item>
+    </style>
+
+    <style name="AppThemeDark.DeepOrange">
+        <item name="themeColor">@color/md_deep_orange_700</item>
+    </style>
+
+
+    <!-- brown -->
+    <style name="AppThemeLight.Brown">
+        <item name="themeColor">@color/md_brown_500</item>
+    </style>
+
+    <style name="AppThemeDark.Brown">
+        <item name="themeColor">@color/md_brown_700</item>
+    </style>
+
+
+    <!-- grey -->
+    <style name="AppThemeLight.Grey">
+        <item name="themeColor">@color/md_grey_500</item>
+    </style>
+
+    <style name="AppThemeDark.Grey">
+        <item name="themeColor">@color/md_grey_700</item>
+    </style>
+
+
+    <!-- blue_grey -->
+    <style name="AppThemeLight.BlueGrey">
+        <item name="themeColor">@color/md_blue_grey_500</item>
+    </style>
+
+    <style name="AppThemeDark.BlueGrey">
+        <item name="themeColor">@color/md_blue_grey_700</item>
+    </style>
+</resources>

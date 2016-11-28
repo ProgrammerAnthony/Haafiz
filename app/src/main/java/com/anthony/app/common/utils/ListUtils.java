@@ -250,4 +250,18 @@ public class ListUtils {
         }
         return invertList;
     }
+
+
+
+
+    /**
+     * 判断链表第某个位置是否为空
+     *
+     * @param list
+     * @param index
+     * @return true:为Null或者size为0
+     */
+    public static boolean isEmpty(List<?> list, int index) {
+        return list == null || list.size() == 0 || list.size() <= index;
+    }
 }

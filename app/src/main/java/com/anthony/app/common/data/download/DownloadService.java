@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 import com.anthony.app.R;
 import com.anthony.app.common.data.RxBus;
-import com.anthony.app.common.utils.AppUtils;
+import com.anthony.app.common.utils.FileUtil;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -170,7 +170,7 @@ public class DownloadService extends Service {
         RemoteViews remoteViews = new RemoteViews(this.getPackageName(),
                 R.layout.lib_layout_download_notification);
         remoteViews.setProgressBar(R.id.progressbar_download, 100, 0, false);
-        remoteViews.setTextViewText(R.id.tv_title, "正在下载" + AppUtils.getUrlFileName(task.mUrl));
+        remoteViews.setTextViewText(R.id.tv_title, "正在下载" + FileUtil.getUrlFileName(task.mUrl));
 
         Intent cancelIntent = new Intent(this, DownloadService.class);
         cancelIntent.putExtra(ACTION, ACTION_CANCEL);
