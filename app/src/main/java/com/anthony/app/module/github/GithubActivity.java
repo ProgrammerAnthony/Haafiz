@@ -1,6 +1,7 @@
 package com.anthony.app.module.github;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -43,7 +44,7 @@ public class GithubActivity extends AbsBaseActivity {
     }
 
     @Override
-    protected void initViewsAndEvents() {
+    protected void initViewsAndEvents(Bundle savedInstanceState) {
         //recyclerView
         mUserItemAdapter = new UserItemAdapter(mContext);
         recycleView.addItemDecoration(new RecycleViewDivider(mContext, LinearLayoutManager.VERTICAL));

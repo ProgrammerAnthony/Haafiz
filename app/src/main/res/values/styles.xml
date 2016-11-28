@@ -25,6 +25,11 @@
         <item name="colorButtonNormal">@color/colorAccent</item>
     </style>
 
+
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@mipmap/splash</item>
+    </style>
+
     <!-- 透明启动主题 -->
     <style name="AppStartLoadTranslucent" parent="AppTheme">
         <item name="android:windowIsTranslucent">true</item>

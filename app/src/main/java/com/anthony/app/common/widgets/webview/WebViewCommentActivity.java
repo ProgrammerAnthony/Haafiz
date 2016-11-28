@@ -2,6 +2,7 @@ package com.anthony.app.common.widgets.webview;
 
 import android.graphics.Bitmap;
 import android.net.http.SslError;
+import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -85,7 +86,7 @@ public class WebViewCommentActivity extends AbsBaseActivity {
     }
 
     @Override
-    protected void initViewsAndEvents() {
+    protected void initViewsAndEvents(Bundle savedInstanceState) {
         dao = new OfflineResourceDao(mApplication);
         mItem = (NewsItem) getIntent().getSerializableExtra(WEB_VIEW_ITEM);
 

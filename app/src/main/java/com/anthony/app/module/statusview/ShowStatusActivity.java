@@ -1,5 +1,6 @@
 package com.anthony.app.module.statusview;
 
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,7 +24,7 @@ public class ShowStatusActivity extends AbsBaseActivity {
     }
 
     @Override
-    protected void initViewsAndEvents() {
+    protected void initViewsAndEvents(Bundle savedInstanceState) {
         setToolbar();
 
         List<Integer> skipIds = new ArrayList<>();

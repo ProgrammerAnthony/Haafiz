@@ -1,5 +1,6 @@
 package com.anthony.app.module.segment;
 
+import android.os.Bundle;
 import android.widget.FrameLayout;
 
 import com.anthony.app.R;
@@ -28,7 +29,7 @@ public class SegmentControlActivity extends AbsBaseActivity {
     }
 
     @Override
-    protected void initViewsAndEvents() {
+    protected void initViewsAndEvents(Bundle savedInstanceState) {
         segmentControl.setOnSegmentControlClickListener(new SegmentControl.OnSegmentControlClickListener() {
             @Override
             public void onSegmentControlClick(int index) {

@@ -1,5 +1,6 @@
 package com.anthony.app.module.tab;
 
+import android.os.Bundle;
 import android.view.View;
 
 import com.anthony.app.R;
@@ -24,7 +25,7 @@ public class StoreFragment extends AbsBaseFragment {
     }
 
     @Override
-    protected void initViews(View rootView) {
+    protected void initViews(View rootView, Bundle savedInstanceState) {
 
     }
 

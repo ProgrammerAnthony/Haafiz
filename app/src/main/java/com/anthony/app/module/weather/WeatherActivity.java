@@ -1,5 +1,6 @@
 package com.anthony.app.module.weather;
 
+import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -66,7 +67,7 @@ public class WeatherActivity extends AbsBaseActivity {
     }
 
     @Override
-    protected void initViewsAndEvents() {
+    protected void initViewsAndEvents(Bundle savedInstanceState) {
         cityWeatherToCheck = "成都";
         weatherCity.setText(cityWeatherToCheck);
         loadWeatherData();

@@ -10,7 +10,9 @@
         android:theme="@style/AppTheme">
         <service android:name=".common.data.download.DownloadService" />
 
-        <activity android:name=".module.splash.LoadingActivity"></activity>
+        <activity
+            android:theme="@style/SplashTheme"
+            android:name=".module.splash.LoadingActivity"/>
 
         <activity android:name=".module.MainListActivity">
             <intent-filter>

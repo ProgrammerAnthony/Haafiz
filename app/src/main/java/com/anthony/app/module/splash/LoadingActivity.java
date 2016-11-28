@@ -1,6 +1,7 @@
 package com.anthony.app.module.splash;
 
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
@@ -83,7 +84,7 @@ public class LoadingActivity extends AbsBaseActivity {
     }
 
     @Override
-    protected void initViewsAndEvents() {
+    protected void initViewsAndEvents(Bundle savedInstanceState) {
         loadData();
         if (whetherFirstTimeEnterApp())
             initIntroView();
@@ -225,6 +226,9 @@ public class LoadingActivity extends AbsBaseActivity {
         showMainTask.execute();
     }
 
+    /**
+     * main view
+     */
     protected void showMain() {
         mViewDisplay.showActivity(this, "1000");
     }

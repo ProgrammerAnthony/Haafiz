@@ -1,5 +1,6 @@
 package com.anthony.app.common.base;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -26,7 +27,7 @@ import timber.log.Timber;
  * Base Fragment for all the Fragment defined in the project
  * 1 extended from {@link AbsBaseFragment} to do
  * some base operation.
- * 2 do operation in {@link #initViews(View rootView)}
+ * 2 do operation in {@link #initViews(View, Bundle)}
  */
 public abstract class AbsBaseFragment extends Fragment {
     /**
@@ -44,7 +45,7 @@ public abstract class AbsBaseFragment extends Fragment {
      * activity context of fragment
      */
     protected Context mContext;
-
+    protected Activity mActivity;
     //    protected Subscription mSubscription;
     protected CompositeSubscription mSubscriptions;
 
@@ -59,13 +60,20 @@ public abstract class AbsBaseFragment extends Fragment {
 
 
     @Override
+    public void onAttach(Context context) {
+        //set a context from current activity
+        mActivity = (Activity) context;
+        mContext = context;
+        super.onAttach(context);
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //set Timber as log util
         TAG_LOG = this.getClass().getSimpleName();
         Timber.tag(TAG_LOG);
-//set a context from current activity
-        mContext = getActivity();
+
 //url and title
         if (getArguments() != null) {
             mUrl = getArguments().getString(EXTRA_URL);
@@ -84,6 +92,9 @@ public abstract class AbsBaseFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        if(getLayoutView()!=null){
+            return getLayoutView();
+        }
         if (getContentViewID() != 0) {
             return inflater.inflate(getContentViewID(), null);
         } else {
@@ -97,7 +108,7 @@ public abstract class AbsBaseFragment extends Fragment {
         //bind The View returned by {@link #onCreateView(LayoutInflater, ViewGroup, Bundle)}.
         mUnBinder = ButterKnife.bind(this, view);
         //init views events here so we can use ButterKnife
-        initViews(view);
+        initViews(view,savedInstanceState);
 
     }
 
@@ -133,6 +144,10 @@ public abstract class AbsBaseFragment extends Fragment {
      */
     protected abstract int getContentViewID();
 
+    public View getLayoutView() {
+        return null;
+    }
+
     /**
      * override this method to use Dagger2 which support for Dependency Injection
      * <p>
@@ -145,7 +160,7 @@ public abstract class AbsBaseFragment extends Fragment {
     /**
      * override this method to do operation in the fragment
      */
-    protected abstract void initViews(View rootView);
+    protected abstract void initViews(View rootView, Bundle savedInstanceState);
 
     protected abstract void loadData();//load data in onCreate method
 
@@ -153,6 +168,14 @@ public abstract class AbsBaseFragment extends Fragment {
         mToastUtils.showToast(content);
     }
 
+
+    /**
+     * show log
+     * @param logInfo
+     */
+    protected void showLog(String logInfo) {
+        Timber.i(logInfo);
+    }
 
     public DataManager getDataManager() {
         return mDataManager;

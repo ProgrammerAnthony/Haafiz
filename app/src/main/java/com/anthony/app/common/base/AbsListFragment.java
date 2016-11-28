@@ -78,7 +78,7 @@ public abstract class AbsListFragment extends AbsBaseFragment {
 
 
     @Override
-    protected void initViews(View rootView) {
+    protected void initViews(View rootView, Bundle savedInstanceState) {
         mPtr = (PullToRefreshView) rootView.findViewById(R.id.ptr);
         mPtr.setListener(new PullToRefreshView.OnRefreshListener() {
             @Override

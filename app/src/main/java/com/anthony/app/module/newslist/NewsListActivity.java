@@ -52,7 +52,7 @@ public class NewsListActivity extends AbsBaseActivity {
     }
 
     @Override
-    protected void initViewsAndEvents() {
+    protected void initViewsAndEvents(Bundle savedInstanceState) {
         if (getIntent().getExtras() != null) {
             mUrl = getIntent().getExtras().getString(URL);
             mName = getIntent().getExtras().getString(NAME);

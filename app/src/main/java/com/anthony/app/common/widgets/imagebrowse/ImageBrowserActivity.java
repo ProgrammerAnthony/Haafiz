@@ -1,6 +1,7 @@
 package com.anthony.app.common.widgets.imagebrowse;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.text.TextUtils;
@@ -78,7 +79,7 @@ public class ImageBrowserActivity extends AbsBaseActivity {
     }
 
     @Override
-    protected void initViewsAndEvents() {
+    protected void initViewsAndEvents(Bundle savedInstanceState) {
 //        StatusBarCompat.setStatusBarColor(this, getResources().getColor(R.color.common_tv_dark), 0);
         Intent intent = getIntent();
         mList = intent.getParcelableArrayListExtra(IMAGE_BROWSER_LIST);

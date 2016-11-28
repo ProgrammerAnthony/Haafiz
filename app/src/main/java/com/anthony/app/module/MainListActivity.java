@@ -1,6 +1,7 @@
 package com.anthony.app.module;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -43,7 +44,7 @@ public class MainListActivity extends AbsBaseActivity {
     }
 
     @Override
-    protected void initViewsAndEvents() {
+    protected void initViewsAndEvents(Bundle savedInstanceState) {
 
 
         mJustTitleAdapter = new JustTitleAdapter(mContext);
@@ -75,7 +76,6 @@ public class MainListActivity extends AbsBaseActivity {
         strs.add(new Channel("todo栏目订阅排序", ""));
         strs.add(new Channel("todo LeadCloud登录注册", ""));
         strs.add(new Channel("todo ShareSDK分享", ""));
-        strs.add(new Channel("todo 普通新闻列表", ""));
         strs.add(new Channel("todo 即时通讯", ""));
         strs.add(new Channel("todo 直播", ""));
 

@@ -1,5 +1,6 @@
 package com.anthony.app.module.tab;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -59,7 +60,7 @@ public class TabActivity extends AbsBaseActivity {
     }
 
     @Override
-    protected void initViewsAndEvents() {
+    protected void initViewsAndEvents(Bundle savedInstanceState) {
         mFragmentManager = getSupportFragmentManager();
         setTabFragmentSelect(0);
     }

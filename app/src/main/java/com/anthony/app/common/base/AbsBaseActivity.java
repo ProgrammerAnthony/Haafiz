@@ -63,7 +63,10 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        init(savedInstanceState);
+    }
 
+    private void init(Bundle savedInstanceState) {
         mContext = this;
 //inject Dagger2 here
         injectDagger(activityComponent());
@@ -84,14 +87,12 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
 //bind this after setContentView
         mUnbinder = ButterKnife.bind(this);
 
-
 //register EventBus
         eventPosterHelper.getBus().register(this);
 //sample        eventPosterHelper.postEventSafely(xxx);
 
 //init views and events
-        initViewsAndEvents();
-
+        initViewsAndEvents(savedInstanceState);
     }
 
 
@@ -152,7 +153,7 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
     /**
      * init views and events here
      */
-    protected abstract void initViewsAndEvents();
+    protected abstract void initViewsAndEvents(Bundle savedInstanceState);
 
     /**
      * bind layout resource file
@@ -168,6 +169,13 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
         toastUtils.showToast(content);
     }
 
+    /**
+     * show log
+     * @param logInfo
+     */
+    protected void showLog(String logInfo) {
+        Timber.i(logInfo);
+    }
 
     protected void showContent() {
         showContent(null);

@@ -39,16 +39,16 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:visibility="invisible"
+
         android:id="@+id/layout_splash"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
+<!--        <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@mipmap/splash" />
+            android:src="@mipmap/splash" />-->
 
         <RelativeLayout
             android:layout_width="35dp"

@@ -1,5 +1,6 @@
 package com.anthony.app.module.banner;
 
+import android.os.Bundle;
 import android.widget.RelativeLayout;
 
 import com.anthony.app.R;
@@ -38,7 +39,7 @@ public class BannerActivity extends AbsBaseActivity {
     }
 
     @Override
-    protected void initViewsAndEvents() {
+    protected void initViewsAndEvents(Bundle savedInstanceState) {
         mController = new RecommendController(mContext);
         mController.setOnClickListener(new RecommendController.OnItemClickListener() {
             @Override
