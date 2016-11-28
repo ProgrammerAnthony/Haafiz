@@ -3,6 +3,7 @@ package com.anthony.app.module.videolist;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
+import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -65,7 +66,7 @@ public class NewsVideoFragment extends AbsListFragment {
 
 
     @Override
-    protected int getContentViewID() {
+    protected int getLayoutId() {
         return R.layout.fragment_list_video;
     }
 
@@ -75,8 +76,8 @@ public class NewsVideoFragment extends AbsListFragment {
     }
 
     @Override
-    protected void initViews(View rootView) {
-        super.initViews(rootView);
+    protected void initViews(View rootView, Bundle savedInstanceState) {
+        super.initViews(rootView,  savedInstanceState);
 
         mVideoPlayWindowLayout = (RelativeLayout) rootView.findViewById(R.id.layout_play_window);
         mVideoPlayWindowLayout.setOnClickListener(new View.OnClickListener() {

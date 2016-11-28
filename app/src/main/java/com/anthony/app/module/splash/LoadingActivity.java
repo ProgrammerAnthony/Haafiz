@@ -14,8 +14,6 @@ import android.widget.RelativeLayout;
 
 import com.anthony.app.R;
 import com.anthony.app.common.base.AbsBaseActivity;
-import com.anthony.app.common.base.MyApplication;
-import com.anthony.app.common.data.DataManager;
 import com.anthony.app.common.injection.component.ActivityComponent;
 import com.anthony.app.common.widgets.CircleProgressBar;
 import com.anthony.app.common.widgets.ViewDisplay;
@@ -34,6 +32,7 @@ import butterknife.OnClick;
  * loading introduction view when firstly open this project
  * or loading splash view when open this project but not the first time
  * todo add Ads
+ *
  * 第一次打开app时加载引导页
  * 后面打开app时加载闪屏页
  * todo 加入广告页
@@ -56,10 +55,10 @@ public class LoadingActivity extends AbsBaseActivity {
 
     @Inject
     ViewDisplay mViewDisplay;
-    @Inject
-    DataManager mDataManager;
-    @Inject
-    MyApplication mApplication;
+//    @Inject
+//    DataManager mDataManager;
+//    @Inject
+//    MyApplication mApplication;
 
 
     int[] loadingPics = new int[]{R.mipmap.loading_bg1, R.mipmap.loading_bg2, R.mipmap.loading_bg3};
@@ -98,8 +97,8 @@ public class LoadingActivity extends AbsBaseActivity {
      * @return true ,first time entering . false, not first time
      */
     public boolean whetherFirstTimeEnterApp() {
-        if (mDataManager.getPreferencesHelper().isFirstTime()) {
-            mDataManager.getPreferencesHelper().saveFirstTime(false);
+        if (getDataManager().getPreferencesHelper().isFirstTime()) {
+            getDataManager().getPreferencesHelper().saveFirstTime(false);
             return true;
         } else {
             return false;

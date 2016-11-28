@@ -15,7 +15,7 @@ import com.anthony.app.common.injection.component.ActivityComponent;
 public class HomeFragment extends AbsBaseFragment {
 
     @Override
-    protected int getContentViewID() {
+    protected int getLayoutId() {
         return R.layout.dy_fragment_home;
     }
 

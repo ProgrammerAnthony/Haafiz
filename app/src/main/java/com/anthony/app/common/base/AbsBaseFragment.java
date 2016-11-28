@@ -95,8 +95,8 @@ public abstract class AbsBaseFragment extends Fragment {
         if(getLayoutView()!=null){
             return getLayoutView();
         }
-        if (getContentViewID() != 0) {
-            return inflater.inflate(getContentViewID(), null);
+        if (getLayoutId() != 0) {
+            return inflater.inflate(getLayoutId(), null);
         } else {
             return super.onCreateView(inflater, container, savedInstanceState);
         }
@@ -142,7 +142,7 @@ public abstract class AbsBaseFragment extends Fragment {
      * We have added this method to avoid duplicate all the inflate code in every fragment.
      * You only have to return the layout to inflate in this method when extends AbsBaseFragment.
      */
-    protected abstract int getContentViewID();
+    protected abstract int getLayoutId();
 
     public View getLayoutView() {
         return null;

@@ -16,7 +16,7 @@ import com.anthony.app.common.injection.component.ActivityComponent;
 public class MineFragment extends AbsBaseFragment {
 
     @Override
-    protected int getContentViewID() {
+    protected int getLayoutId() {
         return R.layout.dy_fragment_mine;
     }
 

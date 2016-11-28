@@ -1,7 +1,10 @@
 package com.anthony.app.common.base;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -11,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.anthony.app.R;
+import com.anthony.app.common.data.DataManager;
 import com.anthony.app.common.data.EventPosterHelper;
 import com.anthony.app.common.injection.component.ActivityComponent;
 import com.anthony.app.common.injection.component.DaggerActivityComponent;
@@ -59,6 +63,9 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
     EventPosterHelper eventPosterHelper;
 
 
+    @Inject
+    DataManager mDataManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -78,8 +85,8 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
 //rxjava subscriptions,use it like  --->       mSubscriptions.add(subscription)
         mSubscriptions = new CompositeSubscription();
 
-//        if (getContentViewID() != 0)
-//            setContentView(getContentViewID());
+//        if (getLayoutId() != 0)
+//            setContentView(getLayoutId());
 //set content view support di
         if (getStatusLayoutView() != null) {
             setContentView(getStatusLayoutView());
@@ -171,6 +178,7 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
 
     /**
      * show log
+     *
      * @param logInfo
      */
     protected void showLog(String logInfo) {
@@ -260,5 +268,23 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
         } else {
             mStatusLayout.showError(errorDrawable, errorTitle, errorMessage, errorBtnTxt, errorClickListener, skipIds);
         }
+    }
+
+    public DataManager getDataManager() {
+        return mDataManager;
+    }
+
+    public void startActivity(Class<? extends Activity> tarActivity, Bundle options) {
+        Intent intent = new Intent(this, tarActivity);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            startActivity(intent, options);
+        } else {
+            startActivity(intent);
+        }
+    }
+
+    public void startActivity(Class<? extends Activity> tarActivity) {
+        Intent intent = new Intent(this, tarActivity);
+        startActivity(intent);
     }
 }

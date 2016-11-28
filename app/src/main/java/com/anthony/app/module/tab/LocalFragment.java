@@ -15,7 +15,7 @@ import com.anthony.app.common.injection.component.ActivityComponent;
 public class LocalFragment extends AbsBaseFragment {
 
     @Override
-    protected int getContentViewID() {
+    protected int getLayoutId() {
         return R.layout.dy_fragment_local;
     }
 
