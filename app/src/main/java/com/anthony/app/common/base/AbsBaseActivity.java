@@ -72,8 +72,7 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        //设置状态栏透明
-        setStatusBarColor();
+
 //        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         init(savedInstanceState);
     }
@@ -96,6 +95,8 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
         if (getStatusLayoutView() != null) {
             setContentView(getStatusLayoutView());
         }
+        //设置状态栏颜色
+        setStatusBarColor(getResources().getColor(R.color.app_primary));
 //bind this after setContentView
         mUnbinder = ButterKnife.bind(this);
 
@@ -302,9 +303,20 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void setStatusBarColor() {
-        StatusBarUtil.setTransparent(this);
-//        StatusBarUtil.setTranslucent(this);
+    protected void setStatusBarColor(int color) {
+
+        StatusBarUtil.setColor(this, color);
+
+//        StatusBarUtil.setTransparent(this);
+
+//        StatusBarUtil.setTranslucent(this, StatusBarUtil.DEFAULT_STATUS_BAR_ALPHA);
+
+//        StatusBarUtil.setTranslucentForImageViewInFragment(UseInFragmentActivity.this, null);
+
+//        StatusBarUtil.setTranslucentForImageView(this, view);
+//        StatusBarUtil.setTranslucentForImageView(ImageViewActivity.this, mAlpha, view);
+
+//        StatusBarUtil.setColorForSwipeBack(this, mColor, 38);
     }
 
     protected void setToolBar(Toolbar toolbar, String title) {

@@ -14,7 +14,6 @@ import com.anthony.app.R;
 import com.anthony.app.common.data.DataManager;
 import com.anthony.app.common.injection.component.ActivityComponent;
 import com.anthony.app.common.utils.ToastUtils;
-import com.anthony.app.common.widgets.statusbar.StatusBarUtil;
 
 import javax.inject.Inject;
 
@@ -108,7 +107,7 @@ public abstract class AbsBaseFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         //设置状态栏透明
-        setStatusBarColor();
+//        setStatusBarColor();
         super.onViewCreated(view, savedInstanceState);
         //bind The View returned by {@link #onCreateView(LayoutInflater, ViewGroup, Bundle)}.
         mUnBinder = ButterKnife.bind(this, view);
@@ -186,9 +185,9 @@ public abstract class AbsBaseFragment extends Fragment {
         return mDataManager;
     }
 
-    public void setStatusBarColor() {
-        StatusBarUtil.setTranslucentForImageViewInFragment(getActivity(), null);
-    }
+//    public void setStatusBarColor() {
+//        StatusBarUtil.setTranslucentForImageViewInFragment(getActivity(), null);
+//    }
 
     protected void setToolBar(Toolbar toolbar, String title) {
         toolbar.setTitle(title);

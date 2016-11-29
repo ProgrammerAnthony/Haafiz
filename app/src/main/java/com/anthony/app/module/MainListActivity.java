@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.anthony.app.R;
@@ -37,6 +38,7 @@ public class MainListActivity extends AbsBaseActivity {
     ViewDisplay mViewDisplay;
 
     private JustTitleAdapter mJustTitleAdapter;
+    private Toolbar mToolbar;
 
     @Override
     protected int getContentViewID() {
@@ -45,7 +47,12 @@ public class MainListActivity extends AbsBaseActivity {
 
     @Override
     protected void initViewsAndEvents(Bundle savedInstanceState) {
-
+        // 设置toolbar
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+//        if (getSupportActionBar() != null) {
+//            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        }
 
         mJustTitleAdapter = new JustTitleAdapter(mContext);
         recycleView.addItemDecoration(new RecycleViewDivider(mContext, LinearLayoutManager.VERTICAL));
@@ -66,6 +73,7 @@ public class MainListActivity extends AbsBaseActivity {
         strs.add(new Channel("Video List 视频播放列表", "1008"));
         strs.add(new Channel("News List 新闻列表", "1009"));
         strs.add(new Channel("StatusLayout 多状态布局", "1010"));
+        strs.add(new Channel("StatusBarUtil 状态栏改变", "1011"));
 
         strs.add(new Channel("todo Emoji Input Layout emoji输入框", ""));
         strs.add(new Channel("todo Image Compress 图片压缩", ""));

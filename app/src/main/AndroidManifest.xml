@@ -21,8 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".module.MainListActivity"/>
-
+        <activity
+            android:launchMode="singleInstance"
+            android:name=".module.MainListActivity"/>
+        <activity android:name=".module.statusbar.StatusBarChangeActivity" />
         <activity android:name=".module.banner.BannerActivity" />
         <activity android:name=".module.tab.TabActivity" />
         <activity android:name=".module.weather.WeatherActivity" />
