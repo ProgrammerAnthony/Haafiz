@@ -70,7 +70,7 @@ public class ImageBrowserActivity extends AbsBaseActivity {
 
     @Override
     protected int getContentViewID() {
-        return R.layout.prj_activity_image_browser;
+        return R.layout.lib_prj_activity_image_browser;
     }
 
     @Override

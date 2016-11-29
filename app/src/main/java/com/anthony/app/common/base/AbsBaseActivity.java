@@ -143,7 +143,7 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
      * @return
      */
     protected View getStatusLayoutView() {
-        mStatusLayout = (StatusLayout) LayoutInflater.from(this).inflate(R.layout.abs_activity_show_status, null);
+        mStatusLayout = (StatusLayout) LayoutInflater.from(this).inflate(R.layout.lib_activity_show_status, null);
         if (getContentViewID() != 0) {
 //            FrameLayout statusFrameLayout = (FrameLayout) findViewById(R.id.status_frame_content);
             View contentView = LayoutInflater.from(this).inflate(getContentViewID(), null);

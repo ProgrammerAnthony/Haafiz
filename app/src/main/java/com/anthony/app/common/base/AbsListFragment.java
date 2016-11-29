@@ -59,7 +59,7 @@ public abstract class AbsListFragment extends AbsBaseFragment {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.prj_fragment_pull_list;
+        return R.layout.lib_fragment_pull_list;
     }
 
     @Override

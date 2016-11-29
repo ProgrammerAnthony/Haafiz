@@ -36,6 +36,6 @@ public class SplashActivity extends AbsBaseActivity{
 
     @Override
     protected int getContentViewID() {
-        return R.layout.activity_flash;
+        return R.layout.prj_activity_flash;
     }
 }

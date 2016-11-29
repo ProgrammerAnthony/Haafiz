@@ -67,7 +67,7 @@ public class NewsVideoFragment extends AbsListFragment {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_list_video;
+        return R.layout.lib_fragment_list_video;
     }
 
     @Override
@@ -461,7 +461,7 @@ public class NewsVideoFragment extends AbsListFragment {
 
     public class NewsVideoAdapter extends CommonAdapter<NewsItem> {
         public NewsVideoAdapter(Context context) {
-            super(context, R.layout.list_item_video);
+            super(context, R.layout.lib_list_item_video);
         }
 
         @Override

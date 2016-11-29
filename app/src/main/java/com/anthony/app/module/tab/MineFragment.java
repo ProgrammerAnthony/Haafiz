@@ -17,7 +17,7 @@ public class MineFragment extends AbsBaseFragment {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.dy_fragment_mine;
+        return R.layout.prj_fragment_mine;
     }
 
     @Override

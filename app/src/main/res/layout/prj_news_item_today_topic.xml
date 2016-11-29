@@ -16,27 +16,26 @@
         android:src="@mipmap/ic_today_topic" />
 
     <View
-        android:layout_marginLeft="10dp"
         android:layout_width="1dp"
         android:layout_height="60dp"
-        android:background="@color/gz_background_gray"/>
-    <RelativeLayout
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="5dp"
+        android:background="@color/gz_background_gray" />
+
+    <RelativeLayout
         android:id="@+id/layout_description"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        style="@style/LibMatchMatch.Vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp">
 
         <TextView
 
             android:id="@+id/tv_title_center"
             android:layout_width="match_parent"
             android:layout_height="25dp"
+            android:ellipsize="end"
             android:gravity="center_vertical"
             android:lines="1"
             android:maxLines="1"
-            android:ellipsize="end"
             android:text="今日头条样式今日头条样式今日头条样式今日头条样式"
             android:textColor="@color/common_tv_dark"
             android:textSize="@dimen/TextLarge" />
@@ -54,8 +53,7 @@
 
         <TextView
             android:id="@+id/tv_news_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/LibWrapWrap"
             android:layout_alignParentBottom="true"
             android:layout_toLeftOf="@id/news_date_icon"
             android:text="2016-03-08 "

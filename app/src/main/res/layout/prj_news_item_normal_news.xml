@@ -17,9 +17,7 @@
 
     <RelativeLayout
         android:id="@+id/layout_description"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        style="@style/LibMatchMatch.Vertical">
 
         <TextView
             android:id="@+id/tv_title_center"
@@ -35,15 +33,14 @@
 
 
         <TextView
-            android:maxLength="8"
             android:id="@+id/tv_news_source"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/LibWrapWrap"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="10dp"
             android:background="@drawable/prj_btn_round_transparent_bg"
             android:ellipsize="end"
+            android:maxLength="8"
             android:maxLines="1"
             android:padding="5dp"
             android:text="来源字段"
@@ -62,8 +59,7 @@
 
         <TextView
             android:id="@+id/tv_news_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/LibWrapWrap"
             android:layout_alignParentBottom="true"
             android:layout_toLeftOf="@id/news_date_icon"
             android:text="2016-03-08 "

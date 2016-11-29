@@ -16,7 +16,7 @@ public class LocalFragment extends AbsBaseFragment {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.dy_fragment_local;
+        return R.layout.prj_fragment_local;
     }
 
     @Override

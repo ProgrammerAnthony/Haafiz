@@ -65,7 +65,7 @@ public class CommentView extends RelativeLayout {
     private void initView() {
         dao = new NewsItemDao(MyApplication.get(mContext));
 
-        LayoutInflater.from(mContext).inflate(R.layout.prj_layout_comment, this);
+        LayoutInflater.from(mContext).inflate(R.layout.lib_layout_comment, this);
         mLayoutEditComment = (RelativeLayout) findViewById(R.id.layout_edit_comment);
         mLayoutEditComment.setOnClickListener(new OnClickListener() {
             @Override
@@ -127,7 +127,7 @@ public class CommentView extends RelativeLayout {
 
     private void showCommentEditBox() {
         final Dialog dialog = new Dialog(mContext, R.style.dialog_comment);
-        View contentView = LayoutInflater.from(mContext).inflate(R.layout.prj_dialog_comment, null);
+        View contentView = LayoutInflater.from(mContext).inflate(R.layout.lib_dialog_comment, null);
         dialog.setContentView(contentView);
         Window dialogWindow = dialog.getWindow();
         WindowManager.LayoutParams lp = dialogWindow.getAttributes();

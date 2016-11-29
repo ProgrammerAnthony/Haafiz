@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:skin="http://schemas.android.com/android/skin"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    style="@style/LibMatchMatch"
     android:background="@color/common_bg_dark"
     skin:enable="true">
 
     <com.anthony.pullrefreshview.PullToRefreshView
         android:id="@+id/ptr"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        style="@style/LibMatchMatch">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycleView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            style="@style/LibMatchMatch"
             android:scrollbars="vertical" />
 
     </com.anthony.pullrefreshview.PullToRefreshView>
@@ -29,13 +26,11 @@
 
         <FrameLayout
             android:id="@+id/layout_play_window_holder"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            style="@style/LibMatchMatch" />
 
         <ImageView
             android:id="@+id/btn_close"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/LibWrapWrap"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:src="@android:drawable/ic_menu_close_clear_cancel" />
@@ -48,6 +43,6 @@
         android:visibility="gone" />
 
     <include
-        layout="@layout/prj_layout_reload"
+        layout="@layout/lib_layout_reload"
         android:visibility="invisible" />
 </RelativeLayout>

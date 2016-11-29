@@ -16,7 +16,7 @@ public class StoreFragment extends AbsBaseFragment {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.dy_fragment_store;
+        return R.layout.prj_fragment_store;
     }
 
     @Override

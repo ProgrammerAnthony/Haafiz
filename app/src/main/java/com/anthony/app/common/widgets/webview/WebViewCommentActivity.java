@@ -77,7 +77,7 @@ public class WebViewCommentActivity extends AbsBaseActivity {
 
     @Override
     protected int getContentViewID() {
-        return R.layout.prj_activity_web_view;
+        return R.layout.lib_activity_web_view;
     }
 
     @Override

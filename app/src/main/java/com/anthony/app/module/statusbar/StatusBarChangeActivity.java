@@ -76,7 +76,7 @@ public class StatusBarChangeActivity extends AbsBaseActivity {
 
     @Override
     protected int getContentViewID() {
-        return R.layout.activity_color_status_bar;
+        return R.layout.prj_activity_color_status_bar;
     }
 
     @Override

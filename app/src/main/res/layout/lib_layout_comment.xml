@@ -18,15 +18,13 @@
 
         <ImageView
             android:id="@+id/ic_edit_comment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/LibWrapWrap"
             android:layout_centerVertical="true"
             android:layout_marginLeft="5dp"
             android:src="@mipmap/prj_ic_edit_comment" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/LibWrapWrap"
             android:layout_centerVertical="true"
             android:layout_marginLeft="3dp"
             android:layout_toRightOf="@id/ic_edit_comment"
@@ -36,8 +34,7 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style="@style/LibMatchMatch"
         android:layout_toRightOf="@id/layout_edit_comment"
         android:gravity="center_vertical"
         android:orientation="horizontal">
@@ -50,8 +47,7 @@
 
             <ImageView
                 android:id="@+id/ic_comment"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/LibWrapWrap"
                 android:layout_centerInParent="true"
                 android:src="@mipmap/prj_ic_comment" />
 

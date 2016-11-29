@@ -48,7 +48,7 @@ public class NewsListActivity extends AbsBaseActivity {
 
     @Override
     protected int getContentViewID() {
-        return R.layout.prj_title_content;
+        return R.layout.lib_title_content;
     }
 
     @Override

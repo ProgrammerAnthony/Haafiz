@@ -20,7 +20,7 @@ public class ShowStatusActivity extends AbsBaseActivity {
 
     @Override
     protected int getContentViewID() {
-        return R.layout.activity_show_status;
+        return R.layout.prj_activity_show_status;
     }
 
     @Override

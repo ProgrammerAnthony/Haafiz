@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:skin="http://schemas.android.com/android/skin"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    style="@style/LibMatchMatch"
     android:background="@color/common_bg_dark"
     skin:enable="true">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/subscribe_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style="@style/LibMatchMatch"
         android:clipChildren="false"
         android:clipToPadding="false"
         android:padding="8dp" />

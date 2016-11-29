@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    style="@style/LibMatchMatch.Vertical">
 
     <RelativeLayout
 
@@ -13,11 +11,10 @@
 
         <FrameLayout
             android:id="@+id/main_tab_content"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            style="@style/LibMatchMatch" />
 
         <include
-            layout="@layout/prj_layout_reload"
+            layout="@layout/lib_layout_reload"
             android:visibility="invisible" />
 
     </RelativeLayout>
@@ -46,11 +43,10 @@
                 android:src="@drawable/prj_selector_btn_tab1" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/LibWrapWrap"
                 android:layout_gravity="center_horizontal"
-                android:textColor="@color/prj_bottom_tab_text_color"
                 android:text="首页"
+                android:textColor="@color/prj_bottom_tab_text_color"
                 android:textSize="@dimen/TextBottomNavigation" />
 
         </LinearLayout>
@@ -71,11 +67,10 @@
                 android:src="@drawable/prj_selector_btn_tab2" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/LibWrapWrap"
                 android:layout_gravity="center_horizontal"
-                android:textColor="@color/prj_bottom_tab_text_color"
                 android:text="本地"
+                android:textColor="@color/prj_bottom_tab_text_color"
                 android:textSize="@dimen/TextBottomNavigation" />
 
         </LinearLayout>
@@ -99,8 +94,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:textColor="@color/prj_bottom_tab_text_color"
                 android:text="商城"
+                android:textColor="@color/prj_bottom_tab_text_color"
                 android:textSize="@dimen/TextBottomNavigation" />
 
         </LinearLayout>
@@ -121,11 +116,10 @@
                 android:src="@drawable/prj_selector_btn_tab3" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/LibWrapWrap"
                 android:layout_gravity="center_horizontal"
-                android:textColor="@color/prj_bottom_tab_text_color"
                 android:text="发现"
+                android:textColor="@color/prj_bottom_tab_text_color"
                 android:textSize="@dimen/TextBottomNavigation" />
 
         </LinearLayout>
@@ -146,11 +140,10 @@
                 android:src="@drawable/prj_selector_btn_tab4" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/LibWrapWrap"
                 android:layout_gravity="center_horizontal"
-                android:textColor="@color/prj_bottom_tab_text_color"
                 android:text="我的"
+                android:textColor="@color/prj_bottom_tab_text_color"
                 android:textSize="@dimen/TextBottomNavigation" />
 
         </LinearLayout>

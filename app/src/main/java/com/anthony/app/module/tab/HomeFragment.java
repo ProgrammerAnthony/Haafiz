@@ -16,7 +16,7 @@ public class HomeFragment extends AbsBaseFragment {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.dy_fragment_home;
+        return R.layout.prj_fragment_home;
     }
 
     @Override

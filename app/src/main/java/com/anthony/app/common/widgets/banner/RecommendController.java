@@ -60,7 +60,7 @@ public class RecommendController {
     }
 
     public RecommendController(Context context, boolean autoSwitchPage) {
-        this(context, R.layout.prj_recommend_controller, autoSwitchPage);
+        this(context, R.layout.lib_recommend_controller, autoSwitchPage);
     }
 
     /**

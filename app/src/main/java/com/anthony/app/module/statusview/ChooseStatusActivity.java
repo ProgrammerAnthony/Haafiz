@@ -27,7 +27,7 @@ public class ChooseStatusActivity extends AbsBaseActivity {
 
     @Override
     protected int getContentViewID() {
-        return R.layout.activity_choose_status_view;
+        return R.layout.prj_activity_choose_status_view;
     }
 
     @Override

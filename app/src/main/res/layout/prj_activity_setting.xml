@@ -9,7 +9,7 @@
     skin:enable="true">
 
     <include
-        layout="@layout/prj_top_bar_setting"
+        layout="@layout/lib_top_bar_setting"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3" />

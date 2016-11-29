@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    style="@style/LibMatchMatch">
 
 
     <RelativeLayout
         android:id="@+id/layout_intro"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        style="@style/LibMatchMatch">
 
         <android.support.v4.view.ViewPager
             android:id="@+id/view_pager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            style="@style/LibMatchMatch" />
 
         <com.viewpagerindicator.CirclePageIndicator
             android:id="@+id/pager_indicator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/LibWrapWrap"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="20dp"
@@ -28,8 +24,7 @@
 
         <Button
             android:id="@+id/btn_enter_home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/LibWrapWrap"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="50dp"
@@ -41,8 +36,7 @@
     <RelativeLayout
 
         android:id="@+id/layout_splash"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        style="@style/LibMatchMatch">
 
 <!--        <ImageView
             android:layout_width="match_parent"
@@ -59,15 +53,13 @@
 
             <com.anthony.app.common.widgets.CircleProgressBar
                 android:id="@+id/pb_splash"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                style="@style/LibMatchMatch"
                 app:border_color="@color/colorPrimary"
                 app:border_width="2dp"
                 app:duration_second="2" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/LibWrapWrap"
                 android:layout_centerInParent="true"
                 android:text="跳过"
                 android:textColor="@android:color/white"

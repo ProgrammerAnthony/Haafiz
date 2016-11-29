@@ -16,7 +16,7 @@ public class FindFragment extends AbsBaseFragment {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.dy_fragment_find;
+        return R.layout.prj_fragment_find;
     }
 
     @Override

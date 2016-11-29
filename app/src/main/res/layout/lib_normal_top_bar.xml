@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     android:id="@+id/titleLayout"
+    style="@style/LibMatchWrap"
     android:background="@color/app_primary">
 
     <ImageView
@@ -20,7 +19,6 @@
         android:text="标题"
         android:textColor="@color/common_tv_light"
         android:textSize="@dimen/TextTitleBar" />
-
 
 
     <ImageView

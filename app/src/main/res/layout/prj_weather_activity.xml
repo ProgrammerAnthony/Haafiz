@@ -8,22 +8,19 @@
 
     <ImageView
         android:id="@+id/weather_bg"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style="@style/LibMatchMatch"
         android:scaleType="fitXY"
         android:src="@mipmap/bg_beautiful" />
 
     <TextView
         android:id="@+id/weather_city"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/LibWrapWrap"
         android:layout_margin="15dp"
         android:textColor="@color/white"
         android:textSize="22sp" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/LibMatchWrap"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="40dp"
         android:orientation="horizontal">
@@ -45,8 +42,7 @@
 
             <TextView
                 android:id="@+id/weather_date_tod"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/LibWrapWrap"
                 android:textColor="@color/white"
                 android:textSize="13sp" />
         </LinearLayout>
@@ -67,15 +63,13 @@
 
             <TextView
                 android:id="@+id/weather_temp_tom"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/LibWrapWrap"
                 android:textColor="@color/white"
                 android:textSize="13sp" />
 
             <TextView
                 android:id="@+id/weather_date_tom"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/LibWrapWrap"
                 android:textColor="@color/white"
                 android:textSize="13sp" />
         </LinearLayout>
@@ -96,15 +90,13 @@
 
             <TextView
                 android:id="@+id/weather_temp_ttom"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/LibWrapWrap"
                 android:textColor="@color/white"
                 android:textSize="13sp" />
 
             <TextView
                 android:id="@+id/weather_date_ttom"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/LibWrapWrap"
                 android:textColor="@color/white"
                 android:textSize="13sp" />
         </LinearLayout>

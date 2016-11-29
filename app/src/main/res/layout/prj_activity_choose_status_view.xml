@@ -1,7 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:progressActivity="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    style="@style/LibMatchMatch">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/activityToolbar"
@@ -12,8 +11,7 @@
 
     <Button
         android:id="@+id/loadingButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/LibWrapWrap"
         android:layout_below="@+id/activityToolbar"
         android:text="Loading State"
         android:layout_centerHorizontal="true"
@@ -22,8 +20,7 @@
 
     <Button
         android:id="@+id/emptyButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/LibWrapWrap"
         android:layout_below="@+id/loadingButton"
         android:text="Empty State"
         android:layout_centerHorizontal="true"
@@ -32,8 +29,7 @@
 
     <Button
         android:id="@+id/errorButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/LibWrapWrap"
         android:layout_below="@+id/emptyButton"
         android:text="Error State"
         android:layout_centerHorizontal="true"
@@ -42,8 +38,7 @@
 
     <Button
         android:id="@+id/contentButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/LibWrapWrap"
         android:layout_below="@+id/errorButton"
         android:text="Show Content"
         android:layout_centerHorizontal="true"

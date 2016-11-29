@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
     <include
-        layout="@layout/prj_top_bar_web_view"
+        layout="@layout/lib_top_bar_web_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
@@ -38,7 +38,7 @@
             android:visibility="invisible" />
 
         <include
-            layout="@layout/prj_layout_reload"
+            layout="@layout/lib_layout_reload"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="invisible" />
