@@ -1,7 +1,10 @@
 package com.anthony.app.common.data;
 
 import android.content.Context;
+import android.util.Log;
 
+import com.anthony.app.common.DataManager;
+import com.anthony.app.common.data.net.TrustManager;
 import com.anthony.app.common.injection.scope.ApplicationContext;
 import com.anthony.app.common.utils.AppUtils;
 
@@ -22,7 +25,6 @@ import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-import timber.log.Timber;
 
 /**
  * Created by Anthony on 2016/7/8.
@@ -47,28 +49,30 @@ public class HttpHelper {
 
 
     @SuppressWarnings("unchecked")
-    public <S> S getService(Class<S> serviceClass) {
+    public <S> S getApi(Class<S> serviceClass) {
         if (mServiceMap.containsKey(serviceClass.getName())) {
             return (S) mServiceMap.get(serviceClass.getName());
         } else {
-            Object obj = createService(serviceClass);
+            Object obj = createApi(serviceClass);
             mServiceMap.put(serviceClass.getName(), obj);
             return (S) obj;
         }
     }
 
     @SuppressWarnings("unchecked")
-    public <S> S getService(Class<S> serviceClass, OkHttpClient client) {
+    public <S> S getApi(Class<S> serviceClass, OkHttpClient client) {
         if (mServiceMap.containsKey(serviceClass.getName())) {
             return (S) mServiceMap.get(serviceClass.getName());
         } else {
-            Object obj = createService(serviceClass, client);
+            Object obj = createApi(serviceClass, client);
             mServiceMap.put(serviceClass.getName(), obj);
             return (S) obj;
         }
     }
 
-    private <S> S createService(Class<S> serviceClass) {
+    private <S> S createApi(Class<S> serviceClass) {
+//        private static final HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY);
+
         //custom OkHttp
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
         //time our
@@ -77,15 +81,21 @@ public class HttpHelper {
         httpClient.readTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS);
         //cache
         File httpCacheDirectory = new File(mContext.getCacheDir(), "OkHttpCache");
-        httpClient.cache(new Cache(httpCacheDirectory, 10 * 1024 * 1024));
+        httpClient.cache(new Cache(httpCacheDirectory, 50 * 1024 * 1024));
         //Interceptor
         httpClient.addNetworkInterceptor(new LogInterceptor());
         httpClient.addInterceptor(new CacheControlInterceptor());
+        //retry when fail
+        httpClient.retryOnConnectionFailure(true);
 
-        return createService(serviceClass, httpClient.build());
+//todo SSL证书
+        httpClient.sslSocketFactory(TrustManager.getUnsafeOkHttpClient());
+        httpClient.hostnameVerifier(org.apache.http.conn.ssl.SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
+
+        return createApi(serviceClass, httpClient.build());
     }
 
-    private <S> S createService(Class<S> serviceClass, OkHttpClient client) {
+    private <S> S createApi(Class<S> serviceClass, OkHttpClient client) {
         String end_point = "";
         try {
             Field field1 = serviceClass.getField("end_point");
@@ -113,13 +123,13 @@ public class HttpHelper {
             Request request = chain.request();
 
             long t1 = System.nanoTime();
-            Timber.i("HttpHelper" + String.format("Sending request %s on %s%n%s",
+            Log.i("HttpHelper", String.format("Sending request %s on %s%n%s",
                     request.url(), chain.connection(), request.headers()));
 
             Response response = chain.proceed(request);
             long t2 = System.nanoTime();
 
-            Timber.i("HttpHelper" + String.format("Received response for %s in %.1fms%n%s",
+            Log.i("HttpHelper", String.format("Received response for %s in %.1fms%n%s",
                     response.request().url(), (t2 - t1) / 1e6d, response.headers()));
             return response;
 

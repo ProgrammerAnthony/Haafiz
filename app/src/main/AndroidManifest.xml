@@ -2,7 +2,7 @@
     package="com.anthony.app">
 
     <application
-        android:name=".common.base.MyApplication"
+        android:name=".common.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/logo_icon"
         android:label="@string/app_name"
@@ -29,6 +29,7 @@
         <activity android:name=".module.tab.TabActivity" />
         <activity android:name=".module.weather.WeatherActivity" />
         <activity android:name=".module.github.GithubActivity" />
+        <activity android:name=".module.wechatlist.WechatListActivity" />
         <activity android:name=".common.widgets.webview.WebViewCommentActivity" />
         <activity android:name=".module.segment.SegmentControlActivity" />
         <activity

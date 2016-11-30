@@ -17,7 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.anthony.app.R;
-import com.anthony.app.common.base.MyApplication;
+import com.anthony.app.common.MyApplication;
 import com.anthony.app.common.data.bean.NewsItem;
 import com.anthony.app.common.data.database.dao.NewsItemDao;
 

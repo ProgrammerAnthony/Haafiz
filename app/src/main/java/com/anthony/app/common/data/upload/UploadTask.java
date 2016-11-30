@@ -75,7 +75,7 @@ public class UploadTask {
             files.put(key, RequestBody.create(MediaType.parse("text/plain"), val));
         }
 
-        mSubscription = httpHelper.getService(UploadApi.class)
+        mSubscription = httpHelper.getApi(UploadApi.class)
                 .uploadFile(mUrl, files)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())

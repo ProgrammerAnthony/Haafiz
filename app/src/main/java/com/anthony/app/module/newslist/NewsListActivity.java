@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.anthony.app.R;
 import com.anthony.app.common.base.AbsBaseActivity;
 import com.anthony.app.common.base.AbsBaseFragment;
-import com.anthony.app.common.base.MyApplication;
+import com.anthony.app.common.MyApplication;
 import com.anthony.app.common.injection.component.ActivityComponent;
 
 import javax.inject.Inject;

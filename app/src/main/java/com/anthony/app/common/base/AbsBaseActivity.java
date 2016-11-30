@@ -15,7 +15,8 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.anthony.app.R;
-import com.anthony.app.common.data.DataManager;
+import com.anthony.app.common.DataManager;
+import com.anthony.app.common.MyApplication;
 import com.anthony.app.common.data.EventPosterHelper;
 import com.anthony.app.common.injection.component.ActivityComponent;
 import com.anthony.app.common.injection.component.DaggerActivityComponent;

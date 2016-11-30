@@ -1,4 +1,4 @@
-package com.anthony.app.common.data.bean;
+package com.anthony.app.module.github;
 
 
 import com.google.gson.annotations.SerializedName;

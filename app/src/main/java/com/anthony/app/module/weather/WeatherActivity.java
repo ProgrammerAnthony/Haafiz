@@ -7,9 +7,9 @@ import android.widget.TextView;
 
 import com.anthony.app.R;
 import com.anthony.app.common.base.AbsBaseActivity;
-import com.anthony.app.common.data.DataManager;
+import com.anthony.app.common.DataManager;
 import com.anthony.app.common.data.bean.WeatherData;
-import com.anthony.app.common.data.retrofit.HttpSubscriber;
+import com.anthony.app.common.data.net.HttpSubscriber;
 import com.anthony.app.common.injection.component.ActivityComponent;
 
 import java.util.List;

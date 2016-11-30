@@ -2,7 +2,7 @@ package com.anthony.app.common.injection.component;
 
 import android.content.Context;
 
-import com.anthony.app.common.base.MyApplication;
+import com.anthony.app.common.MyApplication;
 import com.anthony.app.common.data.database.dao.ChannelDao;
 import com.anthony.app.common.data.database.dao.NewsItemDao;
 import com.anthony.app.common.data.database.dao.OfflineResourceDao;

@@ -1,4 +1,4 @@
-package com.anthony.app.common.data.retrofit;
+package com.anthony.app.common.data.net;
 
 import rx.functions.Func1;
 import timber.log.Timber;
@@ -15,7 +15,7 @@ import timber.log.Timber;
 public class HttpResultFunc<T> implements Func1<HttpResult<T>, T> {
     @Override
     public T call(HttpResult<T> httpResult) {
-        if (httpResult.code != 0) {
+        if (httpResult.code != 200) {
             Timber.i("response code is not 0,response error");
             throw new RuntimeException(httpResult.message);
         }

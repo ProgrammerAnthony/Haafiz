@@ -8,10 +8,9 @@ import android.view.View;
 
 import com.anthony.app.R;
 import com.anthony.app.common.base.AbsBaseActivity;
-import com.anthony.app.common.data.DataManager;
-import com.anthony.app.common.data.bean.GithubUser;
+import com.anthony.app.common.DataManager;
 import com.anthony.app.common.data.bean.NewsItem;
-import com.anthony.app.common.data.retrofit.HttpSubscriber;
+import com.anthony.app.common.data.net.HttpSubscriber;
 import com.anthony.app.common.injection.component.ActivityComponent;
 import com.anthony.app.common.utils.AppUtils;
 import com.anthony.rvhelper.adapter.CommonAdapter;

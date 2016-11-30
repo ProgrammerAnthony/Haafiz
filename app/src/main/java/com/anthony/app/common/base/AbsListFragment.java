@@ -8,11 +8,11 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.anthony.app.R;
-import com.anthony.app.common.data.DataManager;
+import com.anthony.app.common.DataManager;
 import com.anthony.app.common.data.bean.Channel;
 import com.anthony.app.common.data.bean.NewsItem;
 import com.anthony.app.common.data.bean.NormalJsonInfo;
-import com.anthony.app.common.data.retrofit.HttpSubscriber;
+import com.anthony.app.common.data.net.HttpSubscriber;
 import com.anthony.app.common.injection.component.ActivityComponent;
 import com.anthony.app.common.utils.SpUtil;
 import com.anthony.app.common.utils.TimeUtils;

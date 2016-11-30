@@ -3,6 +3,7 @@ package com.anthony.app.common.data;
 import android.os.Handler;
 import android.os.Looper;
 
+import com.anthony.app.common.DataManager;
 import com.squareup.otto.Bus;
 
 import javax.inject.Inject;

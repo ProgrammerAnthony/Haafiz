@@ -3,8 +3,7 @@ package com.anthony.app.common.injection.module;
 
 import android.content.Context;
 
-import com.anthony.app.common.base.MyApplication;
-import com.anthony.app.common.data.database.NewsItemDaoOld;
+import com.anthony.app.common.MyApplication;
 import com.anthony.app.common.data.database.dao.ChannelDao;
 import com.anthony.app.common.data.database.dao.NewsItemDao;
 import com.anthony.app.common.data.database.dao.OfflineResourceDao;
@@ -32,11 +31,7 @@ public class ApplicationModule {
         mApplication = application;
     }
 
-    @Provides
-    @Singleton
-    NewsItemDaoOld newsItemDaoOld() {
-        return new NewsItemDaoOld(mApplication);
-    }
+
 
     @Provides
     @Singleton

@@ -1,7 +1,7 @@
 package com.anthony.app.common.data.database.dao;
 
 
-import com.anthony.app.common.base.MyApplication;
+import com.anthony.app.common.MyApplication;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.stmt.DeleteBuilder;
 import com.j256.ormlite.stmt.QueryBuilder;

@@ -74,7 +74,7 @@ public class MainListActivity extends AbsBaseActivity {
         strs.add(new Channel("News List 新闻列表", "1009"));
         strs.add(new Channel("StatusLayout 多状态布局", "1010"));
         strs.add(new Channel("StatusBarUtil 状态栏改变", "1011"));
-
+        strs.add(new Channel("WeChat blog List 微信文章列表", "1012"));
         strs.add(new Channel("todo Emoji Input Layout emoji输入框", ""));
         strs.add(new Channel("todo Image Compress 图片压缩", ""));
 //        strs.add(new Channel("todo网页加载", ""));

@@ -1,7 +1,6 @@
-package com.anthony.app.common.data.retrofit;
+package com.anthony.app.module.github;
 
-import com.anthony.app.common.base.Constants;
-import com.anthony.app.common.data.bean.GithubUser;
+import com.anthony.app.common.Constants;
 
 import java.util.List;
 

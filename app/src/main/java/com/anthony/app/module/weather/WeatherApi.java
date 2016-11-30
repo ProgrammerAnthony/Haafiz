@@ -1,7 +1,7 @@
-package com.anthony.app.common.data.retrofit;
+package com.anthony.app.module.weather;
 
 
-import com.anthony.app.common.base.Constants;
+import com.anthony.app.common.Constants;
 import com.anthony.app.common.data.bean.WeatherData;
 
 import java.util.Map;

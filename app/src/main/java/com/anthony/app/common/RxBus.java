@@ -1,4 +1,4 @@
-package com.anthony.app.common.data.rx;
+package com.anthony.app.common;
 
 import android.support.annotation.NonNull;
 

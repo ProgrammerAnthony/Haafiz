@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.anthony.app.R;
-import com.anthony.app.common.data.DataManager;
+import com.anthony.app.common.DataManager;
 import com.anthony.app.common.injection.component.ActivityComponent;
 import com.anthony.app.common.utils.ToastUtils;
 

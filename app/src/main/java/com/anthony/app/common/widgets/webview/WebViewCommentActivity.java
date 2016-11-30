@@ -22,8 +22,8 @@ import android.widget.TextView;
 
 import com.anthony.app.R;
 import com.anthony.app.common.base.AbsBaseActivity;
-import com.anthony.app.common.base.Constants;
-import com.anthony.app.common.base.MyApplication;
+import com.anthony.app.common.Constants;
+import com.anthony.app.common.MyApplication;
 import com.anthony.app.common.data.bean.NewsItem;
 import com.anthony.app.common.data.bean.OfflineResource;
 import com.anthony.app.common.data.database.dao.OfflineResourceDao;

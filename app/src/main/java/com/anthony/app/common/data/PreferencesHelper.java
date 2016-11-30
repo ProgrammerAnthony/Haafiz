@@ -3,6 +3,7 @@ package com.anthony.app.common.data;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.anthony.app.common.DataManager;
 import com.anthony.app.common.injection.scope.ApplicationContext;
 
 import javax.inject.Inject;

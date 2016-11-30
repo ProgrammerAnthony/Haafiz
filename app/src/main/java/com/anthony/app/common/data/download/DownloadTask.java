@@ -3,7 +3,7 @@ package com.anthony.app.common.data.download;
 import android.app.Notification;
 import android.content.Context;
 
-import com.anthony.app.common.base.Constants;
+import com.anthony.app.common.Constants;
 import com.anthony.app.common.data.HttpHelper;
 import com.anthony.app.common.data.RxBus;
 import com.anthony.app.common.utils.FileUtil;
@@ -45,7 +45,7 @@ public class DownloadTask implements Serializable {
 
     public void start() {
         httpHelper = new HttpHelper(mContext);
-        mSubscription = httpHelper.getService(DownloadApi.class)
+        mSubscription = httpHelper.getApi(DownloadApi.class)
                 .downloadFile(mUrl)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())

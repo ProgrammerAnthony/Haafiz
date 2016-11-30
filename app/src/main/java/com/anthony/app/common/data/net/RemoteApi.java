@@ -1,7 +1,7 @@
-package com.anthony.app.common.data.retrofit;
+package com.anthony.app.common.data.net;
 
 
-import com.anthony.app.common.base.Constants;
+import com.anthony.app.common.Constants;
 
 import java.util.Map;
 
@@ -23,7 +23,7 @@ import rx.Observable;
  * 常用API接口类用于加载和post 字符串操作，请在 {@link Constants#Remote_BASE_END_POINT}中替换基地址
  */
 public interface RemoteApi {
-    String end_point = Constants.Remote_BASE_END_POINT;
+    String end_point = Constants.Remote_BASE_END_POINT;//not used
 
     @GET("{url}")
     Observable<ResponseBody> loadString(@Path(value = "url", encoded = true) String url);

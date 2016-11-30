@@ -21,6 +21,7 @@ import com.anthony.app.module.tab.TabActivity;
 import com.anthony.app.module.videolist.NewsVideoFragment;
 import com.anthony.app.module.videolist.VideoListActivity;
 import com.anthony.app.module.weather.WeatherActivity;
+import com.anthony.app.module.wechatlist.WechatListActivity;
 
 import dagger.Component;
 
@@ -77,4 +78,6 @@ public interface ActivityComponent {
     void inject(ShowStatusActivity showStatusActivity);
 
     void inject(ChooseStatusActivity chooseStatusActivity);
+
+    void inject(WechatListActivity wechatListActivity);
 }

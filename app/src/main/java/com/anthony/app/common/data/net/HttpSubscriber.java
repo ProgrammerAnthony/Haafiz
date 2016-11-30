@@ -1,4 +1,4 @@
-package com.anthony.app.common.data.retrofit;
+package com.anthony.app.common.data.net;
 
 import rx.Subscriber;
 import timber.log.Timber;

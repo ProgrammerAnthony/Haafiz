@@ -8,7 +8,7 @@ import android.support.v4.app.Fragment;
 import android.util.Log;
 
 import com.anthony.app.common.base.AbsBaseFragment;
-import com.anthony.app.common.base.Constants;
+import com.anthony.app.common.Constants;
 import com.anthony.app.common.data.bean.Channel;
 import com.anthony.app.common.utils.FileUtil;
 import com.anthony.app.common.widgets.webview.WebViewCommentActivity;

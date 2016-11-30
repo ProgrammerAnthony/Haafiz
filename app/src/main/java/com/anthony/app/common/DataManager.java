@@ -1,10 +1,12 @@
-package com.anthony.app.common.data;
+package com.anthony.app.common;
 
 import android.content.Context;
 import android.content.Intent;
 
-import com.anthony.app.common.base.Constants;
-import com.anthony.app.common.data.bean.GithubUser;
+import com.anthony.app.common.data.EventPosterHelper;
+import com.anthony.app.common.data.HttpHelper;
+import com.anthony.app.common.data.PreferencesHelper;
+import com.anthony.app.common.data.RxBus;
 import com.anthony.app.common.data.bean.NewsItem;
 import com.anthony.app.common.data.bean.NormalJsonInfo;
 import com.anthony.app.common.data.bean.WeatherData;
@@ -12,16 +14,20 @@ import com.anthony.app.common.data.database.DatabaseHelper;
 import com.anthony.app.common.data.download.DownloadEvent;
 import com.anthony.app.common.data.download.DownloadFinishEvent;
 import com.anthony.app.common.data.download.DownloadService;
-import com.anthony.app.common.data.retrofit.GithubApi;
-import com.anthony.app.common.data.retrofit.HttpResult;
-import com.anthony.app.common.data.retrofit.HttpResultFunc;
-import com.anthony.app.common.data.retrofit.RemoteApi;
-import com.anthony.app.common.data.retrofit.WeatherApi;
+import com.anthony.app.common.data.net.HttpResult;
+import com.anthony.app.common.data.net.HttpResultFunc;
+import com.anthony.app.common.data.net.RemoteApi;
 import com.anthony.app.common.data.upload.UploadParam;
 import com.anthony.app.common.data.upload.UploadService;
 import com.anthony.app.common.injection.scope.ApplicationContext;
 import com.anthony.app.common.utils.FileUtil;
+import com.anthony.app.common.utils.RxUtils;
 import com.anthony.app.common.utils.SpUtil;
+import com.anthony.app.module.github.GithubApi;
+import com.anthony.app.module.github.GithubUser;
+import com.anthony.app.module.weather.WeatherApi;
+import com.anthony.app.module.wechatlist.WXItemBean;
+import com.anthony.app.module.wechatlist.WechatApi;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -36,12 +42,10 @@ import javax.inject.Inject;
 
 import okhttp3.ResponseBody;
 import rx.Observable;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.exceptions.Exceptions;
 import rx.functions.Action0;
 import rx.functions.Action1;
 import rx.functions.Func1;
-import rx.schedulers.Schedulers;
 import timber.log.Timber;
 
 /**
@@ -114,10 +118,9 @@ public class DataManager {
         params.put("unit", "c");
         params.put("start", "0");
         params.put("days", "3");
-        return mHttpHelper.getService(WeatherApi.class)
+        return mHttpHelper.getApi(WeatherApi.class)
                 .loadWeatherData(params)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread());
+                .compose(RxUtils.defaultSchedulers());
     }
 
     /**
@@ -126,7 +129,7 @@ public class DataManager {
      * @return Observable<String>
      */
     public Observable<String> loadUserFollowingString(String userName) {
-        return mHttpHelper.getService(GithubApi.class)
+        return mHttpHelper.getApi(GithubApi.class)
                 .loadUserFollowingString(userName)
                 .flatMap(new Func1<ResponseBody, Observable<String>>() {
                     @Override
@@ -140,8 +143,7 @@ public class DataManager {
                         }
                     }
                 })
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread());
+                .compose(RxUtils.defaultSchedulers());
     }
 
     /**
@@ -150,10 +152,9 @@ public class DataManager {
      * @return Observable<List<GithubUser>>
      */
     public Observable<List<GithubUser>> loadUserFollowingList(String userName) {
-        return mHttpHelper.getService(GithubApi.class)
+        return mHttpHelper.getApi(GithubApi.class)
                 .loadUserFollowingList(userName)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread());
+                .compose(RxUtils.defaultSchedulers());
     }
 
 
@@ -171,7 +172,7 @@ public class DataManager {
             }
         } else {
             String path = url.substring(Constants.Remote_BASE_END_POINT.length());
-            return mHttpHelper.getService(RemoteApi.class)
+            return mHttpHelper.getApi(RemoteApi.class)
                     .loadString(path)
                     .flatMap(new Func1<ResponseBody, Observable<String>>() {
                         @Override
@@ -193,7 +194,7 @@ public class DataManager {
      * post string to server
      */
     public Observable<String> postString(String url, Map<String, String> paramMap) {
-        return mHttpHelper.getService(RemoteApi.class)
+        return mHttpHelper.getApi(RemoteApi.class)
                 .postString(url, paramMap)
                 .flatMap(new Func1<ResponseBody, Observable<String>>() {
                     @Override
@@ -234,9 +235,16 @@ public class DataManager {
                                 }.getType());
                         return Observable.just(obj);
                     }
-                }).map(new HttpResultFunc<NormalJsonInfo<NewsItem>>())
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread());
+                }).map(new HttpResultFunc<>())
+                .compose(RxUtils.defaultSchedulers());
+    }
+
+    public Observable<List<WXItemBean>> getWechatData(int num, int page) {
+        return mHttpHelper.getApi(WechatApi.class)
+                .getWXHot(Constants.WEIXIN_KEY, num, page)
+//                .map(new HttpResultFunc<>())  和下方语句一样效果
+                .compose(RxUtils.handleResult())
+                .compose(RxUtils.defaultSchedulers());
     }
 
     /**

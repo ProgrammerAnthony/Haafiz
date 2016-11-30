@@ -1,4 +1,6 @@
-package com.anthony.app.common.data.rx;
+package com.anthony.app.common;
+
+import com.anthony.app.common.RxBus;
 
 import java.util.HashMap;
 import java.util.Map;

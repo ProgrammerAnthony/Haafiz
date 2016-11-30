@@ -1,4 +1,4 @@
-package com.anthony.app.common.base;
+package com.anthony.app.common;
 
 import android.os.Environment;
 
@@ -38,4 +38,6 @@ public class Constants {
 
     public static String DOWNLOAD_STORE_FOLDER = Environment.getExternalStorageDirectory().getAbsolutePath()
             + "/Download/";
+
+    public static final String WEIXIN_KEY = "3d88f5fb6e5a1fbf2921dbb643f25894";
 }

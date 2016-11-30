@@ -45,6 +45,8 @@ dependencies {
     testCompile deps.jUnit
     //appcompat
     compile deps.appcompatV7
+    //cardview
+    compile deps.cardviewV7
     //v4
     compile deps.supportV4
     //recyclerView

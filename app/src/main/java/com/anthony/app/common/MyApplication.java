@@ -1,4 +1,4 @@
-package com.anthony.app.common.base;
+package com.anthony.app.common;
 
 import android.app.Application;
 import android.content.Context;
@@ -9,7 +9,6 @@ import android.support.multidex.MultiDex;
 import android.util.Log;
 
 import com.anthony.app.BuildConfig;
-import com.anthony.app.common.data.DataManager;
 import com.anthony.app.common.data.bean.Channel;
 import com.anthony.app.common.data.bean.Menu;
 import com.anthony.app.common.data.database.DatabaseHelper;
