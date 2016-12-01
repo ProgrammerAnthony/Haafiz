@@ -13,10 +13,10 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.anthony.app.R;
-import com.anthony.app.common.base.AbsBaseActivity;
-import com.anthony.app.common.injection.component.ActivityComponent;
-import com.anthony.app.common.widgets.CircleProgressBar;
-import com.anthony.app.common.widgets.ViewDisplay;
+import com.anthony.app.dagger.DaggerActivity;
+import com.anthony.app.dagger.component.ActivityComponent;
+import com.anthony.library.widgets.CircleProgressBar;
+import com.anthony.library.widgets.ViewDisplay;
 import com.viewpagerindicator.CirclePageIndicator;
 
 import java.util.ArrayList;
@@ -37,7 +37,7 @@ import butterknife.OnClick;
  * 后面打开app时加载闪屏页
  * todo 加入广告页
  */
-public class LoadingActivity extends AbsBaseActivity {
+public class LoadingActivity extends DaggerActivity {
 
     @BindView(R.id.view_pager)
     ViewPager mViewPager;
@@ -97,8 +97,8 @@ public class LoadingActivity extends AbsBaseActivity {
      * @return true ,first time entering . false, not first time
      */
     public boolean whetherFirstTimeEnterApp() {
-        if (getDataManager().getPreferencesHelper().isFirstTime()) {
-            getDataManager().getPreferencesHelper().saveFirstTime(false);
+        if (getDataRepository().getPreferencesHelper().isFirstTime()) {
+            getDataRepository().getPreferencesHelper().saveFirstTime(false);
             return true;
         } else {
             return false;

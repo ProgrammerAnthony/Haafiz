@@ -6,15 +6,15 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.anthony.app.R;
-import com.anthony.app.common.base.AbsBaseActivity;
-import com.anthony.app.common.injection.component.ActivityComponent;
+import com.anthony.app.dagger.component.ActivityComponent;
+import com.anthony.app.dagger.DaggerActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 
-public class ShowStatusActivity extends AbsBaseActivity {
+public class ShowStatusActivity extends DaggerActivity {
     @BindView(R.id.activityToolbar)
     Toolbar activityToolbar;
 

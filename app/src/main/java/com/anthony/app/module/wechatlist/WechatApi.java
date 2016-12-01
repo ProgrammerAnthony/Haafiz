@@ -1,6 +1,7 @@
 package com.anthony.app.module.wechatlist;
 
-import com.anthony.app.common.data.net.HttpResult;
+
+import com.anthony.library.data.net.HttpResult;
 
 import java.util.List;
 

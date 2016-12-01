@@ -1,0 +1,8 @@
+<resources>
+    <string name="prj_reload_hint">加载数据失败 点击屏幕重试</string>
+    <string name="input_to_search">请输入搜索关键字</string>
+    <string name="retrofit_network_error">网络访问出错，请稍后再试</string>
+    <string name="setting">设置</string>
+    <string name="dialog_negative">取消</string>
+    <string name="dialog_positive">确定</string>
+</resources>

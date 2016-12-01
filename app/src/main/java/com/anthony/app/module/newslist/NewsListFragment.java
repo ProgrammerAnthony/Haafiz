@@ -1,16 +1,18 @@
 package com.anthony.app.module.newslist;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.anthony.app.R;
-import com.anthony.app.common.base.AbsListFragment;
-import com.anthony.app.common.data.bean.NewsItem;
-import com.anthony.app.common.data.bean.NormalJsonInfo;
-import com.anthony.app.common.data.database.dao.NewsItemDao;
-import com.anthony.app.common.injection.component.ActivityComponent;
-import com.anthony.app.common.utils.AppUtils;
+import com.anthony.app.dagger.DaggerListFragment;
+import com.anthony.app.dagger.component.ActivityComponent;
+import com.anthony.library.data.bean.NewsItem;
+import com.anthony.library.data.bean.NormalJsonInfo;
+import com.anthony.library.data.database.dao.NewsItemDao;
+import com.anthony.library.widgets.webview.WebViewCommentActivity;
 import com.anthony.rvhelper.adapter.MultiItemTypeAdapter;
 import com.anthony.rvhelper.divider.RecycleViewDivider;
 
@@ -23,7 +25,7 @@ import javax.inject.Inject;
  * Class Note:
  * normal news list fragment
  */
-public class NewsListFragment extends AbsListFragment {
+public class NewsListFragment extends DaggerListFragment {
 
     @Inject
     NewsItemDao newsItemDao;
@@ -55,7 +57,7 @@ public class NewsListFragment extends AbsListFragment {
                 if (item.getUrl().endsWith(".json")) {  //if suffix is json end ,load list data ,else load webview
                     // todo
                 } else {
-                    AppUtils.loadWebViewActivity(mContext, item);
+                   loadWebViewActivity(mContext, item);
                 }
 
 
@@ -77,6 +79,18 @@ public class NewsListFragment extends AbsListFragment {
             String prefix = getFragmentUrl().substring(0, getFragmentUrl().lastIndexOf("."));
             return prefix + "_" + String.valueOf(index) + ".json";
         }
+    }
+
+    /**
+     * 加载网页，每个网页都需要NewsItem对象
+     *
+     * @param context
+     * @param newsItem
+     */
+    public static void loadWebViewActivity(Context context, NewsItem newsItem) {
+        Intent intent = new Intent(context, WebViewCommentActivity.class);
+        intent.putExtra(WebViewCommentActivity.WEB_VIEW_ITEM, newsItem);
+        context.startActivity(intent);
     }
 
     @Override

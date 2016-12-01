@@ -5,7 +5,7 @@ import android.text.TextUtils;
 import android.view.View;
 
 import com.anthony.app.R;
-import com.anthony.app.common.data.bean.NewsItem;
+import com.anthony.library.data.bean.NewsItem;
 import com.anthony.rvhelper.adapter.MultiItemTypeAdapter;
 import com.anthony.rvhelper.base.ItemViewDelegate;
 import com.anthony.rvhelper.base.ViewHolder;

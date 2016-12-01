@@ -4,15 +4,15 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.anthony.app.R;
-import com.anthony.app.common.base.AbsBaseFragment;
-import com.anthony.app.common.injection.component.ActivityComponent;
+import com.anthony.app.dagger.component.ActivityComponent;
+import com.anthony.app.dagger.DaggerFragment;
 
 /**
  * Created by Anthony on 2016/9/12.
  * Class Note:
  * 商城 fragment
  */
-public class StoreFragment extends AbsBaseFragment {
+public class StoreFragment extends DaggerFragment {
 
     @Override
     protected int getLayoutId() {

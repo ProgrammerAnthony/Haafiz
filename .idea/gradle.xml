@@ -24,6 +24,7 @@
             <option value="$PROJECT_DIR$/ThirdPart/VideoListPlayer" />
             <option value="$PROJECT_DIR$/ThirdPart/ViewPagerIndicator" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/library" />
             <option value="$PROJECT_DIR$/rxapp" />
             <option value="$PROJECT_DIR$/rxlibrary" />
           </set>

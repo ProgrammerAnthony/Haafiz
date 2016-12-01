@@ -6,11 +6,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.anthony.app.R;
-import com.anthony.app.common.base.AbsBaseActivity;
-import com.anthony.app.common.DataManager;
-import com.anthony.app.common.data.bean.WeatherData;
-import com.anthony.app.common.data.net.HttpSubscriber;
-import com.anthony.app.common.injection.component.ActivityComponent;
+
+import com.anthony.app.dagger.DaggerActivity;
+import com.anthony.app.dagger.DataRepository;
+import com.anthony.app.dagger.component.ActivityComponent;
+import com.anthony.library.data.net.HttpSubscriber;
 
 import java.util.List;
 
@@ -31,7 +31,7 @@ import rx.Subscription;
  * {@see "http://apistore.baidu.com/apiworks/servicedetail/2573.html?qq-pf-to=pcqq.c2c"}
  */
 
-public class WeatherActivity extends AbsBaseActivity {
+public class WeatherActivity extends DaggerActivity {
 
     @BindView(R.id.weather_bg)
     ImageView weatherBg;
@@ -57,7 +57,7 @@ public class WeatherActivity extends AbsBaseActivity {
     RelativeLayout weatherLayout;
 
     @Inject
-    DataManager mDataManager;
+    DataRepository mDataManager;
 
     private String cityWeatherToCheck;
 

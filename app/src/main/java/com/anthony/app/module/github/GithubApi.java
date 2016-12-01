@@ -1,6 +1,7 @@
 package com.anthony.app.module.github;
 
-import com.anthony.app.common.Constants;
+
+import com.anthony.library.Constants;
 
 import java.util.List;
 

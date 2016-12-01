@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.anthony.app.R;
-import com.anthony.app.common.base.AbsBaseFragment;
-import com.anthony.app.common.injection.component.ActivityComponent;
+import com.anthony.app.dagger.component.ActivityComponent;
+import com.anthony.app.dagger.DaggerFragment;
 
 /**
  * Created by Anthony on 2016/9/12.
@@ -13,7 +13,7 @@ import com.anthony.app.common.injection.component.ActivityComponent;
  * 我的
  * fragment
  */
-public class MineFragment extends AbsBaseFragment {
+public class MineFragment extends DaggerFragment {
 
     @Override
     protected int getLayoutId() {

@@ -8,10 +8,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.anthony.app.R;
-import com.anthony.app.common.base.AbsBaseActivity;
-import com.anthony.app.common.data.bean.Channel;
-import com.anthony.app.common.injection.component.ActivityComponent;
-import com.anthony.app.common.widgets.ViewDisplay;
+import com.anthony.app.dagger.DaggerActivity;
+import com.anthony.app.dagger.component.ActivityComponent;
+import com.anthony.library.data.bean.Channel;
+import com.anthony.library.widgets.ViewDisplay;
 import com.anthony.rvhelper.adapter.CommonAdapter;
 import com.anthony.rvhelper.base.ViewHolder;
 import com.anthony.rvhelper.divider.RecycleViewDivider;
@@ -30,7 +30,7 @@ import butterknife.BindView;
  * 首页列表，显示所有的操作
  */
 
-public class MainListActivity extends AbsBaseActivity {
+public class MainListActivity extends DaggerActivity {
     List<Channel> strs = new ArrayList<>();
     @BindView(R.id.recycleView)
     RecyclerView recycleView;

@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.widget.FrameLayout;
 
 import com.anthony.app.R;
-import com.anthony.app.common.base.AbsBaseActivity;
-import com.anthony.app.common.injection.component.ActivityComponent;
+import com.anthony.app.dagger.DaggerActivity;
+import com.anthony.app.dagger.component.ActivityComponent;
 import com.anthony.segmentcontrol.SegmentControl;
 
 import butterknife.BindView;
@@ -15,7 +15,7 @@ import butterknife.BindView;
  * Class Note:
  */
 
-public class SegmentControlActivity extends AbsBaseActivity {
+public class SegmentControlActivity extends DaggerActivity {
     @BindView(R.id.segment_control)
     SegmentControl segmentControl;
     @BindView(R.id.child_fragment_content)

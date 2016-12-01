@@ -9,17 +9,19 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.anthony.app.R;
-import com.anthony.app.common.base.AbsBaseActivity;
-import com.anthony.app.common.widgets.statusbar.StatusBarUtil;
+import com.anthony.app.dagger.DaggerActivity;
+import com.anthony.library.widgets.statusbar.StatusBarUtil;
 
 import java.util.Random;
+
+
 
 /**
  * Created by Anthony on 2016/11/29.
  * Class Note:
  */
 
-public class StatusBarChangeActivity extends AbsBaseActivity {
+public class StatusBarChangeActivity extends DaggerActivity {
     private Toolbar mToolbar;
     private Button mBtnChangeColor;
     private SeekBar mSbChangeAlpha;

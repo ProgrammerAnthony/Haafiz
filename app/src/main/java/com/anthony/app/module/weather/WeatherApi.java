@@ -1,8 +1,7 @@
 package com.anthony.app.module.weather;
 
 
-import com.anthony.app.common.Constants;
-import com.anthony.app.common.data.bean.WeatherData;
+import com.anthony.library.Constants;
 
 import java.util.Map;
 
@@ -15,11 +14,11 @@ import rx.Observable;
  * Created by Anthony on 2016/9/22.
  * Class Note:
  * Weather API
- * entity class {@link com.anthony.app.common.data.bean.WeatherData}
+ * entity class {@link WeatherData}
  * data from {@see "http://apistore.baidu.com/apiworks/servicedetail/2573.html?qq-pf-to=pcqq.c2c"}
  *
  * 天气api接口
- * 实体类{@link com.anthony.app.common.data.bean.WeatherData}
+ * 实体类{@link WeatherData}
  * 天气数据来自 http://apistore.baidu.com/apiworks/servicedetail/2573.html?qq-pf-to=pcqq.c2c
  */
 

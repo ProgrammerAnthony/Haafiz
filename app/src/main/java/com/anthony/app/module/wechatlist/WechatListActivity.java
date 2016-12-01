@@ -7,9 +7,9 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
 
 import com.anthony.app.R;
-import com.anthony.app.common.base.AbsBaseActivity;
-import com.anthony.app.common.data.net.HttpSubscriber;
-import com.anthony.app.common.injection.component.ActivityComponent;
+import com.anthony.app.dagger.DaggerActivity;
+import com.anthony.app.dagger.component.ActivityComponent;
+import com.anthony.library.data.net.HttpSubscriber;
 import com.anthony.pullrefreshview.PullToRefreshView;
 import com.anthony.rvhelper.adapter.CommonAdapter;
 import com.anthony.rvhelper.base.ViewHolder;
@@ -19,36 +19,42 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 import butterknife.BindView;
+import rx.functions.Action0;
 
 /**
  * Created by Anthony on 2016/11/30.
  * Class Note:
  * 微信文章的界面，支持下拉刷新和上拉加载更多
  * <p>
- * todo 上拉和下拉的实现
+ *
  * todo 数据库存储
  * todo 封装上啦下拉+recyclerView+adapter的实现
  * todo 添加来自腾讯的webview
  */
 
-public class WechatListActivity extends AbsBaseActivity {
+public class WechatListActivity extends DaggerActivity {
     @BindView(R.id.recycleView)
     RecyclerView recycleView;
     @BindView(R.id.ptr)
     PullToRefreshView ptr;
     private WechatItemAdapter wechatItemAdpater;
 
+    private static final int PAGE_NUM = 10;
+    private static final int INIT_PAGE_INDEX = 1;
+    private int currentPageIndex = INIT_PAGE_INDEX;
+
+
     @Override
     protected void initViewsAndEvents(Bundle savedInstanceState) {
         ptr.setListener(new PullToRefreshView.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                showToast("refresh");
+                getWechatData(PAGE_NUM, INIT_PAGE_INDEX);
             }
 
             @Override
             public void onLoadMore() {
-                showToast("load more");
+                getWechatData(PAGE_NUM, currentPageIndex + 1);
             }
         });
 
@@ -57,18 +63,21 @@ public class WechatListActivity extends AbsBaseActivity {
         recycleView.setLayoutManager(new LinearLayoutManager(mContext));
         recycleView.setAdapter(wechatItemAdpater);
 
-        getWechatData(10, 1);
+        getWechatData(PAGE_NUM, INIT_PAGE_INDEX);
 
 
     }
 
     private void getWechatData(int num, int page) {
-        getDataManager().getWechatData(num, page).subscribe(new HttpSubscriber<List<WXItemBean>>() {
+        getDataRepository().getWechatData(num, page).doOnTerminate(new Action0() {
+            @Override
+            public void call() {
+                ptr.onFinishLoading();
+            }
+        }).subscribe(new HttpSubscriber<List<WXItemBean>>() {
             @Override
             public void onNext(List<WXItemBean> itemList) {
-                wechatItemAdpater.addDataAll(itemList);
-                wechatItemAdpater.notifyDataSetChanged();
-
+                onDataReceived(page, itemList);
             }
 
             @Override
@@ -77,6 +86,18 @@ public class WechatListActivity extends AbsBaseActivity {
                 showToast("load error");
             }
         });
+    }
+
+    private void onDataReceived(int page, List<WXItemBean> itemList) {
+        boolean isRefresh = (page == INIT_PAGE_INDEX);
+        if (isRefresh) {
+            wechatItemAdpater.clearData();
+        } else {
+            currentPageIndex += 1;
+        }
+
+        wechatItemAdpater.addDataAll(itemList);
+        wechatItemAdpater.notifyDataSetChanged();
     }
 
     @Override

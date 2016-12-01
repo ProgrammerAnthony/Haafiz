@@ -1,5 +1,6 @@
 package com.anthony.app.module.videolist;
 
+
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -13,11 +14,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.anthony.app.R;
-import com.anthony.app.common.base.AbsBaseActivity;
-import com.anthony.app.common.base.AbsBaseFragment;
-import com.anthony.app.common.data.RxBus;
-import com.anthony.app.common.data.event.VideoOrientationChangeEvent;
-import com.anthony.app.common.injection.component.ActivityComponent;
+import com.anthony.app.dagger.DaggerActivity;
+import com.anthony.app.dagger.component.ActivityComponent;
+import com.anthony.library.base.AbsBaseFragment;
+import com.anthony.library.data.RxBus;
+import com.anthony.library.data.event.VideoOrientationChangeEvent;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -30,7 +31,7 @@ import rx.functions.Action1;
  * currently load data from local "raw://video_list_data"
  */
 
-public class VideoListActivity extends AbsBaseActivity {
+public class VideoListActivity extends DaggerActivity {
     @BindView(R.id.iv_title_left)
     ImageView ivTitleLeft;
     @BindView(R.id.tv_title_center)

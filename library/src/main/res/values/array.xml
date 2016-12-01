@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- 数据库Entity Class -->
+    <string-array name="db_tb">
+        <item>com.anthony.app.common.data.bean.Channel</item>
+        <item>com.anthony.app.common.data.bean.NewsItem</item>
+        <item>com.anthony.app.common.data.bean.OfflineResource</item>
+    </string-array>
+
+
+</resources>

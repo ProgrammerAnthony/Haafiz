@@ -1,5 +1,6 @@
 package com.anthony.app.module.newslist;
 
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -10,10 +11,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.anthony.app.R;
-import com.anthony.app.common.base.AbsBaseActivity;
-import com.anthony.app.common.base.AbsBaseFragment;
-import com.anthony.app.common.MyApplication;
-import com.anthony.app.common.injection.component.ActivityComponent;
+import com.anthony.app.dagger.DaggerActivity;
+import com.anthony.app.dagger.DaggerApplication;
+import com.anthony.app.dagger.component.ActivityComponent;
+import com.anthony.library.base.AbsBaseFragment;
 
 import javax.inject.Inject;
 
@@ -27,7 +28,7 @@ import butterknife.OnClick;
  * currently load data from local "raw://news_list_data"
  */
 
-public class NewsListActivity extends AbsBaseActivity {
+public class NewsListActivity extends DaggerActivity {
     @BindView(R.id.iv_title_left)
     ImageView ivTitleLeft;
     @BindView(R.id.tv_title_center)
@@ -35,7 +36,7 @@ public class NewsListActivity extends AbsBaseActivity {
     @BindView(R.id.layout_content)
     FrameLayout layoutContent;
     @Inject
-    MyApplication myApplication;
+    DaggerApplication mApplication;
 
     //    @Inject
 //    RxBus rxBus;
@@ -88,7 +89,7 @@ public class NewsListActivity extends AbsBaseActivity {
                 this.finish();
                 break;
             case R.id.iv_title_right:
-                myApplication.dbHelper.exportDb();
+                mApplication.getDataManager().getDatabaseHelper().exportDb();
 //                showToast("导出数据库成功");
                 break;
         }

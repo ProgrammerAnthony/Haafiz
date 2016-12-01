@@ -1,5 +1,6 @@
 package com.anthony.app.module.tab;
 
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -10,8 +11,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.anthony.app.R;
-import com.anthony.app.common.base.AbsBaseActivity;
-import com.anthony.app.common.injection.component.ActivityComponent;
+import com.anthony.app.dagger.DaggerActivity;
+import com.anthony.app.dagger.component.ActivityComponent;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -26,7 +27,7 @@ import butterknife.OnClick;
  * 4 发现
  * 5 我的
  */
-public class TabActivity extends AbsBaseActivity {
+public class TabActivity extends DaggerActivity {
     @BindView(R.id.main_tab_content)
     FrameLayout tabContent;
     @BindView(R.id.prj_layout_reload)

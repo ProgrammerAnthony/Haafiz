@@ -13,21 +13,21 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.anthony.app.R;
-import com.anthony.app.common.base.AbsListFragment;
-import com.anthony.app.common.data.RxBus;
-import com.anthony.app.common.data.bean.NewsItem;
-import com.anthony.app.common.data.bean.NormalJsonInfo;
-import com.anthony.app.common.data.database.dao.NewsItemDao;
-import com.anthony.app.common.data.event.VideoListClickEvent;
-import com.anthony.app.common.data.event.VideoOrientationChangeEvent;
-import com.anthony.app.common.data.event.ViewPagerSelectedEvent;
-import com.anthony.app.common.injection.component.ActivityComponent;
+import com.anthony.app.dagger.DaggerListFragment;
+import com.anthony.app.dagger.component.ActivityComponent;
+import com.anthony.imageloader.ImageLoader;
+import com.anthony.imageloader.ImageLoaderUtil;
+import com.anthony.library.data.RxBus;
+import com.anthony.library.data.bean.NewsItem;
+import com.anthony.library.data.bean.NormalJsonInfo;
+import com.anthony.library.data.database.dao.NewsItemDao;
+import com.anthony.library.data.event.VideoListClickEvent;
+import com.anthony.library.data.event.VideoOrientationChangeEvent;
+import com.anthony.library.data.event.ViewPagerSelectedEvent;
 import com.anthony.rvhelper.adapter.CommonAdapter;
 import com.anthony.rvhelper.adapter.MultiItemTypeAdapter;
 import com.anthony.rvhelper.base.ViewHolder;
 import com.anthony.rvhelper.divider.RecycleViewDivider;
-import com.anthony.imageloader.ImageLoader;
-import com.anthony.imageloader.ImageLoaderUtil;
 import com.anthony.videolistplayer.VideoPlayView;
 import com.anthony.videolistplayer.media.IjkVideoView;
 
@@ -45,7 +45,7 @@ import tv.danmaku.ijk.media.player.IMediaPlayer;
  * video list fragment is a sub-component of {@link VideoListActivity}
  * currently load data from local "raw://video_list_data"
  */
-public class NewsVideoFragment extends AbsListFragment {
+public class NewsVideoFragment extends DaggerListFragment {
     private int current_play_position = -1; //正在播放的item位置，如果为-1表明当前没有视频在播放
     private VideoPlayView mVideoPlayView;
     private static final int PLAY_MODE_IN_LIST = 0;
@@ -60,7 +60,7 @@ public class NewsVideoFragment extends AbsListFragment {
 //    @Inject
 //    RxBus rxBus;
     @Inject
-    NewsItemDao newsItemDao;
+NewsItemDao newsItemDao;
     @Inject
     ImageLoaderUtil imageLoaderUtil;
 

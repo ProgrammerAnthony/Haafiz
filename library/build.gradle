@@ -1,0 +1,102 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'android-apt'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility rootProject.ext.android.javaVersion
+        targetCompatibility rootProject.ext.android.javaVersion
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //junit testing
+    testCompile deps.jUnit
+    //appcompat
+    compile deps.appcompatV7
+    //cardview
+    compile deps.cardviewV7
+    //v4
+    compile deps.supportV4
+    //recyclerView
+    compile deps.recyclerviewV7
+    //design library
+    compile deps.design
+    //Material Design Progress Bar
+    compile deps.materialishProgress
+    // Glide to load image
+    compile deps.glide
+    //butterKnife annotation
+    compile deps.butterknife
+    apt deps.butterknifeCompiler
+    //    compile deps.butterknife
+    //    apt 'com.jakewharton:butterknife-compiler:' + rootProject.ext.depsVersion.butterknifeVersion
+    //RxAndroid
+    compile deps.rxandroid
+    //RxJava
+    compile deps.rxjava
+    //RxPermission
+    compile deps.rxPermission
+    //multiDex
+    compile deps.multiDex
+    //otto eventbus
+    compile deps.otto
+    //各种swipe 效果的包
+    compile deps.ultimateSwipeTool
+    //retrofit
+    compile deps.retrofit
+    compile deps.converterGson
+    compile deps.adapterRxjava
+    //okHttp
+    compile deps.okhttp
+    compile deps.okhttpUrlconnection
+    compile deps.loggingInterceptor
+    //timber logging
+    compile deps.timber
+    // LeanCloud 基础包
+    compile deps.avosCloudSDK
+    // 推送与实时聊天需要的包
+    compile(deps.avosCloudPush) {
+        transitive = true
+    }
+    compile(deps.pagerSlidingTabStrip) {
+        // exclusion for update the android support jar
+        // for example, you can use the appcompat-v7 in your project
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+//        exclude group: 'com.nineoldandroids', module: 'library'
+    }
+    compile deps.materialDialogs
+    compile deps.photoView
+    compile deps.materialicons
+    compile project(':SegmentControl')
+    compile project(':ShareSDK')
+    compile project(':SlidingMenu')
+    compile project(':SweetDialog')
+    compile project(':ViewPagerIndicator')
+    compile project(':CityPicker')
+    compile project(':VideoListPlayer')
+    compile project(':ImageLoader')
+    compile project(':RVHelper')
+    compile project(':PullRefreshView')
+    compile project(':StatusLayout')
+    compile files('libs/ormlite-android-4.49.jar')
+    compile files('libs/ormlite-core-4.49.jar')
+    compile files('libs/tbs_sdk_thirdapp_v2.5.0.1031_36880_sharewithdownload_obfs_20161107_154437.jar')
+}

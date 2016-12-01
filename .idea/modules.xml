@@ -18,6 +18,7 @@
       <module fileurl="file://$PROJECT_DIR$/ThirdPart/VideoListPlayer/VideoListPlayer.iml" filepath="$PROJECT_DIR$/ThirdPart/VideoListPlayer/VideoListPlayer.iml" />
       <module fileurl="file://$PROJECT_DIR$/ThirdPart/ViewPagerIndicator/ViewPagerIndicator.iml" filepath="$PROJECT_DIR$/ThirdPart/ViewPagerIndicator/ViewPagerIndicator.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxapp/rxapp.iml" filepath="$PROJECT_DIR$/rxapp/rxapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxlibrary/rxlibrary.iml" filepath="$PROJECT_DIR$/rxlibrary/rxlibrary.iml" />
     </modules>

@@ -4,9 +4,9 @@ import android.Manifest;
 import android.os.Bundle;
 
 import com.anthony.app.R;
-import com.anthony.app.common.base.AbsBaseActivity;
-import com.anthony.app.common.utils.RxUtils;
+import com.anthony.app.dagger.DaggerActivity;
 import com.anthony.app.module.MainListActivity;
+import com.anthony.library.utils.RxUtils;
 import com.tbruyelle.rxpermissions.RxPermissions;
 
 import java.util.concurrent.TimeUnit;
@@ -19,7 +19,7 @@ import rx.Observable;
  * 闪屏页面 splash view
  */
 
-public class SplashActivity extends AbsBaseActivity{
+public class SplashActivity extends DaggerActivity {
     @Override
     protected void initViewsAndEvents(Bundle savedInstanceState) {
 

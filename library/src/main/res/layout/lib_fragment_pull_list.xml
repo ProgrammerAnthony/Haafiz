@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    style="@style/LibMatchMatch"
+    android:background="@color/common_bg_dark"
+    skin:enable="true" >
+
+    <com.anthony.pullrefreshview.PullToRefreshView
+        android:id="@+id/ptr"
+        style="@style/LibMatchMatch" >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleView"
+            style="@style/LibMatchMatch"
+            android:scrollbars="vertical" />
+
+    </com.anthony.pullrefreshview.PullToRefreshView>
+
+    <include layout="@layout/lib_layout_reload"
+        android:visibility="invisible"/>
+</RelativeLayout>

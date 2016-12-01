@@ -1,13 +1,14 @@
 package com.anthony.app.module.banner;
 
+
 import android.os.Bundle;
 import android.widget.RelativeLayout;
 
 import com.anthony.app.R;
-import com.anthony.app.common.base.AbsBaseActivity;
-import com.anthony.app.common.data.bean.NewsItem;
-import com.anthony.app.common.injection.component.ActivityComponent;
-import com.anthony.app.common.widgets.banner.RecommendController;
+import com.anthony.app.dagger.DaggerActivity;
+import com.anthony.app.dagger.component.ActivityComponent;
+import com.anthony.library.data.bean.NewsItem;
+import com.anthony.library.widgets.banner.RecommendController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,7 @@ import butterknife.BindView;
  *
  */
 
-public class BannerActivity extends AbsBaseActivity {
+public class BannerActivity extends DaggerActivity {
     String[] str = new String[]{
             "http://g.hiphotos.baidu.com/image/h%3D360/sign=5381d7c63b01213fd03348da64e636f8/fc1f4134970a304efb8e43e5d3c8a786c9175c05.jpg",
             "http://a.hiphotos.baidu.com/image/h%3D360/sign=cb8bf0660db30f242a9aea05f895d192/a8014c086e061d95ba796c3f79f40ad162d9cafe.jpg",
