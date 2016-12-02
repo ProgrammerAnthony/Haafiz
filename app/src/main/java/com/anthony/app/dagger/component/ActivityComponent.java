@@ -8,6 +8,8 @@ import com.anthony.app.dagger.scope.PerActivity;
 import com.anthony.app.module.MainListActivity;
 import com.anthony.app.module.banner.BannerActivity;
 import com.anthony.app.module.github.GithubActivity;
+import com.anthony.app.module.imagebrowse.ImageBrowserActivity;
+import com.anthony.app.module.newslist.AbsListFragment;
 import com.anthony.app.module.newslist.NewsListActivity;
 import com.anthony.app.module.newslist.NewsListFragment;
 import com.anthony.app.module.segment.SegmentControlActivity;
@@ -19,9 +21,6 @@ import com.anthony.app.module.videolist.NewsVideoFragment;
 import com.anthony.app.module.videolist.VideoListActivity;
 import com.anthony.app.module.weather.WeatherActivity;
 import com.anthony.app.module.wechatlist.WechatListActivity;
-import com.anthony.app.module.newslist.AbsListFragment;
-import com.anthony.app.module.imagebrowse.ImageBrowserActivity;
-import com.anthony.app.module.webview.WebViewCommentActivity;
 
 import dagger.Component;
 
@@ -47,7 +46,7 @@ public interface ActivityComponent {
 
     void inject(DaggerFragment daggerFragment);
 
-    void inject(WebViewCommentActivity webViewActivity);
+
 
     void inject(ImageBrowserActivity imageBrowserActivity);
 

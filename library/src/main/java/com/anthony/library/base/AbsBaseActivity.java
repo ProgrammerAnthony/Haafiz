@@ -165,11 +165,7 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
      */
     protected abstract int getContentViewID();
 
-    /**
-     * show toast
-     *
-     * @param content toast content
-     */
+
 //    protected void showToast(String content) {
 //        ToastUtils.getInstance().showToast(content);
 //    }

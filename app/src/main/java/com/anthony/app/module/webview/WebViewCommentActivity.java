@@ -47,6 +47,7 @@ import butterknife.BindView;
  * Created by Anthony on 2016/9/5.
  * Class Note:
  * a webview Activity with comment layout below
+ * @deprecated
  */
 public class WebViewCommentActivity extends DaggerActivity {
 

@@ -4,11 +4,13 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 
 import com.anthony.app.R;
 import com.anthony.app.dagger.DaggerActivity;
 import com.anthony.app.dagger.component.ActivityComponent;
+import com.anthony.library.base.WechatDetailsActivity;
 import com.anthony.library.data.net.HttpSubscriber;
 import com.anthony.pullrefreshview.PullToRefreshView;
 import com.anthony.rvhelper.adapter.CommonAdapter;
@@ -16,6 +18,7 @@ import com.anthony.rvhelper.base.ViewHolder;
 import com.anthony.rvhelper.divider.RecycleViewDivider;
 import com.bumptech.glide.Glide;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -26,10 +29,9 @@ import rx.functions.Action0;
  * Class Note:
  * 微信文章的界面，支持下拉刷新和上拉加载更多
  * <p>
- *
+ * <p>
  * todo 数据库存储
  * todo 封装上啦下拉+recyclerView+adapter的实现
- * todo 添加来自腾讯的webview
  */
 
 public class WechatListActivity extends DaggerActivity {
@@ -37,6 +39,9 @@ public class WechatListActivity extends DaggerActivity {
     RecyclerView recycleView;
     @BindView(R.id.ptr)
     PullToRefreshView ptr;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+
     private WechatItemAdapter wechatItemAdpater;
 
     private static final int PAGE_NUM = 10;
@@ -46,6 +51,13 @@ public class WechatListActivity extends DaggerActivity {
 
     @Override
     protected void initViewsAndEvents(Bundle savedInstanceState) {
+        //show loading but not include toolbar
+        List<Integer> skipIds = new ArrayList<>();
+        skipIds.add(com.anthony.library.R.id.toolbar);
+        showLoading(skipIds);
+
+        setToolBar(toolbar, "微信文章列表");
+
         ptr.setListener(new PullToRefreshView.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -98,6 +110,8 @@ public class WechatListActivity extends DaggerActivity {
 
         wechatItemAdpater.addDataAll(itemList);
         wechatItemAdpater.notifyDataSetChanged();
+
+        showContent();
     }
 
     @Override
@@ -124,8 +138,7 @@ public class WechatListActivity extends DaggerActivity {
                     .setText(R.id.tv_wechat_item_from, item.getDescription())
                     .setText(R.id.tv_wechat_item_time, item.getCtime())
                     .setOnClickListener(R.id.ll_click, v -> {
-                        showToast("click");
-//                        WechatDetailsActivity.start(mContext, item.getTitle(), item.getUrl());
+                        WechatDetailsActivity.start(mContext, item.getTitle(), item.getUrl());
                     });
 
         }

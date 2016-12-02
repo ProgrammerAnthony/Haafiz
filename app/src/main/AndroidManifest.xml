@@ -30,13 +30,14 @@
         <activity android:name=".module.weather.WeatherActivity" />
         <activity android:name=".module.github.GithubActivity" />
         <activity android:name=".module.wechatlist.WechatListActivity" />
-        <activity android:name=".module.webview.WebViewCommentActivity" />
+
         <activity android:name=".module.segment.SegmentControlActivity" />
         <activity
             android:name=".module.videolist.VideoListActivity"
             android:configChanges="orientation|screenSize|layoutDirection"
             android:screenOrientation="portrait" />
         <activity android:name=".module.newslist.NewsListActivity" />
+        <activity android:name="com.anthony.library.base.WechatDetailsActivity" />
         <activity
             android:name="com.anthony.citypicker.CityPickerActivity"
             android:windowSoftInputMode="stateUnchanged|adjustPan" />

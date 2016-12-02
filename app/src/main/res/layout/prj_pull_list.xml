@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/LibMatchMatch">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LibMatchMatch.Vertical">
+
+    <include layout="@layout/lib_layout_toolbar" />
 
     <com.anthony.pullrefreshview.PullToRefreshView
         android:id="@+id/ptr"
@@ -12,8 +15,4 @@
             android:scrollbars="vertical" />
 
     </com.anthony.pullrefreshview.PullToRefreshView>
-
-    <!--    <include
-            layout="@layout/prj_layout_reload"
-            android:visibility="invisible" />-->
-</RelativeLayout>
+</LinearLayout>
