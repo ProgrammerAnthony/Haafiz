@@ -9,6 +9,9 @@ import com.anthony.app.module.weather.WeatherApi;
 import com.anthony.app.module.weather.WeatherData;
 import com.anthony.app.module.wechatlist.WXItemBean;
 import com.anthony.app.module.wechatlist.WechatApi;
+import com.anthony.app.module.zhihu.ZhihuDailyListBean;
+import com.anthony.app.module.zhihu.ZhiHuApi;
+import com.anthony.app.module.zhihu.ZhihuDailyDetailBean;
 import com.anthony.library.Constants;
 import com.anthony.library.DataManager;
 import com.anthony.library.data.bean.NewsItem;
@@ -106,11 +109,34 @@ public class DataRepository extends DataManager {
                 .compose(RxUtils.defaultSchedulers());
     }
 
+    /**
+     * load Zhihu Daily list data from Zhihu API,
+     * http://news-at.zhihu.com/api/3/news/latest
+     *
+     * @return
+     */
+    public Observable<ZhihuDailyListBean> getDailyData() {
+        return getHttpHelper().getApi(ZhiHuApi.class)
+                .getDailyList()
+                .compose(RxUtils.rxSchedulerHelper());
+    }
 
     /**
-     * 加载第一个tab 的url数据，返回新闻列表数据
+     * load Zhihu Daily Detail data from zhihu API
+     * @param id
+     * @return
+     */
+    public Observable<ZhihuDailyDetailBean> getZhihuDetail(int id) {
+        return getHttpHelper().getApi(ZhiHuApi.class)
+                .getDetailInfo(id)
+                .compose(RxUtils.defaultSchedulers());
+    }
+
+
+    /**
+     * load news list info
      *
-     * @param url 需要加载的url
+     * @param url url to load
      * @return NormalJsonInfo<NewsItem>
      */
 

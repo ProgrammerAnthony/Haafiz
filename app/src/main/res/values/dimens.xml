@@ -280,5 +280,6 @@
     <dimen name="txtsize_body">14sp</dimen>
     <dimen name="txtsize_caption">12sp</dimen>
 
+    <dimen name="detail_image_height">260dp</dimen>
 
 </resources>

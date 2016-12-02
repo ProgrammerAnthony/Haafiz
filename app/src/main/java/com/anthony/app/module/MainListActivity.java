@@ -63,13 +63,16 @@ public class MainListActivity extends DaggerActivity {
     }
 
     private void initData() {
+        //请在raw;//type_activity_map.properties 中查看对应关系
         strs.add(new Channel("StatusLayout 多状态布局", "1010"));
         strs.add(new Channel("Video List 视频播放列表", "1008"));
         strs.add(new Channel("News List 新闻列表", "1009"));
         strs.add(new Channel("StatusBarUtil 状态栏改变", "1011"));
         strs.add(new Channel("WeChat blog List 微信文章列表", "1012"));
+        strs.add(new Channel("Zhihu Daily List 知乎文章列表", "1013"));
         strs.add(new Channel("weather API 天气接口接入", "1005"));
-        strs.add(new Channel("tab 底部标签页面", "1001"));//请在raw;//type_activity_map.properties 中查看对应关系
+
+        strs.add(new Channel("tab 底部标签页面", "1001"));
         strs.add(new Channel("splash view 闪屏页", "1002"));
         strs.add(new Channel("city list 城市列表", "1003"));//com.anthony.citypicker.CityPickerActivity
         strs.add(new Channel("banner 广告栏", "1004"));
