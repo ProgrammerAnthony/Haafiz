@@ -11,7 +11,7 @@
         android:layout_width="48dp"
         android:layout_height="match_parent"
         android:layout_centerVertical="true"
-        android:background="@drawable/bg_primary2dark_sel"
+        android:background="@drawable/prj_bg_primary2dark_sel"
         android:padding="13dp"
         android:visibility="gone" />
 
@@ -19,7 +19,7 @@
         android:id="@+id/titlebar_tv_left"
         style="@style/TextViewSubhead"
         android:layout_height="match_parent"
-        android:background="@drawable/bg_primary2dark_sel"
+        android:background="@drawable/prj_bg_primary2dark_sel"
         android:gravity="center_vertical"
         android:paddingLeft="@dimen/margin_medium"
         android:paddingRight="@dimen/margin_medium"
@@ -41,7 +41,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:background="@drawable/bg_primary2dark_sel"
+        android:background="@drawable/prj_bg_primary2dark_sel"
         android:padding="13dp"
         android:visibility="gone" />
 
@@ -50,7 +50,7 @@
         style="@style/TextViewSubhead"
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"
-        android:background="@drawable/bg_primary2dark_sel"
+        android:background="@drawable/prj_bg_primary2dark_sel"
         android:gravity="center_vertical"
         android:paddingLeft="@dimen/margin_medium"
         android:paddingRight="@dimen/margin_medium"

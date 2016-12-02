@@ -1,4 +1,4 @@
-package com.anthony.library.base;
+package com.anthony.app.module.newslist;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -7,21 +7,24 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.anthony.library.MyApplication;
-import com.anthony.library.R;
+import com.anthony.app.R;
+import com.anthony.app.dagger.DaggerFragment;
+import com.anthony.app.dagger.DataRepository;
+import com.anthony.app.dagger.component.ActivityComponent;
 import com.anthony.library.data.bean.Channel;
 import com.anthony.library.data.bean.NewsItem;
 import com.anthony.library.data.bean.NormalJsonInfo;
 import com.anthony.library.data.net.HttpSubscriber;
 import com.anthony.library.utils.SpUtil;
 import com.anthony.library.utils.TimeUtils;
-import com.anthony.library.widgets.TopicWrapper;
 import com.anthony.pullrefreshview.PullToRefreshView;
 import com.anthony.rvhelper.adapter.MultiItemTypeAdapter;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.util.List;
+
+import javax.inject.Inject;
 
 import rx.Subscription;
 import rx.functions.Action0;
@@ -33,7 +36,7 @@ import rx.functions.Action0;
  * <p>
  * todo preload data !!!!
  */
-public abstract class AbsListFragment extends AbsBaseFragment {
+public abstract class AbsListFragment extends DaggerFragment {
 
     public static String EXTRA_CHANNEL = "channel";
     //    public static String EXTRA_URL = "url";
@@ -52,17 +55,20 @@ public abstract class AbsListFragment extends AbsBaseFragment {
     //    DataManager mDataManager;
     protected Gson mGson;
     private String newUrl = "";
-
+    @Inject
+    DataRepository mDataRepository;
 
     @Override
     protected int getLayoutId() {
-        return R.layout.lib_fragment_pull_list;
+        return R.layout.prj_fragment_pull_list;
+
     }
 
-//    @Override
-//    protected void initDagger2(ActivityComponent activityComponent) {
-//        activityComponent.inject(this);
-//    }
+
+    @Override
+    protected void initDagger2(ActivityComponent activityComponent) {
+        activityComponent.inject(this);
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -171,7 +177,7 @@ public abstract class AbsListFragment extends AbsBaseFragment {
 
     protected void loadData(final int requestPageIndex) {
         newUrl = getRequestUrl(requestPageIndex);
-        Subscription subscription = MyApplication.get(getActivity()).getDataManager().loadNewsJsonInfo(newUrl)
+        Subscription subscription = mDataRepository.loadNewsJsonInfo(newUrl)
                 .doOnTerminate(new Action0() {
                     @Override
                     public void call() {

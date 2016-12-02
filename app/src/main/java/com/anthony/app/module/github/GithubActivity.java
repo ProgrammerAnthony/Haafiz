@@ -14,7 +14,7 @@ import com.anthony.app.dagger.DataRepository;
 import com.anthony.app.dagger.component.ActivityComponent;
 import com.anthony.library.data.bean.NewsItem;
 import com.anthony.library.data.net.HttpSubscriber;
-import com.anthony.library.widgets.webview.WebViewCommentActivity;
+import com.anthony.app.module.webview.WebViewCommentActivity;
 import com.anthony.rvhelper.adapter.CommonAdapter;
 import com.anthony.rvhelper.base.ViewHolder;
 import com.anthony.rvhelper.divider.RecycleViewDivider;

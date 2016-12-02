@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
     <include
-        layout="@layout/lib_top_bar_web_view"
+        layout="@layout/prj_top_bar_web_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
@@ -15,7 +15,7 @@
         android:layout_height="0dp"
         android:layout_weight="10">
 
-        <com.anthony.app.common.widgets.CommentView
+        <com.anthony.app.module.webview.CommentView
             android:id="@+id/layout_comments"
             android:layout_width="match_parent"
             android:layout_height="50dp"

@@ -25,7 +25,7 @@ import java.util.List;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import rx.subscriptions.CompositeSubscription;
-import timber.log.Timber;
+
 
 
 /**
@@ -75,7 +75,7 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
 //        injectDagger(activityComponent());
 //set timber tag
         TAG_LOG = this.getClass().getSimpleName();
-        Timber.tag(TAG_LOG);
+//        Timber.tag(TAG_LOG);
 //save activities stack
         BaseAppManager.getInstance().addActivity(this);
 //rxjava subscriptions,use it like  --->       mSubscriptions.add(subscription)
@@ -174,14 +174,10 @@ public abstract class AbsBaseActivity extends AppCompatActivity {
 //        ToastUtils.getInstance().showToast(content);
 //    }
 
-    /**
-     * show log
-     *
-     * @param logInfo
-     */
-    protected void showLog(String logInfo) {
-        Timber.i(logInfo);
-    }
+
+//    protected void showLog(String logInfo) {
+//        Timber.i(logInfo);
+//    }
 
     protected void showContent() {
         showContent(null);

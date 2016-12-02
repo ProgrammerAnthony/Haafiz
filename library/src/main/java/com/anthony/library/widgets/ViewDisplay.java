@@ -11,9 +11,7 @@ import com.anthony.library.Constants;
 import com.anthony.library.base.AbsBaseFragment;
 import com.anthony.library.data.bean.Channel;
 import com.anthony.library.utils.FileUtil;
-import com.anthony.library.widgets.webview.WebViewCommentActivity;
 
-import java.io.Serializable;
 import java.util.HashMap;
 
 
@@ -60,20 +58,7 @@ public class ViewDisplay {
             context.startActivity(intent);
         }
     }
-    public void showActivityWithBundle(Context context,String type,Serializable item){
-        String activityName = mTypeActivityNameMap.get(type);
-        if (activityName != null) {
-            Intent intent = new Intent();
-            intent.setClassName(context, activityName);
-            if (!(context instanceof Activity)) {
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            }
-            if(context instanceof WebViewCommentActivity){
-                intent.putExtra(WebViewCommentActivity.WEB_VIEW_ITEM, item);
-            }
-            context.startActivity(intent);
-        }
-    }
+
 
     /**
      * create fragment

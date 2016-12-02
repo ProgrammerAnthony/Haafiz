@@ -2,59 +2,6 @@
 <resources>
 
 
-    <style name="Widget.MaterialProgressBar.ProgressBar.Horizontal" parent="android:Widget.ProgressBar.Horizontal">
-        <!--
-        Disabled for correct behavior on Android 4.x
-        <item name="android:progressDrawable">@null</item>
-        -->
-        <item name="android:indeterminateDrawable">@null</item>
-        <item name="android:minHeight">16dp</item>
-        <item name="android:maxHeight">16dp</item>
-    </style>
-
-
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorButtonNormal">@color/colorAccent</item>
-    </style>
-
-
-    <style name="SplashTheme" parent="AppTheme">
-        <item name="android:windowBackground">@mipmap/splash</item>
-    </style>
-
-    <!-- 透明启动主题 -->
-    <style name="AppStartLoadTranslucent" parent="AppTheme">
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowNoTitle">true</item>
-    </style>
-
-    <!--订阅pop动画-->
-<!--    <style name="subscribe_pop_window_anim_style">
-        <item name="android:windowEnterAnimation">@anim/subscribe_pop_show_anim</item>
-        <item name="android:windowExitAnimation">@anim/subscribe_pop_hidden_anim</item>
-    </style>-->
-
-    <!-- 评论编辑 -->
-    <style name="dialog_comment" parent="@android:style/Theme.Dialog">
-        <item name="android:windowFrame">@null</item><!--边框-->
-        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
-        <item name="android:windowNoTitle">true</item><!--无标题-->
-        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
-        <item name="android:backgroundDimEnabled">true</item><!--背景是否变暗-->
-        <item name="android:backgroundDimAmount">0.4</item>
-        <item name="android:windowCloseOnTouchOutside">true</item>
-        <item name="android:windowSoftInputMode">adjustResize</item>
-    </style>
-
-    <!-- 选择照片弹出动画 -->
-<!--    <style name="choose_image_pop_window_anim_style">
-        <item name="android:windowEnterAnimation">@anim/choose_image_pop_show_anim</item>
-        <item name="android:windowExitAnimation">@anim/choose_image_pop_hidden_anim</item>
-    </style>-->
 
 
     <!--Circle ImageView-->
@@ -64,13 +11,6 @@
         <attr name="civ_border_overlay" format="boolean" />
         <attr name="civ_fill_color" format="color" />
     </declare-styleable>
-
-    <style name="Toolbar" parent="Theme.AppCompat">
-        <item name="android:background">@color/colorPrimary</item>
-        <item name="android:textColorPrimary">#FFF</item>
-        <item name="android:textColorSecondary">#FFF</item>
-        <item name="actionMenuTextColor">#FFF</item>
-    </style>
 
     <style name="TextViewTitle" parent="TextAppearance.AppCompat.Title">
         <item name="android:layout_width">wrap_content</item>

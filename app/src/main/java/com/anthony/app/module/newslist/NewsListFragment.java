@@ -7,12 +7,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.anthony.app.R;
-import com.anthony.app.dagger.DaggerListFragment;
 import com.anthony.app.dagger.component.ActivityComponent;
 import com.anthony.library.data.bean.NewsItem;
 import com.anthony.library.data.bean.NormalJsonInfo;
 import com.anthony.library.data.database.dao.NewsItemDao;
-import com.anthony.library.widgets.webview.WebViewCommentActivity;
+import com.anthony.app.module.webview.WebViewCommentActivity;
 import com.anthony.rvhelper.adapter.MultiItemTypeAdapter;
 import com.anthony.rvhelper.divider.RecycleViewDivider;
 
@@ -25,13 +24,11 @@ import javax.inject.Inject;
  * Class Note:
  * normal news list fragment
  */
-public class NewsListFragment extends DaggerListFragment {
+public class NewsListFragment extends AbsListFragment {
 
     @Inject
     NewsItemDao newsItemDao;
 
-//    @Inject
-//    NewsItemDaoOld newsItemDao;
 
     @Override
     protected RecyclerView.LayoutManager getLayoutManager() {

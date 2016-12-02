@@ -1,7 +1,8 @@
 package com.anthony.library.data.net;
 
+import com.anthony.library.utils.LogUtil;
+
 import rx.Subscriber;
-import timber.log.Timber;
 
 /**
  * Created by Anthony on 2016/7/8.
@@ -14,11 +15,11 @@ import timber.log.Timber;
 public abstract class HttpSubscriber<T> extends Subscriber<T> {
     @Override
     public void onCompleted() {
-        Timber.i("HttpHelper Subscriber On Completed");
+        LogUtil.i("HttpHelper Subscriber On Completed");
     }
 
     @Override
     public void onError(Throwable e) {
-        Timber.e("HttpHelper Subscriber On Error: " + e.toString());
+        LogUtil.e("HttpHelper Subscriber On Error: " + e.toString());
     }
 }

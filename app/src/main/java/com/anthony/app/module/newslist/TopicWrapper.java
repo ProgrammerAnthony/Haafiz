@@ -1,12 +1,12 @@
-package com.anthony.library.widgets;
+package com.anthony.app.module.newslist;
 
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 
+import com.anthony.app.module.webview.WebViewCommentActivity;
 import com.anthony.library.data.bean.NewsItem;
 import com.anthony.library.widgets.banner.RecommendController;
-import com.anthony.library.widgets.webview.WebViewCommentActivity;
 import com.anthony.rvhelper.wrapper.HeaderAndFooterWrapper;
 
 import java.util.List;

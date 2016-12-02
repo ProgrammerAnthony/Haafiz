@@ -19,9 +19,9 @@ import com.anthony.app.module.videolist.NewsVideoFragment;
 import com.anthony.app.module.videolist.VideoListActivity;
 import com.anthony.app.module.weather.WeatherActivity;
 import com.anthony.app.module.wechatlist.WechatListActivity;
-import com.anthony.library.base.AbsListFragment;
-import com.anthony.library.widgets.imagebrowse.ImageBrowserActivity;
-import com.anthony.library.widgets.webview.WebViewCommentActivity;
+import com.anthony.app.module.newslist.AbsListFragment;
+import com.anthony.app.module.imagebrowse.ImageBrowserActivity;
+import com.anthony.app.module.webview.WebViewCommentActivity;
 
 import dagger.Component;
 

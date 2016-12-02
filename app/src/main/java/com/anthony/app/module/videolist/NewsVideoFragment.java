@@ -13,8 +13,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.anthony.app.R;
-import com.anthony.app.dagger.DaggerListFragment;
 import com.anthony.app.dagger.component.ActivityComponent;
+import com.anthony.app.module.newslist.AbsListFragment;
 import com.anthony.imageloader.ImageLoader;
 import com.anthony.imageloader.ImageLoaderUtil;
 import com.anthony.library.data.RxBus;
@@ -45,7 +45,7 @@ import tv.danmaku.ijk.media.player.IMediaPlayer;
  * video list fragment is a sub-component of {@link VideoListActivity}
  * currently load data from local "raw://video_list_data"
  */
-public class NewsVideoFragment extends DaggerListFragment {
+public class NewsVideoFragment extends AbsListFragment {
     private int current_play_position = -1; //正在播放的item位置，如果为-1表明当前没有视频在播放
     private VideoPlayView mVideoPlayView;
     private static final int PLAY_MODE_IN_LIST = 0;
@@ -57,17 +57,17 @@ public class NewsVideoFragment extends DaggerListFragment {
     private FrameLayout mVideoPlayFullHolder;
     private ImageView mClosePlayWindowBtn;
     private LinearLayoutManager mLayoutManager;
-//    @Inject
+    //    @Inject
 //    RxBus rxBus;
     @Inject
-NewsItemDao newsItemDao;
+    NewsItemDao newsItemDao;
     @Inject
     ImageLoaderUtil imageLoaderUtil;
 
 
     @Override
     protected int getLayoutId() {
-        return R.layout.lib_fragment_list_video;
+        return R.layout.prj_fragment_list_video;
     }
 
     @Override
@@ -77,7 +77,7 @@ NewsItemDao newsItemDao;
 
     @Override
     protected void initViews(View rootView, Bundle savedInstanceState) {
-        super.initViews(rootView,  savedInstanceState);
+        super.initViews(rootView, savedInstanceState);
 
         mVideoPlayWindowLayout = (RelativeLayout) rootView.findViewById(R.id.layout_play_window);
         mVideoPlayWindowLayout.setOnClickListener(new View.OnClickListener() {
@@ -461,7 +461,7 @@ NewsItemDao newsItemDao;
 
     public class NewsVideoAdapter extends CommonAdapter<NewsItem> {
         public NewsVideoAdapter(Context context) {
-            super(context, R.layout.lib_list_item_video);
+            super(context, R.layout.prj_list_item_video);
         }
 
         @Override
@@ -488,7 +488,6 @@ NewsItemDao newsItemDao;
             });
         }
     }
-
 
 
 }

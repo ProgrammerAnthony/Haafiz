@@ -17,7 +17,7 @@ import rx.subjects.Subject;
 
 /**
  * 用RxJava实现的EventBus
- *
+ * not used now
  */
 
 public class RxBus {

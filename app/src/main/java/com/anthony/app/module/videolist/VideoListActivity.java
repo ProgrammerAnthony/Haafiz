@@ -40,8 +40,7 @@ public class VideoListActivity extends DaggerActivity {
     FrameLayout layoutContent;
     @BindView(R.id.titleLayout)
     RelativeLayout titleLayout;
-    //    @Inject
-//    RxBus rxBus;
+
     public static String URL = "url";
     public static String NAME = "name";
 
@@ -51,7 +50,7 @@ public class VideoListActivity extends DaggerActivity {
 
     @Override
     protected int getContentViewID() {
-        return R.layout.lib_title_content;
+        return R.layout.prj_title_content;
     }
 
     @Override

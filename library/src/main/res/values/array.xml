@@ -4,9 +4,9 @@
 
     <!-- 数据库Entity Class -->
     <string-array name="db_tb">
-        <item>com.anthony.app.common.data.bean.Channel</item>
-        <item>com.anthony.app.common.data.bean.NewsItem</item>
-        <item>com.anthony.app.common.data.bean.OfflineResource</item>
+        <item>com.anthony.library.data.bean.Channel</item>
+        <item>com.anthony.library.data.bean.NewsItem</item>
+        <item>com.anthony.library.data.bean.OfflineResource</item>
     </string-array>
 
 

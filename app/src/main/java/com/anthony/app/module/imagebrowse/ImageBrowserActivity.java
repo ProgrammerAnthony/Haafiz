@@ -1,4 +1,4 @@
-package com.anthony.library.widgets.imagebrowse;
+package com.anthony.app.module.imagebrowse;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,43 +16,44 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.anthony.app.R;
+import com.anthony.app.dagger.DaggerActivity;
+import com.anthony.app.dagger.component.ActivityComponent;
+import com.anthony.app.module.webview.CommentView;
 import com.anthony.imageloader.ImageLoader;
 import com.anthony.imageloader.ImageLoaderUtil;
-import com.anthony.library.R;
-import com.anthony.library.base.AbsBaseActivity;
 import com.anthony.library.data.bean.Image;
-import com.anthony.library.widgets.CommentView;
 import com.bm.library.PhotoView;
 
 import java.util.List;
 
+import butterknife.BindView;
 
 
-
-public class ImageBrowserActivity extends AbsBaseActivity {
+public class ImageBrowserActivity extends DaggerActivity {
     public static String IMAGE_BROWSER_LIST = "ImageBrowserList";
     public static String IMAGE_BROWSER_TITLE = "ImageBrowserTitle";
     public static String IMAGE_BROWSER_INIT_SRC = "ImageBrowserInitSrc";
     public static String IMAGE_BROWSER_URL = "ImageBrowserUrl";
-    //    @BindView(R.id.view_pager)
+    @BindView(R.id.view_pager)
     ViewPager mViewPager;
-    //    @BindView(R.id.tv_page_index)
+    @BindView(R.id.tv_page_index)
     TextView mPageIndex;
-    //    @BindView(R.id.layout_img_top_bar)
+    @BindView(R.id.layout_img_top_bar)
     RelativeLayout mTopBar;
-    //    @BindView(R.id.layout_comment)
+    @BindView(R.id.layout_comment)
     CommentView mCommentView;
-    //    @BindView(R.id.tv_img_title)
+    @BindView(R.id.tv_img_title)
     TextView mImgTitle;
-    //    @BindView(R.id.tv_img_description)
+    @BindView(R.id.tv_img_description)
     TextView mImgDescription;
-    //    @BindView(R.id.layout_description)
+    @BindView(R.id.layout_description)
     LinearLayout mLayoutDescription;
-    //    @BindView(R.id.tv_page_index_light_off)
+    @BindView(R.id.tv_page_index_light_off)
     TextView mPageIndexLightOff;
-    //    @BindView(R.id.iv_download)
+    @BindView(R.id.iv_download)
     ImageView mIvDownload;
-    //    @BindView(R.id.layout_light_off)
+    @BindView(R.id.layout_light_off)
     RelativeLayout mLayoutLightOff;
 
     private List<Image> mList;
@@ -67,27 +68,27 @@ public class ImageBrowserActivity extends AbsBaseActivity {
 
     @Override
     protected int getContentViewID() {
-        return R.layout.lib_prj_activity_image_browser;
+        return R.layout.prj_activity_image_browser;
     }
 
-//    @Override
-//    protected void injectDagger(ActivityComponent activityComponent) {
-//        activityComponent.inject(this);
-//    }
+    @Override
+    protected void injectDagger(ActivityComponent activityComponent) {
+        activityComponent.inject(this);
+    }
 
     @Override
     protected void initViewsAndEvents(Bundle savedInstanceState) {
 //        StatusBarCompat.setStatusBarColor(this, getResources().getColor(R.color.common_tv_dark), 0);
-        mViewPager = (ViewPager) findViewById(R.id.view_pager);
-        mPageIndex = (TextView) findViewById(R.id.tv_page_index);
-        mTopBar = (RelativeLayout) findViewById(R.id.layout_img_top_bar);
-        mCommentView = (CommentView) findViewById(R.id.layout_comment);
-        mImgTitle = (TextView) findViewById(R.id.tv_img_title);
-        mImgDescription = (TextView) findViewById(R.id.tv_img_description);
-        mLayoutDescription = (LinearLayout) findViewById(R.id.layout_description);
-        mPageIndexLightOff = (TextView) findViewById(R.id.tv_page_index_light_off);
-        mIvDownload = (ImageView) findViewById(R.id.iv_download);
-        mLayoutLightOff = (RelativeLayout) findViewById(R.id.layout_light_off);
+//        mViewPager = (ViewPager) findViewById(R.id.view_pager);
+//        mPageIndex = (TextView) findViewById(R.id.tv_page_index);
+//        mTopBar = (RelativeLayout) findViewById(R.id.layout_img_top_bar);
+//        mCommentView = (CommentView) findViewById(R.id.layout_comment);
+//        mImgTitle = (TextView) findViewById(R.id.tv_img_title);
+//        mImgDescription = (TextView) findViewById(R.id.tv_img_description);
+//        mLayoutDescription = (LinearLayout) findViewById(R.id.layout_description);
+//        mPageIndexLightOff = (TextView) findViewById(R.id.tv_page_index_light_off);
+//        mIvDownload = (ImageView) findViewById(R.id.iv_download);
+//        mLayoutLightOff = (RelativeLayout) findViewById(R.id.layout_light_off);
 
 
         Intent intent = getIntent();

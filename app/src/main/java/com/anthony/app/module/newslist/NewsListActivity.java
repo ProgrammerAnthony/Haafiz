@@ -49,8 +49,10 @@ public class NewsListActivity extends DaggerActivity {
 
     @Override
     protected int getContentViewID() {
-        return R.layout.lib_title_content;
+        return R.layout.prj_title_content;
     }
+
+
 
     @Override
     protected void initViewsAndEvents(Bundle savedInstanceState) {

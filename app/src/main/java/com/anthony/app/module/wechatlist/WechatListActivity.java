@@ -102,7 +102,7 @@ public class WechatListActivity extends DaggerActivity {
 
     @Override
     protected int getContentViewID() {
-        return R.layout.lib_pull_list;
+        return R.layout.prj_pull_list;
     }
 
     @Override

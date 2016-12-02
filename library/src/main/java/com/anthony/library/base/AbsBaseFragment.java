@@ -15,7 +15,7 @@ import com.anthony.library.R;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import rx.subscriptions.CompositeSubscription;
-import timber.log.Timber;
+
 
 /**
  * Created by Anthony on 2016/2/25.
@@ -52,7 +52,7 @@ public abstract class AbsBaseFragment extends Fragment {
 //    @Inject
 //    ToastUtils mToastUtils;
 
-//    @Inject
+    //    @Inject
 //    DataManager mDataManager;
 
 
@@ -69,7 +69,7 @@ public abstract class AbsBaseFragment extends Fragment {
         super.onCreate(savedInstanceState);
 //set Timber as log util
         TAG_LOG = this.getClass().getSimpleName();
-        Timber.tag(TAG_LOG);
+//        Timber.tag(TAG_LOG);
 
 //url and title
         if (getArguments() != null) {
@@ -89,7 +89,7 @@ public abstract class AbsBaseFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        if(getLayoutView()!=null){
+        if (getLayoutView() != null) {
             return getLayoutView();
         }
         if (getLayoutId() != 0) {
@@ -107,7 +107,7 @@ public abstract class AbsBaseFragment extends Fragment {
         //bind The View returned by {@link #onCreateView(LayoutInflater, ViewGroup, Bundle)}.
         mUnBinder = ButterKnife.bind(this, view);
         //init views events here so we can use ButterKnife
-        initViews(view,savedInstanceState);
+        initViews(view, savedInstanceState);
 
     }
 
@@ -168,15 +168,18 @@ public abstract class AbsBaseFragment extends Fragment {
 //    }
 
 
-    /**
-     * show log
-     * @param logInfo
-     */
-    protected void showLog(String logInfo) {
-        Timber.i(logInfo);
-    }
+
+//    protected void showLog(String logInfo) {
+//        Timber.i(logInfo);
+//    }
 
 //    public DataManager getDataManager() {
+//        if (mContext == null) {
+//            return null;
+//        }
+//        if (mDataManager == null) {
+//            mDataManager = MyApplication.get(mContext).getDataManager();
+//        }
 //        return mDataManager;
 //    }
 

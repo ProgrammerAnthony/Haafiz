@@ -1,4 +1,4 @@
-package com.anthony.library.widgets.webview;
+package com.anthony.app.module.webview;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,7 +6,7 @@ import android.os.Handler;
 import android.webkit.JavascriptInterface;
 
 import com.anthony.library.data.bean.Image;
-import com.anthony.library.widgets.imagebrowse.ImageBrowserActivity;
+import com.anthony.app.module.imagebrowse.ImageBrowserActivity;
 
 import java.util.ArrayList;
 import java.util.List;

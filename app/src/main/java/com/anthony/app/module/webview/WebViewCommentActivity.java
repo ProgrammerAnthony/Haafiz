@@ -1,4 +1,4 @@
-package com.anthony.library.widgets.webview;
+package com.anthony.app.module.webview;
 
 import android.graphics.Bitmap;
 import android.net.http.SslError;
@@ -20,18 +20,17 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.anthony.app.R;
+import com.anthony.app.dagger.DaggerActivity;
+import com.anthony.app.dagger.DaggerApplication;
+import com.anthony.app.dagger.component.ActivityComponent;
 import com.anthony.library.Constants;
-import com.anthony.library.MyApplication;
-import com.anthony.library.R;
-import com.anthony.library.base.AbsBaseActivity;
 import com.anthony.library.data.bean.NewsItem;
 import com.anthony.library.data.bean.OfflineResource;
 import com.anthony.library.data.database.dao.OfflineResourceDao;
 import com.anthony.library.utils.AppUtils;
 import com.anthony.library.utils.FileUtil;
 import com.anthony.library.utils.SettingUtil;
-import com.anthony.library.utils.ToastUtils;
-import com.anthony.library.widgets.CommentView;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -39,7 +38,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
+import javax.inject.Inject;
 
+import butterknife.BindView;
 
 
 /**
@@ -47,23 +48,23 @@ import java.io.InputStream;
  * Class Note:
  * a webview Activity with comment layout below
  */
-public class WebViewCommentActivity extends AbsBaseActivity {
+public class WebViewCommentActivity extends DaggerActivity {
 
-    //    @BindView(R.id.txt_title)
+    @BindView(R.id.txt_title)
     TextView txt_title;
-    //    @BindView(R.id.layout_comments)
+    @BindView(R.id.layout_comments)
     CommentView mCommentView;
-    //    @BindView(R.id.web_view)
+    @BindView(R.id.web_view)
     WebView mWebView;
-    //    @BindView(R.id.progress)
+    @BindView(R.id.progress)
     ProgressBar progress;
-    //    @BindView(R.id.prj_layout_reload)
+    @BindView(R.id.prj_layout_reload)
     RelativeLayout mReloadLayout;
 
-    MyApplication mApplication;
 
+    @Inject
+    DaggerApplication mApplication;
 
-    ToastUtils toastUtils;
 
     public static String WEB_VIEW_ITEM = "WebViewItem";
     public static int TEXT_SIZE_SMALL = 75;
@@ -74,23 +75,22 @@ public class WebViewCommentActivity extends AbsBaseActivity {
 
     @Override
     protected int getContentViewID() {
-        return R.layout.lib_activity_web_view;
+        return R.layout.prj_activity_web_view;
     }
 
-//    @Override
-//    protected void injectDagger(ActivityComponent activityComponent) {
-//        activityComponent.inject(this);
-//    }
+    @Override
+    protected void injectDagger(ActivityComponent activityComponent) {
+        activityComponent.inject(this);
+    }
 
     @Override
     protected void initViewsAndEvents(Bundle savedInstanceState) {
-        txt_title = (TextView) findViewById(R.id.txt_title);
-        mCommentView = (CommentView) findViewById(R.id.layout_comments);
-        mWebView = (WebView) findViewById(R.id.web_view);
-        progress = (ProgressBar) findViewById(R.id.progress);
-        mReloadLayout = (RelativeLayout) findViewById(R.id.prj_layout_reload);
+//        txt_title = (TextView) findViewById(R.id.txt_title);
+//        mCommentView = (CommentView) findViewById(R.id.layout_comments);
+//        mWebView = (WebView) findViewById(R.id.web_view);
+//        progress = (ProgressBar) findViewById(R.id.progress);
+//        mReloadLayout = (RelativeLayout) findViewById(R.id.prj_layout_reload);
 
-        mApplication = (MyApplication) getApplicationContext();
 
         dao = new OfflineResourceDao(mApplication);
         mItem = (NewsItem) getIntent().getSerializableExtra(WEB_VIEW_ITEM);
@@ -253,7 +253,7 @@ public class WebViewCommentActivity extends AbsBaseActivity {
     private class MyWebChromeClient extends WebChromeClient {
         @Override
         public boolean onJsAlert(WebView view, String url, String message, JsResult result) {
-            toastUtils.showToast(message);
+            showToast(message);
             result.confirm();
             return true;
         }

@@ -4,7 +4,7 @@
     style="@style/LibMatchMatch.Vertical">
 
     <include
-        layout="@layout/lib_normal_top_bar"
+        layout="@layout/prj_normal_top_bar"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3" />

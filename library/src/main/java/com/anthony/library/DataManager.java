@@ -6,25 +6,16 @@ import android.content.Intent;
 import com.anthony.library.data.EventPosterHelper;
 import com.anthony.library.data.HttpHelper;
 import com.anthony.library.data.PreferencesHelper;
-import com.anthony.library.data.bean.NewsItem;
-import com.anthony.library.data.bean.NormalJsonInfo;
 import com.anthony.library.data.database.DatabaseHelper;
 import com.anthony.library.data.download.DownloadEvent;
 import com.anthony.library.data.download.DownloadFinishEvent;
 import com.anthony.library.data.download.DownloadService;
 import com.anthony.library.data.event.UploadEvent;
 import com.anthony.library.data.event.UploadFinishEvent;
-import com.anthony.library.data.net.HttpResult;
-import com.anthony.library.data.net.HttpResultFunc;
 import com.anthony.library.data.net.RemoteApi;
 import com.anthony.library.data.upload.UploadParam;
 import com.anthony.library.data.upload.UploadService;
 import com.anthony.library.utils.FileUtil;
-import com.anthony.library.utils.RxUtils;
-import com.anthony.library.utils.SpUtil;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -34,9 +25,7 @@ import okhttp3.ResponseBody;
 import rx.Observable;
 import rx.exceptions.Exceptions;
 import rx.functions.Action0;
-import rx.functions.Action1;
 import rx.functions.Func1;
-import timber.log.Timber;
 
 /**
  * Created by Anthony on 2016/6/12.
@@ -63,7 +52,7 @@ public class DataManager {
 
     DatabaseHelper mDatabaseHelper;
 
-    private Context mContext;
+    protected Context mContext;
 
 
     public DataManager(Context context) {
@@ -145,35 +134,6 @@ public class DataManager {
                         }
                     }
                 });
-    }
-
-    /**
-     * 加载第一个tab 的url数据，返回新闻列表数据
-     *
-     * @param url 需要加载的url
-     * @return NormalJsonInfo<NewsItem>
-     */
-
-    public Observable<NormalJsonInfo<NewsItem>> loadNewsJsonInfo(final String url) {
-        final Gson gson = new GsonBuilder().create();
-        return loadString(url)
-                .doOnNext(new Action1<String>() {
-                    @Override
-                    public void call(String result) {
-                        SpUtil.putString(mContext, url, result);
-                        Timber.i("currently data string news ---> " + SpUtil.getString(mContext, url));
-                    }
-                })
-                .flatMap(new Func1<String, Observable<HttpResult<NormalJsonInfo<NewsItem>>>>() {
-                    @Override
-                    public Observable<HttpResult<NormalJsonInfo<NewsItem>>> call(String s) {
-                        HttpResult<NormalJsonInfo<NewsItem>> obj = gson.fromJson(s,
-                                new TypeToken<HttpResult<NormalJsonInfo<NewsItem>>>() {
-                                }.getType());
-                        return Observable.just(obj);
-                    }
-                }).map(new HttpResultFunc<>())
-                .compose(RxUtils.defaultSchedulers());
     }
 
 
