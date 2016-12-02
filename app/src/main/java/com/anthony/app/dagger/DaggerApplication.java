@@ -2,14 +2,11 @@ package com.anthony.app.dagger;
 
 
 import android.content.Context;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
 
 import com.anthony.app.dagger.component.ApplicationComponent;
 import com.anthony.app.dagger.component.DaggerApplicationComponent;
 import com.anthony.app.dagger.module.ApplicationModule;
 import com.anthony.library.MyApplication;
-import com.avos.avoscloud.AVOSCloud;
 
 /**
  * Created by Anthony on 2016/12/1.
@@ -24,7 +21,7 @@ public class DaggerApplication extends MyApplication {
     public void onCreate() {
         super.onCreate();
         getAppComponent().inject(this);
-        initAVOS();
+//        initAVOS();
     }
 
     public ApplicationComponent getAppComponent() {
@@ -36,18 +33,18 @@ public class DaggerApplication extends MyApplication {
     }
 
 
-    private void initAVOS() {
-        try {
-            ApplicationInfo appInfo = getPackageManager()
-                    .getApplicationInfo(getPackageName(), PackageManager.GET_META_DATA);
-            String id = appInfo.metaData.getString("AVOS_APP_ID");
-            String key = appInfo.metaData.getString("AVOS_APP_KEY");
-            // init LeanCloud AppId and AppKey
-            AVOSCloud.initialize(this, id, key);
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
+//    private void initAVOS() {
+//        try {
+//            ApplicationInfo appInfo = getPackageManager()
+//                    .getApplicationInfo(getPackageName(), PackageManager.GET_META_DATA);
+//            String id = appInfo.metaData.getString("AVOS_APP_ID");
+//            String key = appInfo.metaData.getString("AVOS_APP_KEY");
+//            // init LeanCloud AppId and AppKey
+//            AVOSCloud.initialize(this, id, key);
+//        } catch (PackageManager.NameNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     public static DaggerApplication get(Context context) {
         return (DaggerApplication) context.getApplicationContext();

@@ -1,15 +1,4 @@
 <resources>
     <string name="app_name">Android Architect</string>
-    <string name="exit_app">再按一次返回键退出程序</string>
 
-    <string name="prj_reload_hint">加载数据失败 点击屏幕重试</string>
-
-
-    <string name="top_rated_movies_topic">Top Rated Movies</string>
-    <string name="most_popular_movies_topic">Most Popular Movies</string>
-    <string name="input_to_search">请输入搜索关键字</string>
-    <string name="retrofit_network_error">网络访问出错，请稍后再试</string>
-    <string name="setting">设置</string>
-    <string name="dialog_negative">取消</string>
-    <string name="dialog_positive">确定</string>
 </resources>

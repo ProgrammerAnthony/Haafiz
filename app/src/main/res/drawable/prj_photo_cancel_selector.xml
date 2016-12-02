@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item android:drawable="@drawable/prj_photo_cancel_pressed" android:state_focused="true" />
-    <item android:drawable="@drawable/prj_photo_cancel_pressed" android:state_focused="false" android:state_pressed="true" />
-    <item android:drawable="@drawable/prj_photo_cancel_normal" android:state_focused="false" />
-
-</selector>
