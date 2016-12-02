@@ -6,7 +6,7 @@ import android.view.View;
 
 import com.anthony.app.R;
 import com.anthony.app.dagger.component.ActivityComponent;
-import com.anthony.library.base.WechatDetailsActivity;
+import com.anthony.library.base.WebviewDetailsActivity;
 import com.anthony.library.data.bean.NewsItem;
 import com.anthony.library.data.bean.NormalJsonInfo;
 import com.anthony.library.data.database.dao.NewsItemDao;
@@ -52,7 +52,7 @@ public class NewsListFragment extends AbsListFragment {
                 if (item.getUrl().endsWith(".json")) {  //if suffix is json end ,load list data ,else load webview
                     // todo
                 } else {
-                    WechatDetailsActivity.start(mContext, item.getTitle(), item.getUrl());
+                    WebviewDetailsActivity.start(mContext, item.getTitle(), item.getUrl());
                 }
 
 

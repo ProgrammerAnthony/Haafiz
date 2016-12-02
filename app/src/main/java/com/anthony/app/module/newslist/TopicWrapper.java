@@ -3,7 +3,7 @@ package com.anthony.app.module.newslist;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 
-import com.anthony.library.base.WechatDetailsActivity;
+import com.anthony.library.base.WebviewDetailsActivity;
 import com.anthony.library.data.bean.NewsItem;
 import com.anthony.library.widgets.banner.RecommendController;
 import com.anthony.rvhelper.wrapper.HeaderAndFooterWrapper;
@@ -22,7 +22,7 @@ public class TopicWrapper extends HeaderAndFooterWrapper {
         mController.setOnClickListener(new RecommendController.OnItemClickListener() {
             @Override
             public void onItemClick(NewsItem topic) {
-                WechatDetailsActivity.start(mContext, topic.getTitle(), topic.getUrl());
+                WebviewDetailsActivity.start(mContext, topic.getTitle(), topic.getUrl());
             }
         });
         addHeaderView(mController.getView());

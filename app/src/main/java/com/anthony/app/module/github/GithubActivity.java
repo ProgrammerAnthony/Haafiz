@@ -11,7 +11,7 @@ import com.anthony.app.R;
 import com.anthony.app.dagger.DaggerActivity;
 import com.anthony.app.dagger.DataRepository;
 import com.anthony.app.dagger.component.ActivityComponent;
-import com.anthony.library.base.WechatDetailsActivity;
+import com.anthony.library.base.WebviewDetailsActivity;
 import com.anthony.library.data.net.HttpSubscriber;
 import com.anthony.rvhelper.adapter.CommonAdapter;
 import com.anthony.rvhelper.base.ViewHolder;
@@ -96,7 +96,7 @@ public class GithubActivity extends DaggerActivity {
                 @Override
                 public void onClick(View view) {
 
-                    WechatDetailsActivity.start(mContext, user.getLogin(), user.getHtmlUrl());
+                    WebviewDetailsActivity.start(mContext, user.getLogin(), user.getHtmlUrl());
                 }
             });
 

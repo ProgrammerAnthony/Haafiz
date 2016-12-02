@@ -22,7 +22,7 @@ import java.util.List;
  * Class Note:
  * webview detail activity,
  */
-public class WechatDetailsActivity extends AbsBaseActivity {
+public class WebviewDetailsActivity extends AbsBaseActivity {
     //    @BindView(R.id.toolbar)
     Toolbar toolBar;
     //    @BindView(R.id.wv_tech_content)
@@ -98,7 +98,7 @@ public class WechatDetailsActivity extends AbsBaseActivity {
 
     public static void start(Context context, String title, String url) {
         Intent intent = new Intent();
-        intent.setClass(context, WechatDetailsActivity.class);
+        intent.setClass(context, WebviewDetailsActivity.class);
         intent.putExtra("title", title);
         intent.putExtra("url", url);
         context.startActivity(intent);

@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import com.anthony.app.R;
 import com.anthony.app.dagger.DaggerActivity;
 import com.anthony.app.dagger.component.ActivityComponent;
-import com.anthony.library.base.WechatDetailsActivity;
+import com.anthony.library.base.WebviewDetailsActivity;
 import com.anthony.library.data.net.HttpSubscriber;
 import com.anthony.pullrefreshview.PullToRefreshView;
 import com.anthony.rvhelper.adapter.CommonAdapter;
@@ -138,7 +138,7 @@ public class WechatListActivity extends DaggerActivity {
                     .setText(R.id.tv_wechat_item_from, item.getDescription())
                     .setText(R.id.tv_wechat_item_time, item.getCtime())
                     .setOnClickListener(R.id.ll_click, v -> {
-                        WechatDetailsActivity.start(mContext, item.getTitle(), item.getUrl());
+                        WebviewDetailsActivity.start(mContext, item.getTitle(), item.getUrl());
                     });
 
         }

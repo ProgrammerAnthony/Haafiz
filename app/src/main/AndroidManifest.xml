@@ -37,7 +37,7 @@
             android:configChanges="orientation|screenSize|layoutDirection"
             android:screenOrientation="portrait" />
         <activity android:name=".module.newslist.NewsListActivity" />
-        <activity android:name="com.anthony.library.base.WechatDetailsActivity" />
+        <activity android:name="com.anthony.library.base.WebviewDetailsActivity" />
         <activity
             android:name="com.anthony.citypicker.CityPickerActivity"
             android:windowSoftInputMode="stateUnchanged|adjustPan" />
