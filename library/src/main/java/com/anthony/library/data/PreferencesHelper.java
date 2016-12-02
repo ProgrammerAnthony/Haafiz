@@ -3,15 +3,15 @@ package com.anthony.library.data;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.anthony.library.DataManager;
+import com.anthony.library.BaseDataRepository;
 
 
 /**
  * Created by Anthony on 2016/5/23.
  * Class Note:
- * SharedPreference Helper class,used only by{@link DataManager} is recommended
+ * SharedPreference Helper class,used only by{@link BaseDataRepository} is recommended
  *
- * Preference 的帮助类，推荐只在{@link DataManager}中使用
+ * Preference 的帮助类，推荐只在{@link BaseDataRepository}中使用
  */
 public class PreferencesHelper {
     private static final String SETTING = "setting";

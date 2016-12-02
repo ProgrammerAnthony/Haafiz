@@ -9,7 +9,7 @@ import com.anthony.app.dagger.component.ActivityComponent;
 import com.anthony.library.base.WebviewDetailsActivity;
 import com.anthony.library.data.bean.NewsItem;
 import com.anthony.library.data.bean.NormalJsonInfo;
-import com.anthony.library.data.database.dao.NewsItemDao;
+import com.anthony.library.data.dao.NewsItemDao;
 import com.anthony.rvhelper.adapter.MultiItemTypeAdapter;
 import com.anthony.rvhelper.divider.RecycleViewDivider;
 

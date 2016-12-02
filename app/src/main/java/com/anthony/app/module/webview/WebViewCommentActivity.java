@@ -22,12 +22,12 @@ import android.widget.TextView;
 
 import com.anthony.app.R;
 import com.anthony.app.dagger.DaggerActivity;
-import com.anthony.app.dagger.DaggerApplication;
+import com.anthony.app.dagger.DataRepository;
 import com.anthony.app.dagger.component.ActivityComponent;
 import com.anthony.library.Constants;
 import com.anthony.library.data.bean.NewsItem;
 import com.anthony.library.data.bean.OfflineResource;
-import com.anthony.library.data.database.dao.OfflineResourceDao;
+import com.anthony.library.data.dao.OfflineResourceDao;
 import com.anthony.library.utils.AppUtils;
 import com.anthony.library.utils.FileUtil;
 import com.anthony.library.utils.SettingUtil;
@@ -47,6 +47,7 @@ import butterknife.BindView;
  * Created by Anthony on 2016/9/5.
  * Class Note:
  * a webview Activity with comment layout below
+ *
  * @deprecated
  */
 public class WebViewCommentActivity extends DaggerActivity {
@@ -64,7 +65,7 @@ public class WebViewCommentActivity extends DaggerActivity {
 
 
     @Inject
-    DaggerApplication mApplication;
+    DataRepository dataRepository;
 
 
     public static String WEB_VIEW_ITEM = "WebViewItem";
@@ -93,7 +94,7 @@ public class WebViewCommentActivity extends DaggerActivity {
 //        mReloadLayout = (RelativeLayout) findViewById(R.id.prj_layout_reload);
 
 
-        dao = new OfflineResourceDao(mApplication);
+        dao = new OfflineResourceDao(dataRepository.getDatabaseHelper());
         mItem = (NewsItem) getIntent().getSerializableExtra(WEB_VIEW_ITEM);
 
 //        StatusBarCompat.setStatusBarColor(this, getResources().getColor(R.color.app_primary), 0);

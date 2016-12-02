@@ -3,13 +3,14 @@ package com.anthony.app.dagger.component;
 import android.content.Context;
 
 import com.anthony.app.dagger.DaggerApplication;
+import com.anthony.app.dagger.DataRepository;
 import com.anthony.app.dagger.module.ApplicationModule;
 import com.anthony.app.dagger.scope.ApplicationContext;
 import com.anthony.app.dagger.scope.PerActivity;
 import com.anthony.imageloader.ImageLoaderUtil;
-import com.anthony.library.data.database.dao.ChannelDao;
-import com.anthony.library.data.database.dao.NewsItemDao;
-import com.anthony.library.data.database.dao.OfflineResourceDao;
+import com.anthony.library.data.dao.ChannelDao;
+import com.anthony.library.data.dao.NewsItemDao;
+import com.anthony.library.data.dao.OfflineResourceDao;
 import com.anthony.library.utils.ToastUtils;
 import com.anthony.library.widgets.CircleProgressBar;
 import com.anthony.library.widgets.ViewDisplay;
@@ -56,4 +57,6 @@ public interface ApplicationComponent {
     ImageLoaderUtil imageLoaderUtil();
 
     ToastUtils toastUtils();
+
+    DataRepository dataRepository();
 }

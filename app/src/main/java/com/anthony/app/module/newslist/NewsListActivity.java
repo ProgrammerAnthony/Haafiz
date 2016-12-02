@@ -38,8 +38,7 @@ public class NewsListActivity extends DaggerActivity {
     @Inject
     DaggerApplication mApplication;
 
-    //    @Inject
-//    RxBus rxBus;
+
     public static String URL = "url";
     public static String NAME = "name";
 
@@ -91,7 +90,7 @@ public class NewsListActivity extends DaggerActivity {
                 this.finish();
                 break;
             case R.id.iv_title_right:
-                mApplication.getDataManager().getDatabaseHelper().exportDb();
+                mApplication.getDataRepository().getDatabaseHelper().exportDb();
 //                showToast("导出数据库成功");
                 break;
         }

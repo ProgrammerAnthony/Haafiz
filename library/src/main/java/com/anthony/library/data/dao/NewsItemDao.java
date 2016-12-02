@@ -1,8 +1,8 @@
-package com.anthony.library.data.database.dao;
+package com.anthony.library.data.dao;
 
 
-import com.anthony.library.MyApplication;
 import com.anthony.library.data.bean.NewsItem;
+import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.stmt.QueryBuilder;
 
 import java.sql.SQLException;
@@ -14,8 +14,8 @@ import java.util.List;
  */
 public class NewsItemDao extends BaseDao<NewsItem> {
 
-    public NewsItemDao(MyApplication mApplication) {
-        super(mApplication);
+    public NewsItemDao(OrmLiteSqliteOpenHelper sqliteOpenHelper) {
+        super(sqliteOpenHelper);
     }
 
     public List<NewsItem> queryLatest(int channelId, long limit) {

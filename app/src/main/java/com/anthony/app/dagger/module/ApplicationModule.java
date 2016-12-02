@@ -4,12 +4,13 @@ package com.anthony.app.dagger.module;
 import android.content.Context;
 
 import com.anthony.app.dagger.DaggerApplication;
+import com.anthony.app.dagger.DataRepository;
 import com.anthony.app.dagger.component.ApplicationComponent;
 import com.anthony.app.dagger.scope.ApplicationContext;
 import com.anthony.imageloader.ImageLoaderUtil;
-import com.anthony.library.data.database.dao.ChannelDao;
-import com.anthony.library.data.database.dao.NewsItemDao;
-import com.anthony.library.data.database.dao.OfflineResourceDao;
+import com.anthony.library.data.dao.ChannelDao;
+import com.anthony.library.data.dao.NewsItemDao;
+import com.anthony.library.data.dao.OfflineResourceDao;
 import com.anthony.library.utils.ToastUtils;
 import com.anthony.library.widgets.CircleProgressBar;
 import com.anthony.library.widgets.ViewDisplay;
@@ -47,6 +48,11 @@ public class ApplicationModule {
         return mApplication;
     }
 
+    @Provides
+    @Singleton
+    DataRepository provideDataRepository(@ApplicationContext Context context) {
+        return new DataRepository(context);
+    }
 
     /**
      * third part lib must provided in module
@@ -68,6 +74,8 @@ public class ApplicationModule {
         return new ViewDisplay(context);
     }
 
+
+
     @Provides
     @Singleton
     CircleProgressBar providesCircleProgressBar(@ApplicationContext Context context) {
@@ -77,20 +85,20 @@ public class ApplicationModule {
     @Provides
     @Singleton
     ChannelDao providesChannelDao() {
-        return new ChannelDao(mApplication);
+        return new ChannelDao(mApplication.getDataRepository().getDatabaseHelper());
     }
 
 
     @Provides
     @Singleton
     NewsItemDao provideNewsItemDao() {
-        return new NewsItemDao(mApplication);
+        return new NewsItemDao(mApplication.getDataRepository().getDatabaseHelper());
     }
 
     @Provides
     @Singleton
     OfflineResourceDao provideOfflineResourceDao() {
-        return new OfflineResourceDao(mApplication);
+        return new OfflineResourceDao(mApplication.getDataRepository().getDatabaseHelper());
     }
 
     @Provides

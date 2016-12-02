@@ -20,7 +20,7 @@ import com.anthony.imageloader.ImageLoaderUtil;
 import com.anthony.library.data.RxBus;
 import com.anthony.library.data.bean.NewsItem;
 import com.anthony.library.data.bean.NormalJsonInfo;
-import com.anthony.library.data.database.dao.NewsItemDao;
+import com.anthony.library.data.dao.NewsItemDao;
 import com.anthony.library.data.event.VideoListClickEvent;
 import com.anthony.library.data.event.VideoOrientationChangeEvent;
 import com.anthony.library.data.event.ViewPagerSelectedEvent;

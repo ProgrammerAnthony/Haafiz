@@ -1,7 +1,8 @@
-package com.anthony.library.data.database.dao;
+package com.anthony.library.data.dao;
 
 
-import com.anthony.library.MyApplication;
+import com.anthony.library.BaseApplication;
+import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.stmt.DeleteBuilder;
 import com.j256.ormlite.stmt.QueryBuilder;
@@ -18,11 +19,11 @@ public class BaseDao<T> {
 
 
     /**
-     * get dao class through {@link MyApplication}
+     * get dao class through {@link BaseApplication}
      *
-     * @param mApplication using this to get instance of  DatabaseHelper
+     * @param sqliteOpenHelper using this to get instance of  DatabaseHelper
      */
-    public BaseDao(MyApplication mApplication) {
+    public BaseDao(OrmLiteSqliteOpenHelper sqliteOpenHelper) {
         Class clazz = getClass();
 
         while (clazz != Object.class) {
@@ -38,10 +39,10 @@ public class BaseDao<T> {
         }
 
         try {
-            if (mApplication.getDataManager().getDatabaseHelper() == null) {
+            if (sqliteOpenHelper == null) {
                 throw new RuntimeException("No DbHelper Found!");
             }
-            daoOpe = mApplication.getDataManager().getDatabaseHelper().getDao(this.clazz);
+            daoOpe = sqliteOpenHelper.getDao(this.clazz);
         } catch (SQLException e) {
             e.printStackTrace();
         }

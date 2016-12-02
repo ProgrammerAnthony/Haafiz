@@ -6,7 +6,7 @@ import android.content.Intent;
 import com.anthony.library.data.EventPosterHelper;
 import com.anthony.library.data.HttpHelper;
 import com.anthony.library.data.PreferencesHelper;
-import com.anthony.library.data.database.DatabaseHelper;
+import com.anthony.library.data.DatabaseHelper;
 import com.anthony.library.data.download.DownloadEvent;
 import com.anthony.library.data.download.DownloadFinishEvent;
 import com.anthony.library.data.download.DownloadService;
@@ -38,7 +38,7 @@ import rx.functions.Func1;
  * <p>
  * 所有数据的入口类
  */
-public class DataManager {
+public class BaseDataRepository {
 
 
     HttpHelper mHttpHelper;
@@ -55,7 +55,11 @@ public class DataManager {
     protected Context mContext;
 
 
-    public DataManager(Context context) {
+    /**
+     * using constructor class to generate other classes
+     * @param context
+     */
+    public BaseDataRepository(Context context) {
         this.mContext = context;
         mHttpHelper = new HttpHelper(mContext);
         mPreferencesHelper = new PreferencesHelper(mContext);

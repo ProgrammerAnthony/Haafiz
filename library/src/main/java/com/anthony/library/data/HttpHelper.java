@@ -3,7 +3,7 @@ package com.anthony.library.data;
 import android.content.Context;
 import android.util.Log;
 
-import com.anthony.library.DataManager;
+import com.anthony.library.BaseDataRepository;
 import com.anthony.library.data.net.TrustManager;
 import com.anthony.library.utils.AppUtils;
 
@@ -27,9 +27,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by Anthony on 2016/7/8.
  * Class Note:
  * entrance class to access network with {@link Retrofit}
- * used only by{@link DataManager} is recommended
+ * used only by{@link BaseDataRepository} is recommended
  * <p>
- * 使用retrofit进行网络访问的入口类，推荐只在{@link DataManager}中使用
+ * 使用retrofit进行网络访问的入口类，推荐只在{@link BaseDataRepository}中使用
  */
 public class HttpHelper {
     private static final int DEFAULT_TIMEOUT = 30;

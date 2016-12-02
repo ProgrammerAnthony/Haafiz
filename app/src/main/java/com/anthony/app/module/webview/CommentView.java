@@ -17,9 +17,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.anthony.app.R;
-import com.anthony.library.MyApplication;
+import com.anthony.app.dagger.DaggerApplication;
 import com.anthony.library.data.bean.NewsItem;
-import com.anthony.library.data.database.dao.NewsItemDao;
+import com.anthony.library.data.dao.NewsItemDao;
 
 import java.util.HashMap;
 import java.util.List;
@@ -63,7 +63,7 @@ public class CommentView extends RelativeLayout {
     }
 
     private void initView() {
-        dao = new NewsItemDao(MyApplication.get(mContext));
+        dao = new NewsItemDao(DaggerApplication.get(mContext).getDataRepository().getDatabaseHelper());
 
         LayoutInflater.from(mContext).inflate(R.layout.prj_layout_comment, this);
         mLayoutEditComment = (RelativeLayout) findViewById(R.id.layout_edit_comment);
@@ -109,7 +109,7 @@ public class CommentView extends RelativeLayout {
         List<NewsItem> list = dao.queryByColumn("url", mUrl);
         if (list != null && list.size() > 0) {
             mItem = list.get(0);
-            if(mItem.isStar()) {
+            if (mItem.isStar()) {
                 mImgStar.setImageResource(R.mipmap.prj_ic_star_solid);
             } else {
                 mImgStar.setImageResource(R.mipmap.prj_ic_star);
@@ -144,7 +144,7 @@ public class CommentView extends RelativeLayout {
                 String content = mEditTextComment.getText().toString();
                 if (TextUtils.isEmpty(content)) {
 //                    ToastUtil.getInstance().showToast("评论内容不能为空");
-                    Toast.makeText(mContext,"评论内容不能为空",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "评论内容不能为空", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -193,19 +193,19 @@ public class CommentView extends RelativeLayout {
             @Override
             public void onComplete(Platform platform, int i, HashMap<String, Object> hashMap) {
 //                ToastUtil.getInstance().showToast("分享成功");
-                Toast.makeText(mContext,"分享成功",Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "分享成功", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onError(Platform platform, int i, Throwable throwable) {
 //                ToastUtil.getInstance().showToast("分享失败");
-                Toast.makeText(mContext,"分享失败",Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "分享失败", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onCancel(Platform platform, int i) {
 //                ToastUtil.getInstance().showToast("取消分享");
-                Toast.makeText(mContext,"取消分享",Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "取消分享", Toast.LENGTH_SHORT).show();
             }
         });
         //通过OneKeyShareCallback来修改不同平台分享的内容

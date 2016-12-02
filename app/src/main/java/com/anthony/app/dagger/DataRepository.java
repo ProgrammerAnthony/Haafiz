@@ -2,18 +2,17 @@ package com.anthony.app.dagger;
 
 import android.content.Context;
 
-import com.anthony.app.dagger.scope.ApplicationContext;
 import com.anthony.app.module.github.GithubApi;
 import com.anthony.app.module.github.GithubUser;
 import com.anthony.app.module.weather.WeatherApi;
 import com.anthony.app.module.weather.WeatherData;
 import com.anthony.app.module.wechatlist.WXItemBean;
 import com.anthony.app.module.wechatlist.WechatApi;
-import com.anthony.app.module.zhihu.ZhihuDailyListBean;
 import com.anthony.app.module.zhihu.ZhiHuApi;
 import com.anthony.app.module.zhihu.ZhihuDailyDetailBean;
+import com.anthony.app.module.zhihu.ZhihuDailyListBean;
 import com.anthony.library.Constants;
-import com.anthony.library.DataManager;
+import com.anthony.library.BaseDataRepository;
 import com.anthony.library.data.bean.NewsItem;
 import com.anthony.library.data.bean.NormalJsonInfo;
 import com.anthony.library.data.net.HttpResult;
@@ -30,8 +29,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.inject.Inject;
-
 import okhttp3.ResponseBody;
 import rx.Observable;
 import rx.functions.Action1;
@@ -42,10 +39,9 @@ import rx.functions.Func1;
  * Class Note:
  */
 
-public class DataRepository extends DataManager {
+public class DataRepository extends BaseDataRepository {
 
-    @Inject
-    public DataRepository(@ApplicationContext Context context) {
+    public DataRepository(Context context) {
         super(context);
     }
 
@@ -123,6 +119,7 @@ public class DataRepository extends DataManager {
 
     /**
      * load Zhihu Daily Detail data from zhihu API
+     *
      * @param id
      * @return
      */

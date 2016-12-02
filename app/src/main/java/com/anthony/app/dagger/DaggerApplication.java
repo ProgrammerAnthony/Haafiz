@@ -6,7 +6,9 @@ import android.content.Context;
 import com.anthony.app.dagger.component.ApplicationComponent;
 import com.anthony.app.dagger.component.DaggerApplicationComponent;
 import com.anthony.app.dagger.module.ApplicationModule;
-import com.anthony.library.MyApplication;
+import com.anthony.library.BaseApplication;
+
+import javax.inject.Inject;
 
 /**
  * Created by Anthony on 2016/12/1.
@@ -14,14 +16,20 @@ import com.anthony.library.MyApplication;
  * Dagger2 support
  */
 
-public class DaggerApplication extends MyApplication {
+public class DaggerApplication extends BaseApplication {
     private ApplicationComponent mAppComponent;
+
+
+    @Inject
+    DataRepository dataRepository;
+
 
     @Override
     public void onCreate() {
         super.onCreate();
         getAppComponent().inject(this);
 //        initAVOS();
+
     }
 
     public ApplicationComponent getAppComponent() {
@@ -32,6 +40,9 @@ public class DaggerApplication extends MyApplication {
         return mAppComponent;
     }
 
+    public DataRepository getDataRepository() {
+        return dataRepository;
+    }
 
 //    private void initAVOS() {
 //        try {

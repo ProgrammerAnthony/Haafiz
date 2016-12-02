@@ -1,4 +1,4 @@
-package com.anthony.library.data.database;
+package com.anthony.library.data;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -173,9 +173,9 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
                 });
     }
 
-    public void importDb() {
-
-    }
+//    public void importDb() {
+//
+//    }
 
 //    private static DatabaseHelper instance;
 //    /**

@@ -3,6 +3,7 @@ package com.anthony.library;
 import android.app.Application;
 import android.content.Context;
 import android.os.Environment;
+import android.os.Handler;
 import android.support.multidex.MultiDex;
 import android.util.Log;
 
@@ -15,40 +16,34 @@ import java.io.File;
  * Base Application for Application
  * use in AndroidManifest.xml
  */
-public class MyApplication extends Application {
+public class BaseApplication extends Application {
 
-    //    @Inject
-    DataManager mDataManager;
+//    DataManager mDataManager;
+    private static Handler mHandler;
+    private static Context mContext;
 
-    //    private ApplicationComponent mAppComponent;
-//    public DatabaseHelper dbHelper;
-    //global instance ,channel list data
-//    public List<Channel> channels;
-//    private Menu mFirstLevelMenu;
 
-    public DataManager getDataManager() {
-        return mDataManager;
-    }
 
     @Override
     public void onCreate() {
 
         super.onCreate();
 
+        mHandler = new Handler();
+
+        mContext = getApplicationContext();
+
+//        mDataManager = new DataManager(getApplicationContext());
+
 //Dagger2 inject
 //        getAppComponent().inject(this);
-
-        mDataManager = new DataManager(getApplicationContext());
 //get DatabaseHelper instance
 //        dbHelper = mDataManager.getDatabaseHelper();
 //        mEventBus.register(this);
 //        initAVOS();
-
 //        initEaseUI(); // init EaseUI(for IM,Instant Messaging)
-
 //        Thread.setDefaultUncaughtExceptionHandler(new LocalFileUncaughtExceptionHandler(this,
 //                Thread.getDefaultUncaughtExceptionHandler()));   //exception handler
-
 //        if (BuildConfig.DEBUG) {
 //            Timber.plant(new Timber.DebugTree());
 //        } else {
@@ -65,35 +60,19 @@ public class MyApplication extends Application {
         MultiDex.install(this);//multi dex support
     }
 
-
-    //init LeanCloud (Online storage)
-//    private void initAVOS() {
-//        try {
-//            ApplicationInfo appInfo = getPackageManager()
-//                    .getApplicationInfo(getPackageName(), PackageManager.GET_META_DATA);
-//            String id = appInfo.metaData.getString("AVOS_APP_ID");
-//            String key = appInfo.metaData.getString("AVOS_APP_KEY");
-//            // init LeanCloud AppId and AppKey
-//            AVOSCloud.initialize(this, id, key);
-//        } catch (PackageManager.NameNotFoundException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
-
-//    public ApplicationComponent getAppComponent() {
-//        if (mAppComponent == null) {
-//            mAppComponent = DaggerApplicationComponent.builder().
-//                    applicationModule(new ApplicationModule(this)).build();
-//        }
-//        return mAppComponent;
-//    }
-
-
-    public static MyApplication get(Context context) {
-        return (MyApplication) context.getApplicationContext();
+    public static Context getContext() {
+        return mContext;
     }
 
+    public static Handler getHanlder() {
+        return mHandler;
+    }
+
+
+
+    public static BaseApplication get(Context context) {
+        return (BaseApplication) context.getApplicationContext();
+    }
 
     /**
      * get cache dir

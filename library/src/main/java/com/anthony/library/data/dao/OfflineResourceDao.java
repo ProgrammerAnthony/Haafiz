@@ -1,8 +1,8 @@
-package com.anthony.library.data.database.dao;
+package com.anthony.library.data.dao;
 
 
-import com.anthony.library.MyApplication;
 import com.anthony.library.data.bean.OfflineResource;
+import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.stmt.QueryBuilder;
 
 import java.sql.SQLException;
@@ -11,8 +11,8 @@ import java.util.List;
 
 public class OfflineResourceDao extends BaseDao<OfflineResource> {
 
-    public OfflineResourceDao(MyApplication mApplication) {
-        super(mApplication);
+    public OfflineResourceDao(OrmLiteSqliteOpenHelper sqliteOpenHelper) {
+        super(sqliteOpenHelper);
     }
 
     public OfflineResource queryResourceByUrl(String url) {
