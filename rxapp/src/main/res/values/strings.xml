@@ -1,5 +1,5 @@
 <resources>
-  <string name="app_name">Rx Android Architect </string>
+  <string name="app_name">Rx Architect </string>
   <string name="toolbar_title_account">个人中心</string>
 
   <string name="drawer_item_settings">Settings</string>
