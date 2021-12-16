@@ -1,7 +1,6 @@
 package com.haafiz.core;
 
 import com.haafiz.common.lifecycle.AbstractLifecycleComponent;
-import com.haafiz.core.config.HaafizConfig;
 import com.haafiz.core.netty.NettyHttpClient;
 import com.haafiz.core.netty.NettyHttpServer;
 import lombok.extern.slf4j.Slf4j;

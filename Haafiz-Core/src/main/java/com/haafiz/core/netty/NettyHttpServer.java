@@ -1,7 +1,7 @@
 package com.haafiz.core.netty;
 
 import com.haafiz.common.lifecycle.AbstractLifecycleComponent;
-import com.haafiz.core.config.HaafizConfig;
+import com.haafiz.core.HaafizConfig;
 
 import java.io.IOException;
 
