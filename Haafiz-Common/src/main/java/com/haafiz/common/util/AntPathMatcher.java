@@ -7,19 +7,13 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * <B>主类名称：</B>AntPathMatcher<BR>
- * <B>概要说明：</B>Ant路径规则匹配类<BR>
- * <B>?	匹配任何单字符</B><BR>
- * <B>*	匹配0或者任意数量的字符</B><BR>
- * <B>**	匹配0或者更多的目录</B><BR>
- * <B>概要说明：匹配规则例子</B><BR>
- * <B>/app/*.x	匹配(Matches)所有在app路径下的.x文件</B><BR>
- * <B>/app/p?ttern	匹配(Matches) /app/pattern 和 /app/pXttern,但是不包括/app/pttern</B><BR>
- * @author JiFeng
- * @since 2021年12月5日 下午3:17:46
- */
 
+/**
+ * @author Anthony
+ * @create 2021/12/16
+ * @desc /app/*.x	匹配(Matches)所有在app路径下的.x文件
+ *       /app/p?ttern	匹配(Matches) /app/pattern 和 /app/pXttern,但是不包括/app/pttern
+ */
 public class AntPathMatcher {
 
     private static final String[] EMPTY_STRING_ARRAY = {};

@@ -2,12 +2,14 @@ package com.haafiz.core;
 
 import com.haafiz.common.constants.BasicConst;
 import com.haafiz.common.util.NetUtils;
+import lombok.Data;
 
 /**
  * @author Anthony
  * @create 2021/12/16
  * @desc
  */
+@Data
 public class HaafizConfig {
     //	网关的默认端口
     private int port = 8888;
