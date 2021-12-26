@@ -2,6 +2,7 @@ package com.haafiz.core;
 
 import com.haafiz.common.constants.BasicConst;
 import com.haafiz.common.util.NetUtils;
+import com.lmax.disruptor.*;
 import lombok.Data;
 
 /**
@@ -77,4 +78,19 @@ public class HaafizConfig {
     //	客户端空闲连接超时时间, 默认60秒
     private int httpPooledConnectionIdleTimeout = 60 * 1000;
 
+
+    public WaitStrategy getATrueWaitStrategy() {
+        switch (waitStrategy) {
+            case "blocking":
+                return new BlockingWaitStrategy();
+            case "busySpin":
+                return new BusySpinWaitStrategy();
+            case "yielding":
+                return new YieldingWaitStrategy();
+            case "sleeping":
+                return new SleepingWaitStrategy();
+            default:
+                return new BlockingWaitStrategy();
+        }
+    }
 }

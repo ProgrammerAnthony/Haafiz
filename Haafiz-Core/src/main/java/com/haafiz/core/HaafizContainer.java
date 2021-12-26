@@ -34,7 +34,7 @@ public class HaafizContainer extends AbstractLifecycleComponent {
         if (BufferHelper.isFlusher(bufferType)) {
             nettyProcessor = new NettyBatchProcessor(haafizConfig, nettyCoreProcessor);
         } else if (BufferHelper.isMpmc(bufferType)) {
-            nettyProcessor = new NettyMpmcProcessor(haafizConfig, nettyCoreProcessor);
+            nettyProcessor = new NettyMpmcProcessor(haafizConfig, nettyCoreProcessor, true);
         } else {
             nettyProcessor = nettyCoreProcessor;
         }

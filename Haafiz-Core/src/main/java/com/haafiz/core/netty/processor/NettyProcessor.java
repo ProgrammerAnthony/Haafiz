@@ -8,7 +8,7 @@ import com.haafiz.core.HttpRequestWrapper;
  * @desc
  */
 public interface NettyProcessor {
-    void process(HttpRequestWrapper httpRequestWrapper);
+    void process(HttpRequestWrapper httpRequestWrapper) throws Exception ;
 
     void start();
 
