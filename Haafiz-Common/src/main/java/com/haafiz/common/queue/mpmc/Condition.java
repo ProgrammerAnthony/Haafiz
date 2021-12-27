@@ -27,13 +27,7 @@ interface Condition {
      */
     void awaitNanos(final long timeout) throws InterruptedException;
 
-    /**
-     * <B>方法名称：</B>await<BR>
-     * <B>概要说明：</B>wake if signal is called, or wait indefinitely<BR>
-     * @author JiFeng
-     * @since 2021年12月7日 上午11:20:32
-     * @throws InterruptedException
-     */
+
     /**
      * wake if signal is called, or wait indefinitely
      * @throws InterruptedException

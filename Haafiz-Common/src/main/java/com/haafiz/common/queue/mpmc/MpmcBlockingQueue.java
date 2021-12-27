@@ -17,9 +17,9 @@ public final class MpmcBlockingQueue<E> extends MpmcConcurrentQueue<E> implement
 
 	private static final long serialVersionUID = -5010414655037152451L;
 	
-	//	queueNotFullCondition: 如果队列是满那么就阻塞
+	//	queueNotFullCondition: blocking when queue is full
     protected final Condition queueNotFullCondition;
-    //	queueNotEmptyConditio: 如果队列是空的那么就
+    //	queueNotEmptyConditio: blocking when queue is empty
     protected final Condition queueNotEmptyCondition;
 
     public MpmcBlockingQueue(final int capacity) {
@@ -100,7 +100,6 @@ public final class MpmcBlockingQueue<E> extends MpmcConcurrentQueue<E> implement
             if(Thread.currentThread().isInterrupted()) {
                 throw new InterruptedException();
             }
-            //	就等待
             queueNotFullCondition.await();
         }
     }

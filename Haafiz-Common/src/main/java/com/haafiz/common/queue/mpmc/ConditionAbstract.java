@@ -25,7 +25,7 @@ abstract class ConditionAbstract implements Condition {
         long remaining = timeout;
         queueLock.lock();
         try {
-        	//	如果当前队列已经满了
+        	//	if current queue is full
             while(test() && remaining > 0) {
                 remaining = condition.awaitNanos(remaining);
             }
