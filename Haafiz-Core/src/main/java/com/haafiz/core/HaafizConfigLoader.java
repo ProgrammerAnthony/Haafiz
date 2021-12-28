@@ -41,9 +41,7 @@ public class HaafizConfigLoader {
 
     public HaafizConfig load(String args[]) {
 
-        //	加载逻辑
-
-        //	1. 配置文件
+        //	1. load from config file
         {
             InputStream is = HaafizConfigLoader.class.getClassLoader().getResourceAsStream(CONFIG_FILE);
             if(is != null) {
@@ -66,7 +64,7 @@ public class HaafizConfigLoader {
             }
         }
 
-        //	2. 环境变量
+        //	2. load from environment config
         {
             Map<String, String> env = System.getenv();
             Properties properties = new Properties();
@@ -74,13 +72,13 @@ public class HaafizConfigLoader {
             PropertiesUtils.properties2Object(properties, haafizConfig, CONFIG_ENV_PREFIEX);
         }
 
-        //	3. jvm参数
+        //	3. load from jvm config
         {
             Properties properties = System.getProperties();
             PropertiesUtils.properties2Object(properties, haafizConfig, CONFIG_JVM_PREFIEX);
         }
 
-        //	4. 运行参数: --xxx=xxx --enable=true  --port=1234
+        //	4. load from running config: --xxx=xxx --enable=true  --port=1234
         {
             if(args != null && args.length > 0) {
                 Properties properties = new Properties();

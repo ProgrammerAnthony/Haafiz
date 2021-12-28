@@ -34,7 +34,7 @@ public class NettyHttpServerHandler extends ChannelInboundHandlerAdapter {
             nettyProcessor.process(httpRequestWrapper);
 
         } else {
-            //	never go this way, ignore
+            //	never come to this way, ignore
             log.error("#NettyHttpServerHandler.channelRead# message type is not httpRequest: {}", msg);
             boolean release = ReferenceCountUtil.release(msg);
             if(!release) {

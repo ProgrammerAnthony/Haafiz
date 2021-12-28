@@ -25,10 +25,10 @@ public class HaafizContainer extends AbstractLifecycleComponent {
     private HaafizConfig haafizConfig;
 
     public HaafizContainer(HaafizConfig haafizConfig) {
-        //	1. 构建核心处理器
+        //	1. create core processor
         NettyCoreProcessor nettyCoreProcessor = new NettyCoreProcessor();
 
-        //	2. 是否开启缓存
+        //	2. whether use buffer
         String bufferType = haafizConfig.getBufferType();
 
         if (BufferHelper.isFlusher(bufferType)) {
@@ -38,10 +38,10 @@ public class HaafizContainer extends AbstractLifecycleComponent {
         } else {
             nettyProcessor = nettyCoreProcessor;
         }
-        //	3. 创建NettyHttpServer
+        //	3. create NettyHttpServer（for upstream http server）
         nettyHttpServer = new NettyHttpServer(haafizConfig, nettyProcessor);
 
-        //	4. 创建NettyHttpClient
+        //	4. create NettyHttpClient（for downstream connection http client）
         nettyHttpClient = new NettyHttpClient(haafizConfig, nettyHttpServer.getEventLoopGroupWork());
 
 

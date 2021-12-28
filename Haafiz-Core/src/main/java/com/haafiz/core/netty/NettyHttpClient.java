@@ -15,7 +15,7 @@ import java.io.IOException;
 /**
  * @author Anthony
  * @create 2021/12/16
- * @desc downstream http client
+ * @desc for downstream connection http client
  */
 @Slf4j
 public class NettyHttpClient extends AbstractLifecycleComponent {
