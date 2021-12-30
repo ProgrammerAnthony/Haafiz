@@ -1,4 +1,4 @@
-package com.haafiz.core;
+package com.haafiz.core.context;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.FullHttpRequest;

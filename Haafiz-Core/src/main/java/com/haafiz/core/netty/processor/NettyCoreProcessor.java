@@ -1,8 +1,5 @@
 package com.haafiz.core.netty.processor;
 
-import com.haafiz.core.HttpRequestWrapper;
-import io.netty.channel.ChannelHandlerContext;
-import io.netty.handler.codec.http.FullHttpRequest;
 
 /**
  * @author Anthony
