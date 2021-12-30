@@ -3,7 +3,7 @@ package com.haafiz.core.netty.processor;
 import com.haafiz.common.exception.ResponseCode;
 import com.haafiz.common.queue.mpmc.MpmcBlockingQueue;
 import com.haafiz.core.HaafizConfig;
-import com.haafiz.core.HttpRequestWrapper;
+import com.haafiz.core.context.HttpRequestWrapper;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.*;

@@ -1,6 +1,7 @@
 package com.haafiz.core.netty;
 
-import com.haafiz.core.HttpRequestWrapper;
+
+import com.haafiz.core.context.HttpRequestWrapper;
 import com.haafiz.core.netty.processor.NettyProcessor;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

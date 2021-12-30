@@ -1,5 +1,6 @@
 package com.haafiz.core.context;
 
+import com.haafiz.common.config.Rule;
 import io.netty.channel.ChannelHandlerContext;
 
 import java.util.function.Consumer;

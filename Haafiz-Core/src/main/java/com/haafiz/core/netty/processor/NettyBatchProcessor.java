@@ -3,7 +3,7 @@ package com.haafiz.core.netty.processor;
 import com.haafiz.common.exception.ResponseCode;
 import com.haafiz.common.queue.flusher.ParallelFlusher;
 import com.haafiz.core.HaafizConfig;
-import com.haafiz.core.HttpRequestWrapper;
+import com.haafiz.core.context.HttpRequestWrapper;
 import com.lmax.disruptor.dsl.ProducerType;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;

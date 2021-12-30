@@ -1,6 +1,7 @@
 package com.haafiz.core.netty.processor;
 
-import com.haafiz.core.HttpRequestWrapper;
+
+import com.haafiz.core.context.HttpRequestWrapper;
 
 /**
  * @author Anthony

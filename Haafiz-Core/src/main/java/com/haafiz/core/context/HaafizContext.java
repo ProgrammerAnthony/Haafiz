@@ -1,5 +1,6 @@
 package com.haafiz.core.context;
 
+import com.haafiz.common.config.Rule;
 import com.haafiz.common.util.AssertUtil;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.util.ReferenceCountUtil;
@@ -17,7 +18,7 @@ public class HaafizContext extends BasicContext{
     private final Rule rule;
 
     private HaafizContext(String protocol, ChannelHandlerContext nettyCtx, boolean keepAlive,
-                         HaafizRequest haafizRequest, Rule rule) {
+                          HaafizRequest haafizRequest, Rule rule) {
         super(protocol, nettyCtx, keepAlive);
         this.haafizRequest = haafizRequest;
         this.rule = rule;
