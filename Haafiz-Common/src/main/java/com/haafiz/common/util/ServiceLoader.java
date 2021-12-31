@@ -17,38 +17,34 @@ import java.util.*;
  */
 public final class ServiceLoader<S> implements Iterable<S> {
 
-	//	加载文件目录路径
+	//	load file path
     private static final String PREFIX = "META-INF/services/";
 
     // 	The class or interface representing the service being loaded
-    //	要加载的接口
     private final Class<S> service;
 
     // 	The class loader used to locate, load, and instantiate providers
-    //	类加载器
     private final ClassLoader loader;
 
     // The access control context taken when the ServiceLoader is created
     private final AccessControlContext acc;
 
     // 	Cached providers, in instantiation order
-    //	用于缓存已经加载的接口实现类，其中key为实现类的完整类名
-    private LinkedHashMap<String,S> providers = new LinkedHashMap<>();
+    private LinkedHashMap<String/*class full name*/,S> providers = new LinkedHashMap<>();
 
     // 	The current lazy-lookup iterator
-    //	用于延迟加载接口的实现类
     private LazyIterator lookupIterator;
 
     public void reload() {
-    	//	清空已经加载的接口实现类
+    	//	clear loaded class
         providers.clear();
-        //	实例化LazyIterator进行延迟加载
+        //	instantiate LazyIterator for laze load
         lookupIterator = new LazyIterator(service, loader);
     }
 
     private ServiceLoader(Class<S> svc, ClassLoader cl) {
         service = Objects.requireNonNull(svc, "Service interface cannot be null");
-        //	如果cl为空则使用系统类加载器，如果不为空则使用给定的类加载
+        //	system class load if cl is null
         loader = (cl == null) ? ClassLoader.getSystemClassLoader() : cl;
         acc = (System.getSecurityManager() != null) ? AccessController.getContext() : null;
         reload();
@@ -124,17 +120,14 @@ public final class ServiceLoader<S> implements Iterable<S> {
         return names.iterator();
     }
 
+
     /**
-     * LazyIterator
      * Private inner class implementing fully-lazy provider lookup
-     * @author JiFeng
-     * @since 2021年5月26日 下午4:39:41
      */
     private class LazyIterator implements Iterator<S> {
     	
         Class<S> service;
         ClassLoader loader;
-        //	加载的URL
         Enumeration<URL> configs = null;
         Iterator<String> pending = null;
         String nextName = null;
@@ -261,7 +254,7 @@ public final class ServiceLoader<S> implements Iterable<S> {
 
     public static <S> ServiceLoader<S> load(Class<S> service, ClassLoader loader)
     {
-    	//	返回一个新的ServiceLoader
+    	//	create a new ServiceLoader
         return new ServiceLoader<>(service, loader);
     }
 

@@ -44,26 +44,26 @@ public class RequestHelper {
 	 */
 	public static HaafizContext doContext(FullHttpRequest request, ChannelHandlerContext ctx) {
 		
-		//	1. 	构建请求对象RapidRequest
-		HaafizRequest rapidRequest = doRequest(request, ctx);
+		//	1. build request
+		HaafizRequest haafizRequest = doRequest(request, ctx);
 		
 		//	2.	根据请求对象里的uniqueId，获取资源服务信息(也就是服务定义信息)
-		ServiceDefinition serviceDefinition = getServiceDefinition(rapidRequest);
+		ServiceDefinition serviceDefinition = getServiceDefinition(haafizRequest);
 		
 		//	3.	快速路径匹配失败的策略
-		if(!ANT_PATH_MATCHER.match(serviceDefinition.getPatternPath(), rapidRequest.getPath())) {
+		if(!ANT_PATH_MATCHER.match(serviceDefinition.getPatternPath(), haafizRequest.getPath())) {
 			throw new RapidPathNoMatchedException();
 		}
 		
 		//	4. 	根据请求对象获取服务定义对应的方法调用，然后获取对应的规则
-		ServiceInvoker serviceInvoker = getServiceInvoker(rapidRequest, serviceDefinition);
+		ServiceInvoker serviceInvoker = getServiceInvoker(haafizRequest, serviceDefinition);
 		String ruleId = serviceInvoker.getRuleId();
 		Rule rule = DynamicConfigManager.getInstance().getRule(ruleId);
 		
 		//	5. 	构建我们而定RapidContext对象
 		HaafizContext rapidContext = new HaafizContext.Builder()
 				.setProtocol(serviceDefinition.getProtocol())
-				.setRapidRequest(rapidRequest)
+				.setRapidRequest(haafizRequest)
 				.setNettyCtx(ctx)
 				.setKeepAlive(HttpUtil.isKeepAlive(request))
 				.setRule(rule)

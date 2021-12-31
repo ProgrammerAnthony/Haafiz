@@ -33,7 +33,7 @@ public class HaafizRequest implements HaafizRequestMutable {
     private final String uniqueId;
 
     /**
-     * 	begin time of enter Haafiz
+     * 	begin time of enter Haafiz flow
      */
     @Getter
     private final long beginTime;

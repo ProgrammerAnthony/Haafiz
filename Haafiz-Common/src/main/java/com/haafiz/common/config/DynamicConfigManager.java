@@ -12,13 +12,13 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class DynamicConfigManager {
 	
-	//	服务的定义集合：uniqueId代表服务的唯一标识
+	//	one uniqueId with one ServiceDefinition
 	private ConcurrentHashMap<String /* uniqueId */ , ServiceDefinition>  serviceDefinitionMap = new ConcurrentHashMap<>();
 	
-	//	服务的实例集合：uniqueId与一对服务实例对应
+	//	one uniqueId with multi ServiceInstance
 	private ConcurrentHashMap<String /* uniqueId */ , Set<ServiceInstance>>  serviceInstanceMap = new ConcurrentHashMap<>();
 
-	//	规则集合
+	//	rule collection
 	private ConcurrentHashMap<String /* ruleId */ , Rule>  ruleMap = new ConcurrentHashMap<>();
 	
 	private DynamicConfigManager() {
@@ -27,9 +27,7 @@ public class DynamicConfigManager {
 	private static class SingletonHolder {
 		private static final DynamicConfigManager INSTANCE = new DynamicConfigManager();
 	}
-	
-	
-	/***************** 	对服务定义缓存进行操作的系列方法 	***************/
+
 	
 	public static DynamicConfigManager getInstance() {
 		return SingletonHolder.INSTANCE;

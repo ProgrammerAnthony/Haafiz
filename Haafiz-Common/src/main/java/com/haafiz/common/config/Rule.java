@@ -18,13 +18,13 @@ public class Rule implements Comparable<Rule>, Serializable {
 
 	private static final long serialVersionUID = 2540640682854847548L;
 	
-	//	规则ID 全局唯一
+	//	unique id of rule
 	private String id;
 	
-	//	规则名称
+	//	rule name
 	private String name;
 	
-	//	规则对应的协议
+	//	protocol for rule
 	private String protocol;
 	
 	//	规则排序，用于以后万一有需求做一个路径绑定多种规则，但是只能最终执行一个规则（按照该属性做优先级判断）
@@ -33,25 +33,20 @@ public class Rule implements Comparable<Rule>, Serializable {
 	//	规则集合定义
 	private Set<FilterConfig> filterConifgs = new HashSet<>();
 	
+
 	/**
-	 * <B>方法名称：</B>addFilterConfig<BR>
-	 * <B>概要说明：</B>向规则里面添加指定的过滤器<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 下午2:21:07
+	 * add filter config for rule
 	 * @param filterConfig
 	 * @return
 	 */
 	public boolean addFilterConfig(FilterConfig filterConfig) {
 		return filterConifgs.add(filterConfig);
 	}
-	
+
 	/**
-	 * <B>方法名称：</B>getFilterConfig<BR>
-	 * <B>概要说明：</B>通过一个指定的filterId 获取getFilterConfig<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 下午2:22:57
+	 * load {@link FilterConfig} by filterId
 	 * @param id
-	 * @return Rule.FilterConfig
+	 * @return
 	 */
 	public FilterConfig getFilterConfig(String id){
 		for(FilterConfig filterConfig : filterConifgs) {
@@ -61,14 +56,11 @@ public class Rule implements Comparable<Rule>, Serializable {
 		}
 		return null;
 	}
-	
+
 	/**
-	 * <B>方法名称：</B>hashId<BR>
-	 * <B>概要说明：</B>根据传入的filterId 判断当前Rule中是否存在<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 下午2:24:27
+	 * judge exists by filterId
 	 * @param id
-	 * @return boolean
+	 * @return
 	 */
 	public boolean hashId(String id) {
 		for(FilterConfig filterConfig : filterConifgs) {
@@ -101,18 +93,16 @@ public class Rule implements Comparable<Rule>, Serializable {
 		return Objects.hash(id);
 	}
 	
+
 	/**
-	 * <B>主类名称：</B>FilterConfig<BR>
-	 * <B>概要说明：</B>过滤器的配置类<BR>
-	 * @author JiFeng
-	 * @since 2021年12月9日 下午2:10:13
+	 * config for filter
 	 */
 	public static class FilterConfig {
 		
-		//	过滤器的唯一ID
+		//	filter unique id
 		private String id;
 		
-		//	过滤器的配置信息描述：json string 
+		//	filter config desc：json string
 		private String config;
 
 		public String getId() {

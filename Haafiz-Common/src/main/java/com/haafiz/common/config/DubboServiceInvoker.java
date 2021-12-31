@@ -8,19 +8,19 @@ package com.haafiz.common.config;
  */
 public class DubboServiceInvoker extends AbstractServiceInvoker {
 	
-	//	注册中心地址
+	//	service reigstry address
 	private String registerAddress;
 	
-	//	接口全类名
+	//	interface class name
 	private String interfaceClass;
 	
-	//	方法名称
+	//	method name
 	private String methodName;
 	
-	//	参数名字的集合
+	//	param collections
 	private String[] parameterTypes;
 	
-	//	dubbo服务的版本号
+	//	dubbo service vision
 	private String version;
 
 	public String getRegisterAddress() {

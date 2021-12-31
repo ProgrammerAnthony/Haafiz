@@ -9,7 +9,7 @@ import java.util.Objects;
 /**
  * @author Anthony
  * @create 2021/12/16
- * @desc ServiceDefinition is a service registry info
+ * @desc {@link ServiceDefinition} is a service registry info
  */
 @Data
 public class ServiceDefinition implements Serializable {
@@ -17,42 +17,42 @@ public class ServiceDefinition implements Serializable {
 	private static final long serialVersionUID = -8263365765897285189L;
 	
 	/**
-	 * 	唯一的服务ID: serviceId:version
+	 *  serviceId:version
 	 */
 	private String uniqueId;
 	
 	/**
-	 * 	服务唯一id
+	 * 	the only service id
 	 */
 	private String serviceId;
 	
 	/**
-	 * 	服务的版本号
+	 * 	service version
 	 */
 	private String version;
 	
 	/**
-	 * 	服务的具体协议：http(mvc http) dubbo ..
+	 * 	protocol：http(mvc http) dubbo ..
 	 */
 	private String protocol;
 	
 	/**
-	 * 	路径匹配规则：访问真实ANT表达式：定义具体的服务路径的匹配规则
+	 * 	path pattern: define specific pattern of path
 	 */
 	private String patternPath;
 	
 	/**
-	 * 	环境名称
+	 * 	environment type
 	 */
 	private String envType;
 
 	/**
-	 * 	服务启用禁用
+	 * 	enable service
 	 */
 	private boolean enable = true;
 	
 	/**
-	 * 	服务列表信息：
+	 * 	sevice invoke map
 	 */
 	private Map<String /* invokerPath */, ServiceInvoker> invokerMap;
 
