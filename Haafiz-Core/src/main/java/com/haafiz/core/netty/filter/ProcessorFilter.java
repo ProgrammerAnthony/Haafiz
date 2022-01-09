@@ -1,4 +1,4 @@
-package com.haafiz.core.netty.processor;
+package com.haafiz.core.netty.filter;
 
 /**
  * @author Anthony
@@ -7,7 +7,7 @@ package com.haafiz.core.netty.processor;
  */
 public interface ProcessorFilter<T> {
 
-    boolean doCheck(T t) throws Throwable;
+    boolean check(T t) throws Throwable;
 
     void transformEntry(T t, Object... args) throws Throwable;
 

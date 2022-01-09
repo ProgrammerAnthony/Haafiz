@@ -1,4 +1,4 @@
-package com.haafiz.core.netty.processor;
+package com.haafiz.core.netty.filter;
 
 import com.haafiz.core.context.Context;
 
@@ -19,7 +19,7 @@ public abstract class AbstractLinkedProcessorFilter<T> implements ProcessorFilte
     @Override
     public void fireNext(Context context, Object... args) throws Throwable {
         if (next != null) {
-            if (!next.doCheck(context)) {
+            if (!next.check(context)) {
                 next.fireNext(context, args);
             } else {
                 next.transformEntry(context, args);

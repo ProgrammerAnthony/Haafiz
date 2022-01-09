@@ -1,6 +1,4 @@
-package com.haafiz.core.netty;
-
-import com.haafiz.core.netty.processor.AbstractLinkedProcessorFilter;
+package com.haafiz.core.netty.filter;
 
 /**
  * @author Anthony
