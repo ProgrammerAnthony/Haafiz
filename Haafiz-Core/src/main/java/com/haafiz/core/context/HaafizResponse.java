@@ -72,7 +72,7 @@ public class HaafizResponse {
      * @param data
      * @return
      */
-    public static HaafizResponse buildRapidResponseObj(Object data) {
+    public static HaafizResponse buildHaafizResponseObj(Object data) {
         ObjectNode objectNode = JSONUtil.createObjectNode();
         objectNode.put(JSONUtil.STATUS, ResponseCode.SUCCESS.getStatus().code());
         objectNode.put(JSONUtil.CODE, ResponseCode.SUCCESS.getCode());

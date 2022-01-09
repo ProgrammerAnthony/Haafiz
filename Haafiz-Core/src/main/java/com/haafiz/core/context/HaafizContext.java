@@ -50,7 +50,7 @@ public class HaafizContext extends BasicContext{
             return this;
         }
 
-        public Builder setRapidRequest(HaafizRequest haafizRequest) {
+        public Builder setHaafizRequest(HaafizRequest haafizRequest) {
             this.haafizRequest = haafizRequest;
             return this;
         }

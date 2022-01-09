@@ -4,20 +4,20 @@ import com.haafiz.common.exception.HaafizBasicException;
 import com.haafiz.common.exception.ResponseCode;
 
 
-public class RapidPathNoMatchedException extends HaafizBasicException {
+public class HaafizPathNoMatchedException extends HaafizBasicException {
 
 	private static final long serialVersionUID = -6695383751311763169L;
 
 	
-	public RapidPathNoMatchedException() {
+	public HaafizPathNoMatchedException() {
 		this(ResponseCode.PATH_NO_MATCHED);
 	}
 	
-	public RapidPathNoMatchedException(ResponseCode code) {
+	public HaafizPathNoMatchedException(ResponseCode code) {
 		super(code.getMessage(), code);
 	}
 	
-	public RapidPathNoMatchedException(Throwable cause, ResponseCode code) {
+	public HaafizPathNoMatchedException(Throwable cause, ResponseCode code) {
 		super(code.getMessage(), cause, code);
 	}
 }

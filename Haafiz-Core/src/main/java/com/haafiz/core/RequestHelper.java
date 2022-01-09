@@ -14,7 +14,7 @@ import com.haafiz.core.context.AttributeKey;
 import com.haafiz.core.context.HaafizContext;
 import com.haafiz.core.context.HaafizRequest;
 import com.haafiz.core.exception.HaafizNotFoundException;
-import com.haafiz.core.exception.RapidPathNoMatchedException;
+import com.haafiz.core.exception.HaafizPathNoMatchedException;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.*;
 import org.apache.commons.lang3.StringUtils;
@@ -52,7 +52,7 @@ public class RequestHelper {
 		
 		//	3.	快速路径匹配失败的策略
 		if(!ANT_PATH_MATCHER.match(serviceDefinition.getPatternPath(), haafizRequest.getPath())) {
-			throw new RapidPathNoMatchedException();
+			throw new HaafizPathNoMatchedException();
 		}
 		
 		//	4. 	根据请求对象获取服务定义对应的方法调用，然后获取对应的规则
@@ -63,7 +63,7 @@ public class RequestHelper {
 		//	5. 	构建我们而定RapidContext对象
 		HaafizContext rapidContext = new HaafizContext.Builder()
 				.setProtocol(serviceDefinition.getProtocol())
-				.setRapidRequest(haafizRequest)
+				.setHaafizRequest(haafizRequest)
 				.setNettyCtx(ctx)
 				.setKeepAlive(HttpUtil.isKeepAlive(request))
 				.setRule(rule)
