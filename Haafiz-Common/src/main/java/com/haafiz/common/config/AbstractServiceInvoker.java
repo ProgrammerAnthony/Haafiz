@@ -43,4 +43,7 @@ public class AbstractServiceInvoker implements ServiceInvoker {
 		this.timeout = timeout;
 	}
 
+	public void setInvokerPath(String invokerPath) {
+		this.invokerPath = invokerPath;
+	}
 }

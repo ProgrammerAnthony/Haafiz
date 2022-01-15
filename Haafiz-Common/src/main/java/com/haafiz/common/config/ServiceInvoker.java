@@ -12,7 +12,6 @@ public interface ServiceInvoker {
 	String getInvokerPath();
 	
 	void getInvokerPath(String invokerPath);
-	
 
 	String getRuleId();
 	

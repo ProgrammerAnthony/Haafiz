@@ -37,7 +37,7 @@ public class ServiceDefinition implements Serializable {
 	private String protocol;
 	
 	/**
-	 * 	path pattern: define specific pattern of path
+	 * ANT	path pattern: define specific ANT pattern of path
 	 */
 	private String patternPath;
 	
@@ -52,7 +52,7 @@ public class ServiceDefinition implements Serializable {
 	private boolean enable = true;
 	
 	/**
-	 * 	sevice invoke map
+	 * 	service invoke map
 	 */
 	private Map<String /* invokerPath */, ServiceInvoker> invokerMap;
 

@@ -4,11 +4,11 @@ package com.haafiz.common.config;
 /**
  * @author Anthony
  * @create 2021/12/16
- * @desc service registry under dubbo protocol
+ * @desc service registry under Dubbo protocol
  */
 public class DubboServiceInvoker extends AbstractServiceInvoker {
 	
-	//	service reigstry address
+	//	service registry address
 	private String registerAddress;
 	
 	//	interface class name
@@ -20,7 +20,7 @@ public class DubboServiceInvoker extends AbstractServiceInvoker {
 	//	param collections
 	private String[] parameterTypes;
 	
-	//	dubbo service vision
+	//	Dubbo service vision
 	private String version;
 
 	public String getRegisterAddress() {
