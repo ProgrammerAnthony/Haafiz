@@ -29,7 +29,7 @@ public class HaafizAnnotationScanner {
         private static HaafizAnnotationScanner INSTANCE = new HaafizAnnotationScanner();
     }
 
-    public HaafizAnnotationScanner getInstance() {
+    public static HaafizAnnotationScanner getInstance() {
         return SingletonHolder.INSTANCE;
     }
 

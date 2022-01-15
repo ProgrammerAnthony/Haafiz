@@ -18,5 +18,5 @@ public interface DubboRegistry {
      * @param serviceBean
      * @throws Exception
      */
-    List<ServiceInstance> registerServiceInstance(ServiceBean<?> serviceBean) throws Exception;
+    ServiceInstance registerServiceInstance(ServiceBean<?> serviceBean) throws Exception;
 }

@@ -105,7 +105,6 @@ public final class ServiceLoader<S> implements Iterable<S> {
             in = u.openStream();
             r = new BufferedReader(new InputStreamReader(in, "utf-8"));
             int lc = 1;
-            //	真正解析每一行的核心实现
             while ((lc = parseLine(service, u, r, lc, names)) >= 0);
         } catch (IOException x) {
             fail(service, "Error reading configuration file", x);
@@ -143,13 +142,10 @@ public final class ServiceLoader<S> implements Iterable<S> {
             }
             if (configs == null) {
                 try {
-                	//	拼接权限命名
                     String fullName = PREFIX + service.getName();
-                    //	如果loader为空则使用系统的ClassLoader对资源进行加载
                     if (loader == null)
                         configs = ClassLoader.getSystemResources(fullName);
                     else
-                    //	如果不为空则使用指定传入的loader
                         configs = loader.getResources(fullName);
                 } catch (IOException x) {
                     fail(service, "Error locating configuration files", x);
@@ -182,7 +178,6 @@ public final class ServiceLoader<S> implements Iterable<S> {
                      "Provider " + cn  + " not a subtype");
             }
             try {
-            	//	判断对象类型是否转换有误, 若正确则将实例化c对象放入到providers容器中
                 S p = service.cast(c.newInstance());
                 providers.put(cn, p);
                 return p;
@@ -230,18 +225,14 @@ public final class ServiceLoader<S> implements Iterable<S> {
                 = providers.entrySet().iterator();
 
             public boolean hasNext() {
-            	//	已经存在providers
                 if (knownProviders.hasNext())
                     return true;
-                //	调用LazyIterator的hasNext方法
                 return lookupIterator.hasNext();
             }
 
             public S next() {
-            	//	已经存在providers
                 if (knownProviders.hasNext())
                     return knownProviders.next().getValue();
-                //	调用LazyIterator的next方法
                 return lookupIterator.next();
             }
 
@@ -259,7 +250,6 @@ public final class ServiceLoader<S> implements Iterable<S> {
     }
 
     public static <S> ServiceLoader<S> load(Class<S> service) {
-    	//	通过当前线程获取到对应的ClassLoader
         ClassLoader cl = Thread.currentThread().getContextClassLoader();
         return ServiceLoader.load(service, cl);
     }
