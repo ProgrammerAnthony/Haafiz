@@ -9,6 +9,8 @@
         <module>Haafiz-Common</module>
         <module>Haafiz-Client</module>
         <module>Haafiz-Core</module>
+        <module>Haafiz-Discovery-Api</module>
+        <module>Haafiz-Discovery-Etcd</module>
     </modules>
 
     <properties>

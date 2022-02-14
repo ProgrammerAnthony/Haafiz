@@ -1,4 +1,4 @@
-package com.haafiz.client.registry;
+package com.haafiz.discovery.api;
 
 import com.haafiz.common.util.Pair;
 
@@ -21,7 +21,7 @@ public interface Registry {
 
     String PATH = "/";
 
-    boolean registerPathIfNotExist(String path, String key, boolean isPersistent) throws Exception;
+    void registerPathIfNotExist(String path, String key, boolean isPersistent) throws Exception;
 
     long registerEphemeralNode(String key, String value) throws Exception;
 

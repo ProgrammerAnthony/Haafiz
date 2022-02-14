@@ -1,7 +1,9 @@
-package com.haafiz.client.registry;
+package com.haafiz.client.registry.impl;
 
 import com.haafiz.client.HaafizAnnotationScanner;
 import com.haafiz.client.autoconfig.HaafizProperties;
+import com.haafiz.client.registry.AbstractClientRegistryManager;
+import com.haafiz.client.registry.SpringMVCRegistry;
 import com.haafiz.common.config.ServiceDefinition;
 import com.haafiz.common.config.ServiceInstance;
 import com.haafiz.common.constants.BasicConst;
@@ -34,7 +36,7 @@ import java.util.Set;
  * @desc
  */
 @Slf4j
-public class SpringMVCClientRegistryManager extends  AbstractClientRegistryManager  implements ApplicationListener<ApplicationEvent>, ApplicationContextAware, SpringMVCRegistry{
+public class SpringMVCClientRegistryManager extends AbstractClientRegistryManager implements ApplicationListener<ApplicationEvent>, ApplicationContextAware, SpringMVCRegistry {
     ApplicationContext applicationContext;
     private static final Set<Object> uniqueBeanSet = new HashSet<>();
     @Autowired

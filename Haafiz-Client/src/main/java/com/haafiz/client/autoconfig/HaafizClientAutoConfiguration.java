@@ -1,7 +1,7 @@
 package com.haafiz.client.autoconfig;
 
-import com.haafiz.client.registry.DubboClientRegistryManager;
-import com.haafiz.client.registry.SpringMVCClientRegistryManager;
+import com.haafiz.client.registry.impl.DubboClientRegistryManager;
+import com.haafiz.client.registry.impl.SpringMVCClientRegistryManager;
 import org.apache.dubbo.config.spring.ServiceBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;

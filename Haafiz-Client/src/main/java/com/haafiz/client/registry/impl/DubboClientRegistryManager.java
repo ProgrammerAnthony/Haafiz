@@ -1,7 +1,10 @@
-package com.haafiz.client.registry;
+package com.haafiz.client.registry.impl;
 
 import com.haafiz.client.HaafizAnnotationScanner;
 import com.haafiz.client.autoconfig.HaafizProperties;
+import com.haafiz.client.registry.AbstractClientRegistryManager;
+import com.haafiz.client.registry.DubboConstants;
+import com.haafiz.client.registry.DubboRegistry;
 import com.haafiz.common.config.ServiceDefinition;
 import com.haafiz.common.config.ServiceInstance;
 import com.haafiz.common.constants.BasicConst;

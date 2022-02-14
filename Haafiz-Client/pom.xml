@@ -26,6 +26,11 @@
             <version>${haafiz-commonn.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.haafiz</groupId>
+            <artifactId>Haafiz-Discovery-Api</artifactId>
+            <version>${haafiz-commonn.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
         </dependency>

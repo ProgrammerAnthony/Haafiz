@@ -1,4 +1,4 @@
-package com.haafiz.client.registry;
+package com.haafiz.discovery.api;
 
 /**
  * @author Anthony
