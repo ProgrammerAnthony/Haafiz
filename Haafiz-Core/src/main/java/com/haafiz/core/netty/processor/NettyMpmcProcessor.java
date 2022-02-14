@@ -15,7 +15,7 @@ import java.util.concurrent.Executors;
 /**
  * @author Anthony
  * @create 2021/12/20
- * @desc
+ * @desc use{@link MpmcBlockingQueue}
  */
 @Slf4j
 public class NettyMpmcProcessor  implements NettyProcessor {

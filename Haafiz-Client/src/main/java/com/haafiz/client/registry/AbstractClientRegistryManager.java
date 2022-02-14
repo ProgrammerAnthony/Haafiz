@@ -61,7 +61,7 @@ public abstract class AbstractClientRegistryManager {
                 namespace = properties.getProperty(NAMESPACE_KEY);
                 env = properties.getProperty(ENV_KEY);
                 if(StringUtils.isBlank(registryAddress)) {
-                    String errorMessage = "Rapid网关注册配置地址不能为空";
+                    String errorMessage = "Haafiz service registry address cannot be empty";
                     log.error(errorMessage);
                     throw new RuntimeException(errorMessage);
                 }

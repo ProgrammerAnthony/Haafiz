@@ -5,7 +5,7 @@ import java.lang.annotation.*;
 /**
  * @author Anthony
  * @create 2022/1/15
- * @desc must be added to method
+ * @desc required on method to be scanned
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)

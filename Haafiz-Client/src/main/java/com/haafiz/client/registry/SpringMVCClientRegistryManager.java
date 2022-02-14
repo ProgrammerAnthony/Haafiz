@@ -34,13 +34,13 @@ import java.util.Set;
  * @desc
  */
 @Slf4j
-public class SpringMvcClientRegistryManager  extends  AbstractClientRegistryManager  implements ApplicationListener<ApplicationEvent>, ApplicationContextAware, SpringMVCRegistry{
+public class SpringMVCClientRegistryManager extends  AbstractClientRegistryManager  implements ApplicationListener<ApplicationEvent>, ApplicationContextAware, SpringMVCRegistry{
     ApplicationContext applicationContext;
     private static final Set<Object> uniqueBeanSet = new HashSet<>();
     @Autowired
     private ServerProperties serverProperties;
 
-    public SpringMvcClientRegistryManager(HaafizProperties haafizProperties) throws Exception {
+    public SpringMVCClientRegistryManager(HaafizProperties haafizProperties) throws Exception {
         super(haafizProperties);
     }
 

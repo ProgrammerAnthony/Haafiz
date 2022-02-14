@@ -53,7 +53,7 @@ public class OSUtils {
     public static Boolean checkResource(double cpuUsage, double reservedMemory){
         double availablePhysicalMemorySize = OSUtils.availablePhysicalMemorySize();
         if (1-OSUtils.cpuUsage() < cpuUsage || availablePhysicalMemorySize < reservedMemory) {
-            log.warn("rapid已负载,cpu已使用[{}],内存已使用[{}]", OSUtils.cpuUsage(),availablePhysicalMemorySize);
+            log.warn("haafiz ovverloaded ,cpu usage: [{}],memory usage: [{}]", OSUtils.cpuUsage(),availablePhysicalMemorySize);
             return false;
         } else {
             return true;

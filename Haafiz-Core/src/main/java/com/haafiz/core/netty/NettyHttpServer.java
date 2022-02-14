@@ -81,11 +81,11 @@ public class NettyHttpServer extends AbstractLifecycleComponent {
                 .group(eventLoopGroupBoss, eventLoopGroupWork)
                 .channel(useEPoll() ? EpollServerSocketChannel.class : NioServerSocketChannel.class)
                 .option(ChannelOption.SO_BACKLOG, 1024)			//	sync + accept = backlog
-                .option(ChannelOption.SO_REUSEADDR, true)   	//	tcp端口重绑定
-                .option(ChannelOption.SO_KEEPALIVE, false)  	//  如果在两小时内没有数据通信的时候，TCP会自动发送一个活动探测数据报文
-                .childOption(ChannelOption.TCP_NODELAY, true)   //	该参数的左右就是禁用Nagle算法，使用小数据传输时合并
-                .childOption(ChannelOption.SO_SNDBUF, 65535)	//	设置发送数据缓冲区大小
-                .childOption(ChannelOption.SO_RCVBUF, 65535)	//	设置接收数据缓冲区大小
+                .option(ChannelOption.SO_REUSEADDR, true)   	//	tcp port reuse
+                .option(ChannelOption.SO_KEEPALIVE, false)
+                .childOption(ChannelOption.TCP_NODELAY, true)   //	disable Nagle
+                .childOption(ChannelOption.SO_SNDBUF, 65535)	//	send buffer
+                .childOption(ChannelOption.SO_RCVBUF, 65535)	//	receive bufer
                 .localAddress(new InetSocketAddress(this.port))
                 .childHandler(new ChannelInitializer<Channel>() {
 
@@ -107,7 +107,7 @@ public class NettyHttpServer extends AbstractLifecycleComponent {
 
         try {
             this.serverBootstrap.bind().sync();
-            log.info("< ============= Rapid Server StartUp On Port: " + this.port + "================ >");
+            log.info("< ============= Haafiz Server StartUp On Port: " + this.port + "================ >");
         } catch (Exception e) {
             throw new RuntimeException("this.serverBootstrap.bind().sync() fail!", e);
         }

@@ -76,8 +76,12 @@ public class ServiceDefinition implements Serializable {
 
 	@Override
 	public boolean equals(Object o) {
-		if(this == o) return true;
-		if(this == null || getClass() != o.getClass()) return false;
+		if(this == o) {
+			return true;
+		}
+		if(this == null || getClass() != o.getClass()) {
+			return false;
+		}
 		ServiceDefinition serviceDefinition = (ServiceDefinition)o;
 		return Objects.equals(uniqueId, serviceDefinition.uniqueId);
 	}

@@ -1,7 +1,7 @@
 package com.haafiz.client.autoconfig;
 
 import com.haafiz.client.registry.DubboClientRegistryManager;
-import com.haafiz.client.registry.SpringMvcClientRegistryManager;
+import com.haafiz.client.registry.SpringMVCClientRegistryManager;
 import org.apache.dubbo.config.spring.ServiceBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
@@ -30,9 +30,9 @@ public class HaafizClientAutoConfiguration {
 
     @Bean
     @ConditionalOnClass({Servlet.class, DispatcherServlet.class, WebMvcConfigurer.class})
-    @ConditionalOnMissingBean(SpringMvcClientRegistryManager.class)
-    public SpringMvcClientRegistryManager springMvcClientRegistryManager() throws Exception {
-        return new SpringMvcClientRegistryManager(haafizProperties);
+    @ConditionalOnMissingBean(SpringMVCClientRegistryManager.class)
+    public SpringMVCClientRegistryManager springMvcClientRegistryManager() throws Exception {
+        return new SpringMVCClientRegistryManager(haafizProperties);
     }
 
     @Bean

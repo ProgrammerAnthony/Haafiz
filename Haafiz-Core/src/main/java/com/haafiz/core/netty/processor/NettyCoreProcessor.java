@@ -17,10 +17,10 @@ public class NettyCoreProcessor implements NettyProcessor{
         FullHttpRequest request = event.getFullHttpRequest();
         ChannelHandlerContext ctx = event.getCtx();
         try {
-            //	1. 解析FullHttpRequest, 把他转换为我们自己想要的内部对象：Context
-            HaafizContext rapidContext = RequestHelper.doContext(request, ctx);
+            //	1. parse FullHttpRequest, convert to inner object：Context
+            HaafizContext haafizContext = RequestHelper.doContext(request, ctx);
 
-            //	2. 执行整个的过滤器逻辑：FilterChain
+            //	2. execute filter with：FilterChain
 
         } catch (Throwable t) {
         }

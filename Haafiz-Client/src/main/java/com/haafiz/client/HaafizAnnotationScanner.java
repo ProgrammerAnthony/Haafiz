@@ -76,7 +76,7 @@ public class HaafizAnnotationScanner {
                         default:
                             break;
                     }
-                    //	设置属性
+                    //	set property to serviceDefinition
                     serviceDefinition.setUniqueId(serviceId + BasicConst.COLON_SEPARATOR + version);
                     serviceDefinition.setServiceId(serviceId);
                     serviceDefinition.setVersion(version);

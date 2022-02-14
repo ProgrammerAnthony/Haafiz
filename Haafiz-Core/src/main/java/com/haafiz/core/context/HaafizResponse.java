@@ -40,10 +40,10 @@ public class HaafizResponse {
 
 
     public static HaafizResponse buildHaafizResponse(Response futureResponse) {
-        HaafizResponse rapidResponse = new HaafizResponse();
-        rapidResponse.setFutureResponse(futureResponse);
-        rapidResponse.setHttpResponseStatus(HttpResponseStatus.valueOf(futureResponse.getStatusCode()));
-        return rapidResponse;
+        HaafizResponse haafizResponse = new HaafizResponse();
+        haafizResponse.setFutureResponse(futureResponse);
+        haafizResponse.setHttpResponseStatus(HttpResponseStatus.valueOf(futureResponse.getStatusCode()));
+        return haafizResponse;
     }
 
 
@@ -58,12 +58,12 @@ public class HaafizResponse {
         objectNode.put(JSONUtil.STATUS, code.getStatus().code());
         objectNode.put(JSONUtil.CODE, code.getCode());
         objectNode.put(JSONUtil.MESSAGE, code.getMessage());
-        HaafizResponse rapidResponse = new HaafizResponse();
-        rapidResponse.setHttpResponseStatus(code.getStatus());
-        rapidResponse.putHeader(HttpHeaderNames.CONTENT_TYPE,
+        HaafizResponse haafizResponse = new HaafizResponse();
+        haafizResponse.setHttpResponseStatus(code.getStatus());
+        haafizResponse.putHeader(HttpHeaderNames.CONTENT_TYPE,
                 HttpHeaderValues.APPLICATION_JSON + ";charset=utf-8");
-        rapidResponse.setContent(JSONUtil.toJSONString(objectNode));
-        return rapidResponse;
+        haafizResponse.setContent(JSONUtil.toJSONString(objectNode));
+        return haafizResponse;
     }
 
 
@@ -77,12 +77,12 @@ public class HaafizResponse {
         objectNode.put(JSONUtil.STATUS, ResponseCode.SUCCESS.getStatus().code());
         objectNode.put(JSONUtil.CODE, ResponseCode.SUCCESS.getCode());
         objectNode.putPOJO(JSONUtil.DATA, data);
-        HaafizResponse rapidResponse = new HaafizResponse();
-        rapidResponse.setHttpResponseStatus(ResponseCode.SUCCESS.getStatus());
-        rapidResponse.putHeader(HttpHeaderNames.CONTENT_TYPE,
+        HaafizResponse haafizResponse = new HaafizResponse();
+        haafizResponse.setHttpResponseStatus(ResponseCode.SUCCESS.getStatus());
+        haafizResponse.putHeader(HttpHeaderNames.CONTENT_TYPE,
                 HttpHeaderValues.APPLICATION_JSON + ";charset=utf-8");
-        rapidResponse.setContent(JSONUtil.toJSONString(objectNode));
-        return rapidResponse;
+        haafizResponse.setContent(JSONUtil.toJSONString(objectNode));
+        return haafizResponse;
     }
 
 

@@ -11,18 +11,17 @@ import java.util.Properties;
 /**
  * @author Anthony
  * @create 2021/12/16
- * @desc
- * 网关配置加载规则：优先级顺序如下：高的优先级会覆盖掉低的优先级
- * 运行参数(最高) ->  jvm参数  -> 环境变量  -> 配置文件  -> 内部RapidConfig对象的默认属性值(最低);
+ * @desc config load override priority:
+ * running config >jvm config>environment config>config file>class file default value
  */
 @Slf4j
 public class HaafizConfigLoader {
 
-    private final static String CONFIG_ENV_PREFIEX = "RAPID_";
+    private final static String CONFIG_ENV_PREFIEX = "HAAFIZ_";
 
-    private final static String CONFIG_JVM_PREFIEX = "rapid.";
+    private final static String CONFIG_JVM_PREFIEX = "haafiz.";
 
-    private final static String CONFIG_FILE = "rapid.properties";
+    private final static String CONFIG_FILE = "haafiz.properties";
 
     private final static HaafizConfigLoader INSTANCE = new HaafizConfigLoader();
 
@@ -44,16 +43,16 @@ public class HaafizConfigLoader {
         //	1. load from config file
         {
             InputStream is = HaafizConfigLoader.class.getClassLoader().getResourceAsStream(CONFIG_FILE);
-            if(is != null) {
+            if (is != null) {
                 Properties properties = new Properties();
                 try {
                     properties.load(is);
                     PropertiesUtils.properties2Object(properties, haafizConfig);
                 } catch (IOException e) {
                     //	warn
-                    log.warn("#RapidConfigLoader# load config file: {} is error", CONFIG_FILE, e);
+                    log.warn("#HaafizConfigLoader# load config file: {} is error", CONFIG_FILE, e);
                 } finally {
-                    if(is != null) {
+                    if (is != null) {
                         try {
                             is.close();
                         } catch (IOException e) {
@@ -80,10 +79,10 @@ public class HaafizConfigLoader {
 
         //	4. load from running config: --xxx=xxx --enable=true  --port=1234
         {
-            if(args != null && args.length > 0) {
+            if (args != null && args.length > 0) {
                 Properties properties = new Properties();
-                for(String arg : args) {
-                    if(arg.startsWith("--") && arg.contains("=")) {
+                for (String arg : args) {
+                    if (arg.startsWith("--") && arg.contains("=")) {
                         properties.put(arg.substring(2, arg.indexOf("=")), arg.substring(arg.indexOf("=") + 1));
                     }
                 }

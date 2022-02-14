@@ -12,7 +12,7 @@ import java.util.concurrent.Executors;
  * @author Anthony
  * @create 2021/12/26
  * @desc use {@link com.lmax.disruptor.dsl.Disruptor} to build Parallel multi producers
- * and consumers tools
+ * and multi consumers tools
  */
 public class ParallelFlusher<E> implements Flusher<E> {
 

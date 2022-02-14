@@ -6,13 +6,13 @@ package com.haafiz.core.netty.filter;
  * @desc there are four kinds of filter type
  */
 public enum ProcessorFilterType {
-    PRE("PRE", "前置过滤器"),
+    PRE("PRE", "Pre Filter"),
 
-    ROUTE("ROUTE", "路由过滤器"),
+    ROUTE("ROUTE", "Route Filter"),
 
-    ERROR("ERROR", "错误过滤器"),
+    ERROR("ERROR", "Error Filter"),
 
-    POST("POST", "后置过滤器");
+    POST("POST", "Post Filter");
 
     private final String code;
     private final String message;

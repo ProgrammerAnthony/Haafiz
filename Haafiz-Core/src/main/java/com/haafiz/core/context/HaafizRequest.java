@@ -102,7 +102,7 @@ public class HaafizRequest implements HaafizRequestMutable {
 
     private Map<String, List<String>> postParameters;
 
-    /***************** RapidRequestMutable:mutable object 	**********************/
+    /***************** HaafizRequestMutable:mutable object 	**********************/
 
     /**
      * 	scheme：default http://
@@ -190,7 +190,7 @@ public class HaafizRequest implements HaafizRequestMutable {
                 return Lists.newArrayList(JsonPath.read(body, name).toString());
             } catch (Exception e) {
                 //	ignore
-                log.error("#RapidRequest# getPostParametersMultiple JsonPath parse fail，jsonPath: {}, body: {}", name, body, e);
+                log.error("#HaafizRequest# getPostParametersMultiple JsonPath parse fail，jsonPath: {}, body: {}", name, body, e);
             }
         }
         return null;

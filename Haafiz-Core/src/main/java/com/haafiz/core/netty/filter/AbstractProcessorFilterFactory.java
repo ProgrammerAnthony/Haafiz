@@ -15,12 +15,12 @@ import java.util.Map;
 @Slf4j
 public abstract class AbstractProcessorFilterFactory implements ProcessorFilterFactory {
     /*
-     *	pre + route + post
+     *	pre -> route -> post
      */
     public DefaultProcessorFilterChain defaultProcessorFilterChain = new DefaultProcessorFilterChain("defaultProcessorFilterChain");
 
     /*
-     * 	error + post
+     * 	error -> post
      */
     public DefaultProcessorFilterChain errorProcessorFilterChain = new DefaultProcessorFilterChain("errorProcessorFilterChain");
 

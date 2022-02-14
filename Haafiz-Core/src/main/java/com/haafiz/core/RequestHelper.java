@@ -47,32 +47,31 @@ public class RequestHelper {
 		//	1. build request
 		HaafizRequest haafizRequest = doRequest(request, ctx);
 		
-		//	2.	根据请求对象里的uniqueId，获取资源服务信息(也就是服务定义信息)
+		//	2.	get ServiceDefinition by uniqueId
 		ServiceDefinition serviceDefinition = getServiceDefinition(haafizRequest);
 		
-		//	3.	快速路径匹配失败的策略
+		//	3.	fail-fast strategy for path match
 		if(!ANT_PATH_MATCHER.match(serviceDefinition.getPatternPath(), haafizRequest.getPath())) {
 			throw new HaafizPathNoMatchedException();
 		}
 		
-		//	4. 	根据请求对象获取服务定义对应的方法调用，然后获取对应的规则
+		//	4. use request object to load ServiceInvoker and corresponding ruleId
 		ServiceInvoker serviceInvoker = getServiceInvoker(haafizRequest, serviceDefinition);
 		String ruleId = serviceInvoker.getRuleId();
 		Rule rule = DynamicConfigManager.getInstance().getRule(ruleId);
 		
-		//	5. 	构建我们而定RapidContext对象
-		HaafizContext rapidContext = new HaafizContext.Builder()
+		//	5. build context
+		HaafizContext haafizContext = new HaafizContext.Builder()
 				.setProtocol(serviceDefinition.getProtocol())
 				.setHaafizRequest(haafizRequest)
 				.setNettyCtx(ctx)
 				.setKeepAlive(HttpUtil.isKeepAlive(request))
 				.setRule(rule)
 				.build();
+
+		putContext(haafizContext, serviceInvoker);
 		
-		//	6. 	设置一些必要的上下文参数用于后面使用
-		putContext(rapidContext, serviceInvoker);
-		
-		return rapidContext;
+		return haafizContext;
 	}
 	
 
@@ -85,7 +84,7 @@ public class RequestHelper {
 	private static HaafizRequest doRequest(FullHttpRequest fullHttpRequest, ChannelHandlerContext ctx) {
 		
 		HttpHeaders headers = fullHttpRequest.headers();
-		//	从header头获取必须要传入的关键属性 uniqueId
+		//	core property: uniqueId
 		String uniqueId = headers.get(HaafizConst.UNIQUE_ID);
 		
 		if(StringUtils.isBlank(uniqueId)) {
@@ -99,7 +98,7 @@ public class RequestHelper {
 		String contentType = HttpUtil.getMimeType(fullHttpRequest) == null ? null : HttpUtil.getMimeType(fullHttpRequest).toString();
 		Charset charset = HttpUtil.getCharset(fullHttpRequest, StandardCharsets.UTF_8);
 
-		HaafizRequest rapidRequest = new HaafizRequest(uniqueId,
+		HaafizRequest haafizRequest = new HaafizRequest(uniqueId,
 				charset,
 				clientIp,
 				host, 
@@ -109,7 +108,7 @@ public class RequestHelper {
 				headers,
 				fullHttpRequest);
 		
-		return rapidRequest;
+		return haafizRequest;
 	}
 	
 
@@ -137,9 +136,7 @@ public class RequestHelper {
 	 * @return
 	 */
 	private static ServiceDefinition getServiceDefinition(HaafizRequest haafizRequest) {
-		//	ServiceDefinition从哪里获取，就是在网关服务初始化的时候(加载的时候)？ 从缓存信息里获取
 		ServiceDefinition serviceDefinition = DynamicConfigManager.getInstance().getServiceDefinition(haafizRequest.getUniqueId());
-		//	做异常情况判断
 		if(serviceDefinition == null) {
 			throw new HaafizNotFoundException(ResponseCode.SERVICE_DEFINITION_NOT_FOUND);
 		}
@@ -165,16 +162,16 @@ public class RequestHelper {
 
 	/**
 	 * set required context
-	 * @param rapidContext
+	 * @param haafizContext
 	 * @param serviceInvoker
 	 */
-	private static void putContext(HaafizContext rapidContext, ServiceInvoker serviceInvoker) {
-		switch (rapidContext.getProtocol()) {
+	private static void putContext(HaafizContext haafizContext, ServiceInvoker serviceInvoker) {
+		switch (haafizContext.getProtocol()) {
 			case HaafizProtocol.HTTP:
-				rapidContext.putAttribute(AttributeKey.HTTP_INVOKER, serviceInvoker);
+				haafizContext.putAttribute(AttributeKey.HTTP_INVOKER, serviceInvoker);
 				break;
 			case HaafizProtocol.DUBBO:
-				rapidContext.putAttribute(AttributeKey.DUBBO_INVOKER, serviceInvoker);
+				haafizContext.putAttribute(AttributeKey.DUBBO_INVOKER, serviceInvoker);
 				break;
 			default:
 				break;
